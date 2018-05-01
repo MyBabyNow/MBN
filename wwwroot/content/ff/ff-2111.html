@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/faq.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-video" id="2.1.11">FAQs<span id="2.1.11a"></span></p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('2.1.11b');">Is formula bad for my baby?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.11c');"> Will formula help my baby sleep?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.11d');">Will formula upset my baby's tummy?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.11e');">I think my baby is allergic to cow's milk formula - what should I do?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.11f');">Does my choice of bottle and teat matter?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.11g');">Do I have to sterilise <i>every</i> time?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.11h');">How hygienic does feed preparation need to be?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.11i');">When can I stop boiling fresh water for the feed?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.11j');">Where can I get more advice on formula feeding?</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="2.1.11b">
+                Is formula bad for my baby?
+            </p>
+            <p>
+                There <i>are</i> a few differences between breastfeeding and formula feeding, but this doesn't mean formula is <i>bad</i> for your baby. However, with so many <a onclick="localSecJump('ff-212.html#2.1.2a');">different types of formula</a> on the market, it's important to know that not all of them are suitable for your baby and some could even be harmful to your baby's health.
+            </p>
+            <p class="mbn-text">
+                As long as you <a onclick="localSecJump('ff-212.html#2.1.1b');">choose a formula</a> that is suitable, <a onclick="localSecJump('ff-214.html#2.1.4b');">practice good hygiene</a> and <a onclick="localSecJump('ff-214.html#2.1.4d');">prepare it correctly</a> (following the manufacturer's instructions closely), then formula feeding is just fine for your baby!
+            </p>
+
+            <p class="mbn-section" id="2.1.11c">
+                Will formula help my baby sleep?
+            </p>
+            <p>
+                There is no evidence that formula will help your baby to settle or sleep, despite what you might hear!
+            </p>
+            <p class="mbn-text">
+                In fact, <a onclick="localSecJump('sfp/sfp-511.html#5.1.1');">most babies</a> normally wake through the night for the first few months, regardless of whether they're breastfed, formula-fed, or both.
+            </p>
+            <p class="mbn-text">
+                You can find more information on sleep patterns for babies of different ages in the <a onclick="localSecJump('sfp/sfp-511.html#5.1.1');">feed/sleep patterns section</a>, including how you can <a onclick="localSecJump('sfp/sfp-5113.html#5.1.13');">help your baby (and you!) to sleep through the night</a> if they are older than 6 months.
+            </p>
+            <p class="mbn-text">
+                If you have questions or need help with your baby's sleep, speak with your <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> or GP.
+            </p>
+
+            <p class="mbn-section" id="2.1.11d">
+                Will formula upset my baby's tummy?
+            </p>
+            <p class="mbn-text">
+                Feeding your baby formula shouldn't cause an upset tummy if:
+            </p>
+            <ul>
+                <li class="mbn-ol">the <a onclick="localSecJump('ff-212.html#2.1.2a');">right formula</a> has been used
+                </li>
+                <li class="mbn-ol"> the formula has been <a onclick="localSecJump('ff-214.html#2.1.4d');">made up correctly</a>
+                </li>
+                <li class="mbn-ol"> all feeding equipment was <a onclick="localSecJump('ff-213.html#2.1.3a');">properly sterilised</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                If you have followed these good practices carefully and are worried that your baby might be sick, speak with your GP or<a onclick="localSecJump('hs/hs-814.html#8.1.4e');"> maternal and child health nurse</a> to see if <a onclick="localSecJump('ff-211.html#2.1.1c');">switching your baby to a different formula</a> might help.
+            </p>
+            <p class="mbn-text">
+                They may also refer you to a <a onclick="localSecJump('hs/hs-815.html#8.1.5l');">dietitian</a> for guidance.
+            </p>
+
+            <p class="mbn-section" id="2.1.11e">
+                I think my baby is allergic to cow's milk formula - what should I do?
+            </p>
+            <p class="mbn-text">
+                Most formulas are made from cow's milk that has been treated to make it is suitable for babies. This is the only formula most babies will need, unless your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> advises you otherwise.
+            </p>
+            <p class="mbn-text">
+                If you think your baby could be allergic to cow's milk, speak with your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a>. Cow's milk allergies and lactose intolerance need to be diagnosed by a GP or paediatrician; they may also refer you to a <a onclick="localSecJump('hs/hs-815.html#8.1.5l');">dietitian</a> for guidance.
+            </p>
+
+            <p class="mbn-section" id="2.1.11f">
+                Does my choice of bottle and teat matter?
+            </p>
+            <p class="mbn-text">
+                Most bottles and teat will be fine to use, however there are a few things to keep in mind.
+                <br /><br />
+                <b>Bottles</b>
+                <br /> Plastic bottles don't break as easily as glass. Look for plastic bottles that are:
+            </p>
+            <ul>
+                <li class="mbn-ol">BPA-free (free of harmful chemicals)
+                </li>
+                <li class="mbn-ol">Clearly marked with a measurement guide
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                <b>Teats</b>
+                <br />Teats can be made from latex (brown) or silicone (clear) - either is fine. Teats are graded according to the age of the baby, but this isn't based on anything scientific. Try teats with bigger or smaller holes until you find the one that suits your baby.
+            </p>
+            <p class="mbn-text">
+                If a teat becomes cracked, throw it away immediately. Bacteria can grow in the cracks and this makes it unsafe for your baby to use.
+            </p>
+
+            <p class="mbn-section" id="2.1.11g">
+                Do I have to sterilise <i>every</i> time?
+            </p>
+            <p>
+                Your baby's immune system is developing, so it is very important that you <a onclick="localSecJump('ff-213.html#2.1.3a');">sterilise all feeding equipment</a> after each use until your baby reaches 12 months as tummy upsets can easily happen. Sterilising all feeding equipment can reduce the risk of this happening by killing any harmful bacteria.
+            </p>
+            <p class="mbn-text">
+                Remember also to always throw away any formula left in the bottle after a feed, never store or reuse it. Bacteria can easily survive and multiply, which can make your baby sick.
+            </p>
+            <p class="mbn-text">
+                Learn more about <a onclick="localSecJump('ff-214.html#2.1.4d');">preparing your baby's feed</a>.
+            </p>
+
+            <p class="mbn-section" id="2.1.11h">
+                How hygienic does feed preparation need to be?
+            </p>
+            <p>
+                <a onclick="localSecJump('ff-214.html#2.1.4b');">Good hygiene</a> is just as important as making sure all <a onclick="localSecJump('ff-213.html#2.1.3a');">feeding equipment is sterilised</a> properly when <a onclick="localSecJump('ff-214.html#2.1.4d');">preparing each feed</a>.
+            </p>
+            <p class="mbn-text">
+                This reduces the risk of harmful bacteria and other germs contaminating the feed. To reduce this risk even further, it is always best to only make up each feed <i>just</i> as your baby needs it.
+            </p>
+
+            <p class="mbn-section" id="2.1.11i">
+                When can I stop boiling fresh water for the feed?
+            </p>
+            <p>
+                Water heated to boiling point should always be used to make up formula until your baby reaches 12 months. This should be part of <a onclick="localSecJump('ff-214.html#2.1.4b');">good hygiene</a> and <a onclick="localSecJump('ff-213.html#2.1.3a');">sterilising</a> to reduce the risk of harmful bacteria and other germs contaminating your baby's feed.
+            </p>
+            <p class="mbn-text">
+                Remember, your baby's immune system is still developing and tummy upsets can easily happen, so it's important to be hygienic. If you can't get to a kettle, <a onclick="localSecJump('ff-214.html#2.1.4c');">unopened bottled water</a> (but not sparkling mineral water or soda water) can also be used to <a onclick="localSecJump('ff-214.html#2.1.4d');">prepare formula</a>.
+            </p>
+
+            <p class="mbn-section" id="2.1.11j">
+                Where can I get more advice on formula feeding?
+            </p>
+            <p>
+                Your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> will be able to give you the best advice on formula feeding your baby. They may also refer you to a <a onclick="localSecJump('hs/hs-815.html#8.1.5l');">dietitian</a>.
+            </p>
+            <p class="mbn-text">
+                Where possible, always try to seek advice from a health professional that has experience with infant feeding.
+            </p>
+            <p>
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

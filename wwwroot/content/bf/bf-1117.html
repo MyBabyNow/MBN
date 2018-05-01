@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/helpful-products.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.17" Breastfeeding>Helpful products</p>
+            <p class="mbn-text" id="1.1.17a">
+                <b>Helpful products</b>
+                <br> The only equipment you'll need to breastfeed is your breasts and your baby, but there are many products on the market that you may find helpful. Some of these are listed below along with cheaper alternatives (note: My Baby Now does not endorse any one particular brand, even if branding is visible in some pictures).
+            </p>
+
+            <p class="mbn-text" id="1.1.17b">
+                <b>Breastfeeding pillow</b>
+                <br>
+                <b>What:</b> firm, high pillows that help support your baby to stay level with your chest when feeding.
+            </p>
+            <p class="mbn-text">
+                <b>Instead:</b> try using a thick pillow you already have lying around the house.
+            </p>
+            <p>
+                <img src="images/1.1.17b breastfeeding pillow.png" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.17c">
+                <b>Breastfeeding cover</b>
+                <br>
+                <b>What:</b> something that covers you when breastfeeding in public.
+            </p>
+            <p class="mbn-text">
+                <b>Instead:</b> try draping a scarf or shawl you already have over your baby when you're feeding.
+            </p>
+            <p>
+                <img src="images/1.1.17c Breastfeeding cover.jpg" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.17d">
+                <b>Nursing (or maternity) bra</b>
+                <br>
+                <b>What:</b> nursing (or maternity) bras have a small clip at the front to give easier access to your breast when you need to feed your baby or <a onclick="localSecJump('bf-1111.html');">express milk</a>. Find them in most places that sell underwear (including large budget department stores).
+            </p>
+            <p>
+                <img src="images/1.1.17d Breastfeeding bra.png" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.17e">
+                <b>Nursing (or maternity) clothes</b>
+                <br>
+                <b>What:</b>nursing (or maternity) clothes can provide discreet access to your breasts when you need to feed, which can make breastfeeding in public feel much easier! Find them in most department stores or buy them online.
+            </p>
+            <p class="mbn-text">
+                <b>Instead:</b>sort through your clothes to find those that are breastfeeding-friendly, like a big cardigan that can cover your exposed breast. Another way is to layer with a singlet underneath to hide your tummy when you want to be more discreet.
+            </p>
+            <p>
+                <img src="images/1.1.17e Nursing Clothes.png" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.17f">
+                <b>Breastpads (nursing pads)</b>
+                <br>
+                <b>What:</b>breastpads help absorb any leaking between feeds. They can be disposable or cloth (reusable) and different brands can have different absorbencies. Reusable ones might save you money in the long run!
+            </p>
+            <p>
+                <img src="images/1.1.17f Nursing pads.png" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.17g">
+                <b>Nipple cream</b>
+                <br>
+                <b>What:</b>creams that aim to soothe the nipples. Some don't even need to be washed off between feeds.
+            </p>
+            <p class="mbn-text">
+                <b>Instead:</b>try rubbing a little breastmilk over your nipples for the same soothing effect - it has anti-bacterial and healing properties that nipple creams don't have.
+            </p>
+            <p>
+                <img src="images/1.1.17g nipple cream.png" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.17h">
+                <b>Breast pumps</b>
+                <br>
+                <b>What:</b>breast pumps help <a onclick="localSecJump('bf-1111.html');'">express milk from your breasts</a> and can be <a onclick="localSecJump('bf-1111.html#1.1.11q');">manual</a> or <a onclick="localSecJump('bf-1111.html#1.1.11t');">electric</a> (or you can just use your <a onclick="localSecJump('bf-1111.html#1.1.11l');">hand</a>!). Manual pumps are cheaper than electric pumps but electric pumps can be hired as well as bought outright. Read more about <a onclick="localSecJump('bf-1111.html#1.1.11b');">breast pumps and how they work.</a>
+            </p>
+            <p class="mbn-text">
+                You do not need to purchase a breast pump, it is perfectly normal to breastfeed without one.
+            </p>
+            <p>
+                <img src="images/1.1.11u Electric pump.jpg" class="mbn-text-image" />
+            </p>
+            <p class="mbn-text">
+                <b>Instead:</b>Learn how to <a onclick="localSecJump('bf-1111.html#1.1.11l');">hand express your breastmilk.</a>
+            </p>
+            <p>
+                <img src="images/1.1.11q Manual Pump.jpg" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.17i">
+                <b>Breastmilk storage bags or trays</b>
+                <br>
+                <b>What:</b>pre-sterilised bags (made from plastic thicker than regular plastic bags) to <a onclick="localSecJump('bf-1111.html#1.1.11ab');">store your breastmilk in the fridge or freezer.</a>
+            </p>
+            <p>
+                <img src="images/1.1.17i Storage bag.jpg" class="mbn-text-image" />
+            </p>
+            <p class="mbn-text">
+                Storage trays are similar to ice trays but have lids and can be stacked in the freezer.
+            </p>
+            <p>
+                <img src="images/1.1.17 i Storage Trays.jpg" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.17j">
+                <b>Bottles and teats</b>
+                <br>
+                <b>What:</b>bottles and teats for feeding your baby. There are many on the market but try to use 'slow-flow' teats - <a onclick="localSecJump('bf-1110.html#1.1.10a');">learn why and how to find the right bottle and teat.</a>
+            </p>
+            <br/><br/><br/>
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

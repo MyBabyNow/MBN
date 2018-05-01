@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/pregnancy-sub-menu.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-py');"><i class="fa fa-chevron-left"></i> Pregnancy</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-py');"><i class="fa fa-chevron-left"></i> Pregnancy</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+
+            <p class="mbn-section" id="10.1.2">Health &amp; wellbeing during pregnancy<span id="10.2.1.b"></span></p>
+            <p class="mbn-text"></p>
+            <p class="mbn-section" id="10.1.2b">Healthy eating during pregnancy<span id="10.2.1"></span></p>
+            <p class="mbn-text"></p>
+            <p class="mbn-text">
+                What you eat and drink is vital to your overall health and wellbeing. Whilst eating healthily is important for everyone, it becomes even more so when you're pregnant (and when you are trying to conceive), influencing both your own wellbeing as well as that of your developing baby. For example, eating <a onclick="localSecJump('parents/parents-714.html#7.1.4l');">discretionary or 'sometimes' foods</a> (often called junk foods), such as those high in fat and sugar, can <a onclick="localSecJump('py-1013.html#10.1.3q');">cause your unborn baby to develop a preference 
+                for these foods</a> during childhood and later life.
+            </p>
+            <p class="mbn-text">
+                Healthy eating during pregnancy doesn't have to be hard! It often just means changing the <a onclick="localSecJump('10.1.2e');">amount of different foods</a> you eat so that your diet is varied and nutritious.
+            </p>
+            <p class="mbn-text">
+                In this section:</p>
+            <ul>
+                <li><a onclick="localSecJump('10.1.2c');">Common myths debunked</a>
+                </li>
+                <li><a onclick="localSecJump('10.1.2d');">What does healthy eating during pregnancy involve?</a>
+                </li>
+                <li><a onclick="localSecJump('10.1.2e');">Recommended daily serves from the 5 food groups</a>
+                </li>
+                <li><a onclick="localSecJump('10.1.2l');">Special nutrient needs during pregnancy</a>
+                </li>
+                <li><a onclick="localSecJump('10.1.2m');">Foods to avoid when you are pregnant</a>
+                </li>
+                <li><a onclick="localSecJump('10.1.2r');">Helpful hints for some common issues</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                However, because well-meaning advice from friends and family (and the internet) can often be conflicting and confusing, let's deal with a couple of the common myths first.
+            </p>
+
+            <p class="mbn-text" id="10.1.2c">
+                <b>Common myths debunked</b>
+                <br>
+                <i><u>Myth:</u>  you need to be 'eating for two'</i>
+                <br>
+                <i><u>Truth:</u>  there is no need to 'eat for two'</i>
+            </p>
+            <p class="mbn-text">
+                Pregnant or not, you've no doubt heard of this one before! The reality is that the amount of food you need depends on many things, including:
+            </p>
+            <ul>
+                <li>your weight before you became pregnant
+                </li>
+                <li>how far along you are with your pregnancy
+                </li>
+                <li>how active you are
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                The <i>type</i> of food you eat throughout your pregnancy, not the <i>amount</i>, is far more important. For example, you should be eating the same amount of food during the first trimester of your pregnancy as you were before you were pregnant. You may need to eat slightly more during your second and third trimesters, such as an extra piece of fruit per day, but again, this depends on where you are with your pregnancy and how active you are.
+            </p>
+            <p class="mbn-text">
+                <br>
+                <i><u>Myth:</u>  cravings are signals of what your baby needs</i>
+                <br>
+                <i><u>Truth:</u>  science does not support cravings as being a sign that your baby needs certain foods</i>
+            </p>
+            <p class="mbn-text">
+                You've likely heard some of the weird and wonderful foods (and combinations!) that pregnant women might crave. You may even have experienced some yourself.
+            </p>
+            <p class="mbn-text">
+                Although some women experience cravings for certain foods, there is no evidence that cravings are a sign that your baby needs certain foods. It can be hard, especially if you're struck by a craving, but try to:
+            </p>
+            <ul>
+                <li>make sure your baby (and you!) are getting the nutrients they need by <a onclick="localSecJump('10.1.2d">eating healthily</a> and avoiding <a onclick="localSecJump('parents/parents-714.html#7.1.4l');">discretionary or 'sometimes' foods</a> (often called junk foods) which are often high in sugar, fat and salt
+                </li>
+                <li>only eat when you're actually hungry
+                </li>
+            </ul>
+
+            <p>
+                <i><u>Myth:</u>  eating peanuts, eggs and other commonly allergenic foods must be avoided to prevent your baby from developing allergies</i>
+                <br>
+                <i><u>Truth:</u>  only avoid allergenic foods if you are allergic to them yourself</i>
+            </p>
+
+            <!-- hi KL The images below need to be referenced but they are small: any ideas how best to reference them? Image taken from: http://raisingchildren.net.au/articles/pregnancy_healthy_eating_pip.html/context/1546  -->
+
+            <p class="mbn-text">
+                <img src="images/10.1.2c.png" class="mbn-text-image mbn-text-image-right" /> The foods you eat whilst pregnant (or <a onclick="localSecJump('py-1013.html#10.1.3a');">breastfeeding</a>) <b>do not</b> affect the risk of your baby getting asthma, eczema or other allergies. The only reason you should avoid eating peanuts or other commonly allergenic foods is if you're allergic to them <i>yourself</i>.
+            </p>
+
+            <p class="mbn-text" id="10.1.2d">
+                <b>What does healthy eating during pregnancy involve?</b>
+                <br>
+                <img src="images/10.1.2d.png" class="mbn-text-image mbn-text-image-right" /> Just like when you're not pregnant, a healthy diet includes foods from each of the <a onclick="localSecJump('parents/parents-714.html#7.1.4b');">5 major food groups</a>, plenty of water and limiting <a onclick="localSecJump('parents/parents-714.html#7.1.4l');">discretionary or 'sometimes' foods</a> such as sugary drinks, chips and chocolate. There are also a few additional <a onclick="localSecJump('10.1.2m');">foods you should avoid</a> when you're pregnant.
+            </p>
+            <p class="mbn-text">
+                To make sure you are eating well during your pregnancy, aim to enjoy a variety of foods from each of the 5 major food groups every day.
+            </p>
+
+            <p class="mbn-text" id="10.1.2e">
+                <b>Recommended average daily number of serves from the 5 food groups</b>
+                <br/>
+            </p>
+            <TABLE BORDER="3" CELLSPACING="1" CELLPADDING="1">
+                <col width="270">
+                <col width="80">
+                <TR>
+                    <TH ALIGN="left"></TH>
+                    <TH ALIGN="right">Serves per day</TH>
+                </TR>
+                <TR ALIGN="CENTER">
+                    <TD><a onclick="localSecJump('10.1.2g');">Vegetables and legumes/beans</a></TD>
+                    <TD>5</TD>
+                </TR>
+                <TR ALIGN="CENTER">
+                    <TD><a onclick="localSecJump('10.1.2h');">Fruit</a></TD>
+                    <TD>2</TD>
+                </TR>
+                <TR ALIGN="CENTER">
+                    <TD><a onclick="localSecJump('10.1.2i');">Grain (cereal) foods, mostly wholegrain</a></TD>
+                    <TD>8 &frac12;</TD>
+                </TR>
+                <TR ALIGN="CENTER">
+                    <TD><a onclick="localSecJump('10.1.2j');">Lean meat and poultry, fish, eggs,nuts and seeds, and legumes/beans</a></TD>
+                    <TD>3 &frac12;</TD>
+                </TR>
+                <TR ALIGN="CENTER">
+                    <TD><a onclick="localSecJump('10.1.2k');">Milk, yoghurt, cheese and/or alternatives (mostly reduced fat)</a></TD>
+                    <TD>2 &frac12;</TD>
+                </TR>
+            </TABLE>
+
+            <p class="mbn-text" id="10.1.2f">
+                <b>Not sure what 'a serve' looks like?</b>
+                <br> Eating the <a onclick="localSecJump('10.1.2e');">recommended number of serves</a> from each of the 5 major food groups doesn't mean you have to eat piles and piles of the same food - the more variety you add, the more variety in nutrients you gain and the more interesting it is for your taste buds!
+            </p>
+            <p class="mbn-text">
+                The following are guides to how big a serve is for foods within each of the 5 food groups.
+            </p>
+
+            <p class="mbn-text" id="10.1.2g">
+                Aim for 5 serves of vegetables every day while you're pregnant.
+                <p>
+                    <img src="images/Serve of vegetables.jpg" class="mbn-text-image" />
+                </p>
+
+                <p class="mbn-text">
+                    <i>Source: National Health and Medical Research Council</i>
+                </p>
+
+                <p class="mbn-text" id="10.1.2h">
+                    Aim for 2 serves of fruit every day while you're pregnant.
+                </p>
+
+                <p>
+                    <img src="images/Serve of fruit.jpg" class="mbn-text-image" />
+                </p>
+
+                <p class="mbn-text">
+                    <i>Source: National Health and Medical Research Council</i>
+                </p>
+
+                <p class="mbn-text" id="10.1.2i">
+                    Aim for 8 &frac12;serves of grain foods every day while you're pregnant.
+                </p>
+
+                <p>
+                    <img src="images/Serve of grain.jpg" class="mbn-text-image" />
+                </p>
+
+                <p class="mbn-text">
+                    <i>Source: National Health and Medical Research Council</i>
+                </p>
+
+                <p class="mbn-text" id="10.1.2j">
+                    Aim for 3 &frac12; serves of protein foods every day while you're pregnant.
+                </p>
+
+                <p>
+                    <img src="images/Serve of protein.jpg" class="mbn-text-image" />
+                </p>
+
+                <p class="mbn-text">
+                    <i>Source: National Health and Medical Research Council</i>
+                </p>
+
+                <p class="mbn-text" id="10.1.2k">
+                    Aim for 2 &frac12; serves of dairy and/or alternatives every day while you're pregnant.
+                </p>
+
+                <p>
+                    <img src="images/Serve of dairy.jpg" class="mbn-text-image" />
+                </p>
+
+                <p class="mbn-text">
+                    <i>Source: National Health and Medical Research Council</i>
+                </p>
+
+                <p class="mbn-text" id="10.1.2l">
+                    <b>Special nutrient needs during pregnancy</b>
+                    <br> While all nutrients are important, when you're pregnant you should increase your intake of certain nutrients that play an important role in your baby's growth and development. These include iodine, folate, iron, protein and calcium.
+                </p>
+
+                <p>
+                    <img src="images/10.1.2l Special nutrient needs.png" class="mbn-text-image" />
+                </p>
+
+                <p class="mbn-text">
+                    Good sources of these important nutrients include:</p>
+                <ul>
+                    <li><u>Iodine:</u> supplements are recommended throughout your pregnancy and when breastfeeding
+                    </li>
+                    <li><u>folate:</u> green leafy vegetables, beans, fortified breakfast cereals, wholegrain foods, tofu, fruit and nuts; folate supplements are also recommended for at least a month before conception and throughout your first trimester
+                    </li>
+                    <li><u>iron:</u> lean red meat, canned tuna, nuts and legumes (as well as many of the folate sources)
+                    </li>
+                    <li><u>protein:</u> lean meat, cooked eggs, salmon or tuna, beans, nuts, lentils, chickpeas and tofu
+                    </li>
+                    <li><u>calcium:</u> low-fat milk, yoghurt, hard cheeses and calcium-enriched soy drinks
+                    </li>
+                </ul>
+
+                <p class="mbn-text" id="10.1.2m">
+                    <b>Foods to avoid when you are pregnant</b>
+                    <br> There are some foods that you need to be careful of when you're pregnant - some are <a onclick="localSecJump('10.1.2n');">OK in small amounts</a> or if prepared in certain ways but others should be <a onclick="localSecJump('10.1.2o');">avoided all together</a>.
+                </p>
+
+                <p>
+                    <img src="images/10.1.2.m Foods to avoid.png" class="mbn-text-image" />
+                </p>
+
+                <p class="mbn-text" id="10.1.2n">
+                    Limit:</p>
+                <ul>
+                    <li><u>fish high in mercury</u> like flake, swordfish and marlin - the mercury builds up in your body, passing through the placenta into your baby and can affect their developing brain; consume no more than one serve (150g) every two weeks but try replacing with other types of fish such as salmon or tuna instead
+                    </li>
+                    <li><u>caffeine</u> as this increases your heart rate and blood pressure and can cross the placenta into your developing baby; <a onclick="localSecJump('bf/bf-1114.html#1.1.14k');">aim for less than 200mg/day</a> or about 1-2 instant coffees or 1 caf&eacute; style coffee (don't forget tea, cola, energy drinks and chocolate also contain caffeine!
+                    </li>
+                    <li><u><a onclick="localSecJump('parents/parents-714.html#7.1.4l');">discretionary or 'sometimes' foods,</a></u> (often called junk foods) which are often high in sugar, fat and salt, and may cause your unborn baby to develop a preference for these foods during childhood and later life.
+                    </li>
+                </ul>
+
+                <p class="mbn-text" id="10.1.2o">
+                    Avoid:</p>
+                <ul>
+                    <li><u>potential sources of listeria</u> such as soft cheeses (brie, camembert, ricotta, feta and blue cheese), sandwich meats, ready-to-eat chilled foods, bean sprouts, pre-prepared salads, p&acirc;t&eacute; and undercooked food, especially meat; these might cause you and/or your developing baby serious illness
+                    </li>
+                    <li><u>raw eggs</u> as they may contain salmonella
+                    </li>
+                    <li><u>alcohol all together</u> - <a onclick="localSecJump('10.1.2s');">not drinking alcohol is the safest option</a>
+                    </li>
+                </ul>
+
+                <p class="mbn-text" id="10.1.2p">
+                    <b>Smart snacking</b>
+                    <br> Try to resist the urge to snack constantly. When snacking, choose foods from the 5 food groups - these will satisfy your hunger and help you to reach your <a onclick="localSecJump('10.1.2e');">recommended servings for the day</a> while supplying the nutrients you and your developing baby need. Opt for vegetables, dairy products such as yoghurt and reduced fat cheese, fruit, unsalted nuts, tomato on wholegrain bread, toast or pita bread and <a onclick="localSecJump('recipe/recipe-651.html#6.5.1f');">fresh hummus</a>.
+                </p>
+
+                <p class="mbn-text" id="10.1.2q">
+                    Avoid overeating and <a onclick="localSecJump('10.1.2an');">gaining excessive weight</a> by:
+                </p>
+                <ul>
+                    <li>stopping and asking yourself how hungry you <i>actually</i> are by rating your appetite on a scale of 1-10 before eating - could you be thirsty, bored or anxious (for example) instead?
+                    </li>
+                    <li>prioritising <a onclick="localSecJump('10.1.2e');">foods from the 5 food groups</a> as these are healthier 'everyday'options
+                        <li>choosing smaller portions - you can always go back for another portion if you are still hungry afterwards!
+                        </li>
+                </ul>
+
+                <p class="mbn-text" id="10.1.2r">
+                    <b>Helpful hints for some common issues</b>
+                    <br> Nausea, heartburn and constipation are quite common during pregnancy. Here are a few things that might help.
+                </p>
+
+                <p>
+                    <img src="images/10.1.2r.png" class="mbn-text-image" />
+                    <i>Adapted with permission from <a onclick="localSecJump('hs/hs-812.html#8.1.2e');">NSW Get Healthy Information and Coaching Service</a>, NSW Health and the <a href="http://raisingchildren.net.au/articles/pregnancy_healthy_eating_pip.html/context/1546" target="_blank">Raising Children website</a>, Australia's trusted parenting website.</i>
+                </p>
+
+
+                <p class="mbn-section" id="10.1.2s">Alcohol in pregnancy</p>
+
+                <p class="mbn-text">
+                    <img src="images/Alcohol and pregnancy.png" class="mbn-text-image mbn-text-image-left" /> It is best not to combine alcohol with pregnancy. This includes if you are trying to conceive - it's safest not to drink any alcohol at all. In fact, your partner should also limit his alcohol intake as drinking more than two
+                    <a href="http://www.alcohol.gov.au/internet/alcohol/publishing.nsf/Content/E9E12B0E00E94FD5CA25718E0081F1DC/$File/std0910.pdf" target="_blank">standard drinks</a> per day can affect his fertility too, reducing the chance of a healthy pregnancy.
+                </p>
+                <p class="mbn-text">
+                    <img src="images/Alcohol and Pregnancy 2.png" class="mbn-text-image mbn-text-image-right" /> It's safest not to drink any alcohol when pregnant because it can pass through the placenta and into the bloodstream of your developing baby. This can affect the development of your baby's brain and increases your risk of miscarriage and premature birth. In severe cases, drinking alcohol when you're pregnant can cause foetal alcohol spectrum disorder (FASD),
+                    <img src="images/Alcohol in pregnancy 3.png" class="mbn-text-image mbn-text-image-left" /> affecting the physical and mental characteristics of your baby as well as their behaviour. Even small amounts of alcohol during pregnancy can lead to problems with your baby's learning, emotional and social development.
+                </p>
+                <p class="mbn-text" id="10.1.2t">
+                    Not being able to drink alcohol due to <img src="images/Alcohol in pregnancy 4.png" class="mbn-text-image-right" /> pregnancy affects different people in different ways. How it affects <i>you</i> will depend on how much of a role alcohol normally plays in your life. For example, if alcohol is the way you unwind or manage stress, it's important to look for other ways to <a onclick="localSecJump('parents/parents-716.html#7.1.6n');"> relax or treat yourself</a>. <a onclick="localSecJump('10.1.2b');"> Eating healthily</a> and <a onclick="localSecJump('10.1.2w');">getting active</a> can also help to unwind, so unless your GP or midwife have advised you otherwise, try to get in about 30 minutes of moderate exercise on most days of the week, even if you were not active before your pregnancy.
+                </p>
+
+                <p class="mbn-text">
+                    There's certainly no need to feel like you are missing out, even when out! <img src="images/Alcohol in pregnancy 5.png" class="mbn-text-image-left" /> Opt for non-alcoholic drinks like water, milk, herbal teas, mocktails (e.g. lime and soda instead of vodka, lime and soda) as well as non-alcoholic wines and beers, which are becoming more commonly available. Just remember to watch for added sugars in mocktails (cordials, soft drinks etc) and to always check the label on non-alcoholic drinks as some will still contain small amounts of alcohol.
+                </p>
+                <p class="mbn-text">
+                    Cutting down or stopping alcohol can be hard if it is a big part of your life but it is best for your health and your baby's. You can always speak with your GP or <a onclick="localSecJump('hs/hs-812.html#8.1.2a');">midwife</a> about cutting back on alcohol and don't forget that there is <a onclick="localSecJump('hs/hs--818.html#8.1.8k');"><i>always</i> someone to talk to and plenty of other support available</a> if you need it, so don't be afraid to reach out!
+                </p>
+                <p class="mbn-video-caption">
+                    Adapted with permission from the <a href="http://raisingchildren.net.au/articles/alcohol_and_pregnancy_pip.html/context/1546" target="_blank"> Raising Children website</a>, Australia's trusted parenting website.
+                </p>
+
+                <p class="mbn-section" id="10.1.2u">Smoking and pregnancy</p>
+                <p class="mbn-text">
+                    Just as smoking is bad for <i>your</i> health, it can also negatively affect <img src="images/Smoking in pregnancy.png" class="mbn-text-image mbn-text-image-left" /><i>all</i> stages of having a baby, including falling pregnant in the first place, which can be harder if either you or your partner smokes.
+
+                </p>
+                <p class="mbn-text">
+                    <img src="images/Smoking in pregnancy 2.png" class="mbn-text-image mbn-text-image-left" /> Once you're pregnant, if you smoke, or are around other people's smoke - even the smoky smell left on clothing/hair/furniture for example - your baby smokes too.
+
+                </p>
+
+                <p class="mbn-text">
+                    This brings with it many risks, including an increased chance of:</p>
+                <ul>
+                    <img src="images/Smoking in pregnancy 3.png" class="mbn-text-image mbn-text-image-right" />
+                    <li>miscarriage
+                    </li>
+                    <li>premature birth
+                    </li>
+                    <li>stillbirth
+                    </li>
+                    <li>low birth weight of your baby
+                    </li>
+                </ul>
+
+                <ul>
+                    Cigarette smoke, whether smoked by you or others nearby, can:
+                    <img src="images/Smoking in pregnancy 4.png" class="mbn-text-image mbn-text-image-right" />
+                    <li>harm your developing baby's brain and lungs
+                    </li>
+                    <li>increase their risk of developing asthma, cleft lip and palate, and other childhood illnesses
+                    </li>
+                    <img src="images/Smoking in pregnancy 5.png" class="mbn-text-image mbn-text-image-right" />
+                    <li>reduce your <a onclick="localSecJump('py-1013.html#10.1.3k');">milk supply</a> and put harmful substances into your breastmilk (however, breastfeeding is still best choice for your baby, even if you do smoke)
+                    </li>
+                </ul>
+                <p class="mbn-text">
+                    <img src="images/Smoking in pregnancy 6.png" class="mbn-text-image mbn-text-image-left" /> Smoking during pregnancy and/or exposing your baby to smoke once they're born is also strongly linked with sudden infant death syndrome (SIDS).
+                </p>
+
+                <p class="mbn-text" id="10.1.2v">
+                    <img src="images/Smoking in pregnancy 7.png" class="mbn-text-image mbn-text-image-right" /> The good news is that it is never too late to quit!
+                </p>
+                <p class="mbn-text">
+                    Even just one hour after quitting, the risk of pregnancy complications decreases. Just two days of not smoking can put your baby's growth back on track.
+                </p>
+                <p class="mbn-text">
+                    <img src="images/Smoking in pregnancy 8.png" class="mbn-text-image mbn-text-image-left" /> It's not easy to quit but you don't have to do it on your own. The <a onclick="localSecJump('hs/hs-818.html#8.1.8m');">Quit program</a> has free phone apps (including <a href="http://www.quitnow.gov.au/internet/quitnow/publishing.nsf/Content/quit-now-apps" target="_blank">Quit for you - Quit for Two</a>, aimed at those who are currently, or are trying to fall pregnant), telephone and online coaching to support you through the process.
+                </p>
+                <p class="mbn-video-caption">
+                    Adapted with permission from the <a href="http://raisingchildren.net.au/articles/smoking_and_pregnancy_pip.html/context/1546" target="_blank"> Raising Children website</a>, Australia's trusted parenting website.
+                </p>
+
+                <p class="mbn-section" id="10.1.2w">Physical activity in pregnancy</p>
+                <p class="mbn-text">
+                    We all know that our bodies were designed to move, but is this still the case when you're pregnant, and if so, how much and what sort of physical activity is safe?
+                </p>
+                <p class="mbn-text">
+                    In this section:</p>
+                <ul>
+                    <li><a onclick="localSecJump('10.1.2x');">Benefits of being active during pregnancy</a>
+                    </li>
+                    <li><a onclick="localSecJump('10.1.2y');">Getting active safely</a>
+                    </li>
+                    <li><a onclick="localSecJump('10.1.2z');">Tips for being active</a>
+                    </li>
+                    <li><a onclick="localSecJump('10.1.2aa');">Special exercises for pregnancy</a>
+                    </li>
+                    <li><a onclick="localSecJump('10.1.2ab');">Exercises to avoid</a>
+                    </li>
+                    <li><a onclick="localSecJump('10.1.2ac');">When to stop</a>
+                    </li>
+                </ul>
+
+                <p class="mbn-text" id="10.1.2x">
+                    For most women, exercising at a level they are comfortable with during pregnancy can help them:</p>
+                <ul>
+                    <li>cope with the pregnancy and then giving birth
+                    </li>
+                    <li>tackle some of the common complaints of pregnancy such as varicose veins, tiredness and swollen feet and ankles
+                    </li>
+                </ul>
+
+                <p class="mbn-text">
+                    Other benefits of being active during pregnancy include:
+
+                </p>
+                <p>
+                    <img src="images/10.1.2x.png" class="mbn-text-image" />
+                </p>
+                <p class="mbn-text">
+                    Provided you have not been told something different by your GP or midwife, it is recommended that you do 30 minutes of moderate exercise on most days of the week, even if you were not active before your pregnancy.
+
+                </p>
+                <p class="mbn-text">
+                    This doesn't have to be in one go either - you can break it up and do three lots of 10 minutes instead!
+
+                </p>
+
+                <p class="mbn-text" id="10.1.2y">
+                    <b>Being active safely</b>
+                </p>
+                <p class="mbn-text">
+                    To make sure both you and your baby are safe during exercise, always: </p>
+                <img src="images/10.1.2y.png" class="mbn-text-image mbn-text-image-right" />
+                <ul>
+                    <li>take things easy - use the 'talk test'to make sure you are exercising at a level that is comfortable
+                    </li>
+                    <li>be careful you don't overheat and remember to drink plenty of water
+                    </li>
+                    <li>wear suitable clothing
+                    </li>
+                    <li>warm up and cool down to prevent injuries
+                    </li>
+                    <li>stop when you are tired or if you feel any pain that doesn't settle quickly
+                    </li>
+                    <li>check that the instructor of any exercise classes you take is qualified and let them know that you're pregnant
+                </ul>
+
+                <p class="mbn-text" id="10.1.2z">
+                    <b>Tips for being active</b>
+                    <br> Being physically active on a regular basis can be hard at times, especially when you <a onclick="localSecJump('parents/parents-713.html#7.1.3c');">feel tired</a> but every little bit helps.
+                </p>
+
+                <p class="mbn-text">
+                    Try including activity in your normal routine by:
+                    <img src="images/10.1.2z.png" class="mbn-text-image mbn-text-image-right" /></p>
+                <ul>
+                    <li>using the stairs instead of the lift
+                    </li>
+                    <li>walking to the shops instead of driving or parking further away from the entrance so you need to walk further
+                    </li>
+                    <li>getting off the bus/tram a stop earlier
+                    </li>
+                    <li>going for a walk with friends or family when catching up
+                    </li>
+                </ul>
+
+                <p class="mbn-text">
+                    Finding something you enjoy will make it easier, especially if you can make being active a social occasion or an opportunity to relax and escape.
+
+                </p>
+                <p class="mbn-text">
+                    <img src="images/10.1.2z2.png" class="mbn-text-image mbn-text-image-right" /> As your baby continues to grow, you may need to slow down or reduce the amount of physical activity you do but try to keep as active as you can for as long as possible to continue enjoying all the <a onclick="localSecJump('10.1.2x');">benefits</a> that come with it.
+
+                </p>
+                <p class="mbn-text" id="10.1.2aa">
+                    <b>Special exercises for pregnancy</b>
+                    <br> As well as keeping you fit, some exercises can also help you strengthen some of the muscles which are under extra pressure when you are pregnant - your pelvic floor, stomach and back. Read more about <a onclick="localSecJump('10.1.2ad');">pelvic floor care</a>
+                </p>
+
+                <p class="mbn-text" id="10.1.2ab">
+                    <b>Exercises you should avoid</b>
+                    <br> Some types of activity should be avoided when you are pregnant. These include:
+
+                </p>
+                <p>
+                    <img src="images/10.1.2ab.png" class="mbn-text-image" />
+                </p>
+                <p class="mbn-text" id="10.1.2ac">
+                    <b>When to stop</b>
+                    <br> If you experience any complications, are uncomfortable or even just unsure at any stage during your pregnancy, it is best to stop exercising and speak with your GP or <a onclick="localSecJump('hs/hs-812.html#8.1.2a');">midwife</a> for further advice.
+                </p>
+
+                <p class="mbn-text" id="10.1.2ad">
+                    <b>After your baby is born and for future pregnancies</b>
+                    <br> Once your baby is born, increasing the amount of physical activity you do can help you lose weight (if you would like to), boost your energy levels and is a great way to <a onclick="localSecJump('play/play-91.html#9.1');">play with your baby!</a>
+                </p>
+                <p class="mbn-text">
+                    Read more about <a onclick="localSecJump('parents/parents-715.html#7.1.5');">being active as a new mum</a>.
+                </p>
+                <p class="mbn-video-caption">
+                    Adapted with permission from <a onclick="localSecJump('hs/hs-812.html#8.1.2e');">NSW Get Healthy Information and Coaching Service®</a>, NSW Health
+                </p>
+
+                <p class="mbn-section" id="10.1.2ae">Pelvic floor care</p>
+                <p class="mbn-text">
+                    <img src="images/Pelvic floor care ae1.png" class="mbn-text-image mbn-text-image-left" /> Your pelvic floor is a set of muscles that hold your bladder, uterus and bowel in place and give you control over your bladder and bowel.
+                </p>
+                <br>
+                <p class="mbn-text">
+                    <img src="images/Pelvic floor care ae2 .png" class="mbn-text-image mbn-text-image-right" /> If these muscles are weak, you might:
+                </p>
+                <ul>
+                    <li>feel 'heavy' around your bottom
+                    </li>
+                    <li>have trouble controlling wind or leak urine when you sneeze, cough, laugh or <a onclick="localSecJump('10.1.2w');">exercise</a>
+                    </li>
+                    <li>feel an urgent need to urinate
+                    </li>
+                </ul>
+
+                <p class="mbn-text">
+                    <img src="images/pelvic floor care ae3.png" class="mbn-text-image mbn-text-image-right" /> Being pregnant and giving birth is a common cause of weak pelvic floor muscles, but did you know that the straining during a bowel movement due to constipation can also weaken them? Ensuring your diet includes plenty of <a onclick="localSecJump('10.1.2h');">fruit</a>, <a onclick="localSecJump('10.1.2g');">vegetables</a> and water can <a onclick="localSecJump('10.1.2r');">help relieve constipation</a> and protect your pelvic floor muscles.
+                </p>
+                <p class="mbn-text" id="10.1.2af">
+                    You can strengthen your pelvic floor by:
+                    <img src="images/pelvic floor care af1.png" class="mbn-text-image mbn-text-image-right" />
+                </p>
+                <ul>
+                    <li>only going to the toilet when your bladder feels full (not 'just in case') - make sure you put your feet close to the toilet, keeping them flat on the floor (or a step), relax and lean forward
+                    </li>
+                    <li>regularly doing pelvic floor exercises - squeeze, lift and hold (like you're trying to hold in urine) but remember to keep breathing and try not to tense your shoulders or buttocks, then relax your muscles before squeezing and holding again - try:
+                    </li>
+                    <ul>
+                        <li>seeing how many breaths you can hold for and then repeat this set 3-5 times
+                        </li>
+                        <li>quickly squeezing and lifting 10 times (1 set)
+                        </li>
+                        <li>doing the above sets when you're lying down, sitting or standing
+                        </li>
+                    </ul>
+                </ul>
+
+                <p>
+                    <img src="images/pelvic floor care af2.png" class="mbn-text-image" />
+                </p>
+
+                <p class="mbn-text" id="10.1.2ag">
+                    <img src="images/pelvic floor care ag1.png" class="mbn-text-image mbn-text-image-left" /> Make strengthening your pelvic floor part of your day by doing exercises whenever you wash your hands, clean your teeth, have a shower, when you wait for the traffic lights to change or some other regular part of your day that you will remember!
+                </p>
+                <p class="mbn-text">
+                    <img src="images/pelvic floor care ag2.png" class="mbn-text-image mbn-text-image-right" /> Try to always prepare (and protect) your pelvic floor before you sneeze, cough, squat or lift anything by squeezing your muscles.
+                </p>
+                <br>
+                <br>
+                <p class="mbn-text">
+                    <img src="images/pelvic floor care ag3.png" class="mbn-text-image mbn-text-image-left" /> If you need any help with these exercises or are worried at all, a good place to start is by speaking to your GP, <a onclick="localSecJump('hs/hs-812.html#8.1.2a');">midwife</a>.
+                </p>
+                <p class="mbn-video-caption">
+                    Adapted with permission from the <a href="http://raisingchildren.net.au/articles/pelvic_floor_care_pip.html/context/1546" target="_blank"> Raising Children website</a>, Australia's trusted parenting website.
+                </p>
+
+                <br>
+                <br>
+
+                <p class="mbn-section" id="10.1.2ah">Weight gain during pregnancy</p>
+                <p class="mbn-text">
+                    Gaining <a onclick="localSecJump('10.1.2an');">too much</a> or <a onclick="localSecJump('10.1.2am');">not enough</a> weight when you are pregnant can place you and your baby at risk of complications during your pregnancy, at birth and later on in life.
+                </p>
+                <p>
+                    <img src="images/weight gain ah.png" class="mbn-text-image mbn-text-image-right" />
+                </p>
+                <p class="mbn-text');">
+                    The amount of weight you should put on during your pregnancy depends on if you have a single or multiple pregnancies (e.g. twins) and what your <a href="tool:bmi calculator">body mass index (BMI)</a> was before you were pregnant. This is calculated by dividing your weight (kg) by your height (m) squared - <a href="tool:bmi calculator">use our BMI calculator</a>.
+                </p>
+                <p class="mbn-text">
+                    As a rule of thumb, the higher your pre-pregnancy BMI, the less weight you will need to gain during your pregnancy as your body will already have enough energy (kilojoules/calories) stored for your pregnancy and then <a onclick="localSecJump('py-1013.html#10.1.3a');">breastfeeding</a>.
+
+                </p>
+                <p class="mbn-text" id="10.1.2ag">
+                    Once you know <a href="tool:bmi calculator">your BMI</a>, use the following tables to work out roughly how much weight you should gain.
+                </p>
+
+                <p class="mbn-text" id="10.1.2aj">
+                    <img src="images/10.1.2aj Single pregnancy.png" class="mbn-text-image mbn-text-image-centre" />
+
+                    <img src="images/weight gain aj.png" class="mbn-text-image" />
+                </p>
+
+                <p class="mbn-text" id="10.1.2ak">
+                    <img src="images/10.1.2ak Multiple pregnancies.png" class="mbn-text-image" />
+                    <img src="images/weight gain ak.png" class="mbn-text-image" />
+                </p>
+
+                <p class="mbn-text" id="10.1.2al">
+                    <b>Why your weight matters</b>
+                    <br> Studies have shown that the nutrients your baby receives before they are born can affect their health later in life. Babies born with an unusually low or high weight, especially, can be at a higher risk of obesity and chronic diseases when they become adults.
+                </p>
+
+                <p class="mbn-text" id="10.1.2am">
+                    If you <b>don't gain enough weight</b>, you are at higher risk of:</p>
+                <ul>
+                    <li>going into labour too early
+                    </li>
+                    <li>having a smaller than average baby
+                    </li>
+                    <li>experiencing problems with <a onclick="localSecJump('py-1013.html#10.1.3a');">breastfeeding</a>
+                    </li>
+                </ul>
+
+                <p class="mbn-text" id="10.1.2an">
+                    <b>Gaining too much weight</b> has risks for you <i>and</i> your baby.
+                </p>
+                <p class="mbn-text">
+                    Your baby has a higher risk of:</p>
+                <ul>
+                    <li>weight problems throughout their life - being born larger than normal and overweight/obesity during both childhood and as an adult
+                    </li>
+                    <li>having an abnormally low blood glucose level at birth which may need treatment
+                    </li>
+                </ul>
+
+                <p class="mbn-text">
+                    You are at a higher risk of:</p>
+                <ul>
+                    <li><a onclick="localSecJump('py-1011.html#10.1.1db');">pre-eclampsia</a> - a serious condition that causes high blood pressure and can threaten both your and your baby's life
+                    </li>
+                    <li><a onclick="localSecJump('py-1011.html#10.1.1bq');">gestational diabetes</a> (diabetes during pregnancy) - which can cause complications during your pregnancy and birth and can have long-term health problems for you and your baby
+                    </li>
+                    <li>blood clots in your pelvis or legs
+                    </li>
+                    <li><a onclick="localSecJump('py-1013.html#10.1.3a');">breastfeeding</a> problems
+                    </li>
+                    <li>needing a <a onclick="localSecJump('py-1011.html#10.1.1dh');">caesarean section</a> to give birth, which can have complications such as blood loss and infections
+                    </li>
+                    <li>not being able to lose your baby weight, which makes you more likely to be overweight or obese in the future
+                    </li>
+                </ul>
+
+                <p class="mbn-text" id="10.1.2ao">
+                    If you don't have scales at home,ask to use the scales when you go in for routine check-ups.
+                    <img src="images/Weight gain ao.png" cclass="mbn-text-image mbn-text-image-left" />
+                </p>
+
+                <p class="mbn-text" id="10.1.2ap">
+                    <b>After your baby is born and for future pregnancies</b>
+                    <br> Achieving a healthy weight (<a href="tool:bmi calculator">BMI</a> between 18.5-25kg/m2) once your baby is born lowers your risk of developing diseases like diabetes, heart disease and some cancers when you get older. If you plan on having another baby, try to make sure you are at a healthy weight first - this will not only assist with being able to conceive, it will also give your new pregnancy the best possible starting point.
+                </p>
+                <p>
+                    <i>Adapted with permission from <a onclick="localSecJump('hs/hs-812.html#8.1.2e');">NSW Get Healthy Information and Coaching Service</a>, NSW Health.</i>
+                    <br /><br /><br />
+                </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

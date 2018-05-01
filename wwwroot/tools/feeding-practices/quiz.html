@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/preloader/main.css">
+
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript">
+        var ans1, ans2, ans3, ans4, ans5, ans6, ans7;
+
+        var userId = $.session.get('secretKey');
+
+
+        $(document).ready(function() {
+            $('#pg1').show();
+
+            $('#pg2').hide();
+            $('#pg3').hide();
+            $('#pg4').hide();
+            $('#pg5').hide();
+            $('#pg6').hide();
+            $('#pg7').hide();
+            $('#pg8').hide();
+
+            $('#pg2-ans').hide();
+            $('#pg3-ans').hide();
+            $('#pg4-ans').hide();
+            $('#pg5-ans').hide();
+            $('#pg6-ans').hide();
+            $('#pg7-ans').hide();
+            $('#pg8-ans').hide();
+
+            $('#mark').hide();
+
+            $('#q1-modal').hide();
+
+            start();
+        });
+
+        function start() {
+
+            $(".preloader-wrapper").removeClass("hide");
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/feeding_practices_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    if (data.length !== 0) {
+                        $('input[name=q1-options][value=' + data[0].ans1 + ']').prop('checked', true);
+                        $('input[name=q2-options][value=' + data[0].ans2 + ']').prop('checked', true);
+                        $('input[name=q3-options][value=' + data[0].ans3 + ']').prop('checked', true);
+                        $('input[name=q4-options][value=' + data[0].ans4 + ']').prop('checked', true);
+                        $('input[name=q5-options][value=' + data[0].ans5 + ']').prop('checked', true);
+                        $('input[name=q6-options][value=' + data[0].ans6 + ']').prop('checked', true);
+                        $('input[name=q7-options][value=' + data[0].ans7 + ']').prop('checked', true);
+
+                        $('input[name=q1-options]').attr('disabled', true);
+                        $('input[name=q2-options]').attr('disabled', true);
+                        $('input[name=q3-options]').attr('disabled', true);
+                        $('input[name=q4-options]').attr('disabled', true);
+                        $('input[name=q5-options]').attr('disabled', true);
+                        $('input[name=q6-options]').attr('disabled', true);
+                        $('input[name=q7-options]').attr('disabled', true);
+
+                        mark();
+
+                        $("#mark").addClass("hide");
+
+                        $("#clear").removeClass("hide");
+
+                        $('#pg1').hide();
+
+                        $('#pg2').show();
+                        $('#pg3').show();
+                        $('#pg4').show();
+                        $('#pg5').show();
+                        $('#pg6').show();
+                        $('#pg7').show();
+                        $('#pg8').show();
+                    } else {
+                        $('input[name=q1-options]').prop('checked', false);
+                        $('input[name=q2-options]').prop('checked', false);
+                        $('input[name=q3-options]').prop('checked', false);
+                        $('input[name=q4-options]').prop('checked', false);
+                        $('input[name=q5-options]').prop('checked', false);
+                        $('input[name=q6-options]').prop('checked', false);
+                        $('input[name=q7-options]').prop('checked', false);
+                    }
+
+                    $(".preloader-wrapper").addClass("hide");
+                });
+
+        }
+
+        function startQuiz() {
+            $('#pg1').hide();
+
+            $('#pg2').show();
+            $('#pg3').show();
+            $('#pg4').show();
+            $('#pg5').show();
+            $('#pg6').show();
+            $('#pg7').show();
+            $('#pg8').show();
+
+            $('#mark').show();
+        }
+
+
+        function clearAnswers() {
+            $(".preloader-wrapper").removeClass("hide");
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/feeding_practices_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    if (data.length !== 0) {
+                        var entryId = data[0].id;
+                        $.ajax({
+                            type: "delete",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/feeding_practices_quiz/" + entryId,
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                                location.reload();
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+                    } else {
+                        $("#modal p").html("Answers has been cleared");
+                        $("#modal").modal();
+                        $("#modal").modal('open');
+                        $(".preloader-wrapper").addClass("hide");
+                    }
+                });
+        }
+
+
+        function mark() {
+            // Retrieve the values of each answer
+            ans1 = $('input[name=q1-options]:checked').val();
+            ans2 = $('input[name=q2-options]:checked').val();
+            ans3 = $('input[name=q3-options]:checked').val();
+            ans4 = $('input[name=q4-options]:checked').val();
+            ans5 = $('input[name=q5-options]:checked').val();
+            ans6 = $('input[name=q6-options]:checked').val();
+            ans7 = $('input[name=q7-options]:checked').val();
+
+            //Check that there is value for all.
+            if (ans1 == null || ans2 == null || ans3 == null || ans4 == null || ans5 == null || ans6 == null || ans7 == null) {
+                alert('You need to answer all questions.');
+                return;
+            }
+
+            // Now prepare the answer
+            if (ans1 == "a" || ans1 == "b" || ans1 == "c") {
+                $('#pg2-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Your baby loves to watch you and copy what you do! So, by eating with your baby, they are more likely to want to eat the same food you're eating!<br /> <br />Do you find it difficult to feed yourself at the same time as your baby? Try one spoon for me, one spoon for baby!<br /> <br />As your baby gets older, you can encourage them to feed themselves with <a onclick='q1_modal();'>texture appropriate finger foods</a> and eventually, a spoon.<br /> <br />You may not get the timing right to eat <i>every</i> meal together, but aiming to eat at least one meal together each day is a great start!<br /> <br />Read more about:<br /><ul class='mbn-text'><li><a onclick='q1_modal();'>creating healthy 'meal times' together </a></li><li><a onclick='q1_modal();'>promoting healthy habits from the start</a></li></li></ul></p>");
+            } else if (ans1 == "d" || ans1 == "e") {
+                $('#pg2-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great! <br /> <br />Your baby loves to watch you and copy what you do! Have you noticed your baby showing an interest in what you're eating? By eating with your baby, they are more likely to want to eat the same food you're eating!<br /> <br />Read more about:<br /><ul class='mbn-text'><li><a onclick='q1_modal();'>creating healthy 'meal times' together </a></li><li><a onclick='q1_modal();'>promoting healthy habits from the start</a></li></li></ul></p>");
+            }
+
+            if (ans2 == "a" || ans2 == "b" || ans2 == "c") {
+                $('#pg3-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Feeding your baby the <i>same</i> food as the rest of the family not only saves you time but it also encourages your baby to eat the same foods as the family!<br /> <br />Rather than cooking special meals for your baby, find out how you can easily <a onclick='q1_modal();'>turn adult meals into baby meals</a>.<br /> <br />You might also like to check out our great <a onclick='q1_modal();'>recipe ideas</a> suitable for the whole family!</p>");
+            } else {
+                $('#pg3-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Fantastic!<br /> <br />Feeding your baby the <i>same</i> food as the rest of the family not only saves you time but it also encourages your baby to eat the same foods as the family!<br /> <br />Give your family's vegetable intake a boost with our:<br /><ul class='mbn-text'><li><a onclick='q1_modal();'>how to turn adult meals into baby meals</a></li><li>our great <a onclick='q1_modal();'>recipe ideas</a> suitable for the whole family</li></li></ul></p>");
+            }
+
+            if (ans3 == "a" || ans3 == "b" || ans3 === "c") {
+                $('#pg4-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Just like adults, if babies are distracted while eating, they are less likely to respond to their internal appetite signals and can end up eating more than their bodies actually need. Over time, this can lead to a pattern of overeating and promote excess <a onclick='q1_modal();'>weight gain</a>.<br /> <br />It might be tempting to try get your baby to eat more by distracting them with a screen or toys (especially if you want them to eat that particular food they usually won't touch!) but this is rarely a long term solution to fussy eating! Instead, you could try some of our ways for dealing with <a onclick='q1_modal();'>fussy eating</a>.<br /> <br />By keeping distractions to a minimum at meal times, your baby can focus on the experience of eating and interacting with the family around the dinner table – both wonderful for their learning and development!<br /> <br />Find out more about:<br /><ul class='mbn-text'><li><a onclick='q1_modal();'>creating healthy meal times</a></li><li><a onclick='q1_modal();'>avoiding screen time</a></li></li></ul></p>");
+            } else {
+                $('#pg4-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Perfect!<br /> <br />By keeping distractions to a minimum at meal times, your baby can focus on the experience of eating and interacting with the family around the dinner table – both wonderful for their learning and development!<br /> <br />Find out more about:<br /><ul class='mbn-text'><li><a onclick='q1_modal();'>creating healthy meal times</a></li><li><a onclick='q1_modal();'>avoiding screen time</a></li></li></ul></p>")
+            }
+
+            if (ans4 == "a" || ans4 == "b" || ans4 === "c") {
+                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Just because a baby spits out a certain food doesn't necessarily mean they don't like it, they just need time to get used to it. In fact, it can take up to 10–15 tries of a new food before your baby might accept it – so try not to give up!<br /> <br />Rather than get frustrated by wasting food, try offering only <i>tiny amounts</i> of a new food to your baby. You can always then offer them more if they accept it.<br /> <br />And, by offering your baby the <a onclick='q1_modal();'>same food</a> as the rest of the family, you avoid the disappointment of cooking a special baby meal that might end up on the floor or get spat out!<br /> <br />Read more on:<br /><ul class='mbn-text'><li><a onclick='q1_modal();'>managing fussy eating</a></li><li><a onclick='q1_modal();'>helping your baby to love vegetables </a></li></li></ul></p>");
+            } else {
+                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great!<br /> <br />As you probably already know, babies often spit out foods they're still getting used to and this doesn't mean they dislike them. In fact, it can take up to 10–15 tries of a new food before your baby might accept it – so it's important not to give up!<br /> <br />Read more on:<br /><ul class='mbn-text'><li><a onclick='q1_modal();'>managing fussy eating</a></li><li><a onclick='q1_modal();'>helping your baby to love vegetables </a></li></li></ul></p>")
+            }
+
+            if (ans5 == "a" || ans5 == "b" || ans5 === "c") {
+                $('#pg6-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>It can be tempting to encourage our babies to finish all the food in front of them, especially if we think they haven't eaten enough! <br /> <br />But…don't forget that <a onclick='q1_modal();'><i>parents provide, babies decide</i></a>!<br /> <br />As parents, our role in feeding is to <i>provide</i> a range of <a onclick='q1_modal();'>healthy foods</a>. Your baby's role is to <i>decide</i> if they will eat them and if so, how much of them they will eat.<br /> <br />If your baby decides they would rather play with their food and/or not eat it at all, that's OK. Don't worry, a healthy baby will not starve themselves! Just <a onclick='q1_modal();'>try not to fuss</a> – the more you fuss about food, the more they will fuss!</p>");
+            } else {
+                $('#pg6-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Good!<br /> <br />It sounds like your sticking with the <a onclick='q1_modal();'><i>parents provide, babies decide</i> </a> motto! That is, you're <i>providing</i> a range of <a onclick='q1_modal();'>healthy foods</a> and letting your baby <i>decide</i> if they will eat them and if so, how much of them they will eat.<br /> <br /></p>");
+            }
+
+            if (ans6 == "a" || ans6 == "b" || ans6 == "c") {
+                $('#pg7-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Encouraging your baby to keep eating when they are already full overrides their natural appetite signals, which can lead to overeating down the track and can promote excess <a onclick='q1_modal();'>weight gain</a>.<br /> <br />Instead, the trick is to pay attention to your baby's <a onclick='q1_modal();'>fullness signs</a> so you know when to end the meal. Babies are <a onclick='q1_modal();'>well tuned to their appetites</a> – they know when they are hungry and when they have had enough! <br /> <br /></p>");
+            } else {
+                $('#pg7-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Fantastic!<br /> <br />Babies are <a onclick='q1_modal();'>well tuned to their appetites</a> – they know when they are hungry and when they have had enough!<br /> <br />By paying attention to your baby's <a onclick='q1_modal();'>fullness signs</a> and ending the meal there means you are avoiding overfeeding and reducing the likelihood of overeating down the track.</p>");
+            }
+
+            if (ans7 == "a" || ans7 == "b" || ans7 == "c") {
+                $('#pg8-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Food can be a tempting way of distracting your baby, keeping them busy/quiet or making them feel better when they are upset. But this often sets up an unhealthy pattern of eating for reasons <i>other</i> than hunger, such as to calm emotions (e.g. boredom and sadness). Using food in this way can lead to overeating and excess <a onclick='q1_modal();'>weight gain</a> as they grow older.<br /> <br />Instead of food, try:<br /><ul class='mbn-text'><li>these ways of <a onclick='q1_modal();'>calming an unsettled baby </a></li><li>keeping your baby entertained with some <a onclick='q1_modal();'>play activities </a></li></li></ul></p>");
+            } else {
+                $('#pg8-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great!<br /> <br />As you probably know, it is best not to use food to distract your baby, keep them busy/quiet or make them feel better when they are upset. This sets up an unhealthy pattern of eating for reasons <i>other</i> than hunger, such as to calm emotions (e.g. boredom and sadness). Using food in this way can lead to overeating and excess <a onclick='q1_modal();'>weight gain</a> as they grow older. <br /> <br />Read more about non-food ways to <a onclick='q1_modal();'>calming an unsettled baby </a> and discover some new <a onclick='q1_modal();'>play activities </a> to keep your baby entertained.</p>");
+            }
+
+
+            // DONE - display the answers
+            $('#pg2-ans').show();
+            $('#pg3-ans').show();
+            $('#pg4-ans').show();
+            $('#pg5-ans').show();
+            $('#pg6-ans').show();
+            $('#pg7-ans').show();
+            $('#pg8-ans').show();
+
+            $('input[name=q1-options]').attr('disabled', true);
+            $('input[name=q2-options]').attr('disabled', true);
+            $('input[name=q3-options]').attr('disabled', true);
+            $('input[name=q4-options]').attr('disabled', true);
+            $('input[name=q5-options]').attr('disabled', true);
+            $('input[name=q6-options]').attr('disabled', true);
+            $('input[name=q7-options]').attr('disabled', true);
+
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/feeding_practices_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    $(".preloader-wrapper").removeClass("hide");
+                    var postData = {
+                        user_id: userId,
+                        ans1: ans1,
+                        ans2: ans2,
+                        ans3: ans3,
+                        ans4: ans4,
+                        ans5: ans5,
+                        ans6: ans6,
+                        ans7: ans7,
+                    };
+                    if (data.length === 0) {
+                        $.ajax({
+                            type: "post",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/feeding_practices_quiz",
+                            data: JSON.stringify(postData),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+                    } else {
+                        var entryId = data[0].id;
+                        var postData = {
+                            ans1: ans1,
+                            ans2: ans2,
+                            ans3: ans3,
+                            ans4: ans4,
+                            ans5: ans5,
+                            ans6: ans6,
+                            ans7: ans7,
+                        };
+                        $.ajax({
+                            type: "patch",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/feeding_practices_quiz/" + entryId,
+                            data: JSON.stringify(postData),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+
+                    }
+
+                    $("#mark").addClass("hide");
+
+                    $("#clear").removeClass("hide");
+                });
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, 'fast');
+        }
+
+        function q1_modal() {
+            $('#q1-modal').show();
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="loader-wrapper" class="preloader-wrapper hide">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!--General Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p></p>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+    </div>
+
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/landing.png" />
+            <span class="card-title mbn-card-title" id="section-title" onclick="Load('tools');">
+            <i class="fa fa-chevron-left"></i> Tools
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title" onclick="Load('tools');">
+            <i class="fa fa-chevron-left"></i> Tools
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll">
+            <div id="clear" class="login-btn hide" onclick="clearAnswers()" style="margin-right:0">Redo quiz</div>
+            <div id="pg1">
+                <p class="mbn-section">Feeding practices quiz</p>
+                <p class="mbn-text">
+                    Once your baby starts solids, it's not only important to think about <i>what</i> food you offer but <i>how</i> you offer these foods. This is important because the <i>way</i> you feed your baby can influence their eating habits throughout their life!
+                    <br /><br /> Take our quick quiz for personalised feedback and some great tips on the 'how to' of feeding your baby solid foods!
+                </p>
+                <div class="login-btn" onclick="startQuiz()">Begin quiz</div>
+            </div>
+
+            <div id="pg2">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">1.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                I eat my meal at the same time as I feed my baby.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q1-a" value="a" name="q1-options" type="radio">
+                                    <label for="q1-a">Never</label>
+                                </p>
+                                <p>
+                                    <input id="q1-b" value="b" name="q1-options" type="radio">
+                                    <label for="q1-b">Rarely</label>
+                                </p>
+                                <p>
+                                    <input id="q1-c" value="c" name="q1-options" type="radio">
+                                    <label for="q1-c">Sometimes</label>
+                                </p>
+                                <p>
+                                    <input id="q1-d" value="d" name="q1-options" type="radio">
+                                    <label for="q1-d">Often</label>
+                                </p>
+                                <p>
+                                    <input id="q1-e" value="e" name="q1-options" type="radio">
+                                    <label for="q1-e">Always</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg2-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg3">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">2.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                My baby is given the same food as the rest of the family (e.g. pureed, mashed, chopped).
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q2-a" value="a" name="q2-options" type="radio">
+                                    <label for="q2-a">Never</label>
+                                </p>
+                                <p>
+                                    <input id="q2-b" value="b" name="q2-options" type="radio">
+                                    <label for="q2-b">Rarely</label>
+                                </p>
+                                <p>
+                                    <input id="q2-c" value="c" name="q2-options" type="radio">
+                                    <label for="q2-c">Sometimes</label>
+                                </p>
+                                <p>
+                                    <input id="q2-d" value="d" name="q2-options" type="radio">
+                                    <label for="q2-d">Often</label>
+                                </p>
+                                <p>
+                                    <input id="q2-e" value="e" name="q2-options" type="radio">
+                                    <label for="q2-e">Always</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg3-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg4">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">3.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                I let my baby watch something on a screen (e.g. TV, tablet, phone) or play with a toy while eating.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q3-a" value="a" name="q3-options" type="radio">
+                                    <label for="q3-a">Always</label>
+                                </p>
+                                <p>
+                                    <input id="q3-b" value="b" name="q3-options" type="radio">
+                                    <label for="q3-b">Often</label>
+                                </p>
+                                <p>
+                                    <input id="q3-c" value="c" name="q3-options" type="radio">
+                                    <label for="q3-c">Sometimes</label>
+                                </p>
+                                <p>
+                                    <input id="q3-d" value="d" name="q3-options" type="radio">
+                                    <label for="q3-d">Rarely</label>
+                                </p>
+                                <p>
+                                    <input id="q3-e" value="e" name="q3-options" type="radio">
+                                    <label for="q3-e">Never</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg4-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg5">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">4.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                If my baby doesn't like a particular food, I stop offering this food to them in future.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q4-a" value="a" name="q4-options" type="radio">
+                                    <label for="q4-a">Always</label>
+                                </p>
+                                <p>
+                                    <input id="q4-b" value="b" name="q4-options" type="radio">
+                                    <label for="q4-b">Often</label>
+                                </p>
+                                <p>
+                                    <input id="q4-c" value="c" name="q4-options" type="radio">
+                                    <label for="q4-c">Sometimes</label>
+                                </p>
+                                <p>
+                                    <input id="q4-d" value="d" name="q4-options" type="radio">
+                                    <label for="q4-d">Rarely</label>
+                                </p>
+                                <p>
+                                    <input id="q4-e" value="e" name="q4-options" type="radio">
+                                    <label for="q4-e">Never</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg5-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg6">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">5.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                I encourage my baby to eat all the food in front of them.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q5-a" value="a" name="q5-options" type="radio">
+                                    <label for="q5-a">Always</label>
+                                </p>
+                                <p>
+                                    <input id="q5-b" value="b" name="q5-options" type="radio">
+                                    <label for="q5-b">Often</label>
+                                </p>
+                                <p>
+                                    <input id="q5-c" value="c" name="q5-options" type="radio">
+                                    <label for="q5-c">Sometimes</label>
+                                </p>
+                                <p>
+                                    <input id="q5-d" value="d" name="q5-options" type="radio">
+                                    <label for="q5-d">Rarely</label>
+                                </p>
+                                <p>
+                                    <input id="q5-e" value="d" name="q5-options" type="radio">
+                                    <label for="q5-e">Never</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg6-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg7">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">6.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                I stop giving food to my baby when they show that they are full (e.g. turning away, losing interest in the food, getting distracted, spitting out or refusing more food).
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q6-a" value="a" name="q6-options" type="radio">
+                                    <label for="q6-a">Never</label>
+                                </p>
+                                <p>
+                                    <input id="q6-b" value="b" name="q6-options" type="radio">
+                                    <label for="q6-b">Rarely</label>
+                                </p>
+                                <p>
+                                    <input id="q6-c" value="c" name="q6-options" type="radio">
+                                    <label for="q6-c">Sometimes</label>
+                                </p>
+                                <p>
+                                    <input id="q6-d" value="d" name="q6-options" type="radio">
+                                    <label for="q6-d">Often</label>
+                                </p>
+                                <p>
+                                    <input id="q6-e" value="e" name="q6-options" type="radio">
+                                    <label for="q6-e">Always</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg7-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg8">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">7.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                I use food to distract my baby and keep them busy.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q7-a" value="a" name="q7-options" type="radio">
+                                    <label for="q7-a">Always</label>
+                                </p>
+                                <p>
+                                    <input id="q7-b" value="b" name="q7-options" type="radio">
+                                    <label for="q7-b">Often</label>
+                                </p>
+                                <p>
+                                    <input id="q7-c" value="c" name="q7-options" type="radio">
+                                    <label for="q7-c">Sometimes </label>
+                                </p>
+                                <p>
+                                    <input id="q7-d" value="d" name="q7-options" type="radio">
+                                    <label for="q7-d">Rarely  </label>
+                                </p>
+                                <p>
+                                    <input id="q7-e" value="e" name="q7-options" type="radio">
+                                    <label for="q7-e">Never</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg8-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <br />
+            <br />
+
+            <div id="mark" class="login-btn" onclick="mark()">Submit answers</div>
+
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p>
+                                <img src="../../images/topics.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/tools-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="q1-modal" class="tools-content">
+        <span class="tools-close"><i class="fa fa-times-circle fa-2x" onclick="$('#q1-modal').hide();"></i></span>
+        <p>
+            <br /><br /><br /> Content is loaded here.
+        </p>
+    </div>
+</body>
+
+</html>

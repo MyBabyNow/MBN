@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/common-issues.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.8">Common issues</p>
+            <p class="mbn-text" id="1.1.8a">
+                Breastfeeding doesn't always go smoothly but if you know what some of the common issues are then you can get help quickly if needed.
+            </p>
+            <p class="mbn-text">
+                You can contact the <a href="tel:1800686268">ABA helpline</a> at any time of day or night for helpful advice from different counsellors.
+            </p>
+            <p class="mbn-text">
+                <b>Common issues:</b>
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('1.1.8b');"> Breastfeeding - getting support (video)</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8c');">Blocked ducts</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8d');">Mastitis</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8e');">Sore nipples</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8h');">Cracked nipples</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8j');">Infection</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8k');">Tongue-tie and upper-lip tie</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8m');">Sleepy baby</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8n');">Wind and colic</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8o');">Breast refusal</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8s');">Biting and teething</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8t');">Lactose intolerance</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8u');">Allergies</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.8u');">Reflux</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.8b">
+                In this video a counsellor and <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> explains that if you're having problems with breastfeeding, <a onclick="localSecJump('bf-119.html#1.1.9g');">get support</a> early.
+            </p>
+
+            <p class="mbn-text">
+                <b>Video: Breastfeeding - getting support</b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/o5hKlTCz0C0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/mastitis_blocked_milk_ducts.html" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+
+
+            <p class="mbn-text" id="1.1.8c">
+                <b>Blocked ducts</b>
+            </p>
+            <p class="mbn-text">
+                Milk is carried within ducts inside the breast and sometimes these can become blocked. A blocked duct can be caused by many reasons, including wearing clothing that is too tight or sleeping on your stomach (and breasts). It is important to try to clear a blocked duct straight away to prevent it getting worse and possibly developing into <a onclick="localSecJump('bf-118.html#1.1.8d');">mastitis</a>.
+            </p>
+            <p class="mbn-text">
+                You may have a blocked duct if your breast feels lumpy or engorged and is sore or red.
+            </p>
+
+            <p class="mbn-text">
+                Clear a blocked duct by:
+            </p>
+            <ul>
+                <li>warming your breast before feeding with a heat pack or warm towel (or having a hot bath/shower)
+                </li>
+                <li>feeding:
+                </li>
+                <ul>
+                    <li>from the breast with the blocked duct first
+                    </li>
+                    <li>more often than usual
+                    </li>
+                    <li>in <a onclick="localSecJump('bf-114.html#1.1.4a');">different positions</a>
+                    </li>
+                </ul>
+                <li>massaging the area with the blocked duct towards the nipple during feeds and after feeds (in a warm shower is a good time!)
+                </li>
+                <li><a onclick="localSecJump('bf-1111.html#1.1.11l');">hand expressing</a>
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Use an ice pack to relieve inflammation and <a onclick="localSecJump('bf-116.html#1.1.16c')">rest as much as you can</a>.
+            </p>
+            <p class="mbn-text">
+                It's important that you see <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> as soon as you can if you can't clear the duct within about 12 hours.
+            </p>
+
+            <p class="mbn-text" id="1.1.8d">
+                <b>Mastitis</b>
+            </p>
+            <p class="mbn-text">
+                Mastitis is inflammation of the breasts. It can be caused by a <a onclick="localSecJump('bf-118.html#1.1.8c');">blocked duct</a>, or for other reasons, such as if you are sick, tired or very stressed.
+            </p>
+
+            <p class="mbn-text">
+                You may have mastitis if your breast feels painful, warmer than normal and there is some redness.
+            </p>
+            <p class="mbn-text">
+                To treat mastitis:
+            </p>
+            <ul>
+                <li>take the same steps as you would for a <a onclick="localSecJump('bf-118.html#1.1.8c');">blocked duct</a>
+                </li>
+                <li>take antibiotics (if <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> gave you some)
+                </li>
+                <li>keep breastfeeding (breastfeeding when you have mastitis is OK)
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Help prevent mastitis by:
+            </p>
+            <ul>
+                <li>making sure your baby
+                </li>
+                <ul>
+                    <li>is <a onclick="localSecJump('bf-114.html#1.1.4a');">well positioned</a> and <a onclick="localSecJump('bf-114.html#1.1.4g');">attaching properly</a>
+                    </li>
+                    <li>drains your breasts at every feed
+                    </li>
+                    <li>feeds as often and as long as they want to
+                    </li>
+                </ul>
+            </ul>
+
+            <ul>
+                <li>checking your breasts
+                </li>
+                <ul>
+                    <li>every day for lumps or redness - follow the steps to <a onclick="localSecJump('bf-118.html#1.1.8c');">treat a blocked</a> duct straight away if you find one
+                    </li>
+                    <li>for fullness after a feed - <a onclick="localSecJump('bf-1111.html');">express</a> if still full
+                    </li>
+                </ul>
+                <li>avoiding sleeping on your tummy
+                </li>
+                <li>getting as much <a onclick="localSecJump('bf-1116.html#1.1.16c');">rest as you can</a>
+                </li>
+                <li>wearing a well-fitted bra and loose clothing
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.8e">
+                <b>Sore nipples</b>
+            </p>
+            <p class="mbn-text">
+                As you get used to the sucking of your baby in your first week or so of breastfeeding, your nipples might feel a bit sensitive and sore but it should not be painful.
+            </p>
+            <p class="mbn-text">
+                If you feel pain when breastfeeding, it might mean your baby is not <a onclick="localSecJump('bf-114.html#1.1.4g');">attaching properly</a>, especially if your nipples show any of the following after feeding:
+            </p>
+            <ul>
+                <li>a line of swelling or redness
+                </li>
+                <li>a white area or a small strip of blood
+                </li>
+                <li>generally looking squashed or ridged
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.8f">
+                Watch this video for tips on getting a good attachment.
+            </p>
+
+            <p class="mbn-text">
+                <b>Video: Getting a good attachment</b>
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/oN_dFzmTNWw" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/breastfeeding_techniques_article.html" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+            <p class="mbn-text">
+                Other causes of pain from breastfeeding include:
+            </p>
+            <ul>
+                <li>nipple vasospasm (sharp pain and nipple changes colour)
+                </li>
+                <li><a onclick="localSecJump('bf-118.html#1.1.8j');">infections</a>
+                </li>
+                <li>a white spot (blister)
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.8g">
+                <b>Managing sore nipples</b>
+                <br> There are many ways to manage sore nipples. Try to:
+            </p>
+            <ul>
+                <li>feed your baby:
+                </li>
+                <ul>
+                    <li><a onclick="localSecJump('sfp/sfp-514.html');">as soon as they're hungry</a> instead of waiting for them to cry
+                    </li>
+                    <li>from your less sore side first
+                    </li>
+                    <li>in <a onclick="localSecJump('bf-114.html#1.1.4a');">different positions</a>
+                    </li>
+                    <li><a onclick="localSecJump('bf-1117.html#1.1.17b');">with a pillow</a> to keep them level with your breasts
+                    </li>
+                </ul>
+                <li>avoid:
+                </li>
+                <ul>
+                    <li>soaps, shampoos and harsh towels on your nipples
+                    </li>
+                    <li>leaving wet <a onclick="localSecJump('bf-1117.html#1.1.17f');">nursing pads</a> against your skin - change them regularly
+                    </li>
+                    <li>using <a onclick="localSecJump('bf-1117.html#1.1.17h');">breast pumps</a> on a high suction - their sucking action can also hurt!
+                    </li>
+                </ul>
+                <li>use:
+                </li>
+                <ul>
+                    <li>your little finger to break suction if you need to re-attach your baby
+                    </li>
+                    <li>breast shells or nipple protectors inside your bra to avoid clothing rubbing on them
+                    </li>
+                    <li>a nipple shield - with advice from a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a>
+                    </li>
+                    <li>some breastmilk to rub on your nipples after each feed - it has anti-bacterial and healing properties that <a onclick="localSecJump('bf-1117.html#1.1.17g');">nipple creams</a> don't have
+                    </li>
+                </ul>
+                <li>comfort your baby in other ways (like rocking) instead of comfort sucking
+                </li>
+                <li>relax and take paracetamol if the pain is too much
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.8h">
+                <b>Cracked nipples</b>
+                <br> If sore nipples don't get better, your nipples may become cracked, making feeding very painful and even causing some bleeding (note: if your baby takes in some blood as well as milk, this is OK. Too much blood can cause an upset tummy but isn't harmful).
+            </p>
+            <p class="mbn-text">
+                Cracked nipples are usually caused by <a onclick="localSecJump('bf-114.html#1.1.4g');">poor attaching</a> or <a onclick="localSecJump('bf-114.html#1.1.4a');">positioning</a> of the baby. Other reasons can be <a onclick="localSecJump('1.1.8j');">infections</a> or <a onclick="localSecJump('1.1.8k');">baby tongue-tie</a>.
+            </p>
+            <p class="mbn-text" id="1.1.8i">
+                <b>Managing cracked nipples</b>
+                <br /> Give your cracked nipples a chance to heal by:
+            </p>
+            <ul>
+                <li>making sure everything that comes into contact with your nipples is clean
+                </li>
+                <li>rubbing breastmilk onto your nipples after every feed
+                </li>
+                <li>feeding your baby before they are <a onclick="localSecJump('sfp/sfp-514.html');">too hungry</a> and crying
+                </li>
+                <li>limiting the amount of time your baby is on your breast - as a last resort, rest your cracked nipple and <a onclick="localSecJump('bf-1111.html');">express</a> your milk while the crack improves
+                </li>
+                <li>trying a soft nipple shield to protect the nipple while the crack heals - with advice from a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Breastfeeding <i>should not</i> be painful so make sure to ask for help if you need to. <a onclick="localSecJump('bf-119.html#1.1.9h');">Your GP</a>, <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a>, a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> or the <a href="tel:1800686268">ABA helpline</a> are all good places to start.
+            </p>
+
+            <p class="mbn-text" id="1.1.8j">
+                <b>Infection</b>
+                <br> Cracked nipples can become infected with different bacteria, including thrush. It can be hard to tell the difference between these types of infections and they can be very painful - both on your nipples and throughout your breasts.
+            </p>
+            <p class="mbn-text">
+                If your cracked nipples aren't healing within 1-2 days of improved attaching, speak with <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a>, <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a> or a local <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> to see if you might have an infection.
+            </p>
+            <p class="mbn-text">
+                If you do have an infection, cracked nipples are unlikely to get better without medicine - <a onclick="localSecJump('bf-119.html#1.1.9g');">ask for help</a> if you're unsure.
+            </p>
+
+            <p class="mbn-text" id="1.1.8k">
+                <b>Tongue-tie and upper-lip tie</b>
+            </p>
+            <p class="mbn-text">
+                <b>What are they?</b>
+                <br> Tongue-tie is when the thin piece of skin holding the baby's tongue to their mouth restricts movement by the tongue. Some babies with tongue-tie can breastfeed without problems.
+            </p>
+            <p class="mbn-text">
+                Upper-lip tie is where the piece of skin connecting the upper lip and gum is very short or thick and pinned too tightly to the upper gum. This can make it hard for the baby to get good suction when breastfeeding.
+            </p>
+
+            <p class="mbn-text" id="1.1.8l">
+                <b>Could your baby have tongue-tie or upper-lip tie?</b>
+            </p>
+            <p class="mbn-text">
+                Some of the signs include:
+            </p>
+            <ul>
+                <li> your baby:
+                </li>
+                <ul>
+                    <li>not being able to <a onclick="localSecJump('bf-114.html#1.1.4g');">attach well</a>
+                    </li>
+                    <li>losing suction while feeding
+                    </li>
+                    <li>making a clicking sound when feeding
+                    </li>
+                </ul>
+                <li> your nipples keep getting damaged
+                </li>
+            </ul>
+            <p class="mbn-text">
+                These medical conditions can affect your baby's breastfeeding (and therefore <a onclick="localSecJump('sfp/sfp-515.html');">growth</a> and development) but need to be diagnosed by <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> or a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> - get your baby checked if you're worried.
+            </p>
+            <p class="mbn-text" id="1.1.8m">
+                <b>Sleepy baby</b>
+                <br> Some babies are sleepy and need to be woken up for feeds. In the early weeks, it's important to be feeding your baby at <a onclick="localSecJump('sfp/sfp-511.html');">least 8-12 times per day</a>. This will help <a onclick="localSecJump('bf-113.html#1.1.3b');">set up your milk supply</a> and make sure your baby is gaining <a onclick="localSecJump('sfp/sfp-515.html');">enough weight</a>.
+            </p>
+            <p class="mbn-text">
+                If your baby is too sleepy to feed well, help them by:
+            </p>
+            <ul>
+                <li>changing their nappy mid-feed (between breasts)
+                </li>
+                <li><a onclick="localSecJump('bf-519.html');">burping</a> them mid-feed
+                </li>
+                <li>stroking their feet while they are feeding
+                </li>
+                <li>switching them to your other breast when they start to doze
+                </li>
+                <li>keep milk flowing into their mouth by stroking your breasts towards the nipple and squeezing a handful of breast while they are feeding
+                </li>
+                <li>not wrapping them up too warm while feeding
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Read more on <a onclick="localSecJump('sfp/sfp-511.html');">feed and sleep patterns</a> and don't hesitate to call the <a href="tel:1800686268">ABA helpline</a> for more ideas if you're struggling to get your baby to feed well.
+            </p>
+
+            <p class="mbn-text" id="1.1.8n">
+                <b>Wind and colic</b>
+                <br> Wind refers to the air (burping and gas) that babies take in. Learn more on <a onclick="localSecJump('sfp/sfp-519.html');">wind and how to burp your baby</a>
+            </p>
+            <p class="mbn-text">
+                Colic is the term used to describe a baby who cries a lot (for 3+ hours a day, on 3+ days a week, over 3+ weeks) and is very rare in both breast and formula-fed babies. The good news is that most babies cry much less by the time they are 3-4 months of age!
+            </p>
+            <p class="mbn-text">
+                Visit the <a onclick="localSecJump('sfp/sfp-519.html');">wind and colic section</a> to find out more about its causes and management strategies. Babies <a onclick="localSecJump('sfp/sfp-518.html');">who cry a lot</a> are more likely to be over tired or over stimulated. Talk to your <a onclick="localSecJump('bf-119.html#1.1.9k');">midwife</a> or <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a> for advice.
+            </p>
+
+            <p class="mbn-text" id="1.1.8o">
+                <b>Breast refusal</b>
+                <br> Sometimes babies can get fussy with breasts. Even if <a onclick="localSecJump('sfp/sfp-514.html');">hungry</a>, your baby might start to feed and pull away, refuse to even begin, or just be very restless and difficult - even after feeding.
+            </p>
+            <p class="mbn-text">
+                This is upsetting, of course, but it's usually just temporary and there are things you can do to help. Babies might refuse the breast at different ages for different reasons. They might even be reacting to something about you that has changed!
+            </p>
+            <p class="mbn-text">
+                Might you have:
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('bf-1114.html#1.1.14f');">suddenly changed your diet</a> - this can change the taste of your milk
+                </li>
+                <li>changed perfume, detergent or deodorant - you will smell different
+                </li>
+                <li>gone for a swim at the pool - you might smell like chlorine
+                </li>
+                <li>started taking the pill, got your period or be ovulating - hormonal changes can affect your baby too
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.8p">
+                <b>Other reasons why babies refuse the breast</b>
+                <br> A newborn might refuse the breast if they are feeling tired from birth, are uncomfortable, or are having trouble <a onclick="localSecJump('bf-114.html#1.1.4g');">attaching on well</a>. You can help your newborn by:
+            </p>
+            <ul>
+                <li>staying skin-to-skin and <a onclick="localSecJump('bf-1111.html');">expressing</a> some <a onclick="localSecJump('bf-111.html#1.1.1a');">colostrum</a> for them
+                </li>
+                <li><a onclick="localSecJump('bf-114.html#1.1.4b');">gently holding them at your breast</a> rather than pushing the back of their head
+                </li>
+                <li>making sure their nose isn't covered when feeding
+                </li>
+                <li><a onclick="localSecJump('bf-1111.html');">expressing</a> a little milk before attaching them to:
+                </li>
+                <ul>
+                    <li>soften your breasts (if they are very full and hard)
+                    </li>
+                    <li>slow your flow down (if it comes out very quickly)
+                    </li>
+                </ul>
+            </ul>
+            <p class="mbn-text">
+                It's also a good idea to avoid using a bottle for the first few weeks of your baby's life so that they can get used to feeding from the breast.
+            </p>
+            <p class="mbn-text" id="1.1.8q">
+                Older babies have more control of their movements and might start to get fussy at the breast if your milk flow is very fast or very slow, if they are <a onclick="localSecJump('sfp/sfp-516.html');">overtired</a>, if they are distracted, if they are <a onclick="localSecJump('bf-118.html#1.1.8s');">teething</a> or have a blocked nose, if they have <a onclick="localSecJump('bf-118.html#1.1.8q');">gastric reflux</a>, or if they are <a onclick="localSecJump('bf-1112.html');">getting used to a bottle</a>.
+            </p>
+            <p class="mbn-text">
+                You can help your older baby by:
+            </p>
+            <ul>
+                <li>feeding somewhere quiet with less distractions
+                </li>
+                <li>wearing a necklace that they can look at and touch while they are feeding
+                </li>
+                <li><a onclick="localSecJump('bf-1111.html');">expressing</a> a little milk till your flow slows down (if it comes out very quickly) before <a onclick="localSecJump('bf-114.html#1.1.4g');">attaching them</a>
+                </li>
+                <li>triggering your <a onclick="localSecJump('bf-1111.html#1.1.11d');">let-down reflex</a> (if it is slow) before attaching them
+                </li>
+                <li>feeding them before they get too <a onclick="localSecJump('sfp/sfp-514.html');">hungry</a> or <a onclick="localSecJump('sfp/sfp-516.html');">tired</a>
+                </li>
+                <li>placing your baby in a more upright position to feed, if they have <a onclick="localSecJump('bf-118.html#1.1.8q');">reflux</a> or a blocked nose
+                </li>
+                <li>clearing their blocked nose before feeding nose
+                </li>
+                <li>giving them something cold to chew on to numb and relieve nose teething pain before feeding
+                </li>
+                <li>reducing their use of a bottle (<a onclick="localSecJump('solids/solids-416.html#4.1.6g');">introduce a cup</a> if they're over 6 months)
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.8r">
+                Don't forget that:
+            </p>
+            <ul>
+                <li>the amount of time your baby takes to feed can vary from feed-to-feed and week-to-week
+                </li>
+                <li>your baby's appetite changes all the time - it doesn't mean they are refusing or unhappy with your breastmilk
+                </li>
+            </ul>
+            <p class="mbn-text">
+                See more on <a onclick="localSecJump('sfp/sfp-511.html');">feed and sleep patterns</a>. The <a href="tel:1800686268">ABA helpline</a> is always ready for your call if you need more ideas or you're struggling to get your baby to feed well.
+            </p>
+            <p class="mbn-text" id="1.1.8s">
+                <b>Biting and teething</b>
+                <br> Don't be afraid of baby teeth! Most babies don't bite and when your baby is feeding, their position means they can't bite. Only when they are not actively feeding, such as at the beginning or end of a feed, is it more likely.
+            </p>
+            <p class="mbn-text">
+                Teething babies might:
+            </p>
+            <ul>
+                <li>want to bite and chew because of discomfort - give them something hard and cold to chew on before you feed them to help relieve their pain
+                </li>
+                <li>feel amused (or upset) if you cry out a loud "Ouch!"" when they bite - say a firm, but gentle "No!" instead and break their suction using your little finger
+                </li>
+                <li>accidentally hurt your nipples when 'resting' their new teeth on you - this will improve as teeth smooth out but in the meantime, make sure they are taking in a big mouthful of breast to avoid nipple pain
+                </li>
+                <li>irritate your nipples with their saliva - try coating the nipple areas with breastmilk after a feed
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.8t">
+                <b>Lactose intolerance</b>
+                <br> Babies rarely have true lactose intolerance but they can sometimes get a <i>temporary</i> lactose intolerance. This is more likely if they have had a tummy upset or allergy, which might have damaged the lining of their digestive system. If you think your baby might have an <a onclick="localSecJump('bf-118.html#1.1.8u');">allergy or an intolerance</a>, see <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a>, <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> or check with a <a onclick="localSecJump('hs/hs-815.html');">dietitian</a> to help you identify the culprit foods and to make sure your diet is nutritionally adequate. Even if a lactose intolerance is diagnosed, you can still continue to breastfeed your baby as long as they are <a onclick="localSecJump('sfp/sfp-515.html');">growing normally</a>.
+            </p>
+            <p class="mbn-text">
+                Remember:
+            </p>
+            <ul>
+                <li>avoiding dairy products does not reduce the lactose in your breastmilk
+                </li>
+                <li><a onclick="localSecJump('ff/ff-212.html#2.1.2e');">soy milk formula</a> and <a onclick="localSecJump('ff/ff-212.html#2.1.2h');">lactose free formulas</a> must only be used under the guidance of a GP or <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> - these are only needed in exceptional circumstances
+                </li>
+                <li>breastmilk is the best food for your baby and will help to protect your baby's gut
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.8u">
+                <b>Allergies</b>
+                <br> What you eat while breastfeeding does not affect the risk of your baby getting asthma, eczema or other allergies. Breastfeeding is actually <i>protective</i> of allergies. You don't need to avoid eating nuts for fear of making your baby allergic - only avoid them if you are allergic yourself!
+            </p>
+            <p class="mbn-text">
+                If your baby is <i>already</i> allergic or intolerant to something, traces of these foods can be found in breastmilk and can cause a reaction. The most common food allergies seen in babies are to:
+            </p>
+            <ul>
+                <li>cow's milk
+                </li>
+                <li>eggs
+                </li>
+                <li>peanuts and tree nuts (almonds, cashews, macadamias, pecans, brazil nuts and walnuts)
+                </li>
+            </ul>
+            <p class="mbn-text">
+                If your baby is reacting to foods through your breastmilk you will need to avoid these foods while breastfeeding. While this might seem inconvenient for now, continuing to breastfeed your baby will reduce the risk of them developing allergies once they <a onclick="localSecJump('solids/solids-411.html');">start solids</a>.
+            </p>
+            <p class="mbn-text">
+                A temporary change to your diet is a small price to pay to protect your baby from allergies in the long run and all the hassle that comes with that.
+            </p>
+            <p class="mbn-text">
+                If you think your baby might be reacting to your breastmilk, speak to <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> before making big changes to your diet. They can refer you to a specialist to check your baby for allergies.
+            </p>
+            <p class="mbn-text" id="1.1.8v">
+                <b>Will formula help?</b>
+                <br> No. Giving your baby formula soon after birth can actually <i>trigger</i> allergy to cow's milk in a baby prone to allergy, even if they are later breastfed. Soy and goat's milk formulas do not protect against allergies either. Read more about the <a onclick="localSecJump('ff/ff-212.html');">different types of formulas</a>.
+            </p>
+            <p class="mbn-text">
+                Remember:
+            </p>
+            <ul>
+                <li>babies can be unsettled for <a onclick="localSecJump('sfp/sfp-518.html');">lots of reasons</a> and you shouldn't assume they are reacting to your breastmilk
+                </li>
+                <li>speak to <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> or <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a> if you are worried - they may refer you to a paediatrician or <a onclick="localSecJump('hs/hs-815.html');">dietitian</a> who specialises in allergies
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.8w">
+                <b>Reflux</b>
+                <br> Reflux is the name for when babies spit up some milk. Babies can either have gastro-oesophageal reflux (simple reflux) or gastro-oesophageal reflux disease (GORD).
+            </p>
+            <p class="mbn-text" id="1.1.8x">
+                <b>Simple reflux</b>
+                <br> Most babies bring up milk at least once a day and many of them will do it more often than that! These babies are generally happy and <a onclick="localSecJump('sfp/sfp-515.html');">putting on weight</a> (a "happy chucker"!). This reflux doesn't hurt your baby and will stop as they get older.
+            </p>
+            <p class="mbn-text">
+                To reduce simple reflux, try:
+            </p>
+            <ul>
+                <li>keeping your baby more upright:
+                </li>
+                <ul>
+                    <li>prop them against a pillow
+                    </li>
+                    <li>raise the head of their change table and pram
+                    </li>
+                </ul>
+                <li>avoiding too much quick movement or pressure on their tummy, especially after a feed
+                </li>
+                <ul>
+                    <li>when changing a nappy, turn your baby to the side to wipe their bottom
+                    </li>
+                    <li>play gently with your baby, preferably before feeding them
+                    </li>
+                    <li>pass your baby around to others gently
+                    </li>
+                </ul>
+                <li>feeding your baby when they are calm
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.8y">
+                <b>Gastro-oesophageal reflux (GORD)</b>
+                <br> GORD is simple reflux but with complications. It is a rare medical condition that needs to be diagnosed and managed by <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a>.
+            </p>
+            <p class="mbn-text">
+                Symptoms include:
+            </p>
+            <ul>
+                <li>irritability and arching
+                </li>
+                <li><a onclick="localSecJump('bf-118.html#1.1.8o');">refusal</a> to feed
+                </li>
+                <li>chronic cough or wheeze
+                </li>
+                <li>spitting up milk after feeds, sometimes with bile or blood
+                </li>
+                <li>sleeping problems
+                </li>
+                <li>regularly getting ear infections
+                </li>
+                <li><a onclick="localSecJump('sfp/sfp-515.html');">weight loss or not gaining weight</a>
+                </li>
+                <li><a onclick="localSecJump('bf-1113.html#1.1.13d');">poo</a> that looks slimy or has mucus
+                </li>
+                <li>burping, gurgling noises, hiccups or even trouble <a onclick="localSecJump('sfp/sfp-519.html');">burping</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.8z">
+                <br> A breastfed baby with GORD does not need to be switched over to formula, however <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> will be able to advise the best course of treatment, if needed.
+            </p>
+            <p class="mbn-text">
+                If some of these symptoms are familiar, it doesn't always mean your baby has GORD but if you think this might be a problem, speak with <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> or <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a>.
+            </p>
+
+            <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

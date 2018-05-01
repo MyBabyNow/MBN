@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/poo.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="4.1.14" >Poos and constipation</p>
+            <p class="mbn-text" id="4.1.14a">
+                  <b>Has your baby's poo changed?</b> 
+            </p>  
+            <p class="mbn-text">
+                  As you introduce your baby to a variety of new  <a href="#4.1.2">healthy foods</a> you can expect your baby's poo to change in colour, smell and texture. Try not to get too worried about your baby's bowel habits - as long as your baby is  <a href="#5.1.5">gaining weight</a> and appears happy, the poo changes are probably normal!
+            </p> 
+
+            <p class="mbn-text" id="4.1.14b">
+                  <b>Constipation in babies</b> 
+            </p>      
+            <p class="mbn-text">
+                  Constipation is when your baby's poo is hard and dry (and looks like marbles) - it is more common around the time solids are introduced. The number of poos a day can vary considerably from one baby to another; some babies have only one poo a week while others have several poos a day, but both are normal.
+            </p>        
+            <p class="mbn-text">
+                   There are a couple of signs that your baby might be constipated:
+                 <ul>
+                    <li>they seem to be in pain or is distressed when pooing (a little straining no cause for concern)
+                    </li>
+                    <li>you can't flatten your baby's poo by squeezing it between the folds of the nappy
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-text" id="4.1.14c">
+                  <b>Preventing and easing constipation</b> 
+            </p>      
+            <p class="mbn-text">
+                  Prevention is always better than cure, but the good news with constipation is that the following steps both help to ease <i>and</i> prevent it from happening in the first place.
+            </p>        
+            <p class="mbn-text">
+                   To relieve/prevent your baby from being constipated:
+                 <ul>
+                    <li> <a href="#4.1.1"><u>introduce solids<i>slowly</i></u></a> - start with ½ a teaspoon a couple of times per day after their usual breastmilk or formula feed and increase gradually
+                    </li>
+                    <li>avoid offering your baby lots of lentils and high fibre cereals such as oats - but do keep on providing a  <a href="#4.1.2">variety of healthy foods</a>
+                    </li>
+                    <li>if your baby is formula-fed, always make sure the formula is made up according to <a href="#2.1.4">the manufacturer's instructions</a>
+                    </li>
+                </ul>
+            </p>  
+            <p class="mbn-text">
+                  If the problem persists or you are worried, speak with your GP or  <a href="#8.1.2">maternal and child health nurse</a>.
+            </p>
+
+            <p class="mbn-text" id="4.1.14d">
+                  <b>Common advice that <i>does</i> not help with constipation</b> 
+            </p>             
+            <p class="mbn-text">
+                   Well-meaning people may advise you of the best way to fix constipation. Suggestions below <u>should be avoided:</u>
+                 <ul>
+                     <li class="mbn-ol">1. <u>Prune juice</u> contains a natural bowel irritant and should never be given to babies under 9 months of age, even when diluted.
+                    </li>
+                     <li class="mbn-ol">2. <u>Adding anything extra to formula</u> such as any form of sugar, malt extract or chocolate powders like Milo or Nesquick or rice cereal to formula - <i>always</i> follow the  <a href="#2.1.4">manufacturer's instructions</a>.
+                    </li>
+                    <li class="mbn-ol">3. <u>Introducing solids  <a href="#4.1.1">too early</u></a> - starting your baby on solids before 4 months is unsafe for your baby.
+                    </li>
+                </ul>
+            </p>  
+            <p class="mbn-text">
+                  If the problem persists or you are worried, speak with your GP or maternal and child health nurse.
+            </p>
+
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

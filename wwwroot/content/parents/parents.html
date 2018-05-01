@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/mbn.js"></script>
+    <script>
+        var lastScrollTop = 0; // Track the last event
+        var objToCheck;
+        var lastScrollAction = "";
+
+        $(document).ready(function() {
+            /*
+            $(document).ontouchmove(function(event) {
+                event.preventDefault();
+            });
+            */
+            objToCheck = $("#section-title");
+            $("#section-card-min").hide();
+        });
+
+        $(window).scroll(function() {
+            var st = objToCheck.offset().top - $(window).scrollTop();
+
+            if (st < lastScrollTop) {
+                if (parseInt(st) < 65 && lastScrollAction == "up") {
+                    // Change the type of card to display.
+                    $("#section-card").hide();
+                    $("#section-card-min").show();
+
+                    // Modify CSS to add the extra 50px room for content to be in the right place.
+                    $("#section-content").addClass("mbn-content-offset");
+
+                    // Set where to monitor for point of switch.
+                    objToCheck = $("#section-content");
+                }
+
+                lastScrollAction = "up";
+            } else {
+                if (parseInt(st) > 65 && lastScrollAction == "down") {
+                    // Reverse the card to display
+                    $("#section-card").show();
+                    $("#section-card-min").hide();
+
+                    // Modify CSS to remove the offset created as a result of swapping the display card.
+                    $("#section-content").removeClass("mbn-content-offset");
+
+                    // Set where to monitor for point of switch
+                    objToCheck = $("#section-title");
+                }
+
+                lastScrollAction = "down";
+            }
+
+            lastScrollTop = st; // Remember this as the current position
+        });
+    </script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="../images/favorites.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> For Parents</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> For Parents</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+         <p class="mbn-section" id="7.1.1" For parents> Childbirth recovery</p>
+
+        <p class="mbn-text" id="7.1.1">
+                Creating and giving birth to a baby takes its toll on a woman's body!
+                And although you might wish to just get back to normal as much as
+                possible, there are a couple of things that you should be aware of
+                following childbirth, including when it's likely safe for mum to start
+                getting physically active again. 
+        </p>
+        <p class="mbn-text" id="7.1.1a">
+            <b>Strengthening your pelvic floor</b>
+            <br />
+            </p>
+        <p class="mbn-text">
+                Your pelvic floor is a set of muscles that hold your bladder, uterus andbowel in place and give you control over your bladder and bowel.
+                Although pregnancy and childbirth can weaken these muscles, you can help your pelvic floor recover by regularly doing the exercises that your midwife gave you during pregnancy.
+        </p>   
+                Unless you've been told otherwise, you can start doing pelvic floor strengthening exercises immediately after you've given birth - <a href="#8.1.2"> learn how to do them and ways to make them just another part of your day</a>.
+        </p>
+                Around 6 weeks after childbirth, your body will have more than likelyreturned to normal. If you are worried about your body or any changes you have noticed, it is best to speak to your GP or <a href="# 8.1.2"> maternal and child health nurse</a>. 
+        </p>
+        <p class="mbn-text" id="7.1.1b"><b>Postpartum haemorrhoids (piles)</b>
+            </p> 
+        <p class="mbn-text">
+                Postpartum haemorrhoids or 'piles' are common, especially when you've had a baby, but can be prevented by eating a healthy diet high in fibre to avoid constipation.
+            </p> 
+               <p class="mbn-text">
+                High fibre foods to help prevent constipation include:  
+                <ul>
+                    <li> fruits and vegetables (with skins on)
+                    </li>
+                    <li> wholegrain foods (e.g. breads and cereals, brown rice)
+                    </li>
+                    <li> nuts, seeds and grains (e.g. almonds, linseeds, sunflower seeds)
+                    </li>
+                    <li> bran (e.g. wheat bran or rice bran)
+                    </li>
+                    <li> dried beans
+                    </li>
+                </ul>
+            </p>
+
+        <p class="mbn-text">
+                
+                It's also important to stay hydrated to avoid constipation when you
+                eat additional fibre. Be sure to drink enough fluid - ideally water - try to reach around 8 glasses a day (9 if you're pregnant or breastfeeding).
+                
+                 Read more about <a href="#7.1.4"> eating healthily</a>. 
+        </p>
+        <p class="mbn-text" id="7.1.1c"><b>Physical activity</b>
+        </p> 
+                Moderate or vigorous intensity physical activity will not affect your ability to breastfeed successfully but make sure you drink plenty of fluids, especially water, to avoid dehydration..
+        </p> 
+        <p class="mbn-text">
+                If you had a caesarean birth, it is best to avoid vigorous physical activity (e.g. running) for at least 6 weeks so you can heal properly. If you are worried about this or have questions, make sure you talk with your GP or <a href="# 8.1.2">maternal and child health nurse</a>.
+        </p>     
+        <p class="mbn-text">
+                Some tips: 
+            <ul>
+                    <li> wear a good sports bra for physical activity of a moderate to vigorous intensity (e.g. when you will be puffing hard)
+                    </li>
+                    <li> high impact physical activity (e.g. running or a gym class) is best done <i>after</i> breastfeeding because your breasts will be relatively empty (less full of breastmilk) which will reduce bounce and discomfort.
+                    </li>
+            </ul>
+        </p>
+        <p class="mbn-text">
+                Read more about <a href="#7.1.5">getting active</a> as a new parent.
+
+        <p class="mbn-section" id="7.1.2">For parents> Your feelings</p>
+
+        <p class="mbn-text" id="7.1.2">
+                Now your baby has finally arrived, it might feel like parenthood has
+                only just begun, but the reality is you've probably already been
+                through quite a lot to get to this point in your journey as a new
+                parent. 
+        </p>  
+        <p class="mbn-text">    
+                First there's the pregnancy and the rollercoaster of emotions, realisations and changes in lifestyle that go along with preparing to welcome your baby into your life. If you've had difficult pregnancies before or have been trying to become a parent for a long time,"hoping everything goes well <i>this</i> time around" is something else that might have played on your mind.  
+        </p>
+        <p class="mbn-text">  
+                There might also be uncertainties around your living arrangements, work and financial situations, potentially stressful relations with friends and family members who 'know best', reflections on your ownupbringing and anxieties about how <i>you</i> will cope as a parent. 
+        </p>
+        <p class="mbn-text">
+                As the pregnancy progresses, getting a good night's sleep often gets harder for soon-to-be parents to achieve, especially if mum-to-be is uncomfortable and tossing and turning! 
+        </p>    
+        <p class="mbn-text">
+                All of this adds up to take its toll on you, both physically and mentally.When your baby arrives it's generally a pretty exciting time. But you also probably <a href="#7.1.3">feel quite exhausted</a>, and that's before realising that you're suddenly a parent who is responsible for looking after this little baby, which can feel a bit overwhelming. 
+        </p>
+        <p class="mbn-text">
+                This is all normal!
+        </p>    
+        <p class="mbn-text">
+                Read more about what things to <a href="#5.1.1">expect with your newborn</a>.
+            </p>
+                <p class="mbn-text" id="7.1.2a">
+                <b>Postnatal depression</b>
+            </p> 
+                <p class="mbn-text">
+                Most women tend to experience the 'baby blues'- having mixed emotions, crying and feeling anxious - especially around 3-5 days after birth. However, for about 1 in every 7 women, these feelings candevelop into postnatal depression (PND).
+            </p> 
+                <p class="mbn-text">
+                Even though most people think that it's <i>only women</i> who can experience PND, it's actually not that unusual for <a href="http://raisingchildren.net.au/articles/men_and_postnatal_depression.html/context/1023#facts">men to experience PND</a> too. In fact, up to 1 in 10 men experience PND (often before their baby is born). Even though men with partners who have PND are more likely to develop PND themselves, there are <a href="http://raisingchildren.net.au/articles/men_and_postnatal_depression.html/context/1023#factors
+                ">many factors that can bring on PND</a>, even if their partner doesn't have PND herself. 
+            </p> 
+                  <p class="mbn-text" id="7.1.2b">
+                Symptoms of PND include: 
+                <ul>
+                    <li>feeling out of control, unable to cope or stressed
+                </li>
+                    <li>feeling irritable, anxious or angry
+                </li>
+                    <li>crying often but for no apparent reason
+                </li>
+                    <li>changes in appetite, memory or sleep patterns (especially a lack of sleep that is unrelated to your baby's needs)
+                </li>
+                    <li> having obsessive negative thoughts
+                </li>
+                    <li> fearing being alone or feelings of isolation or disconnection from loved ones
+                </li>
+                    <li> withdrawing from intimate relationships and from family, friends and community activities (e.g. staying in all the time or spending long hours at work)
+                </li>
+                    <li> having a low self-esteem, not feeling confident or feeling inadequate
+                </li>
+                    <li> tiredness, pain and headaches
+                </li>
+                </ul>
+            </p>
+
+                <p class="mbn-text">
+                Some symptoms that are specific to men include:
+                <ul>
+                    <li>a loss of libido
+                </li>
+                    <li>taking more risks that normal
+                </li>
+                    <li>drinking more alcohol or using more drugs than before (which can be a coping mechanism instead of seeking help) 
+                </li>
+                </ul>
+            </p>
+                 <p class="mbn-text">
+                 If you recognise any of the above symptoms, are worried or feel like the 'baby blues', low mood or anxiety has stayed with you for longer than 1-2 weeks, it's important to seek help from your GP, <a href="#8.1.2">maternal and child health nurse</a> or <a href="#8.1.8">contact PANDA</a> for confidential information and support. 
+             </p>
+                <p class="mbn-text">
+                 Asking for advice doesn't mean you <i>have</i> PND or that you're not coping, it just means you are looking out for yourself (and your baby) by being the best that you can be.
+            </p>
+                <p class="mbn-text" id="7.1.2c">
+                This video discusses how PND can affect new parents, signs to watch out for and how to cope.
+            </p>
+                <p class="mbn-text">
+                <b>Video: Postnatal depression</b>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/lm8LGRKtHq8" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+                <p class="mbn-text">
+                    Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+            </p>
+                <p class="mbn-text" id="7.1.2d">
+                Even if you've been feeling down, withdrawn, moody or teary, it doesn't necessarily mean you have PND. There are so many changes related to becoming a parent that can have a big impact on how you're feeling. 
+            </p>
+                <p class="mbn-text">
+                Difficult recoveries, <a href="#7.1.3">lack of sleep</a>, <a href="#5.1.9">colicky babies</a> and even changes in your relationship can all contribute to your mood. As a starting point to feeling better, try some of the following tips.
+            </p>
+                <p class="mbn-text" id="7.1.2e">
+                <b>Take a nap</b>
+                 <br />
+                A lack of sleep is a big contributor to feeling tired and overwhelmed, so if you can manage a <a href="#7.1.3">quick nap</a> or even a short break to rest from housework, work and other tasks such as cooking and cleaning, it can work wonders! Never be afraid to <a href="#7.1.6">share the load</a> - ask a friend, family member, partner or neighbour to help you get some rest.                
+            </p>
+                <p class="mbn-text" id="7.1.2f">
+                <b>Time out is important!</b>
+                 <br />
+                Try planning a night or afternoon out with friends, your partner or by yourself every once in a while - the interaction with others and a change of scenery can help you feel good.
+            </p>
+                <p class="mbn-text">
+                Check out some <a href="#7.1.6">ideas for treating yourself</a>.
+            </p>
+                <p class="mbn-text" id="7.1.2g">
+                <b>Get active</b>
+                 <br />
+                Doing <a href="#7.1.5">some physical activity</a> can be a great pick-me-up for new parents - it gives you time to think, brightens your mood and boosts your energy levels.
+            </p>
+                <p class="mbn-text">
+                Try to make physical activity a habit by setting aside a regular time each day or week to be active.
+            </p>
+                <p class="mbn-text" id="7.1.2h">
+                <b>Talk to other parents</b>
+                 <br />
+                Having other new parents around can be a great support network - they will know exactly what you're going through and can probably relate to how you're feeling. The great news is that there are lots of services in the community for parents, especially new parents!
+            </p>
+                <p class="mbn-text">
+                Try chatting to the mums in your mothers' group, join <a href="#Forum">our forum</a> to connect with other new parents and check out the <a href="#8.1">help and support section</a> to see what else is out there. 
+            </p>
+                <p class="mbn-text" id="7.1.2i">
+                If you think you might have PND, don't worry: 
+                <ul>
+                    <li>most people who get help early usually recover fully from PND
+                </li>
+                    <li>speaking with your GP or <a href="#8.1.2">maternal and child health nurse</a> is the first step to diagnosing and treating PND to help you feel more like yourself again - don't be afraid to bring this up with them!
+
+                </li>
+                    <li>if you're not sure you're ready to speak with your GP just yet, you can always check out <a href="#8.1.8">contact PANDA</a> for confidential information and support
+                </li>                   
+                </ul>
+            </p>
+                <p class="mbn-section" id="7.1.3" For parents> Sleep</p>
+                <p class="mbn-text" id="7.1.3a">
+                <b>Benefits of sleep</b>
+                 <br />
+                One of the biggest challenges of being a new parent is getting enough sleep! Adults generally need 7-8 hours of sleep per night but as a new parent, <a href="#5.1.8">your baby crying</a> and needing feeds throughout the night can make this near impossible!
+            </p>
+                <p class="mbn-text">
+                It can be tempting to accept feeling tired as <i>normal</i> and to 'just get on with it' but getting enough sleep is just as important for you as it is for your baby.
+            </p>  
+                <p class="mbn-text" id="7.1.3b">
+                 Some signs that you might need more sleep include:
+                <ul>
+                    <li>difficulty concentrating
+                </li>
+                    <li>feeling down or being moody
+                </li>
+                    <li>feeling anxious
+                </li>
+                    <li>problems with coordination or being more clumsy than normal
+                </li>                   
+                </ul>
+            </p>
+                 <p class="mbn-text">
+                Getting enough sleep can help you feel happier and calmer. It can also help you more fully enjoy the experience of being a new parent, which in turn will help your baby feel more relaxed.
+            </p>  
+                 <p class="mbn-text">
+              Not getting enough sleep also adds up, so if you feel tired or notice any of the above signs, try to prioritise getting more sleep. 
+            </p>  
+                 <p class="mbn-text">
+             Try these tips for sneaking in more sleep now you're a new parent.
+            </p>  
+                <p class="mbn-text" id="7.1.3c">
+                 <b>Sleep tips</b>
+                  <br />
+                 Although your old sleeping patterns may no longer be possible, there are a number of ways to make sure you still get enough sleep. It's even possible to <a href="#1.1.16">manage enough sleep when you're breastfeeding</a>!
+            </p>  
+                <p class="mbn-text" id="7.1.3d">
+                 <b>Take naps</b>
+                  <br />
+                 Napping can be a great way to increase the amount of sleep you get, especially during early weeks and months when you may be waking often at night to feed your baby.               
+             </p>
+                 <p class="mbn-text">
+                A nap should last no longer than 15-30 minutes. Any longer and your body may think it has had enough sleep and stop you from sleeping well at night. 
+            </p>  
+                 <p class="mbn-text">
+                 Not sure where to start? 
+            </p>  
+                 <p class="mbn-text">
+                 Try:
+                <ul>
+                    <li>lying down for a rest, even if you find it hard to sleep during the day - this still helps to recharge  the batteries
+                    </li>
+                    <li>having a nap or a rest when your baby sleeps
+                    </li>
+                    <li>setting an alarm to make sure you don't nap for longer than 30 minutes
+                    </li>
+                    <li>to nap or rest at the same time each day if possible
+                    </li>                   
+                </ul>
+            </p>
+            <p class="mbn-text" id="7.1.3e">
+                 <b>Cut down on caffeine</b>
+                  <br />
+                 Caffeine can make you feel good in the short term but can make sleeping and resting harder. Keep in mind that if you're breastfeeding, any caffeine you consume also <a href="#1.1.14">passes into your breastmilk</a> and can upset your baby. 
+             </p>
+                 <p class="mbn-text">
+                Because caffeine stays in your system for more than 6 hours, it's best to avoid heavily caffeinated drinks (such as coffee, colas and tea) late in the afternoon and evening when they are more likely to interfere with your sleep patterns.
+            </p>  
+                 <p class="mbn-text">
+                 Not sure how much caffeine is hiding in that drink? Check out our <a href="#1.1.14">caffeine guide</a>.
+            </p>  
+                 <p class="mbn-text" id="7.1.3f">
+                 <b>Share the load</b>
+                  <br />
+                 You don't have to do it all! Having someone look after your baby while you nap or take time out can work wonders. 
+             </p>
+                 Try:
+                <ul>
+                    <li>sharing the work of looking after your baby with your partner, or <a href="#7.1.6">ask family or friends for help</a>
+                    </li>
+                    <li>taking turns for night time duties with your partner (if you're breastfeeding, your partner could do the nappy changing and re-settling following a feed so you can get back to sleep quicker - see <a href="#1.1.9">other ways your partner can help you with breastfeeding</a>.                    
+                    </li>                   
+                </ul>
+            </p>  
+              <p class="mbn-text" id="7.1.3g">
+                 <b>Have your own space to sleep</b>
+                  <br />
+                 Mums in particular might find it helpful to have their own space to nap. This is best in a dark and quiet room, away from your partner and/or baby, to reduce the chance of being disturbed.
+            </p>  
+              <p class="mbn-text" id="7.1.3h">
+                 <b>Avoid screens before bedtime</b>
+                  <br />
+                 It's tempting to relax in front of the TV, computer or smartphone at night, but try to turn it off <i>at least an hour</i> before you go to bed. Lights from screens have been shown to disrupt sleep.
+            </p>
+                <p class="mbn-section" id="7.1.4" For parents> Healthy eating</p>
+                <p class="mbn-text" id="7.1.4a">
+                <ul>
+                    <li>
+                        <a href="#7.1.4b">Why parents should eat healthily</a>
+                    </li>
+                    <li>
+                        <a href="#7.1.4c">The 5 major food groups</a>
+                    </li>
+                    <li>
+                        <a href="#7.1.4e">How much should you be eating?</a>
+                    </li>  
+                    <li>
+                        <a href="#7.1.4f">What does 'a serve' look like?</a>
+                    </li>
+                    <li>
+                        <a href="#7.1.4l">Foods to limit</a>
+                    </li>
+                        <li><a href="#7.1.4n">Healthy eating tips</a>  
+                        </li>   
+                    <ul>    
+                        <li><a href="#7.1.4o">getting enough fruit and vegetables</a>
+                        </li>
+                        <li><a href="#7.1.4p">cutting down on discretionary (junk) foods</a>
+                         </li>
+                        <li><a href="#7.1.4q">saving valuable time and money</a>          
+                        </li>
+                </ul>       
+                </ul>
+            </p>
+                <p class="mbn-text" id="7.1.4b">
+                  <br />
+                    Healthy eating is important for <b>everyone</b>, but now that you're a parent, it's even more important! 
+            </p>
+                 <p class="mbn-text">
+                    You are your baby's most important role model and food is no exception.
+            </p>  
+                  <p class="mbn-text">
+                    Because your baby is always watching you (and trying to copy what you do), your own eating habits, and the foods you have at home, actually have a big influence on the foods that your baby learns to like and therefore eats, even if you try to teach them otherwise.
+            </p>  
+                    <p class="mbn-text">
+                    Let's use broccoli as an example. 
+            </p>
+                 <p class="mbn-text">
+                    If your baby sees you enjoying broccoli when you eat it, they are more likely to learn to enjoy broccoli (when they start solids) as well.
+            </p>  
+                    <p class="mbn-text">
+                    But if they see you pulling broccoli out of a stir-fry, leaving it on the side of your plate and screwing your nose up at it (because you don't like it) this is what they'll think is 'normal' behaviour towards broccoli.  
+            </p>  
+                    <p class="mbn-text">
+                    Even if they have never tasted broccoli, they'll be more likely to dislike it because they have seen you avoiding it, which is a problem because it already <a href="#4.1.11">takes some time for some children to like vegetables</a>.  
+            </p>  
+                    <p class="mbn-text">
+                    The same is true of <a href="#4.1.8">meal times</a> - whatever is normal in your household (e.g. sitting on the couch watching TV, the family gathered around the table together, or everyone just grazing directly from packets whenever they're hungry) is what your baby will learn to be 'normal'. 
+            </p>  
+                    <p class="mbn-text">
+                    These habits around food can be hard to break and will tend to carry on throughout their life, which is why it's so important to get healthy eating off to a great start.
+            </p>  
+                    <p class="mbn-text">
+                    Check out our <a href="#healthy eating quiz">healthy eating quiz</a> for some personalised tips and if you're breastfeeding, see our <a href="#1.1.14">healthy eating tips specific for breastfeeding mums</a> in the breastfeeding section. 
+            </p>
+              <p class="mbn-text" id="7.1.4c">
+                 <b>The 5 major food groups</b>
+                  <br />
+                 When you're busy <a href="#7.1.6">adjusting to being a new parent</a>, it's easy to forget to look after yourself. Trying to maintain a healthy diet will help boost your wellbeing and keep you energised, which can promote positive mental health (mood) while adjusting to your new role.
+            </p>
+                 <p class="mbn-text">
+                    As a bonus, by eating healthy foods yourself, you'll also be showing your baby how to eat healthily which in turn increases the chance of your baby adopting healthy habits too!
+            </p>
+                <p class="mbn-text" id="7.1.4d">
+                    <p class="mbn-text">
+                    To make sure you are eating well, aim to enjoy a variety of foods from the 5 major food groups every day:
+                <ul>
+                    <li class="mbn-ol">Vegetables and legumes/beans
+                    </li>
+                    <li class="mbn-ol">Fruit
+                   </li>
+                    <li class="mbn-ol"> Grain (cereal) foods, mostly wholegrain
+                    </li>
+                    <li class="mbn-ol">Lean meat and poultry, fish, eggs, nuts and seeds, and legumes/beans
+                    </li>
+                    <li class="mbn-ol">Milk, yoghurt, cheese and/or alternatives (mostly reduced fat)
+                    </li>
+                </ul>
+            </p>
+                   <p class="mbn-text" id="7.1.4e">
+                    <p class="mbn-text">
+                    The amount you need to eat every day depends on your gender and whether or not you are <a href="#1.1.14">breastfeeding</a>. This is because continually making breastmilk for your baby means you need to eat extra nutrients and energy (kilojoules/calories)!
+            </p>
+                 <p class="mbn-text">
+                    Use the below table to work out how much you should be eating from each of the 5 major food groups but keep in mind that this is a guide and you may need to eat more or less than recommended, depending on your physical activity levels. 
+
+            <p class="mbn-text">
+                   Recommended average daily number of serves from the 5 food groups
+                <table class="mbn-table">
+                    <tr>
+                        <td></td>
+                        <td>Women aged 19-50</td>
+                        <td>Men aged 19-50</td>
+                        <td>Breastfeeding women</td>
+                    </tr>
+                    <tr>
+                        <td>Fruit</td>
+                        <td class="center">2</td>
+                        <td class="center">2</td>
+                        <td class="center">2</td>
+                    </tr>
+                    <tr>
+                        <td>Grain (cereal) foods, mostly wholegrain</td>
+                        <td class="center">6</td>
+                        <td class="center">6</td>
+                        <td class="center">9</td>
+                    </tr>
+                    <tr>
+                        <td>Lean meat and poultry, fish, eggs, nuts and seeds, and legumes/beans</td>
+                        <td class="center">2&#189;</td>
+                        <td class="center">3</td>
+                        <td class="center">2&#189;</td>
+                    </tr>
+                    <tr>
+                        <td>Milk, yoghurt, cheese and/or alternatives (mostly reduced fat)</td>
+                        <td class="center">2&#189;</td>
+                        <td class="center">2&#189;</td>
+                        <td class="center">2&#189;</td>
+                    </tr>
+                </table>
+            </p>
+            <p class="mbn-text">
+                <i>Source: National Health and Medical Research Council</i>
+            </p>
+            <p class="mbn-text" id="7.1.4f">
+                <b>Not sure what 'a serve' looks like</b>
+                <br />
+            <p class="mbn-text"> Eating the recommended number of serves from each of the 5 major food groups doesn't mean you have to eat piles and piles of the same food - the more variety you add, the more variety in nutrients you gain and the more interesting it is for your taste buds!  
+            </p>
+            <p class="mbn-text">The following are guides to how big a serve is for foods within each of the 5 food groups. 
+            </p>
+            <p class="mbn-text" id="7.1.4g">
+                
+                <img src= "https://www.eatforhealth.gov.au/sites/default/files/images/food_essentials/vegetable_serves_table_web.jpg" width="300" height="300">
+            <p class="mbn-text">
+                <i>Source: National Health and Medical Research Council</i>
+            </p> 
+            <p class="mbn-text" id="7.1.4h">
+                
+                <img src= "https://www.eatforhealth.gov.au/sites/default/files/images/food_essentials/fruit_serve_table_web.jpg" width="300" height="300">
+            <p class="mbn-text">
+                <i>Source: National Health and Medical Research Council</i>
+            </p> 
+            <p class="mbn-text" id="7.1.4i">
+                
+                <img src= "https://www.eatforhealth.gov.au/sites/default/files/images/food_essentials/grains_serves_table_web.jpg" width="300" height="300">
+            <p class="mbn-text">
+                <i>Source: National Health and Medical Research Council</i>
+            </p> 
+            <p class="mbn-text" id="7.1.4j">
+                
+                <img src= "https://www.eatforhealth.gov.au/sites/default/files/images/food_essentials/meat_poultry_serves_table_web.jpg" width="300" height="300">
+            <p class="mbn-text">
+                <i>Source: National Health and Medical Research Council</i>
+            </p> 
+            <p class="mbn-text" id="7.1.4k">
+                
+                <img src= "https://www.eatforhealth.gov.au/sites/default/files/images/food_essentials/dairy_serves_table_web.jpg" width="300" height="300">
+            <p class="mbn-text">
+                <i>Source: National Health and Medical Research Council</i>
+            </p> 
+            <p class="mbn-text" id="7.1.4l">
+                <b>Foods to limit</b>
+                <br />
+                    Some foods offer very little or no nutritional benefit. These discretionary or 'sometimes' foods (sometimes called junk foods) are often high in sugar, fat and salt and although they might make you feel good in the short term, they often leave you feeling sluggish and unwell in the long term.
+            </p> 
+            <p class="mbn-text" id="7.1.4m">
+                Some examples of discretionary foods include:
+                <ul>
+                    <li>ice cream, confectionary and chocolate
+                    </li>
+                    <li>meat pies and pastries
+                    </li>
+                    <li>sausages and processed meats (e.g. ham, salami)
+                    </li>
+                    <li>commercial burgers, hot chips and fried foods
+                    </li>
+                    <li>cream and butter
+                    </li>
+                    <li>sugary cordials, soft drinks, iced teas, sports drinks and fruit drinks
+                    <li>alcohol 
+                    </li>                   
+                </ul>
+            </p>
+              <p class="mbn-text">
+                Eating 'sometimes' foods can be tempting when you're tired and feel like a 'pick me up' and of course it's OK to eat these foods sometimes, but healthy foods are always a better choice. This is important for good health, helps prevent disease and as a bonus, can also <a href="#7.1.4">help your hip pocket</a>, especially when choosing fruit and vegetables that are in season.
+            </p>
+            <p class="mbn-text">
+                Where possible, focus on choosing healthy foods for every day and try to limit the amount of discretionary foods you have. 
+            </p>     
+             <p class="mbn-text" id="7.1.4n">
+                <b>Healthy eating tips</b>
+                <br />
+                Healthy eating doesn't need to be hard! In fact, it can even <a href="#7.1.4">save you both valuable time and money</a>!
+            <p class="mbn-text">
+                Try setting yourself the target of reaching your <a href="#7.1.4">recommended daily number of serves</a> from each of the <a href="#7.1.4">5 major food groups</a> each day. Even if you don't reach it, every step closer will bring with it better health! 
+            </p>     
+            <p class="mbn-text" id="7.1.4o">
+                <br />
+               Many of us find it hard to fit enough fruit and vegetables into our daily eating. But the good news is that it doesn't have to be. Try these tips to make a habit of reaching your <a href="#7.1.4">recommended daily number of serves</a> of <a href="#7.1.4">fruit</a> and <a href="#7.1.4">vegetables</a> every day.
+            </p>  
+            <p class="mbn-text">
+                When choosing fruits and vegetables, try to remember to 'colour every plate like a rainbow', that is, opt for a variety of different coloured fruit and vegetables every day. This makes eating your fruit and vegetables more interesting for your taste buds whilst also increasing the number of different nutrients you receive!
+            </p>    
+              <ul>
+                    <li>leave a bowl of fruit out where you will see them to remind you to eat them
+                    </li>
+                    <li>raw vegetables can make a quick and easy snack (e.g. carrot, celery, cucumber) - try dipping into low fat unsweetened plain natural yoghurt or <a href="#6.5.1">hummus</a> for extra flavour and energy
+                    </li>
+                    <li>try having 1-2 meat free days every week, focusing on beans/lentils, vegetables, tofu or egg instead (e.g. <a href="#6.4.1">vegetable stir-fry</a>, bean burrito, <a href="#6.4.1">lentil cottage pie</a> or mixed vegetable spaghetti Bolognese) - many people enjoy the challenge of a 'Meatless' or 'Meat Free' Monday
+                    </li>
+                    <li>try spreading avocado on toast (or even drizzling a little olive oil) instead of butter
+                    </li>
+                    <li>bulk out meals like soups, casseroles and stews with lentils (dried or canned) or any extra vegetables you have in the fridge - this also makes meat stretch further, saving you money
+                    </li>
+                    <li>check out the <a href="#6.1.1">recipes</a> section for more ideas!
+                   </li>
+                </ul>
+            </p>
+             <p class="mbn-text" id="7.1.4p">
+               Do you find yourself skipping the healthier foods in the <a href="#7.1.4">5 major food groups</a> because you tend to fill up on the foods that fall under the <a href="#7.1.4">discretionary or 'sometimes' foods label</a> (sometimes called junk foods)?
+            </p>    
+             <p class="mbn-text">
+               There's nothing wrong with enjoying these foods now and again but it's best to limit the amount of discretionary foods you have and instead focus on choosing healthy foods for every day.
+             </p> 
+              <p class="mbn-text">
+              <b>Tips for cutting down on discretionary foods</b>
+             </p> 
+                <ul>
+                    <li>keep a bottle or glass of water handy during the day to remind you to drink it (instead of drinks with added sugar) - this will also save money as water from the tap is essentially free!
+                    </li>
+                    <li>avoid fried foods when ordering takeaway - choose foods that have some vegetables included (e.g. vegetable noodles, stir fries, salads or a vegetable pizza)
+                    </li>
+                    <li>remind yourself to <a href="#7.1.4">snack on fruit and vegetables</a> by keeping these in places you can readily see (e.g. a fruit bowl on the table or cut up vegetables right in front of you when you open the fridge)
+                    </li>
+                    <li>try not to do your shopping when you're hungry as you'll be more likely to buy snack foods high in sugar, salt and fat (which also tend to cost you more money)
+                    </li>
+                    <li>check out the recipes section for some easy healthy recipes that taste great!
+                    </li>
+                    <li>check out the <a href="#6.1.1">recipes</a> section for some easy healthy recipes that taste great!
+                    </li>
+                 </ul>
+            </p>
+            <p class="mbn-text">
+                <br />
+                Don't forget that foods like avocado, olive oil, salt-free peanut butter, nuts and seeds are great sources of 'good' fats and should be eaten as part of a healthy diet in small amounts.
+            </p> 
+            <p class="mbn-text" id="7.1.4q">
+             <br />
+               Many people wrongly think that eating healthily is expensive or time consuming but it certainly doesn't have to be! In fact, healthy eating can be both cheap and quick - check out our tips to save time and money!
+            </p>    
+            <p class="mbn-text">
+                <b>Tips for saving valuable time and money</b>
+            </p> 
+                <ul>
+                    <li>frozen vegetables are generally just as good for you as fresh vegetables because they are frozen as soon as they're picked - keep some in your freezer so you've always got some on hand
+                    </li>
+                    <li>buy <a href="#7.1.4">fruit</a> and vegetables that are in season for maximum freshness and quality at the lowest price
+                    </li>
+                    <li>remind yourself to snack on <a href="#7.1.4">fruit</a> and <a href="#7.1.4">vegetables</a> by keeping these in places you can readily see (e.g. a fruit bowl on the table or cut up vegetables right in front of you when you open the fridge)
+                    </li>
+                    <li>make extra meals and snacks so these leftovers that can be eaten for lunch or dinner the next day or frozen for another time
+                    </li>
+                    <li>save food preparation time by buying red meat or chicken that is already sliced or marinated 
+                    </li>
+                    <li>stretch your budget further by reducing the amount of meat in meals like Bolognese, pies and casseroles - replace with extra vegetables
+                    </li>
+                    <li>try to prepare your main meal at a time when your baby is settled or sleeping
+                    </li>
+                    <li>make meals at home (instead of buying them ready made or as takeaways) wherever possible - this saves you money and also gives you control over exactly what goes into your food
+                    </li>
+                 </ul>
+            </p>
+            <p class="mbn-section" id="7.1.5" For parents> Getting active</p>
+            <p class="mbn-text" id="7.1.5a">
+                    In this section you will find:
+            </p>
+                <ul>
+                    <li>
+                        <a href="#7.1.5">benefits of physical activity</a>
+                    </li>
+                    <li>
+                        <a href="#7.1.5">when to start getting active</a>
+                    </li>
+                    <li>
+                        <a href="#7.1.5">how much physical activity you should try to do</a>
+                    </li>  
+                    <li>
+                        <a href="#7.1.5">some tips for moving more</a>
+                    </li>
+                </ul>
+            </p>   
+            <p class="mbn-text" id="7.1.5b">
+                    <b>Benefits of physical activity</b>
+                    <br />
+                    Just as with <a href="#7.1.4">eating healthily</a>, regular physical activity is important for everyone and brings with it many health benefits. Being physically active also sets a good example for your baby, so don't forget to make time each day to <a href="#play">play with your baby</a>! 
+            </p>
+            <p class="mbn-text" id="7.1.5c">
+                    Physical activity, in the short-term can:
+            </p>
+                <ul>
+                    <li>improve sleep and sleep quality
+                    </li>
+                    <li>boost your mood and wellbeing (especially if you're feeling down or anxious)
+                    </li>
+                    <li>increase your energy levels                       
+                    </li>  
+                    <li>be a chance to meet up with others (e.g. friends, family, mothers' group)
+                    </li>
+                    <li>promote healthy habits as 'normal to your baby
+                    </li>
+                </ul>
+            </p>   
+             <p class="mbn-text" id="7.1.5d">
+                    In the longer term, regular physical activity can:
+            </p>
+                <ul>
+                    <li>reduce your risk of heart disease and stroke
+                    </li>
+                    <li>help keep your weight, cholesterol and blood pressure in check
+                    </li>
+                    <li>decrease your risk of developing type 2 diabetes (which is particularly important if you had gestational diabetes when pregnant)     
+                    </li>  
+                    <li>strengthen your bones
+                    </li>
+                    <li>lower your risk of falls
+                    </li>
+                </ul>
+            </p>   
+            <p class="mbn-text" id="7.1.5e">
+    
+                    Regularly keeping active will not only leave you feeling great but also means your baby has a better chance of having healthier parents for longer!
+            </p>  
+            <p class="mbn-text" id="7.1.5f">
+                    <b>When to start</b>
+                    <br />
+                    Before you start any physical activity, it's always a good idea to check with your GP or <a href="#8.1.2">maternal and child health nurse</a> for specific advice.
+            </p>
+            <p class="mbn-text">
+                    If you've just given birth, you should be able to start some gentle physical activity (such as walking) soon after childbirth but the main thing is that whatever you do feels comfortable for you. Start off slowly and then gradually increase how hard you go and for how long as you feel more able.
+            </p>
+            <p class="mbn-text">
+                    If you had a caesarean birth, it is best to avoid vigorous physical activity (e.g. running) for at least 6 weeks to give your body a chance to heal properly. Again, it's a good idea to talk with your GP or <a href="#8.1.2">maternal and child health nurse</a> if you are concerned or have any questions.
+            </p>
+            <p class="mbn-text" id="7.1.5g">
+                    <b>How much should you do?</b>
+                    <br />
+                   As a new parent, being physically active on a regular basis can be hard - life is unpredictable and you might find it difficult. This is normal! Knowing what is recommended though can be a useful goal to work towards in the future. 
+            </p>
+            <p class="mbn-text" id="7.1.5h">
+                   All adults should aim to be physically active on most (preferably all) days of the week.
+            </p>
+            <p class="mbn-text">
+                    Over one week, this could be:
+            </p>
+                <ul>
+                    <li>150-300 minutes (2.5-5 hours) of moderate intensity physical activity (e.g. walking, cycling or swimming) <B>OR</B>
+                    </li>
+                    <li>75-150 minutes (1.25-2.5 hours) of vigorous intensity physical activity (e.g. running hard enough to be out of breath) <B>OR</B>
+                    </li>
+                    <li>a combination of both moderate and vigorous activities that are equivalent
+                    </li>  
+                </ul>
+            </p>   
+             <p class="mbn-text" id="7.1.5i">
+                    <b>Tips for getting active</b>
+                    <br />
+                   Walking is great for everyone, especially new mums - it is free, low impact, can be done any time, with or without friends and at your own pace. Walking has many health benefits and if you can squeeze in half an hour each day (at a pace which makes you slightly out of breath) you can improve your daily health and wellbeing as well as your long-term health.
+            <p class="mbn-text">
+                    If you're into running (or would like to start) you might like to look into getting a pram that you can safely run with. This is a great way to get some vigorous physical activity whilst getting out and about with your baby. It's also a chance for your partner to have some 'me' time if they don't want to join you.
+            </p>
+            <p class="mbn-text">
+                    There are many other ways to include more physical activity in your day - see below for some more ideas!
+            </p>
+             <p class="mbn-text" id="7.1.5j">
+                     <b>Include more movement in things you already do by swapping:</b>
+                     <br />
+            </p>
+            <p class="mbn-text">
+                   All adults should aim to be physically active on most (preferably all) days of the week.
+            </p>
+            <p class="mbn-text">
+                    Over one week, this could be:
+            </p>
+                <ul>
+                    <li><u>online shopping for the real experience</u> - go when your partner or friend can look after your baby if you find it stressful taking them with you
+                    </li>
+                    <li><u>the car for a brisk walk to the shops with your baby in the pram</u> - using the pram adds extra resistance training to your workout! 
+                    </li>
+                    <li><u>rocking your baby to sleep</u> to walking them to sleep in the pram instead
+                    </li>  
+                     <li><u>housework for a walk outside</u> 
+                    </li>  
+                </ul>
+        </p>   
+             <p class="mbn-text" id="7.1.5k">
+                     <b>Get gardening:</b>
+                <ul>
+                    <li>gardening is good physical activity and babies love being outdoors
+                    </li>
+                    <li>getting outdoors is also good for your wellbeing, especially when the weather is nice! 
+                    </li>
+                    <li>if your garden includes edible plants (for example, tomatoes, spinach, zucchinis or fruit trees) your gardening can also  <a href="#7.1.4">boost your fruit and vegetable intake</a> and help your baby to  <a href="#4.1.11">learn where food comes from</a>!
+                    </li>    
+                </ul>
+        </p>   
+              <p class="mbn-text" id="7.1.5l">
+                     <b>Be committed:</b>
+                <ul>
+                    <li>make a goal of getting out (with or without your baby) at least once a day for a walk - even if it's only for 10 minutes!
+                    </li>
+                    <li>organise to go for a walk with friends, family or your mothers' group (with or without your babies) - having someone else rely on you makes you more likely to do it
+                    </li>
+                    <li>put a time aside each week where your partner or a friend takes care of dinner and/or <a href="#5.1.8">settling your baby to sleep</a> to use as your time to get out and do something active (such as a yoga/Pilates class, a walking/running group or going to the gym)
+                    </li>    
+                </ul>
+        </p>   
+        <p class="mbn-text" id="7.1.5m">
+                     <b>Use downtime for activity</b>
+                <ul>
+                    <li>try doing something active inside the house when your baby is sleeping - e.g. an aerobics DVD or even just cleaning along to your favourite music (use just one earbud so you can still listen for your baby but don't disturb them with your music)
+                    </li>    
+                </ul>
+        </p>   
+        <p class="mbn-text" id="7.1.5n">
+                    Over one week, this could be:
+                <ul>
+                    <li>whatever you choose, make it something you <i>enjoy and look forward to</i> - it will be much easier to make it a habit
+
+                    </li>
+                    <li>aim to squeeze in 30 minutes a day or more at a pace which makes you slightly out of breath (3 x 10 minutes blocks in a day is just as good as 1 x 30 minute block)
+
+                    </li>
+                    <li><i>some</i> physical activity is always better than none!
+                    </li>    
+                </ul>
+        </p>   
+
+        <p class="mbn-section" id="7.1.6" For parents> Adjusting to life as a parent</p>
+        <p class="mbn-text" id="7.1.6a">
+        <p class="mbn-text">
+                <br />
+                Even though you've been preparing for this moment for many months, now that it's finally here, it might take you some time to adjust to your new life as a parent. 
+        <p class="mbn-text">
+                Mum's body has been through a lot but should start to heal quickly. Soon after birth it's best for mum to get as much rest as possible to help with recovery. This is also a good time to get to know and learn how to care for your new baby.
+        </p>   
+        <p class="mbn-text">
+                For partners, this is when it all starts to become really real - as you <a href="#7.1.6">adjust to your new role</a>, you need to be there to look after your baby, yourself and your relationship. The best way to build your skills and confidence is to <a href="#7.1.6">get in and have a go - at everything</a>. 
+        </p>
+        <p class="mbn-text">
+                At a time when you're already <a href="#7.1.3">quite tired</a> and probably a bit overwhelmed, adjusting to life as a new parent might feel daunting but it's important to realise that there is <a href="#8.1.7">lots of support available</a>!
+        </p>
+        <p class="mbn-text">
+                Find out more about:
+
+                <ul>
+                    <li>
+                        <a href="#7.1.6">the support available immediately after birth</a>
+                    </li>
+                    <li>
+                        <a href="#7.1.6">getting additional support</a>
+                    </li>
+                    <li>
+                        <a href="#7.1.6">how partners can help</a>
+                    </li>  
+                    <li>
+                        <a href="#7.1.6">connecting with others</a>
+                    </li>
+                    <li>
+                        <a href="#7.1.6">bonding with your baby</a>
+                    </li>
+                    <li>
+                        <a href="#7.1.6">working out new roles</a>
+                    </li> 
+                     <li>
+                        <a href="#7.1.6">parenting for partners</a>
+                    </li> 
+                    <li> 
+                        <a href="#7.1.6">returning to (or starting) work</a>
+                    </li> 
+                    <li> 
+                        <a href="#7.1.6">treating yourself</a>
+                    </li> 
+                    <li> 
+                        <a href="#7.1.6">managing time</a>
+                    </li> 
+                </ul>          
+        </p>   
+
+        <p class="mbn-text" id="7.1.6b">
+        <p class="mbn-text">
+              If your baby was born:
+                <ul>
+                    <li>
+                        <u>in hospital</u> - a <a href="#8.1.3">midwife</a> or <a href="#8.1.2">maternal and child health nurse</a> should visit you at home in the week after you leave the hospital to check on you and your baby and answer any questions you might have
+                    </li>
+                    <li>
+                        <u>at home</u> - your homebirth <a href="#8.1.3">midwife</a> will visit you regularly (daily at first) and then less often, depending on how much help you and your baby need</a>.
+                    </li>
+                </ul>
+        </p>
+        <p class="mbn-text" id="7.1.6c">
+             <b>Additional support</b>
+        <p class="mbn-text">
+               It's also good to have someone you trust to support you for the first few days or weeks (if possible) following having a new baby. This is often your partner or a family member but it could also be a friend.
+        <p class="mbn-text">
+                It can sometimes be hard to ask for help, especially if you're normally very independent, but don't be afraid to ask someone to help you with any practical jobs, such as washing, shopping (e.g. for nappies and healthy foods), cooking and cleaning - more often than not, people like to help!
+            </p>   
+        <p class="mbn-text" id="7.1.6d">
+             <b>How partners can help</b>
+        <p class="mbn-text">
+                This video shows how partners can help care for their newborns and babies. They explain how they've been able to help and support their partners in the early months after birth.
+        </p>
+        <p class="mbn-text">
+            <b>Video: How partners can help with newborns and babies</b>
+                <div class="video-container">
+                    <iframe  src="https://www.youtube.com/embed/5cD3lYa20AM" frameborder="0"allowfullscreen></iframe> 
+                </div>
+        </p>
+        <p class="mbn-text">
+                    Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+        </p>
+        <p class="mbn-text" id="7.1.6e">
+             <b>Connecting with others</b>
+        <p class="mbn-text">
+               Compared to the time you had before you had a baby, you will probably also find you have less time to socialise. Spending a lot more time at home might leave you feeling confined to the house but it is important that you don't feel isolated.  
+        </p>
+        <p class="mbn-text">
+                Ways to stay in touch with the outside world could be:
+                <ul>
+                    <li>calling a friend or family member                  
+                    </li>
+                    <li>catching up with other new parents for a walk and coffee
+                    </li>
+                    <li>connecting with others through <a href="forum">our forum</a> and other social media
+                    </li>
+                </ul>
+        </p>
+        <p class="mbn-text" id="7.1.6f">
+             <b>Bonding with your baby</b>
+        <p class="mbn-text">
+               Don't worry or feel ashamed if you don't feel an instant connection with your baby - this is perfectly normal!
+        </p> 
+        <p class="mbn-text">
+                You might have been expecting to have an all-encompassing wave of unconditional love when your baby first arrived, but it <i>takes</i> time to form this bond as you get to know each other, just like with any other new relationship. 
+        </p>   
+        <p class="mbn-text">
+                Many mums find that feeding time also doubles as good bonding time with their new baby. This is because the distance from your breast to your face lets your baby focus on your face (which is why it's often called the 'cuddle distance'). Talking to your baby as you  <a href="#1.1.1">breastfeed</a> them allows your baby to make the connection between your face and your voice which will be so familiar from the womb.
+        </p> 
+        <p class="mbn-text">
+                Outside of feeding there are a  <a href="#1.1.9">plenty of other ways to bond with your baby</a>, which can be great for partners, especially if mum is doing all the feeding. Non-feeding bonding also teaches your baby that love does not have to involve the giving of food!
+        </p> 
+        <p class="mbn-text" id="7.1.6g">
+             <b>Working out new roles</b>
+        <p class="mbn-text">
+               Even though it's quite clear who mum is, it can take some time to fall into new roles. This can be especially true if mum was previously invested in full-time work and is now at home with the baby. It might also be the case that mum's partner wants to be a more involved parent, but current commitments (such as work and commuting) don't leave much time for helping with the baby.
+        </p> 
+        <p class="mbn-text">
+                Ensuring you think about and discuss with your partner what each of your roles are, both inside and outside the home, is important for your own wellbeing, relationship and your baby's home environment. 
+        </p>   
+        <p class="mbn-text">
+                Things to consider include your financial and work situations, what tasks need doing at home and what makes you happy. See some <a href="http://raisingchildren.net.au/articles/becoming_a_dad.html#working ">more starting points for discussions</a> around parental roles.
+        </p> 
+
+        <p class="mbn-text" id="7.1.6h">
+             <b>Parenting for partners</b>
+        </p> 
+        <p class="mbn-text">
+              Just like any new role you take on, becoming a parent might feel a bit overwhelming! It takes time to adjust to your new role within the family unit but the best way to do this, is to just get in and have a go, at everything you can.  
+        </p> 
+        <p class="mbn-text">
+               Although only mum can  <a href="#1.1.1">breastfeed</a> your baby, both parents are just as good as each other at recognising and responding to the needs of their babies and children.
+        </p>   
+        <p class="mbn-text">
+                Feeding aside, there are many other ways partners can get involved and this means your baby will be exposed (and adapt) to different styles of parenting, which helps them learn social skills. 
+        </p> 
+        <p class="mbn-text">
+                Some ways to get involved with your baby include  <a href="#play">making time to play</a>, having one-on-one time with your baby,  <a href="#1.1.9">chatting to and showing your baby affection</a> and trying everything such as <a href="#5.1.8">settling</a>, bathing, nappy changing and dressing.
+        </p> 
+        <p class="mbn-text">
+                Learn more about  <a href="#http://raisingchildren.net.au/articles/becoming_a_dad.html#involved">how partners can get involved with their newborn</a>.
+        </p>
+
+              </p>   
+        <p class="mbn-text" id="7.1.6i">
+        <p class="mbn-text">
+                This video talks about the changing role of fathers. Dads talk about being stay-at-home dads, getting more involved in caring for their children and share their experiences of being more involved in parenting than their own fathers were.
+
+        <p class="mbn-text">
+            <b>Video: Dads' changing roles</b>
+
+                <div class="video-container">
+                    <iframe  src="https://www.youtube.com/embed/k5i9VCSlvtM" frameborder="0" allowfullscreen></iframe>
+                </div>
+        </p>
+        <p class="mbn-text">
+                    Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+
+        </p>
+        <p class="mbn-text" id="7.1.6j">
+             <b>Returning to (or starting) work</b>
+        </p> 
+        <p class="mbn-text">
+              Choosing to return to (or start) work can be a tough decision after having a baby. In addition to earning enough money to keep a family clothed, sheltered, and fed, many people feel 'complete' by having a job and for most this can also be a positive experience outside of caring for a child.  
+        </p> 
+        <p class="mbn-text">
+              Making sure you are personally fulfilled now you've taken on the role as a parent is important, and if going to work will help, this can only be a positive thing for you, your baby and overall family. 
+        </p>   
+        <p class="mbn-text" id="7.1.6k">
+        </p> 
+        <p class="mbn-text">
+             It's normal to have anxieties about returning to work. Should you decide to, there are many options for childcare - whether it be family support or childcare, it's important you feel comfortable with your decision.  
+        </p> 
+        <p class="mbn-text" id="7.1.6l">
+        </p> 
+        <p class="mbn-text">
+            Children are extremely resilient and can not only cope with many different caring arrangements, they also enjoy new and challenging environments. Getting the right balance between time spent at home and time in childcare or with family can be difficult but as long you feel supported and comfortable with your childcare arrangements you shouldn't worry.
+        </p> 
+         <p class="mbn-text" id="7.1.6m">
+        </p> 
+        <p class="mbn-text">
+            If working at home is an option, you might like to discuss this with your employer. Although it may seem daunting, if you feel it would help make this adjustment period easier, it can't hurt. On the other hand, you might like the idea of keeping work and home life separate.
+        </p> 
+        <p class="mbn-text">
+            There's also no need to stop breastfeeding if you choose to go back to (or start) work - check out the <a href="#1.1.7">tips on how working mums continue to breastfeed</a>.
+        </p> 
+        </p>
+        <p class="mbn-text" id="7.1.6n">
+             <b>Treat yourself</b>
+        </p> 
+        <p class="mbn-text">
+              Treat yourself regularly - being a parent requires some big changes to your life and you deserve to be rewarded!
+        </p> 
+         <p class="mbn-text" id="7.1.6o">
+        </p> 
+        <p class="mbn-text">
+                Some ideas include:
+                <ul>
+                    <li>shopping - either alone or with a friend
+                    </li>
+                    <li>relaxing with a book or reading one of your favourite magazines
+                    </li>
+                    <li>joining a new class (including online courses, many of which are free), regular group or starting a new hobby
+                    </li>
+                     <li>going to the movies or watching a DVD at home
+                    </li>
+                    <li>having lunch or dinner with friends
+                    </li>
+                    <li>catching up with mates to kick (or watch) the footy
+                    </li>
+                    <li>doing some <a href="#7.1.5">physical activity</a>
+                   </li>
+                    <li>visiting a neighbour, family member or friend
+                    </li>
+                    <li>pampering yourself (e.g. painting your nails or treating yourself to a manicure or pedicure, a massage or a facial) going to the movies or watching a DVD at home
+                    </li>
+                    <li>anything you enjoy doing <i>just</i> for you!
+                    </li>
+                </ul>
+        </p>
+        <p class="mbn-text" id="7.1.6p">
+            <b>Managing time</b>
+        </p> 
+        <p class="mbn-text">
+            Having a baby is very time-consuming! As a parent you are on-call 24 hours a day and it is common to feel like you never have enough time to get everything done. Learning to manage your time well will help you look after yourself and keep you feeling on top of things.
+        </p> 
+        <p class="mbn-text">
+           Some things to try...
+        </p>    
+         <p class="mbn-text" id="7.1.6q">
+            <b>Ask for help!</b>
+        </p> 
+        <p class="mbn-text">
+            Most friends and family are looking for a way to help - letting them will take some of the pressure of you!
+        </p> 
+         <p class="mbn-text">
+                Simple things they could help with include:
+
+                <ul>
+                    <li>picking up food, groceries or other items you need when dropping by to visit
+                    </li>
+                    <li>preparing some of the week's meals - this could be something you do regularly (e.g. every Wednesday night
+                    </li>
+                    <li>doing some of the housework, such as a weekly vacuum - the housework will <i>always</i> be there but spending time with your baby is more important
+                    </li>
+                     <li>looking after your baby so you can <a href="#7.1.6">do something for yourself for a couple of hours</a> - this could be at a set time each week
+                    </li>
+                </ul>
+        </p>
+        <p class="mbn-text" id="7.1.6r">
+            <b>Get organised</b>
+        </p> 
+        <p class="mbn-text">
+            The little things often make a big difference!
+        </p> 
+        <p class="mbn-text">
+                Stay organised by:
+                <ul>
+                    <li>keeping <a href="#7.1.4">easy, healthy foods</a> in the house such as canned beans or tuna, frozen vegetables, wholemeal pasta and brown rice - learn a <a href="#6.1.1">few easy recipes</a> using these items so you're never stuck for meals
+                    </li>
+                    <li>saving time wherever you can - for example:
+                    </li>    
+                    <ul>
+                    <li>keep a shopping list on your mobile phone so you have it with you whenever you're out
+                    </li>
+                    <li>have a specific spot for your keys (and other items) so you always know where they are
+                    </li>
+                     <li>keep a nappy bag stocked with all the essentials so that you can leave the house more quickly
+                    </li>
+                     <li>order things you need online and have them delivered - including groceries
+                    </li>
+             </ul>
+                </ul>
+        </p>
+        <p class="mbn-text" id="7.1.6s">
+            <b>Still frustrated by not getting anything 'done'?</b>
+        </p> 
+        <p class="mbn-text">
+            Try prioritising just one thing you want to get done each day - this is a realistic aim while looking after a baby.
+        </p> 
+        <p class="mbn-text">
+            It's not necessarily going to be easy but it will be worth it - see how other parents reflect on the challenges, achievements, positives and negatives of being a parent.
+        </p> 
+
+        <p class="mbn-text">
+            <b>Video: Reflections</b>
+
+                <div class="video-container">
+                    <iframe   src="https://www.youtube.com/embed/LYHnSghCDAk" frameborder="0"allowfullscreen></iframe>
+                </div>
+        </p>
+        <p class="mbn-text">
+                    Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+        </p>
+
+        <p class="mbn-section" id="7.1.7" For parents> Video library</p>
+        <p class="mbn-text" id="7.1.7a"> 
+        <p class="mbn-text">
+                <ul>
+                    <li>
+                        <a href="#7.1.7b">Dads' changing roles</a>
+                    </li>
+                    <li>
+                        <a href="#7.1.7c">How partners can help with newborns and babies</a>
+                    </li>
+                    <li>
+                        <a href="#7.1.7d">Postnatal depression</a>
+                    </li>  
+                    <li>
+                        <a href="#7.1.7e">Reflections</a>
+                    </li>   
+                </ul>        
+        </p>
+        <p class="mbn-text" id="7.1.7b">
+            <b>Dads' changing roles</b>
+        </p> 
+        <p class="mbn-text">
+            Dads talk about being stay-at-home dads, getting <a href="#Link to 7.1.6 For parents> Adjusting to life as a parent h">more involved in caring for their children</a> and share their experiences of being more involved in parenting than their own fathers were.
+
+        <p>
+                <div class="video-container">
+                    <iframe  src="https://www.youtube.com/embed/k5i9VCSlvtM" frameborder="0"allowfullscreen></iframe>
+                </div>
+        </p>
+        <p class="mbn-text">
+               Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+        </p>
+
+        <p class="mbn-text" id="7.1.7c">
+            <b>How partners can help with newborns and babies</b>
+        </p> 
+        <p class="mbn-text">
+            This video shows how partners can help care for their newborns and babies. They explain how they've been able to help and support their partners in the early months after birth.
+        <p>
+                <div class="video-container">
+                    <iframe   src="https://www.youtube.com/embed/5cD3lYa20AM" frameborder="0"allowfullscreen></iframe>
+                </div>
+        </p>
+            <p class="mbn-text">
+               Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+
+
+        <p class="mbn-text" id="7.1.7d">
+            <b>Postnatal depression</b>
+        </p> 
+        <p class="mbn-text">
+            This video discusses how <a href="#7.1.2 For parents> Your feelings a">PND</a> can affect new parents, <a href="#7.1.2 For parents> Your feelings b">signs to watch out for</a> and <a href="#7.1.2 For parents> Your feelings e">how to cope</a>.
+
+        <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/lm8LGRKtHq8" frameborder="0"allowfullscreen></iframe>
+                </div>
+        </p>
+            <p class="mbn-text">
+               Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+
+        </p>      
+
+        <p class="mbn-text" id="7.1.7e">
+            <b>Reflections</b>
+        </p> 
+        <p class="mbn-text">
+            Parenting is <a href="#7.1.6 For parents> Adjusting to life as a parent">not always going to be easy</a> but it will be worth it - see how other parents reflect on the challenges, achievements, positives and negatives of being a parent.
+        <p>
+                <div class="video-container">
+                    <iframe  src="https://www.youtube.com/embed/LYHnSghCDAk" frameborder="0"allowfullscreen></iframe>
+                </div>
+        </p>
+            <p class="mbn-text">
+               Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+
+        </p>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

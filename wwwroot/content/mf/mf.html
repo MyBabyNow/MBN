@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/mbn.js"></script>
+    <script>
+        var lastScrollTop = 0; // Track the last event
+        var objToCheck;
+        var lastScrollAction = "";
+
+        $(document).ready(function() {
+            /*
+            $(document).ontouchmove(function(event) {
+                event.preventDefault();
+            });
+            */
+            objToCheck = $("#section-title");
+            $("#section-card-min").hide();
+        });
+
+        $(window).scroll(function() {
+            var st = objToCheck.offset().top - $(window).scrollTop();
+
+            if (st < lastScrollTop) {
+                if (parseInt(st) < 65 && lastScrollAction == "up") {
+                    // Change the type of card to display.
+                    $("#section-card").hide();
+                    $("#section-card-min").show();
+
+                    // Modify CSS to add the extra 50px room for content to be in the right place.
+                    $("#section-content").addClass("mbn-content-offset");
+
+                    // Set where to monitor for point of switch.
+                    objToCheck = $("#section-content");
+                }
+
+                lastScrollAction = "up";
+            } else {
+                if (parseInt(st) > 65 && lastScrollAction == "down") {
+                    // Reverse the card to display
+                    $("#section-card").show();
+                    $("#section-card-min").hide();
+
+                    // Modify CSS to remove the offset created as a result of swapping the display card.
+                    $("#section-content").removeClass("mbn-content-offset");
+
+                    // Set where to monitor for point of switch
+                    objToCheck = $("#section-title");
+                }
+
+                lastScrollAction = "down";
+            }
+
+            lastScrollTop = st; // Remember this as the current position
+        });
+    </script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="../images/favorites.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Important tips</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> > What is mixed feeding?</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="3.1.1" Mixed feeding> What is mixed feeding?</p>
+            </p>
+            <p class="mbn-text" id="3.1.1a">
+                <b>What is mixed feeding?</b>
+            </p>
+                Mixed feeding simply means your baby has a combination of both your breastmilk and formula.
+            </p>
+            <p class="mbn-text">
+                There are many reasons why you may choose to mix feed your baby. Whatever the reason, deciding to mix feed is a personal decision that depends on the unique relationship between you and your baby, your family situation and any professional advice that you receive.
+            </p> 
+            <p class="mbn-text">
+                If you think mixed feeding may work for you and your baby, it is important to first speak with your <a href="#1.1.9">GP</a>, <a href="#1.1.9">maternal and child health nurse</a>, <a href="#1.1.9">a lactation consultant</a> or call the <a href="#Phone 1800686268">ABA</a> helpline before making changes.
+            </p>
+            <p class="mbn-text">
+                <a href="Link to mixed feeding quiz">Take our quiz</a> to find out if mixed feeding is right for your situation.
+            </p>
+
+            <p class="mbn-section" id="3.1.1b">
+                <b>Is mixed feeding recommended?</b>
+            </p>
+            <p class="mbn-text">
+                Until around 6 months old, it is recommended that giving only <a href="#1.1.1">breastmilk</a> is healthiest for your baby. After 6 months, it is recommended that babies keep breastfeeding alongside <a href="#4.1.1">starting solid foods</a>.
+            </p> 
+            <p class="mbn-text">
+                Many mums either can't fully breastfeed or choose not to, and therefore replace some breastfeeds with formula instead. Mixed feeding means your baby will still get some breastmilk, which is better than no breastmilk! But keep in mind that replacing some breastfeeds with formula will reduce your <a href="#3.1.3">milk supply</a>.
+            </p>
+            <p class="mbn-text">
+                If your baby needs extra feeds with formula for their health and <a href="#5.1.5">growth</a>, or you need to mix feed your baby for your own health and wellbeing, be confident that you are making the right decision for your family.
+            </p>
+            <p class="mbn-text">
+                Remember:
+                <ul>
+                    <li>regularly giving your baby formula instead of breastmilk means they will miss out on some of the protective <a href="#1.1.1">benefits of breastmilk</a> and doing so will also reduce your <a href="#3.1.3">milk supply</a>.
+                    </li>
+                    <li>thinking about the <a href="#3.1.2">reasons</a> why your baby might need extra feeds with formula can help you to decide if mixed feeding is right for your situation – find out more by doing our <a href="#Link to mixed feeding quiz">mixed feeding quiz</a>.  
+                    </li>    
+                </ul>
+            </p> 
+
+            <p class="mbn-section" id="3.1.2" Mixed feeding>  Common reasons to mix feed</p>
+            <p class="mbn-text" id="3.1.2a">
+                 In this section you can read about some of the following common reasons for mix feeding.
+            </p>  
+                <ul>
+                    <li>
+                        <a href="#3.1.2b">Low milk supply or reduced growth</a>
+                    </li>
+                    <li>
+                        <a href="#3.1.2d">Convenience</a>
+                    </li>
+                    <li>
+                        <a href="#3.1.2e">Comfort</a>
+                    <li>
+                        <a href="#3.1.2f">For more sleep</a>
+                    </li>   
+                    <li>
+                        <a href="#3.1.2g">Returning to work</a>
+                    </li>
+                    <li>
+                        <a href="#3.1.2h">To share the feeding with others</a>
+                    </li>
+                    <li>
+                        <a href="#3.1.2i">Allergies or intolerances</a>  
+                    </li>
+                    <li>
+                        <a href="#3.1.2j">Unsatisfied or hungry baby</a>  
+                    </li>
+                    <li>
+                        <a href="#3.1.2k">To get used to the bottle</a>  
+                    </li>   
+                </ul>    
+            </p>
+
+            <p class="mbn-text" id="3.1.2b">
+                 <b>Low milk supply or reduced growth</b>
+            </p>
+            <p class="mbn-text">
+                    'Not having enough milk' is the most common reason why mums give up breastfeeding yet in reality, only about 5% of mums really can't make enough milk. For many mums, what they think is a sign of low milk supply might really be something else.
+            </p>  
+            <p class="mbn-text">
+                    Worried that your milk supply might be low? <a href="Link to milk supply quiz">Take our quiz</a> to find out - there may actually be no need to worry at all!
+            </p>
+            <p class="mbn-text">
+                    If you’re still unsure if you have <a href="#1.1.3">low milk supply</a>, keep in mind that:
+                <ul>
+                    <li>it is normal for breasts to feel much softer or 'not as full' after the first few weeks of feeding your baby – your body has got used to making milk on demand
+                    </li>
+                    <li><a href="#1.1.11">expressing</a> is not a 'measure' of how much milk you make – your baby is much better at getting out your milk than your hand or a <a href="#1.1.17">breast pump</a>!
+                    </li>   
+                    <li>your baby might <a href="#1.1.8">refuse your breast</a> for a variety of reasons
+                    </li> 
+                    <li><a href="#5.1.8">crying</a>, even after feeding, doesn’t always mean your baby is still <a href="#5.1.4">hungry</a>
+                    </li>  
+                </ul>
+            </p> 
+            <p class="mbn-text" id="3.1.2c">
+                  <br />
+                    If your baby doesn't seem to be <a href="#5.1.5">growing as well</a> as they should, it may be that your milk supply is low or your baby does not remove enough milk when feeding (a <a href="#1.1.4">bad attachment</a>). In this case, a health professional may suggest using formula to boost your <a href="#5.1.5">baby's growth</a>.
+            </p>
+            <p class="mbn-text">
+                    It is also possible to have your baby's <a href="#1.1.4">attachment</a> checked and <a href="#1.1.3">your own milk supply increased</a>, if you would prefer. Ask your <a href="#1.1.9">GP</a>, <a href="#1.1.9">lactation consultant</a> or maternal and <a href="#1.1.9">child health nurse</a> about this option.
+            </p>  
+            <p class="mbn-text">
+                    GPs generally don't receive much training in breastfeeding, so it’s a good idea to ask to be referred to a specialist for advice or contact one directly via the <a href="#8.1.5">help and support section</a>.
+            </p>
+
+            <p class="mbn-text" id="3.1.2d">
+                    <b>Convenience</b>
+            </p>
+               <p class="mbn-text">
+                    For some people giving formula feels more convenient than breastfeeding.
+            </p>
+            <p class="mbn-text">
+                    Consider the following if you're wondering about whether formula will be more convenient than breastfeeding:
+                <ul>
+                    <li>it takes time to prepare a bottle - you need to make sure your hands are very clean, that your equipment is sterile and that you always follow the instructions carefully
+                    </li>
+                    <li>it takes time to clean equipment properly - using formula means you will need to <a href="#2.1.3">sterilise feeding equipment</a>
+                    </li>   
+                    <li>a made-up formula feed has a shorter shelf-life than <a href="#1.1.11">expressed breastmilk</a> - which means it won't last as long
+                    </li> 
+                    <li>it's very convenient to be able to breastfeed your baby anywhere, anytime, and you're unlikely to have a negative experience doing this (check out these <a href="#1.1.6">tips for breastfeeding in public</a>)
+                    </li>  
+                     <li>using formula increases spending for your family - a single tin of formula costs around $25 and once open, must be used within a month (make sure you check the instructions on whichever brand of formula you have though)
+                    </li> 
+                    <li>someone else can make up a feed and/or feed your baby when you use formula …but you can also have someone else feed your baby breastmilk if you <a href="#1.1.11">express!</a> Check out how <a href="#1.1.9">your partner can help with breastfeeding</a> (and don't be shy to share this with them!)
+                    </li> 
+                    <li>you will be able to share the feeding role with someone else more and more as your baby gets older and <a href="#4.1.1">starts having solids</a>
+                    </li>
+                </ul>
+            </p> 
+ 
+            <p class="mbn-text" id="3.1.2e">
+                    <b>Comfort</b>
+            </p>
+            <p class="mbn-text">
+                   Breastfeeding can feel messy - especially in the beginning! Your breasts leak milk, you can feel exposed and you may experience pain. But these are all temporary.
+            </p>
+            <p class="mbn-text">
+                    As your breasts adjust to making milk for your baby they will:
+                <ul>
+                    <li>feel softer and smaller
+                    </li>
+                    <li>leak less often (or stop leaking altogether)
+                    </li>   
+                    <li>feel no pain
+                    </li> 
+                </ul>
+            </p>
+            <p class="mbn-text">
+                   Learn more about <a href="#1.1.17">helpful products</a> that can make breastfeeding easier, how to feel more comfortable <a href="#1.1.6">breastfeeding in public</a> or find out what might be <a href="#1.1.8">causing your pain</a> (and what to do about it).
+            </p> 
+
+            <p class="mbn-text" id="3.1.2f">
+                    <b>For more sleep</b>
+            </p>
+            <p class="mbn-text">
+                   Some parents are told that giving their baby formula will help their baby sleep longer at night, however, most babies wake through the night for the first few months to feed, regardless of whether they are formula-fed or breastfed. <a href="#5.1.1">Frequent feeding</a> is normal for <i>all</i> babies.
+            </p>
+            <p class="mbn-text">
+                   In fact, some research shows that breastfeeding mums can get <i>more</i> sleep than formula feeding mums because breastfeeding in the middle of the night is much quicker and easier than getting up to prepare a bottle!
+            </p>
+            <p class="mbn-text">
+                   If more sleep is why you are thinking about introducing formula, keep in mind that giving formula may reduce your <a href="#3.1.3">milk supply</a> - especially if you introduce formula before your milk supply is established (around 6 weeks). Find out <a href="#3.1.4">what you should expect</a> if you start giving both formula and breastmilk to your baby.
+            </p>
+            <p class="mbn-text">
+                    If you feel like you’re always tired, <a href="#1.1.16">try these tips</a> or perhaps consider:
+                <ul>
+                    <li>sleeping in the same room as your baby so that you are close by
+                    </li>
+                    <li>learning to <a href="#1.1.4">breastfeed</a> lying down so that you can keep on resting, even when feeding
+                    </li>   
+                </ul>
+            </p>
+            <p class="mbn-text">
+                   If your baby is older than 6 months, read more on <a href="#5.1.13">helping them (and you!) sleep through the night</a>.
+            </p> 
+
+            <p class="mbn-text" id="3.1.2g">
+                    <b>Returning to work</b>
+            </p>
+            <p class="mbn-text">
+                   Just because you're going back to (or starting) work doesn't mean you have to stop breastfeeding!
+            </p>
+            <p class="mbn-text">
+                   Australian law protects your right to breastfeed or <a href="#1.1.11">express milk</a> at work should you choose to. Many mums continue to breastfeed their babies once they return to work and find that keeping that connection with their babies helps make the adjustment back to work a bit easier for both mum and baby. Read more about <a href="#1.1.7">breastfeeding as a working mum</a>.
+            </p>
+            <p class="mbn-text">
+                   For other mums, having their baby be formula-fed while they are at work is more suitable. This doesn't mean you can't breastfeed outside work hours, especially if you have already set up your <a href="#3.1.3">milk supply</a>, as your body will quickly adapt to however many breastfeeds your baby has and your new schedule.
+            </p>
+            <p class="mbn-text">
+                    For example, this might mean that you only breastfeed:
+                <ul>
+                    <li>before work
+                    </li>
+                    <li>after work
+                    </li>
+                    <li>on your days off - to help <a href="#3.1.3">keep up your supply</a>
+                    </li>   
+                </ul>
+            </p>
+            <p class="mbn-text">
+                  If you intend to have your carer formula feed your baby while you work, about 1-2 weeks before going back, it's a good idea to get your baby used to:
+                <ul>
+                    <li><a href="#2.1.5">taking a bottle</a> (if they're not already) - it takes time but they <i>will</i> get there
+                    </li>
+                    <li>the flavour of formula - it's a big change for them, too!
+                    </li>                      
+                </ul>
+            </p>
+            <p class="mbn-text">
+                  Doing this will also help your body start adjusting to its new breastfeeding schedule. Learn more about <a href="#3.1.5">how to introduce formula</a>.
+            </p>
+
+            <p class="mbn-text" id="3.1.2h">
+                    <b>To share the feeding with others</b>
+            </p>
+            <p class="mbn-text">
+                   Breastfeeding can be tiring and can sometimes make you feel 'tied down', so letting someone else do some of the feeding can feel like a relief. But don't forget there are many things that partners and others can do to <a href="#1.1.9">support breastfeeding</a>!
+            </p>
+            <p class="mbn-text">
+                    Keep in mind that:
+                <ul>
+                    <li>babies change:
+                    </li>
+                    <ul>
+                    <li>breastfeeding gets faster as they get bigger and better at it - newborns can take up to an hour, while older babies may take just 5 minutes
+                    </li>
+                    <li>your baby will likely feed less often as they get older  
+                    </ul> 
+                     <li>breastfed babies can (and do) <a href="#5.1.13">sleep through the night</a>
+                    </li>
+                    <li>you can always have a 'break' from your breastfeeding schedule by <a href="#1.1.11">expressing</a>
+                    </li>
+                    <li>once your baby <a href="#4.1.1">starts on solids</a> (from around 6 months), someone else can take on some of the feeding role
+                    </li>
+                    <li>by 12 months, your baby will be eating <a href="#4.1.8">family meals</a> and you will only be breastfeeding once or twice a day
+                    </li>   
+                </ul>
+            </p>
+            <p class="mbn-text">
+                  If you would still prefer to mix feed with formula, that's perfectly OK - check out our <a href="#3.1.4">mixed feeding</a> tips for ways to introduce some formula while still breastfeeding.
+            </p>
+
+            <p class="mbn-text" id="3.1.2i">
+                    <b>Allergies or intolerances</b>
+            </p>
+            <p class="mbn-text">
+                   Some babies can have <a href="#1.1.8">allergies</a> or <a href="#1.1.8">intolerances</a> and react to traces of food in their mum's breastmilk although this is uncommon and needs to be checked by a GP. If you think your baby is reacting to something in your breastmilk, speak to your <a href="#1.1.9">GP</a>, <a href="#1.1.9">lactation consultant</a> or <a href="#1.1.9">maternal and child health nurse</a> before making changes to your diet or switching your baby to formula.
+            </p>
+            <p class="mbn-text">
+                   If your baby is reacting to something in your milk, some health professionals may suggest switching to formula, however this isn't always necessary. You may be able to simply <i>avoid these foods</i> while breastfeeding.
+            </p>
+            <p class="mbn-text">
+                   Your baby will have less risk of ongoing allergies if you can change your diet and continue to breastfeed them, instead of giving them formula, because breastfeeding is actually <i>protective</i> of allergies. A specialist can advise you whether this is an option for you.
+            </p> 
+            <p class="mbn-text">
+                   If your GP hasn't already referred you, make sure you ask for a referral to a paediatrician or <a href="#8.1.5">dietitian who specialises in allergies</a>.
+            </p> 
+            <p class="mbn-text">
+                    Remember:
+                <ul>
+                    <li>babies change:
+                    </li>
+                    <li>babies can be unsettled for <a href="#5.1.8">lots of reasons</a> and you shouldn't assume they are reacting to your breastmilk
+                    </li>
+                    <li>speak to <a href="#1.1.9">your GP</a> or <a href="#1.1.9">maternal and child health nurse</a> before making changes if you are worried – they may refer you to a paediatrician or <a href="#8.1.5">dietitian</a> who specialises in allergies
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-text" id="3.1.2j">
+                    <b>Unsatisfied or hungry baby</b>
+            </p>
+            <p class="mbn-text">
+                   If your baby doesn't seem satisfied or is fussy with your breast it doesn't necessarily mean they are still hungry and needing more breastmilk - sometimes it can be because there is <a href="#1.1.3">too much milk</a>!
+            </p>
+            <p class="mbn-text">
+                   Babies go through rapid development in their first year of life, and sometimes it can be difficult to predict their feeding patterns. They may have times where they are fussier or hungrier than usual - this is normal for all babies.
+            </p>
+            <p class="mbn-text">
+                   If you have been breastfeeding your baby whenever they <a href="#5.1.4">seem hungry</a>, and they are <a href="#1.1.4">attaching on well</a> it is unlikely that your milk is why they are unsatisfied.       
+            </p> 
+            <p class="mbn-text">
+                    Remember:
+                <ul>
+                    <li>babies can <a href="#5.1.8">cry for many reasons</a>, even after feeding, and for reasons other than still being hungry
+                    </li>
+                    <li>if you are worried make sure you speak with <a href="#1.1.9">your GP</a>, <a href="#1.1.9">maternal and child health nurse</a>, the <a href="#Phone 1800686268">ABA helpline</a> or <a href="#1.1.9">lactation consultant</a>
+                    </li>
+                </ul>
+            </p>
+            
+
+            <p class="mbn-text" id="3.1.2k">
+                    <b>To get used to the bottle</b>
+            </p>
+            <p class="mbn-text">
+                   Babies are very adaptable and learn quickly - especially when it comes to something as important as food! They can get used to a bottle <i>any</i> time it is introduced to them but are more likely to refuse it if mum is giving it (because they can smell your breastmilk) so try to give this job to someone else if possible.
+            </p>
+            <p class="mbn-text">
+                   It may take a little longer once your baby is older and stronger (and can let you know what they do and don't like more easily) but they <i>will</i> get there eventually.
+
+            </p>
+            <p class="mbn-text">
+                   Once your baby is used to a bottle, it is actually more likely that your baby will <a href="#1.1.8">refuse your breast</a>, rather than the bottle, because they have to work harder to get milk from your breast!    
+            </p> 
+
+             <p class="mbn-section" id="3.1.3" Mixed feeding>  Maintaining milk supply</p>
+            <p class="mbn-text" id="3.1.3a">
+                  <b>Milk supply</b>
+            </p>  
+            <p class="mbn-text">
+                   Breastmilk is the normal food for babies. Many mums worry that they don't have enough milk but every time you breastfeed your baby (or <a href="#1.1.11">express milk</a>), messages between your brain and breasts signal your body to make more milk to build up your <a href="#1.1.3">milk supply</a>.
+            </p>
+            <p class="mbn-text">
+                <b>More feeding = more signals = more milk</b>            
+            </p> 
+                <img src= "https://ugc.futurelearn.com/uploads/images/00/12/large_hero_0012c6dc-daec-47ba-9d6f-2d0cd69e91ad.png" width="300" height="200">
+
+            <p class="mbn-text">
+                   It usually takes from birth to 6 weeks to establish your milk supply. By then, your body should be used to making milk for your baby and you will find your breasts start to feel softer and less full than they used to. This is normal and does not mean your milk supply is reducing, it just means your breasts are getting good at giving milk on demand!
+            </p>
+             <p class="mbn-text">
+                   See more here on how to:
+                <ul>
+                    <li>
+                        <a href="#1.1.3i">increase your milk supply</a>
+                    </li>
+                    <li>
+                        <a href="#Link to milk supply quiz">check if you might have low milk supply</a>
+                    </li>
+                    <li>
+                        <a href="#1.1.11">express and store breastmilk</a>
+                    </li>   
+                </ul>    
+            </p>
+            <p class="mbn-text">
+                    Remember:
+                <ul>
+                    <li>babies that are <a href="#1.1.4">attached on properly</a> get very good at removing all milk from your breasts
+                    </li>
+                    <li><a href="#1.1.11">expressing</a> to try to 'measure' how much milk you make doesn't really work as your baby is better at getting out your milk than your hand or a <a href="#1.1.17">breast pump</a>
+                    </li>
+                    <li>feeding your baby whenever they are <a href="#5.1.4">hungry</a> is the best way to keep up your <a href="#1.1.3">milk supply</a>
+                    </li>
+                    <li>feeding less from your breasts means your body will make less milk (even if it's just one feed)
+                    </li> 
+                </ul>
+            </p>
+            
+            <p class="mbn-text" id="3.1.3b">
+                    <br />
+                   This video answers common questions about breastfeeding. A <a href="#1.1.9">lactation consultant</a> says most mums can make plenty of milk for their baby. She talks about typical weight gain, and how to know whether your baby is getting enough milk. She talks about changes in the amount of milk you produce in the weeks after birth and whether you need to <a href="#1.1.3">express milk</a>. 
+            </p>
+             <p class="mbn-text">
+                <b>Video: Is my baby getting enough milk?</b>  
+                  <div class="video-container">
+                    <iframe  src="https://www.youtube.com/embed/f5ci3cDPYNk" frameborder="0" allowfullscreen></iframe>
+                </div>          
+            </p> 
+            <p class="mbn-text">
+               Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/supplementing_breastfeeding.html/context/231">raisingchildren.net.au</a>.
+            </p>
+
+            <p class="mbn-section" id="3.1.4" Mixed feeding>  What to expect and tips</p>
+            <p class="mbn-text" id="3.1.4a">
+                  <b>What to expect</b>
+            </p>  
+            <p class="mbn-text">
+                  When you start feeding both breastmilk and formula to your baby, you might notice a few changes.
+            </p>
+            <p class="mbn-text">
+                    Your:
+                <ul>
+                    <li>
+                        <u>household costs will go up </u> - you will be regularly purchasing tins of formula, and potentially <a href="#2.1.2">other products</a> you may not already have
+                    </li>
+                    <li>
+                        <u>routine will change </u> - your baby may feed differently once they are also receiving formula
+                    </li>
+                    <li>
+                        <u>life might feel busier </u> - it takes more time to <a href="#2.1.3">sterilise and clean feeding equipment</a> because formula is not a sterile product, so it's important to practise good hygiene 
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-text" id="3.1.4b">
+            <p class="mbn-text">
+                    Your breasts:
+                <ul>
+                    <li>
+                        <u>will produce less milk</u> - regular feeding with formula can interfere with your <a href="#3.1.3">milk supply</a>
+                    </li>
+                    <li>
+                        <u>might start feeling too full and uncomfortable </u> - make sure you check for <a href="#1.1.8">blocked ducts</a> and <a href="#1.1.11">express to feel comfortable</a>; your breasts will soon adjust to their new schedule
+                    </li>
+                </ul>
+            </p>
+            
+            <p class="mbn-text" id="3.1.4c">
+            <p class="mbn-text">
+                    Your baby:
+                <ul>
+                    <li>
+                        <u>might refuse to take the bottle</u> - especially when <a href="#3.1.4">mum is giving it to them</a>
+                    </li>
+                    <li>
+                        <u>can start <a href="#1.1.8">refusing your breast</a></u> - milk comes out of a bottle far easier than from your breast (which needs lots of sucking), so your baby may protest
+                    </li>
+                    <li>
+                        <u>has changed poo consistency, smell and colour</u> - just like adults, when your baby's diet changes, so too does their poo
+                    </li>
+                </ul>
+            </p>
+            <p class="mbn-text">
+                   Remember:
+                <ul>
+                    <li>if any changes you notice when mixed feeding concern you, speak with <a href="#1.1.9">your GP</a> or <a href="#1.1.9">maternal and child health nurse</a>
+                    </li>
+                    <li>it is best to wait until your <a href="#3.1.3">milk supply</a> is established (around 6 weeks) before introducing any formula to your baby – even then, any regular formula feeds may still affect your <a href="#3.1.3">milk supply</a>
+                    </li>
+                    <li>time, practice and patience are needed for changing you and your baby's feeding routine!
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-text" id="3.1.4d">
+            <p class="mbn-text">
+                     <b>Tips for mixed feeding</b>
+            </p>  
+            <p class="mbn-text" id="3.1.4d1">
+            <p class="mbn-text">
+                     <b>1. Establish your milk supply before introducing a bottle</b>
+            </p> 
+            <p class="mbn-text">
+                   Before introducing formula or a bottle, try to wait until your <a href="#3.1.3">milk supply</a> is established (about 6 weeks after your baby is born) so your milk supply is less affected and your baby is used to feeding from your breast.
+            </p>
+
+            <p class="mbn-text" id="3.1.4e2">
+            <p class="mbn-text">
+                     <b>2. Take steps to keep your breastmilk supply up</b>
+            </p>  
+            <p class="mbn-text">
+                   Any regular replacement of a breastfeed (even just once a day) will affect your milk supply because <a href="#3.1.3">milk supply</a> responds to the demand from your baby. One way to keep up your milk supply is to fit in some extra <a href="#1.1.11">expression sessions</a>.
+            </p>
+             <p class="mbn-text">
+                   If you are going to 'top up' your baby with formula, be sure to:
+                <ul>
+                    <li>always breastfeed <i>first</i> before offering the bottle
+                    </li>
+                    <li>avoid giving your baby formula in between breastfeeds as this might make them too full to have a big breastfeed, which can then start a cycle of reducing demand on your <a href="#3.1.3">milk supply</a>, often referred to as the ‘top up trap’
+                    </li>
+                </ul>
+            </p>
+            
+            <p class="mbn-text" id="3.1.4f3">
+            <p class="mbn-text">
+                     <b>2. Let someone else give the bottle, if possible</b>
+            </p>  
+            <p class="mbn-text">
+                   Some babies adjust to feeding from a bottle very quickly, while others need a bit of time. All babies are adaptable and can learn to feed from both the breast and from a bottle.
+            </p>
+             <p class="mbn-text">
+                   While your baby is getting used to being fed from a bottle, it may be easier for somebody else to feed them. Your baby can smell your breastmilk and may refuse the bottle and/or formula if your breasts are close by!
+            </p>
+            <p class="mbn-text">
+                   Once your baby is used to feeding from a bottle, use this time as important cuddling and bonding time as usual.
+            </p>
+
+            <p class="mbn-section" id="3.1.5" Mixed feeding>  How-to guide</p>
+            <p class="mbn-text" id="3.1.5a">
+                <ul>
+                    <li>
+                        <a href="#3.1.5b">When to start</a>
+                    </li>
+                    <li>
+                        <a href="#3.1.5c">How to do it</a>
+                    <li>
+                        <a href="#3.1.5i">What you need to know about formula</a>
+                    </li>   
+                </ul>    
+            </p>
+
+            <p class="mbn-text" id="3.1.5b">
+                 <b>When to start</b>
+            </p>
+            <p class="mbn-text">
+                    If possible, try to wait until at least 6 weeks after your baby is born to introduce formula (or any bottle) so your body has time to <a href="#1.1.3">set up your milk supply</a> and your baby has time to get used to breastfeeding.
+            </p>  
+            <p class="mbn-text">
+                    From about 6 weeks your body should have a good idea of the amount of breastmilk your baby needs. Keep in mind that regularly using formula after this time can still affect your <a href="#3.1.3">milk supply</a>, depending on how much formula is given and how often
+            </p>
+            
+            <p class="mbn-text" id="3.1.5c">
+                  <b>How to do it</b>
+            </p> 
+            <p class="mbn-text">
+                    The way you mix feed depends on your reasons for doing it – some of the main ones are listed below.
+                <ul>
+                    <li>
+                        <a href="#3.1.5d">For a break now and again</a>
+                    </li>
+                    <li>
+                        <a href="#3.1.5e">For a break now and again</a>
+                    <li>
+                        <a href="#3.1.5f">To help your baby grow </a>
+                    </li>   
+                </ul>    
+            </p>
+            <p class="mbn-text">
+                    You might also like to <a href="#Link to mixed feeding quiz">take our quiz</a> to find out if mixed feeding is right for your situation.
+            </p>
+
+            <p class="mbn-text" id="3.1.5d">
+                  <b>For a break now and again</b>
+            </p> 
+            <p class="mbn-text">
+                    If you are giving formula just once or twice a week whenever you need a break, or to get other things done, it shouldn't have a big impact on your <a href="#3.1.3">milk supply</a>.
+            </p> 
+            <p class="mbn-text">
+                    However, you might find that you need to <a href="#1.1.11">express</a> to feel comfortable when your baby misses that usual breastfeed.
+            </p> 
+
+            <p class="mbn-text" id="3.1.5e">
+                  <b>To return to work</b>
+            </p> 
+            <p class="mbn-text">
+                    If you are <a href="#1.1.7">returning to work</a> and your baby is having formula during the day while you are away, you may be able to continue breastfeeding outside of these hours.
+            </p> 
+            <p class="mbn-text">
+                    Let your baby's <a href="#5.1.4">appetite</a> guide you on how much formula they should drink while you are away:
+                <ul>
+                    <li>don't force them to finish a bottle                     
+                    </li>
+                    <li>ask your baby’s carer not to give a feed within 1–2 hours of you coming home if you're planning to breastfeed when you get home from work
+                    </li>   
+                </ul>    
+            </p>
+            <p class="mbn-text">
+                   Remember:
+             <ul>
+                    <li>some feeds are bigger than others and your baby won't always drink the same amount at every feed (just like us!)  
+                    </li>
+                    <li>your body will quickly adapt to however many breastfeeds your baby has and your new schedule, although you may still need to <a href="#1.1.7">express at work</a> to start with to <a href="#1.1.11">feel comfortable</a>
+                    </li>
+                    <li>feeding less from your breasts means your body will make less milk (even if it's just one feed)
+                    </li>
+                    <li>regularly <a href="#1.1.11">expressing milk</a> and giving extra breastfeeds can help maintain your <a href="#3.1.3">milk supply</a>
+                    </li>   
+                </ul>    
+            </p>
+
+            <p class="mbn-text" id="3.1.5f">
+                  <b>To help your baby grow</b>
+            </p> 
+            <p class="mbn-text">
+                    <a href="#1.1.9">Your GP</a> might advise that your baby needs extra feeds in the form of formula for <a href="#5.1.5">better growth</a> but it’s important to let them know if you want to continue fully breastfeeding – find out if working with a <a href="#1.1.9">lactation consultant</a> to <a href="#1.1.3">boost your supply</a> is an option.
+            </p> 
+            <p class="mbn-text">
+                    Bear in mind that GPs don't receive much training on breastfeeding, so make sure you get a second opinion if you're not sure of their advice – your <a href="#1.1.9">maternal and child health nurse</a>, a <a href="#1.1.9">lactation consultant</a> or the <a href="#Phone 1800686268">ABA helpline</a> can all provide specialist help in this area.
+            </p>
+
+            <p class="mbn-text" id="3.1.5g">
+                <br>
+                    If you are going to 'top up' your baby with formula, be sure to:
+                <ul>
+                    <li>always breastfeed <i>before</i> offering the bottle  
+                    </li>                  
+                    <li>start with small amounts of formula and be guided by your baby's <a href="#5.1.4">appetite</a>
+                    </li>
+                    <li>avoid giving your baby formula <i>between</i> breastfeeds as this might make them too full to have a big breastfeed, which can then start a cycle of reducing demand on your <a href="#3.1.3">milk supply</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-text" id="3.1.5h">
+                <br>
+                    Even if your baby has some formula, you can try to <a href="#1.1.3">increase your milk supply</a>and go back to exclusively breastfeeding – talk to a <a href="#1.1.9">lactation consultant</a> for advice if you want to do this.
+            </p>
+            <p class="mbn-text">
+                    See more on:
+                <ul>
+                    <li>
+                        <a href="#1.1.11">what you need and how to express breastmilk</a> 
+                    </li>                  
+                    <li>
+                        <a href="#1.1.17">helpful products for breastfeeding</a> 
+                    </li>
+                    <li>
+                        <a href="#2.1.1d">what you need for formula feeding </a> and <a href="#2.1.3a">how to sterilise feeding equipment</a>
+                    </li>
+                </ul>
+            </p>
+            <p class="mbn-text">
+                   Remember:
+                <ul>
+                    <li>you can use the same bottles and teats for expressed breastmilk and formula but you will need to follow the <a href="#2.1.4f">rules on storing and using formula</a>, which means you won't be able to store it as long as if you had expressed breastmilk on its own.
+                    </li>
+                    <li>formula costs more and has more preparation, storage and cleaning needs than breastmilk
+                    </li>
+                </ul>    
+            </p>
+
+            <p class="mbn-text" id="3.1.5i">
+                  <b>What you need to know about formula</b>
+
+                   You have probably noticed that there is a <a href="#2.1.2a">wide range of different formulas available</a> on the market. Every formula available for purchase in Australia must meet strict Australian standards and many will have extra ingredients added above and beyond these requirements. 
+            </p>
+            <p class="mbn-text">
+                    Unless <a href="#1.1.9h">your GP</a> or <a href="#1.1.9i">maternal and child health nurse</a> advises you otherwise, the only type of formula your baby will need until they are 12 months old is <a href="#2.1.2a">starter or first formula</a>, which is made from cow's milk. Once your baby has reached 12 months, they can then have <a href="#4.1.6">regular full cream cow's milk</a> as their drink instead. Babies do not need follow-on formulas or toddler milks.
+            </p>     
+            <p class="mbn-text">
+                    When using formula, not only is it important to have clean hands when you <a href="#2.1.4c">prepare a bottle</a>, but you will also need to thoroughly wash and <a href="#2.1.3a">sterilise all feeding equipment</a>.     
+            </p>
+            <p class="mbn-text">
+                    Making up a formula feed for your baby takes a few more steps than breastfeeding – <a href="#2.1.4c">step-by-step guide on preparing a formula feed</a>.
+            </p>
+            <p class="mbn-text">
+                   Remember:
+                <ul>
+                    <li>you can use the same bottles and teats for expressed breastmilk and formula but you will need to follow the <a href="#2.1.4f">rules on storing and using formula</a>, which means you won't be able to store it as long as if you had expressed breastmilk on its own.
+                    </li>
+                    <li>formula costs more and has more preparation, storage and cleaning needs than breastmilk
+                    </li>
+                </ul>    
+            </p>
+
+            <p class="mbn-section" id="3.1.6" Mixed feeding>  FAQs</p>
+            <p class="mbn-text" id="3.1.6a">
+                <ul>
+                    <li>
+                        <a href="#3.1.6b">Will formula help my baby sleep?</a>
+                    </li>
+                    <li>
+                        <a href="#3.1.6c">My baby cries and fusses on the breast – are they still hungry?</a>
+                    <li>
+                        <a href="#3.1.6d">I can't express much milk – does this mean I have a low milk supply?</a>  
+                    <li>
+                        <a href="#3.1.6e">Will mixed feeding reduce my milk supply?</a>
+                    </li> 
+                         <a href="#3.1.6f">Can I mix breastmilk and formula in the same bottle?</a> 
+                    <li>
+                         <a href="#3.1.6g">How much formula should I give my baby?</a> 
+                    <li>
+                </ul>    
+            </p>
+
+            <p class="mbn-text" id="3.1.6b">
+                 <b>Will formula help my baby sleep?</b>
+            </p>
+            <p class="mbn-text">
+                     Not necessarily – <a href="#5.1.1">most babies</a> normally wake through the night for the first few months.
+            </p>  
+            <p class="mbn-text">
+                    In fact, some research even shows that breastfeeding mums get more sleep, on average, than formula feeding mums because breastfeeding in the middle of the night is much quicker and easier than getting up to prepare a bottle!
+            </p>
+            <p class="mbn-text">
+                    If you feel like you’re always tired, <a href="#1.1.16c">try these tips</a> or perhaps consider:
+
+             <ul>
+                    <li>sleeping in the same room as your baby so that you are close by
+                    </li>
+                    <li>learning to <a href="#1.1.4f">breastfeed lying down</a> so that you can keep on resting, even when feeding
+                    </li>
+                </ul>    
+            </p>
+            <p class="mbn-text">
+                    If your baby is older than 6 months, read more on  <a href="#5.1.13">helping them (and you!) sleep through the night</a>.
+            </p>
+            
+
+            <p class="mbn-text" id="3.1.6c">
+                 <b>My baby cries and fusses on the breast – are they still hungry?</b>
+            </p>
+            <p class="mbn-text">
+                     The first year of life is full of constant changes for a baby! They are growing and developing all the time and can cry for lots of reasons – not just because they are hungry.
+            </p>  
+            <p class="mbn-text">
+                    Learn more about:
+                <ul>
+                    <li>
+                        <a href="#5.1.4">reading your baby’s hungry signs</a> 
+                    </li> 
+                    <li>
+                        <a href="#5.1.8">reasons why babies cry</a> 
+                    </li> 
+                    <li>
+                        <a href="#5.1.9">wind and colic</a> 
+                    </li>                   
+                    <li>
+                        <a href="#1.1.8o">breast refusal</a> 
+                    </li>
+                    <li>
+                        <a href="#5.1.5">interpreting growth charts</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-text" id="3.1.6d">
+                 <b>I can't express much milk – does this mean I have a low milk supply?</b>
+            </p>
+            <p class="mbn-text">
+                     Not at all!
+            </p> 
+            <p class="mbn-text">
+                     <a href="#1.1.11">Expressing</a> is not a 'measure' of how much milk you make – your baby is much better at getting out your milk than your <a href="#1.1.11">hand</a> or a breast pump! Their sucking is also better at triggering your let-down reflex to get your milk flowing.
+            </p>  
+            <p class="mbn-text">
+                    You should be making enough milk if your baby:
+                <ul>
+                    <li>has 5+ wet disposable nappies, or at least 6–8 pale, wet cloth/reusable nappies over 24 hours
+                    </li> 
+                    <li>has soft poos                   
+                    </li> 
+                    <li>has good skin tone and bright eyes          
+                    </li>                   
+                    <li>is generally content – even if sometimes fussy and <a href="#5.1.8">unsettled</a>  
+                    </li>
+                    <li><a href="#5.1.5">is gaining weight and growing</a> in length and head circumference. 
+                    </li>
+                </ul>
+            </p>
+            <p class="mbn-text">
+                    Find out more about <a href="#1.1.3d">low milk supply</a> or take our <a href="#Link to milk supply quiz">milk supply quiz</a>.
+            </p>  
+
+            <p class="mbn-text" id="3.1.6e">
+                 <b>Will mixed feeding reduce my milk supply?</b>
+            </p>
+            <p class="mbn-text">
+                     It is likely that by regularly giving your baby formula, your <a href="#3.1.3">milk supply</a> will be affected. Your body responds to your baby's demand for milk, so if they are feeding less from the breast, then your body will make less milk. This is one of the reasons why it's important to be clear in your decision about <a href="#3.1.2a">why you want to mix feed</a> and how you will do it.
+            </p> 
+            <p class="mbn-text">
+                     Remember, many mums worry they don't make enough milk for their baby, but this is unlikely if you have been feeding your baby whenever they are <a href="#5.1.4">hungry</a> and they are <a href="#1.1.4g">attached on properly</a>. If your baby is unsettled it may not be because they're hungry!
+            </p>  
+            <p class="mbn-text">
+                    Read more about:
+                <ul>
+                    <li><a href="#1.1.3d">low milk supply</a> 
+                    </li> 
+                    <li>how to <a href="#1.1.3i">make more milk</a>
+                    </li> 
+                    <li>why babies get <a href="#5.1.8">unsettled</a> or <a href="#1.1.8">refuse the breast</a>
+                    </li>                   
+                </ul>
+            </p>
+
+             <p class="mbn-text" id="3.1.6f">
+                 <b>Can I mix breastmilk and formula in the same bottle?</b>
+            </p>
+            <p class="mbn-text">
+                     Yes you can.
+            </p> 
+            <p class="mbn-text">
+                    Just remember that formula and breastmilk have <i>different</i> storage requirements.
+            </p>  
+            <p class="mbn-text">
+                    If you mix your breastmilk with formula, you will need to follow the <a href="#2.1.4">rules on storing and using formula</a>, which means you won't be able to store it as long as if you had expressed breastmilk on its own.
+            </p> 
+            <p class="mbn-text">
+                    Read more about storage and use of <a href="#2.1.4">formula</a> compared to that of <a href="#1.1.11">expressed breastmilk</a>.
+            </p> 
+            <p class="mbn-text">
+                    Read more about:
+                <ul>
+                    <li><a href="#1.1.3">low milk supply</a> 
+                    </li> 
+                    <li>how to <a href="#1.1.3i">make more milk</a>
+                    </li> 
+                    <li>why babies get <a href="#5.1.8">unsettled</a> or <a href="#1.1.8">refuse the breast</a>
+                    </li>                   
+                </ul>
+            </p>
+           
+           <p class="mbn-text" id="3.1.6g">
+                 <b>How much formula should I give my baby?</b>
+            </p>
+            <p class="mbn-text">
+                     The amount of formula you give your baby will depend on your <a href="#3.1.5">reasons for giving it</a>. Remember, any regular replacement of a breastmilk will lead to a reduction in your <a href="#3.1.3">milk supply</a> (your body gets used to making less breastmilk because your baby is removing less).
+            </p> 
+            <p class="mbn-text">
+                    If you are given specific advice from a health professional on how much formula to give – you should follow that advice.
+            </p>  
+            
+            <p class="mbn-text" id="3.1.6h">
+                    If you want to keep up your <a href="#3.1.3">milk supply</a> while also giving formula, be sure to:
+                <ul>
+                    <li>always breastfeed <i>before</i> offering the bottle
+                    <li>avoid giving your baby formula between breastfeeds as this might make them too full to have a big breastfeed which can then start a cycle of reducing demand on your <a href="#3.1.3">milk supply</a>
+                    </li> 
+                    <li>start slowly and with small amounts of formula – the average 4kg baby that is being exclusively formula-fed will only have around 100mL at each formula feed, so start with much less than this
+                    </li> 
+                    <li><a href="#1.1.11">express</a> your milk and/or give extra breastfeeds when you can
+                    </li> 
+                    <li>be guided by your baby's <a href="#5.1.4">appetite</a> – don't force them to finish a bottle
+                    </li>                                   
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="3.1.7" Mixed feeding> Video library</p>
+            <p class="mbn-text" id="3.1.7a">
+                    <b>Is my baby getting enough milk?</b>
+            </p>
+            <p class="mbn-text">
+                     This video answers common questions about breastfeeding, <a href="#1.1.3">milk supply</a> and how to know whether your baby is getting enough milk.
+            </p>     
+                <div class="video-container">
+                <iframe  src="https://www.youtube.com/embed/f5ci3cDPYNk" frameborder="0" allowfullscreen></iframe>
+                </div>  
+            <p class="mbn-text">
+               Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/supplementing_breastfeeding.html/context/231">raisingchildren.net.au</a>.
+            </p>
+           
+
+
+              
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

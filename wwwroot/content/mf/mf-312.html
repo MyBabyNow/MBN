@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/reasons-to-mf.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+				<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+			<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="3.1.2">Common reasons to mix feed</p>
+            <p class="mbn-text" id="3.1.2a">
+                In this section you can read about some of the following common reasons for mix feeding.
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('3.1.2b');">Low milk supply or reduced growth</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('3.1.2d');">Convenience</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('3.1.2e');">Comfort</a>
+                    <li>
+                        <a onclick="localSecJump('3.1.2f');">For more sleep</a>
+                    </li>
+                    <li>
+                        <a onclick="localSecJump('3.1.2g');">Returning to work</a>
+                    </li>
+                    <li>
+                        <a onclick="localSecJump('3.1.2h');">To share the feeding with others</a>
+                    </li>
+                    <li>
+                        <a onclick="localSecJump('3.1.2i');">Allergies or intolerances</a>
+                    </li>
+                    <li>
+                        <a onclick="localSecJump('3.1.2j');">Unsatisfied or hungry baby</a>
+                    </li>
+                    <li>
+                        <a onclick="localSecJump('3.1.2k');">To get used to the bottle</a>
+                    </li>
+            </ul>
+
+            <p class="mbn-section" id="3.1.2b">
+                Low milk supply or reduced growth
+            </p>
+            <p class="mbn-text">
+                'Not having enough milk' is the most common reason why mums give up breastfeeding yet in reality, only about 5% of mums really can't make enough milk. For many mums, what they think is a sign of low milk supply might really be something else.
+            </p>
+            <p class="mbn-text">
+                Worried that your milk supply might be low? <a onclick="localSecJump('Link to milk supply quiz');">Take our quiz</a> to find out - there may actually be no need to worry at all!
+            </p>
+            <p class="mbn-text">
+                If you're still unsure if you have <a onclick="localSecJump('bf/bf-113.html#1.1.3d');">low milk supply</a>, keep in mind that:
+            </p>
+            <ul>
+                <li>it is normal for breasts to feel much softer or 'not as full' after the first few weeks of feeding your baby - your body has got used to making milk on demand
+                </li>
+                <li><a onclick="localSecJump('bf/bf-1111.html#1.1.11');">expressing</a> is not a 'measure' of how much milk you make - your baby is much better at getting out your milk than your hand or a <a onclick="localSecJump('bf/bf-1117.html#1.1.17h');">breast pump</a>!
+                </li>
+                <li>your baby might <a onclick="localSecJump('bf/bf-118.html#1.1.8o');">refuse your breast</a> for a variety of reasons
+                </li>
+                <li><a onclick="localSecJump('sfp/sfp-518.html#5.1.8');">crying</a>, even after feeding, doesn't always mean your baby is still <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">hungry</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="3.1.2c">
+                If your baby doesn't seem to be <a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">growing as well</a> as they should, it may be that your milk supply is low or your baby does not remove enough milk when feeding (a <a onclick="localSecJump('bf/bf-114.html#1.1.4g');">bad attachment</a>). In this case, a health professional may suggest using formula to boost your <a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">baby's growth</a>.
+            </p>
+            <p class="mbn-text">
+                It is also possible to have your baby's <a onclick="localSecJump('bf/bf-114.html#1.1.4g');">attachment</a> checked and <a onclick="localSecJump('bf/bf-113.html#1.1.3i');">your own milk supply 
+                    increased</a>, if you would prefer. Ask your <a onclick="localSecJump('bf/bf-119.html#1.1.9h');">GP</a>, <a onclick="localSecJump('bf/bf-119.html#1.1.9j');">lactation consultant</a> or maternal and <a onclick="localSecJump('bf/bf-119.html#1.1.9i');">child health nurse</a> about this option.
+            </p>
+            <p class="mbn-text">
+                GPs generally don't receive much training in breastfeeding, so it's a good idea to ask to be referred to a specialist for advice or contact one directly via the <a onclick="localSecJump('hs/hs-815.html#8.1.5');">help and support section</a>.
+            </p>
+            <p class="mbn-section" id="3.1.2d">
+                Convenience
+            </p>
+            <p class="mbn-text">
+                For some people giving formula feels more convenient than breastfeeding.
+            </p>
+            <p class="mbn-text">
+                Consider the following if you're wondering about whether formula will be more convenient than breastfeeding:
+            </p>
+            <ul>
+                <li>it takes time to prepare a bottle - you need to make sure your hands are very clean, that your equipment is sterile and that you always follow the instructions carefully
+                </li>
+                <li>it takes time to clean equipment properly - using formula means you will need to <a onclick="localSecJump('ff/ff-213.html#2.1.3a');">sterilise feeding equipment</a>
+                </li>
+                <li>a made-up formula feed has a shorter shelf-life than <a onclick="localSecJump('bf/bf-1111.html#1.1.11t');">expressed breastmilk</a> - which means it won't last as long
+                </li>
+                <li>it's very convenient to be able to breastfeed your baby anywhere, anytime, and you're unlikely to have a negative experience doing this (check out these <a onclick="localSecJump('bf/bf-116.html#1.1.6d');">tips for breastfeeding in public</a>)
+                </li>
+                <li>using formula increases spending for your family - a single tin of formula costs around $25 and once open, must be used within a month (make sure you check the instructions on whichever brand of formula you have though)
+                </li>
+                <li>someone else can make up a feed and/or feed your baby when you use formula …but you can also have someone else feed your baby breastmilk if you <a onclick="localSecJump('bf/bf-1111.html#1.1.11');">express!</a> Check out how <a onclick="localSecJump('bf/bf-119.html#1.1.9e');">your partner can help with breastfeeding</a> (and don't be shy to share this with them!)
+                </li>
+                <li>you will be able to share the feeding role with someone else more and more as your baby gets older and <a onclick="localSecJump('solids/solids-411.html#4.1.1');">starts having solids</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="3.1.2e">
+                Comfort
+            </p>
+            <p class="mbn-text">
+                Breastfeeding can feel messy - especially in the beginning! Your breasts leak milk, you can feel exposed and you may experience pain. But these are all temporary.
+            </p>
+            <p class="mbn-text">
+                As your breasts adjust to making milk for your baby they will:
+            </p>
+            <ul>
+                <li>feel softer and smaller
+                </li>
+                <li>leak less often (or stop leaking altogether)
+                </li>
+                <li>feel no pain
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Learn more about <a onclick="localSecJump('bf/bf-1117.html#1.1.17');">helpful products</a> that can make breastfeeding easier, how to feel more comfortable
+                <a onclick="localSecJump('bf/bf-116.html#1.1.6d');">breastfeeding in public</a> or find out what might be <a onclick="localSecJump('bf/bf-118.html#1.1.8e');">causing your pain</a> (and what to do about it).
+            </p>
+            <p class="mbn-section" id="3.1.2f">
+                For more sleep
+            </p>
+            <p class="mbn-text">
+                Some parents are told that giving their baby formula will help their baby sleep longer at night, however, most babies wake through the night for the first few months to feed, regardless of whether they are formula-fed or breastfed. <a onclick="localSecJump('sfp/sfp-511.html#5.1.1');">Frequent feeding</a> is normal for <i>all</i> babies.
+            </p>
+            <p class="mbn-text">
+                In fact, some research shows that breastfeeding mums can get <i>more</i> sleep than formula feeding mums because breastfeeding in the middle of the night is much quicker and easier than getting up to prepare a bottle!
+            </p>
+            <p class="mbn-text">
+                If more sleep is why you are thinking about introducing formula, keep in mind that giving formula may reduce your <a onclick="localSecJump('mf-313.html#3.1.3');">milk supply</a> - especially if you introduce formula before your milk supply is established (around 6 weeks). Find out <a onclick="localSecJump('mf-314.html#3.1.4a');">what you should expect</a> if you start giving both formula and breastmilk to your baby.
+            </p>
+            <p class="mbn-text">
+                If you feel like you're always tired, <a onclick="localSecJump('bf/bf-1116.html#1.1.16c');">try these tips</a> or perhaps consider:
+            </p>
+            <ul>
+                <li>sleeping in the same room as your baby so that you are close by
+                </li>
+                <li>learning to <a onclick="localSecJump('bf/bf-114.html#1.1.4f');">breastfeed lying down</a> so that you can keep on resting, even when feeding
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                If your baby is older than 6 months, read more on <a onclick="localSecJump('sfp/sfp-5113.html#5.1.13');">helping them (and you!) sleep through the night</a>.
+            </p>
+            <p class="mbn-section" id="3.1.2g">
+                Returning to work
+            </p>
+            <p class="mbn-text">
+                Just because you're going back to (or starting) work doesn't mean you have to stop breastfeeding!
+            </p>
+            <p class="mbn-text">
+                Australian law protects your right to breastfeed or <a onclick="localSecJump('bf/bf-1111.html#1.1.11');">express milk</a> at work should you choose to. Many mums continue to breastfeed their babies once they return to work and find that keeping that connection with their babies helps make the adjustment back to work a bit easier for both mum and baby. Read more about <a onclick="localSecJump('bf/bf-117.html#1.1.7');">breastfeeding as a working mum</a>.
+            </p>
+            <p class="mbn-text">
+                For other mums, having their baby be formula-fed while they are at work is more suitable. This doesn't mean you can't breastfeed outside work hours, especially if you have already set up your <a onclick="localSecJump('mf-313.html#3.1.3');">milk supply</a>, as your body will quickly adapt to however many breastfeeds your baby has and your new schedule.
+            </p>
+            <p class="mbn-text">
+                For example, this might mean that you only breastfeed:
+            </p>
+            <ul>
+                <li>before work
+                </li>
+                <li>after work
+                </li>
+                <li>on your days off - to help <a onclick="localSecJump('mf-313.html#3.1.3');">keep up your supply</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                If you intend to have your carer formula feed your baby while you work, about 1-2 weeks before going back, it's a good idea to get your baby used to:
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('ff/ff-215.html#2.1.5a');">taking a bottle</a> (if they're not already) - it takes time but they <i>will</i> get there
+                </li>
+                <li>the flavour of formula - it's a big change for them, too!
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Doing this will also help your body start adjusting to its new breastfeeding schedule. Learn more about <a onclick="localSecJump('mf-315.html#3.1.5e');"> how to introduce formula</a>.
+            </p>
+            <p class="mbn-section" id="3.1.2h">
+                To share the feeding with others
+            </p>
+            <p class="mbn-text">
+                Breastfeeding can be tiring and can sometimes make you feel 'tied down', so letting someone else do some of the feeding can feel like a relief. But don't forget there are many things that partners and others can do to <a onclick="localSecJump('bf/bf-119.html#1.1.9e');">support breastfeeding</a>!
+            </p>
+            <p class="mbn-text">
+                Keep in mind that:
+            </p>
+            <ul>
+                <li>babies change:
+                </li>
+                <ul>
+                    <li>breastfeeding gets faster as they get bigger and better at it - newborns can take up to an hour, while older babies may take just 5 minutes
+                    </li>
+                    <li>your baby will likely feed less often as they get older
+                </ul>
+                <li>breastfed babies can (and do) <a onclick="localSecJump('sfp/sfp-5113.html#5.1.13');">sleep through the night</a>
+                </li>
+                <li>you can always have a 'break' from your breastfeeding schedule by <a onclick="localSecJump('bf/bf-1111.html#1.1.11');">expressing</a>
+                </li>
+                <li>once your baby <a onclick="localSecJump('solids/solids-411.html#4.1.1');">starts on solids</a> (from around 6 months), someone else can take on some of the feeding role
+                </li>
+                <li>by 12 months, your baby will be eating <a onclick="localSecJump('solids/solids-418.html#4.1.8a');">family meals</a> and you will only be breastfeeding once or twice a day
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                If you would still prefer to mix feed with formula, that's perfectly OK - check out our <a onclick="localSecJump('mf/mf-314.html#3.1.4d');">mixed feeding</a> tips for ways to introduce some formula while still breastfeeding.
+            </p>
+            <p class="mbn-section" id="3.1.2i">
+                Allergies or intolerances
+            </p>
+            <p class="mbn-text">
+                Some babies can have <a onclick="localSecJump('bf/bf-118.html#1.1.8u');">allergies</a> or <a onclick="localSecJump('bf/bf-118.html#1.1.8t');">intolerances</a> and react to traces of food in their mum's breastmilk although this is uncommon and needs to be checked by a GP. If you think your baby is reacting to something in your breastmilk, speak to your <a onclick="localSecJump('bf/bf-119.html#1.1.9h');">GP</a>, <a onclick="localSecJump('bf/bf-119.html#1.1.9j');">lactation consultant</a> or <a onclick="localSecJump('bf/bf-119.html#1.1.9i');">maternal and child 
+                    health nurse</a> before making changes to your diet or switching your baby to formula.
+            </p>
+            <p class="mbn-text">
+                If your baby is reacting to something in your milk, some health professionals may suggest switching to formula, however this isn't always necessary. You may be able to simply <i>avoid these foods</i> while breastfeeding.
+            </p>
+            <p class="mbn-text">
+                Your baby will have less risk of ongoing allergies if you can change your diet and continue to breastfeed them, instead of giving them formula, because breastfeeding is actually <i>protective</i> of allergies. A specialist can advise you whether this is an option for you.
+            </p>
+            <p class="mbn-text">
+                If your GP hasn't already referred you, make sure you ask for a referral to a paediatrician or <a onclick="localSecJump('hs/hs-815.html#8.1.5');">dietitian who 
+                    specialises in allergies</a>.
+                <br /> Remember:
+            </p>
+            <ul>
+                <li>babies change
+                </li>
+                <li>babies can be unsettled for <a onclick="localSecJump('sfp/sfp-518.html#5.1.8');">lots of reasons</a> and you shouldn't assume they are reacting to your breastmilk
+                </li>
+                <li>speak to <a onclick="localSecJump('bf/bf-119.html#1.1.9h');">your GP</a> or <a onclick="localSecJump('bf/bf-119.html#1.1.9i');">maternal and child health nurse</a> before making changes if you are worried - they may refer you to a paediatrician or <a onclick="localSecJump('hs/hs-815.html#8.1.5');">dietitian</a> who specialises in allergies
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="3.1.2j">
+                Unsatisfied or hungry baby
+            </p>
+            <p class="mbn-text">
+                If your baby doesn't seem satisfied or is fussy with your breast it doesn't necessarily mean they are still hungry and needing more breastmilk - sometimes it can be because there is <a onclick="localSecJump('bf/bf-113.html#1.1.3k');">too much milk</a>!
+            </p>
+            <p class="mbn-text">
+                Babies go through rapid development in their first year of life, and sometimes it can be difficult to predict their feeding patterns. They may have times where they are fussier or hungrier than usual - this is normal for all babies.
+            </p>
+            <p class="mbn-text">
+                If you have been breastfeeding your baby whenever they <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">seem hungry</a>, and they are <a onclick="localSecJump('bf/bf-114.html#1.1.4g');">attaching on well</a> it is unlikely that your milk is why they are unsatisfied.
+                <br />Remember:
+            </p>
+            <ul>
+                <li>babies can <a onclick="localSecJump('sfp/sfp-518.html#5.1.8');">cry for many reasons</a>, even after feeding, and for reasons other than still being hungry
+                </li>
+                <li>if you are worried make sure you speak with <a onclick="localSecJump('bf/bf-119.html#1.1.9h');">your GP</a>, <a onclick="localSecJump('bf/bf-119.html#1.1.9i');">maternal and child health 
+                            nurse</a>, the <a href="tel:1800686268">ABA helpline</a> or <a onclick="localSecJump('bf/bf-119.html#1.1.9j');">lactation consultant</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="3.1.2k">
+                To get used to the bottle
+            </p>
+            <p class="mbn-text">
+                Babies are very adaptable and learn quickly - especially when it comes to something as important as food! They can get used to a bottle <i>any</i> time it is introduced to them but are more likely to refuse it if mum is giving it (because they can smell your breastmilk) so try to give this job to someone else if possible.
+            </p>
+            <p class="mbn-text">
+                It may take a little longer once your baby is older and stronger (and can let you know what they do and don't like more easily) but they <i>will</i> get there eventually.
+            </p>
+            <p class="mbn-text">
+                Once your baby is used to a bottle, it is actually more likely that your baby will <a onclick="localSecJump('bf/bf-118.html#1.1.8o');">refuse your breast</a>, rather than the bottle, because they have to work harder to get milk from your breast!
+            </p>
+            <p>
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

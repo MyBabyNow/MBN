@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/common-issues.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-video" id="2.1.9">Common issues</p>
+            <p class="mbn-section" id="2.1.9a">
+                Constipation
+            </p>
+            <p>
+                Constipation is when your baby's poo is hard and dry, and looks like marbles. If your baby seems to be putting a lot of effort into pooing, it doesn't always mean they are constipated. Can you flatten your baby's poo by squeezing between the folds of the nappy? If so, then they are not constipated.
+            </p>
+            <p class="mbn-text">
+                Constipation is often directly related to the <a onclick="localSecJump('ff-214.html#2.1.4i');">concentration of feeds</a> which can become too concentrated if not <a onclick="localSecJump('ff-214.html#2.1.4d');">made up correctly</a>.
+            </p>
+            <p class="mbn-text">
+                To reduce the chance of constipation, it is important to always:
+            </p>
+            <ul>
+                <li>follow the specific instructions provided by the manufacturer on the packet or tin
+                </li>
+                <li>add the <i>water to the bottle first</i> before you add the powdered formula
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                If your baby is constipated and you are having difficulty fixing the problem, it's best to speak to your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> for advice.
+            </p>
+
+            <p class="mbn-section" id="2.1.9b">
+                Gassy (windy) baby
+            </p>
+            <p>
+                Babies might have wind because they swallow air when crying or feeding. The belief that babies need <a onclick="localSecJump('2.1.9c');">burping</a> after feedings, or help 'bringing up the wind', came with the spread of <a onclick="localSecJump('ff-215.html#2.1.5a');">bottle-feeding</a>. This is because the faster flow of milk from bottle teats forces babies to gulp air in between closely-spaced swallows. Following <a onclick="localSecJump('ff-215.html#2.1.5a');">the basics</a> of feeding your baby with a bottle can help.
+            </p>
+            <p class="mbn-text">
+                If your baby shows signs of distress during the feed encourage them to let go of the teat and sit up. Put your baby over your shoulder and gently rub or pat their back to <a onclick="localSecJump('ff-219.html#2.1.9c');">encourage a burp</a>.
+            </p>
+            <p class="mbn-text">
+                Just be careful - sometimes milk will come up with a burp as well, so make sure you have a cloth to protect your clothing!
+            </p>
+
+            <p class="mbn-text" id="2.1.9c">
+                <b>Some ways to burp your baby:</b>
+            </p>
+            <ul>
+                <li>Hold your baby upright with their tummy against your shoulder and gently rub their back.
+                </li>
+                <li>Sit your baby on your lap with one hand supporting them under their chin and the other rubbing/patting their back gently.
+                </li>
+                <li>Lay your baby on their back for about a minute and then raise them gently to a sitting position.
+                </li>
+                <li>Lie your baby on their tummy across your lap, with one hand supporting their head and the other rubbing their back.
+                </li>
+                <li>Lie your baby on their tummy along your forearm with their head near your elbow and your hand holding the nappy area. Gently rub their back.
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                When your baby seems more comfortable, you can continue feeding.
+            </p>
+            <p class="mbn-text">
+                Read more on <a onclick="localSecJump('sfp/sfp-519.html#5.1.9');">wind and colic</a>.
+            </p>
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

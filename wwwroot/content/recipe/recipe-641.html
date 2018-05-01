@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/dinner.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="6.4.1">Dinner</p>
+            <p class="mbn-text" id="6.4.1a">
+                These 'dinner' recipes work equally well for lunch and, your baby will also probably be just as happy with them for snacks or breakfasts if that works for you!
+            </p>
+            <p class="mbn-section">Dinner</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('6.4.1b');">Baby stew (savoury mince)</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1c');">Basic vegetable stir-fry</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1d');">Beef and green beans</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1e');">Chicken Bolognese</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1f');">Chicken casserole</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1g');">Fish and sweet potato mash</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1h');">Fish patties</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1i');">Lamb hotpot</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1j');">Lentil cottage pie (veg)</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1k');">Mini meatballs</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1l');">Pumpkin, carrot and parsnip soup</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1m');">Rainbow chips</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1n');">Simple salmon pasta</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1o');">Spaghetti Bolognese</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1p');">Sweetcorn and pea risotto</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.4.1q');">Zany zucchini pasta</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.4.1b">Baby stew (savoury mince)</p>
+            <p class="mbn-text">
+                <img src="images/Baby Stew.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> the whole family as a cottage pie<br />
+                <b>Storage:</b> freeze or in the fridge for up to 2 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac14; cup onion (finely chopped)
+                </li>
+                <li> &frac12; cup carrot (diced)
+                </li>
+                <li> &frac12; cup celery (finely chopped)
+                </li>
+                <li> &frac14; cup lean mince (kangaroo, lamb or beef)
+                </li>
+                <li> 2 tablespoons canola or olive oil (optional)
+                </li>
+                <li> 1 teaspoon dried mixed herbs (optional)
+                </li>
+                <li> &frac12; 400g tin diced tomatoes
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Heat oil (if using) in a pot over medium-high heat.
+                </li>
+                <li class="mbn-ol"> Fry onion until soft.
+                </li>
+                <li class="mbn-ol"> Add carrot and celery, frying until just softened.
+                </li>
+                <li class="mbn-ol"> Add mince and break up to brown all pieces thoroughly.
+                </li>
+                <li class="mbn-ol"> Add tomatoes and herbs (if using) and stir through.
+                </li>
+                <li class="mbn-ol"> Reduce heat and simmer for 30 minutes (add a little water to stop mixture drying out if needed).
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving with mashed potato or pasta.
+                </li>
+                <li class="mbn-ol"> Any unused savoury mince can be frozen in ice/cupcake trays or covered and refrigerated for up to 2 days.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> For a family of 4 use:
+            </p>
+            <ul>
+                <li> 1 cup onion (chopped)
+                </li>
+                <li> 2 cups carrot (diced)
+                </li>
+                <li> 1 cup celery (chopped)
+                </li>
+                <li> 2 cups lean mince (kangaroo,lamb or beef)
+                </li>
+                <li> 3 tablespoons canola or olive oil (optional)
+                </li>
+                <li> 2 teaspoons dried mixed herbs (optional)
+                </li>
+                <li> 1 400g tin diced tomatoes
+                </li>
+                <li> 1kg potatoes (chopped)
+                </li>
+                <li> &frac12; cup grated cheese
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Follow the same method up to step 5, then
+            </p>
+            <ul>
+                <li class="mbn-ol"> Reduce heat and simmer for 20 minutes (add a little water to stop mixture drying out if needed).
+                </li>
+                <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                </li>
+                <li class="mbn-ol"> Meanwhile, cook potatoes in a pot of boiling water for 15 minutes or until tender, then drain and mash.
+                </li>
+                <li class="mbn-ol"> Put mince mixture in an oven-proof dish, top with mashed potato and grated cheese.
+                </li>
+                <li class="mbn-ol"> Bake in oven for 30 minutes or until top is golden.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.4.1c">Basic vegetable stir-fry</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> not suitable for freezing<br />
+                <b>Note:</b> meat can be added if desired; <a onclick="localSecJump('recipe-671.html#6.7.1k');">see video of recipe</a><br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 red onion (sliced)
+                </li>
+                <li> 2 cloves garlic (crushed)
+                </li>
+                <li> 1 teaspoon ginger (finely chopped)
+                </li>
+                <li> 1 cup green beans (cut in half)
+                </li>
+                <li> 1 cup cauliflower pieces
+                </li>
+                <li> 1 capsicum (sliced)
+                </li>
+                <li> 1 cup broccoli pieces
+                </li>
+                <li> 1 cup snow peas (halved)
+                </li>
+                <li> 2 tablespoon low salt soy sauce
+                </li>
+                <li> 2 tablespoon oyster sauce
+                </li>
+                <li> 2 tablespoons Shaoxing cooking wine
+                </li>
+                <li> &frac12; cup water or low salt stock
+                </li>
+                <li> 2 tablespoons rice bran or vegetable oil
+                </li>
+                <li> Chicken or other meat (optional)
+                </li>
+                <li> Brown rice or quinoa (to serve)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Prepare brown rice or quinoa according to instructions on the pack.
+                </li>
+                <li class="mbn-ol"><i>If using meat:</i> slice into small bite sized pieces and stir fry separately in wok with 1 tablespoon of oil on high heat. Remove when meat turns slightly brown and set aside.
+                </li>
+                <li class="mbn-ol"> Heat oil in a wok or frypan to high heat.
+                </li>
+                <li class="mbn-ol"> Fry onion, ginger and garlic for 1 minute.
+                </li>
+                <li class="mbn-ol"> Add vegetables and &frac12; cup water or low salt stock, cook for 2 minutes.
+                </li>
+                <li class="mbn-ol"> Add browned meat (if using) and stir in low salt soy sauce, oyster sauce and Shaoxing cooking wine, then cook for another minute or until the sauce thickens.
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving with brown rice/quinoa.
+                </li>
+            </ul>
+
+            <p class="mbn-video-caption">
+                <i>Adapted from the Infant Program website. For more help getting healthy eating   and active play with your baby right from the start, visit <a href="http://www.infantprogram.org">infantprogram.org</a></i>.
+            </p>
+
+            <p class="mbn-section" id="6.4.1d">Beef and green beans</p>
+            <p class="mbn-text">
+                <img src="images/Beef and green beans.jpg" class="mbn-text-image-right" />
+                <b>Storage:</b> Freezer friendly<br />
+                <b>Note:</b> try different minces for variety - lamb or kangaroo work well<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 cup lean mince (kangaroo, beef or lamb)
+                </li>
+                <li> &frac13; cup green beans (trimmed, cut into &frac12; cm pieces)
+                </li>
+                <li> 1-2 small potatoes (cut into 8 pieces)
+                </li>
+                <li> 3 tablespoons water or milk
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Add mince to frying pan and fry over medium-high heat (no need for added oil), breaking up to brown all pieces thoroughly.
+                </li>
+                <li class="mbn-ol"> Stir in 1 tablespoon water/milk then turn off heat and set aside.
+                </li>
+                <li class="mbn-ol"> Meanwhile, boil potatoes in a pot for 10 minutes and steam beans until both are tender.
+                </li>
+                <li class="mbn-ol"> Mash potatoes with the remaining water/milk.
+                </li>
+                <li class="mbn-ol"> Mix/mash/puree beans, mince and potatoes to required consistency before serving.
+                </li>
+                <li class="mbn-ol"> Freeze any unused portions in ice/cupcake trays for later.
+                </li>
+            </ul>
+            <p class="mbn-section" id="6.4.1e">Chicken Bolognese</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note: </b> serve with pasta or mashed potato; <a onclick="localSecJump('recipe-671.html#6.7.1b');">see video of recipe</a><br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 500g lean chicken mince
+                </li>
+                <li> 1 green or red capsicum (finely chopped)
+                </li>
+                <li> 1 small onion (finely diced)
+                </li>
+                <li> 1 clove garlic (finely chopped)
+                </li>
+                <li> 1 cup mushrooms (finely chopped)
+                </li>
+                <li> &frac12; cup celery (finely diced)
+                </li>
+                <li> 1 400g tin diced tomatoes (no added salt)
+                </li>
+                <li> 2 tablespoons tomato paste (no added salt)
+                </li>
+                <li> 2 tablespoons parsley or other fresh herbs (chopped)
+                </li>
+                <li> 2 tablespoons olive oil
+                </li>
+                <li> pasta or mashed potato, to serve
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Heat olive oil in large frying pan on medium-high heat.
+                </li>
+                <li class="mbn-ol"> Fry onion and garlic until softened and slightly caramelised.
+                </li>
+                <li class="mbn-ol"> Add chicken mince and break up to brown all pieces thoroughly.
+                </li>
+                <li class="mbn-ol"> Add celery, capsicum and mushrooms then cook for a further 4 minutes.
+                </li>
+                <li class="mbn-ol"> Add tomato paste, tinned tomatoes and parsley.
+                </li>
+                <li class="mbn-ol"> Serve with pasta of choice or mashed potato.
+                </li>
+            </ul>
+            <p class="mbn-video-caption">
+                <i>Adapted from the Infant Program website. For more help getting healthy eating   and active play with your baby right from the start, visit <a href="http://www.infantprogram.org">infantprogram.org</a></i>.
+            </p>
+
+            <p class="mbn-section" id="6.4.1f">Chicken casserole</p>
+            <p class="mbn-text">
+                <img src="images/Chicken Casserole.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freeze or in the fridge for up to 2 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 medium onion (chopped)
+                </li>
+                <li> 2 teaspoons canola or olive oil
+                </li>
+                <li> 4 small chicken breasts (skin removed, diced and checked for bones)
+                </li>
+                <li> 3-4 large carrots (washed and chopped)
+                </li>
+                <li> 3-4 new/baby potatoes (skin on, washed and chopped)
+                </li>
+                <li> 2 cups boiling water
+                </li>
+                <li> 1 teaspoon dried mixed herbs
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                </li>
+                <li class="mbn-ol"> Pour boiling water over herbs.
+                </li>
+                <li class="mbn-ol"> Heat oil in a frying pan.
+                </li>
+                <li class="mbn-ol"> Fry onion until soft.
+                </li>
+                <li class="mbn-ol"> Add chicken and brown on all sides.
+                </li>
+                <li class="mbn-ol"> Transfer to casserole dish, pour over the herby water and add carrots and potatoes.
+                </li>
+                <li class="mbn-ol"> Bake in oven for 1 hour or until chicken is cooked through.
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving.
+                </li>
+                <li class="mbn-ol"> Any unused casserole can be frozen in ice trays or covered and refrigerated for up to 2 days.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> For a family, follow the same <b>method</b> but add extra vegetables (use the same amount of chicken).
+            </p>
+
+            <p class="mbn-section" id="6.4.1g">Fish and sweet potato mash</p>
+            <p class="mbn-text">
+                <img src="images/Fish and sweet potato mash.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> easy and tasty way to serve nutritious fish<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac12; large sweet potato (peeled, finely chopped)
+                </li>
+                <li> &frac12; cup chopped tomatoes (any type will do)
+                </li>
+                <li> 1 tablespoon canola or olive oil
+                </li>
+                <li> 1 small boneless skinless white fish fillet (e.g. sea bass)
+                </li>
+                <li> 3 tablespoons cow's milk
+                </li>
+                <li> &frac12; teaspoon canola or olive oil margarine
+                </li>
+                <li> &frac14; cup grated cheese
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Boil sweet potatoes in water for 10 minutes or until tender then drain.
+                </li>
+                <li class="mbn-ol"> Heat oil in a frying pan and fry tomatoes for 4 minutes or until soft then set aside.
+                </li>
+                <li class="mbn-ol"> Place fish, milk and margarine in microwave safe dish, cover with lid or plastic wrap (pierced) and cook on high for 2 minutes or until tender.
+                </li>
+                <li class="mbn-ol"> Drain fish but keep the cooking milk.
+                </li>
+                <li class="mbn-ol"> Break up fish and check for bones.
+                </li>
+                <li class="mbn-ol"> In a bowl, place fish, cooking milk, tomatoes, potatoes and cheese and mash/pur&eacute;e to required consistency before serving (add a dash of milk/water if needed).
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> For a family of 4 use:
+            </p>
+            <ul>
+                <li> 2 large sweet potatoes (peeled, finely chopped)
+                </li>
+                <li> 2 cups chopped tomatoes (any type will do)
+                </li>
+                <li> 2 tablespoons olive oil (or other vegetable oil)
+                </li>
+                <li> 4 small boneless skinless white fish fillet (e.g. sea bass)
+                </li>
+                <li> &frac12; cup cow's milk
+                </li>
+                <li> 1 tablespoon canola or olive oil margarine
+                </li>
+                <li> 1 cup grated cheese
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Follow the same <b>method</b> up to step 4, <b>THEN</b>:
+            </p>
+            <ul>
+                <li class="mbn-ol"> Serve whole fish fillet on top of mashed potato, pour tomatoes over the top and sprinkle with cheese.
+                </li>
+            </ul>
+            <p class="mbn-video-caption">
+                <i>Adapted from the Infant Program website. For more help getting healthy eating   and active play with your baby right from the start, visit <a href="http://www.infantprogram.org">infantprogram.org</a></i>.
+            </p>
+
+            <p class="mbn-section" id="6.4.1h">Fish patties</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note: </b> serve with salad or steamed vegetables; <a onclick="localSecJump('recipe-671.html#6.7.1e');">see video of recipe</a><br/>
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 400g sweet potatoes (peeled, cut into cubes)
+                </li>
+                <li> 150g frozen peas (cooked)
+                </li>
+                <li> 400g salmon or tuna (canned or freshly cooked)
+                </li>
+                <li> 80g multigrain breadcrumbs
+                </li>
+                <li> herbs e.g. parsley or dill (finely chopped)
+                </li>
+                <li> 4 teaspoons baby rice cereal
+                </li>
+                <li> a little canola or olive oil for frying
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Microwave or boil sweet potatoes until just tender.
+                </li>
+                <li class="mbn-ol"> In a large bowl, mix and mash the potato and peas.
+                </li>
+                <li class="mbn-ol"> Add the salmon/tuna, herbs and baby rice cereal, then mix well (no need to be smooth).
+                </li>
+                <li class="mbn-ol"> Using your hands, form into patties, coating each in breadcrumbs, then place on a plate.
+                </li>
+                <li class="mbn-ol"> Store in the fridge for 20-30 minutes to set.
+                </li>
+                <li class="mbn-ol"> Heat oil in large frying pan on medium-high.
+                </li>
+                <li class="mbn-ol"> Lightly fry patties in batches until golden brown.
+                </li>
+                <li class="mbn-ol"> Drain on kitchen paper then serve with salad or steamed vegetables.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.4.1i">Lamb hotpot</p>
+            <p class="mbn-text">
+                <img src="images/Lamb hotpot.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freeze or keep in the fridge for up to 2 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 tablespoon canola or olive oil
+                </li>
+                <li> 1 tablespoon canola or olive margarine
+                </li>
+                <li> 1 &frac12; cups stewing lamb (in chunks)
+                </li>
+                <li> 1 medium onion (chopped)
+                </li>
+                <li> 2 medium carrots (chopped)
+                </li>
+                <li> 1 tablespoon plain flour
+                </li>
+                <li> 1 cup water
+                </li>
+                <li> 1 teaspoon dried mixed herbs
+                </li>
+                <li> 1 whole bay leaf (optional)
+                </li>
+                <li> 1-2 small potatoes (skin on, washed and thinly sliced)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Heat oven to 150&deg;C.
+                </li>
+                <li class="mbn-ol"> Heat oil in a large frying pan on medium-high.
+                </li>
+                <li class="mbn-ol"> Fry lamb until brown on all sides.
+                </li>
+                <li class="mbn-ol"> Transfer lamb to casserole dish.
+                </li>
+                <li class="mbn-ol"> Using same frying pan as for lamb, fry carrots and onion until soft.
+                </li>
+                <li class="mbn-ol"> Add flour and cook for 2 minutes whilst stirring.
+                </li>
+                <li class="mbn-ol"> Stir in herbs, water and bay leaf (if using).
+                </li>
+                <li class="mbn-ol"> Bring to boil then pour over lamb in casserole dish.
+                </li>
+                <li class="mbn-ol"> Place slices of potato on top of lamb mix in casserole dish.
+                </li>
+                <li class="mbn-ol"> Put lid on casserole dish (or cover with foil) and bake in oven for about 1 hour 10 minutes.
+                </li>
+                <li class="mbn-ol"> Remove lid/foil, brush potatoes with margarine/oil.
+                </li>
+                <li class="mbn-ol"> Increase temperature to 180&deg;C and bake for another 10 minutes.
+                    <br />
+                    <b>OR</b>
+                    <br /> Place under grill for 5 minutes until golden.
+                </li>
+                <li class="mbn-ol"> Remove a small portion to mash/pur&eacute;e to required consistency before serving then freeze extra in ice/cupcake trays or cover and refrigerate for up to 2 days.
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> This recipe is designed for a whole family - follow the same <b>method</b> to step 12, <b>THEN</b>:
+            </p>
+            <ul>
+                <li class="mbn-ol"> Serve with salad or greens for a balanced meal.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.4.1j">Lentil cottage pie (veg)</p>
+            <p class="mbn-text">
+                <img src="images/Lentil Cottage pie .jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 tablespoon canola or olive oil
+                </li>
+                <li> 1 medium onion (chopped)
+                </li>
+                <li> 1 cup carrot (skin on, chopped)
+                </li>
+                <li> 1 cup zucchini (skin on, chopped)
+                </li>
+                <li> 1 clove garlic (crushed)
+                </li>
+                <li> 1 400g tin diced tomatoes
+                </li>
+                <li> 2 tablespoons tomato pur&eacute;e or paste
+                </li>
+                <li> &frac14; cup frozen peas
+                </li>
+                <li> 1 tablespoon fresh thyme (finely chopped; or 1 teaspoon dried)
+                </li>
+                <li> 300mL water
+                </li>
+                <li> 1 tin 400g green/brown lentils (drained and rinsed)
+                </li>
+                <li> 4 cups potato (chopped)
+                </li>
+                <li> 1 tablespoon canola or olive oil
+                </li>
+                <li> 1 tablespoon canola or olive oil margarine
+                </li>
+                <li> &frac12; cup cow's milk
+                </li>
+                <li> &frac13; cup grated cheese
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Preheat oven to 200&deg;C.
+                </li>
+                <li class="mbn-ol"> Heat oil in a large pot on medium-high heat.
+                </li>
+                <li class="mbn-ol"> Fry onion in oil for 1-2 minutes then add carrot, zucchini and garlic and cook for 1 minute
+                </li>
+                <li class="mbn-ol"> Add tomatoes, tomato pur&eacute;e, peas, thyme, water and lentils.
+                </li>
+                <li class="mbn-ol"> Bring to boil then reduce heat and simmer for 20 minutes (add a little water to stop mixture drying out if needed).
+                </li>
+                <li class="mbn-ol"> Transfer to large casserole dish.
+                </li>
+                <li class="mbn-ol"> Meanwhile, cook potatoes in boiling water until soft.
+                </li>
+                <li class="mbn-ol"> Drain water and mash, stirring in the margarine, milk and cheese.
+                </li>
+                <li class="mbn-ol"> Spread mash over lentil mixture then run a fork across the top to make ridges.
+                </li>
+                <li class="mbn-ol"> Bake for 15-20 minutes or until golden.
+                </li>
+                <li class="mbn-ol"> Remove a small portion to mash/purée to required consistency before serving.
+                </li>
+                <li class="mbn-ol"> Unused cottage pie can be frozen in ice/cupcake trays for later.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> This recipe is designed for a whole family - follow the same <b>method</b> to step 10, <b>THEN</b>:
+            </p>
+            <ul>
+                <li class="mbn-ol">Serve with salad or greens for a balanced meal.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.4.1k">Mini meatballs</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note: </b> serve with salad or greens for a balanced meal<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 500g lean minced beef/kangaroo
+                </li>
+                <li> 2 tablespoons parsley (chopped; or 2 teaspoons dried)
+                </li>
+                <li> 2 cloves garlic (finely chopped)
+                </li>
+                <li> 2 teaspoons oregano (or &frac12; teaspoon dried)
+                </li>
+                <li> 1 small onion (finely chopped)
+                </li>
+                <li> 1 egg (beaten)
+                </li>
+                <li> 1 cup multigrain breadcrumbs
+                </li>
+                <li> 1 zucchini (skin on, grated, excess moisture squeezed out)
+                </li>
+                <li> plain flour, for coating meatballs
+                </li>
+                <li> a little canola or olive oil for frying
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Heat oven to 180&deg;C.
+                </li>
+                <li class="mbn-ol"> In a large bowl, combine all ingredients.
+                </li>
+                <li class="mbn-ol"> Roll into small balls and then roll in plain flour.
+                </li>
+                <li class="mbn-ol"> Heat oil in frying pan on medium-high.
+                </li>
+                <li class="mbn-ol"> Lightly fry meatballs in batches until just brown.
+                </li>
+                <li class="mbn-ol"> Place on an oven tray then cook in the oven for 15 minutes until heated through.
+                </li>
+                <li class="mbn-ol"> Serve with salad or greens for a balanced meal.
+                </li>
+            </ul>
+            <p class="mbn-video-caption">
+                <i>Adapted from the Infant Program website. For more help getting healthy eating   and active play with your baby right from the start, visit <a href="http://www.infantprogram.org">infantprogram.org</a></i>.
+            </p>
+
+            <p class="mbn-section" id="6.4.1l">Pumpkin, carrot and parsnip soup</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note: </b> be careful when blending hot soup as splashes can burn! <a onclick="localSecJump('recipe-671.html#6.7.1i');">See video of recipe</a> <br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 onion (chopped)
+                </li>
+                <li> 1 clove garlic (crushed)
+                </li>
+                <li> 1 heaped teaspoon cumin
+                </li>
+                <li> 300g pumpkin (cut into large cubes)
+                </li>
+                <li> 3 carrots (skin on, sliced thickly)
+                </li>
+                <li> 2 parsnips (skin on, sliced thickly)
+                </li>
+                <li> 1L no added salt stock
+                </li>
+                <li> a little canola or olive oil
+                </li>
+                <li> Greek yoghurt, to serve
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> . Heat oil in a large pot on medium-high heat.
+                </li>
+                <li class="mbn-ol"> Cook the onion and garlic for 2-3 minutes or until softened and slightly browned.
+                </li>
+                <li class="mbn-ol"> Add all other ingredients (except yoghurt) and bring to the boil.
+                </li>
+                <li class="mbn-ol"> Turn down the heat and simmer for 15 minutes or until everything is soft.
+                </li>
+                <li class="mbn-ol"> Blend soup and serve with a dollop of Greek yoghurt.
+                </li>
+            </ul>
+            <p class="mbn-video-caption">
+                <i>Adapted from the Infant Program website. For more help getting healthy eating   and active play with your baby right from the start, visit <a href="http://www.infantprogram.org">infantprogram.org</a></i>.
+            </p>
+
+            <p class="mbn-section" id="6.4.1m">Rainbow chips</p>
+            <p class="mbn-text">
+                <b>Good for:</b>finger food; the whole family<br />
+                <b>Storage:</b> not suitable for freezing<br />
+                <b>Note: </b> <a onclick="localSecJump('recipe-671.html#6.7.1j');"> see video of recipe</a><br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+            </p>
+            <ul>
+                <li> 2 parsnips (skin on, cut into 5cm chip-like strips)
+                </li>
+                <li> 1 sweet potato (peeled, cut into 5cm chip-like strips)
+                </li>
+                <li> 1 beetroot (peeled, cut into 5cm chip-like strips)
+                </li>
+                <li> 2 tablespoons rosemary
+                </li>
+                <li> 2 cloves of garlic (crushed)
+                </li>
+                <li> 2 tablespoons olive oil
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Heat oven to 200&deg;C.
+                </li>
+                <li class="mbn-ol"> Line a baking tray with baking paper.
+                </li>
+                <li class="mbn-ol"> Mix vegetables with oil, rosemary and garlic, then spread onto prepared baking tray.
+                </li>
+                <li class="mbn-ol"> Bake for 20 minutes and then turn vegetables over and cook for another 15 minutes, or until tender through and browned.
+                </li>
+            </ul>
+            <p class="mbn-video-caption">
+                <i>Adapted from the Infant Program website. For more help getting healthy eating   and active play with your baby right from the start, visit <a href="http://www.infantprogram.org">infantprogram.org</a></i>.
+            </p>
+
+            <p class="mbn-section" id="6.4.1n">Simple salmon pasta</p>
+            <p class="mbn-text">
+                <img src="images/Simple salmon pasta.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> quick and tasty meal that provides plenty of protein and vitamins!<br />
+                <b>Note: </b> if using tinned salmon/tuna, follow the same method but start at step 3 and only add milk at step 6<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li>1 small salmon fillet or a small tin of salmon/tuna in spring water (drained, bones removed)
+                </li>
+                <li> &frac12; cup small pasta shapes
+                </li>
+                <li> &frac12; small leek (diced)
+                </li>
+                <li> &frac12; cup broccoli (chopped)
+                </li>
+                <li> 3 tablespoons cheese (grated)
+                </li>
+                <li> 4 tablespoons light cream
+                </li>
+                <li> 5 tablespoons cow's milk
+                </li>
+                <li> 1 tablespoon canola or olive oil
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Place salmon in microwave safe dish with half the milk, cover with lid or plastic wrap (pierced) and cook on high for 2 minutes or until tender.
+                </li>
+                <li class="mbn-ol"> Drain salmon, check for bones, break up and then set aside.
+                </li>
+                <li class="mbn-ol"> Cook pasta according to instructions on the pack, adding broccoli for the last 2 minutes of cooking, then drain and set aside.
+                </li>
+                <li class="mbn-ol"> Heat oil in a pot over medium-high heat.
+                </li>
+                <li class="mbn-ol"> Fry leek until soft.
+                </li>
+                <li class="mbn-ol"> Add salmon and remaining milk, reduce heat then simmer for 3 minutes.
+                </li>
+                <li class="mbn-ol"> Add cooked pasta (and tinned fish if using), then add light cream.
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving with cheese sprinkled on top.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.4.1o">Spaghetti Bolognese (incl. veg option)</p>
+            <p class="mbn-text">
+                <img src="images/Spaghetti bolognaise.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freeze or keep in the fridge for up to 2 days, covered<br />
+                <b>Note: </b> super popular with little people; for vegetarian Bolognese, replace mince at step 3 with a tin of brown lentils (rinsed) and a handful of chopped mushrooms<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 tablespoon canola or olive oil
+                </li>
+                <li> 1 clove garlic (crushed)
+                </li>
+                <li> 500g lean mince (kangaroo, beef or lamb)
+                </li>
+                <li> 1 small onion (finely chopped)
+                </li>
+                <li> 1 medium carrot (grated)
+                </li>
+                <li> 1 medium zucchini (grated)
+                </li>
+                <li> 1 440g tin diced tomatoes
+                </li>
+                <li> 1 tablespoon salt reduced tomato pur&eacute;e or paste
+                </li>
+                <li> &frac12; teaspoon ground cinnamon (optional)
+                </li>
+                <li> packet spaghetti or other dried pasta
+                </li>
+                <li> cheese (grated) for serving
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Heat oil in a large frying pan on medium-high heat.
+                </li>
+                <li class="mbn-ol"> Fry onion, garlic, grated carrot and zucchini until soft.
+                </li>
+                <li class="mbn-ol"> Add mince and break up to brown all pieces thoroughly.
+                </li>
+                <li class="mbn-ol"> Add chopped tomatoes, tomato pur&eacute;e/paste and cinnamon (if using), reduce heat then simmer for 20-30 minutes or until sauce is thick.
+                </li>
+                <li class="mbn-ol"> Cook the spaghetti according to the instructions on the pack.
+                </li>
+                <li class="mbn-ol"> Drain water from spaghetti/pasta and mix through sauce.
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving sprinkled with cheese.
+                </li>
+                <li class="mbn-ol"> Freeze unused Bolognese in ice/cupcake trays or cover and refrigerate for up to 2 days.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> This recipe is designed for a whole family - follow the same <b>method</b> to step 6, <b>THEN</b>:
+            </p>
+            <ul>
+                <li class="mbn-ol"> Serve with cheese sprinkled on top.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.4.1p">Sweetcorn and pea risotto</p>
+            <p class="mbn-text">
+                <img src="images/Sweetcorn and pea risotto.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> lunches as well as dinner<br />
+                <b>Storage:</b> use straight away and throw away any unused risotto, do not store - it is generally best not to reheat cooked rice<br />
+                <b>Note: </b> the simple ingredients mean it's great for when you haven't had time to go shopping<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 medium onion (chopped)
+                </li>
+                <li> handful frozen peas
+                </li>
+                <li> handful of frozen corn kernels
+                </li>
+                <li> &frac12; cup uncooked white rice
+                </li>
+                <li> &frac14; cup grated cheese (parmesan if you have it)
+                </li>
+                <li> 2 cups boiling water
+                </li>
+                <li> 1 teaspoon dried mixed herbs
+                </li>
+                <li> 1 tablespoon olive oil (or other vegetable oil)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Pour boiling water over herbs.
+                </li>
+                <li class="mbn-ol"> Heat oil in a pot on medium-high heat.
+                </li>
+                <li class="mbn-ol"> Fry onion until soft.
+                </li>
+                <li class="mbn-ol"> Add rice and stir for 2 minutes.
+                </li>
+                <li class="mbn-ol"> Pour in a little herby water, stirring until the rice absorbs it before adding more herby water.
+                </li>
+                <li class="mbn-ol"> After about 7 minutes, add corn and peas.
+                </li>
+                <li class="mbn-ol"> Continue adding herby water little-by-little and stirring until there is none left, the rice is soft and sticky and the peas and corn are well cooked (about 15 minutes all up).
+                </li>
+                <li class="mbn-ol">Stir in cheese until melted.
+                </li>
+                <li class="mbn-ol">Mash/pur&eacute;e to required consistency before serving.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.4.1q">Zany zucchini pasta</p>
+            <p class="mbn-text">
+                <img src="images/Zany zucchini pasta.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> the whole family<br />
+                <b>Note: </b> this is a bit like pesto and is great served alongside grilled chicken<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac14; cup small pasta shapes (&frac12; cup already cooked)
+                </li>
+                <li> 1 medium zucchini (sliced)
+                </li>
+                <li> 1 teaspoon chives (chopped)
+                </li>
+                <li> 2 teaspoons canola or olive oil
+                </li>
+                <li> &frac14; cup cheese (grated)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Cook pasta according the instructions on the pack, drain and set aside if required.
+                </li>
+                <li class="mbn-ol"> Place zucchini in microwave safe bowl, cover with lid or plastic wrap (no need to add water) and cook for 2 minutes until soft.
+                </li>
+                <li class="mbn-ol"> Add oil to zucchini and blend until thick.
+                </li>
+                <li class="mbn-ol"> Stir in chives.
+                </li>
+                <li class="mbn-ol"> Toss pasta in zucchini mixture.
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving sprinkled with cheese.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> For a family of 4, use:
+            </p>
+            <ul>
+                <li> 2 cups small pasta shapes
+                </li>
+                <li> 3 medium zucchinis (sliced)
+                </li>
+                <li> 4 teaspoons chives (chopped)
+                </li>
+                <li> 2 tablespoons canola or olive oil
+                </li>
+                <li> 1 cup cheese (grated)
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Follow the same <b>method</b> and serve sprinkled with cheese after step 5.
+
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

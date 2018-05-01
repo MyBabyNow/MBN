@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/tips.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-text" id="6.1.1a">
+                Preparing food for your baby doesn't need to cost the earth, be difficult or time consuming, or even that different from what you eat as a family! Below you will find a few helpful tips before coming to a menu of the recipes included in this section. Although each recipe is grouped by suggested meal time, keep in mind that many are suited to other meal times as well and that your baby will probably just be happy to eat, regardless of the type of food they are presented and the various times of the day!
+            </p>
+            <p class="mbn-section" id="6.1.1b">Important tips</p>
+            <p class="mbn-text">
+                <b>What texture is right for my baby?</b>
+                <br /> Just as a variety of different foods is important, so is a variety of age-appropriate textures. Varying the food texture helps your baby learn to chew (even if they don't yet have teeth!) as well as swallow.
+                <br /> Generally, if your baby is
+            </p>
+            <ul>
+                <li>
+                    <u>6 - 8 months</u> - use only pur&eacute;ed and mashed foods but move to minced (or mashed with a fork) and chopped foods soon
+                </li>
+                <li>
+                    <u>8 months</u> - begin
+                    <a onclick="localSecJump('solids/solids-441.html#4.4.1');">'finger foods'</a>
+                </li>
+                <li>
+                    <u>12 months</u> - your baby can eat the variety of foods eaten by the rest of the family
+                </li>
+            </ul>
+            <p class="mbn-text">
+                See the
+                <a onclick="localSecJump('recipe-671.html#6.7.1');"> video library</a> for some tips on preparing different textures, including how to make some adult meals age appropriate for your baby.
+            </p>
+            <p class="mbn-text" id="6.1.1c">
+                <b>Keep the cost down</b>
+            </p>
+            <ul>
+                <li>
+                    fresh fruit and vegetables that are 'in season' are cheaper, tastier and more nutritious
+                </li>
+                <li>
+                    if you don't have one of the ingredients listed in a recipe, try substituting ingredients or experimenting, rather than specifically buying the item
+                </li>
+            </ul>
+            <p class="mbn-text" id="6.1.1d">
+                <b>Keep it healthy</b>
+            </p>
+            <ul class="decimals">
+                <li>
+
+                    avoid adding sugar, salt (including stocks), extra fats and oils to foods for your baby
+                </li>
+                <li>
+                    choose tinned fruit that is &lsquo;unsweetened&rsquo; or 'in fruit juice' instead of syrup
+                </li>
+                <li>
+                    practice good hygiene by washing hands, using clean utensils and working on a clean counter
+                </li>
+                <li>
+
+                    It is OK to use a little cow's milk in cooking before your baby is 12 months old
+                </li>
+            </ul>
+            <p class="mbn-text" id="6.1.1e">
+                <b>Save time and effort</b>
+            </p>
+            <ul class="decimals">
+                <li>
+                    for the most part, your baby can eat the same meals as you, meaning you don't need to prepare separate meals - look for those recipes labelled as <i><b>good for the whole family</b></i> and follow the instructions at the end to adapt the recipe 'to serve the family'
+                </li>
+                <li>
+                    cook up more than you need and keep extras in the fridge or freeze extra for quick easy meals at a later time
+                </li>
+                <li>
+                    keep some frozen vegetables in the freezer and tinned fruit in the cupboard as back-ups for when you run out of fresh vegetables and fruit
+                </li>
+            </ul>
+            <p class="mbn-text" id="6.1.1f">
+                <b>All recipes have been carefully sourced but keep in mind that:</b>
+            </p>
+            <ul>
+                <li>
+                    these recipes are guides only - you may like to experiment in your own kitchen to get things right for you and your baby's tastes
+                </li>
+                <li>
+                    cooking times (for example) may be slightly different depending on your appliances and/or the ingredients used the number of serves will vary depending on your baby's age
+                </li>
+            </ul>
+            <p class="mbn-text">
+                These recipes are a great start for ideas but don't be afraid to change them or use any ingredients you already have at home!
+            </p>
+            <p class="mbn-section">Menu</p>
+            <p class="mbn-section" id="6.1.1g">Breakfast</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('recipe-621.html#6.2.1b');">Banana oat porridge</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-621.html#6.2.1c');">Banana rice porridge</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump(‘recipe-621.html#6.2.1d’);">Bircher muesli</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump(‘recipe-621.html#6.2.1e’);">Eggy bread</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump(‘recipe-621.html#6.2.1f’);">Fruit mush</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump(‘recipe-621.html#6.2.1g’);">Fruit mush and yoghurt</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump(‘recipe-621.html#6.2.1h’);">Super porridge</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump(‘recipe-621.html#6.2.1i’);">Tasty spinach scramble</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump(‘recipe-621.html#6.2.1j’);">Vegemite toast</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump(‘recipe-621.html#6.2.1k’);">Veggie omelette</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.1.1h">Lunch</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('recipe-631.html#6.3.1b');">Broccoli and polenta mash</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-631.html#6.3.1c');">Cheesy leek and potato mash</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-631.html#6.3.1d');">Cheesy pasta sauce</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-631.html#6.3.1e');">Cheesy spinach spaghetti</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-631.html#6.3.1f');">Dahl</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-631.html#6.3.1g');">Eggy veg</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-631.html#6.3.1h');">Mushroom carbonara</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-631.html#6.3.1i');">Salmon and veggie couscous</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-631.html#6.3.1j');">Sweet potato and lentil soup</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-631.html#6.3.1k');">Tuna & creamed corn mac</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.1.1i">Dinner</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1b');">Baby stew (savoury mince)</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1c');">Basic vegetable stir-fry</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1d');">Beef and green beans</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1e');">Chicken Bolognese</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1f');">Chicken casserole</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1g');">Fish and sweet potato mash</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1h');">Fish patties</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1i');">Lamb hotpot</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1j');">Lentil cottage pie (veg)</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1k');">Mini meatballs</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1l');">Pumpkin, carrot and parsnip soup</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1m');">Rainbow chips</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1n');">Simple salmon pasta</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1o');">Spaghetti Bolognese</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1p');">Sweetcorn and pea risotto</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-641.html#6.4.1q');">Zany zucchini pasta</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.1.1j">Snacks</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('recipe-651.html#6.5.1b');">Baby rusks</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-651.html#6.5.1c');">Cheese straws</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-651.html#6.5.1d');">Cool bananas</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-651.html#6.5.1e');">Finger foods</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-651.html#6.5.1f');">Hummus (chickpea dip)</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-651.html#6.5.1g');">Peach rice</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-651.html#6.5.1h');">Pear muffins</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-651.html#6.5.1i');">Raspberry and pear yoghurt</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-651.html#6.5.1j');">Steamed veggies</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-651.html#6.5.1k');">Tasty sweet potato wedges</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-651.html#6.5.1l');">Veggie citrus muffins</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.1.1k">Drinks</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('recipe-661.html#6.6.1b');">Milk</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-661.html#6.6.1c');">Water</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-661.html#6.6.1d');">Fruit juice</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('recipe-661.html#6.6.1e');">Cordial / fizzy drinks / soft drinks / energy drinks</a>
+                </li>
+            </ul>
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

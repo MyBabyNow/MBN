@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html ng-app="mbnUpdateProfile">
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/mbn.css" media="screen,projection" />
+    <link rel="stylesheet" href="../css/preloader/main.css">
+
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.session.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/mbn.js"></script>
+    <script type="text/javascript" src="../js/header.js"></script>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/more/update-profile/app.js"></script>
+</head>
+
+<body ng-controller="UpdateProfileController as up">
+    <div class="mbn-logo">
+        <img src="../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div id="loader-wrapper" class="hide">
+        <div id="loader"></div>
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="../images/favorites.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+                <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> More</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" style="min-width: 100vw !important;" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> More</span>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" style="padding: 5%;" id="section-content">
+        <span class="mbn-menu-font">Update mum's details</span>
+        <p>
+            <span class="mbn-text"><b>Change profile picture</b></span>
+            <br /><br/>
+            <img src="{{avatar}}" style="width: 30vw; float: left; margin-right: 20px; margin-left: 0px !important; border: 4px solid #6699cc;" ng-click="click()">
+            <br />Tap on profile picture to select a new photo
+        </p>
+        <p>
+            <br /><br/><br />
+            <span class="mbn-text"><b>Mobile number</b></span>
+            <input type="text" placeholder="Mobile number" ng-model="mobile" />
+        </p>
+        <p>
+            <span class="mbn-text"><b>Email address</b></span>
+            <input type="email" placeholder="email" ng-model="email" />
+        </p>
+        <p>
+            <br />
+        </p>
+
+        <div class="login-btn" ng-click="updateProfile()">Update details</div>
+
+        <p>
+            <br /><br /><br />
+        </p>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p>
+                                <img src="../images/topics.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p class="mbn-icon-selected">
+                                <img src="../images/more-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

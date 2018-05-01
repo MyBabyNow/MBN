@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/milk-supply.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.3" Breastfeeding>Milk supply</p>
+            <p class="mbn-text" id="1.1.3a">
+                <b>In this section you will learn about:</b>
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('1.1.3b');">Setting up milk supply</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.3c');">Keeping up milk supply</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.3d');">Low milk supply</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.3e');">Are you making enough milk?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.3f');">Myths around low milk supply</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.3g');">True causes for low milk supply</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.3i');">Make more milk</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.3k');">Too much milk</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.3l');">Common breastfeeding questions: enough milk, too much milk, expressing (video)</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.3b">
+                <b>Setting up milk supply</b>
+            </p>
+            <p class="mbn-text">
+                Some mums worry that breastfeeding frequently means that they don't have enough milk, but this is normal, especially for young babies and during growth spurts. When your baby is <a onclick="localSecJump('bf-114.html#1.1.4g');">attached on properly</a>, each time you breastfeed messages between your brain and breasts signal your body to make more milk to build up your milk supply.
+            </p>
+            <p>
+                <img src="images/1.1.3bMore feeding.png" class="mbn-text-image" />
+            </p>
+            <p>
+                <img src="images/1.1.3b Breastfeeding loop.png" class="mbn-text-image" />
+            </p>
+            <p class="mbn-text">
+                Your baby only has a tiny tummy and it digests your breastmilk very well, so your baby needs to be fed often, especially in the early weeks!
+            </p>
+
+            <p class="mbn-text">
+                It usually takes from birth to around 6 weeks to establish your milk supply. During this time you should focus on making sure your baby is <a onclick="localSecJump('bf-114.html#1.1.4g');">attaching well</a>, and feed them for as long and as often as they seem <a onclick="localSecJump('sfp/sfp-514.html');">hungry</a>.
+            </p>
+            <p class="mbn-text">
+                By about 6 weeks, your body will be getting used to making milk for your baby and you will find your breasts start to feel softer and less full than they used to. This is normal and does not mean your milk supply is reducing, it just means your breasts are getting good at giving milk on demand!
+            </p>
+
+            <p class="mbn-text" id="1.1.3c">
+                <b>Keeping up milk supply</b>
+            </p>
+            <p class="mbn-text">
+                Feeding your baby whenever they are <a onclick="localSecJump('sfp/sfp-514.html');">hungry</a> and for as long as they want to feed is the best way to keep up your milk supply (demand equals supply). Your baby is far better at getting your milk out than a <a onclick="localSecJump('bf-1117.html#1.1.17h');">breast pump</a> and having your baby on your breast helps your body know how much milk to make.
+            </p>
+            <p class="mbn-text">
+                Remember:
+            </p>
+            <ul>
+                <li>babies that are <a onclick="localSecJump('bf-114.html#1.1.4g');">attached on properly</a> get very good at removing all milk from your breasts
+                </li>
+                <li><a onclick="localSecJump('bf-1111.html');">expressing</a> to try to 'measure' how much milk you make doesn't really work as your baby is better at getting out your milk than a breast pump or any other expressing method
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.3d">
+                <b>Low milk supply</b>
+            </p>
+            <p class="mbn-text">
+                'Not having enough milk' is the most common reason why mums give up breastfeeding yet only about 5% of mums actually have a low milk supply. Babies often change their routines and ways of doing things so it can be hard to know how much breastmilk your baby is taking. If you're wondering about your milk supply,<a onclick="localSecJump('Link to milk supply quiz');"> take our quiz</a>.
+            </p>
+            <p class="mbn-text">
+                Read on to get an idea of whether you are <a onclick="localSecJump('1.1.3e');">making enough milk</a>, for some of the <a onclick="localSecJump('1.1.3f');">common myths around low milk supply</a> and <a onclick="localSecJump('1.1.3g');">when you should be worried</a>.
+            </p>
+
+            <p class="mbn-text" id="1.1.3e">
+                <b>Are you making enough milk?</b>
+                <br> Take our <a onclick="localSecJump('Link to milk supply quiz');">milk supply quiz</a> to find out!
+            </p>
+            <p class="mbn-text">
+                You should be making enough milk if your baby:
+            </p>
+            <ul>
+                <li> has 5+ wet disposable nappies, or at least 6-8 pale, wet cloth/reusable nappies over 24 hours
+                </li>
+                <li> has soft <a onclick="localSecJump('bf-1113.html#1.1.13d');">poos</a>
+                </li>
+                <li> has good skin colour and muscle tone
+                </li>
+                <li> is generally content
+                </li>
+                <li> is <a onclick="localSecJump('sfp/sfp-515.html');">gaining weight and growing</a> in length and head circumference (your <a onclick="localSecJump('bf-119.html#1.1.9k');">midwife</a> or local health nurse will guide you)
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Read more on <a onclick="localSecJump('sfp/sfp-515.html');">growth and using growth charts</a>.
+            </p>
+
+            <p class="mbn-text" id="1.1.3f">
+                <b>Myths around low milk supply</b>
+            </p>
+            <p class="mbn-text">
+                Many women falsely believe they have low milk supply when in fact their supply is fine. Take <a onclick="localSecJump('Link to milk supply quiz');">our quiz</a> now to find out.
+            </p>
+            <p class="mbn-text">
+                This is a list of common <b><i>wrong</i></b> reasons to think your milk supply has dropped:
+            </p>
+            <ul>
+                <li> softer or smaller breasts than in the early days and weeks - your breasts become very good at making milk on demand and so don't need to fill up like they did in the early days!
+                </li>
+                <li> you don't feel the <a onclick="localSecJump('bf-1111.html#1.1.11d');">let-down reflex</a> tingle/sting anymore - this can disappear over time
+                </li>
+                <li> your baby:
+                </li>
+                <ul>
+                    <li> wants to feed more than usual - there can be many reasons for this, including being thirstier in hot weather or during a growth spurt
+                    </li>
+                    <li> finishes feeds more quickly - older babies become experts at drinking milk and will usually finish in just a few minutes
+                    </li>
+                    <li> is unhappy, even after feeding - this might just be discomfort (e.g. teething) or illness (e.g. ear infection)
+                    </li>
+                    <li> goes through 'fussy' periods or 'hungry' days - these are normal and often occur around 5 weeks, 8 weeks, 12 weeks, 4 months and 6 months
+                    </li>
+                    <li> gains less weight - this is common in breastfed babies at around 4 months (seek advice from a health professional if your baby is not <a onclick="localSecJump('sfp/sfp-515.html');">gaining weight)</a>
+                    </li>
+                </ul>
+            </ul>
+
+            <p class="mbn-text" id="1.1.3g">
+                <b>True causes for low milk supply</b>
+            </p>
+            <p class="mbn-text">
+                There are many reasons why milk supply might drop, some of these are:
+            </p>
+            <ul>
+                <li> not enough feeding or feeds are too short - this means your baby may not be able to take enough milk to meet their needs and won't be signalling to your body to make more. This could happen if you are feeding strictly to a schedule or timing feeds.
+                </li>
+                <li> changing sides too quickly - it's best to let your baby decide when they have had enough on each breast
+                </li>
+                <li> <b>poor attaching</b> or sucking - if your baby can't suck the milk out well, they might not get enough milk and will have fewer wet nappies - a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> can help with <a onclick="localSecJump('bf-114.html#1.14g');">proper attaching</a> and sucking techniques
+                </li>
+                <li>using formula too often - giving your baby formula before you have set up your milk supply, when you are working, going out, or to 'top up' after breastfeeds will reduce your <a onclick="localSecJump('1.1.3');">milk supply</a>; giving extra breastfeeds can help avoid this
+                </li>
+                <li> introducing solids or <a onclick="localSecJump('solids/solids-416.html');">other fluids (like juice)</a> too soon - your baby will want less breastmilk and your supply will drop
+                </li>
+                <ul>
+                    <li> breastmilk gives your baby all the nutrition they need until they're around 6 months old
+                    </li>
+                    <li> find out <a onclick="localSecJump('solids/solids-411.html');">when to introduce solid foods</a>
+                    </li>
+                </ul>
+                <li> taking hormonal contraceptions which contain oestrogen ('the pill') - breastfeeding mums are only recommended to take progesterone-based contraceptives (the 'mini-pill')
+                </li>
+                <li> becoming pregnant
+                </li>
+                <li> some medicines - make sure you tell <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> and pharmacist that you are breastfeeding before taking any medications - seek advice on <a onclick="localSecJump('hs/hs-815.html');">breastfeeding and medicines</a>
+                </li>
+                <li> too much <a onclick="localSecJump('bf-1115.html#1.1.15a');">alcohol</a>, nicotine or <a onclick="localSecJump('bf-1114.html#1.1.14i');">caffeine</a> - these can affect your <a onclick="localSecJump('bf-1111.html#1.1.11d');">let-down reflex</a> and production of milk, and may also make your baby irritable
+                </li>
+                <li> having been sick or recently having had surgery - try to rest and feed your baby often
+                </li>
+                <li> other physical reasons (e.g. breast surgery, not enough glandular breast tissue)
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.3h">
+                If you are worried your milk supply is low but you want to keep breastfeeding, remember:
+            </p>
+            <ul>
+                <li> get help - most mums are able to <a onclick="localSecJump('1.1.3i');">increase their milk supply</a>. Speak with your <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a>, a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant,</a>, <a onclick="localSecJump('bf-119.html#1.1.9k');">midwife,</a> or call the <a href="tel:1800686268">ABA helpline</a> for a breastfeeding plan to increase your supply. This will likely include feeding your baby straight from the breast more often and maybe taking a galactagogue (medicine to increase milk).
+                </li>
+                <li> any formula you give may reduce your milk supply even more
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.3i">
+                <b>Make more milk</b>
+            </p>
+            <p class="mbn-text">
+                Your milk supply responds to how much milk your baby is removing from the breast. When your baby removes milk from your breasts, this tells your body how much milk it needs to make.
+            </p>
+            <p class="mbn-text">
+                If you want to make more milk, there are lots of steps you can take. The first and most important step is to make sure your baby is <a onclick="localSecJump('bf-114.html#1.1.4g');">attaching</a> on and sucking well so that your breasts are being drained of their milk. If you're not sure about your baby's attachment, you can call the <a href="tel:1800686268">ABA helpline</a>, <a onclick="localSecJump('bf-119.html#1.1.9k');">midwife</a> or a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> for help. A lactation consultant can organise to see you and check whether your baby is removing the milk. If your baby is removing milk well, here are other steps you can take to make more milk:
+            </p>
+            <ul>
+                <li> throw out routines for a few days and feed your baby more often than usual - even offering 'snack' feeds
+                </li>
+                <li> <a onclick="localSecJump('bf-1111.html');">express</a> any leftover milk after a feed - this stimulates your body to make more milk
+                </li>
+                <li> have more skin-to-skin contact and cuddle time with your baby
+                </li>
+                <li> keep your baby awake during a feed - <a onclick="localSecJump('sfp/sfp-519.html');">burp them</a>, change them, swap sides a few times during a feed
+                </li>
+                <li> squeeze a handful of breast and stroke towards the nipple while feeding to keep milk flowing into your baby's mouth
+                </li>
+                <li> avoid giving your baby a bottle or any other drink or food unless they are over six months and have <a onclick="localSecJump('solids/solids-411.html');">started solids</a> - make sure you ask for help to keep up your milk supply at the same time from the <a href="tel:1800686268">ABA helpline</a> or a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.3j">
+                Other ways to boost your milk supply involve:
+            </p>
+            <ul>
+                <li> using a breastfeeding supplementer - a tube that gives your baby expressed milk or formula without extra sucking while they are on your breast - ask the <a href="tel:1800686268">ABA helpline</a> or a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> about how these work
+                </li>
+                <li> taking medicine (called a galactagogue) that increase milk supply whilst using some of the methods above to increase your milk supply - just remember that any medication (herbal or other) will have side effects that you will need to know about
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.3k">
+                <b>Too much milk</b>
+            </p>
+            <p class="mbn-text">
+                It takes your breasts about 6 weeks to adjust to making the right amount of milk for your baby. If you have too much milk after this time you might also have a strong <a onclick="localSecJump('bf-1111.html#1.1.11d');">let-down</a> and fast flow (when your milk comes out very fast!). If you find this upsets your baby, you can try:
+            </p>
+            <ul>
+                <li> <a onclick="localSecJump('bf-1111.html');">expressing</a> to trigger your <a onclick="localSecJump('bf-1111.html#1.1.11d');">let-down reflex</a> and waiting till the milk flow slows down before putting your baby on your breast - you can just catch the milk with a cloth
+                </li>
+                <li> lying back to feed your baby - they will be working against gravity to suck 'uphill'
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.3l">
+                When you have too much milk you may need to <a onclick="localSecJump('sfp/sfp-519.html');">burp your baby</a> often and notice their poo looks green and frothy. If this is upsetting your baby you can also try to reduce your supply by taking these steps for a few days:
+            </p>
+            <ul>
+                <li> feeding from just one breast at each feed
+                </li>
+                <li> comforting your baby in ways other than feeding (like rocking)
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Taking these steps will mean your breasts will feel full and hard at times. Remember to:
+            </p>
+            <ul>
+                <li> <a onclick="localSecJump('bf-1111.html');">express</a> just enough to make yourself comfortable again
+                </li>
+                <li> check every day for <a onclick="localSecJump('bf-118.html#1.1.8c');">blocked ducts, lumps or inflamed areas</a> in your breast tissue
+                </li>
+                <li> go back to a normal feeding pattern when your supply adjusts
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                This video answers common questions about breastfeeding. A <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> says most mums can make plenty of milk for their baby. She talks about typical weight gain, and how to know whether your baby is getting enough milk. She talks about changes in the amount of milk you produce in the weeks after birth and whether you need to <a onclick="localSecJump('bf-1111.html');">express milk</a>.
+            </p>
+            <p class="mbn-text">
+                Video: Common breastfeeding questions - enough milk, too much milk, expressing
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/f5ci3cDPYNk" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/breastfeeding_questions_supply_video.html/context/1645" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+            <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

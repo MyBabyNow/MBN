@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/feeding-bb-with-bottle.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-video" id="2.1.5">Feeding your baby with a bottle</p>
+            <p class="mbn-section" id="2.1.5a">
+                The basics
+            </p>
+            <p class="mbn-text">
+                Feeding your baby not only provides them with nourishment but also helps with bonding, emotional security and physical development. Surprisingly, it also has the capability to increase literacy (speaking, reading and writing) skills!
+            </p>
+            <p class="mbn-text">
+                The more you sing, read, smile, and talk to your baby the more it activates cell growth and cellular connections in their brain. These connections form the early neural circuitry that will eventually be the foundation for learning.
+            </p>
+            <p class="mbn-text">
+                So holding your baby while feeding them a bottle is an ideal time for you both to connect <i>and</i> to increase their ability to learn!
+            </p>
+            <p class="mbn-text">
+                In this section:
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('2.1.5b');">how to feed your baby with a bottle</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.5e');">how often to feed</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.5g');">how much to feed</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.5h');">overfeeding</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.5i');">what to do if your baby doesn't finish the bottle</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.5j');">bedtime feeding</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Take our quick <a href="tool:link to bottle feeding quiz');">bottle feeding quiz</a> now to check you have got the bottle basics covered!
+            </p>
+
+            <p class="mbn-text" id="2.1.5b">
+                The below steps are a guide to feeding your baby with a bottle:
+            </p>
+            <p class="mbn-text">
+                <b>Sit comfortably and hold your baby close</b>, looking into their eyes to help them feel safe, protected and loved.
+            </p>
+            <p class="mbn-text">
+                <b>Hold your baby upright</b>, with their head supported so that they can breathe and are able to swallow comfortably.
+            </p>
+            <p class="mbn-text">
+                <b>Brush the teat against your baby's lips</b> and when your baby's mouth opens wide, let them draw in the teat.
+            </p>
+            <p class="mbn-text">
+                <b>Hold the bottle horizontal to the ground</b>, tilting it just enough to ensure your baby is getting milk, not air, through the teat - you will see bubbles in the bottle as your baby feeds.
+            </p>
+            <p class="mbn-text">
+                <b>If you can't see any bubbles</b>, break the suction between your baby's tongue and the teat by moving the teat slightly to the side of their mouth until you can see bubbles.
+            </p>
+            <p class="mbn-text">
+                <b>If the teat becomes flattened</b> while you are feeding, pull gently on the corner of your baby's mouth to release the vacuum.
+            </p>
+            <p class="mbn-text">
+                <b>When your baby does not want any more feed</b>, hold them upright and gently rub or pat their back to <a onclick="localSecJump('ff-219.html#2.1.9c');">burp them</a> - there may not be much wind to bring up. If there is any formula left over, throw it away. Resist the urge to <a onclick="localSecJump('2.1.5i');">encourage your baby to finish it</a> - there is no need for your baby to finish a bottle if they have shown you their <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">fullness signs</a>.
+            </p>
+
+            <p class="mbn-text" id="2.1.5c">
+                <b>Do not add cereal, cordial, tea, honey or flavourings</b> to a bottle. Doing so is unsafe and can cause several problems, including <a onclick="localSecJump('2.1.5h');">overfeeding</a> your baby. If you are thinking about adding anything to your baby's bottles other than formula, speak with your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse </a> first.
+            </p>
+
+            <p class="mbn-text" id="2.1.5d">
+                <b>Tips:</b>
+            </p>
+            <ul>
+                <li>Babies feed in bursts of sucking with short pauses to rest and sometimes burp, so don't stress if your baby doesn't suck continuously.
+                </li>
+                <li>Interrupting the feed now and again lets your baby notice how 'full' they feel so they don't <a onclick="localSecJump('2.1.5h');">overfeed</a>.
+                </li>
+                <li>Always hold your baby and never leave them unattended while feeding from a bottle. This includes <a onclick="localSecJump('2.1.5k');">never leaving them to fall asleep with a bottle</a> - night or day.
+                </li>
+                <li><a onclick="localSecJump('2.1.5k');">Never prop your baby up with the bottle</a> - this can be a choking hazard, particularly if they fall asleep.
+                </li>
+                <li>Letting your baby drink from a bottle <a onclick="localSecJump('2.1.5k');">while lying down</a> can increase the risk of ear infections and tooth decay.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="2.1.5e">
+                How often to feed
+            </p>
+            <p class="mbn-text">
+                Although most babies gradually settle into a feeding pattern, they vary in how often they want to feed and <a onclick="localSecJump('ff-216.html#2.1.6a');">how much</a> they want to drink. This is completely normal! Just like you, there will be some days when your baby is hungrier than others.
+            </p>
+            <p class="mbn-text">
+                Guides on typical feed patterns for babies aged:
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('sfp/sfp-511.html#5.1.1');">0-3 months</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('sfp/sfp-512.html#5.1.2');">3-6 months</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('sfp/sfp-513.html#5.1.3');">6-12 months</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                All babies should be fed 'on-demand' (regardless of the type of milk they are receiving) which means feeding your baby when they show <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">signs that they are hungry</a>.
+            </p>
+            <p class="mbn-text">
+                Don't worry too much about following the frequency 'guide' section on the tin or packet - these often suggest feeding babies larger amounts of formula, and less often, than health professionals recommend or than parents who feed 'on-demand' generally experience.
+            </p>
+
+            <p class="mbn-text" id="2.1.5f">
+                Tips:
+            </p>
+            <ul>
+                <li>Babies tend to feed little and often, which means they might not finish their bottle - throw away any unfinished formula after a feed.
+                </li>
+                <li>A big feed doesn't mean your baby will go longer between feeds.
+                </li>
+                <li>Your baby is likely to need <a onclick="localSecJump('sfp/sfp-511.html#5.1.1g');">night feeds</a> for at least the first few months of their life but these should reduce, as your baby gets older.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="2.1.5g">
+                How much to feed
+            </p>
+            <p class="mbn-text">
+                There is no set amount or volume that your baby should have for each feed. Different babies drink different amounts of formula and the amount your baby drinks may vary from day-to-day.
+            </p>
+            <p class="mbn-text">
+                Use the <a onclick="localSecJump('ff-216.html#2.1.6d');">formula feeding calculator</a> to find out more on how much your baby will feed during the day.
+            </p>
+
+            <p class="mbn-section" id="2.1.5h">
+                Overfeeding
+            </p>
+            <p class="mbn-text">
+                A big feed doesn't mean your baby will go longer between feeds. Likewise, try not to force your baby to finish the bottle if they don't want to, they are probably full! Read more about <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">hunger and fullness signs</a>.
+            </p>
+            <p class="mbn-text">
+                Tips:
+            </p>
+            <ul>
+                <li>your baby will decide when they are <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">full</a> - this teaches them to trust their own body signals
+                </li>
+                <li>overfeeding can make your baby sick <a onclick="localSecJump('bf/bf-118.html#1.1.8q');">(reflux)</a> or make them put on <a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">too much weight</a>.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="2.1.5i">
+                My baby hasn't finished the bottle. What now?
+            </p>
+            <p class="mbn-text">
+                If your baby doesn't want to finish the bottle that's OK, they are probably just full. Read more on <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">hunger and fullness signs</a>.
+            </p>
+            <p class="mbn-text">
+                If your baby goes to sleep before they are full, try waking them up by putting them over your shoulder, rubbing their back, legs and tummy or by changing their nappy. Wait until your baby is properly awake before offering them more milk.
+            </p>
+            <p class="mbn-text">
+                Tips:
+            </p>
+            <ul>
+                <li>your baby will decide when they are <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">full</a> - this teaches them to trust their own body signals
+                </li>
+                <li>forcing your baby to finish all the milk they're offered won't <a onclick="localSecJump('sfp/sfp-511.html#5.1.1');">help your baby sleep</a> or go longer between feeds; it can also make your baby sick or put on <a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">too much weight</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Find out more about:
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('2.1.5h');">overfeeding</a>
+                </li>
+                <li><a onclick="localSecJump('2.1.5e');">how often to feed</a>
+                </li>
+                <li><a onclick="localSecJump('ff-216.html#2.1.6a');">how much to feed</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="2.1.5j">
+                Bedtime feeding
+            </p>
+
+            <p class="mbn-text">
+                Although it is bound to happen from time-to-time, try to avoid feeding your baby to sleep with a bottle. This can make your baby develop an association between the bottle and sleep, which can then make it harder for them to fall asleep <i>without</i> a bottle!
+            </p>
+            <p class="mbn-text">
+                Guides on typical feed patterns for babies aged:
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('sfp/sfp-511.html#5.1.1');">0-3 months</a></li>
+                <li><a onclick="localSecJump('sfp/sfp-512.html#5.1.2');">3-6 months</a></li>
+                <li><a onclick="localSecJump('sfp/sfp-513.html#5.1.3');">6-12 months</a></li>
+            </ul>
+
+            <p class="mbn-text" id="2.1.5k">
+                <b>Never put your baby to bed with bottle</b>
+            </p>
+            <p class="mbn-text">
+                It may be tempting to put your baby into their cot with a bottle but this is dangerous as it can:
+            </p>
+            <table>
+                <tr>
+                    <td style="padding: 0pt;">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td style="padding: 4pt;">
+                        <b>Be a choking risk</b>
+                        <br> Babies who fall asleep while feeding can breathe milk into their lungs, upsetting their breathing.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0pt;"></td>
+                    <td style="padding: 4pt;">
+                        <b>Cause ear infections</b>
+                        <br> Drinking a bottle while lying down can cause milk to flow into the ear cavity, causing an infection.
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0pt;"></td>
+                    <td style="padding: 4pt;">
+                        <b>Cause tooth decay</b>
+                        <br> All milk (formula included) contains sugar and soaking your baby's teeth in it overnight can cause tooth decay over time.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0pt;"></td>
+                    <td style="padding: 4pt;">
+                        <b>Disrupt sleeping habits</b>
+                        <br> If your baby gets used to having a bottle to go to bed, they may find it hard to re-settle without a bottle when they wake between sleep cycles at night. This means more getting out of bed for you and less sleep for everyone.
+                    </td>
+                </tr>
+            </table>
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

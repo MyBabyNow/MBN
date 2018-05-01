@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/bf-in-public.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.6" Breastfeeding> Breastfeeding in public</p>
+            <p class="mbn-text" id="1.1.6a">
+                <b>The basics</b>
+                <br> Every mum has the right to meet her baby's needs, wherever they are. It might take some getting used to, but it's important that you feel comfortable and confident wherever you breastfeed.
+            </p>
+            <p class="mbn-text">
+                Remember:
+            </p>
+            <ul>
+                <li>if your baby is <a onclick="localSecJump('sfp/sfp-514.html');">hungry</a>, they shouldn't be expected to wait and you shouldn't be forced to ignore or delay your baby from feeding
+                </li>
+                <li>it is legal to breastfeed in public anywhere in Australia - this means you can do it anywhere, any time and without having to ask - this is the same for <a onclick="localSecJump('bf-1111.html');">expressing milk</a>
+                </li>
+                <li>if someone asks you to stop breastfeeding, it is your legal right to continue
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Now and then you might see or hear news about mums having bad experiences breastfeeding in public - what we don't tend to hear about are the thousands of mums out and about with their babies every day, feeding without anyone being bothered or making a fuss!
+            </p>
+
+            <p class="mbn-text" id="1.1.6b">
+                <b>Managing criticism</b>
+            </p>
+            <p class="mbn-text">
+                Hopefully you won't need to deal with criticism for feeding your baby but if it does happen to you, remember that you are doing something <b>perfectly natural</b> - the problem lies with the person doing the criticising!
+            </p>
+            <p>
+                <img src="images/1.1.6b Managing Criticism.jpg" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.6c">
+                <b>Double standards? You decide!</b>
+            </p>
+            <p class="mbn-text">
+                As your confidence in breastfeeding grows, you might also feel more confident to respond to someone that has a negative opinion about you feeding in public, but either way, it can be upsetting to have to defend something so natural and necessary for your baby.
+            </p>
+            <p class="mbn-text">
+                You can always talk to someone about it by calling the <a href="tel:1800686268">ABA helpline</a> for some extra support.
+            </p>
+            <p class="mbn-text">
+                Don't forget, it is both assault and a criminal act if someone verbally threatens you and also touches you physically. If this happens, try to stay calm, don't respond to the situation and <a onclick="localSecJump('hs/hs-811.html');">contact the police</a> immediately if you can.
+            </p>
+
+
+            <p class="mbn-text" id="1.1.6d">
+                <b>Tips</b>
+            </p>
+            <p class="mbn-text">
+                If the thought of feeding your baby in public makes you feel nervous, these tips might make it easier for you:
+            </p>
+            <ul>
+                <li>wear <a onclick="localSecJump('bf-1117.html#1.1.17c');">clothes, a scarf, or even a breastfeeding cover</a> that make it easier to feed discreetly - but beware, some babies tend to pull covers off!
+                </li>
+                <li>feed your baby before they get <a onclick="localSecJump('sfp/sfp-514.html');">too hungry</a> or upset - you can get them on the breast more easily and quickly
+                </li>
+                <li>try to plan ahead, for example:
+                </li>
+                <ul>
+                    <li>find out if there is a baby-care room in the shopping centre you are visiting
+                    </li>
+                    <li>choose a corner table or more discreet spot in a caf&eacute; and have your back to the room
+                    </li>
+                    <li>head out straight after feeding at home to maximise your time out before needing to feed again
+                    </li>
+                </ul>
+            </ul>
+
+            <p class="mbn-text" id="1.1.6e">
+                Remember:
+            </p>
+            <ul>
+                <li>you don't have to ask <i>any</i>one to breastfeed or <a onclick="localSecJump('bf-1111.html');">express milk</a> - it is legal in public anywhere in Australia, including public transport
+                </li>
+                <li>even if someone asks you to stop, it is your legal right to continue
+                </li>
+                <li>you can always tell someone that they don't have to look if they don't like it!
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.6f">
+                <b>Normalising breastfeeding</b>
+            </p>
+            <p class="mbn-text">
+                Supermodel Natalia Vodianova posted a picture of herself breastfeeding on her public Instagram feed, which has over 400,000 followers.
+            </p>
+            <p>
+                <img src="images/10.1.6f Natsupernova.png" class="mbn-text-image" />
+            </p>
+            <p class="mbn-text">
+                Supermodel Gisele Bundchen posted a picture of herself breastfeeding while getting ready for a shoot on her public Instagram feed, which goes to 2.5 million followers.
+            </p>
+            <p>
+                <img src="images/1.1.6f Giseleofficial.png" class="mbn-text-image" />
+            </p>
+            <p class="mbn-text" id="1.1.6g">
+                <b>When Nurture Calls</b>
+            </p>
+            <p class="mbn-text">
+                This initiative, based in the US, got people talking about protecting a mum's right to breastfeed in public. How do you feel when looking at these images?
+            </p>
+            <p>
+                <img src="images/1.1.6g when nature calls.png" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.6h">
+                <b>Emily Slough public protest</b>
+            </p>
+            <p class="mbn-text">
+                Instead of shying away from the online abuser that called her a tramp for breastfeeding her daughter in public, Emily Slough, a young mum in the UK, organised a mass breastfeeding event where dozens of mums attended and breastfed their babies publicly in the same spot where she had been criticised!
+            </p>
+            <p>
+                <img src="images/1.1.6h Emily Slough.png" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.6i">
+                <b>Facebook lifts ban on breastfeeding photos</b>
+            </p>
+            <p class="mbn-text">
+                In early 2013, Facebook released a statement agreeing that breastfeeding is 'natural and beautiful' and lifted its ban on breastfeeding photos, which were previously rated as inappropriate because of nudity.
+            </p>
+            <p>
+                <img src="images/1.1.6i Facebook lifts ban.png" class="mbn-text-image" />
+            </p>
+            <br /><br /><br />
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

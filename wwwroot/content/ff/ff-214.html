@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/how-to-make-feed.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="2.1.4">How to make a feed from powdered formula</p>
+            <p class="mbn-text" id="2.1.4a">
+
+                Making up your baby's formula <i>correctly</i> is important for keeping your baby healthy and developing well but the 'correct' way depends on which formula you have. Therefore, it's always best to follow the manufacturer's specific instructions for how their formula should be made up, as written on the packet or tin. Take our quick <a href="tool://formula preparation quiz">formula preparation quiz</a> to double check you're making up formula correctly.
+            </p>
+            <p class="mbn-text">
+                In this section:
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('2.1.4b');">practicing good hygiene (and why it's so important)</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.4c');">bottled water and making up a feed</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.4d');">step-by-step guide for making up a feed</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.4e');">Warming a feed</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.4g');">storing made up formula</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.4h');">Important tips</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="2.1.4b">
+                Preparation and hygiene
+            </p>
+            <p class="mbn-text">
+                Your baby's immune system is still developing so tummy upsets and other infections can easily happen. As such, it is important to practice good hygiene when making up a feed.
+            </p>
+            <p class="mbn-text">
+                To reduce the risk of bacteria in a bottle, it's always a good idea to make up each feed <i>just</i> as your baby needs it.
+            </p>
+            <p class="mbn-text">
+                Always use cooled freshly boiled water and follow the instructions provided on the label of the formula. Formulas come with different scoop <a onclick="localSecJump('2.1.4j');">sizes</a>, so make sure you always use the correct one.
+            </p>
+            <p class="mbn-text">
+                Use any prepared formula immediately or <a onclick="localSecJump('2.1.4g');">store it correctly and use within the right timeframe</a>.
+            </p>
+
+            <p class="mbn-section" id="2.1.4c">
+                Can bottled water be used?
+            </p>
+            <p class="mbn-text">
+                Unopened bottled still water (not sparkling mineral water or soda water) can be used to prepare formula.
+            </p>
+            <p class="mbn-text">
+                Freshly boiled and cooled water is best (and far cheaper!) but bottled water can be helpful if you're <a onclick="localSecJump('ff-217.html#2.1.7');">out and about</a> and haven't brought freshly boiled and cooled water with you.
+            </p>
+
+            <p class="mbn-section" id="2.1.4d">
+                Step-by-step guide
+            </p>
+            <p class="mbn-text">
+                Different manufacturers will provide different instructions on how their formula should be made up, so it is really important to always follow the specific instructions on the packet or tin (and use the scoop that came with that formula). Take our quick <a href="tool:formula preparation quiz">formula preparation quiz</a> to double check you're making up formula correctly.
+            </p>
+            <p class="mbn-text">
+                The below steps are a general guide to preparing a feed from powdered formula:
+            </p>
+            <ul>
+                <li class="mbn-ol"><b>Fill the kettle</b> with at least 1L of fresh tap water from the cold tap (never use water that has been boiled before).
+                </li>
+                <li class="mbn-ol"><b>Boil the water</b> then leave the water to cool until lukewarm.
+                </li>
+                <li class="mbn-ol"><b>Wash your hands</b> well with soap and water (antiseptic rubs don't always kill all the germs).
+                </li>
+                <li class="mbn-ol"><b>Clean the bench</b> or work surface where you will put together the bottle and teat with hot, soapy water.
+                </li>
+                <li class="mbn-ol"><b>Shake off any excess solution</b> from the bottle and the teat (if you are using a chemical steriliser) or rinse the bottle with cooled boiled water from the kettle (not the tap) if using a different method.
+                </li>
+                <li class="mbn-ol"><b>Stand sterilised bottle</b> on a clean surface but avoid putting the teat and cap on the work surface (keep on the upturned lid of the steriliser).
+                </li>
+                <li class="mbn-ol"><b>Pour the correct amount of water into the bottle according to the manufacturer's instructions</b>, then double check that the water level is correct.
+                </li>
+                <li class="mbn-ol"><b>Fill the scoop <a onclick="localSecJump('2.1.4i');"><i>loosely</i></a> according to the manufacturer's instructions</b> then level off the scoop either the flat edge of a clean, dry knife or the leveller provided.
+                </li>
+                <li class="mbn-ol"><b>Add the scoop of formula</b> into the bottle.
+                </li>
+                <li class="mbn-ol"><b>Keep the scoop in the tin and do not wash</b> the scoop as this can add moisture.
+                </li>
+                <li class="mbn-ol"><b>Put the teat on the bottle</b> holding the edge to keep it clean, then screw the retaining ring onto the bottle.
+                </li>
+                <li class="mbn-ol"><b>Place the cap over the teat</b> and shake the bottle until all of the powder has dissolved.
+                </li>
+                <li class="mbn-ol"><b>Cool or warm the formula</b> if needed by holding the bottom half of the bottle under cold or warm running water and moving it about under the tap (make sure the water does not touch the cap covering the teat).
+                </li>
+                <li class="mbn-ol"><b>Test the temperature</b> of the formula on the inside of your wrist before giving it to your baby - it should feel warm or cool, but not hot.
+                </li>
+                <li class="mbn-ol"><b>Throw away any made up formula</b> left after a feed.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="2.1.4e">
+                Video: Bottle and formula preparation
+            </p>
+            <p class="mbn-text">
+                This video shows how to prepare baby formula and bottles.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ONKHPAagJjk" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/nutrition/newborns_nutrition.html" target="_blank">raisingchildren.net.au.</a>
+            </p>
+
+            <p class="mbn-section" id="2.1.4f">
+                Warming a feed
+            </p>
+            <p class="mbn-text">
+                Your baby's feed doesn't <i>need</i> to be warmed. You might actually find it easier to get your baby used to formula at room temperature so that when <a onclick="localSecJump('ff-217.html#2.1.7');">you're out</a>, you don't have to bother warming the bottle.
+            </p>
+            <p class="mbn-text">
+                If you decide to warm the feed, when you are ready to use it, place the bottle in a container of warm water to heat it up. Test the feed on the inside of your wrist before giving it to your baby - it should feel warm or cool, but not hot.
+            </p>
+            <p class="mbn-text">
+                <i>Never</i> heat formula in a microwave - this can cause uneven heating which may cause 'hot spots' that could burn your baby's mouth or tongue.
+            </p>
+
+            <p class="mbn-section" id="2.1.4g">
+                Storing a feed
+            </p>
+            <p class="mbn-text">
+                It is best if a feed is made up just before your baby needs it. However, if you need to store a feed for future use, there are some guidelines you should follow to reduce the risk of your baby developing a tummy upset or other infection.
+            </p>
+            <p class="mbn-text">
+                How to store made up formula (that you haven't yet offered to your baby):
+            </p>
+            <ul>
+                <li><i><u>Refrigerator:</u></i>place on the top shelf at the back of the fridge (where it is coldest) no longer than 1 hour after making but throw away after 24 hours.
+                </li>
+                <li><i><u>Cool bag with ice pack:</u></i> throw away after 2 hours (as cool bags don't always keep foods chilled properly).
+                </li>
+                <li><i><u>Room temperature:</u></i> throw away after 1 hour.
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                If there is formula left in the bottle after a feed, don't store it, throw it away!
+            </p>
+            <p class="mbn-text">
+                Bacteria multiply very quickly at room temperature and can still survive and grow inside the fridge (although more slowly). The risk of bacteria multiplying in your baby's bottle increases with the length of time a made up formula is stored, making it unsafe for them to drink.
+            </p>
+            <p class="mbn-text">
+                A good rule of thumb is: <i>if in doubt, throw it out!</i>
+            </p>
+
+            <p class="mbn-section" id="2.1.4h">
+                Important tips
+            </p>
+            <p class="mbn-text" id="2.1.4i">
+                <b>1. Fill the scoop <i>loosely</i> and level it off</b>
+                <br /> The formula powder should not be packed into the scoop tightly or heaped up over the top. Packing the scoop loosely and levelling it off ensures that your baby's formula will not be too concentrated for their small body to handle. If formula is made up too concentrated, it can cause your baby to develop 'osmotic diarrhoea'. This is when your baby's body tries to dilute the concentrated formula sitting in their gut by mixing in water that has been sucked out of other parts of their body, which can cause them to become dehydrated.
+            </p>
+            <p class="mbn-text">
+                If your baby's formula continues to be made up too concentrated (by continuing to add too much formula powder into the scoop), it can cause severe dehydration in your baby, which could lead to a rare but serious condition called 'hypernatraemic dehydration'. Sadly, it's quite common not to notice symptoms of this condition until your baby has neurological problems, which can be permanent.
+            </p>
+            <p class="mbn-text">
+                This is why it is so important to always loosely fill and then level off the formula powder in the scoop when making up a feed for your baby.
+            </p>
+
+            <p class="mbn-text" id="2.1.4j">
+                <b>2. Use the scoop that came with the formula you're using</b>
+                <br> Different brands use different size scoops. To make sure you are making up your baby's formula to the <a onclick="localSecJump('2.1.4i');">correct concentration</a>, always use the scoop that came with the tin or packet of formula you're using. Never alternate scoops with different formulas.
+            </p>
+
+            <p class="mbn-text" id="2.1.4k">
+                <b>3. Use the correct amount of formula powder</b>
+                <br>
+                <u>More formula powder</u> than the instructions advise can be dangerous and will not help with:
+                <ul>
+                    <li><a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">growth</a>
+                    </li>
+                    <li><a onclick="localSecJump('sfp/sfp-511.html#5.1.1');">sleep</a>
+                    </li>
+                    <li><a onclick="localSecJump('sfp/sfp-518.html#5.1.8');">settling</a>
+                    </li>
+                </ul>
+            </p>
+            <p class="mbn-text">
+                <u>Less formula powder</u> than the instructions advise will not give your baby enough nourishment to <a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">grow properly</a>.
+            </p>
+
+            <p class="mbn-text">
+                If your baby's formula continues to be made up too concentrated (by continuing to add too much formula powder into the scoop), it can cause severe dehydration in your baby, which could lead to a rare but serious condition called 'hypernatraemic dehydration'. Sadly, it's quite common not to notice symptoms of this condition until your baby has neurological problems, which can be permanent.
+            </p>
+            <p class="mbn-text">
+                This is why it is so important to always loosely fill and then level off the formula powder in the scoop when making up a feed for your baby.
+            </p>
+
+            <p class="mbn-text" id="2.1.4l">
+                <b>4. Add water first, <i>then</i> the powdered formula</b>
+                <br> Adding the water to your baby's bottle <i>before</i> adding the formula powder lets you make sure your baby is getting the right amount of fluid and prevents <a onclick="localSecJump('2.1.4i');">over concentrating</a> the feed.
+            </p>
+            <p class="mbn-text">
+                See our <a onclick="localSecJump('2.1.4d');">step-by-step guide</a> to making up formula.
+            </p>
+
+            <p class="mbn-text" id="2.1.4m">
+                <b>5. Do not add anything <i>else</i> to the formula</b>
+                <br> Adding anything other than water and formula powder (e.g. chocolate powder, sugar, honey, cereal etc) is unsafe and can harm your baby.
+            </p>
+            <p class="mbn-text">
+                Always make up formula according to the manufacturer's instructions.
+            </p>
+
+            <p class="mbn-text" id="2.1.4n">
+                <b>6. Never use a microwave to heat a feed</b>
+                <br> Microwaving formula can cause uneven heating which may cause 'hot spots' that could burn your baby's mouth or tongue.
+            </p>
+            <p class="mbn-text">
+                Find out the best way to <a onclick="localSecJump('2.1.4f');">warm a feed</a>.
+            </p>
+
+            <p class="mbn-text" id="2.1.4o">
+                <b>7. Check the date</b>
+                <br> Make sure you only use formula that is still within its use by date.
+            </p>
+            <p class="mbn-text">
+                Once opened, powdered formula needs to be used within 30 days. Make it a habit to write the date on the formula tin when you open it for the first time so you don't forget!
+            </p>
+
+            <p class="mbn-text" id="2.1.4p">
+                <b>8. Make sure other carers know how to make up your baby's formula properly</b>
+                <br> Some ways you could do this include:
+                <ul>
+                    <li>showing them this app
+                    </li>
+                    <li>leaving written instructions
+                    </li>
+                    <li>prepare bottles in advance when your baby will be looked after by other carers
+                    </li>
+                </ul>
+            </p>
+            <br />
+            <br />
+            <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

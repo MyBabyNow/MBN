@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Need to localise this later on. -->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Already localised -->
+		<link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+		<link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+		<link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+		<!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+		<!-- Load the scripts but import jQuery before materialise.js -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../../js/materialize.min.js"></script>
+		<script type="text/javascript" src="../../js/mbn.js"></script>
+		<script type="text/javascript" src="../../js/header.js"></script>
+	</head>
+	<body>
+		<div class="mbn-logo">
+			<img src="../../images/logo.png" class="mbn-logo-style" />
+		</div>
+		<div class="navbar-fixed">
+			<nav class="mbn-nav">
+				<div class="nav-wrapper">
+					<a class="mbn-name">Flynn Now</a>
+					<i class="fa fa-search fa-2x mbn-search-style"></i>
+				</div>
+			</nav>
+		</div>
+		<!-- Two different display cards -->
+		<div class="card mbn-card" id="section-card">
+			<div class="card-image">
+				<img src="images/video-lib.jpeg" />
+				<span class="card-title mbn-card-title" id="section-title">
+				<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> For parents</span>
+				<i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+				<i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+				</span>
+			</div>
+		</div>
+		<div class="card mbn-card-fixed-content" id="section-card-min">
+			<span class="card-title mbn-card-title-content" id="section-title">
+			<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> For parents</span>
+			<i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+			<i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+			</span>
+		</div>
+		<!-- Content -->
+		<div class="mbn-content" id="section-content">
+			<div class="mbn-content-scroll" id="content">
+				<p class="mbn-section" id="7.1.7">Video library</p>
+				<p class="mbn-text" id="7.1.7a"> 
+                    <ul>
+                        <li>
+                            <a href="#7.1.7b">Dads' changing roles</a>
+                        </li>
+                        <li>
+                            <a href="#7.1.7c">How partners can help with newborns and babies</a>
+                        </li>
+                        <li>
+                            <a href="#7.1.7d">Postnatal depression</a>
+                        </li>
+                        <li>
+                            <a href="#7.1.7e">Reflections</a>
+                        </li>
+                    </ul>
+				</p>
+				<p class="mbn-text" id="7.1.7b">
+					<b>Dads' changing roles</b>
+				</p>
+				<p class="mbn-text">
+					Dads talk about being stay-at-home dads, getting <a href="#Link to 7.1.6 For parents> Adjusting to life as a parent h">
+                    more involved in caring for their children</a> and share their experiences of being more involved in parenting than their own fathers were.
+				</p>
+				<div class="video-container">
+					<iframe  src="https://www.youtube.com/embed/k5i9VCSlvtM" frameborder="0"allowfullscreen></iframe>
+				</div>
+				<p class="mbn-text">
+					Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, 
+                    visit <a href="http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+				</p>
+				<p class="mbn-text" id="7.1.7c">
+					<b>How partners can help with newborns and babies</b>
+				</p>
+				<p class="mbn-text">
+					This video shows how partners can help care for their newborns and babies. They explain how they've been able to help and support
+                    their partners in the early months after birth.
+				<p>
+				<div class="video-container">
+					<iframe src="https://www.youtube.com/embed/5cD3lYa20AM" frameborder="0"allowfullscreen></iframe>
+				</div>
+				<p class="mbn-text">
+					Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information,
+                    visit <a href="http://http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+				</p>
+                <p class="mbn-text" id="7.1.7d">
+					<b>Postnatal depression</b>
+				</p>
+				<p class="mbn-text">
+					This video discusses how <a href="#7.1.2 For parents> Your feelings a">PND</a> can affect new parents, <a href="#7.1.2 For parents> Your feelings b">signs to watch out for</a> and <a href="#7.1.2 For parents> Your feelings e">how to cope</a>.
+				<p>
+				<div class="video-container">
+					<iframe src="https://www.youtube.com/embed/lm8LGRKtHq8" frameborder="0"allowfullscreen></iframe>
+				</div>
+				<p class="mbn-text">
+					Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, 
+                    visit <a href="http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+				</p>
+				<p class="mbn-text" id="7.1.7e">
+					<b>Reflections</b>
+				</p>
+				<p class="mbn-text">
+					Parenting is <a href="#7.1.6 For parents> Adjusting to life as a parent">not always going to be easy</a> but it will be worth 
+                    it - see how other parents reflect on the challenges, achievements, positives and negatives of being a parent.
+				<p>
+				<div class="video-container">
+					<iframe  src="https://www.youtube.com/embed/LYHnSghCDAk" frameborder="0"allowfullscreen></iframe>
+				</div>
+				<p class="mbn-text">
+					Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, 
+                    visit <a href="http://raisingchildren.net.au/articles/what_is_postnatal_depression_-_panda.html/context/305">raisingchildren.net.au</a>.
+				</p>
+				<p>
+					<br />
+					<br />
+					<br />
+				</p>
+			</div>
+		</div>
+		<div class="navbar-fixed mbn-footer hide-on-med-and-up">
+			<nav class="mbn-nav">
+				<div class="nav-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col mbn-icon" onclick="Load('feed');">
+								<p>
+									<img src="../../images/feed.png" style="width:30%;" />
+									<br />
+									<span class="mbn-icon-text">My baby</span>
+								</p>
+							</div>
+							<div class="col mbn-icon" onclick="Load('topics');">
+								<p class="mbn-icon-selected">
+									<img src="../../images/topics-s.png" style="width:30%;" />
+									<br />
+									<span class="mbn-icon-text-selected">Topics</span>
+								</p>
+							</div>
+							<div class="col mbn-icon" onclick="Load('tools');">
+								<p>
+									<img src="../../images/tools.png" style="width:30%;" />
+									<br />
+									<span class="mbn-icon-text">Tools</span>
+								</p>
+							</div>
+							<div class="col mbn-icon" onclick="Load('forum');">
+								<p>
+									<img src="../../images/forum.png" style="width:30%;" />
+									<br />
+									<span class="mbn-icon-text">Forum</span>
+								</p>
+							</div>
+							<div class="col mbn-icon" onclick="Load('more');">
+								<p>
+									<img src="../../images/more.png" style="width:30%;" />
+									<br />
+									<span class="mbn-icon-text">More</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>

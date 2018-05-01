@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/milk-supply.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+				<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+			<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="3.1.3">Milk supply<span id="3.1.3a"></span></p>
+            
+            <p class="mbn-text">
+                Breastmilk is the normal food for babies. Many mums worry that they don't have enough milk but every time you breastfeed your baby (or <a onclick="localSecJump('bf/bf-1111.html#1.1.11');">express milk</a>), messages between your brain and breasts signal your body to make more milk to build up your <a onclick="localSecJump('bf/bf-113.html#1.1.3');">milk supply</a>.
+            </p>
+            <p class="mbn-text">
+                <b>More feeding = more signals = more milk</b>
+                <img src="images/demand-supply.png" width="100%">
+            </p>
+            <p class="mbn-text">
+                It usually takes from birth to 6 weeks to establish your milk supply. By then, your body should be used to making milk for your baby and you will find your breasts start to feel softer and less full than they used to. This is normal and does not mean your milk supply is reducing, it just means your breasts are getting good at giving milk on demand!
+                <br /> See more here on how to:
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('bf/bf-113.html#1.1.3i');">increase your milk supply</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('Link to milk supply quiz');">check if you might have low milk supply</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('bf/bf-1111.html#1.1.11');">express and store breastmilk</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Remember:
+            </p>
+            <ul>
+                <li>babies that are <a onclick="localSecJump('bf/bf-114.html#1.1.4g');">attached on properly</a> get very good at removing all milk from your breasts
+                </li>
+                <li><a onclick="localSecJump('bf/bf-1111.html#1.1.11');">expressing</a> to try to 'measure' how much milk you make doesn't really work as your baby is better at getting out your milk than your hand or a <a onclick="localSecJump('bf/bf-117.html#1.1.17h');">breast pump</a>
+                </li>
+                <li>feeding your baby whenever they are <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">hungry</a> is the best way to keep up your <a onclick="localSecJump('bf/bf-113.html#1.1.3');">milk supply</a>
+                </li>
+                <li>feeding less from your breasts means your body will make less milk (even if it's just one feed)
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="3.1.3b">
+                This video answers common questions about breastfeeding. A <a onclick="localSecJump('bf/bf-119.html#1.1.9j');">lactation consultant</a> says most mums can make plenty of milk for their baby. She talks about typical weight gain, and how to know whether your baby is getting enough milk. She talks about changes in the amount of milk you produce in the weeks after birth and whether you need to <a onclick="localSecJump('bf/bf-1111.html#1.1.11');">express milk</a>.
+            </p>
+            <p class="mbn-video">
+                Video: Is my baby getting enough milk?
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/f5ci3cDPYNk" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-text">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/supplementing_breastfeeding.html/context/231">raisingchildren.net.au</a>.
+            </p>
+            <p>
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

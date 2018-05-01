@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/ff-overview.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-video" id="2.1.1">Formula feeding: an overview</p>
+            <p class="mbn-section" id="2.1.1a">
+                What is formula?
+            </p>
+            <p>
+                For babies under 12 months, formula is the only suitable and safe alternative to breastmilk. Take our <a href="tool://bottle feeding quiz">bottle feeding quiz</a> and <a href="tool://formula preparation quiz">formula preparation quiz</a> to check you have got the basics of bottle feeding covered!
+            </p>
+            <p class="mbn-text">
+                Most formulas are based on cow's milk that has been modified to meet a baby's main nutritional needs. If a baby cannot take cow's milk based products for specific medical, cultural or religious reasons,special formulas might be used under medical supervision.
+            </p>
+            <p class="mbn-text">
+                Babies under 12 months of age <b>should not</b> have normal cow's milk or dairy alternatives such as soy, rice, almond or coconut milk. The make-up of these products can harm a baby's developing body.
+            </p>
+            <p class="mbn-text">
+                There are 2 main types of formula:
+            </p>
+            <ul>
+                <li> <i><a onclick="localSecJump('ff-212.html#2.1.2k');">ready to feed</a></i> liquid formula - this is sterile, which means that it has no germs or bacteria which could harm your baby
+                </li>
+                <li><i><a onclick="localSecJump('ff-212.html#2.1.2a');">powdered</a></i> formula - this is <b>not</b> sterile, meaning extra care needs to be taken when preparing it to prevent upsetting your baby's tummy
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="2.1.1b">
+                Which formula is right for my baby?
+            </p>
+            <p class="mbn-text">
+                One of these nutrients is protein. Formulas available in Australia can have protein ranging between 1.3-2.0g per 100mL of made up formula. By comparison breastmilk contains 1-1.1g of protein per 100ml. Research shows that it might be best to choose a formula with lower amounts of protein to ensure optimal long-term growth.
+            </p>
+            <p class="mbn-text">
+                You can compare the protein content of different formulas by:
+            </p>
+            <ul>
+                <li>finding the <i>Nutrition Information Panel</i> (a table) on the packet
+                </li>
+                <li>look for protein on the left hand column
+                </li>
+                <li>running your finger across to look at the amount of protein in the <b>'per 100mL of prepared formula'</b> column (see example below) - this lets you compare the amount of protein in different formulas
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Try to choose a formula <b>with the <i>lowest</i> amount of protein (closer to 1.3g per 100mL</b> prepared/made up formula).
+            </p>
+
+            <table>
+                <tr style="background-color: lightgrey;">
+                    <td colspan="2" style="text-align: right;"><b>Average Quantity per 100mL<br />of Prepared Formula</b></td>
+                </tr>
+                <tr>
+                    <td style="padding: 3pt;">Energy</td>
+                    <td style="padding: 3pt;">284 kj</td>
+                </tr>
+                <tr style="background-color: lightgrey;">
+                    <td style="padding: 3pt;">Protein</td>
+                    <td style="padding: 3pt;"><b>1.54g</b></td>
+                </tr>
+                <tr>
+                    <td style="padding: 3pt;">Fat</td>
+                    <td style="padding: 3pt;">3.70g</td>
+                </tr>
+                <tr style="background-color: lightgrey;">
+                    <td style="padding: 3pt;">&nbsp;&nbsp;&nbsp;Linoleic Acid</td>
+                    <td style="padding: 3pt;">0.55g</td>
+                </tr>
+                <tr>
+                    <td style="padding: 3pt;">&nbsp;&nbsp;&nbsp;alpha-linoleic Acid (ALA)</td>
+                    <td style="padding: 3pt;">70.0 mg</td>
+                </tr>
+                <tr style="background-color: lightgrey;">
+                    <td style="padding: 3pt;">&nbsp;&nbsp;&nbsp;Docosahexaenoic Acide (DHA)</td>
+                    <td style="padding: 3pt;">7.92 mg</td>
+                </tr>
+                <tr>
+                    <td style="padding: 3pt;">&nbsp;&nbsp;&nbsp;Arachidonic Acide (ARA)</td>
+                    <td style="padding: 3pt;">7.92 mg</td>
+                </tr>
+                <tr style="background-color: lightgrey;">
+                    <td style="padding: 3pt;">Carbohydrate</td>
+                    <td style="padding: 3pt;">6.82 mg</td>
+                </tr>
+            </table>
+
+            <p class="mbn-text">
+                You might also notice that many formulas have special claims displayed on the packaging. In most cases, these claims usually have very little or even no evidence that they actually make the quality of the formula any better, so it's best to ignore these sorts of claims.
+            </p>
+            <p class="mbn-text">
+                It is recommended that you choose your baby's formula based on:
+            </p>
+            <ul>
+                <li>your baby's needs
+                </li>
+                <p class="mbn-text">
+                    <b>and</b>
+                </p>
+                <li>the protein content (see above)
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                For healthy full-term babies, there is little evidence to say that one formula is better than another is. However, just keep in mind that there <i>are</i> some formulas available to buy that are <b>not</b> recommended without first consulting your GP or your <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a>.
+            </p>
+            <p class="mbn-text">
+                So unless your GP or maternal and child health nurse advises you otherwise, the only type of formula your baby will need until they are 12 months old is <a onclick="localSecJump('ff-212.html#2.1.2b');">starter or first formula</a> (sometimes labelled step 1 or stage 1 or from birth). Research has shown no advantages to using <a onclick="localSecJump('ff-212.html#2.1.2c');">follow-on formula (or stage/step 2)</a> for babies aged 6-12 months and it is not necessary. Follow-on or step 2 formulas tend to have higher amounts of protein than your baby needs. So for optimal growth stick with starter or first formula and choose one with a lower amount of protein.
+            </p>
+            <p class="mbn-text">
+                Once your baby has reached 12 months, they can then have regular full cream cow's milk. Most healthy toddlers do not need <a onclick="localSecJump('ff-212.html#2.1.2d');">formula, stage 3 formulas or toddler milk</a>.
+            </p>
+            <p class="mbn-text">
+                Find out more about <a onclick="localSecJump('ff-212.html#2.1.2a');">different types of formula</a>.
+            </p>
+
+
+            <p class="mbn-section" id="2.1.1c">
+                Switching between formula
+            </p>
+            <p class="mbn-text">
+                If you think a particular brand of formula is disagreeing with your baby speak to your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> <i>before</i> making any major changes. Many things can cause your baby to be unsettled or fussy and the formula may not be the problem.
+            </p>
+            <p class="mbn-text">
+                You might also like to try:
+            </p>
+            <ul>
+                <li>different strategies for managing <a onclick="localSecJump('sfp/sfp-518.html#5.1.8');">crying and settling</a> your baby
+                </li>
+                <li>being extra careful you are following good <a onclick="localSecJump('ff-214.html#2.1.4b');">hygiene and preparation</a>
+                </li>
+                <li>if you are also <a onclick="localSecJump('bf/bf-111.html#1.1.1a');">breastfeeding</a> your baby, have a look at our <a onclick="localSecJump('mf/mf-311.html#3.1.1a');">mixed feeding section</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                If you still feel unsure, speak to your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> for advice.
+            </p>
+
+            <p class="mbn-section" id="2.1.1d">
+                Equipment needed for formula feeding
+            </p>
+
+            <p class="mbn-text">
+                Bottles with teats and teat covers
+            </p>
+            <p>
+                <img src="images/Bottles with teats and teat covers.png" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text">
+                Bottle brush and teat brush
+            </p>
+            <p>
+                <img src="images/Bottle brush.png" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text">
+                Formula powder and scoop
+            </p>
+            <p>
+                <img src="images/Formula powder.png" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text">
+                Sterilising equipment (chemical steriliser, microwave / steam steriliser, or stovetop and pan)
+            </p>
+            <p>
+                <img src="images/Sterilising equipment.png" class="mbn-text-image" />
+            </p>
+            <p>
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

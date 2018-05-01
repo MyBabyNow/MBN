@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/breakfast.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="6.2.1">Breakfast</p>
+            <p class="mbn-text" id="6.2.1a">
+                Although listed as 'breakfast' foods, your baby will probably be happy with any of the below at any meal time!
+            </p>
+            <p class="mbn-section">Breakfast</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('6.2.1b');">Banana oat porridge</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.2.1c');">Banana rice porridge</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.2.1d');">Bircher muesli</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.2.1e');">Eggy bread</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.2.1f');">Fruit mush</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.2.1g');">Fruit mush and yoghurt</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.2.1h');">Super porridge</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.2.1i');">Tasty spinach scramble</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.2.1j');">Vegemite toast</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.2.1k');">Veggie omelette</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.2.1b">Banana oat porridge</p>
+            <p class="mbn-text">
+                <img src="images/Banana oat porridge.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> formula fed babies or when your baby is 12 months or older because it can be made with cow's milk<br />
+                <b>Storage: </b> in the fridge for up to 3 days, covered<br />
+                <b>Note:</b> if you don't have bananas, make cinnamon oats by adding another pinch of cinnamon instead<br />
+            </p>
+            <p class="mbn-text">
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac12; cup 'quick cook' porridge oats
+                </li>
+                <li> 1 cup cow's milk or made up formula
+                </li>
+                <li> 1 small banana (sliced)
+                </li>
+                <li> 1 pinch ground cinnamon
+                </li>
+            </ul>
+
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li style="list-style-type: decimal !important;">
+                    <i>Stovetop</i>: place the oats, milk and sliced banana in a pot and bring to the boil, stirring occasionally, then reduce heat and simmer for 2-4 minutes.
+
+                    <br />
+                    <b>OR</b>
+                    <br />
+                    <i>Microwave</i>: place the oats, milk and sliced banana in microwave safe bowl, cover with lid or plastic wrap (pierced) and cook on high power for 1 minute then a further 4 minutes on medium power.
+                </li>
+                <li style="list-style-type: decimal !important;">
+                    Cook for longer or add more water/milk to adjust the consistency as needed.
+                </li>
+                <li style="list-style-type: decimal !important;">
+                    Remove from the heat or microwave and add cinnamon, stirring well.
+                </li>
+                <li style="list-style-type: decimal !important;">
+                    Once cooled, serve.
+                </li>
+                <li style="list-style-type: decimal !important;">
+                    Any unused porridge can be covered and refrigerated for up to 3 days.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.2.1c">Banana rice porridge</p>
+            <p class="mbn-text">
+                <img src="images/Banana rice porridge.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> introducing solids<br />
+                <b>Storage:</b> in the fridge for up to 2 days, covered<br />
+                <b>Note:</b> super easy and bound to be a favourite with your baby<br />
+            </p>
+            <p class="mbn-text">
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li>
+                    1 small ripe banana
+                </li>
+                <li>
+                    1-2 teaspoons baby rice cereal
+                </li>
+                <li>
+                    2 tablespoons your baby's usual milk (breast/made up formula milk)
+                </li>
+            </ul>
+
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol">
+                    Mash the banana well.
+                </li>
+                <li class="mbn-ol">
+                    Mix the rice and milk, and stir into the banana.
+                </li>
+                <li class="mbn-ol">
+                    Adjust the texture with more milk or rice to make a runnier or firmer pur&eacute;e.
+                </li>
+                <li class="mbn-ol">
+                    Any unused porridge can be covered and refrigerated for up to 2 days.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.2.1d">Bircher muesli</p>
+            <p class="mbn-text">
+                <img src="images/Bircher muesli.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> in the fridge for up to 2 days, covered
+            </p>
+            <p class="mbn-text">
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 2 tablespoons rolled oats
+                </li>
+                <li> 3 tablespoons cow's milk (or made up formula milk)
+                </li>
+                <li> 3 tablespoons water
+                </li>
+                <li> 1 tablespoon unsweetened plain natural yoghurt
+                </li>
+                <li> &frac12; cup finely chopped dried fruit (e.g. apricots, dates and sultanas)
+                </li>
+                <li> 1 small pear or apple
+                </li>
+            </ul>
+
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Mix everything together (except the pear or apple).
+                </li>
+                <li class="mbn-ol"> Cover and refrigerate overnight.
+                </li>
+                <li class="mbn-ol"> Before serving, grate the pear or apple (skin on) and stir into the oat mixture.
+                </li>
+                <li class="mbn-ol"> Serve cold in summer or gently warm for winter.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b>
+                <br /> Follow the same method but use the following amounts per adult:
+            </p>
+            <ul>
+                <li> &frac13; cup oats
+                </li>
+                <li> &frac12; cup milk (your usual)
+                </li>
+                <li> &frac14; cup unsweetened plain natural yoghurt
+                </li>
+                <li> &frac12; cup water
+                </li>
+                <li> &frac14; cup dried fruit
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.2.1e">Eggy bread</p>
+            <p class="mbn-text">
+                <img src="images/Eggy Bread.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> breakfast finger food <br/>
+                <b>Note:</b> a real favourite with babies but always cook eggs well<br/>
+                <br/>
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 slice soft wholemeal bread
+                </li>
+                <li> 1 egg (beaten)
+                </li>
+                <li> 1 teaspoon canola or olive oil margarine
+                </li>
+            </ul>
+
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Heat margarine in a frying pan.
+                </li>
+                <li class="mbn-ol"> Dip the bread in the egg - coat both sides well.
+                </li>
+                <li class="mbn-ol"> Place bread in the pan and fry until golden brown on both sides.
+                </li>
+                <li class="mbn-ol"> Remove from the heat and drain excess margarine on paper towel.
+                </li>
+                <li class="mbn-ol"> Cut into fingers and cool before serving with small chunks of tomato or banana.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.2.1f">Fruit mush</p>
+            <p class="mbn-text">
+                <img src="images/Fruit mush.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> great first food and dessert, for young and old<br />
+                <b>Storage: </b> freeze or keep in the fridge for up to 3 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 handful washed chopped fresh fruit (e.g. apple, pear, peach, apricot (stones removed)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Wash, core and dice fresh fruit.
+                </li>
+                <li class="mbn-ol">
+                    <i>Stovetop:</i> place fruit in a small pot with just enough water to cover bottom of pot and cook for 10-15 minutes until soft.
+
+                    <br />
+                    <b>OR</b>
+                    <br />
+                    <i>Microwave: </i> place fruit in a microwave safe bowl, cover with lid or plastic wrap (no need to add water) and cook for 2-3 minutes until soft.
+                </li>
+                <li class="mbn-ol">
+                    Press fruit through a strainer or pur&eacutee in blender.
+                </li>
+                <li class="mbn-ol">
+                    Once cooled, serve.
+                </li>
+                <li class="mbn-ol">
+                    Any unused porridge can be covered and refrigerated for up to 3 days.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.2.1g">Fruit mush and yoghurt</p>
+            <p class="mbn-text">
+                <img src="images/Fruit mush and yoghurt.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> breakfast or dessert for the whole family<br />
+                <b>Storage:</b> in the fridge for up to 2 days, covered<br />
+                <b>Note:</b> adjust the texture of the fruit for your baby's age and use chopped up whole fruit for adults<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac12; cup <a onclick="localSecJump('6.2.1f');"><u>Fruit mush</u></a>
+                </li>
+                <li> &frac12; cup unsweetened plain natural yoghurt
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Combine Fruit mush with yoghurt.
+                </li>
+                <li class="mbn-ol"> Add 'lumps' of softened fruit if you need a lumpy consistency.
+                </li>
+                <li class="mbn-ol"> Use or cover and refrigerate for up to 2 days.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.2.1h">Super porridge (wholegrain baby cereal)</p>
+            <p class="mbn-text">
+                <img src="images/Whole grain baby cereal.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> any meal time<br />
+                <b>Storage: </b> use straight away and throw away any unused porridge, do not store - it is generally best not to reheat cooked rice<br />
+                <b>Note:</b> add some vegetables and meat/fish for a balanced meal<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac14; cup brown rice
+                </li>
+                <li> &frac14; cup dried red lentils
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Cook rice in water according to instructions on the packet and until it is soft then drain well.
+                </li>
+                <li class="mbn-ol"> Wash the lentils well.
+                </li>
+                <li class="mbn-ol"> Cook the lentils in 1 cup of water - bring to the boil then simmer until it looks like soup (add more water or simmer for longer as required).
+                </li>
+                <li class="mbn-ol"> Mix with rice.
+                </li>
+                <li class="mbn-ol"> Once cool enough, serve.
+                </li>
+                <li class="mbn-ol"> For younger babies, pur&eacute;e the mixed rice and lentils in blender with a little water or their usual milk (breastmilk/made up formula) until smooth.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.2.1i">Tasty spinach scramble</p>
+            <p class="mbn-text">
+                <img src="images/Tasty spinach scramble.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> the whole family<br />
+                <b>Note:</b> always cook eggs well<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 egg (beaten)
+                </li>
+                <li> 1 teaspoon canola or olive oil
+                </li>
+                <li> 1 tablespoon onion (finely chopped)
+                </li>
+                <li> &frac14; cup frozen spinach (defrosted)
+                </li>
+                <li> 2 tablespoons unsweetened plain natural yoghurt
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Heat oil in a small frying pan.
+                </li>
+                <li class="mbn-ol"> Fry the onion for a few minutes or until tender.
+                </li>
+                <li class="mbn-ol"> Mix the beaten egg with yoghurt and spinach.
+                </li>
+                <li class="mbn-ol"> Pour the egg mixture into the pan and cook for a few minutes, stirring until the egg is cooked through.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br/> Follow the same method but allow per adult:
+            </p>
+            <ul>
+                <li> 1 &frac12; eggs
+                </li>
+                <li> 2 tablespoons chopped onion
+                </li>
+                <li> &frac12; cup spinach
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.2.1j">Vegemite toast</p>
+            <p class="mbn-text">
+                <img src="images/Vegemite toast.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> breakfast finger food<br />
+                <b>Storage: </b> in the fridge for up to 1 day, covered<br />
+                <b>Note:</b> Vegemite is high in vitamin B and is an Aussie favourite but it is also high in salt so it should always be spread thinly and we shouldn't eat it very often - babies included.<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 slice wholemeal bread
+                </li>
+                <li> a 'smear' of canola or olive oil margarine (if desired)
+                </li>
+                <li> &frac12; teaspoon Vegemite
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Lightly toast bread.
+                </li>
+                <li class="mbn-ol"> Spread with margarine (if using) and Vegemite.
+                </li>
+                <li class="mbn-ol"> Cut into 'soldiers' (long strips of toast).
+                </li>
+                <li class="mbn-ol"> Serve.
+                </li>
+                <li class="mbn-ol"> Any untouched toast can be offered later in the day as a snack.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.2.1k">Veggie omelette</p>
+            <p class="mbn-text">
+                <img src="images/Veggie Omelette.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> any meal time as well as breakfast; the whole family
+                <br />
+                <b>Note:</b> always cook eggs well<br/>
+                <br/>
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 egg (beaten)
+                </li>
+                <li> a splash water
+                </li>
+                <li> handful cooked mushrooms or frozen vegetables (leftovers are perfect)
+                </li>
+                <li> handful grated cheese (optional)
+                </li>
+                <li> pinch dried mixed herbs (optional)
+                </li>
+                <li> 1 teaspoon canola or olive oil margarine
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Melt margarine in a frying pan on medium heat.
+                </li>
+                <li class="mbn-ol"> Beat water and egg with herbs (if using).
+                </li>
+                <li class="mbn-ol"> Add egg mix to hot pan.
+                </li>
+                <li class="mbn-ol"> Cook the egg mix until the bottom has set on the pan.
+                </li>
+                <li class="mbn-ol"> Add the vegetables and sprinkle cheese (if using) over the top.
+                </li>
+                <li class="mbn-ol"> Finish cooking by placing pan under a hot grill for a few seconds if required to cook the egg all the way through (so there are no clear bits of egg).
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br/> Follow the same method but allow per adult:
+            </p>
+            <ul>
+                <li> 1-1&frac12; eggs
+                </li>
+                <b>AND</b> for every extra adult:
+                <br />
+                <br />
+                <li> double the amount of water and vegetables
+                </li>
+            </ul>
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

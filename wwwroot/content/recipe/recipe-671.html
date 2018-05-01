@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/videolib.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="6.7.1">Video library<span id="6.7.1a"></span></p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('6.7.1b');">Chicken Bolognese</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.7.1c');">Cooking gadgets</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.7.1d');">Finger food ideas</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.7.1e');">Fish patties</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.7.1f');">Making pur&eacute;ed meat</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.7.1g');">Preparing fruit and vegetables</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.7.1h');">Preparing lumpy meat</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.7.1i');">Pumpkin, carrot and parsnip soup</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.7.1j');">Rainbow chips</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.7.1k');">Vegetable stir-fry (Meat optional)</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.7.1l');">How to turn an adult meal into a baby meal</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.7.1b">Chicken Bolognese</p>
+            <p class="mbn-text">
+                See first-hand how to make this family favourite. See <a onclick="localSecJump('recipe-641.html#6.4.1e');"><u>recipe</u></a> for ingredients.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/eEbv51TXa0U" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Adapted from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org">infantprogram.org</a></i>.
+            </p>
+
+            <p class="mbn-section" id="6.7.1c">Cooking gadgets</p>
+            <p class="mbn-text">
+                A few handy kitchen utensils to make preparing food easier.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/qmr4eDFDm0g" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1d">Finger food ideas</p>
+            <p class="mbn-text">
+                So many different foods can be introduced as finger foods - here are a few ideas! See <a onclick="localSecJump('recipe-651.html#6.5.1e');"> <u>recipe</u></a> for ingredients.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/7kHEjKGYSQQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1e">Fish patties</p>
+            <p class="mbn-text">
+                A tasty and easy recipe for nutritious fish! See <a onclick="localSecJump('recipe-641.html#6.4.1h');"><u>recipe</u></a> for ingredients.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/KMlIUVu_-9E" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1f">Making pur&eacute;ed meat</p>
+            <p class="mbn-text">
+                How to turn meat into a pur&eacute;e for your baby
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/56M-uO7MJfQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1g">Preparing fruit and vegetables</p>
+            <p class="mbn-text">
+                How to prepare different fruits and vegetables for your baby.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/bUMwvQP8ics" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1h">Preparing lumpy meat</p>
+            <p class="mbn-text">
+                How to prepare lumpy meat for your baby.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/m3jqssr7HgI" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1i">Pumpkin, carrot and parsnip soup</p>
+            <p class="mbn-text">
+                The perfect warm hug on cold day.
+                <br /> See <a onclick="localSecJump('recipe-641.html#6.4.1l');"> <u>recipe</u></a> for ingredients.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed//iJfrC51nqZI" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1j">Rainbow chips</p>
+            <p class="mbn-text">
+                Love chips but want to make them healthier? Try these! See <a onclick="localSecJump('recipe-641.html#6.4.1m');">recipe</a> for ingredients.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/EtNuVpHXBf8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1k">Vegetable stir-fry (meat optional)</p>
+            <p class="mbn-text">
+                Do you need to use up all your extra veggies from the week? Try this stir-fry. See <a onclick="localSecJump('recipe-641.html#6.4.1c');"> recipe</a> for ingredients.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/JJ3ZyF4K498" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1l">How to turn an adult meal into a baby meal</p>
+            <p class="mbn-section">Beef and vegetable skewers</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/eOf65xIMjZ8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from <a href="http://www.beefandlamb.com.au/Home/" target="_blank">BeefandLamb.com.au</a> the home of beef and lamb for Australians.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1m">Beef casserole</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/2rAwuL4t-9I" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from <a href="http://www.beefandlamb.com.au/Home/" target="_blank">BeefandLamb.com.au</a> the home of beef and lamb for Australians.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1n">Lamb and veggie</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/0i02tx3RBwY" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                <i>Sourced from <a href="http://www.beefandlamb.com.au/Home/" target="_blank">BeefandLamb.com.au</a> the home of beef and lamb for Australians.</i>
+            </p>
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

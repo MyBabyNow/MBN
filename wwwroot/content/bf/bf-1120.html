@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/video-library.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.20" Breastfeeding>Video library</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('1.1.20b');">Bonding for dads</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.20c');">Breastfeeding and baby-led attachment</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.20d');">Breastfeeding - getting support</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.20e');">Breastfeeding - why it's good</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.20f');">Common breastfeeding questions</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.20g');">Getting a good attachment</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.20h');">How to breastfeed - breastfeeding positions</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.20b">
+                <b>Bonding for dads</b>
+                <br> This video shows dads bonding with their newborn babies. It explains how eye contact, cuddling, talking and smiling strengthen the bond with your baby and help your baby to <a onclick="localSecJump('Link to Play section');">grow and develop</a>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/2o2Olgz-4Fw" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/dads_baby_care.html" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+
+            <p class="mbn-text" id="1.1.20c">
+                <b>Breastfeeding and baby-led attachment</b>
+                <br> This video is shows you how to use <a onclick="localSecJump('bf-114.html#1.1.4h');">baby-led attachment</a> when breastfeeding.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/SIfV_Gr5CXQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/baby-led_attachment_video.html/context/1645" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+
+            <p class="mbn-text" id="1.1.20d">
+                <b>Breastfeeding - getting support</b>
+                <br> In this video a counsellor and <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> explains that if you're having problems with breastfeeding, <a onclick="localSecJump('bf-119.html#1.1.9g');">get support</a> early.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/o5hKlTCz0C0" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/mastitis_blocked_milk_ducts.html" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+
+            <p class="mbn-text" id="1.1.20e">
+                <b>Breastfeeding - why it's good</b>
+                <br> This video is about breastfeeding and your baby's health and development. It shows mums breastfeeding and why breastfeeding is good for both you and your baby.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/HvkCMmRCts4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/about_breastmilk.html/context/204" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+            <p class="mbn-text" id="1.1.20f">
+                <b>Common breastfeeding questions</b>
+            </p>
+            <p class="mbn-text">
+                <b>Enough milk, too much milk, expressing</b>
+                <br> A <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> says most mums can make plenty of milk for their baby. She talks about typical weight gain, and how to know whether your baby is getting enough milk. She talks about changes in the amount of milk you produce in the weeks after birth and whether you need to <a onclick="localSecJump('bf-1111.html');">express milk</a>.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/f5ci3cDPYNk" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/breastfeeding_questions_supply_video.html/context/1645" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+            <p class="mbn-text">
+                <b>How often, how long, waking baby</b>
+                <br> A <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> says that as long as your baby is getting enough milk, it doesn't matter how long or how often your baby feeds.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/f5ci3cDPYNk" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/breastfeeding_questions_supply_video.html/context/1645" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+
+            <p class="mbn-text" id="1.1.20g">
+                <b>Getting a good attachment</b>
+                <br> This video on breastfeeding has tips for <a onclick="localSecJump('bf-114.html#1.1.4g');">good attachment</a> to help you get your baby feeding well.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/oN_dFzmTNWw" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/breastfeeding_techniques_article.html" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+
+            <p class="mbn-text" id="1.1.20h">
+                <b>How to breastfeed - breastfeeding positions</b>
+                <br> This video takes you through different <a onclick="localSecJump('bf-114.html#1.1.4a');">breastfeeding positions</a> to help you find a position that works for you and your baby.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/u8TW4X_XPic" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/breastfeeding_techniques_article.html" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+            <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

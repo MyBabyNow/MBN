@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/feeding-expressed-milk.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.12" Breastfeeding>Feeding with expressed breastmilk</p>
+            <p class="mbn-text" id="1.1.12a">
+                <b>Feeding your baby expressed milk from a bottle</b>
+            </p>
+            <p class="mbn-text">
+                Feeding your baby not only provides them with nourishment but also helps with bonding and <a onclick="localSecJump('play/play-91.html');">physical development</a>.
+            </p>
+            <p class="mbn-text">
+                The below steps are a guide to feeding your baby with a bottle:
+            </p>
+            <p class="mbn-text">
+                <b>Sit comfortably and hold your baby close,</b> looking into their eyes to help them feel safe, protected and loved.
+            </p>
+            <p class="mbn-text">
+                <b>Hold your baby upright,</b> with their head supported so that they can breathe and are able to swallow comfortably.
+            </p>
+            <p class="mbn-text">
+                <b>Brush the teat against your baby's lips</b> and when your baby's mouth opens wide, let them draw in the teat.
+            </p>
+            <p class="mbn-text">
+                <b>Hold the bottle horizontal to the ground,</b> tilting it just enough to ensure your baby is getting milk, not air, through the teat - you will see bubbles in the bottle as your baby feeds.
+            </p>
+            <p class="mbn-text">
+                <b>If you can't see any bubbles,</b> break the suction between your baby's tongue and the teat by moving the teat slightly to the side of their mouth until you can see bubbles.
+            </p>
+
+            <p class="mbn-text">
+                <b>If the teat becomes flattened</b> while you are feeding, pull gently on the corner of your baby's mouth to release the vacuum.
+            </p>
+            <p class="mbn-text">
+                <b>When your baby <a onclick="localSecJump('sfp/sfp-514.html');">does not want any more feed</a>,</b> hold them upright and gently rub or pat their back to <a onclick="localSecJump('sfp/sfp-519.html');">burp them</a> - there may not be much wind to bring up.
+            </p>
+
+            <p class="mbn-text" id="1.1.12b">
+                <b>Do not add cereal, cordial, tea, honey or flavourings</b> to a bottle. Doing so is unsafe and can cause several problems, including overfeeding your baby. If you are thinking about adding anything to your baby's bottles other than formula, speak with <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> or <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a> first.
+            </p>
+
+            <p class="mbn-text" id="1.1.12c">
+                <b>Tips:</b>
+            </p>
+            <ul>
+                <li>Babies feed in bursts of sucking with short pauses to rest and sometimes burp, so don't stress if your baby doesn't suck continuously.
+                </li>
+                <li>Interrupting the feed now and again lets your baby notice how 'full' they feel so they don't overfeed.
+                </li>
+                <li>Always hold your baby and never leave them unattended while feeding from a bottle. This includes never leaving them to fall asleep with a bottle - night or day.
+                </li>
+                <li>Never prop your baby up with the bottle - this can be a choking hazard, particularly if they fall asleep.
+                </li>
+                <li>Letting your baby drink from a bottle while lying down can increase the risk of ear infections and tooth decay.
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.12d">
+                <b>My baby hasn't finished the bottle. What now?</b>
+                <br> If your baby doesn't want to finish the bottle that's OK, they are probably just full. Read more on <a onclick="localSecJump('sfp/sfp-514.html');">hungry and fullness signs</a>.
+            </p>
+            <p class="mbn-text">
+                If your baby goes to sleep before they are full, try waking them up by putting them over your shoulder, rubbing their back, legs and tummy or by changing their nappy. Wait until your baby is properly awake before offering them more milk.
+            </p>
+
+            <p class="mbn-text" id="1.1.12e">
+                Tips:
+            </p>
+            <ul>
+                <li>Your baby will decide when <a onclick="localSecJump('sfp/sfp-514.html');">they are full</a> - this teaches them to trust their own body signals.
+                </li>
+                <li>Forcing your baby to finish all milk offered won't help your baby sleep or go longer between feeds and can make your baby sick or <a onclick="localSecJump('sfp/sfp-515.html');">put on too much weight</a>.
+                </li>
+            </ul>
+            <br /><br /><br />
+
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

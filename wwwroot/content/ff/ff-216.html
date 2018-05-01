@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/how-much.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-video" id="2.1.6">How much to feed and calculator</p>
+            <p class="mbn-section" id="2.1.6a">
+                How will I know if my baby is getting enough formula?
+            </p>
+            <p>
+                Your baby's <a onclick="localSecJump('2.1.6b');">weight gain</a> and the number of <a onclick="localSecJump('2.1.6c');">wet and dirty nappies</a> will help to tell you if your baby is getting enough formula.
+            </p>
+            <p class="mbn-text" id="2.1.6b">
+                <b>Weight</b>
+                <br /> Your <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> will keep track of and discuss the progress of your baby's weight.
+            </p>
+            <p class="mbn-text">
+                If you're worried about your baby's weight gain, you might find our section on <a onclick="localSecJump('sfp/sfp-515.html#5.1.5b');">growth charts and monitoring</a> useful.
+            </p>
+
+            <p class="mbn-text" id="2.1.6c">
+                <b>Wet and dirty nappies</b>
+                <br /> For the first few days after birth, your baby should be producing up to 6 wet nappies soaked through with clear or pale yellow urine a day and pass dark sticky poos (known as 'meconium').
+            </p>
+            <p class="mbn-text">
+                After the first week, your baby should pass pale yellow or yellowish-brown poos.
+            </p>
+            <p class="mbn-text">
+                Tips:
+            </p>
+            <ul>
+                <li>Infants have <b>no</b> control over their poos and wee so be cautious when changing a nappy - you might get wet!
+                </li>
+                <li>Bowel habits vary from baby to baby, but generally, formula-fed babies will have more solid poos, less often, than breastfed babies.
+                </li>
+                <li>If your baby has <a onclick="localSecJump('ff-219.html#2.1.9a');">hard and dry poos</a> or has blood in their poo, speak to your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> for advice.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="2.1.6d">
+                Formula feeding calculator
+            </p>
+            <p class="mbn-text">
+                Our <a href="tool://formula feeding calculator">formula feeding calculator</a> can give you some idea about how much formula to offer at each feed. This is based on your baby's weight, age and the <a onclick="localSecJump('ff-215.html#2.1.5e');">number of feeds</a> you usually offer in a 24-hour period.
+            </p>
+            <p class="mbn-text">
+                Remember:
+            </p>
+            <ul>
+                <li>This is a rough guide only and different babies drink different amounts of formula and the amount your baby drinks may vary from day-to-day.
+                </li>
+                <li>Don't worry if your <a onclick="localSecJump('ff-215.html#2.1.5i');">baby doesn't finish the bottle</a> your baby will decide when they are <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">full</a>.
+                </li>
+                <li><a onclick="localSecJump('ff-215.html#2.1.5e');">How often your baby feeds</a> may also vary; watch for you baby's <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">hungry signs</a> as a guide about when to feed.
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Approximate formula requirements for infants in a 24-hour period (includes night feeds) are as follows:
+            </p>
+            <ul>
+                <li><b>Day 5 to 3 months:</b> 150mL for every kg your baby weighs, per day. Some babies, especially those pre-term, need 180-200mL per kg of the baby's weight, per day.
+                </li>
+                <li><b>3-6 months:</b> 120mL for every kg your baby weighs, per day.
+                </li>
+                <li><b>6-12 months:</b> 100mL for every kg your baby weighs, per day. Some babies will only need 90mL for every kg they weigh, per day. Babies at this age will also be eating <a onclick="localSecJump('solids/solids-411.html#4.1.1a');">solid foods</a>.
+                </li>
+            </ul>
+            <p>
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

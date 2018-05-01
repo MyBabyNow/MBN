@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/What-to-expect.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.2" Breastfeeding>What to expect</p>
+            <p class="mbn-text" id="1.1.2a">
+                <b>Being a 'breastfeeding mum'</b>
+                <br> For many mums, breastfeeding is a completely new experience and often one they haven't had much exposure to. The reality of breastfeeding may be different to what you envisioned, and adjusting to being a breastfeeding mum can bring up all sorts of emotions for you and for those around you. It's not always as enjoyable and rewarding as some mums expect, and it almost always takes time and perseverance to get the hang of.
+            </p>
+            <p class="mbn-text">
+                <b>BUT</b>
+            </p>
+
+            <p class="mbn-text">
+                It does get much easier and faster with time! Most mums begin to enjoy breastfeeding more once they have settled into a routine with their babies.
+            </p>
+            <p class="mbn-text" id="1.1.2b">
+                To help you adjust to being a breastfeeding mum, try to be:
+            </p>
+            <ul>
+                <li> <b><u>confident</u></b> - breastmilk is the natural food for babies and breastfeeding is the natural role of mothers. Get to know your baby, feed them whenever they are <a onclick="localSecJump('sfp/sfp-514.html');">hungry</a> and trust that your body is designed to make as much milk as your baby needs. Expect to feed your baby <a onclick="localSecJump('sfp/sfp-511.html');">8 to 12 times in a 24 hour period</a> in the first few weeks. Learn more about <a onclick="localSecJump('bf-113.html');">milk supply</a>.
+                </li>
+                <li> <b><u>adaptable</u></b> - babies are changing all the time! Try to keep in mind: <i>'this too shall pass'.</i> What might be challenging today could be completely different tomorrow if you try to be flexible and always work in harmony with your baby.
+                </li>
+                <li> <b><u>committed</u></b> - breastfeeding can take time but it can work with your needs too. When it gets difficult, try to remember that breastfeeding is giving your baby the best start in life, helping you to recover and is something that only you can do.
+                </li>
+                <li> <b><u>supported</u></b> - you don't have to do it alone! Others will want to help,so let them - cleaning, shopping, cooking etc - this will take some of the pressure off you and let you focus on nurturing your baby. There is also professional help when you're facing a breastfeeding issue. Even if you don't have family/friends nearby, there is still plenty of <a onclick="localSecJump('hs/hs-81.html');">support for new mums</a>.
+                </li>
+                <li> <b><u>realistic</u></b> - the old saying 'it takes a village to raise a child' couldn't be more true - being a new mum comes with lots of challenges! Be realistic about what you can achieve in a day and prioritise your own wellbeing (take naps!) and your baby's health (keep breastfeeding!).
+                </li>
+                <li> <b><u>cool, calm and collected</u></b> - everyone has an opinions about everything and unfortunately breastfeeding is no different. Try to ignore any negative comments and surround yourself with people that support your decision to breastfeed. If you do cop any disapproval, try to ignore it and remember, you are giving the best food possible to your baby.
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.2c">
+                How to manage other people...
+            </p>
+            <ul>
+                <li> <i><u>being given different opinions and advice:</u></i> breastfeeding is a unique experience for every mum and baby - someone else's experience may be different to your own. You can ask a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a>, a <a onclick="localSecJump('bf-119.html#1.1.9k');">midwife</a>, <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a> or the <a href="tel:1800686268">ABA helpline</a> to get a second (professional) opinion if you still feel unsure.
+                </li>
+                <li> <i><u>your partner is uncomfortable about your breastfeeding:</u></i> try to reassure them that breastfeeding is the best thing you can do for your baby's health and that the physical closeness between you and your baby doesn't need to threaten their position in your relationship. When you finish breastfeeding, your breasts will return to normal. Read more on why <a onclick="localSecJump('bf-119.html#1.1.9e');">your partner's attitude matters</a>.
+                </li>
+            </ul>
+            
+            <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<div class="card" ng-form="forumForm">
+    <form name="postForm" ng-controller="PostFormController as postFormCtrl">
+        <!-- Title -->
+        <!--<div class="row">
+        <div class="input-field col s6">
+            <input id="title" type="text" length="20" ng-model="post.title" required>
+            <label for="title">Title</label>
+        </div>
+    </div>-->
+
+        <!-- Content -->
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea class="materialize-textarea" placeholder="What's on your mind?" length="140" ng-model="post.content" required></textarea>
+                <!--<label for="post_content">Content</label>-->
+            </div>
+        </div>
+
+        <!-- Image -->
+        <!--<span class="btn" ng-click='click()'>Image</span>-->
+
+        <div class="row">
+            <div class="col s12">
+                <!--ng-class="{forumForm.$invalid:ng-disabled}" ng-disabled="forumForm.$invalid"-->
+                <button class="mbn-button pull-right" ng-click="cancelPost()"><span>Cancel</span></button>
+
+
+                <button class="mbn-button" ng-click="addPost()" ng-class="{'mbn-icon-selected':forumForm.$invalid}" ng-disabled="forumForm.$invalid" disabled="disabled">Post</button>
+
+                <button class="mbn-button" style="margin-right: 9vw;" ng-click="click()">
+                <span>
+                    <i class="fa fa-camera fa-lg"></i> &nbsp; Add image
+                </span>
+            </button>
+                <!--<button class="btn waves-effect waves-light pull-right " type="submit " name="action " >Submit
+            </button>
+             <button class="btn waves-effect waves-light pull-right " name="action " ng-click="cancelPost() " >Cancel
+            </button>-->
+
+            </div>
+        </div>
+        <div class="card-image waves-block" ng-hide="post.image==null">
+            <img ng-src="{{post.image}} " />
+        </div>
+    </form>
+
+</div>

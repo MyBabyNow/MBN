@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/faq.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.19"><span id="1.1.19a">Breastfeeding &gt; FAQs</span> </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('1.1.19b');">How can I feel more comfortable breastfeeding in public?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.19d');">Will formula help my baby sleep longer?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.19f');">Is breastfeeding supposed to hurt?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.19g');">Will my breasts look different after breastfeeding?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.19i');">My breasts feel soft - does this mean I have no milk?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.19k');">I can't express much milk - does this mean I have a low milk supply?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.19m');">How can I increase my milk supply?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.19n');">My baby seems gassy - should I change my diet?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.19o');">What is nipple confusion?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.19s');">I smoke - should I breastfeed my baby?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.19v');">Should I switch to formula when I return to work?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.19x');">My stored breastmilk smells and tastes different - is it off?</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.19b">
+                <b>How can I feel more comfortable breastfeeding in public?</b>
+                <br> It's normal to feel nervous at the thought of baring some skin in public, especially while you are still getting used to breastfeeding. What may surprise you is how little breast you actually show once your baby is <a onclick="localSecJump('bf-114.html#1.1.4g');">attached</a> and how few people even notice!
+            </p>
+            <p class="mbn-text">
+                A breastfeeding mum usually looks like she is just holding her baby in a cradle position. Read up on some of the <a onclick="localSecJump('bf-116.html#1.1.6d');">tips to make it easier</a>
+            </p>
+            <p class="mbn-text">
+                In Australia, you are protected by the law to breastfeed anywhere and at any time that you like - you never have to ask for permission.
+            </p>
+
+            <p class="mbn-text" id="1.1.19c">
+                If those close to you, such as <a onclick="localSecJump('bf-119.html#1.1.9e');">your partner</a>, family or friends <a onclick="localSecJump('bf-116.html#1.1.6b');">don't like you feeding in public,</a> remind them that breastfeeding is natural and reassure them that it can be done discreetly.
+            </p>
+
+            <p class="mbn-text" id="1.1.19d">
+                <b>Will formula help my baby sleep longer?</b>
+                <br> No - most babies wake through the night for the first few months. In fact, some research even shows that breastfeeding mums get more sleep, on average, than formula feeding mums because breastfeeding in the middle of the night is much quicker and easier than getting up to prepare a bottle!
+            </p>
+
+            <p class="mbn-text" id="1.1.19e">
+                <b>If you always feel tired, <a onclick="localSecJump('bf-1116.html#1.1.16c');">try these steps</a> or perhaps consider:</b>
+                <br>
+            </p>
+            <ul>
+                <li>sleeping in the same room as your baby so that you are close by
+                </li>
+                <li>learning to breastfeed lying down so that you can keep on resting, even when feeding
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                If your baby is older than 6 months, see some <a onclick="localSecJump('sfp/sfp-5113.html');">ways to help them sleep through the night.</a>
+            </p>
+
+            <p class="mbn-text" id="1.1.19f">
+                <b>Is breastfeeding supposed to hurt?</b>
+                <br> As you get used to the strong sucking of your baby when you first start breastfeeding, your nipples might feel a bit sensitive and sore but it should never be painful. If this soreness doesn't go away after a week or so then something may not be right.
+            </p>
+            <p class="mbn-text">
+                There are a number of reasons why your nipples might feel sore - learn more about the <a onclick="localSecJump('bf-118.html#1.1.8e');">most common issues.</a>
+            </p>
+            <p class="mbn-text">
+                Breastfeeding should not be painful so make sure to ask for help if you need to. <a onclick="localSecJump('bf-119.html#1.1.9h');">Your GP,</a> <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a>, a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> or the <a href="tel:1800686268">ABA helpline</a> are good places to start.
+            </p>
+
+            <p class="mbn-text" id="1.1.19g">
+                <b>Will my breasts look different after breastfeeding?</b>
+                <br> Breastfeeding does not cause saggy breasts. Instead, it is the pregnancy and weight loss that can bring on changes to your breasts' size and shape. As your breasts get bigger during pregnancy, the ligaments that support them can stretch - this happens whether or not you breastfeed your baby.
+            </p>
+
+            <p class="mbn-text" id="1.1.19h">
+                When you stop breastfeeding you might feel like your breasts aren't as 'perky' as they were before but after about 6 months or so fatty tissue will slowly replace your milk-making tissue and leave them feeling fuller again.
+            </p>
+
+            <p class="mbn-text" id="1.1.19g">
+                <b>My breasts feel soft - does this mean I have no milk?</b>
+                <br> If your baby has been <a onclick="localSecJump('bf-114.html#1.1.4g');">attaching well</a> and you have been feeding them <a onclick="localSecJump('sfp/sfp-514.html');">whenever they are hungry</a>, your body adjusts to making the right amount of milk for your baby by about 6 weeks after birth.
+            </p>
+
+            <p class="mbn-text" id="1.1.19j">
+                After this time, you may notice that your breasts start to feel softer and less full than they were and only feel fuller as the time for a feed gets closer, or if you miss a usual feed. This is normal and does not mean your milk supply is reducing, it just means your breasts are getting good at giving milk on demand!
+            </p>
+            <p class="mbn-text">
+                Find out more about <a onclick="localSecJump('bf-113.html');">milk supply</a>.
+            </p>
+
+            <p class="mbn-text" id="1.1.19k">
+                <b>I can't express much milk - does this mean I have a low milk supply?</b>
+                <br> Not at all!
+            </p>
+            <p class="mbn-text">
+                <a onclick="localSecJump('bf-1111.html');">Expressing</a> is not a 'measure' of how much milk you make - your baby is much better at getting out your milk than your <a onclick="localSecJump('bf-1111.html#1.1.11l');">hand</a> or a <a onclick="localSecJump('bf-1117.html#1.1.17h');">breast pump!</a> Their sucking is also better at triggering your <a onclick="localSecJump('bf-1111.html#1.1.11d');">let-down reflex</a> to get your milk flowing.
+            </p>
+
+            <p class="mbn-text" id="1.1.19l">
+                <b>You should be making enough milk if your baby:</b>
+            </p>
+            <ul>
+                <li>has 5+ wet disposable nappies, or at least 6-8 pale, wet cloth/reusable nappies over 24 hours
+                </li>
+                <li>has soft <a onclick="localSecJump('bf-1113.html#1.1.13d');">poos</a>
+                </li>
+                <li>has good skin tone and bright eyes
+                </li>
+                <li>is generally content - even if sometimes fussy and unsettled
+                </li>
+                <li>is <a onclick="localSecJump('sfp/sfp-515.html');">gaining weight and growing</a> in length and head circumference
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Take our <a onclick="localSecJump('Link to milk supply quiz');">milk supply quiz</a> to find out if you're making enough.
+            </p>
+            <p class="mbn-text">
+                Find out more about <a onclick="localSecJump('bf-113.html#1.1.3d');">low milk supply</a>.
+            </p>
+
+            <p class="mbn-text" id="1.1.19m">
+                <b>How can I increase my milk supply?</b>
+                <br> Many mums worry they don't make enough milk for their baby, but this is unlikely, especially if you have been feeding your baby <a onclick="localSecJump('sfp/sfp-514.html');">whenever they are hungry</a> and they are <a onclick="localSecJump('bf-114.html#1.1.4g');">attaching properly</a>.
+            </p>
+            <p class="mbn-text">
+                Babies get unsettled for <a onclick="localSecJump('sfp/sfp-518.html');">lots of reasons</a> - it may not be that they're hungry!
+            </p>
+            <p class="mbn-text">
+                See below for more on:
+            </p>
+            <ul>
+                <li>has 5+ wet disposable nappies, or at least 6-8 pale, wet cloth/reusable nappies over 24 hours
+                </li>
+                <li><a onclick="localSecJump('bf-113.html#1.1.3d');">low milk supply</a>
+                </li>
+                <li>how to <a onclick="localSecJump('bf-113.html#1.1.3i');">make more milk</a>
+                </li>
+                <li>why babies get <a onclick="localSecJump('sfp/sfp-518.html');">unsettled</a> or <a onclick="localSecJump('bf-118.html#1.1.8o');">refuse the breast</a>
+                </li>
+
+            </ul>
+
+            <p class="mbn-text" id="1.1.19n">
+                <b>My baby seems gassy - should I change my diet?</b>
+                <br> Maybe, but not necessarily. Traces of <a onclick="localSecJump('bf-1114.html#1.1.14f');">what you eat</a> can transfer into your breastmilk and some babies can react to this but if you are worried that your baby is reacting to something in your diet, it is best to see <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> or <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a> before any making major changes to your diet. They may also refer you to a <a onclick="localSecJump('hs/hs-815.html');">dietitian</a> or paediatrician who specialises in allergies.
+            </p>
+            <p class="mbn-text">
+                It could simply be that your baby is taking in lots of air when breastfeeding and therefore needs to be <a onclick="localSecJump('sfp/sfp-519');">burped</a> often.
+            </p>
+            <p class="mbn-text">
+                See more on:
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('sfp/sfp-519.html');">wind and burping</a>
+                </li>
+                <li><a onclick="localSecJump('bf-1114.html#1.1.14f');">what you eat and your breastmilk</a>
+                </li>
+                <li><a onclick="localSecJump('bf-118.html#1.1.8t');">Lactose intolerance</a> and <a onclick="localSecJump('bf-118.html#1.1.8u');">allergies</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.19o">
+                <b>What is nipple confusion?</b>
+                <br> Nipple confusion doesn't mean your baby is actually confused about your nipple or how to use it - it's just a description that is used for when babies don't want to breastfeed and find it easier to bottle feed (whether it is expressed breastmilk or formula).
+            </p>
+
+            <p class="mbn-text" id="1.1.19p">
+                Bottles are very easy for a baby to feed from - they have a continuous flow of milk and your baby doesn't have to try very hard to get it out! When breastfeeding, babies need to work a bit harder - using about 40 different muscles in their face to suck the milk out.
+            </p>
+
+            <p class="mbn-text" id="1.1.19q">
+                It's best to wait until breastfeeding is established, usually 6 weeks, before using a bottle (or dummy) so your:
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('bf-113.html');">milk supply</a> can be established without anything else getting in the way
+                </li>
+                <li>baby gets lots of practice at breastfeeding and is a bit bigger and stronger
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.19r">
+                Once your <a onclick="localSecJump('bf-113.html');">milk supply</a> is established (usually around 6 weeks) and your baby is breastfeeding well, there is no reason why you can't give them the occasional <a onclick="localSecJump('bf-1110.html#1.1.10a');">bottle of expressed milk</a>.
+            </p>
+            <p class="mbn-text">
+                If you've given your baby bottles earlier than 4-6 weeks and they are reluctant to breastfeed, it doesn't mean they have forgotten how to or they are rejecting you, it just means they need to readjust to sucking for their milk.
+            </p>
+            <p class="mbn-text">
+                <a onclick="localSecJump('bf-118.html#1.1.8e');">Nipple pain</a> or your baby refusing your breast doesn't mean your baby has nipple confusion either - there can be <a onclick="localSecJump('bf-118.html#1.1.8o');">all sorts of reasons for this</a>.
+            </p>
+
+            <p class="mbn-text" id="1.1.19o">
+                <b>I smoke - should I breastfeed my baby?</b>
+                <br> Yes!
+            </p>
+            <p class="mbn-text">
+                Babies exposed to cigarette smoke do get sick more often, and nicotine affects your breastmilk, but if you can't stop or even cut down on your smoking, it is still better to breastfeed your baby than to give them formula.
+            </p>
+            <p class="mbn-text">
+                Babies of mums who smoke are also more likely to suffer from the effects of the second-hand cigarette smoke if they are formula fed compared to if they are breastfed.
+            </p>
+
+            <p class="mbn-text" id="1.1.19t">
+                Although cigarette smoke increases a baby's risk of lung infections, asthma and sudden unexpected death in infancy (SUDI), breastmilk contains ingredients that help protect your baby from getting sick - more so than formula.
+            </p>
+            <p class="mbn-text">
+                That said, breastfeeding won't protect your baby completely and you should always take care to minimise the exposure of your baby to cigarette smoke.
+            </p>
+
+            <p class="mbn-text" id="1.1.19u">
+                Minimise your baby being exposed to the harmful effects of smoking cigarettes by:
+            </p>
+            <ul>
+                <li>timing your cigarettes for straight <i>after</i> a breastfeed - the longer the time between smoking and a breastfeed, the less nicotine your baby will be exposed to through your breastmilk
+                </li>
+                <li>keeping the area around your baby as smoke-free as possible:
+                </li>
+                <ul>
+                    <li>never smoke in the house or the car
+                    </li>
+                    <li>don't allow anyone else to smoke near your baby
+                    </li>
+                </ul>
+                <li>keeping as much smoke off you as possible - every time you have a cigarette, the smoke is trapped in your clothes, hair and skin - it's not practical to change your clothes, brush your teeth, shower and wash your hair after each cigarette, but every time you have a cigarette you could:
+                </li>
+                <ul>
+                    <li>change into a 'smoking outfit' or something to cover your clothes, which you keep outside
+                    </li>
+                    <li>cover your hair with a shower cap or scarf
+                    </li>
+                    <li>wash your hands and brush your teeth when you have finished
+                    </li>
+                </ul>
+                <li>quitting altogether - <a onclick="localSecJump('hs/hs-818.html');">get help to quit</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.19v">
+                <b>Should I switch to formula when I return to work?</b>
+                <br> You don't have to switch to feeding your baby formula just because you are returning to work. Australian law protects your right to breastfeed or <a onclick="localSecJump('bf-1111.html');">express milk</a> at work.
+            </p>
+
+            <p class="mbn-text" id="1.1.19w">
+                Many mums continue to breastfeed their babies once they return to work and find that keeping that connection with their babies helps make the adjustment back to work a bit easier for both mum and baby.
+            </p>
+            <p class="mbn-text">
+                Deciding what is best for you and your baby is a personal choice. You may also want to consider the age of your baby.
+            </p>
+            <p class="mbn-text">
+                If:
+            </p>
+            <ul>
+                <li>they are less than 6 months old, continuing to only give breastmilk is the best option
+                </li>
+                <li>from 6-12 months old, you can <a onclick="localSecJump('solids/solids-411.html');">start giving solids</a> while you are at work and breastfeed your baby when you're together (they will probably still need some <a onclick="localSecJump('bf-1111.html');">expressed milk</a> while you are at work depending on your hours)
+                </li>
+                <li>they are older than 1 year, you can just <a onclick="localSecJump('solids/solids-411.html');">give solids</a> and <a onclick="localSecJump('solids/solids-416.html');">other fluids (water or plain milk)</a> while you are at work and breastfeed your baby when you're together
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Read more about <a onclick="localSecJump('bf-117.html');">breastfeeding and returning to work</a>.
+            </p>
+
+            <p class="mbn-text" id="1.1.19x">
+                <b>My stored breastmilk smells and tastes different - is it off?</b>
+                <br> The smell and taste of your breastmilk may have changed if it has been stored for a while but this doesn't necessarily mean it has 'gone off'! As long as you have <a onclick="localSecJump('bf-1111.html#1.1.11ab');">stored your breastmilk correctly</a>, it is perfectly safe to use.
+            </p>
+            <p class="mbn-text">
+                The changed taste and smell can happen because of the lipase (an enzyme) in your breastmilk which starts breaking down fats in the milk. You can stop this from happening by following <a onclick="localSecJump('bf-1111.html#1.1.11ag');">these steps</a>.
+            </p>
+            <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

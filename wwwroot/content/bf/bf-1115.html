@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/alcohol.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.15">Alcohol and drugs</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('1.1.15a">Alcohol</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.15d">Medicine and herbal preparations</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.15g">Marijuana</a>
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.15a">
+                <b>Alcohol</b>
+                <br> Drinking alcohol while breastfeeding affects your baby - it passes through your breastmilk into your baby's system. Some research shows that having 2 or more standard drinks of alcohol a day while breastfeeding can be related to problems in babies' brain development and sleep patterns. One standard drink is any drink that has 10 grams of alcohol - see a <a onclick="localSecJump('http://www.alcohol.gov.au/internet/alcohol/publishing.nsf/Content/" target="_blank">guide to alcohol serving sizes</a> (opens in your browser).
+            </p>
+
+            <p class="mbn-text" id="1.1.15b">
+                The level of alcohol in your breastmilk mimics your blood alcohol level - it will rise as you drink and fall as your body processes it. You cannot 'express it out'.
+            </p>
+            <p class="mbn-text">
+                It generally takes your body:
+            </p>
+            <ul>
+                <li>about 2 hours to process the alcohol from 1 standard drink
+                </li>
+                <li>4 hours for 2 standard drinks
+                </li>
+                <li>6 hours for 3 standard drinks
+                </li>
+                <li>etc
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.15c">
+                <b>Not drinking alcohol is the safest option</b>
+                <br> If you plan to drink alcohol, keep your baby safe by:
+            </p>
+            <ul>
+                <li>avoiding drinking alcohol while your baby's feeding pattern isn't predictable - especially in the first few weeks
+                </li>
+                <li><a onclick="localSecJump('bf-1111.html');">express milk</a> <b>before</b> you drink and use this to feed your baby
+                </li>
+                <ul>
+                    <li>if your breasts feel full during or straight after you've been drinking, express the milk and throw it away
+                    </li>
+                </ul>
+            </ul>
+            <p class="mbn-text">
+                Remember, you can't 'express out' the milk that contains alcohol - you have to wait until your body has processed all the alcohol in your system.
+            </p>
+            <p class="mbn-text" id="1.1.15d">
+                <b>Medicine and herbal preparations</b>
+                <br> Nearly all medicines pass through into your breastmilk but most do so in only small amounts - this makes them generally safe for your baby. But, it's still best to tell <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> and pharmacist that you are breastfeeding before taking medications so they can advise you of the safest option for you and your baby.
+            </p>
+            <p class="mbn-text" id="1.1.15e">
+                When breastfeeding and needing to take medicine:
+            </p>
+            <ul>
+                <li>take it <i><b>after</b></i> a breastfeed, if possible
+                </li>
+                <li>choose medicines that have been shown to be safest for breastfeeding mums
+                </li>
+                <li>avoid slow-release medicines as these stay in your body for longer
+                </li>
+                <li>try to choose medicines that act locally - such as a cream instead of tablets
+                </li>
+                <li><a onclick="localSecJump('hs/hs-815.html');">seek advice</a> if you are unsure
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.15f">
+                'Natural remedies' or herbal preparations are often thought to be harmless, but that's not always the case. Side effects of these remedies can be unknown because they often don't need the same level of testing as other drugs. While some have been shown to be safe to take while breastfeeding, others are not recommended.
+            </p>
+            <p class="mbn-text">
+                Find out as much as you can before taking any natural or herbal preparation. Not sure? <a onclick="localSecJump('hs/hs-815.html');">Contact someone</a> to ask first.
+            </p>
+
+            <p class="mbn-text" id="1.1.15g">
+                <b>Marijuana</b>
+                <br> Smoking marijuana while breastfeeding affects your baby's growing brain. Chemicals from marijuana concentrate and stay in your breastmilk for up to 2-3 weeks after you have used marijuana. Marijuana also reduces your <a onclick="localSecJump('bf-113.html');">milk supply</a>
+            </p>
+            <p class="mbn-text">
+                <b>It is not safe to use marijuana while breastfeeding.</b>
+            </p>
+            <br /><br /><br />
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/feeding-position.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.4" Breastfeeding>Feeding positions and attachment</p>
+            <p class="mbn-text" id="1.1.4a">
+                <b>Different feeding positions</b>
+            </p>
+            <p class="mbn-text">
+                Important tips for any position you choose:
+            </p>
+            <ul>
+                <li>'tummy to mummy' - your baby should face your breast, with their head, shoulders and body in a straight line
+                </li>
+                <li>'nose to nipple' - your baby's nose or top lip should be opposite your nipple
+                </li>
+                <li>'chest to breast' - your baby should be brought to your breast instead of moving your breast towards your baby
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.4b">
+                Support your baby's neck with your thumb and forefinger, rather than cradling their head in your hand. This is to avoid pushing your baby's head into the breast. Your baby's head needs to be extended in order to drink properly.
+            </p>
+
+            <p class="mbn-text" id="1.1.4c">
+                Your baby can be breastfed in different positions. The most popular positions to feed a baby are:
+            </p>
+            <ul>
+                <li>the cradle hold
+                </li>
+                <ul>
+                    <li>support your baby in the crook of your arm (left arm when feeding on the left side)
+                    </li>
+                    <li>better for babies delivered vaginally and over one month old - it can be hard to guide a newborn onto your nipple properly in this hold
+                    </li>
+
+                    <p class="mbn-text" id="1.1.4d">
+                </ul>
+                <li>the cross cradle hold / cross over hold
+                </li>
+                <ul>
+                    <li>supported your baby by the opposite arm to your breast (right arm holding when feeding on the left side)
+                    </li>
+                    <li>better for smaller babies and babies having trouble <a onclick="localSecJump('1.1.4g');">attaching</a> - you can guide them more easily in this hold
+                    </li>
+                </ul>
+            </ul>
+
+            <ul id="1.1.4e">
+                <li>the football hold
+                </li>
+                <ul>
+                    <li>supported your baby by the opposite arm to your breast (right arm holding when feeding on the left side)
+                    </li>
+                    <li>better for smaller babies and babies having trouble <a onclick="localSecJump('1.1.4g');">attaching</a> - you can guide them more easily in this hold
+                    </li>
+                </ul>
+            </ul>
+
+            <ul id="1.1.4f">
+                <li>lying down on your side
+                </li>
+                <ul>
+                    <li>you lie on your side and your baby lies on their side facing you - try to keep your back straight and bring baby to your breast
+                    </li>
+                    <li>a good position if you're feeling exhausted and want to lie down or sitting up is uncomfortable
+                    </li>
+                </ul>
+            </ul>
+
+            <p class="mbn-text">
+                This video takes you through different breastfeeding positions to help you find a position that works for you and your baby.
+            </p>
+            <p class="mbn-text">
+                <b>Video: How to breastfeed - breastfeeding positions</b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/u8TW4X_XPic" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/breastfeeding_techniques_article.html" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+
+            <p class="mbn-text" id="1.1.4g">
+                <b>Your baby's attachment</b>
+            </p>
+            <p class="mbn-text">
+                Getting your baby to attach onto your breast properly will help you build up your <a onclick="localSecJump('bf-113.html');">milk supply</a> and prevent your <a onclick="localSecJump('bf-118.html#1.1.8e');">nipples from getting too sore</a> (though some soreness for the first few days is normal). You and your baby may need to learn how to work together to get a good attachment. If you feel pain well after your baby first attaches or don't think they are attaching properly, ask for help. Your <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a>, <a onclick="localSecJump('bf-119.html#1.1.9k');">midwife</a>, a <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a>, or the <a href="tel:1800686268">ABA helpline </a>are good places to start.
+            </p>
+            <p class="mbn-text">
+                This video on breastfeeding has tips for good attachment to help you get your baby feeding well.
+            </p>
+            <p class="mbn-text">
+                <b>Video: Getting a good attachment</b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/oN_dFzmTNWw" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/breastfeeding_techniques_article.html" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+
+            <p class="mbn-text" id="1.1.4h">
+                <b>Baby-led attachment</b>
+            </p>
+            <p class="mbn-text">
+                Baby-led attachment is lets your baby find your breast by themselves, before attaching and starting to feed. It's best to try this when your baby is relaxed and you have skin-to-skin contact.
+            </p>
+
+            <p class="mbn-text">
+                This video is shows you how to use baby-led attachment when breastfeeding.
+            </p>
+
+            <p class="mbn-text">
+                <b>Video: Breastfeeding and baby-led attachment</b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/SIfV_Gr5CXQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/baby-led_attachment_video.html/context/1645" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+            <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

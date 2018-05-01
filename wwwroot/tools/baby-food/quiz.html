@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/preloader/main.css">
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript">
+        var ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10;
+
+        var userId = $.session.get('secretKey');
+
+        var babyAge = $.session.get('babyAge');
+
+        $(document).ready(function() {
+            $('#pg1').show();
+
+            $('#pg2').hide();
+            $('#pg3').hide();
+            $('#pg4').hide();
+            $('#pg5').hide();
+            $('#pg6').hide();
+            $('#pg7').hide();
+            $('#pg8').hide();
+            $('#pg9').hide();
+            $('#pg10').hide();
+            $('#pg11').hide();
+
+
+            $('#pg2-ans').hide();
+            $('#pg3-ans').hide();
+            $('#pg4-ans').hide();
+            $('#pg5-ans').hide();
+            $('#pg6-ans').hide();
+            $('#pg7-ans').hide();
+            $('#pg8-ans').hide();
+            $('#pg9-ans').hide();
+            $('#pg10-ans').hide();
+            $('#pg11-ans').hide();
+
+
+            $('#mark').hide();
+
+            $('#q1-modal').hide();
+
+            if(babyAge<26){
+                $("#pg9 .mbn-section").css("color", "rgba(0,0,0,0.26)");
+                $("#pg9-question").text("As your baby is below 6months of age, this question is not relevant to you. How often do you offer your baby chips (crisps) or other salty snacks such as Twisties or corn chips?");
+                $('input[name=q8-options]').attr('disabled', true);
+            } else{
+                $("#pg9 .mbn-section").css("color", "#6699cc");
+                $("#pg9-question").text("How often do you offer your baby chips (crisps) or other salty snacks such as Twisties or corn chips?");
+                $('input[name=q8-options]').attr('disabled', false);
+            }
+
+            start();
+        });
+
+        function start() {
+
+            $(".preloader-wrapper").removeClass("hide");
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/baby_food_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    if (data.length !== 0) {
+                        $('input[name=q1-options][value=' + data[0].ans1 + ']').prop('checked', true);
+                        $('input[name=q2-options][value=' + data[0].ans2 + ']').prop('checked', true);
+                        $('input[name=q3-options][value=' + data[0].ans3 + ']').prop('checked', true);
+                        $('input[name=q4-options][value=' + data[0].ans4 + ']').prop('checked', true);
+                        $('input[name=q5-options][value=' + data[0].ans5 + ']').prop('checked', true);
+                        $('input[name=q6-options][value=' + data[0].ans6 + ']').prop('checked', true);
+                        $('input[name=q7-options][value=' + data[0].ans7 + ']').prop('checked', true);
+                        $('input[name=q8-options][value=' + data[0].ans8 + ']').prop('checked', true);
+                        $('input[name=q9-options][value=' + data[0].ans9 + ']').prop('checked', true);
+                        $('input[name=q10-options][value=' + data[0].ans10 + ']').prop('checked', true);
+
+                        $('input[name=q1-options]').attr('disabled', true);
+                        $('input[name=q2-options]').attr('disabled', true);
+                        $('input[name=q3-options]').attr('disabled', true);
+                        $('input[name=q4-options]').attr('disabled', true);
+                        $('input[name=q5-options]').attr('disabled', true);
+                        $('input[name=q6-options]').attr('disabled', true);
+                        $('input[name=q7-options]').attr('disabled', true);
+                        $('input[name=q8-options]').attr('disabled', true);
+                        $('input[name=q9-options]').attr('disabled', true);
+                        $('input[name=q10-options]').attr('disabled', true);
+
+                        mark();
+
+                        $("#mark").addClass("hide");
+
+                        $("#clear").removeClass("hide");
+
+
+                        $('#pg1').hide();
+
+                        $('#pg2').show();
+                        $('#pg3').show();
+                        $('#pg4').show();
+                        $('#pg5').show();
+                        $('#pg6').show();
+                        $('#pg7').show();
+                        $('#pg8').show();
+                        $('#pg9').show();
+                        $('#pg10').show();
+                        $('#pg11').show();
+                    } else {
+                        $('input[name=q1-options]').prop('checked', false);
+                        $('input[name=q2-options]').prop('checked', false);
+                        $('input[name=q3-options]').prop('checked', false);
+                        $('input[name=q4-options]').prop('checked', false);
+                        $('input[name=q5-options]').prop('checked', false);
+                        $('input[name=q6-options]').prop('checked', false);
+                        $('input[name=q7-options]').prop('checked', false);
+                        $('input[name=q8-options]').prop('checked', false);
+                        $('input[name=q9-options]').prop('checked', false);
+                        $('input[name=q10-options]').prop('checked', false);
+                    }
+
+
+                    $(".preloader-wrapper").addClass("hide");
+                });
+
+        }
+
+        function startQuiz() {
+            $('#pg1').hide();
+
+            $('#pg2').show();
+            $('#pg3').show();
+            $('#pg4').show();
+            $('#pg5').show();
+            $('#pg6').show();
+            $('#pg7').show();
+            $('#pg8').show();
+            $('#pg9').show();
+            $('#pg10').show();
+            $('#pg11').show();
+
+            $('#mark').show();
+        }
+
+        function clearAnswers() {
+            $(".preloader-wrapper").removeClass("hide");
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/baby_food_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    if (data.length !== 0) {
+                        var entryId = data[0].id;
+                        $.ajax({
+                            type: "delete",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/baby_food_quiz/" + entryId,
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                                location.reload();
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+                    } else {
+                        $("#modal p").html("Answers has been cleared");
+                        $("#modal").modal();
+                        $("#modal").modal('open');
+                        $(".preloader-wrapper").addClass("hide");
+                    }
+                });
+        }
+
+        function mark() {
+            // Retrieve the values of each answer
+            ans1 = $('input[name=q1-options]:checked').val();
+            ans2 = $('input[name=q2-options]:checked').val();
+            ans3 = $('input[name=q3-options]:checked').val();
+            ans4 = $('input[name=q4-options]:checked').val();
+            ans5 = $('input[name=q5-options]:checked').val();
+            ans6 = $('input[name=q6-options]:checked').val();
+            ans7 = $('input[name=q7-options]:checked').val();
+            ans8 = $('input[name=q8-options]:checked').val();
+            ans9 = $('input[name=q9-options]:checked').val();
+            ans10 = $('input[name=q10-options]:checked').val();
+
+            // Check that there is value for all.
+            if(babyAge<26){
+                if (ans1 == null || ans2 == null || ans3 == null || ans4 == null || ans5 == null || ans6 == null || ans7 == null || ans9 == null || ans10 == null) {
+                alert('You need to answer all questions.');
+                return;
+            }
+
+            }
+            if (ans1 == null || ans2 == null || ans3 == null || ans4 == null || ans5 == null || ans6 == null || ans7 == null || ans8 == null || ans9 == null || ans10 == null) {
+                alert('You need to answer all questions.');
+                return;
+            }
+
+            // Now prepare the answer
+
+            if (ans1 == "a" || ans1 == "b" || ans1 == "c") {
+                $('#pg2-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Once your baby is regularly eating solid foods, try to offer a range of different vegetables every day. The more frequently you offer vegetables, the more likely they will learn to like them!<br /> <br />Check out our <a onclick='q1_modal();'>top 10 tips for helping your baby love vegetables</a> and don't forget to keep track of which vegetables you have offered (and your baby's reaction!) with our <a onclick='q1_modal();'>vegetable tracker</a>!</p>");
+            } else if (ans1 == "d" || ans1 == "e") {
+                $('#pg2-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great work on offering your baby vegetables several times a week! <br /> <br />As you might already know, the more frequently you offer vegetables to your baby, the more likely they will learn to like them! So, once your baby is regularly eating solid foods, try to offer a range of different vegetables every day.<br /> <br />Check out our <a onclick='q1_modal();'>top 10 tips for helping your baby love vegetables</a> and don't forget to keep track of which vegetables you have offered (and your baby's reaction!) with our <a onclick='q1_modal();'>vegetable tracker</a>!</p>")
+            } else {
+                $('#pg2-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Fantastic work! <br /> <br />Keep up the great job by making sure you offer your baby a range of different vegetables every day once they're regularly eating solid foods. As you probably already know, the more frequently you offer vegetables to your baby, the more likely they will learn to like them! <br /> <br />Check out our <a onclick='q1_modal();'>top 10 tips for helping your baby love vegetables</a> and don't forget to keep track of which vegetables you have offered (and your baby's reaction!) with our <a onclick='q1_modal();'>vegetable tracker</a>!</p>")
+            }
+
+            if (ans2 == "a" || ans2 == "b") {
+                $('#pg3-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Did you know that offering a variety of vegetables early and often has been shown to help children develop a liking for vegetables?<br /> <br />Along with high iron foods, make sure you offer your baby a variety of different coloured vegetables as their first solid foods. Make sure you keep track of your progress with our <a onclick='q1_modal();'>vegetable tracker</a>!<br /><br />Need some inspiration? Check out our <a onclick='q1_modal();'>recipes section</a> for some great ideas for the whole family! You might also like to <a onclick='q1_modal();'>check out our video on preparing fruit and vegetables for your baby</a>.</p>");
+            } else if (ans2 == "c" || ans2 == "d") {
+                $('#pg3-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Well done on introducing your baby to a few different types of vegetables!<br /> <br />Even if your baby didn't eat them or tasted them then spat them all out, that's OK- it is <i>normal</i> for babies to spit out new and unknown foods, especially vegetables, which tend to be less sweet and more bitter than other foods. In fact, it can take up to 10-15 tries of a new vegetable before your baby may learn to like it!<br /> <br />The key is not to give up but to <i>keep offering</i> rejected vegetables, provided you also avoid the food battles. Read more about <a onclick='q1_modal();'>how to deal with food being spat out</a>!</p>")
+            } else {
+                $('#pg3-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great work! <br /> <br />Offering your baby a number of different types of vegetables is fantastic for their nutritional needs but exposing your baby to a variety of tastes and textures is also important for helping them to develop a liking of vegetables. <br /> <br />Even if your baby didn't eat them or tasted them then spat them all out, that's OK - it is <i>normal</i> for babies to spit out new and unknown foods, especially vegetables, which tend to be less sweet and more bitter than other foods. In fact, it can take up to 10-15 tries of a new vegetable before your baby may learn to like it!<br /><br />The key is not to give up but to <i>keep offering</i> rejected vegetables, provided you also avoid the food battles. Read more about  <a onclick='q1_modal();'>how to deal with food being spat out</a>!</p>")
+            }
+
+            if (ans3 == "a" || ans3 == "b" || ans3 == "c") {
+                $('#pg4-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Did you know that by offering your baby a range of different fruits to try every day you're also helping them to learn to like a variety of different tastes and textures?<br /> <br />Fruit doesn't always have to be on its own either - try adding it to yoghurt and cereals as a natural sweetener (instead of sugar) and it's fine to make use of tinned fruit too, just be sure to choose fruits in <i>natural juice/i> rather than syrup.<br /><br />Need more inspiration? Check out our <a onclick='q1_modal();'>recipes section</a> for some great ideas for the whole family! You might also like to <a onclick='q1_modal();'>check out our video on preparing fruit and vegetables for your baby</a>.</p>");
+            } else if (ans3 == "d" || ans3 == "e") {
+                $('#pg4-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Good job offering your baby fruit several times a week!<br /> <br />Did you know that by offering your baby a range of different fruits to try every day you're also helping them to learn to like a variety of different tastes and textures?<br /> <br />Fruit doesn't always have to be on its own either - try adding it to yoghurt and cereals as a natural sweetener (instead of sugar) and it's fine to make use of tinned fruit too, just be sure to choose fruits in <i>natural juice/i> rather than syrup. <br /> <br />Need more inspiration? Check out our <a onclick='q1_modal();'>recipes section</a> for some great ideas for the whole family! You might also like to <a onclick='q1_modal();'>check out our video on preparing fruit and vegetables for your baby</a>.</p>")
+            } else {
+                $('#pg4-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Fantastic work!<br /> <br />Offering your baby fruit at least once a day is great for their growing body but, as you might already know, by offering your baby a range of different fruits to try every day, you're also helping them to learn to like a variety of tastes and textures.<br /> <br />Keep in mind that fruit doesn't always have to be on its own either - try adding it to yoghurt and cereals as a natural sweetener (instead of sugar) and feel free to make use of tinned fruit too, just as long as you choose fruits in <i>natural juice/i> rather than syrup.<br /><br />Need more inspiration? Check out our <a onclick='q1_modal();'>recipes section</a> for some great ideas for the whole family! You might also like to <a onclick='q1_modal();'>check out our video on preparing fruit and vegetables for your baby</a>.</p>")
+            }
+
+            if (ans4 == "a" || ans4 == "b" || ans4 == "c") {
+                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Once your baby reaches 6 months, it's a good idea to try offering small amounts of cooled boiled water in a 'sippy' cup. This helps your baby get used to both the taste of water and drinking from a cup.<br /> <br />Just be careful not to give <i>too much water</i> because this can fill up your baby's tiny tummy and leave little room for breastmilk/formula and solids!<br /> <br />Read more about <a onclick='q1_modal();'>drinks</a> and <a onclick='q1_modal();'>introducing a sippy cup</a>.<br /><br /></p>");
+            } else if (ans4 == "d" || ans4 == "e") {
+                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>It's great that you're offering your baby water several times a week, well done! <br /> <br />From 6 months of age, it's a good idea to offer small amounts of cooled boiled water in a 'sippy' cup. This helps your baby get used to both the taste of water and drinking from a cup.<br /> <br />Just be careful not to give <i>too much water</i> because this can fill up your baby's tiny tummy and leave little room for breastmilk/formula and solids!<br /> <br />Read more about <a onclick='q1_modal();'>drinks</a> and <a onclick='q1_modal();'>introducing a sippy cup</a>.<br /><br /></p>")
+            } else {
+                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>It's fantastic that you are offering your baby water at least once a day, well done! <br /> <br />From 6 months of age, it's a good idea to offer small amounts of cooled boiled water in a 'sippy' cup. This helps your baby get used to both the taste of water and drinking from a cup.<br /> <br />Just be careful not to give <i>too much water</i> because this can fill up your baby's tiny tummy and leave little room for breastmilk/formula and solids!<br /> <br />Read more about <a onclick='q1_modal();'>drinks</a> and <a onclick='q1_modal();'>introducing a sippy cup</a>.<br /><br /></p>")
+            }
+
+            if (ans5 == "g") {
+                $('#pg6-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great! The <i>only</i> drinks recommended for babies are breastmilk/formula and tastes of cooled boiled water in a <a onclick='q1_modal();'>sippy cup</a>. <br /> <br />Juices (including 100% fruit juice), soft drinks, cordial, sports drinks and other sweetened drinks are <i>not</i> recommended because they can: <br /><ul class='mbn-text'><li>damage growing teeth - even before they have come through</li><li>cause your baby to gain too much weight, get tummy upsets and diarrhoea</li><li>fill up your baby's tummy, leaving less room for more nutritious milks/foods needed for your baby's growth and development</li><li>encourage your baby to develop a 'sweet tooth', making it harder to introduce other foods that aren't as sweet, such as some vegetables</li></ul> </p><p  class='mbn-text'>Offering your baby whole fruit (instead of juice) is much better because whole fruit is less concentrated in sugars and contains far more fibre; whole fruit also helps your baby learn to chew and swallow a variety of textures.<br /><br />Read more about <a onclick='q1_modal();'>drinks</a> for babies.</p></div>");
+            } else {
+                $('#pg6-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>The <i>only</i> drinks recommended for babies are breastmilk/formula and tastes of cooled boiled water in a <a onclick='q1_modal();'>sippy cup</a>. <br /> <br />Juices (including 100% fruit juice), soft drinks, cordial, sports drinks and other sweetened drinks are <i>not</i> recommended because they can: <br /><ul  class='mbn-text'><li>damage growing teeth - even before they have come through</li><li>cause your baby to gain too much weight, get tummy upsets and diarrhoea </li><li>fill up your baby's tummy, leaving less room for more nutritious milks/foods needed for your baby's growth and development</li><li>encourage your baby to develop a 'sweet tooth', making it harder to introduce other foods that aren't as sweet, such as some vegetables</li></ul> </p><p  class='mbn-text'>Offering your baby whole fruit (instead of juice) is much better because whole fruit is less concentrated in sugars and contains far more fibre; whole fruit also helps your baby learn to chew and swallow a variety of textures.<br /><br />Read more about <a onclick='q1_modal();'>drinks</a> for babies.</p></div>");
+            }
+
+            if (ans6 == "g") {
+                $('#pg7-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great! The <i>only</i> drinks recommended for babies are breastmilk/formula and tastes of cooled boiled water in a <a onclick='q1_modal();'>sippy cup</a>. <br /> <br />remember, <i>you</i> are your baby's most important role model - your own drinking habits, as well as the drinks you keep at home, all play a big role in what your baby will want to drink themselves, especially as they get older. <br /> <br />If you regularly drink fruit juice, soft drinks, cordials, sports drinks or energy drinks, now might be a good time to think about <a onclick='q1_modal();'>changing your <i>own</i> habits</a> for the benefit of the whole family!<br /> <br /></p>");
+            } else {
+                $('#pg7-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Soft drinks, cordial, sports drinks and other sweetened drinks are <i>not</i> recommended for babies or young children as they contain no nutritional value and tend to replace more nutritious foods and drinks (e.g. breastmilk/formula and <a onclick='q1_modal();'>healthy solids</a>) needed for healthy growth and development.<br /> <br />remember, <i>you</i> are your baby's most important role model - your own drinking habits, as well as the drinks you keep at home, all play a big role in what your baby will want to drink themselves, especially as they get older. <br /> <br />If you regularly drink fruit juice, soft drinks, cordials, sports drinks or energy drinks, now might be a good time to think about <a onclick='q1_modal();'>changing your <i>own</i> habits</a> for the benefit of the whole family!<br /> <br /></p>");
+            }
+
+            if (ans7 == "g") {
+                $('#pg8-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great! Biscuits (even those designed for kids!), cakes, doughnuts and muesli bars are <i>not</i> recommended for babies and young children as they have little nutritional value and tend to replace more nutritious foods and drinks (e.g. breastmilk/formula and <a onclick='q1_modal();'>healthy solids</a>) needed for healthy growth and development.<br /> <br />Offering these foods regularly can also encourage your baby to develop a preference for these foods down the track, which can set them up for poorer health in the long run.<br /> <br />Read more about <a onclick='q1_modal();'>promoting healthy habits right from the start </a> and always try to be conscious of <a onclick='q1_modal();'>your <i>own</i> eating habits </a>as your baby will want to eat what you do!<br /> <br /></p>");
+            } else {
+                $('#pg8-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Biscuits (even those designed for kids!), cakes, doughnuts and muesli bars are <i>not</i> recommended for babies and young children as they have little nutritional value and tend to replace more nutritious foods and drinks (e.g. breastmilk/formula and <a onclick='q1_modal();'>healthy solids</a>) needed for healthy growth and development.<br /> <br />Offering these foods regularly can also encourage your baby to develop a preference for these foods down the track, which can set them up for poorer health in the long run.<br /> <br />Read more about <a onclick='q1_modal();'>promoting healthy habits right from the start </a> and always try to be conscious of <a onclick='q1_modal();'>your <i>own</i> eating habits </a>as your baby will want to eat what you do!<br /> <br /></p>");
+            }
+
+            if (ans8 == "g") {
+                $('#pg9-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Fantastic! These foods are very high in salt and <i>not<i> suitable for your baby.<br /> <br />In fact, eating high salt foods early in life can result in a preference for these foods down the track, which can then lead to poorer health in the long run.<br /> <br />Salty snack foods also have very little nutritional value and tend to replace more nutritious foods and drinks (e.g. breastmilk/formula and <a onclick='q1_modal();'>healthy solids</a>) needed for healthy growth and development.<br /> <br />Check out our <a onclick='q1_modal();'>recipe section </a> for some healthy snack ideas!<br /> <br /></p>");
+            } else {
+                $('#pg9-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>These foods are very high in salt and <i>not<i> suitable for your baby.<br /> <br />In fact, eating high salt foods early in life can result in a preference for these foods down the track, which can then lead to poorer health in the long run.<br /> <br />Salty snack foods also have very little nutritional value and tend to replace more nutritious foods and drinks (e.g. breastmilk/formula and <a onclick='q1_modal();'>healthy solids</a>) needed for healthy growth and development.<br /> <br />Check out our <a onclick='q1_modal();'>recipe section </a> for some healthy snack ideas!<br /> <br /></p>");
+            }
+
+            if (ans9 == "g") {
+                $('#pg10-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great!<br /> <br />These foods are <i>not</i> suitable for your baby due to their high levels of salt and fat - especially those from restaurants or fast food outlets, as they typically use less healthy oils and add heaps of salt.  <br /> <br />Potato is fine to offer your baby but it's best when boiled, mashed or roasted in a small amount of olive or canola oil. <br /> <br />If you know you'll be eating out, try <a onclick='q1_modal();'>making your baby's meal at home </a> and bringing it with you - many places will even heat it for you if you ask. <br /> <br /></p>");
+            } else {
+                $('#pg10-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>These foods are <i>not</i> suitable for your baby due to their high levels of salt and fat - especially those from restaurants or fast food outlets, as they typically use less healthy oils and add heaps of salt.  <br /> <br />Potato is fine to offer your baby but it's best when boiled, mashed or roasted in a small amount of olive or canola oil. <br /> <br />If you know you'll be eating out, try <a onclick='q1_modal();'>making your baby's meal at home </a> and bringing it with you - many places will even heat it for you if you ask. <br /> <br /></p>");
+            }
+
+            if (ans10 == "d" || ans10 == "e") {
+                $('#pg11-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Perfect! <br /> <br />Because your baby's taste buds are super sensitive so there is no need to add sugar or salt to their food. And even if your baby's food tastes bland to <i>you</i>, don't worry, it will be just fine for them!<br /> <br />You're probably already in this habit, but don't forget to take out your baby's portion of the family meal <i>before</i> adding any salt or sugar, including stocks and sauces (which can contain a lot of salt and sugar). This will ensure that your baby is tasting the <i>actual foods</i>, rather than any added salt or sugar.<br /> <br />If you tend to add salt or sugar to your meals - whether as table salt, seasonings, stocks or sauces such as mayonnaise, soy or tomato sauce - you might like to start reducing how much you use to improve the health of the whole family!<br /> <br />For some tasty meal ideas, without the added salt and sugar, check out our <a onclick='q1_modal();'>recipe section</a>!<br /> <br /></p>");
+            } else {
+                $('#pg11-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Your baby's taste buds are super sensitive so there is no need to add sugar or salt to their food. And even if your baby's food tastes bland to <i>you</i>, don't worry, it will be just fine for them!<br /> <br />Don't forget to take out your baby's portion of the family meal <i>before</i> adding any salt or sugar, including stocks and sauces (which can contain a lot of salt and sugar). This will ensure that your baby is tasting the <i>actual foods</i>, rather than any added salt or sugar.<br /> <br />If you tend to add salt or sugar to your meals - whether as table salt, seasonings, stocks or sauces such as mayonnaise, soy or tomato sauce - you might like to start reducing how much you use to improve the health of the whole family!<br /> <br />For some tasty meal ideas, without the added salt and sugar, check out our <a onclick='q1_modal();'>recipe section</a>!<br /> <br /></p>");
+            }
+
+
+
+
+            // DONE - display the answers
+            $('#pg2-ans').show();
+            $('#pg3-ans').show();
+            $('#pg4-ans').show();
+            $('#pg5-ans').show();
+            $('#pg6-ans').show();
+            $('#pg7-ans').show();
+            $('#pg8-ans').show();
+            $('#pg9-ans').show();
+            $('#pg10-ans').show();
+            $('#pg11-ans').show();
+
+            $('input[name=q1-options]').attr('disabled', true);
+            $('input[name=q2-options]').attr('disabled', true);
+            $('input[name=q3-options]').attr('disabled', true);
+            $('input[name=q4-options]').attr('disabled', true);
+            $('input[name=q5-options]').attr('disabled', true);
+            $('input[name=q6-options]').attr('disabled', true);
+            $('input[name=q7-options]').attr('disabled', true);
+            $('input[name=q8-options]').attr('disabled', true);
+            $('input[name=q9-options]').attr('disabled', true);
+            $('input[name=q10-options]').attr('disabled', true);
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/baby_food_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    $(".preloader-wrapper").removeClass("hide");
+                    var postData = {
+                        user_id: userId,
+                        ans1: ans1,
+                        ans2: ans2,
+                        ans3: ans3,
+                        ans4: ans4,
+                        ans5: ans5,
+                        ans6: ans6,
+                        ans7: ans7,
+                        ans8: ans8,
+                        ans9: ans9,
+                        ans10: ans10
+                    };
+                    if (data.length === 0) {
+                        $.ajax({
+                            type: "post",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/baby_food_quiz",
+                            data: JSON.stringify(postData),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+                    } else {
+                        var entryId = data[0].id;
+                        var postData = {
+                            ans1: ans1,
+                            ans2: ans2,
+                            ans3: ans3,
+                            ans4: ans4,
+                            ans5: ans5,
+                            ans6: ans6,
+                            ans7: ans7,
+                            ans8: ans8,
+                            ans9: ans9,
+                            ans10: ans10
+                        };
+                        $.ajax({
+                            type: "patch",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/baby_food_quiz/" + entryId,
+                            data: JSON.stringify(postData),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+
+                    }
+
+                    $("#mark").addClass("hide");
+
+                    $("#clear").removeClass("hide");
+
+                });
+
+
+
+
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, 'fast');
+        }
+
+        function q1_modal() {
+            $('#q1-modal').show();
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div id="loader-wrapper" class="preloader-wrapper hide">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!--General Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p></p>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+    </div>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/landing.png" />
+            <span class="card-title mbn-card-title" id="section-title" onclick="Load('tools');">
+            <i class="fa fa-chevron-left"></i> Tools
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title" onclick="Load('tools');">
+            <i class="fa fa-chevron-left"></i> Tools
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll">
+            <div id="pg1">
+                <p class="mbn-section">Baby food quiz</p>
+                <p class="mbn-text">
+                    If your baby has already started on solid foods, then this quiz will give you some feedback on how you're going feeding your baby solid food as well as some links to helpful hints and tips!
+                    <br /><br />
+                </p>
+                <div class="login-btn" onclick="startQuiz()">Begin quiz</div>
+            </div>
+
+            <div id="pg2">
+                <div id="clear" class="login-btn hide" onclick="clearAnswers()" style="margin-right:0">Redo quiz</div>
+
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">1.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you offer your baby vegetables?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q1-a" value="a" name="q1-options" type="radio">
+                                    <label for="q1-a">Never or rarely</label>
+                                </p>
+                                <p>
+                                    <input id="q1-b" value="b" name="q1-options" type="radio">
+                                    <label for="q1-b">Less than once a week </label>
+                                </p>
+                                <p>
+                                    <input id="q1-c" value="c" name="q1-options" type="radio">
+                                    <label for="q1-c">1-2 times a week </label>
+                                </p>
+                                <p>
+                                    <input id="q1-d" value="d" name="q1-options" type="radio">
+                                    <label for="q1-d">3-4 times a week </label>
+                                </p>
+                                <p>
+                                    <input id="q1-e" value="e" name="q1-options" type="radio">
+                                    <label for="q1-e">5-6 times a week </label>
+                                </p>
+                                <p>
+                                    <input id="q1-f" value="f" name="q1-options" type="radio">
+                                    <label for="q1-f">About once a day </label>
+                                </p>
+                                <p>
+                                    <input id="q1-g" value="g" name="q1-options" type="radio">
+                                    <label for="q1-g">2 or more times a day </label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg2-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg3">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">2.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How many <u>different types</u> of vegetables have you offered your baby?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q2-a" value="a" name="q2-options" type="radio">
+                                    <label for="q2-a">Haven't offered vegetables yet</label>
+                                </p>
+                                <p>
+                                    <input id="q2-b" value="b" name="q2-options" type="radio">
+                                    <label for="q2-b">1</label>
+                                </p>
+                                <p>
+                                    <input id="q2-c" value="c" name="q2-options" type="radio">
+                                    <label for="q2-c">2-3</label>
+                                </p>
+                                <p>
+                                    <input id="q2-d" value="d" name="q2-options" type="radio">
+                                    <label for="q2-d">4-5</label>
+                                </p>
+                                <p>
+                                    <input id="q2-e" value="e" name="q2-options" type="radio">
+                                    <label for="q2-e">5+</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg3-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg4">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">3.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you offer your baby fruit?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q3-a" value="a" name="q3-options" type="radio">
+                                    <label for="q3-a">Never or rarely</label>
+                                </p>
+                                <p>
+                                    <input id="q3-b" value="b" name="q3-options" type="radio">
+                                    <label for="q3-b">Less than once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q3-c" value="c" name="q3-options" type="radio">
+                                    <label for="q3-c">1-2 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q3-d" value="d" name="q3-options" type="radio">
+                                    <label for="q3-d">3-4 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q3-e" value="e" name="q3-options" type="radio">
+                                    <label for="q3-e">5-6 times a week </label>
+                                </p>
+                                <p>
+                                    <input id="q3-f" value="f" name="q3-options" type="radio">
+                                    <label for="q3-f">About once a day </label>
+                                </p>
+                                <p>
+                                    <input id="q3-g" value="g" name="q3-options" type="radio">
+                                    <label for="q3-g">2 or more times a day </label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg4-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg5">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">4.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you offer your baby water to drink?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q4-a" value="a" name="q4-options" type="radio">
+                                    <label for="q4-a">Never or rarely</label>
+                                </p>
+                                <p>
+                                    <input id="q4-b" value="b" name="q4-options" type="radio">
+                                    <label for="q4-b">Less than once a week </label>
+                                </p>
+                                <p>
+                                    <input id="q4-c" value="c" name="q4-options" type="radio">
+                                    <label for="q4-c">1-2 times a week </label>
+                                </p>
+                                <p>
+                                    <input id="q4-d" value="d" name="q4-options" type="radio">
+                                    <label for="q4-d">3-4 times a week  </label>
+                                </p>
+                                <p>
+                                    <input id="q4-e" value="e" name="q4-options" type="radio">
+                                    <label for="q4-e">5-6 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q4-f" value="f" name="q4-options" type="radio">
+                                    <label for="q4-f">About once a day</label>
+                                </p>
+                                <p>
+                                    <input id="q4-g" value="g" name="q4-options" type="radio">
+                                    <label for="q4-g">2 or more times a day </label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg5-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg6">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">5.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you offer your baby fruit juice (including 100% juice and freshly squeezed juice)?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q5-a" value="a" name="q5-options" type="radio">
+                                    <label for="q5-a">2 or more times a day</label>
+                                </p>
+                                <p>
+                                    <input id="q5-b" value="b" name="q5-options" type="radio">
+                                    <label for="q5-b">About once a day </label>
+                                </p>
+                                <p>
+                                    <input id="q5-c" value="c" name="q5-options" type="radio">
+                                    <label for="q5-c">5-6 times a week </label>
+                                </p>
+                                <p>
+                                    <input id="q5-d" value="d" name="q5-options" type="radio">
+                                    <label for="q5-d">3-4 times a week  </label>
+                                </p>
+                                <p>
+                                    <input id="q5-e" value="e" name="q5-options" type="radio">
+                                    <label for="q5-e">1-2 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q5-f" value="f" name="q5-options" type="radio">
+                                    <label for="q5-f">Less than once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q5-g" value="g" name="q5-options" type="radio">
+                                    <label for="q5-g">Never or rarely</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg6-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg7">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">6.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you offer your baby soft drinks, cordial, sports drinks or other sweetened drinks?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q6-a" value="a" name="q6-options" type="radio">
+                                    <label for="q6-a">2 or more times a day</label>
+                                </p>
+                                <p>
+                                    <input id="q6-b" value="b" name="q6-options" type="radio">
+                                    <label for="q6-b">About once a day </label>
+                                </p>
+                                <p>
+                                    <input id="q6-c" value="c" name="q6-options" type="radio">
+                                    <label for="q6-c">5-6 times a week </label>
+                                </p>
+                                <p>
+                                    <input id="q6-d" value="d" name="q6-options" type="radio">
+                                    <label for="q6-d">3-4 times a week  </label>
+                                </p>
+                                <p>
+                                    <input id="q6-e" value="e" name="q6-options" type="radio">
+                                    <label for="q6-e">1-2 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q6-f" value="f" name="q6-options" type="radio">
+                                    <label for="q6-f">Less than once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q6-g" value="g" name="q6-options" type="radio">
+                                    <label for="q6-g">Never or rarely</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg7-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg8">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">7.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you offer your baby sweet biscuits (e.g. Tiny Teddies), savoury biscuits (e.g. Shapes), cakes, doughnuts or muesli bars?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q7-a" value="a" name="q7-options" type="radio">
+                                    <label for="q7-a">2 or more times a day</label>
+                                </p>
+                                <p>
+                                    <input id="q7-b" value="b" name="q7-options" type="radio">
+                                    <label for="q7-b">About once a day </label>
+                                </p>
+                                <p>
+                                    <input id="q7-c" value="c" name="q7-options" type="radio">
+                                    <label for="q7-c">5-6 times a week </label>
+                                </p>
+                                <p>
+                                    <input id="q7-d" value="d" name="q7-options" type="radio">
+                                    <label for="q7-d">3-4 times a week  </label>
+                                </p>
+                                <p>
+                                    <input id="q7-e" value="e" name="q7-options" type="radio">
+                                    <label for="q7-e">1-2 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q7-f" value="f" name="q7-options" type="radio">
+                                    <label for="q7-f">Less than once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q7-g" value="g" name="q7-options" type="radio">
+                                    <label for="q7-g">Never or rarely</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg8-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg9">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">8.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section" id="pg9-question">
+                                How often do you offer your baby chips (crisps) or other salty snacks such as Twisties or corn chips?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q8-a" value="a" name="q8-options" type="radio">
+                                    <label for="q8-a">2 or more times a day</label>
+                                </p>
+                                <p>
+                                    <input id="q8-b" value="b" name="q8-options" type="radio">
+                                    <label for="q8-b">About once a day </label>
+                                </p>
+                                <p>
+                                    <input id="q8-c" value="c" name="q8-options" type="radio">
+                                    <label for="q8-c">5-6 times a week </label>
+                                </p>
+                                <p>
+                                    <input id="q8-d" value="d" name="q8-options" type="radio">
+                                    <label for="q8-d">3-4 times a week  </label>
+                                </p>
+                                <p>
+                                    <input id="q8-e" value="e" name="q8-options" type="radio">
+                                    <label for="q8-e">1-2 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q8-f" value="f" name="q8-options" type="radio">
+                                    <label for="q8-f">Less than once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q8-g" value="g" name="q8-options" type="radio">
+                                    <label for="q8-g">Never or rarely</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg9-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg10">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">9.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you offer your baby hot chips, French fries, wedges or fried potatoes?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q9-a" value="a" name="q9-options" type="radio">
+                                    <label for="q9-a">2 or more times a day</label>
+                                </p>
+                                <p>
+                                    <input id="q9-b" value="b" name="q9-options" type="radio">
+                                    <label for="q9-b">About once a day </label>
+                                </p>
+                                <p>
+                                    <input id="q9-c" value="c" name="q9-options" type="radio">
+                                    <label for="q9-c">5-6 times a week </label>
+                                </p>
+                                <p>
+                                    <input id="q9-d" value="d" name="q9-options" type="radio">
+                                    <label for="q9-d">3-4 times a week  </label>
+                                </p>
+                                <p>
+                                    <input id="q9-e" value="e" name="q9-options" type="radio">
+                                    <label for="q9-e">1-2 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q9-f" value="f" name="q9-options" type="radio">
+                                    <label for="q9-f">Less than once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q9-g" value="g" name="q9-options" type="radio">
+                                    <label for="q9-g">Never or rarely</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg10-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg11">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">10.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you add <u>salt or sugar</u> to your baby's food?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q10-a" value="a" name="q10-options" type="radio">
+                                    <label for="q10-a">Always</label>
+                                </p>
+                                <p>
+                                    <input id="q10-b" value="b" name="q10-options" type="radio">
+                                    <label for="q10-b">Often</label>
+                                </p>
+                                <p>
+                                    <input id="q10-c" value="c" name="q10-options" type="radio">
+                                    <label for="q10-c">Sometimes </label>
+                                </p>
+                                <p>
+                                    <input id="q10-d" value="d" name="q10-options" type="radio">
+                                    <label for="q10-d">Rarely  </label>
+                                </p>
+                                <p>
+                                    <input id="q10-e" value="e" name="q10-options" type="radio">
+                                    <label for="q10-e">Never</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg11-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <br />
+            <br />
+
+            <div id="mark" class="login-btn" onclick="mark()">Submit answers</div>
+
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p>
+                                <img src="../../images/topics.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/tools-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="q1-modal" class="tools-content">
+        <span class="tools-close"><i class="fa fa-times-circle fa-2x" onclick="$('#q1-modal').hide();"></i></span>
+        <p>
+            <br /><br /><br /> Content is loaded here.
+        </p>
+    </div>
+</body>
+
+</html>

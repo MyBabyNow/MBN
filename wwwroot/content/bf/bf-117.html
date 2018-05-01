@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/return-to-work.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.7">Returning to work</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('1.1.7a');">Breastfeeding rights</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.7e');">Feeding options</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.7g');">How to express at work</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.7h');">Step 1: talk about breastfeeding with your employer</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.7k');">Step 2: organise the practical stuff</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.7l');">Step 3: help your baby start to adjust to you being away</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.7m');">Step 4: try to stay positive and persistent once you are back at work!</a>
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.7a">
+                <b>Breastfeeding rights</b>
+                <br> Returning to, or starting work after having a baby is a big decision, especially if you're still breastfeeding and want to continue. In Australia, you have a right to breastfeed or <a onclick="localSecJump('bf-1111.html');">express milk</a> anywhere, including at work.
+            </p>
+            <p class="mbn-text">
+                The Federal Sex Discrimination Act says that:
+            </p>
+            <ul>
+                <li> it is illegal for employers to discriminate against a woman because she is breastfeeding
+                </li>
+                <li> employers have to try to provide what you need if you want to breastfeed or <a onclick="localSecJump('bf-1111.html');">express milk</a> at work
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.7b">
+                Australian employers are getting better at supporting breastfeeding mums but many may feel unsure about how to start a conversation about breastfeeding in the workplace. Don't be afraid to bring it up with them.
+            </p>
+
+            <p class="mbn-text" id="1.1.7c">
+                You may like to refer your employer to a program offered by the <a onclick="localSecJump('bf-119.html#1.1.9o');">Australian Breastfeeding Association</a> - <a href="https://www.breastfeeding.asn.au/workplace/employer_resources" target="_blank">Breastfeeding Friendly Workplace</a> - which helps workplaces become accredited as 'breastfeeding friendly'.
+            </p>
+
+            <p class="mbn-text" id="1.1.7d">
+                At the end of the day, it is <b>your legal right</b> to breastfeed or <a onclick="localSecJump('bf-1111.html');">express milk</a> anywhere and at any time in Australia, including at work.
+            </p>
+
+            <p class="mbn-text" id="1.1.7e">
+                <b>Feeding options</b>
+                <br> Some mums find it too hard to keep up breastfeeding when they return to work, while others find that continuing to breastfeed helps them to feel connected with their baby, especially now that they are apart more often.
+            </p>
+
+            <p class="mbn-text" id="1.1.5f">
+                Don't be put off breastfeeding just because you're returning to work - there are many options to try, such as:
+            </p>
+            <ul>
+                <li>feeding your baby solids and <a onclick="localSecJump('solids/solids-416.html');">other drinks</a> when you're apart <a onclick="localSecJump('solids/solids-411.html');">(if they're old enough)</a> and breastfeeding when you are together
+                </li>
+                <li>organising flexible working arrangements if possible - this could be different hours or working from home so that you can keep breastfeeding
+                </li>
+                <li>meeting with your baby during work hours so you can breastfeed - either by going to your baby or having your baby brought to you
+                </li>
+                <li><a onclick="localSecJump('bf-1111.html');">expressing milk</a> at work - use the expressed milk for feeding your baby when you're away from them, then breastfeed as usual (or more if you like) outside of work. This can be worth the effort, because:
+                </li>
+                <ul>
+                    <li>it helps keep up your <a onclick="localSecJump('bf-113.html');">milk supply</a>
+                    </li>
+                    <li>your baby still gets all the <a onclick="localSecJump('bf-111.html#1.1.1d');">benefits of your breastmilk</a>
+                    </li>
+                    <li>breastfed babies tend to be sick less often than formula fed babies - which may mean less sick time off work!
+                    </li>
+                    <li>It can help you to feel close to your baby while you're away from them
+                    </li>
+                </ul>
+                <li><a onclick="localSecJump('mf/mf-311.html');">mixed feeding</a> - your baby has formula when you are at work and then breastfeeds when you are together
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.7g">
+                <b>How to express at work</b>
+                <br> Not sure where to start? Work through the following 4 steps for a guide on how to <a onclick="localSecJump('bf-1111.html');">express milk</a> at work.
+            </p>
+
+            <p class="mbn-text" id="1.1.7h">
+                <b>Step 1: talk about breastfeeding with your employer</b>
+                <br> It's best to talk with your employer about your breastfeeding needs before you go back to work. Try to make a time to discuss your needs about 2 months before you go back.
+            </p>
+            <p class="mbn-text">
+                Wondering what to say?
+            </p>
+            <p class="mbn-text">
+                Let your boss know that you would like to continue breastfeeding when you return to work and some of the things you'll need for this to happen.
+            </p>
+
+            <p class="mbn-text" id="1.1.7i">
+                Depending on the age of your baby when you return to work, you might need:
+            </p>
+            <ul>
+                <li>a private area to <a onclick="localSecJump('bf-1111.html');">express</a> (not the toilet) with a comfortable chair
+                </li>
+                <li>fridge space to <a onclick="localSecJump('bf-1111.html#1.1.11ab');">store expressed breastmilk</a>
+                </li>
+                <li>somewhere to store a <a onclick="localSecJump('bf-1117.html#1.1.17h');">breast pump</a> (if you use one)
+                </li>
+                <li>a powerpoint near a low table and chair (if you're using an <a onclick="localSecJump('bf-1111.html#1.1.11t');">electric pump)</a>
+                </li>
+                <li>somewhere to wash your hands and <a onclick="localSecJump('bf-1111.html#1.1.11ah');">rinse out pump parts</a>
+                </li>
+                <li>breaks during your working day to express milk
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.7j">
+                Try to:
+            </p>
+            <ul>
+                <li>talk to other workmates that may have breastfed when they returned to work to ask them for tips
+                </li>
+                <li>find out what your employer's attitudes and policies towards breastfeeding are before returning - your work's Equal Employment Opportunity Officer or Human Resources department should be able to help
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.7k">
+                <b>Step 2: organise the practical stuff</b>
+                <br> As the time for you to return to work gets closer, confirm with your employer that they know exactly <a onclick="localSecJump('1.1.7i');">what you will need</a>.
+            </p>
+            <p class="mbn-text">
+                It's also a good time for you to start getting organised:
+            </p>
+            <ul>
+                <li>test different <a onclick="localSecJump('bf-1111.html');">expressing techniques</a> to see what works best for you - some mums prefer to <a onclick="localSecJump('bf-1111.html#1.1.11l');">hand express</a>, while others prefer an <a onclick="localSecJump('bf-1111.html#1.1.11t');">electric pump</a>
+                </li>
+                <li>start <a onclick="localSecJump('bf-1111.html');">expressing milk</a> at home a few weeks before you go back, so that you will:
+                </li>
+                <ul>
+                    <li>have a store before returning to work
+                    </li>
+                    <li>get a chance to practice and know what to expect
+                    </li>
+                    <li>be able to set up a routine
+                    </li>
+                </ul>
+                <li><a onclick="localSecJump('bf-1111.html');">express</a> after as many day time feeds as you can - you will get less milk this way but if you express between feeds and breastfeed as well, your <a onclick="localSecJump('bf-113.html');">milk supply</a> might increase and make you uncomfortable!
+                </li>
+                <li>collect the things you'll need to take to work:
+                </li>
+                <ul>
+                    <li>a <a onclick="localSecJump('bf-1117.html#1.1.17h');">breast pump</a> (<a onclick="localSecJump('bf-1111.html#1.1.11t');">electric</a> or <a onclick="localSecJump('bf-1111.html#1.1.11q');">manual</a>) if you're not <a onclick="localSecJump('bf-1111.html#1.1.11l');">hand expressing</a>
+                    </li>
+                    <li>a coolbag or coolbox with ice packs
+                    </li>
+                    <li><a onclick="localSecJump('bf-1117.html#1.1.17f');">breast pads</a> (if you leak or just in case)
+                    </li>
+                    <li><a onclick="localSecJump('bf-1117.html#1.1.17j');">bottles</a> or <a onclick="localSecJump('bf-1117.html#1.1.17i');">storage bags</a>
+                    </li>
+                </ul>
+            </ul>
+
+            <p class="mbn-text">
+                Don't forget that you will need fridge space to <a onclick="localSecJump('bf-1111.html#1.1.11ab');">store your expressed milk</a> in!
+            </p>
+
+            <p class="mbn-text" id="1.1.7l">
+                <b>Step 3: help your baby start to adjust to you being away</b>
+                <br> You going back to work is a big change for your baby, but don't worry, children cope with many different caring arrangements.
+            </p>
+            <p class="mbn-text">
+                Before you go back to work, try to:
+            </p>
+            <ul>
+                <li>get your baby <a onclick="localSecJump('bf-1112.html');">used to taking a bottle</a> (if they're not already) and remember that it can take time, but they will get there
+                </li>
+                <ul>
+                    <li>your baby is more likely to refuse a bottle if you are giving it, so if you are having trouble getting them to take it, try it with someone else giving the bottle
+                    </li>
+                </ul>
+                <li>have your baby get to know their carer
+                </li>
+                <ul>
+                    <li>leaving a piece of clothing that smells like you might help keep your baby calm while you're away
+                    </li>
+                </ul>
+            </ul>
+
+            <p class="mbn-text" id="1.1.7m">
+                <b>Step 4: try to stay positive and persistent once you are back at work!</b>
+                <br> Going back to work is a big adjustment for everyone, so go easy on yourself!
+            </p>
+            <p class="mbn-text">
+                Remember:
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('bf-1111.html');">expressing</a> might be hard at first but with practice and time it will get easier and soon become just another part of your day
+                </li>
+                <li>you can always call the <a href="tel:1800686268">ABA helpline </a>for extra help and advice if you need it
+                </li>
+            </ul>
+            <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

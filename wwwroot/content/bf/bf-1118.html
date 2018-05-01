@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/when-n-how-to-stop.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.18" Breastfeeding>When and how to stop</p>
+            <p class="mbn-text" id="1.1.18a">
+                <b>When should you stop breastfeeding?</b>
+                <br> Breastmilk alone gives your baby all the nutrition they need until you introduce solids at around 6 months. Once you <a onclick="localSecJump('solids/solids-411.html');">introduce solids</a>, it is recommended that you continue breastfeeding for up to 12 months or longer.
+            </p>
+            <p class="mbn-text">
+                That said, deciding when to stop (called 'weaning') is up to you and your baby. Some babies will decide that they have had enough, even if you are happy to continue - feeling sad or rejected is quite a normal reaction to this. This may also only be a temporary <a onclick="localSecJump('bf-118.html#1.1.8o');">breast refusal</a>, rather than true weaning.
+            </p>
+
+            <p class="mbn-text" id="1.1.18b">
+                <b>Why to keep breastfeeding, if you can</b>
+            </p>
+            <ul>
+                <li>better health, for you and your baby:
+                </li>
+                <ul>
+                    <li>your baby should have better health in the short and long term
+                    </li>
+                    <li>delays your period returning
+                    </li>
+                    <li>breastfeeding burns lots of energy (kilojoules/calories) and helps you lose excess weight
+                    </li>
+                    <li>it's a chance to snuggle, especially as your baby becomes more active and doesn't otherwise stop!
+                    </li>
+                </ul>
+                <li>more time and less fuss:
+                </li>
+                <ul>
+                    <li>breastmilk is always ready
+                    </li>
+                    <li>there is no sterilisation or preparation
+                    </li>
+                    <li>it's easier and quicker than the early days
+                    </li>
+                    <li>you get more time for sleep than formula feeding mums - no bottle preparation in the middle of the night!
+                    </li>
+                    <li>it's free!
+                    </li>
+                </ul>
+            </ul>
+            <p class="mbn-text" id="1.1.18c">
+                <b>Tips on how to stop breastfeeding</b>
+            </p>
+            <ul>
+                <li>go slow - this gives you and your baby time to adjust
+                </li>
+                <ul>
+                    <li>try giving your baby extra cuddles to make it easier for them if they are not quite ready to give up breastfeeds just yet
+                    </li>
+                    <li>going slowly also gives your body more time to get used to <a onclick="localSecJump('bf-113.html');">making less milk</a>
+                    </li>
+                </ul>
+                <li>wean to a cup or bottle - if your baby is 6 months or older, you can start teaching them to <a onclick="localSecJump('solids/solids-416.html#4.1.6g');">drink from a cup</a>
+                </li>
+                <li>replace the feed your baby is least interested in - then drop an extra feed every few days or once a week
+                </li>
+                <li><a onclick="localSecJump('bf-1111.html');">express</a> if you need to - if your breasts feel very full, express just enough so that you are comfortable but don't drain your breasts completely as this will stimulate them to keep <a onclick="localSecJump('bf-113.html');">making more milk</a>
+                </li>
+                <li>look for lumps - it could mean <a onclick="localSecJump('bf-118.html#1.1.8c');">blocked ducts</a> or <a onclick="localSecJump('bf-118.html#1.1.8d');">mastitis</a>
+                </li>
+                <li>if you are weaning an older baby or toddler, try:
+                </li>
+                <ul>
+                    <li>reducing their feeds and changing their routine gradually
+                    </li>
+                    <li>talking to them about the changes
+                    </li>
+                </ul>
+            </ul>
+
+            <p class="mbn-text" id="1.1.18d">
+                <b>Replacing breastfeeds</b>
+                <br> If your baby is:
+            </p>
+            <ul>
+                <li>under 12 months - you will need to replace the breastfeeds with <a onclick="localSecJump('ff/ff-211.html');">formula</a>
+                </li>
+                <li>12 months or older - use regular full cream cow's milk as their replacement drink
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Read more about the <a onclick="localSecJump('solids/solids-416.html');">types of drinks</a> suitable for your baby at different ages.
+            </p>
+            <p class="mbn-text">
+                Even if you were looking forward to stopping breastfeeding, it's not uncommon to feel a bit down after weaning your baby - talking to your <a onclick="localSecJump('bf-119.html#1.1.9i');">maternal and child health nurse</a> or the <a href="tel:1800686268">ABA helpline</a> can help.
+            </p>
+            <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,3134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/mbn.js"></script>
+    <script>
+        var lastScrollTop = 0; // Track the last event
+        var objToCheck;
+        var lastScrollAction = "";
+
+        $(document).ready(function() {
+            /*
+            $(document).ontouchmove(function(event) {
+                event.preventDefault();
+            });
+            */
+            objToCheck = $("#section-title");
+            $("#section-card-min").hide();
+        });
+
+        $(window).scroll(function() {
+            var st = objToCheck.offset().top - $(window).scrollTop();
+
+            if (st < lastScrollTop) {
+                if (parseInt(st) < 65 && lastScrollAction == "up") {
+                    // Change the type of card to display.
+                    $("#section-card").hide();
+                    $("#section-card-min").show();
+
+                    // Modify CSS to add the extra 50px room for content to be in the right place.
+                    $("#section-content").addClass("mbn-content-offset");
+
+                    // Set where to monitor for point of switch.
+                    objToCheck = $("#section-content");
+                }
+
+                lastScrollAction = "up";
+            } else {
+                if (parseInt(st) > 65 && lastScrollAction == "down") {
+                    // Reverse the card to display
+                    $("#section-card").show();
+                    $("#section-card-min").hide();
+
+                    // Modify CSS to remove the offset created as a result of swapping the display card.
+                    $("#section-content").removeClass("mbn-content-offset");
+
+                    // Set where to monitor for point of switch
+                    objToCheck = $("#section-title");
+                }
+
+                lastScrollAction = "down";
+            }
+
+            lastScrollTop = st; // Remember this as the current position
+        });
+    </script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="../images/favorites.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Important tips</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Important tips</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+
+            <p class="mbn-text" id="6.1.1a">
+                Preparing food for your baby doesn't need to cost the earth, be difficult or time consuming, or even that different from what you eat as a family! Below you will find a few helpful tips before coming to a menu of the recipes included in this section. Although each recipe is grouped by suggested meal time, keep in mind that many are suited to other meal times as well and that your baby will probably just be happy to eat, regardless of the type of food they are presented and the various times of the day!
+            </p>
+
+            <p class="mbn-section" id="6.1.1b">Important tips</p>
+            <p class="mbn-text">
+                <b>What texture is right for my baby?</b>
+                <br /> Just as a variety of different foods is important, so is a variety of age-appropriate textures. Varying the food texture helps your baby learn to chew (even if they don't yet have teeth!) as well as swallow.
+                <br /> Generally, if your baby is
+                <ul>
+                    <li>
+                        <u>6 - 8 months</u> - use only pur&eacute;ed and mashed foods but move to minced (or mashed with a fork) and chopped foods soon
+                    </li>
+                    <li>
+                        <u>8 months</u> - begin <a href="#4.4.1">finger foods</a>.
+                    </li>
+                    <li>
+                        <u>12 months</u> - your baby can eat the variety of foods eaten by the rest of the family
+                    </li>
+                </ul>
+            </p>
+            <p class="mbn-text">
+                See the <a href="#6.7.1">video library</a> for some tips on preparing different textures, including how to make some adult meals age appropriate for your baby.
+            </p>
+
+            <p class="mbn-text" id="6.1.1c">
+                <b>Keep the cost down</b>
+                <br />
+                <ul>
+                    <li>
+                        fresh fruit and vegetables that are 'in season' are cheaper, tastier and more nutritious
+                    </li>
+                    <li>
+                        if you don't have one of the ingredients listed in a recipe, try substituting ingredients or experimenting, rather than specifically buying the item
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-text" id="6.1.1d">
+                <b>Keep it healthy</b>
+                <br />
+                <ul class="decimals">
+                    <li>
+
+                        avoid adding sugar, salt (including stocks), extra fats and oils to foods for your baby
+                    </li>
+                    <li>
+                        choose tinned fruit that is &lsquo;unsweetened&rsquo; or 'in fruit juice' instead of syrup
+                    </li>
+                    <li>
+                        practice good hygiene by washing hands, using clean utensils and working on a clean counter
+                    </li>
+                    <li>
+
+                        It is OK to use a little cow's milk in cooking before your baby is 12 months old
+                    </li>
+                </ul>
+
+            </p>
+            <p class="mbn-text" id="6.1.1e">
+                <b>Save time and effort</b>
+                <br />
+                <ul class="decimals">
+                    <li>
+                        for the most part, your baby can eat the same meals as you,meaning you don't need to prepare separate meals - look for those recipes labelled as good for the whole family and follow the instructions at the end to adapt the recipe 'to serve the family'
+                    </li>
+                    <li>
+                        cook up more than you need and keep extras in the fridge or freeze extra for quick easy meals at a later time
+                    </li>
+                    <li>
+                        keep some frozen vegetables in the freezer and tinned fruit in the cupboard as back-ups for when you run out of fresh vegetables and fruit
+                    </li>
+                </ul>
+
+            </p>
+            <p class="mbn-text" id="6.1.1f">
+                <b>All recipes have been carefully sourced but keep in mind that:</b>
+                <br />
+                <ul>
+                    <li>
+                        these recipes are guides only - you may like to experiment in your own kitchen to get things right for you and your baby's tastes
+                    </li>
+                    <li>
+                        cooking times (for example) may be slightly different depending on your appliances and/or the ingredients used the number of serves will vary depending on your baby's age
+                    </li>
+                    These recipes are a great start for ideas but don't be afraid to change them or use any ingredients you already have at home!
+                </ul>
+            </p>
+            <p class="mbn-section" id="6.1.1g">Menu</p>
+            <p class="mbn-section" id="6.2.1">Breakfast</p>
+            <p class="mbn-text">
+                <ul>
+                    <li>
+                        <a href="#6.2.1b">Banana oat porridge</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1c">Banana rice porridge</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1d">Bircher muesli</a>
+                    </li>  
+                    <li>
+                        <a href="#6.2.1e">Eggy bread</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1f">Fruit mush</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1g">Fruit mush and yoghurt</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1h">Super porridge</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1i">Tasty spinach scramble</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1j">Vegemite toast</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1k">Veggie omelette</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.1.1h"></p>
+            <p class="mbn-section" id="6.3.1">Lunch</p>
+            <p class="mbn-text">
+                <ul>
+                    <li>
+                        <a href="#6.3.1h">Broccoli and polenta mash</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1c">Cheesy leek and potato mash</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1d">Cheesy pasta sauce</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1e">Cheesy spinach spaghetti</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1f">Dahl</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1g">Eggy veg</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1h">Mushroom carbonara</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1i">Salmon and veggie couscous</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1j">Sweet potato and lentil soup</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1k">Tuna & creamed corn mac</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.1.1i"></p>
+            <p class="mbn-section" id="6.4.1">Dinner</p>
+            <p class="mbn-text">
+                <ul>
+                    <li>
+                        <a href="#6.4.1b">Baby stew (savoury mince)</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1c">Basic vegetable stir-fry</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1d">Beef and green beans</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1e">Chicken Bolognese</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1f">Chicken casserole</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1g">Fish and sweet potato mash</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1h">Fish patties</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1i">Lamb hotpot</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1j">Lentil cottage pie (veg)</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1k">Mini meatballs</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1l">Pumpkin, carrot and parsnip soup</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1m">Rainbow chips</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1n">Simple salmon pasta</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1o">Spaghetti Bolognese</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1p">Sweetcorn and pea risotto</a>
+                    </li>
+                    <li>
+                        <a href="#6.4.1q">Zany zucchini pasta</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.1.1j"></p>
+            <p class="mbn-section">Snacks</p> 
+            <p class="mbn-text">
+                <ul>
+                    <li>
+                        <a href="#6.5.1b">Baby rusks</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1c">Cheese straws</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1d">Cool bananas</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1e">Finger foods</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1f">Hummus (chickpea dip)</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1g">Peach rice</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1h">Pear muffins</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1i">Raspberry and pear yoghurt</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1j">Steamed veggies</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1k">Tasty sweet potato wedges</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1l">Veggie citrus muffins</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.1.1k" /p>
+            <p class="mbn-section">Drinks</p>
+            <p class="mbn-text">
+                <ul>
+                    <li>
+                        <a href="#6.6.1b">Milk</a>
+                    </li>
+                    <li>
+                        <a href="#6.6.1c">Water</a>
+                    </li>
+                    <li>
+                        <a href="#6.6.1d">Fruit juice</a>
+                    </li>
+                    <li>
+                        <a href="#6.6.1e">Cordial / fizzy drinks / soft - drinks / energy drinks</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.2.1">Recipes > Breakfast</p>
+            <p class="mbn-text">
+                Although listed as 'breakfast' foods, your baby will probably be happy with any of the below at any meal time!
+            </p>
+            <p class="mbn-section" id="6.2.1a">Breakfast</p>
+            <p class="mbn-text">
+                <ul>
+                    <li>
+                        <a href="#6.2.1b">Banana oat porridge</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1c">Banana rice porridge</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1d">Bircher muesli</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1e">Eggy bread</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1f">Fruit mush</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1g">Fruit mush and yoghurt</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1h">Super porridge</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1i">Tasty spinach scramble</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1j">Vegemite toast</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1k">Veggie omelette</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.2.1b">Banana Oat Porridge</p>
+            <p class="mbn-text">
+                <b>Good for:</b> formula fed babies or when your baby is 12 months or older because it can be made with cow's milk<br />
+                <b>Storage: </b> in the fridge for up to 3 days, covered<br />
+                <b>Note:</b> if you don't have bananas, make cinnamon oats by adding another pinch of cinnamon instead<br />
+            </p>
+            <p class="mbn-text">
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac12; cup 'quick cook' porridge oats
+                    </li>
+                    <li> 1 cup cow's milk or made up formula
+                    </li>
+                    <li> 1 small banana (sliced)
+                    </li>
+                    <li> 1 pinch ground cinnamon
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li style="list-style-type: decimal !important;">
+                        <u>Stovetop</u>: place the oats, milk and sliced banana in a pot and bring to the boil, stirring occasionally, then reduce heat and simmer for 2- 4 minutes.
+                    </li>
+
+                    <b>OR</b>
+
+                    <li style="list-style-type: decimal !important;">
+                        <u>Microwave</u>: place the oats, milk and sliced banana in microwave safe bowl, cover with lid or plastic wrap (pierced) and cook on high power for 1 minute then a further 4 minutes on medium power.
+                    </li>
+                    <li class="mbn-ol">
+                        Cook for longer or add more water/milk to adjust the consistency as needed.ore water/milk to adjust the consistency as needed.
+                    </li>
+                    <li class="mbn-ol">
+                        Remove from the heat or microwave and add cinnamon, stirring well.
+                    </li>
+                    <li class="mbn-ol">
+                        Once cooled, serve.
+                    </li>
+                    <li class="mbn-ol">
+                        Any unused porridge can be covered and refrigerated for up to 3 days.
+                    </li>
+                </ul>
+            </p>
+           
+            <p class="mbn-section" id="6.2.1c">Banana rice Porridge</p>
+            <p class="mbn-text">
+                <b>Good for:</b> introducing solids<br />
+                <b>Storage:</b> in the fridge for up to 2 days, covered<br />
+                <b>Note:</b> super easy and bound to be a favourite with your baby<br />
+            </p>
+            <p class="mbn-text">
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li>
+                        1 small ripe banana
+                    </li>
+                    <li>
+                        1-2 teaspoons baby rice cereal
+                    </li>
+                    <li>
+                        2 tablespoons your baby's usual milk (breast/made up formula milk)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol">
+                        Mash the banana well.
+                    </li>
+                    <li class="mbn-ol">
+                        Mix the rice and milk, and stir into the banana
+                    </li>
+                    <li class="mbn-ol">
+                        Adjust the texture with more milk or rice to make a runnier or firmer pur&eacute;e.
+                    </li>
+                    <li class="mbn-ol">
+                        Any unused porridge can be covered and refrigerated for up to 2 days.
+                    </li>
+                </ul>
+            </p>
+            
+            <p class="mbn-section" id="6.2.1d">Bircher muesli</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family
+                <b>Storage:</b> in the fridge for up to 2 days, covered
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 2 tablespoons rolled oats
+                    </li>
+                    <li> 3 tablespoons cow's milk (or made up formula milk)
+                    </li>
+                    <li> 3 tablespoons water
+                    </li>
+                    <li> 1 tablespoon unsweetened plain natural yoghurt
+                    </li>
+                    <li> &frac12; cup finely chopped dried fruit (e.g. apricots, dates and sultanas)
+                    </li>
+                    <li> 1 small pear or apple
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Mix everything together (except the pear or apple).
+                    </li>
+                    <li class="mbn-ol"> Cover and refrigerate overnight.
+                    </li>
+                    <li class="mbn-ol"> Before serving, grate the pear or apple (skin on) and stir into the oat mixture.
+                    </li>
+                    <li class="mbn-ol"> Serve cold in summer or gently warm for winter.
+                    </li>
+                </ul>
+            </p>
+            <p class="mbn-text">
+                <b>To serve the family</b>
+                <br /> Follow the same method but use the following amounts per adult:
+                <br />
+                <ul>
+                    <li class="mbn-ol"> <sup>1</sup>&frasl;<sub>3</sub> cup oats
+                    </li>
+                    <li class="mbn-ol"> &frac12; cup milk (your usual)
+                    </li>
+                    <li class="mbn-ol"> &frac14; cup unsweetened plain natural yoghurt
+                    </li>
+                    <li class="mbn-ol"> &frac12; cup water
+                    </li>
+                    <li class="mbn-ol"> &frac14; cup dried fruit
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.2.1e">Eggy bread</p>
+            <p class="mbn=text">
+                <b>Good for:</b> breakfast finger food<br />
+                <b>Note:</b> a real favourite with babies but always cook eggs well<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 slice soft wholemeal bread
+                    </li>
+                    <li> 1 egg (beaten)
+                    </li>
+                    <li> 1 teaspoon canola or olive oil margarine
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Heat margarine in a frying pan.
+                    </li>
+                    <li class="mbn-ol"> Dip the bread in the egg - coat both sides well.
+                    </li>
+                    <li class="mbn-ol"> Place bread in the pan and fry until golden brown on both sides.
+                    </li>
+                    <li class="mbn-ol"> Remove from the heat and drain excess margarine on paper towel.
+                    </li>
+                    <li class="mbn-ol"> Cut into fingers and cool before serving with small chunks of tomato or banana.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.2.1f">Fruit mush</p>
+            <p class="mbn-text">
+                <b>Good for:</b> great first food and dessert, for young and old<br />
+                <b>Storage: </b> : freeze or keep in the fridge for up to 3 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 handful washed chopped fresh fruit (e.g. apple, pear, peach, apricot (stones removed))
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Wash, core and dice fresh fruit.
+                    </li>
+                    <li  class="mbn-ol">
+                        <b>Stovetop:</b> place fruit in a small pot with just enough water to cover bottom of pot and cook for 10 - 15 minutes until soft.
+                    </li>
+            
+                    <b>OR</b>
+            
+                    <li class="mbn-ol">
+                        <b>Microwave: </b> place the oats, milk and sliced banana in microwave safe bowl, cover with lid or plastic wrap (pierced) and cook on high power for 1 minute then a further 4 minutes on medium power.
+                    </li>
+                    <li class="mbn-ol">
+                        Cook for longer or add more water/milk to adjust the consistency as needed.ore water/milk to adjust the consistency as needed.
+                    </li>
+                    <li class="mbn-ol">
+                        Remove from the heat or microwave and add cinnamon, stirring well.
+                    </li>
+                    <li class="mbn-ol">
+                        Once cooled, serve.
+                    </li>
+                    <li>
+                        Any unused porridge can be covered and refrigerated for up to 3 days.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.2.1g">Fruit mush and yoghurt</p>
+            <p class="mbn-text">
+                <b>Good for:</b> breakfast or dessert for the whole family<br />
+                <b>Storage:</b> in the fridge for up to 2 days, covered<br />
+                <b>Note:</b> :adjust the texture of the fruit for your baby's age and use chopped up whole fruit for adults<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac12; cup <a href="#6.2.1f"><u>Fruit mush</u></a>
+                    </li>
+                    <li> &frac12; cup unsweetened plain natural yoghurt
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Combine Fruit mush with yoghurt.
+                    </li>
+                    <li class="mbn-ol"> Add 'lumps' of softened fruit if you need a lumpy consistency.
+                    </li>
+                    <li class="mbn-ol"> Use or cover and refrigerate for up to 2 days.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.2.1h">Super porridge (wholegrain baby cereal)</p>
+            <p class="mbn-text">
+                <b>Good for:</b> any meal time<br />
+                <b>Storage: </b> se straight away and throw away any unused porridge, do not store - it is generally best not to reheat cooked rice<br />
+                <b>Note:</b> add some vegetables and meat/fish for a balanced meal<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac14; cup brown rice
+                    </li>
+                    <li> &frac14; cup dried red lentils
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Cook rice in water according to instructions on the packet and until it is soft then drain well.
+                    </li>
+                    <li class="mbn-ol"> Wash the lentils well.
+                    </li>
+                    <li class="mbn-ol"> Cook the lentils in 1 cup of water - bring to the boil then simmer until it looks like soup (add more water or simmer for longer as required).
+                    </li>
+                    <li class="mbn-ol"> Mix with rice.
+                    </li>
+                    <li class="mbn-ol"> Once cool enough, serve.
+                    </li>
+                    <li class="mbn-ol"> For younger babies, pur&eacute;e the mixed rice and lentils in blender with a little water or their usual milk (breastmilk/made up formula) until smooth.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.2.1h">Tasty spinach scramble</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Note:</b> : always cook eggs well<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 egg (beaten)
+                    </li>
+                    <li> 1 tablespoon onion (finely chopped)
+                    </li>
+                    <li> &frac14; cup frozen spinach (defrosted)
+                    </li>
+                    <li> 2 tablespoons unsweetened plain natural yoghurt
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Heat oil in a small frying pan.
+                    </li>
+                    <li class="mbn-ol"> Fry the onion for a few minutes or until tender.
+                    </li>
+                    <li class="mbn-ol"> Mix the beaten egg with yoghurt and spinach.
+                    </li>
+                    <li class="mbn-ol"> Pour the egg mixture into the pan and cook for a few minutes, stirring until the egg is cooked through.
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                Follow the same method but allow per adult:<br />
+                <ul>
+                    <li> 1 &frac12; eggs
+                    </li>
+                    <li> 2 tablespoons chopped onion
+                    </li>
+                    <li> &frac12; cup spinach
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.2.1j">Vegemite toast</p>
+            <p class="mbn-text">
+                <b>Good for:</b> breakfast finger food<br />
+                <b>Storage: </b> in the fridge for up to 1 day, covered<br />
+                <b>Note:</b> Vegemite is high in vitamin B and is an Aussie favourite but it is also high in salt so it should always be spread thinly and we shouldn't eat it very often - babies included.<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 slice wholemeal bread
+                    </li>
+                    <li> a 'smear' of canola or olive oil margarine (if desired)
+                    </li>
+                    <li> &frac12; teaspoon Vegemite
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Lightly toast bread.
+                    </li>
+                    <li class="mbn-ol"> Spread with margarine (if using) and Vegemite.
+                    </li>
+                    <li class="mbn-ol"> Cut into 'soldiers' (long strips of toast).
+                    </li>
+                    <li class="mbn-ol"> Serve
+                    </li>
+                    <li class="mbn-ol"> Any untouched toast can be offered later in the day as a snack.
+                    </li>
+                </ul>
+
+            </p>
+
+            <p class="mbn-section" id="6.2.1j">Veggie omelette</p>
+            <p class="mbn-text">
+                <b>Good for:</b> any meal time as well as breakfast; the whole family</br />
+                <b>Note:</b> always cook eggs well<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 egg (beaten)
+                    </li>
+                    <li> a splash water
+                    </li>
+                    <li> handful cooked mushrooms or frozen vegetables (leftovers are perfect)
+                    </li>
+                    <li> handful grated cheese (optional)
+                    </li>
+                    <li> pinch dried mixed herbs (optional)
+                    </li>
+                    <li> 1 teaspoon canola or olive oil margarine
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Melt margarine in a frying pan on medium heat.
+                    </li>
+                    <li class="mbn-ol"> Beat water and egg with herbs (if using).
+                    </li>
+                    <li class="mbn-ol"> Add egg mix to hot pan.
+                    </li>
+                    <li class="mbn-ol"> Cook the egg mix until the bottom has set on the pan.
+                    </li>
+                    <li class="mbn-ol"> Add the vegetables and sprinkle cheese (if using) over the top.
+                    </li>
+                    <li class="mbn-ol"> Finish cooking by placing pan under a hot grill for a few seconds if required to cook the egg all the way through (so there are no clear bits of egg).
+                    </li>
+                </ul>
+                <b>To serve the family</b><br /> 
+                Follow the same method but allow per adult:<br />
+                <ul>
+                    <li> 1 - 1&frac12; eggs
+                    </li>
+                    
+                    <b>AND</b>
+                   
+                    <li> for every extra adult: double the amount of water and vegetables
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.3.1">Recipes > Lunch</p>
+            <p class="mbn-text">
+                These 'lunch' recipes work equally well for dinner and, your baby will also probably be just as happy with them for snacks or breakfasts if you like!
+            </p>
+            <p class="mbn-section" id="6.3.1a">Lunch</p>
+                <ul>    
+                    <li>
+                        <a href="#6.3.1h">Broccoli and polenta mash</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1c">Cheesy leek and potato mash</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1d">Cheesy pasta sauce</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1e">Cheesy spinach spaghetti</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1f">Dahl</a>
+                    </li>
+                    <li>
+                        <a href="#6.2.1g">Eggy veg</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1h">Mushroom carbonara</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1i">Salmon and veggie couscous</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1j">Sweet potato and lentil soup</a>
+                    </li>
+                    <li>
+                        <a href="#6.3.1k">Tuna & creamed corn mac</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.3.1b">Broccoli and polenta mash</p>
+            <p class="mbn-text">
+                <b>Good for:</b> other meal times as well as lunch<br />
+                <b>Storage: </b> not suitable for freezing<br />
+                <b>Note:</b> quick and easy<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac14; cup fine polenta/semolina
+                    </li>
+                    <li> 1 cup water
+                    </li>
+                    <li> 1 cup cow's milk (or made up formula for babies younger than 12 months)
+                    </li>
+                    <li> 2 large florets (pieces) broccoli
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> In a pot over medium-high heat, mix polenta with water and milk, stirring continuously until it begins to boil
+                    </li>
+                    <li class="mbn-ol"> Reduce heat and simmer for 10 minutes while stirring, until cooked (should be smooth rather than 'grainy' when cooked).
+                    </li>
+                    <li class="mbn-ol"> Meanwhile, steam/boil/microwave broccoli until tender.
+                    </li>
+                    <li class="mbn-ol"> Mash / pur&eacute;e broccoli and polenta together to required consistency before serving.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.3.1c">Cheesy leek and potato mash</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage: </b> freeze or keep in the fridge for up to 3 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac12; cup leek (finely chopped)
+                    </li>
+                    <li> 1 small potato (diced)
+                    </li>
+                    <li> &frac14;cup grated cheddar cheese
+                    </li>
+                    <li> 1 teaspoon canola or olive oil margarine
+                    </li>
+                    <li> boiling water
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Melt margarine in a frying pan
+                    </li>
+                    <li class="mbn-ol"> Fry leek over a low heat for 3 minutes.
+                    </li>
+                    <li class="mbn-ol"> Add potato, cover with boiling water and cook for 6 minutes or until soft.
+                    </li>
+                    <li class="mbn-ol"> Drain excess water.
+                    </li>
+                    <li class="mbn-ol"> Add cheese and mash to the required consistency.
+                    </li>
+                    <li class="mbn-ol"> Use once cooled
+                    </li>
+                    <li class="mbn-ol"> Freeze any extra in ice trays for later.
+                    </li>
+                </ul>
+                <b>To serve the family</b>
+                <br /> For a family of 4 use:
+                <br />
+                <ul>
+                    <li> 2 leeks (finely chopped)
+                    </li>
+                    <li> 5 potatoes (diced)
+                    </li>
+                </ul>
+                Follow the same method up to step 4, then
+                <ul>
+                    <li class="mbn-ol"> Put into a baking dish (do not mash).
+                    </li>
+                    <li class="mbn-ol"> Sprinkle with cheese.
+                    </li>
+                    <li class="mbn-ol"> Bake for 20 minutes at 180&deg;C or until golden.
+                    </li>
+                    <li class="mbn-ol"> Pur&eacute;e or mash for your baby with some of your baby's usual milk (breast/formula milk).
+                    </li>
+
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.3.1d">Cheesy pasta sauce</p>
+            <p class="mbn-text">
+                <b>Good for:</b> basis for macaroni/cauliflower cheese or lasagne topping; the whole family<br />
+                <b>Storage: </b> freeze or keep in the fridge for up to 2 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 tablespoon canola or olive oil margarine
+                    </li>
+                    <li> 1 tablespoon plain flour
+                    </li>
+                    <li> 2 cups cow's milk (or made up formula for babies less than 12 months old)
+                    </li>
+                    <li> &frac12; cup grated cheddar cheese
+                    </li>
+                    <li> 1 teaspoon dried mixed herbs (optional)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Melt margarine in a pot over a low heat.
+                    </li>
+                    <li class="mbn-ol"> Add flour and herbs (if using), stirring to make smooth paste.
+                    </li>
+                    <li class="mbn-ol"> Increase heat slightly and add milk, a little at a time, stirring until smooth.
+                    </li>
+                    <li class="mbn-ol"> Continue stirring and simmer for 5 minutes or until sauce thickens.
+                    </li>
+                    <li class="mbn-ol"> Remove from heat and stir in cheese until melted.
+                    </li>
+                    <li class="mbn-ol"> Use or freeze extra in ice/cupcake trays for later.
+                    </li>
+                </ul>
+
+                <b>To serve the family</b><br />
+                For a family of 4, follow the same method but instead use:
+                <br />
+                <ul>
+                    <li> 2 tablespoons canola or olive oil margarine
+                    </li>
+                    <li> 2 tablespoons plain flour
+                    </li>
+                    <li> 4 cups cow's milk (for babies old than 12 months)
+                    </li>
+                    <li> 1 &frac12;cups grated cheddar cheese
+                    </li>
+                    <li> 2 teaspoons dried mixed herbs (optional)
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.3.1e">Cheesy spinach spaghetti</p>
+            <p class="mbn-text">
+                <b>Good for:</b> other meal times as well as lunch; the whole family<br />
+                <b>Storage: </b> freeze or keep in the fridge for up to 2 days, covered<br />
+                <b>Note:</b> young people love spaghetti; adding spinach adds extra nutrition<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> about 20 strands thin spaghetti (or 1 cup pasta shapes)
+                    </li>
+                    <li> 1 tablespoon canola or olive oil
+                    </li>
+                    <li> 1 medium onion (finely chopped)
+                    </li>
+                    <li> 1 clove garlic (crushed)
+                    </li>
+                    <li>3 cups fresh spinach/silverbeet (or 50-60g defrosted frozen spinach)
+                    </li>
+                    <li> 1 &frac14; cups plain cottage cheese (blended/mashed)
+                    </li>
+                    <li> 1 squeeze lemon juice
+                    </li>
+                    <li> 4 tablespoons grated cheese (parmesan if you have it)
+                    </li>
+                </ul>    
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Melt margarine in a pot over a low heat.
+                    </li>
+                    <li class="mbn-ol"> Add flour and herbs (if using), stirring to make smooth paste.
+                    </li>
+                    <li class="mbn-ol"> Increase heat slightly and add milk, a little at a time, stirring until smooth.
+                    </li>
+                    <li class="mbn-ol"> Continue stirring and simmer for 5 minutes or until sauce thickens.
+                    </li>
+                    <li class="mbn-ol"> Remove from heat and stir in cheese until melted.
+                    </li>
+                    <li class="mbn-ol"> Use or freeze extra in ice/cupcake trays for later.
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                For a family of 4 use:
+                <br />
+                <ul>
+                    <li> 500g thin spaghetti (or 3 cups pasta shapes)
+                    </li>
+                    <li> 3 tablespoons canola or olive oil margarine
+                    </li>
+                    <li> 3 medium onions (finely chopped)
+                    </li>
+                    <li> 3 cloves garlic (crushed)
+                    </li>
+                    <li> 9 cups fresh spinach/silverbeet (or 160g defrosted frozen spinach)
+                    </li>
+                    <li> 3 &frac34;cups plain cottage cheese (blended/mashed)
+                    </li>
+                    <li> 3 squeezes lemon juice
+                    </li>
+                    <li> &frac34;cup grated cheese (parmesan if you have it) Follow the same method but serve after step 6.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.3.1f">Dahl</p>
+            <p class="mbn-text">
+                <b>Good for:</b> serve thick with rice for the whole family<br />
+                <b>Storage: </b> freeze or in the fridge for up to 3 days, covered<br />
+                <b>Note:</b> easy, cheap and a real winner with little people; makes enough for 1-2 feeds<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 tablespoon dried red lentils
+                    </li>
+                    <li> &frac14; cup mixed vegetables (e.g. carrot, peas, beans)
+                    </li>
+                    <li> 2 cups water
+                    </li>
+                    <li> pinch turmeric or cumin (optional)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Wash lentils then soak in water for 30 minutes (to reduce 'gassiness').
+                    </li>
+                    <li class="mbn-ol"> Drain water then wash again.
+                    </li>
+                    <li class="mbn-ol"> Put lentils, vegetables, water and turmeric/cumin (if using) in a pot on high heat.
+                    </li>
+                    <li class="mbn-ol"> Bring to the boil then reduce heat and simmer for 30 - 40 minutes, stirring often to stop lentils sticking to the bottom.
+                    </li>
+                    <li class="mbn-ol"> When lentils and vegetables are soft enough to mash with a spoon, remove from heat.
+                    </li>
+                    <li class="mbn-ol"> Mash/Pur&eacute;e to required consistency with extra water if needed before serving warm
+                    </li>
+                    <li class="mbn-ol"> Any unused dahl can be frozen or covered and refrigerated for up to 3 days.
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                For a family of 4 use:
+                <br />
+                <ul>
+                    <li> 1 &frac12; cups dried red lentils
+                    </li>
+                    <li> 2 cups mixed vegetables (e.g. carrot, peas, beans)
+                    </li>
+                    <li> 4 cups water
+                    </li>
+                    <li> 2 teaspoons canola or olive oil
+                    </li>
+                    <li> 1 teaspoon turmeric
+                    </li>
+                    <li> 1 teaspoon cumin
+                    </li>
+                    <li> 2 cups dry brown/basmati rice
+                    </li>
+                </ul>
+                Follow the same method up to step 3, then<br />
+                <ul>
+                    <li class="mbn-ol"> Fry turmeric and cumin in oil in a pot for a few seconds then add lentils and water.
+                    </li>
+                    <li class="mbn-ol"> Bring to the boil then reduce heat and simmer for 30 minutes,stirring often to stop lentils sticking to the bottom.
+                    </li>
+                    <li class="mbn-ol"> Add vegetables and simmer for another 5 minutes (add more water if needed).
+                    </li>
+                    <li class="mbn-ol"> Cook rice according to the instructions on pack.
+                    </li>
+                    <li class="mbn-ol"> Serve Dahl with rice.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.3.1g">Eggy veg</p>
+            <p class="mbn-text">
+                <b>Good for:</b> other meal times as well as lunch<br />
+                <b>Storage: </b> in the fridge for up to 1 day, covered; not suitable for freezing<br />
+                <b>Note:</b> great way to use leftover vegetables; always cook eggs well<br/>
+
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 egg
+                    </li>
+                    <li> 2 tablespoons plain cottage cheese
+                    </li>
+                    <li> 1 tablespoon finely chopped cooked vegetables (e.g. carrots, green beans, broccoli)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                    </li>
+                    <li class="mbn-ol"> In a bowl, beat egg with cottage cheese.
+                    </li>
+                    <li class="mbn-ol"> Stir in chopped vegetables.
+                    </li>
+                    <li class="mbn-ol"> Grease a small oven-proof dish (at least 200mL) and pour in egg mixture.
+                    </li>
+                    <li class="mbn-ol"> Place dish on baking tray and cook for about 20 minutes or until egg is set.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.3.1h">Mushroom carbonara</p>
+            <p class="mbn-text">
+                <b>Good for:</b> any meal time; the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note:</b> tasty, healthier dish that has much less salt than the traditional ham/bacon version<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> about 20 strands uncooked thin spaghetti (or 1 cup pasta shapes)
+                    </li>
+                    <li>1 teaspoon corn flour
+                    </li>
+                    <li> &frac12; cup mushrooms (finely chopped)
+                    </li>
+                    <li> 1 teaspoon canola or olive oil
+                    </li>
+                    <li> &frac12; cup cow's milk
+                    </li>
+                    <li> &frac12;handful grated cheese
+                    </li>
+                    <li> &frac12; cup frozen peas
+                    </li>
+                    <li> pinch dried mixed herbs (optional)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Cook spaghetti/pasta according to the instructions on the pack.
+                    </li>
+                    <li class="mbn-ol"> Meanwhile, fry mushrooms in oil on medium heat until soft.
+                    </li>
+                    <li class="mbn-ol"> In a mug, mix corn flour with a few teaspoons of milk until combined and add to mushrooms
+                    </li>
+                    <li class="mbn-ol"> Stir remaining milk, frozen peas and herbs (if using) into mushrooms.
+                    </li>
+                    <li class="mbn-ol"> Reduce heat and stir for 2 minutes or until the sauce bubbles and thickens.
+                    </li>
+                    <li class="mbn-ol"> Remove from heat and set aside.
+                    </li>
+                    <li class="mbn-ol"> Stir cooked spaghetti/pasta and cheese through mushroom sauce.
+                    </li>
+                    <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving.
+                    </li>
+                    <li class="mbn-ol"> Any unused carbonara can be frozen in ice trays for later.
+                    </li>
+                </ul>
+                <b>To serve the family</b>
+                <br /> For a family of 4 use:
+                <br />
+                <ul>
+                    <li> 500g thin spaghetti (or 3 cups pasta shapes)
+                    </li>
+                    <li> 2 cups onion (finely chopped)
+                    </li>
+                    <li> 2 tablespoons canola or olive oil
+                    </li>
+                    <li> 4 teaspoons corn flour
+                    </li>
+                    <li> 1 &frac12; cups milk
+                    </li>
+                    <li> 1 cup grated cheese
+                    </li>
+                    <li> 2 cups frozen peas
+                    </li>
+                    <li> 1 teaspoon dried mixed herbs (optional)
+                    </li>
+                </ul>
+                Follow the same method (serve after step 8).
+            </p>
+
+            <p class="mbn-section" id="6.3.1i">Salmon and veggie couscous</p>
+            <p class="mbn-section">
+                <b>Good for:</b> quick and easy meal anytime; the whole family<br />
+                <b>Note:</b> if using tinned salmon/tuna, follow the same method but cook just the tomatoes and capsicum in foil at step 3<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 small skinless salmon fillet or a small tin of salmon/tuna in spring water (drained)
+                    </li>
+                    <li> &frac12; medium capsicum (finely chopped)
+                    </li>
+                    <li> 3 medium cherry tomatoes (finely chopped)
+                    </li>
+                    <li> &frac14; cup uncooked couscous (or white rice)
+                    </li>
+                    <li> 1 cup boiling water
+                    </li>
+                    <li> &frac12; teaspoon canola or olive oil margarine
+                    </li>
+                    <li> &frac12; teaspoon lemon juice (optional)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul class="decimals">
+                    <li> Preheat oven to 180&deg;C.
+                    </li>
+                    <li> Place salmon on a flat piece of foil (if using fresh fish).
+                    </li>
+                    <li> Top salmon with tomatoes and capsicum then sprinkle with lemon juice if using.
+                    </li>
+                    <li> Seal salmon parcel in foil and place on baking tray.
+                    </li>
+                    <li> Cook for 20-30 minutes or until salmon is cooked through.
+                    </li>
+                    <li> Flake and mash salmon, making sure there are no bones.
+                    </li>
+                    <li> Place couscous in a bowl (if using rice, cook according to instructions on the pack).
+                    </li>
+                    <li> Add boiling water until just covered and mix in the margarine.
+                    </li>
+                    <li> Cover and leave for 5 minutes.
+                    </li>
+                    <li> Use a fork to 'fluff up' the couscous.
+                    </li>
+                    <li> Mix the salmon/tinned fish and vegetables with couscous/rice.
+                    </li>
+                    <li> Mash/ pur&eacute;e to required consistency before serving.
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                Follow the same method but serve after step 12 and allow per adult:
+                <br />
+                <ul>
+                    <li> 1 medium skinless salmon fillet
+                    </li>
+                    <li> &frac12; medium capsicum (finely chopped)
+                    </li>
+                    <li> 5 medium cherry tomatoes (finely chopped)
+                    </li>
+                    <li> <sup>1</sup>&frasl;<sub>3</sub> cup uncooked couscous (or white rice)
+                    </li>
+                    <li> &frac12; teaspoon canola or olive oil margarine
+                    </li>
+                    <li> &frac12; teaspoon lemon juice (optional)
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.3.1j">Sweet potato and lentil soup</p>
+            <p class="mbn-text">                        
+                <b>Good for:</b> any meal time; the whole family as a soup<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note:</b> hearty, cheap and provides good protein and energy<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 teaspoon canola or olive oil
+                    </li>
+                    <li> 1 large carrot (washed and chopped small)
+                    </li>
+                    <li> <sup>1</sup>&frasl;<sub>3</sub> cup dried red lentils
+                    </li>
+                    <li> 2 small sweet potatoes (peeled, chopped into chunks)
+                    </li>
+                    <li> 1 whole bay leaf (optional)
+                    </li>
+                    <li> 2 cups hot water
+                    </li>
+                    <li> pinch dried mixed herbs (optional)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Wash lentils well.
+                    </li>
+                    <li class="mbn-ol"> Put oil, carrots and lentils in a pot and cook on medium heat for 2 minutes
+                    </li>
+                    <li class="mbn-ol"> Add sweet potato, water, bay leaf (if using) and herbs (if using).
+                    </li>
+                    <li class="mbn-ol"> Turn heat up until it boils, then lower heat and simmer for 30 minutes or until lentils and vegetables are soft.
+                    </li>
+                    <li class="mbn-ol"> Remove bay leaf (if used).
+                    </li>
+                    <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving.
+                    </li>
+                    <li class="mbn-ol"> Freeze any unused soup in ice trays for later.
+                    </li>
+                </ul>
+                <b>To serve the family</b>
+                <br /> For a family of 4, use:
+                <br />
+                <ul>
+                    <li> 2 teaspoons canola or olive oil
+                    </li>
+                    <li> 3 large carrots (chopped small)
+                    </li>
+                    <li> 1 &frac12; cup dried red lentils
+                    </li>
+                    <li> 4 small sweet potatoes (peeled, chopped into chunks)
+                    </li>
+                    <li> 2 whole bay leaves (optional)
+                    </li>
+                    <li> 5 cups hot water (add more if needed)
+                    </li>
+                    <li> &frac12; teaspoon dried mixed herbs (optional)
+                    </li>
+                </ul>
+                Follow the same method to step 5 and serve chunky or blend for a smooth soup.
+            </p>
+
+            <p class="mbn-section" id="6.3.1k">Tuna and creamed corn macaroni</p>
+            <p class="mbn-text">
+                <b>Good for:</b> any meal time<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note:</b> : babies and young children love tuna; great source of iron and calcium<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac12; cup macaroni (or other pasta)
+                    </li>
+                    <li> 2 tablespoons tinned tuna in spring water (drained)
+                    </li>
+                    <li> 2 tablespoons creamed corn
+                    </li>
+                    <li> &frac14; cup grated cheese
+                    </li>
+                    <li> 2 tablespoons cow's milk (or breast/made up formula)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul class="decimals">
+                    <li> Cook macaroni/pasta according to the instructions on pack.
+                    </li>
+                    <li> Drain water from macaroni then return to pot.
+                    </li>
+                    <li> Over medium heat, add milk and cheese, stirring until combined and cheese has melted.
+                    </li>
+                    <li> Stir in creamed corn and tuna.
+                    </li>
+                    <li> Mash/pur&eacute;e to required consistency before serving warm
+                    </li>
+                    <li> Freeze any unused macaroni in ice trays for later.
+
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.4.1">Recipes > Dinner</p>
+            <p class="mbn-text">
+                These 'dinner' recipes work equally well for lunch and, your baby will also probably be just as happy with them for snacks or breakfasts if that works for you!
+            </p>
+            <p class="mbn-section" id="6.4.1a">Dinner</p>
+            <ul>
+                <li>
+                    <a href="#6.4.1b">Baby stew (savoury mince)</a>
+                </li>
+                <li>
+                    <a href="#6.4.1c">Basic vegetable stir-fry</a>
+                </li>
+                <li>
+                    <a href="#6.4.1d">Beef and green beans</a>
+                </li>     
+                <li>
+                    <a href="#6.4.1e">Chicken Bolognese</a>
+                </li>
+                <li>
+                    <a href="#6.4.1f">Chicken casserole</a>
+                </li>
+                <li>
+                    <a href="#6.4.1g">Fish and sweet potato mash</a>
+                </li>
+                <li>
+                    <a href="#6.4.1h">Fish patties</a>
+                </li>
+                <li>
+                    <a href="#6.4.1i">Lamb hotpot</a>
+                </li>
+                <li>
+                    <a href="#6.4.1j">Lentil cottage pie (veg)</u></a>
+                </li>
+                <li>
+                    <a href="#6.4.1k">Mini meatballs</u></a>
+                </li>
+                <li>
+                    <a href="#6.4.1l">Pumpkin, carrot and parsnip soup</u></a>
+                </li>           
+                <li>
+                    <a href="#6.4.1m">Rainbow chips</u></a>
+                </li>
+                <li>
+                    <a href="#6.4.1n">Simple salmon pasta</u></a>
+                </li>
+                <li>
+                    <a href="#6.4.1o">Spaghetti Bolognese</u></a>
+                </li>
+                <li>
+                    <a href="#6.4.1p">Sweetcorn and pea risotto</u></a>
+                </li>
+                <li>
+                    <a href="#6.4.1q">Zany zucchini pasta</u></a>
+                </li>
+            </ul>
+            </p>
+
+            <p class="mbn-section" id="6.4.1b">Baby stew (savoury mince)</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family as a cottage pie<br />
+                <b>Storage:</b> freeze or in the fridge for up to 2 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac14; cup onion (finely chopped)
+                    </li>
+                    <li> &frac12; cup carrot (diced)
+                    </li>
+                    <li> &frac12; cup celery (finely chopped)
+                    </li>
+                    <li> &frac14; cup lean mince (kangaroo, lamb or beef)
+                    </li>
+                    <li> 2 tablespoons canola or olive oil (optional)
+                    </li>
+                    <li> 1 teaspoon dried mixed herbs (optional)
+                    </li>
+                    <li> &frac12; 400g tin diced tomatoes
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Heat oil (if using) in a pot over medium-high heat.
+                    </li>
+                    <li class="mbn-ol"> Fry onion until soft
+                    </li>
+                    <li class="mbn-ol"> Add carrot and celery, frying until just softened.
+                    </li>
+                    <li class="mbn-ol"> Add mince and break up to brown all pieces thoroughly.
+                    </li>
+                    <li class="mbn-ol"> Add tomatoes and herbs (if using) and stir through.
+                    </li>
+                    <li class="mbn-ol"> Reduce heat and simmer for 30 minutes (add a little water to stop mixture drying out if needed).
+                    </li>
+                    <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving with mashed potato or pasta.
+                    </li>
+                    <li class="mbn-ol"> Any unused savoury mince can be frozen in ice/cupcake trays or covered and refrigerated for up to 2 days.
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                For a family of 4 use:
+                <br />
+                <ul>
+                    <li> 1 cup onion (chopped)
+                    </li>
+                    <li> 2 cups carrot (diced)
+                    </li>
+                    <li> 1 cup celery (chopped)
+                    </li>
+                    <li> 2 cups lean mince (lamb or beef)
+                    </li>
+                    <li> 3 tablespoons canola or olive oil (optional)
+                    </li>
+                    <li> 2 teaspoons dried mixed herbs (optional)
+                    </li>
+                    <li> 1 400g tin diced tomatoes
+                    </li>
+                    <li> 1kg potatoes (chopped)
+                    </li>
+                    <li> &frac12; cup grated cheese
+                    </li>
+                </ul>
+                Follow the same method up to step 5, then<br />
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Reduce heat and simmer for 20 minutes (add a little water to stop mixture drying out if needed).
+                    </li>
+                    <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                    </li>
+                    <li class="mbn-ol"> Meanwhile, cook potatoes in a pot of boiling water for 15 minutes or until tender, then drain and mash.
+                    </li>
+                    <li class="mbn-ol"> Put mince mixture in an oven-proof dish, top with mashed potato and grated cheese.
+                    </li>
+                    <li class="mbn-ol"> Bake in oven for 30 minutes or until top is golden.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.4.1c">Basic vegetable stir-fry</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> not suitable for freezing<br />
+                <b>Note:</b> meat can be added if desired<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 red onion (sliced)
+                    </li>
+                    <li> 2 cloves garlic (crushed)
+                    </li>
+                    <li> 1 teaspoon ginger (finely chopped)
+                    </li>
+                    <li> 1 cup green beans (cut in half)
+                    </li>
+                    <li> 1 cup cauliflower pieces
+                    </li>
+                    <li> 1 capsicum (sliced)
+                    </li>
+                    <li> 1 cup broccoli pieces
+                    </li>
+                    <li> 1 cup snow peas (halved)
+                    </li>
+                    <li> 2 tablespoon low salt soy sauce
+                    </li>
+                    <li> 2 tablespoon oyster sauce
+                    </li>
+                    <li> 2 tablespoon Shaoxing cooking wine
+                    </li>
+                    <li> &frac12; cup water or low salt stock
+                    </li>
+                    <li> 2 tablespoons rice bran or vegetable oil
+                    </li>
+                    <li> Chicken or other meat (optional)
+                    </li>
+                    <li> Brown rice or quinoa (to serve)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Prepare brown rice or quinoa according to instructions on the pack.
+                    </li>
+                    <li class="mbn-ol"><i>If using meat:</i> slice into small bite sized pieces and stir fry separately in wok with 1 tablespoon of oil on high heat. Remove when meat turns slightly brown and set aside.
+                    </li>
+                    <li class="mbn-ol"> Heat oil in a wok or frypan to high heat.
+                    </li>
+                    <li class="mbn-ol"> Fry onion, ginger and garlic for 1 minute.
+                    </li>
+                    <li class="mbn-ol"> Add vegetables and ½ cup water or low salt stock, cook for 2 minutes.
+                    </li>
+                    <li class="mbn-ol"> Add browned meat (if using) and stir in low salt soy sauce, oyster sauce and Shaoxing cooking wine, then cook for another minute or until the sauce thickens.
+                    </li>
+                    <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving with brown rice/quinoa.
+                    </li>
+                </ul>
+
+                <i>Adapted from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit 
+                 <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.3.1d">Beef and green beans</p>
+            <p class="mbn-text">
+                <b>Storage:</b> Freezer friendly<br />
+                <b>Note:</b> try different minces for variety - lamb or kangaroo work well<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 cup lean mince (kangaroo, beef or lamb)
+                    </li>
+                    <li> <sup>1</sup>&frasl;<sub>3</sub> cup green beans (trimmed, cut into ½ cm pieces)
+                    </li>
+                    <li> 1-2 small potatoes (cut into 8 pieces)
+                    </li>
+                    <li> 3 tablespoons water or milk
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Add mince to frying pan and fry over medium-high heat (no need for added oil), breaking up to brown all pieces thoroughly.
+                    </li>
+                    <li class="mbn-ol"> Stir in 1 tablespoon water/milk then turn off heat and set aside.
+                    </li>
+                    <li class="mbn-ol"> Meanwhile, boil potatoes in a pot for 10 minutes and steam beans until both are tender.
+                    </li>
+                    <li class="mbn-ol"> Mash potatoes with the remaining water/milk.
+                    </li>
+                    <li class="mbn-ol"> Mix/mash/puree beans, mince and potatoes to required consistency before serving.
+                    </li>
+                    <li class="mbn-ol"> Freeze any unused portions in ice/cupcake trays for later.
+                    </li>
+                </ul>
+            </p>
+                    
+            <p class="mbn-section" id="6.4.1e">Chicken Bolognese</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note: </b> serve with pasta or mashed potato<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 500g lean chicken mince
+                    </li>
+                    <li> 1 green or red capsicum (finely chopped)
+                    </li>
+                    <li> 1 small onion (finely diced)
+                    </li>
+                    </li> 1 clove garlic (finely chopped)
+                    </li>
+                    <li> 1 cup mushrooms (finely chopped)
+                    </li>
+                    <li> &frac12; cup celery (finely diced)
+                    </li>
+                    <li> 1 400g tin diced tomatoes (no added salt)
+                    </li>
+                    <li> 2 tomato paste (no added salt)
+                    </li>
+                    <li> 2 tablespoons parsley or other fresh herbs (chopped)
+                    </li>
+                    <li> 2 tablespoons olive oil
+                    </li>
+                    <li> pasta or mashed potato, to serve
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Heat olive oil in large frying pan on medium-high heat.
+                    </li>
+                    <li class="mbn-ol"> Fry onion and garlic until softened and slightly caramelised.
+                    </li>
+                    <li class="mbn-ol"> Add chicken mince and break up to brown all pieces thoroughly.
+                    </li>
+                    <li class="mbn-ol"> Add tomato paste, tinned tomatoes and parsley.
+                    </li>
+                    <li class="mbn-ol"> Serve with pasta of choice or mashed potato.
+                    </li>
+
+                </ul>
+
+                <i>Adapted from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit 
+                <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+                
+            <p class="mbn-section" id="6.4.1f">Chicken casserole</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freeze or in the fridge for up to 2 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 medium onion (chopped)
+                    </li>
+                    <li> 2 teaspoons canola or olive oil
+                    </li>
+                    <li> 4 small chicken breasts (skin removed, diced and checked for bones)
+                    </li>
+                    <li> 3-4 large carrots (washed and chopped)
+                    </li>
+                    <li> 3-4 new/baby potatoes (skin on, washed and chopped)
+                    </li>
+                    <li> 2 cups boiling water
+                    </li>
+                    <li> 1 teaspoon dried mixed herbs
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                    </li>
+                    <li class="mbn-ol"> Pour boiling water over herbs.
+                    </li>
+                    <li class="mbn-ol"> Heat oil in a frying pan.
+                    </li>
+                    <li class="mbn-ol"> Fry onion until soft.
+                    </li>
+                    <li class="mbn-ol"> Add chicken and brown on all sides.
+                    </li>
+                    <li class="mbn-ol"> Transfer to casserole dish, pour over the herby water and add carrots and potatoes
+                    </li>
+                    <li class="mbn-ol"> Bake in oven for 1 hour or until chicken is cooked through.
+                    </li>
+                    <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving.
+                    </li>
+                    <li class="mbn-ol"> Any unused casserole can be frozen in ice trays or covered and refrigerated for up to 2 days
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                For a family, follow the same method but add extra vegetables (use the same amount of chicken).
+            </p>
+
+            <p class="mbn-section" id="6.4.1g">Fish and sweet potato mash</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> easy and tasty way to serve nutritious fish<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac12; large sweet potato (peeled, finely chopped)
+                    </li>
+                    <li> &frac12; cup chopped tomatoes (any type will do)
+                    </li>
+                    <li> 1 tablespoon canola or olive oil
+                    </li>
+                    <li> 1 small boneless skinless white fish fillet (e.g. sea bass)
+                    </li>
+                    <li> 3 tablespoons cow's milk
+                    </li>
+                    <li> &frac12; teaspoon canola or olive oil margarine
+                    </li>
+                    <li> &frac14; cup grated cheese
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Boil sweet potatoes in water for 10 minutes or until tender then drain.
+                    </li>
+                    <li class="mbn-ol"> Heat oil in a frying pan and fry tomatoes for 4 minutes or until soft then set aside.
+                    </li>
+                    <li class="mbn-ol"> Place fish, milk and margarine in microwave safe dish, cover with lid or plastic wrap (pierced) and cook on high for 2 minutes or until tender.
+                    </li>
+                    <li class="mbn-ol"> Drain fish but keep the cooking milk.
+                    </li>
+                    <li class="mbn-ol"> Break up fish and check for bones.
+                    </li>
+                    <li class="mbn-ol"> In a bowl, place fish, cooking milk, tomatoes, potatoes and cheese and mash/pur&eacute;e to required consistency before serving (add a dash of milk/water if needed).
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                For a family of 4 use:<br />
+                <ul>
+                    <li> 2 large sweet potatoes (peeled, finely chopped)
+                    </li>
+                    <li> 2 cups chopped tomatoes (any type will do)
+                    </li>
+                    <li> 2 tablespoons olive oil (or other vegetable oil)
+                    </li>
+                    <li> 4 small boneless skinless white fish fillet (e.g. sea bass)
+                    </li>
+                    <li> &frac12; cup cow's milk
+                    </li>
+                    <li> 1 tablespoon canola or olive oil margarine
+                    </li>
+                    <li> 1 cup grated cheese
+                    </li>
+                </ul>
+                Follow the same method up to step 5, then<br />
+                <ul>
+                    <li class="mbn-ol"> Serve whole fish fillet on top of mashed potato, pour tomatoes over the top and sprinkle with cheese.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.4.1h">Fish patties</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note: </b> serve with salad or steamed vegetables<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 400g sweet potatoes (peeled, cut into cubes)
+                    </li>
+                    <li> 150g frozen peas (cooked)
+                    </li>
+                    <li> 400g salmon or tuna (canned or freshly cooked)
+                    </li>
+                    <li> 80g multigrain breadcrumbs
+                    </li>
+                    <li> herbs e.g. parsley or dill (finely chopped)
+                    </li>
+                    <li> 4 teaspoons baby rice cereal
+                    </li>
+                    <li> a little canola or olive oil for frying
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Microwave or boil sweet potatoes until just tender.
+                    </li>
+                    <li class="mbn-ol"> In a large bowl, mix and mash the potato and peas.
+                    </li>
+                    <li class="mbn-ol"> Add the salmon/tuna, herbs and baby rice cereal, then mix well (no need to be smooth).
+                    </li>
+                    <li class="mbn-ol"> Using your hands, form into patties, coating each in breadcrumbs, then place on a plate.
+                    </li>
+                    <li class="mbn-ol"> Store in the fridge for 20-30 minutes to set.
+                    </li>
+                    <li class="mbn-ol"> Heat oil in large frying pan on medium-high.
+                    </li>
+                    <li class="mbn-ol"> Lightly fry patties in batches until golden brown
+                    </li>
+                    <li class="mbn-ol"> Drain on kitchen paper then serve with salad or steamed vegetables.
+                    </li>
+                </ul>
+
+                <i>Adapted from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit 
+                <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.4.1i">Lamb hotpot</p>
+            <p class="mbn=text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freeze or keep in the fridge for up to 2 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 tablespoon canola or olive oil
+                    </li>
+                    <li> 1 tablespoon canola or olive margarine
+                    </li>
+                    <li> 1 &frac12; cups stewing lamb (in chunks)
+                    </li>
+                    <li> 1 tablespoon plain flour
+                    </li>
+                    <li> 1 cup water
+                    </li>
+                    <li> 1 teaspoon dried mixed herbs
+                    </li>
+                    <li> 1 whole bay leaf (optional)
+                    </li>
+                    <li> 1-2 small potatoes (skin on, washed and thinly sliced)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Heat oven to 150&deg;C.
+                    </li>
+                    <li class="mbn-ol"> Heat oil in a large frying pan on medium-high.
+                    </li>
+                    <li class="mbn-ol"> Fry lamb until brown on all sides.
+                    </li>
+                    <li class="mbn-ol"> Transfer lamb to casserole dish.
+                    </li>
+                    <li class="mbn-ol"> Using same frying pan as for lamb, fry carrots and onion until soft.
+                    </li>
+                    <li class="mbn-ol"> Add flour and cook for 2 minutes whilst stirring.
+                    </li>
+                    <li class="mbn-ol"> Stir in herbs, water and bay leaf (if using).
+                    </li>
+                    <li class="mbn-ol"> Bring to boil then pour over lamb in casserole dish.
+                    </li>
+                    <li class="mbn-ol"> Place slices of potato on top of lamb mix in casserole dish.
+                    </li>
+                    <li class="mbn-ol"> Put lid on casserole dish (or cover with foil) and bake in oven for about 1 hour 10 minutes
+                    </li>
+                    <li class="mbn-ol"> Remove lid/foil, brush potatoes with margarine/oil.</li>
+                    <li class="mbn-ol"> Increase temperature to 180&deg;C and bake for another 10 minutes. OR Place under grill for 5 minutes until golden.
+                    </li>
+                    <li class="mbn-ol"> Remove a small portion to mash/pur&eacute;e to required consistency before serving then freeze extra in ice/cupcake trays or cover and refrigerate for up to 2 days.
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                This recipe is designed for a whole family - follow the same method to step 12, then
+                <ul>
+                    <li class="mbn-ol"> Serve with salad or greens for a balanced meal.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.4.1j">Lentil cottage pie (veg)</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 tablespoon canola or olive oil
+                    </li>
+                    <li> 1 medium onion (chopped)
+                    </li>
+                    <li> 1 cup carrot (skin on, chopped)
+                    </li>
+                    <li> 1 cup zucchini (skin on, chopped)
+                    </li>
+                    <li> 1 clove garlic (crushed)
+                    </li>
+                    <li> 1 400g tin diced tomatoes
+                    </li>
+                    <li> 2 tablespoons tomato pur&eacute;e or paste
+                    </li>
+                    <li> &frac14; cup frozen peas
+                    </li>
+                    <li> 1 tablespoon fresh thyme (finely chopped; or 1 teaspoon dried)
+                    </li>
+                    <li> 4 cups potato (chopped)
+                    </li>
+                    <li> 1 tablespoon canola or olive oil
+                    </li>
+                    <li> 1 tablespoon canola or olive oil margarine
+                    </li>
+                    <li> &frac12; cup cow's milk
+                    </li>
+                    <li> <sup>1</sup>&frasl;<sub>3</sub> cup grated cheese
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Preheat oven to 200&deg;C.
+                    </li>
+                    <li class="mbn-ol"> Heat oil in a large pot on medium-high heat.
+                    </li>
+                    <li class="mbn-ol"> Fry onion in oil for 1-2 minutes then add carrot, zucchini and garlic and cook for 1 minute
+                    </li>
+                    <li class="mbn-ol"> Add tomatoes, tomato pur&eacute;e, peas, thyme, water and lentils.
+                    </li>
+                    <li class="mbn-ol"> Bring to boil then reduce heat and simmer for 20 minutes (add a little water to stop mixture drying out if needed).
+                    </li>
+                    <li class="mbn-ol"> Transfer to large casserole dish.
+                    </li>
+                    <li class="mbn-ol"> Drain water and mash, stirring in the margarine, milk and cheese.
+                    </li>
+                    <li class="mbn-ol"> Spread mash over lentil mixture then run a fork across the top to make ridges.
+                    </li>
+                    <li class="mbn-ol"> Bake for 15-20 minutes or until golden.
+                    </li>
+                    <li class="mbn-ol"> Unused cottage pie can be frozen in ice/cupcake trays for later.
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                This recipe is designed for a whole family - follow the same method to step 9, then
+                <ul>
+                    <li class="mbn-ol">Serve with salad or greens for a balanced meal.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.4.1k">Mini meatballs</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note: </b> serve with salad or greens for a balanced meal<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 500g lean minced beef/kangaroo
+                    </li>
+                    <li> 2 tablespoons parsley (chopped; or 2 teaspoons dried)
+                    </li>
+                    <li> 2 cloves garlic (finely chopped)
+                    </li>
+                    <li> 2 teaspoons oregano (or &frac12; teaspoon dried)
+                    </li>
+                    <li> 1 small onion (finely chopped)
+                    </li>
+                    <li> 1 egg (beaten)
+                    </li>
+                    <li> 1 cup multigrain breadcrumbs
+                    </li>
+                    <li> plain flour, for coating meatballs
+                    </li>
+                    <li> a little canola or olive oil for frying
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Heat oven to 180&deg;C.
+                    </li>
+                    <li class="mbn-ol"> In a large bowl, combine all ingredients.
+                    </li>
+                    <li class="mbn-ol"> Roll into small balls and then roll in plain flour.
+                    </li>
+                    <li class="mbn-ol"> Heat oil in frying pan on medium-high.
+                    </li>
+                    <li class="mbn-ol"> Lightly fry meatballs in batches until just brown.
+                    </li>
+                    <li class="mbn-ol"> Place on an oven tray then cook in the oven for 15 minutes until heated through.
+                    </li>
+                    <li class="mbn-ol"> Serve with salad or greens for a balanced meal.
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                This recipe is designed for a whole family - follow the same method to step 9, then
+                <ul>
+                    <li class="mbn-ol"> Serve with salad or greens for a balanced meal.
+                    </li>
+                </ul>
+
+                <i>Adapted from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit 
+                <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+            
+            <p class="mbn-section" id="6.4.1l">Pumpkin, carrot and parsnip soup</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note: </b> be careful when blending hot soup as splashes can burn!<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 onion (chopped)
+                    </li>
+                    <li> 1 clove garlic (crushed)
+                    </li>
+                    <li> 1 heaped teaspoon cumin
+                    </li>
+                    <li> 300g pumpkin (cut into large cubes)
+                    </li>
+                    <li> 3 carrots (skin on, sliced thickly)
+                    </li>
+                    <li> 2 parsnips (skin on, sliced thickly)
+                    </li>
+                    <li> 1L no added salt stock
+                    </li>
+                    <li> a little canola or olive oil
+                    </li>
+                    <li> Greek yoghurt, to serve
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Heat oil in a splash of oil in large pot on medium-high heat
+                    </li>
+                    <li class="mbn-ol"> Cook the onion and garlic for 2-3 minutes or until softened and slightly browned.
+                    </li>
+                    <li class="mbn-ol"> Add all other ingredients (except yoghurt) and bring to the boil.
+                    </li>
+                    <li class="mbn-ol"> Turn down the heat and simmer for 15 minutes or until everything is soft.
+                    </li>
+                    <li class="mbn-ol"> Blend soup and serve with a dollop of Greek yoghurt
+                    </li>
+                </ul>
+
+                <i>Adapted from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit 
+                <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.4.1m">Rainbow chips</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> not suitable for freezing<br />
+                <b>Note: </b> see video of recipe<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 2 parsnips (skin on, cut into 5cm chip-like strips)
+                    </li>
+                    <li> 1 sweet potato (peeled, cut into 5cm chip-like strips)
+                    </li>
+                    <li> 1 beetroot (peeled, cut into 5cm chip-like strips)
+                    </li>
+                    <li> 2 tablespoons rosemary
+                    </li>
+                    <li> 2 cloves of garlic (crushed)
+                    </li>
+                    <li> 2 tablespoons olive oil
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Heat oven to 200&deg;C.
+                    </li>
+                    <li class="mbn-ol"> Line a baking tray with baking paper.
+                    </li>
+                    <li class="mbn-ol"> Mix vegetables with oil, rosemary and garlic, then spread onto prepared baking tray.
+                    </li>
+                    <li class="mbn-ol"> Bake for 20 minutes and then turn vegetables over and cook for another 15 minutes, or until tender through and browned.
+                    </li>
+                </ul>
+
+                <i>Adapted from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit 
+                <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.4.1n">Simple salmon pasta</p>
+            <p class="mbn-text">
+                <b>Good for:</b> quick and tasty meal that provides plenty of protein and vitamins!<br />
+                <b>Note: </b> if using tinned salmon/tuna, follow the same method but start at step 3 and only add milk at step 6<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 21 small salmon fillet or a small tin of salmon/tuna in spring water (drained, bones removed)
+                    </li>
+                    <li> &frac12; cup small pasta shapes
+                    </li>
+                    <li> &frac12; small leek (diced)
+                    </li>
+                    <li> &frac12; cup broccoli (chopped)
+                    </li>
+                    <li> 3 tablespoons cheese (grated)
+                    </li>
+                    <li> 4 tablespoons light cream
+                    </li>
+                    <li> 5 tablespoons cow's milk
+                    </li>
+                    <li> 1 tablespoon canola or olive oil
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Place salmon in microwave safe dish with half the milk, cover with lid or plastic wrap (pierced) and cook on high for 2 minutes or until tender
+                    </li>
+                    <li class="mbn-ol"> Drain salmon, check for bones, break up and then set aside.
+                    </li>
+                    <li class="mbn-ol"> Cook pasta according to instructions on the pack, adding broccoli for the last 2 minutes of cooking, then drain and set aside.
+                    </li>
+                    <li class="mbn-ol"> Heat oil in a pot over medium-high heat.
+                    </li>
+                    <li class="mbn-ol"> Fry leek until soft.
+                    </li>
+                    <li class="mbn-ol"> Add salmon and remaining milk, reduce heat then simmer for 3 minutes.
+                    </li>
+                    <li class="mbn-ol"> Add cooked pasta (and tinned fish if using), then add light cream.
+                    </li>
+                    <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving with cheese sprinkled on top.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.4.1o">Spaghetti Bolognese (incl. veg option)</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> freeze or keep in the fridge for up to 2 days, covered<br />
+                <b>Note: </b> super popular with little people; for vegetarian Bolognese,replace mince at step 3 with a tin of brown lentils (rinsed) and a handful of chopped mushrooms<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 tablespoon canola or olive oil
+                    </li>
+                    <li> 1 clove garlic (crushed)
+                    </li>
+                    <li> 500g lean mince (kangaroo, beef or lamb)
+                    </li>
+                    <li> 1 small onion (finely chopped)
+                    </li>
+                    <li> 1 medium carrot (grated)
+                    </li>
+                    <li> 1 medium zucchini (grated)
+                    </li>
+                    <li> 1 440g tin diced tomatoes
+                    </li>
+                    <li> 1 tablespoon salt reduced tomato pur&eacute;e or paste
+                    </li>
+                    <li> &frac12; teaspoon ground cinnamon (optional)
+                    </li>
+                    <li> packet spaghetti or other dried pasta
+                    </li>
+                    <li> cheese (grated) for serving
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Heat oil in a large frying pan on medium-high heat
+                    </li>
+                    <li class="mbn-ol"> Fry onion, garlic, grated carrot and zucchini until soft
+                    </li>
+                    <li class="mbn-ol"> Add mince and break up to brown all pieces thoroughly.
+                    </li>
+                    <li class="mbn-ol"> Add chopped tomatoes, tomato pur&eacute;e/paste and cinnamon (if using), reduce heat then simmer for 20-30 minutes or until sauce is thick.
+                    </li>
+                    <li class="mbn-ol"> Cook the spaghetti according to the instructions on the pack.
+                    </li>
+                    <li class="mbn-ol"> Drain water from spaghetti/pasta and mix through sauce.
+                    </li>
+                    <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving sprinkled with cheese.
+                    </li>
+                    <li class="mbn-ol"> Freeze unused Bolognese in ice/cupcake trays or cover and refrigerate for up to 2 days.
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                This recipe is designed for a whole family - follow the same method to step 6, then
+                <ul>
+                    <li class="mbn-ol"> Serve with cheese sprinkled on top.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.4.1p">Sweetcorn and pea risotto</p>
+            <p class="mbn-text">
+                <b>Good for:</b> lunches as well as dinner<br />
+                <b>Storage:</b> use straight away and throw away any unused risotto, do not store - it is generally best not to reheat cooked rice<br />
+                <b>Note: </b> the simple ingredients mean it's great for when you haven't had time to go shopping<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 medium onion (chopped)
+                    </li>
+                    <li> handful frozen peas
+                    </li>
+                    <li> handful of frozen corn kernels
+                    </li>
+                    <li> &frac12; cup uncooked white rice
+                    </li>
+                    <li> &frac14; cup grated cheese (parmesan if you have it)
+                    </li>
+                    <li> 2 cups boiling water
+                    </li>
+                    <li> 1 teaspoon dried mixed herbs
+                    </li>
+                    <li> 1 tablespoon olive oil (or other vegetable oil)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Pour boiling water over herbs.
+                    </li>
+                    <li class="mbn-ol"> Heat oil in a pot on medium-high heat.
+                    </li>
+                    <li class="mbn-ol"> Fry onion until soft.
+                    </li>
+                    <li class="mbn-ol"> Add rice and stir for 2 minutes
+                    </li>
+                    <li class="mbn-ol"> Pour in a little herby water, stirring until the rice absorbs it before adding more herby water.
+                    </li>
+                    <li class="mbn-ol"> After about 7 minutes, add corn and peas.
+                    </li>
+                    <li class="mbn-ol"> Continue adding herby water little-by-little and stirring until there is none left, the rice is soft and sticky and the peas and corn are well cooked (about 15 minutes all up).
+                    </li>
+                    <li class="mbn-ol">Stir in cheese until melted.
+                    </li>
+                    <li class="mbn-ol">Mash/pur&eacute;e to required consistency before serving.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.4.1q">Zany zucchini pasta</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Note: </b> this is a bit like pesto and is great served alongside grilled chicken<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac14; cup small pasta shapes (&frac12; cup already cooked)
+                    </li>
+                    <li> 1 medium zucchini (sliced)
+                    </li>
+                    <li> 1 teaspoon chives (chopped)
+                    </li>
+                    <li> 2 teaspoon canola or olive oil
+                    </li>
+                    <li> &frac14; cup cheese (grated)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Cook pasta according the instructions on the pack, drain and set aside if required.
+                    </li>
+                    <li class="mbn-ol"> Place zucchini in microwave safe bowl, cover with lid or plastic wrap (no need to add water) and cook for 2 minutes until soft.
+                    </li>
+                    <li class="mbn-ol"> Add oil to zucchini and blend until thick.
+                    </li>
+                    <li class="mbn-ol"> Stir in chives.
+                    </li>
+                    <li class="mbn-ol"> Toss pasta in zucchini mixture.
+                    </li>
+                    <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving sprinkled with cheese.
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                For a family of 4, use:
+                <ul>
+                    <li> 2 cups small pasta shapes
+                    </li>
+                    <li> 3 medium zucchinis (sliced)
+                    </li>
+                    <li> 4 teaspoons chives (chopped)
+                    </li>
+                    <li> 2 tablespoons canola or olive oil
+                    </li>
+                    <li> 1 cup cheese (grated)
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.5.1">Recipes > Snacks</p>
+            <p class="mbn-section" id="6.5.1a">Snacks</p>
+                <ul>
+                    <li>
+                        <a href="#6.5.1b">Baby rusks</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1c">Cheese straws</a>
+                    </li>        
+                    <li>
+                        <a href="#6.5.1d">Cool bananas</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1e">Finger foods</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1f">Hummus (chickpea dip)</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1g">Peach rice</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1h">Pear muffins</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1i">Raspberry and pear yoghurt</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1j">Steamed veggies</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1k">Tasty sweet potato wedges</a>
+                    </li>
+                    <li>
+                        <a href="#6.5.1l">Veggie citrus muffins</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.5.1b">Baby rusks</p>
+            <p class="mbn-text">
+                <b>Good for:</b> finger food<br />
+                <b>Storage:</b> in the fridge for up to 7 days, covered<br />
+                <b>Note:</b> :much cheaper and healthier than shop-bought rusks!<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 loaf unsliced wholemeal bread
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Preheat oven to 120&deg;C.
+                    </li>
+                    <li class="mbn-ol"> Cut about 4cm of crust from all sides of the bread.
+                    </li>
+                    <li class="mbn-ol"> Cut crusts into fingers about 2cm wide.
+                    </li>
+                    <li class="mbn-ol"> Spread crusts over a baking tray and bake for about 1 hour or until they are dry and crunchy.
+                    </li>
+                    <li class="mbn-ol"> Cool completely then store in airtight container.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.5.1c">Cheese straws</p>
+            <p class="mbn-text">
+                <b>Good for:</b> finger food; the whole family<br />
+                <b>Storage:</b> freeze or keep in the fridge for up to 4 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac14; cup cheddar cheese (grated)
+                    </li>
+                    <li> <sup>1</sup>&frasl;<sub>3</sub>cup plain wholemeal flour
+                    </li>
+                    <li> 2 tablespoons canola or olive oil margarine
+                    </li>
+                    <li> 1 egg (beaten)
+                    </li>
+                    <li> 1 splash milk
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Line a baking tray with baking paper.
+                    </li>
+                    <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                    </li>
+                    <li class="mbn-ol"> In a bowl, rub margarine into flour (between your fingers) until it looks like breadcrumbs.
+                    </li>
+                    <li class="mbn-ol"> Mix in cheese.
+                    </li>
+                    <li class="mbn-ol"> Add nearly all beaten egg (save a little bit), mixing with knife to form a dough.
+                    </li>
+                    <li class="mbn-ol"> Roll into a ball with your hands (add a little milk if too dry).
+                    </li>
+                    <li class="mbn-ol"> Roll out dough on floured surface until &frac12;cm thick.
+                    </li>
+                    <li class="mbn-ol"> Cut into 5cm x 1cm pieces and place on baking tray
+                    </li>
+                    <li class="mbn-ol"> Brush rest of egg (or a little milk) over top.
+                    </li>
+                    <li class="mbn-ol"> Bake in oven for 10 minutes or until golden.
+                    </li>
+                    <li class="mbn-ol"> Cool completely then store in airtight container
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                Follow the same method but for a family of 4 use:<br />
+                <ul>
+                    <li> 1 cup cheddar cheese (grated)
+                    </li>
+                    <li> 1 <sup>1</sup>&frasl;<sub>3</sub> cups plain wholemeal flour
+                    </li>
+                    <li> &frac12; cup canola or olive oil margarine
+                    </li>
+                    <li> 4 eggs (beaten)
+                    </li>
+                    <li> milk
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.5.1e">Finger foods</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> : : in the fridge, covered, for 1-3 days depending on items selected; not suitable for freezing<br />
+                <b>Note: </b> : super easy; see video of recipe<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> watermelon
+                    </li>
+                    <li> 1 cup unsweetened plain natural yoghurt flour
+                    </li>
+                    <li> pineapple
+                    </li>
+                    <li> capsicum strips
+                    </li>
+                    <li> baby corn spears
+                    </li>
+                    <li> banana
+                    </li>
+                    <li> avocado
+                    </li>
+                    <li> steamed broccoli
+                    </li>
+                    <li> pita bread
+                    </li>
+                    <li> halved grapes
+                    </li>
+                    <li> steamed carrot sticks
+                    </li>
+                    <li> halved strawberries
+                    </li>
+                    <li> cooked lean chicken
+                    </li>
+                    <li> pasta spirals
+                    </li>
+                    <li> steamed snow peas
+                    </li>
+                    <li> steamed cauliflower
+                    </li>
+                    <li> meatballs
+                    </li>
+                    <li> cucumber slices
+                    </li>
+                    <li> cooked apple slices
+                    </li>
+                    <li> orange slices
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Cut into strips and shapes easy for little hands (and big hands) to manage.
+                    </li>
+                    <li class="mbn-ol"> Cook or leave raw depending food(s) chosen
+                    </li>
+                    <li class="mbn-ol"> Choose a dip to go with the finger food if you like (e.g. hummus with carrot sticks, pita bread or cucumber slices; cheese sauce with pasta, cauliflower or broccoli; pasta sauce with pasta, cooked chicken or meatballs; unsweetened plain yoghurt with grapes, banana or strawberries).
+                    </li>
+                    <li class="mbn-ol"> Serve at room temperature.
+                    </li>
+                </ul>
+
+                <i>Adapted from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit 
+                <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.5.1f">Hummus (chickpea dip)</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> :in the fridge for up to 4 days, covered<br />
+                <b>Note: </b> : super easy, healthy and full of protein<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1-2 cloves garlic (crushed)
+                    </li>
+                    <li> &frac12; cup tinned chickpeas (low salt ideally)
+                    </li>
+                    <li> &frac12; tablespoon tahini (ground sesame seeds, optional)
+                    </li>
+                    <li> 2 tablespoons lemon juice
+                    </li>
+                    <li> 2-3 tablespoons water (adjust according to consistency)
+                    </li>
+                    <li> 1 teaspoon ground cumin (optional)
+                    </li>
+                    <li> a pinch paprika (optional)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Drain and rinse chickpeas well.
+                    </li>
+                    <li class="mbn-ol"> In a food processor (or a bowl to use with a stick blender) add garlic, 2 tablespoons water, lemon juice, tahini (if using) and spices (if using).
+                    </li>
+                    <li class="mbn-ol"> Blend, adding a little more water if sticking, until desired consistency.
+                    </li>
+                    <li class="mbn-ol"> Serve with <a href="#6.5.1b"><u>Baby rusks</u></a> or sticks of carrot (steamed for young babies) or other <a href="#6.5.1e"><u>Finger foods</u></a> once cooled.
+                    </li>
+                    <li class="mbn-ol"> Refrigerate unused hummus in an airtight container for up to 4 days.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.5.1g">Peach rice</p>
+            <p class="mbn-text">
+                <b>Good for:</b> when you are 'out' of fresh fruit<br />
+                <b>Storage:</b> : in fridge for up to 1 day, covered; not suitable for freezing<br />
+                <b>Note: </b> : super easy!<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac14; cup tinned peaches in fruit juice (not syrup)
+                    </li>
+                    <li> 1 tablespoon cow's milk
+                    </li>
+                    <li> 4 teaspoons baby rice cereal
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Drain peaches and place in a jug with milk and rice.
+                    </li>
+                    <li class="mbn-ol"> Mash/pur&eacute;e to desired consistency.
+                    </li>
+                    <li class="mbn-ol"> Serve at room temperature.
+                    </li>
+                    <li class="mbn-ol"> Cover and refrigerate any unused peach rice for up to a day.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.5.1h">Pear muffins</p>
+            <p class="mbn-text">
+                <b>Good for:</b> healthy, no-added sugar snack for the whole family<br />
+                <b>Storage:</b> : freeze or keep in the fridge for up to 4 days, covered<br />
+                <b>Note: </b> : bananas can be used instead of pears; makes 4-6 muffins (depending on size of tray)<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac12; cup self-raising wholemeal flour (or plain wholemeal flour with <sup>3</sup>&frasl;<sub>4</sub> teaspoon baking powder added)
+                    </li>
+                    <li> 1 egg
+                    </li>
+                    <li> 2 overripe pears (or bananas)
+                    </li>
+                    <li> &frac14; cup canola oil
+                    </li>
+                    <li> 1 pinch cinnamon
+                    </li>
+                    <li> 1 tablespoon milk
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Preheat oven to 180&deg;C
+                    </li>
+                    <li class="mbn-ol"> Peel and core pears/bananas. oil).
+                    </li>
+                    <li class="mbn-ol"> Chop one pear/banana finely and mash the other, set aside.
+                    </li>
+                    <li class="mbn-ol"> In a bowl, whisk together oil and egg thoroughly, set aside.
+                    </li>
+                    <li class="mbn-ol"> In a large bowl, add cinnamon to flour and stir in chopped pear/banana.
+                    </li>
+                    <li class="mbn-ol"> Gently mix the mashed pear/banana and oil mixture with the flour.
+                    </li>
+                    <li class="mbn-ol"> Mix in milk until just combined.
+                    </li>
+                    <li class="mbn-ol"> Spoon mixture evenly into muffin tray.
+                    </li>
+                    <li class="mbn-ol"> Bake for about 20 minutes, until firm to touch and golden or until a wooden toothpick inserted in centre comes out clean.
+                    </li>
+                    <li> Freeze or refrigerate in airtight container for up to 4 days.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.5.1i">Raspberry and pear yoghurt</p>
+            <p class="mbn-text">
+                <b>Good for:</b> young babies who love the natural fruit sugars and colours in this dish!<br />
+                <b>Storage:</b> : in the fridge for up to 2 days, covered; not suitable for freezing<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> &frac12; cup self-raising wholemeal flour (or plain wholemeal flour with <sup>3</sup>&frasl;<sub>4</sub> teaspoon baking powder added)
+                    </li>
+                    <li> &frac12; cup raspberries (fresh or frozen)
+                    </li>
+                    <li> &frac12; cup overripe pear (mashed)
+                    </li>
+                    <li> 1 cup unsweetened plain natural yoghurt
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Place raspberries and pear in a small pot and cover with water.
+                    </li>
+                    <li class="mbn-ol"> Bring to the boil, then reduce heat and simmer for a few minutes.
+                    </li>
+                    <li class="mbn-ol"> Press raspberry/pear mix through a sieve to remove seeds (throw these away).
+                    </li>
+                    <li class="mbn-ol"> Swirl raspberry/pear pur&eacute;e through yoghurt and serve.
+                    </li>
+                    <li class="mbn-ol"> Any unused raspberry and pear yoghurt can be covered and refrigerated for up to 2 days.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.5.1j">Steamed veggies</p>
+            <p class="mbn-text">
+                <b>Good for:</b>finger food (if left whole)<br />
+                <b>Storage:</b> :freeze or keep in the fridge for up to 1-2 days, covered<br />
+                <b>Note: </b>steamed vegetables make perfect snacks whether pur&eacute;ed (complete step 4) or as finger-sized healthy snack foods (for young and old alike!)<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> handful of green beans (trimmed)
+                    </li>
+                    <li> 2 carrots (washed and cut in 2cm x 3-4cm pieces)
+                    </li>
+                    
+                    <b>OR</b>
+                
+                    <li> 2 handfuls 2cm x 2cm broccoli florets (pieces)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Place vegetables in a steamer or metal colander over a pot of boiling water and cover.
+                    </li>
+                    <li class="mbn-ol"> Steam vegetables for 7-8 minutes (add broccoli after 2-3 minutes) or until tender.
+                    </li>
+                    <li class="mbn-ol"> Drain, cool and store for pieces. <b>OR</b> Mash/pur&eacute;e to required consistency (use a little water ifrequired) before serving.
+                    </li>
+                    <li class="mbn-ol"> Freeze extra in ice/cupcake trays or cover and refrigerate for up to 1-2 days.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.5.1k">Tasty sweet potato wedges</p>
+            <p class="mbn-text">
+                <b>Good for:</b>finger food; first food; the whole family<br />
+                <b>Storage:</b> : in the fridge for up to 3 days, covered<br />
+                <b>Note: </b> perfect snack for your baby when eaten cold<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 4 medium sweet potatoes (washed, peeled, cut into wedges and soaked in water for 20 minutes)
+                    </li>
+                    <li> 2 tablespoons canola or olive oil
+                    </li>
+                    <li> 1 teaspoon dried mixed herbs
+                    </li>
+                    <li> 1 teaspoon mild ground paprika
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                    </li>
+                    <li class="mbn-ol"> Cover a baking tray with baking paper
+                    </li>
+                    <li class="mbn-ol"> In a large bowl, mix oil, herbs and paprika.
+                    </li>
+                    <li class="mbn-ol"> Add sweet potatoes and toss to coat in the mixture.
+                    </li>
+                    <li class="mbn-ol"> Arrange wedges in 1 layer on baking tray then bake for 40-50 minutes or until tender and golden.
+                    </li>
+                    <li class="mbn-ol"> Cool then serve cold to your baby.
+                    </li>
+                </ul>
+                <b>To serve the family</b><br />
+                This recipe is designed for a whole family (depending on the size of the potatoes!) - follow the same method but serve hot after step 5.
+                <br />
+            </p>
+
+            <p class="mbn-section" id="6.5.1l">Veggie citrus muffins</p>
+            <p class="mbn-text">
+                <b>Good for:</b>highly nutritious snack for the whole family; great way to use up vegetables<br />
+                <b>Storage:</b> : in the fridge for up to 4 days, covered<br />
+                <b>Note: </b> finely grated carrot can be used instead of zucchini; makes 8-10 muffins or 36 mini-muffins<br />
+                <br />
+                <b>Ingredients</b>
+                <br />
+                <ul>
+                    <li> 1 cup self-raising wholemeal flour (or plain wholemeal flour with 2 teaspoons baking powder added)
+                    </li>
+                    <li> 1 cup oat bran
+                    </li>
+                    <li> 1 teaspoon baking powder
+                    </li>
+                    <li> 1 teaspoon ground cinnamon (optional)
+                    </li>
+                    <li> 2 eggs
+                    </li>
+                    <li> <sup>1</sup>&frasl;<sub>3</sub> cup canola oil
+                    </li>
+                    <li> &frac12; cup brown sugar
+                    </li>
+                    <li> zest of 1 orange or lemon
+                    </li>
+                    <li> <sup>1</sup>&frasl;<sub>3</sub> cup orange juice
+                    </li>
+                    <li> 2 cups zucchini - about 1 large (skin on, shredded)
+                    </li>
+                </ul>
+                <b>Method</b>
+                <br />
+                <ul>
+                    <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                    </li>
+                    <li class="mbn-ol"> Line muffin tray with muffin papers (or spray with oil).
+                    </li>
+                    <li class="mbn-ol"> In a large bowl, combine all dry ingredients, set aside.
+                    </li>
+                    <li class="mbn-ol"> In another bowl, whisk together eggs and other ingredients thoroughly.
+                    </li>
+                    <li class="mbn-ol"> Add egg mixture to flour mixture and stir until just combined.
+                    </li>
+                    <li class="mbn-ol"> Spoon mixture evenly into muffin tray (fill about <sup>2</sup>&frasl;<sub>3</sub> full).
+                    </li>
+                    <li class="mbn-ol"> Bake for 10-12 minutes for mini size (15-17 minutes for large size) or until a wooden toothpick inserted in centre comes out clean.
+                    </li>
+                    <li class="mbn-ol"> Cool in tin for 10 minutes on rack..
+                    </li>
+                    <li class="mbn-ol"> Remove from tins and cool completely on wire rack.
+                    </li>
+                    <li class="mbn-ol"> Freeze or refrigerate in airtight container for up to 4 days.
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.6.1">Recipes> Drinks</p>
+            <p class="mbn-section" id="6.6.1a">Drinks</p>
+                <ul>
+                    <li>
+                        <a href="#6.6.1b">Milk</a>
+                    </li>
+                    <li>
+                        <a href="#6.6.1c">Water</a>
+                    </li>
+                    <li>
+                        <a href="#6.6.1d">Fruit juice</a>
+                    </li>
+                    <li>
+                        <a href="#6.6.1e">Cordial / fizzy drinks / soft-drinks / energy drinks</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.6.1b">Milk</p>
+            <p class="mbn-text">
+                The type of milk your baby should have depends on their age. Breastmilk or formula provides all the nutrition your baby needs up to around 6 months. The following guidelines should be followed unless your GP or maternal and child health nurse advises you otherwise:
+                <ul>
+                    <li> from 8 months, offer your baby breastmilk/formula after solids meals to make sure they are hungry enough to eat the new iron rich foods they now need
+                    </li>
+                    <li> from 6 months, if you are formula feeding, you may wish to offer formula in a sippy cup rather than a bottle.
+                    </li>
+                    <li> cow's milk should not be given as a drink until your baby is older than 12 months but small quantities used in cooking are OK
+                    </li>
+                    <li>until your baby is 2 years or older, always provide regular full cream cow's milk (instead of low/reduced fat cow's milk as this doesn't contain enough energy for your growing baby)
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.6.1c">Water</p>
+            <p class="mbn-text">
+                <ul>
+                    <li>
+                        If your baby is under 6 months old, they will get all the hydration they need from breastmilk/formula (even in hot weather) and should not be given water.
+                    </li>
+                    <li>
+                        From 6 months it is OK to give your baby small sips of cooled boiled tap water if they seem thirsty (e.g. in hot weather) but this shouldn't be done regularly as it can fill your baby's little tummy, making them feel too full to drink enough milk to get the energy they need to grow.
+                    </li>
+                    <li>
+                        It's a good idea to encourage your baby to drink (milk, or water if having) from a cup after 6 months of age!
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.6.1d">Fruit juice</p>
+            <p class="mbn-text">
+                Fruit juice should not form part of your baby's diet for a few reasons:
+                <ul>
+                    <li> compared with the whole fruit, it's far easier to drink too much which can cause your baby to gain too much weight
+                    </li>
+                    <ul>
+                        <li> it takes about 3 whole oranges to make just 1 cup of orange juice
+                        </li>
+                        <li> there is no chewing involved, so it can be swallowed quickly
+                        </li>
+                        <li>most of the fibre is lost so it passes through more quickly
+                        </li>
+                    </ul>
+                    <li> too much can cause diarrhoea
+                    </li>
+                    <li> the natural sugars can cause tooth decay - even before the teeth have come through
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.6.1e">Cordial / fizzy drinks / soft-drinks / energy drinks</p>
+            <p class="mbn-text">
+                Cordials, fizzy drinks, soft-drinks and energy drinks should never be given to your baby as they can damage growing teeth and cause your baby to gain too much weight. Energy drinks also contain high levels of caffeine which can be harmful to your baby's developing body.
+            </p>
+
+            <p class="mbn-section" id="6.7.1">Recipes > Video library</p>
+            <p class="mbn-section" id="6.7.1a">Video Library</p>
+                <ul>
+                    <li>
+                        <a href="#6.7.1b">Chicken Bolognese</a>
+                    </li>
+                    <li>
+                        <a href="#6.7.1c">Cooking gadgets</a>
+                    </li>
+                    <li>
+                        <a href="#6.7.1d">Finger food ideas</a>
+                    </li>
+                    <li>
+                        <a href="#6.7.1e">Fish patties</a>
+                    </li>
+                    <li>
+                        <a href="#6.7.1f">Making pur&eacute;ed meat</a>
+                    </li>
+                    <li>
+                        <a href="#6.7.1g">Preparing fruit and vegetables</a>
+                    </li>
+                    <li>
+                        <a href="#6.7.1h">Preparing lumpy meat</a>
+                    </li>
+                    <li>
+                        <a href="#6.7.1i">Pumpkins, carrot and parsnip soup</a>
+                    </li>
+                    <li>
+                        <a href="#6.7.1j">Rainbow chips</a>
+                    </li>
+                    <li>
+                        <a href="#6.7.1k">Vegetable stir-fry (Meat optional)</a>
+                    </li>
+                    <li>
+                        <a href="#6.7.1l">How to turn an adult meal into a baby meal</a>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="mbn-section" id="6.7.1b">Chicken Bolognese</p>
+            <p class="mbn-text">
+                See first-hand how to make this family favourite. See <a recipe href="#6.4.1e"><u>Recipe</u></a> for ingredients.
+            </p>
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/eEbv51TXa0U" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1c">Cooking gadgets</p>
+            <p class="mbn-text">
+                A few handy kitchen utensils to make preparing food easier.
+            </p>
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/qmr4eDFDm0g" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1d">Finger food ideas</p>
+            <p class="mbn-text">
+                So many different foods can be introduced as finger foods - here are a few ideas! See <a recipe href="#6.5.1e"><u>Recipe</u></a> for ingredients.
+            </p>
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/7kHEjKGYSQQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1e">Fish patties</p>
+            <p class="mbn-text">
+                A tasty and easy recipe for nutritious fish! See <a recipe href="#6.4.1h"><u>Recipe</u></a> for ingredients.
+            </p>
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/KMlIUVu_-9E" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1f">Making pur&eacute;ed meat</p>
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/56M-uO7MJfQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1g">Preparing fruit and vegetables</p>
+            <p class="mbn-text">
+                How to prepare different fruits and vegetables for your baby. See <a recipe href="#6.4.1h"><u>Recipe</u></a> for ingredients.
+            </p>
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/bUMwvQP8ics" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1h">Preparing lumpy meat</p>
+            <p class="mbn-text">
+                How to prepare lumpy meat for your baby. See <a recipe href="#6.4.1h"><u>Recipe</u></a> for ingredients.
+            </p>
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/m3jqssr7HgI" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1j">Rainbow chips</p>
+            <p class="mbn-text">
+                Love chips but want to make them healthier? Try these! See <a recipe href="#6.4.1m">Recipe</a> for ingredients.
+            </p> 
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/EtNuVpHXBf8" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+             </p>
+
+            <p class="mbn-section" id="6.7.1k">Vegetable stir-fry (meat optional)</p>
+            <p class="mbn-text">
+                Do you need to use up all your extra veggies from the week? Try this stir-fry. See <a recipe href="#6.4.1c">Recipe</a> for ingredients.
+            </p>
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/JJ3ZyF4K498" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="6.7.1l">How to turn an adult meal into a baby meal</p>
+            
+            <p class="mbn-section" id="">Beef and vegetable skewers</p>
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/eOf65xIMjZ8" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://www.beefandlamb.com.au/Home/html/">Meat & Livestock Australia</a>.</i>
+            </p>
+
+            <p class="mbn-section" id="">Beef casserole</p>
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/2rAwuL4t-9I" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://www.beefandlamb.com.au/Home/html/">Meat & Livestock Australia</a>.</i>
+            </p>
+            
+            <p class="mbn-section" id="">Lamb and veggie</p>
+            <p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/0i02tx3RBwY" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>    
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://www.beefandlamb.com.au/Home/html/">Meat & Livestock Australia</a>.</i>
+            </p>
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

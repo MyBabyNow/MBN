@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/preloader/main.css">
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript">
+        var ans1, ans2, ans3, ans4, ans5;
+
+        var userId = $.session.get('secretKey');
+
+        $(document).ready(function() {
+            $('#pg1').show();
+
+            $('#pg2').hide();
+            $('#pg3').hide();
+            $('#pg4').hide();
+            $('#pg5').hide();
+            $('#pg6').hide();
+
+
+            $('#pg2-ans').hide();
+            $('#pg3-ans').hide();
+            $('#pg4-ans').hide();
+            $('#pg5-ans').hide();
+            $('#pg6-ans').hide();
+
+
+            $('#mark').hide();
+
+            $('#q1-modal').hide();
+
+            start();
+        });
+
+        function start() {
+            $(".preloader-wrapper").removeClass("hide");
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/milk_supply_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    if (data.length !== 0) {
+                        $('input[name=q1-options][value=' + data[0].ans1 + ']').prop('checked', true);
+                        $('input[name=q2-options][value=' + data[0].ans2 + ']').prop('checked', true);
+                        $('input[name=q3-options][value=' + data[0].ans3 + ']').prop('checked', true);
+                        $('input[name=q4-options][value=' + data[0].ans4 + ']').prop('checked', true);
+                        $('input[name=q5-options][value=' + data[0].ans5 + ']').prop('checked', true);
+
+                        $('input[name=q1-options]').attr('disabled', true);
+                        $('input[name=q2-options]').attr('disabled', true);
+                        $('input[name=q3-options]').attr('disabled', true);
+                        $('input[name=q4-options]').attr('disabled', true);
+                        $('input[name=q5-options]').attr('disabled', true);
+
+                        mark();
+
+                        $("#mark").addClass("hide");
+
+                        $("#clear").removeClass("hide");
+
+                        $('#pg1').hide();
+
+                        $('#pg2').show();
+                        $('#pg3').show();
+                        $('#pg4').show();
+                        $('#pg5').show();
+                        $('#pg6').show();
+                    } else {
+                        $('input[name=q1-options]').prop('checked', false);
+                        $('input[name=q2-options]').prop('checked', false);
+                        $('input[name=q3-options]').prop('checked', false);
+                        $('input[name=q4-options]').prop('checked', false);
+                        $('input[name=q5-options]').prop('checked', false);
+                    }
+
+                    $(".preloader-wrapper").addClass("hide");
+                });
+        }
+
+        function startQuiz() {
+            $('#pg1').hide();
+
+            $('#pg2').show();
+            $('#pg3').show();
+            $('#pg4').show();
+            $('#pg5').show();
+            $('#pg6').show();
+            $('#pg7').show();
+            $('#pg8').show();
+
+            $('#mark').show();
+        }
+
+        function clearAnswers() {
+            $(".preloader-wrapper").removeClass("hide");
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/milk_supply_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    if (data.length !== 0) {
+                        var entryId = data[0].id;
+                        $.ajax({
+                            type: "delete",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/milk_supply_quiz/" + entryId,
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                                location.reload();
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+                    } else {
+                        $("#modal p").html("Answers has been cleared");
+                        $("#modal").modal();
+                        $("#modal").modal('open');
+                        $(".preloader-wrapper").addClass("hide");
+                    }
+                });
+        }
+
+
+        function mark() {
+            // Retrieve the values of each answer
+            ans1 = $('input[name=q1-options]:checked').val();
+            ans2 = $('input[name=q2-options]:checked').val();
+            ans3 = $('input[name=q3-options]:checked').val();
+            ans4 = $('input[name=q4-options]:checked').val();
+            ans5 = $('input[name=q5-options]:checked').val();
+
+            // Check that there is value for all.
+            if (ans1 == null || ans2 == null || ans3 == null || ans4 == null || ans5 == null) {
+                alert('You need to answer all questions.');
+                return;
+            }
+
+            // Now prepare the answer
+
+            if (ans1 == "yes" && ans2 == "yes" && ans3 == "yes" && ans4 == "yes" && ans5 == "yes") {
+                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>These are all good signs that you are making enough milk. Many women think they have low milk supply when they actually don't - read some of the <a onclick='q1_modal();'>myths of low milk supply</a>.<br /><br /> Remember, feeding your baby whenever <a onclick='q1_modal();'>they are hungry</a> and for as long as they want to feed is the best way to keep up your milk supply (demand equals supply). Learn more about <a onclick='q1_modal();'>milk supply</a>.</p>");
+            } else {
+                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>These can be signs that you might not be making enough milk. Learn more about possible <a onclick='q1_modal();'>causes of low milk supply</a> and <a onclick='q1_modal();'>where to get help</a> to see if you really do have low supply. <br /><br /> There is no need to feel like a failure or give up breastfeeding - there are many things you can do to <a onclick='q1_modal();'>make more milk</a>.</p>")
+            }
+
+
+
+            $('#pg5-ans').show();
+
+            $('input[name=q1-options]').attr('disabled', true);
+            $('input[name=q2-options]').attr('disabled', true);
+            $('input[name=q3-options]').attr('disabled', true);
+            $('input[name=q4-options]').attr('disabled', true);
+            $('input[name=q5-options]').attr('disabled', true);
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/milk_supply_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    $(".preloader-wrapper").removeClass("hide");
+                    var postData = {
+                        user_id: userId,
+                        ans1: ans1,
+                        ans2: ans2,
+                        ans3: ans3,
+                        ans4: ans4,
+                        ans5: ans5
+                    };
+                    if (data.length === 0) {
+                        $.ajax({
+                            type: "post",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/milk_supply_quiz",
+                            data: JSON.stringify(postData),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+                    } else {
+                        var entryId = data[0].id;
+                        var postData = {
+                            ans1: ans1,
+                            ans2: ans2,
+                            ans3: ans3,
+                            ans4: ans4,
+                            ans5: ans5
+                        };
+                        $.ajax({
+                            type: "patch",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/milk_supply_quiz/" + entryId,
+                            data: JSON.stringify(postData),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+
+                    }
+
+                    $("#mark").addClass("hide");
+
+                    $("#clear").removeClass("hide");
+
+                });
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, 'fast');
+        }
+
+        function q1_modal() {
+            $('#q1-modal').show();
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="loader-wrapper" class="preloader-wrapper hide">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!--General Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p></p>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+    </div>
+
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/landing.png" />
+            <span class="card-title mbn-card-title" id="section-title" onclick="Load('tools');">
+            <i class="fa fa-chevron-left"></i> Tools
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title" onclick="Load('tools');">
+            <i class="fa fa-chevron-left"></i> Tools
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll">
+            <div id="clear" class="login-btn hide" onclick="clearAnswers()" style="margin-right:0">Redo quiz</div>
+
+            <div id="pg5-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+            <div id="pg1">
+                <p class="mbn-section">Milk supply quiz</p>
+                <p class="mbn-text">
+                    Concerned that you're not making enough milk? It could be low milk supply or perhaps what you're experiencing is completely normal. Take our quick quiz to find out now!
+                    <br /><br />
+                </p>
+                <div class="login-btn" onclick="startQuiz()">Begin quiz</div>
+            </div>
+
+            <div id="pg2">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">1.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                In a 24 hour period, does your baby have plenty of pale wet nappies - at least 5+ wet disposable nappies, or at least 6-8 wet cloth/reusable nappies?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q1-never" value="yes" name="q1-options" type="radio">
+                                    <label for="q1-never">Yes</label>
+                                </p>
+                                <p>
+                                    <input id="q1-rarely" value="no" name="q1-options" type="radio">
+                                    <label for="q1-rarely">No</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg2-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg3">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">2.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                Are your baby's poos soft?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q2-never" value="yes" name="q2-options" type="radio">
+                                    <label for="q2-never">Yes</label>
+                                </p>
+                                <p>
+                                    <input id="q2-rarely" value="no" name="q2-options" type="radio">
+                                    <label for="q2-rarely">No</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg3-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg4">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">3.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                Does your baby have good skin colour and muscle tone?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q3-never" value="yes" name="q3-options" type="radio">
+                                    <label for="q3-never">Yes</label>
+                                </p>
+                                <p>
+                                    <input id="q3-rarely" value="no" name="q3-options" type="radio">
+                                    <label for="q3-rarely">No</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg4-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg5">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">4.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                Is your baby growing well and gaining weight? (your maternal and child health nurse will guide you)
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q4-never" value="yes" name="q4-options" type="radio">
+                                    <label for="q4-never">Yes</label>
+                                </p>
+                                <p>
+                                    <input id="q4-rarely" value="no" name="q4-options" type="radio">
+                                    <label for="q4-rarely">No</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="pg6">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">5.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                Are there periods of time where your baby seems reasonably alert, active and happy?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q5-never" value="yes" name="q5-options" type="radio">
+                                    <label for="q5-never">Yes</label>
+                                </p>
+                                <p>
+                                    <input id="q5-rarely" value="no" name="q5-options" type="radio">
+                                    <label for="q5-rarely">No</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <br />
+            <br />
+
+            <div id="mark" class="login-btn" onclick="mark()">Submit answers</div>
+
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="q1-modal" class="tools-content">
+        <span class="tools-close"><i class="fa fa-times-circle fa-2x" onclick="$('#q1-modal').hide();"></i></span>
+        <p>
+            <br /><br /><br /> Content is loaded here.
+        </p>
+    </div>
+</body>
+
+</html>

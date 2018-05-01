@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="./images/expressing-milk.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.11" Breastfeeding>Expressing and storage</p>
+            <p class="mbn-text" id="1.1.11a">
+                <b>The basics</b>
+                <br> Drawing milk out of your breast is what is meant by 'expressing' milk. Expressing is not as efficient as your baby is at getting milk out, but it can be a handy skill to learn if you are going to be separated from your baby, or if your breasts feel full and you need to release some pressure. Do not feel that you need to purchase a <a onclick="localSecJump('bf-1117.html#1.1.17h');">breast pump</a> during pregnancy, it may not be necessary.
+            </p>
+
+            <p class="mbn-text" id="1.1.11b">
+                <b>In this section you will learn:</b>
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('1.1.11c');"> Ways to express</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.11d');">Let-down reflex</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.11f');">How much to express</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.11h');">When to express</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.11l');">Hand expression</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.11q');">Manual pump (hand-held) expression</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.11t');">Electric pump expression</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.12y');">Storage and use: what you need</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.11ab');">How to store breastmilk</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.11ac');">Thawing and warming breastmilk</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.11ae');">Transporting breastmilk</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.11af');">Milk changed smell or taste?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.11ah');">Cleaning breast pumps</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.11c">
+                <b>Ways to express</b>
+                <br/> You can express milk:
+            </p>
+            <ul>
+                <li>by <a onclick="localSecJump('bf-1111.html');">hand</a>
+                </li>
+                <li>with a <a onclick="localSecJump('1.1.11q');">manual (hand-held) breast pump</a>
+                </li>
+                <li>with an <a onclick="localSecJump('1.1.11t');">electric breast pump</a> (single or double breast)
+                </li>
+            </ul>
+            <p class="mbn-text">
+                There is no <i>best</i> way to express - different mums like and use different ways. If you will be expressing milk often, an electric pump might be the quickest way but it's important to see what works best for you.
+            </p>
+            <p class="mbn-text">
+                The cheapest option is to <a onclick="localSecJump('1.1.11l');">express by hand</a>! If expressing by hand isn't for you, there are many <a onclick="localSecJump('1.1.11q');">manual</a> and <a onclick="localSecJump('1.1.11t');">electric pumps</a> on the market, so it pays to shop around. Electric pumps are usually the most expensive. You also don't need to buy your own breast pump - they can be hired.
+            </p>
+            <p class="mbn-text" id="1.1.11d">
+                <b>Let-down reflex</b>
+                <br> Your let-down reflex is when hormones tell your body to 'let down' milk into your breasts and your milk starts flowing. This reflex is triggered when your baby sucks on your breast. For some mums their let-down reflex is stimulated by just seeing or hearing their baby, looking at a photo of their baby, smelling their baby's clothes or even just thinking about their baby!
+            </p>
+
+            <p class="mbn-text">
+                A let-down reflex can take a few minutes to happen and if you're expressing, you'll need to stimulate it yourself. As you get better at expressing, triggering your let-down reflex will happen more quickly.
+            </p>
+            <p class="mbn-text">
+                Get your milk flowing faster by:
+            </p>
+            <ul>
+                <li>looking at a picture of your baby or holding something that smells like them
+                </li>
+                <li>warming your breasts with a warm cloth - try expressing after you've showered
+                </li>
+                <li>stroking and gently massaging your breasts towards your nipples
+                </li>
+                <li>switching back and forth between breasts if your milk flow slows down
+                </li>
+                <li>being as relaxed as possible - try to express somewhere that's quiet and peaceful
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Find out <a onclick="localSecJump('1.1.11f');">how much to express</a> and <a onclick="localSecJump('1.1.11h');">when to express</a>
+            </p>
+            <p class="mbn-text" id="1.1.11e">
+                Remember:
+            </p>
+            <ul>
+                <li>expressing is not a 'measure' of how much milk you make - your baby is much better at getting out your milk than your hand or a breast pump
+                </li>
+                <li>expressing gets easier with practice and time
+                </li>
+                <li>the <a href="tel:1800686268">ABA helpline</a> is always available for extra help and advice if you need it
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11f">
+                <b>How much to express</b>
+            </p>
+            <p class="mbn-text">
+                <b>How much to express depends on why you are expressing!</b>
+                <br> If you feel like you have too much milk, express only enough so that you are comfortable again - if you express too much your body will make more milk to replace it! Read more about how your <a onclick="localSecJump('bf-113.html');">milk supply</a> works.
+            </p>
+            <p class="mbn-text">
+                If you are replacing a feed, use the following guide to work out roughly how much you need.
+            </p>
+            <p class="mbn-text" id="1.1.11g">
+                <b>How much milk is needed to replace a feed?</b>
+                <br> Exclusively breastfed babies 1-6 months old usually drink between 500-1000mL over 24 hours, with an average of around 800mL in 24 hours.
+            </p>
+            <p class="mbn-text">
+                To work out roughly how much milk you need for one feed:
+            </p>
+            <ul>
+                <li>Count how many feeds your baby usually has over 24 hours.getting out your milk than your hand or a breast pump
+                </li>
+                <li>Divide 800mL by the number of feeds your baby has.
+                </li>
+                <li>This number is your <b>estimate</b> for one feed.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>Example:</b>
+            </p>
+            <ul>
+                <li><b>Thomas usually has 11 feeds over 24 hours.</b>
+                </li>
+                <li><b>The average feed over 24 hours is about 800mL, so Thomas has about 800mL divided by 11 feeds = around 73mL at each feed.</b>
+                </li>
+                <li><b>His mum will need to express around 73mL for one feed.</b>
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Remember:
+            </p>
+            <ul>
+                <li>it's easy to give your baby more milk if they're still <a onclick="localSecJump('sfp/sfp-514.html');">hungry</a>, so <a onclick="localSecJump('1.1.11y');">store any expressed milk</a> in small amounts to save you having to throw excess away
+                </li>
+                <li>taking note of your baby's feeding habits across the day can help you give the right amount of milk for the time of day (e.g. your baby might have a bigger feed in the morning than at other times of the day)
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11h">
+                <b>When to express</b>
+            </p>
+            <p class="mbn-text">
+                <b>Before or after a feed?</b>
+                <br> There is no set time that you should express. You can express before, during, after or between feeds - whatever you and your baby find best.
+            </p>
+            <p class="mbn-text" id="1.1.11i">
+                <b>Regularly expressing</b>
+                <br> If you know you'll be away from your baby for a few hours regularly, it might be easiest to express at the time that your baby would usually feed. Learn more about expressing regularly because you are <a onclick="localSecJump('bf-117.html');">returning to work</a>
+            </p>
+            <p class="mbn-text" id="1.1.11j">
+                <b>One-off expressing</b>
+                <br> If you are doing a one-off feed, you might only express a small amount (20-30mL) at each feed during the day before and keep it in the fridge, or express whenever it suits you for a period beforehand and <a onclick="localSecJump('1.1.11z');">freeze this milk</a>.
+            </p>
+            <p class="mbn-text" id="1.1.11k">
+                It can be good to mix it up by sometimes expressing at the beginning of a feed to get the watery 'foremilk' and sometimes at the end to get the creamier 'hindmilk' (both are important!). If you can, building up a bank of <a onclick="localSecJump('1.1.11y');">stored breastmilk</a> helps keep things a bit more flexible, which saves you from the stressful situation of having to express by a certain time in order to do something like go out or <a onclick="localSecJump('bf-117.html');">go to work.</a>
+            </p>
+            <p class="mbn-text" id="1.1.11l">
+                <b>Hand expression</b>
+                <br> Hand expressing simply uses your hand to get out milk! It is handy for all mums to learn and is the cheapest way to express milk. Some mums prefer hand expressing above both <a onclick="localSecJump('1.1.11q');">manual</a> and <a onclick="localSecJump('1.1.11t');">electric pumps</a>
+            </p>
+            <p class="mbn-text" id="1.1.11m">
+                <b>What you will need</b>
+                <br> When hand expressing you will need:
+            </p>
+            <ul>
+                <li>a safe, relaxed space to sit down and express
+                </li>
+                <li>a clean container to express into
+                </li>
+                <li><a onclick="localSecJump('bf-1117.html#1.1.17i');">storage bags, ice cube trays or bottles</a> if you plan to <a onclick="localSecJump('1.1.11y');">store the milk</a>
+                </li>
+                <li>a clean towel to catch drips and dry your hands
+                </li>
+                <li>something that might help your <a onclick="localSecJump('1.1.11d');">let-down reflex</a> (e.g. a picture or clothing of your baby, soft music, etc)
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11o">
+                <b>Step-by-step guide</b>
+            </p>
+            <ul>
+                <li>Wash your hands well with soap and water and dry them with a clean towel - keep a clean towel close by to catch any drips or to dry your hands if needed.
+                </li>
+                <li>Place your thumb and forefinger opposite each other on either side of your areola (the dark area around your nipple), well back from the nipple (in a 'C' shape) - use whichever hand is comfortable for you.
+                </li>
+                <li>Gently press your thumb and forefinger back into your breast - this might feel a bit sore if your breast is full so go easy, expressing shouldn't hurt. Your fingers shouldn't slide or pinch your breast.
+                </li>
+                <li>Using a rolling action, press your thumb and forefinger towards each other - before your <a onclick="localSecJump('1.1.11d');">let-down reflex</a> happens your milk might only drip.
+                </li>
+                <li>Continue this pressing action ('compression') until your let-down happens - you will then see your milk spraying from your nipple. Getting your let-down to happen can take a few minutes, but it does get quicker with practice.
+                </li>
+                <li>When the flow slows, compress another section around your nipple. Once you have worked your way around one breast, switch to the other side - you might need to do this a few times during your expression session.
+                </li>
+                <li>When finished, put a lid on your milk catching container (or pour into a <a onclick="localSecJump('1.1.11i');">clean storage container</a> and seal), write the date on it and put it in the <a onclick="localSecJump('1.1.11ab');">fridge or freezer.</a>
+                </li>
+                <li>If your room is cooler than 26⁰C and you will use the milk within 6-8 hours, it is safe to leave the covered container on the bench <b>but throw away any milk not used within 8 hours</b> (note this is safe for breastmilk only, <i>not</i> formula).
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11p">
+                Remember:
+            </p>
+            <ul>
+                <li>expressing is not a 'measure' of how much milk you make - your baby is much better at getting out your milk than your hand or a breast pump
+                </li>
+                <li>expressing gets easier with practice and time
+                </li>
+                <li>the <a href="tel:1800686268">ABA helpline</a> is always available for extra help and advice if you need it
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11q">
+                <b>Manual pump (hand-held) expression</b>
+                <br> Manual pumps are popular because they are cheaper and tend to be smaller than <a onclick="localSecJump('1.1.11t');">electric pumps</a>. They include a suction cup attached to a pump handle ('piston') and collection bottle or container.
+            </p>
+            <p>
+                <img src="images/1.1.11q Manual Pump.jpg" class="mbn-text-image" />
+            </p>
+            <p class="mbn-text" id="1.1.11r">
+                <b>What you will need</b>
+                <br> When using a manual breast pump you will need:
+            </p>
+            <ul>
+                <li>a safe, relaxed space to sit down and express
+                </li>
+                <li>the pump and clean container to express into
+                </li>
+                <li><a onclick="localSecJump('bf-1117.html#1.1.17i');">storage bags, ice cube trays or bottles</a> if you plan to <a onclick="localSecJump('1.1.11y');">store the milk</a>
+                </li>
+                <li>a clean towel to catch drips and dry your hands
+                </li>
+                <li>something that might help your <a onclick="localSecJump('1.1.11d');">let-down reflex</a> (e.g. a picture or clothing of your baby, soft music, etc)
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11s">
+                <b>Step-by-step guide</b>
+            </p>
+            <ul>
+                <li>Wash your hands well with soap and water and dry them with a clean towel - keep a clean towel close by to catch any drips or to dry your hands if needed.
+                </li>
+                <li>Place the suction cup of the pump directly over your breast - make sure your nipple is in the middle.
+                </li>
+                <li>Squeeze the piston gently - too much suction can damage your nipple so just release if it becomes too strong for you.
+                </li>
+                <li>Before you get your <a onclick="localSecJump('1.1.11d');">let-down</a> your milk might only drip - be patient, it will come more quickly with time and practice.
+                </li>
+                <li>When the flow slows, switch to the other side - you might need to do this a few times during your expression session.
+                </li>
+                <li>When finished, put a lid on your milk catching container (or pour into a <a onclick="localSecJump('bf-1117.html#1.1.17i');">clean storage container</a> and seal), write the date on it and put it in the <a onclick="localSecJump('1.1.11ab');">fridge or freezer</a>.
+                </li>
+                <li>If your room is cooler than 26⁰C and you will use the milk within 6-8 hours, it is safe to leave the covered container on the bench <b>but throw away any milk not used within 8 hours</b> (note this is safe for breastmilk only, <i>not</i> formula).
+                </li>
+                <li><a onclick="localSecJump('1.1.11ah');">Clean your pump</a> according to the instructions on the packaging.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Remember:
+            </p>
+            <ul>
+                <li>expressing is not a 'measure' of how much milk you make - your baby is much better at getting out your milk than your hand or a breast pump
+                </li>
+                <li>expressing gets easier with practice and time
+                </li>
+                <li>the <a href="tel:1800686268">ABA helpline</a> is always available for extra help and advice if you need it
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11t">
+                <b>Electric pump expression</b>
+                <br> Electric pumps are similar to <a onclick="localSecJump('1.1.11q');">manual pumps</a> but you don't need to do the pumping - the machine does it for you. Some electric pumps have the option of either single breast or double breast pumping (meaning you can express one or both breasts at the same time).
+            </p>
+            <p class="mbn-text">
+                Electric pumps are the most expensive option but for mums that need to express a lot (such as those who are <a onclick="localSecJump('bf-117.html');">back at work</a>), it can be worth it. You can also choose to hire an electric breast pump instead, from:
+            </p>
+            <ul>
+                <li>your local hospital or chemist
+                </li>
+                <li>the <a onclick="localSecJump('bf-119.html#1.1.9o');">Australian Breastfeeding Association</a>
+                </li>
+                <li>some private businesses (try searching online for any in your area)
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11u">
+                If you choose to hire, you will need to buy your own kit that fits onto the pump - this is often included in the hiring option as a separate cost.
+            </p>
+            <p>
+                <img src="images/1.1.11u Electric pump.jpg" class="mbn-text-image" />
+            </p>
+            <p>
+                <img src="images/1.1.11u medela pump.png" class="mbn-text-image" />
+            </p>
+
+            <p class="mbn-text" id="1.1.11v">
+                <b>What you will need</b>
+                <br> When using an electric breast pump you will need::
+            </p>
+            <ul>
+                <li>a safe, relaxed space to sit down and express
+                </li>
+                <li>the electric pump plugged into the powerpoint or with charged batteries
+                </li>
+                <li>expressing kit with the suction cup and clean container to express into
+                </li>
+                <li><a onclick="localSecJump('bf-1117.html#1.1.17i');">storage bags, ice cube trays</a> or bottles if you plan to <a onclick="localSecJump('1.1.11y');">store the milk</a>
+                </li>
+                <li>a clean towel to catch drips and dry your hands
+                </li>
+                <li>something that might help your <a onclick="localSecJump('1.1.11d');">let-down reflex</a> (e.g. a picture or clothing of your baby, soft music, etc)
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11w">
+                <b>Step-by-step guide</b>
+            </p>
+            <ul>
+                <li>Wash your hands well with soap and water and dry them with a clean towel - keep a clean towel close by to catch any drips or to dry your hands if needed.
+                </li>
+                <li>Place the suction cup of the pump directly over your breast - make sure your nipple is in the middle.
+                </li>
+                <li>Turn the pump on, starting with a low suction and slowly increasing to a level that you are comfortable with - too much suction can damage your nipple so just release if it becomes too strong for you.
+                </li>
+                <li>Before you get your let-down your milk might only drip - be patient, it will come more quickly with time and practice. Some mums like to <a onclick="localSecJump('1.1.11l');">hand express</a> to stimulate their <a onclick="localSecJump('1.1.11d');">let-down reflex</a> before using the electric pump.
+                </li>
+                <li>Keep pumping until the milk flow slows down - some mums find they can get more out at the end of an expression session by finishing with <a onclick="localSecJump('1.1.11;');">hand expressing</a>.
+                </li>
+                <li>When finished, put a lid on your milk catching container (or pour into a <a onclick="localSecJump('bf-1117.html');">clean storage container</a> and seal), write the date on it and put it in the <a onclick="localSecJump('1.1.11ab');">fridge or freezer</a>.
+                </li>
+                <li>If your room is cooler than 26⁰C and you will use the milk within 6-8 hours, it is safe to leave the covered container on the bench <b>but throw away any milk not used within 8 hours</b> (note this is safe for breastmilk only, <i>not</i> formula).
+                </li>
+                <li><a onclick="localSecJump('1.1.11ah');">Clean your pump</a> according to the instructions on the packaging.
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11x">
+                Remember:
+            </p>
+            <ul>
+                <li>expressing is not a 'measure' of how much milk you make - your baby is much better at getting out your milk than your hand or a breast pump
+                </li>
+                <li>expressing gets easier with practice and time
+                </li>
+                <li>the <a href="tel:1800686268">ABA helpline</a> is always available for extra help and advice if you need it
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11y">
+                <b>Storage and use</b>
+            </p>
+            <p class="mbn-text">
+                <b>What you need</b>
+                <br> Whether you have expressed breastmilk <a onclick="localSecJump('1.1.11l');">by hand</a>, with a <a onclick="localSecJump('1.1.11q');">manual breast pump</a> or an <a onclick="localSecJump('1.1.11t');">electric breast pump</a>, if you plan to store your breastmilk for later use, there are a few things you will need.
+            </p>
+            <p class="mbn-text">
+                <a onclick="localSecJump('bf-1117.html#1.1.17i');">Storage containers</a> such as:
+            </p>
+            <ul>
+                <li>breastmilk storage bags - the bags are sterilised and made with thick plastic to store breastmilk in the fridge or freezer
+                </li>
+                <li>breastmilk storage trays or clean plastic ice-cube trays with a lids - these always need to be covered and sealed well
+                </li>
+                <li>baby bottles - you can store directly in a baby bottle but make sure a solid lid is used when storing (not a teat as they have holes)
+                </li>
+                <li>glass baby food and other jars - small jars that hold just one feed are best but try not to use any that have had fatty foods in them
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11z">
+                If you plan to freeze breastmilk:
+            </p>
+            <ul>
+                <li>make sure your expressed breastmilk is in <a onclick="localSecJump('bf-1117.html#1.1.17i');">a storage bag, tray</a> or sealed container suitable for the freezer with the date written on the outside
+                </li>
+                <li>place inside the freezer - ideally right inside rather than the door where the temperature can vary
+                </li>
+                <li>see a guide on <a onclick="localSecJump('1.1.11ab');">how long you can freeze breastmilk</a> for
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11aa">
+                Remember:
+            </p>
+            <ul>
+                <li>just like water, breastmilk expands when frozen, so only fill your containers 3/4 full
+                </li>
+                <li>freeze breastmilk that won't be used within 3 days
+                </li>
+                <li>the smell or taste of breastmilk that has been frozen can change - find out <a onclick="localSecJump('1.1.11af');">why and what to do about it</a>
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11ab">
+                <b>How to store:</b>
+                <br> Fresh breastmilk stored in a container that your baby has not yet fed from can be:
+            </p>
+            <ul>
+                <li>Left at room temperature (26&deg;C or lower) for 6-8 hours
+                </li>
+                <li>Stored in the coldest spot in the fridge for 3 days
+                </li>
+                <li>Stored in the freezer for somewhere between 2 weeks to 3 months, depending on your freezer.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Keep scrolling for more details on how long you can store breastmilk for at room temperature, in the fridge or in the freezer.
+            </p>
+            <TABLE BORDER="3" CELLSPACING="1" CELLPADDING="1">
+                <col width="150">
+                <col width="190">
+                <tr>
+                    <TH ALIGN="LEFT">Breastmilk status</TH>
+                    <TH ALIGN="LEFT">Storage at room temperature (26&deg;C or lower)</TH>
+                </tr>
+                <tr ALIGN="Left">
+                    <TD>Freshly expressed into clean container</TD>
+                    <TD>6-8 hours (but store in fridge if one is available)</TD>
+                </tr>
+                <tr>
+                    <TD>Thawed (previously frozen)</TD>
+                    <TD>4 hours or less</TD>
+                </tr>
+                <TR>
+                    <TD>Thawed outside fridge in warm water</TD>
+                    <TD>Only for completion of feeding (asap)</TD>
+                </TR>
+                <TR>
+                    <TD>Your baby has already started drinking it</TD>
+                    <TD>Only for completion of feeding - throw away after feed</TD>
+                </TR>
+            </TABLE>
+
+            <TABLE BORDER="3" CELLSPACING="1" CELLPADDING="1">
+                <col width="150">
+                <col width="190">
+                <TR>
+                    <TH ALIGN="LEFT">Breastmilk status</TH>
+                    <TH ALIGN="LEFT">Storage in fridge (5&deg;C or lower)</TH>
+                </TR>
+                <TR ALIGN="Left">
+                    <TD>Freshly expressed into clean container</TD>
+                    <TD>No more than 72 hours (3 days) and store at the back, where it's coldest</TD>
+                </TR>
+                <TR>
+                    <TD>Thawed (previously frozen)</TD>
+                    <TD>24 hours</TD>
+                </TR>
+                <TR>
+                    <TD>Thawed outside fridge in warm water</TD>
+                    <TD>4 hours or less</TD>
+                </TR>
+                <TR>
+                    <TD>Your baby has already started drinking it</TD>
+                    <TD>Throw away</TD>
+                </TR>
+            </TABLE>
+
+            <TABLE BORDER="3" CELLSPACING="1" CELLPADDING="1">
+                <col width="150">
+                <col width="190">
+                <TR>
+                    <TH ALIGN="LEFT">Breastmilk status</TH>
+                    <TH ALIGN="LEFT">Storage in freezer</TH>
+                </TR>
+                <TR ALIGN="Left">
+                    <TD>Freshly expressed into clean container</TD>
+                    <TD>
+                        2 weeks in freezer compartment inside fridge<br> (-15&deg;C) 3 months in freezer with separate door to fridge(-18&deg;C)<br> 6-12 months in deep freeze (-20&deg;C)</TD>
+                </TR>
+                <TR>
+                    <TD>Thawed (previously frozen)</TD>
+                    <TD>Do not refreeze</TD>
+                </TR>
+                <TR>
+                    <TD>Thawed outside fridge in warm water</TD>
+                    <TD>Do not refreeze</TD>
+                </TR>
+                <TR>
+                    <TD>Your baby has already started drinking it</TD>
+                    <TD>Throw away</TD>
+                </TR>
+            </TABLE>
+
+            <p class="mbn-text" id="1.1.11ac">
+                <b>Thawing and warming breastmilk</b>
+                <br> When it comes time to use breastmilk you've refrigerated or frozen, always:
+            </p>
+            <ul>
+                <li>use the oldest milk first (make sure you date the containers!
+                </li>
+                <li>thaw frozen milk in the fridge only - not on the kitchen bench or when out and about
+                </li>
+                <li>gently shake (not strongly) or swirl to mix together any milk that has separated into layers
+                </li>
+                <li>warm the thawed or chilled milk in a bowl of hot (but not boiling) water and test the temperature on the inside of your wrist before giving it to your baby - it should feel warm or cool, but not hot
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11ad">
+                Remember:
+            </p>
+            <ul>
+                <li>if your baby is happy with cold breastmilk, you don't need to warm it up
+                </li>
+                <li><i>never</i> heat breastmilk in a microwave - this can cause uneven heating which may cause 'hot spots' that could burn your baby's mouth or tongue
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.11ae">
+                <b>Transporting breastmilk</b>
+                <br> Fresh breastmilk is safe to leave out of the fridge if the temperature is cooler than 26&deg;C but it must be:
+            </p>
+            <ul>
+                <li>in a covered container
+                </li>
+                <li>used within 6-8 hours or thrown away
+                </li>
+            </ul>
+            <p class="mbn-text">
+                If you are transporting older milk that was in the fridge or frozen:
+            </p>
+            <ul>
+                <li>carry the milk in an esky with ice packs
+                </li>
+                <li>if some milk has thawed, use it within 4 hours - never refreeze
+                </li>
+            </ul>
+            <p class="mbn-text">
+                If the temperature is higher than 26&deg;C, carry the milk in an esky with ice packs - whether or not it has been freshly expressed.
+            </p>
+            <p class="mbn-text" id="1.1.11af">
+                <b>Milk changed smell or taste?</b>
+                <br> Your baby might not like the taste of your breastmilk if it has been <a onclick="localSecJump('1.1.11ab');">stored</a> for a while but this doesn't mean it has 'gone off'!
+            </p>
+            <p class="mbn-text">
+                This happens because of the lipase (an enzyme) in your breastmilk which starts breaking down fats in the milk and changing the taste and smell.
+            </p>
+            <p class="mbn-text" id="1.1.11ag">
+                Heating your breastmilk almost to boiling and then quickly cooling it in a bowl of ice water <i>as soon as you've expressed</i> it can stop this from happening. Although this also destroys some of the other goodness in your breastmilk, it <i>does</i> mean you won't have to throw the whole lot out if your baby doesn't like the changed taste.
+            </p>
+            <p class="mbn-text">
+                As long as you have <a onclick="localSecJump('1.1.11ab');">stored your breastmilk correctly</a>, it is perfectly safe to use.
+            </p>
+
+            <p class="mbn-text" id="1.1.11ah">
+                <b>Cleaning breast pumps</b>
+                <br> If your baby was full term and is healthy, and you are using your own expressing equipment, then you don't need to sterilise the equipment, but always making sure your hands and equipment are clean is important.
+            </p>
+            <p class="mbn-text">
+                If you are expressing more than once a day, you should rinse off any breastmilk with cold water each time you are finished then store the equipment in a clean, closed container (e.g. a snaplock bag or clean plastic tub with a lid) until the next use. Your breast pump equipment should then be washed thoroughly once a day to remove any milk and other materials.
+            </p>
+
+            <p class="mbn-text" id="1.1.11ai">
+                Follow this step-by-step guide:
+            </p>
+            <ul>
+                <li>Wash your hands with soap and water and dry them with a clean towel.
+                </li>
+                <li>Take apart all pieces of equipment (containers, bottles and the breast pump).
+                </li>
+                <li>Rinse all pieces in cold water to remove any milk.
+                </li>
+                <li>Use a bit of dishwashing liquid and hot water to wash each piece more thoroughly - keep a separate brush just for this task.
+                </li>
+                <li>Rinse at least twice in hot water.
+                </li>
+                <li>Put all bottles and containers upside down on clean paper towel to drain, covering with more paper towel while they dry - check that there is no water left on them before putting everything away (dry with paper towel if you find any.
+                </li>
+                <li>Once dry, store your equipment in a clean, closed container such as a snaplock bag or clean plastic tub with a lid.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                If you or your baby has any type of infection, or you are sharing equipment, you should always sterilise your equipment after cleaning.
+            </p>
+            <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

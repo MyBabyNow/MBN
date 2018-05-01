@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/pregnancy-sub-menu.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-py');"><i class="fa fa-chevron-left"></i> Pregnancy</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-py');"><i class="fa fa-chevron-left"></i> Pregnancy</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="10.1.4" Pregnancy> Preparing for your baby: a checklist<span id="10.1.4.a"></span></p>
+            <p class="mbn-text" id="10.1.4a">
+                Just because you're pregnant doesn't mean that you should know everything about babies and kids! No one does! And as scary as that might sound, the main thing is that you love and care for your baby and be prepared to learn along the way.
+            </p>
+            <p class="mbn-text">
+                A few things to consider:</p>
+            <ul>
+                <li><a onclick="localSecJump('10.1.4c');">Birth choices</a>
+                </li>
+                <li><a onclick="localSecJump('10.1.4d');">Preparing your home</a>
+                </li>
+                <li><a onclick="localSecJump('10.1.4h');">Baby equipment</a>
+                </li>
+            </ul>
+            <p class="mbn-text" id="10.1.4b">
+                In this video, different parents share what they thought being a parent would be like and their experiences once their baby was actually born.
+            </p>
+            <p class="mbn-text">
+                <b>Video: Thoughts about becoming a parent</b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/mlJrrMp7vjs" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-text">
+                <i>Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/becoming_parent_video.html" target="_blank">raisingchildren.net.au</a>.</i>
+            </p>
+            <p class="mbn-text">
+                Before your baby arrives, there are a few things you might like to sort out, such as deciding <a onclick="localSecJump('10.1.4c');">where you would like to give birth</a>, <a onclick="localSecJump('10.1.4d');">preparing your home</a> for your new baby and <a onclick="localSecJump('10.1.4j');">what equipment you might need</a>. Keep scrolling for our checklist to help you get ready for this exciting time!
+            </p>
+            <p class="mbn-text" id="10.1.4c">
+                <b>Birth choices</b>
+                <br /> Being in Australia means that you are fortunate to have a say in where you give birth, for example, in a public or private hospital, a birth centre or at home. With each setting, the types of carers (e.g. midwife, GP and obstetrician) who will look after you during your pregnancy, birth and once your baby is born, will also change.
+            </p>
+            <p class="mbn-text">
+                So what should you choose? Having all of that choice can present problems, especially if this is your first baby or you don't really know all the pros and cons of the different settings.
+            </p>
+            <p class="mbn-text">
+                That's where the Raising Children's Network Birth Choices site can help. Explore your <a href="http://birthchoices.raisingchildren.net.au/" target="_blank">birth choices</a> further.
+            </p>
+            <p class="mbn-text" id="10.1.4d">
+                <b>Preparing your home</b>
+                <br /> Often referred to as 'nesting', getting your home ready to welcome a new baby can be a great way to help you and your partner, as well as any other children you have, to prepare for your new baby's arrival.
+            </p>
+            <p class="mbn-text">
+                As an added bonus, most of the things you need to do in order for your home <a onclick="localSecJump('play/play-914.html#9.1.4');">to be safe for your baby</a> are not about making major changes, but really just about knowing what to expect.
+            </p>
+            <p class="mbn-text">
+                To make sure your home is ready, consider the following questions.
+            </p>
+            <p class="mbn-text" id="10.1.4e">
+                <b>Where will your baby sleep?</b>
+                <br /> You might not have the time or space to make a new room for your baby and that's OK because your baby can easily fit into a corner of your bedroom and having your baby <a onclick="localSecJump('py-1013.html#10.1.3ae');">room-in</a> for the first 6-12 is the safest option for reducing the risk of SIDS anyway.
+            </p>
+            <p class="mbn-text" id="10.1.4f">
+                <b>Where will you change nappies?</b>
+                <br /> Buying a change table is common but changing your baby on a bed or on a mat on the floor are also options. Although some parents find that a change table is easier on their backs, at home, it's actually safer to change your baby on a mat on the floor, where there is no chance of falling.
+            </p>
+            <p class="mbn-text">
+                Whichever option you choose, always put your baby's safety first. So if you're changing on a change table or a bed, <b>always keep your hands on your baby at all times</b> to stop them from rolling off.
+            </p>
+            <p class="mbn-text" id="10.1.4g">
+                <b>Where will you bath your baby?</b>
+                <br /> Your baby doesn't need any special bathing area prepared! In fact, provided it's safe and clean, you can even bath your newborn in the laundry tub or kitchen sink!
+            </p>
+            <p class="mbn-text" id="10.1.4h">
+                <b>Baby equipment</b>
+                <br /> Having all the 'stuff'you might need can sometimes feel as daunting as it is exciting - where do you start?!
+            </p>
+            <p class="mbn-text" id="10.1.4i">
+                <b>The essentials</b>
+                <br /> The following are a few essentials you'll need to start with but as your baby grows, the things they need will continue to change, so it might be best to only borrow or buy things as you need them.
+            </p>
+            <p class="mbn-text" id="10.1.4j">
+                General equipment:
+            </p>
+            <ul>
+                <li>
+                    <u>an Australian Standards-approved rear-facing <a href="http://raisingchildren.net.au/articles/car_restraints.html/context/571" target="_blank">child restraint</a></u> (AS/NZS 1754) - try to have this professionally fitted before your baby arrives, especially if you plan on driving home from <a onclick="localSecJump('10.1.4c');">hospital or birth centre</a>
+                </li>
+                <li>
+                    <u>an Australian Standards-approved <a href=" http://raisingchildren.net.au/articles/safe_baby_furniture_checklist.html/context/569#cots" target="_blank">baby cot</a></u> (AS/NZS 2172:2003) and a firm, well-fitting mattress, and sheets for your baby's <a onclick="localSecJump('sfp/sfp-5115.html#5.1.15');">sleep safety</a> - although some parents use a crib or bassinette for the first few months, a full-sized cot is both <a onclick="localSecJump('10.1.4p');">cost-effective</a> and safe
+                </li>
+                <li>
+                    <u>nappies</u> - it's best to keep a few disposables handy just in case, even if you plan to use reusable nappies
+                </li>
+                <li>
+                    <u>an Australian Standards-approved <a href="http://raisingchildren.net.au/articles/safety_for_prams_strollers.html" target="_blank">pram or stroller</a></u> (AS/NZS 2088) if you plan on getting out and about with your baby
+                </li>
+            </ul>
+            <p class="mbn-text" id="10.1.4k">
+                For you:
+            </p>
+            <ul>
+                <li><u>extra-long and thick sanitary (maternity) pads</u> - take lots to the hospital and have more ready for when you get home
+                </li>
+                <li><a onclick="localSecJump('bf/bf-1117.html#1.1.17d');">nursing (maternity) bras and breast pads</a> - to make breastfeeding easier and more comfortable
+                </li>
+            </ul>
+            <p class="mbn-text" id="10.1.4l">
+                For your baby:
+            </p>
+            <ul>
+                <li><u>enough clothing</u> - try to have 3-4 baby jumpsuits with some singlets to go underneath as well as jumpers/cardigans depending on the time of the year
+                </li>
+                <li><a onclick="localSecJump('sfp/sfp-517.html#5.1.7');">baby wraps</a> - have a few on hand including muslin if it's summer
+                </li>
+                <li><u>daily care items</u> - baby wash (non-soap is best), sorbolene cream for dry skin, a thermometer and cream for your baby's bottom
+                </li>
+            </ul>
+            <p class="mbn-text" id="10.1.4m">
+                <b>Other baby equipment</b>
+                <br /> There are so many products available and some of it can be really expensive! After you have <a onclick="localSecJump('10.1.4i');">the essentials</a> covered, some of the following items might be of use, but it's always a good idea to question whether you'd actually use them or are just following what advertisers or friends/family are telling you.
+            </p>
+            <p class="mbn-text" id="10.1.4n">
+                Some items you might find helpful:
+            </p>
+            <ul>
+                <li><u>nappy bin with lid</u> for home and single disposable nappy bags for when you're out - placing soiled nappies in your usual bin or using old plastic bags instead is another option
+                </li>
+                <li><u>baby bath</u> - using the kitchen sink or laundry tub can be fine, provided they're clean
+                </li>
+                <li><u>soft towels</u> for drying and wrapping your baby after bath time
+                </li>
+                <li><u>a musical mobile</u> for capturing your baby's attention and helping them to settle
+                </li>
+                <li><u>baby carrier, sling or backpack</u> - these can be great for letting you go hands free when out and about with your baby, provided they're <a href="http://raisingchildren.net.au/articles/baby_slings_carriers_safety.html/context/573" target="_blank">used correctly</a>
+                </li>
+            </ul>
+            <p class="mbn-text" id="10.1.4o">
+                Items best avoided:
+            </p>
+            <ul>
+                <li>
+                    <u>talcum powder</u> - your baby might breathe in its fine particles and it can also get into your baby's genitals and cause damage to internal structures
+                </li>
+                <li>
+                    <u>a baby walker</u> - these can be dangerous and children left unattended have been hurt
+                </li>
+            </ul>
+            <p class="mbn-text" id="10.1.4p">
+                <b>Saving money</b>
+                <br /> Not everything needs to be brand new! Your baby will quickly outgrow many things, especially clothes, toys and even some furniture!
+            </p>
+            <p class="mbn-text">
+                There are many ways you can save money on baby equipment, starting with buying <b>only what you need</b>. A good way to avoid marketing gimmicks is to talk with other parents to see what they've found useful.
+            </p>
+            <p class="mbn-text">
+                Some good places to look for second-hand or 'pre-loved'baby equipment are:
+            </p>
+            <ul>
+                <li>op shops
+                </li>
+                <li>websites (e.g. eBay or Gumtree)
+                </li>
+                <li>parents'groups
+                </li>
+                <li>local markets
+                </li>
+                <li>garage sales and local community advertisements
+                </li>
+                <li>trading papers
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Don't forget to:
+            </p>
+            <ul>
+                <li>
+                    stock up on items like nappies and wipe when they're on sale to take advantage of cheaper prices (but make sure you check use-by dates)
+                </li>
+                <li>
+                    check your public library to borrow toys (as well as books) which should comply with Australian Standards (but it's always best to double check if in doubt)
+                </li>
+            </ul>
+            <p class="mbn-text" id="10.1.4q">
+                <u>A note on safety and second-hand furniture</u>
+                <br /> Items that do not have an Australian Standards label can increase your baby's risk of serious injury and even death.
+            </p>
+            <p class="mbn-text">
+                The Australian Competition and Consumer Commission advises <b>not to buy, borrow or accept second-hand products that are missing an Australian Standards label</b> and safety features.
+            </p>
+            <p class="mbn-text">
+                If you're not sure about the safety history of an item, it's best not to accept or buy it. This is particularly important for cots, mattresses, booster seats and child restraints.
+            </p>
+            <p class="mbn-text">
+                For your baby's safety and your peace of mind, always choose equipment that comes with a good safety history.
+            </p>
+            <p class="mbn-video-caption">
+                Adapted with permission from the <a href="http://raisingchildren.net.au/articles/baby_equipment_checklist.html/context/1555" target="_blank"> Raising Children website</a>, Australia's trusted parenting website.
+            </p>
+            <p>
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

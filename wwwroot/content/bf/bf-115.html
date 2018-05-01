@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/how-often-how-long-night-feeds.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.5" Breastfeeding> How often, how long and night feeds</p>
+            <p class="mbn-text" id="1.1.5a">
+                <b>How often should you breastfeed?</b>
+            </p>
+            <p class="mbn-text">
+                The <a onclick="localSecJump('sfp/sfp-511.html');">feeding patterns of newborns</a> vary a lot and the amount your baby feeds can also vary from day-to-day. Feeding your baby when they <a onclick="localSecJump('sfp/sfp-514.html');">seem hungry</a> and for as long as they want to feed, is best and also ensures your body makes enough milk to meet their needs. During the first 6 weeks it's especially important to follow your baby's lead as you set up your <a onclick="localSecJump('bf-113.html');">milk supply</a>.
+            </p>
+
+            <p class="mbn-text" id="1.1.5b">
+                Trying to make your baby 'fit' into a <a onclick="localSecJump('sfp/sfp-511.html');">specific routine</a> or 'spreading out' the feeds in the early weeks and months:
+            </p>
+            <ul>
+                <li>can be stressful
+                </li>
+                <li>may not suit your baby
+                </li>
+                <li>will mean you make less milk
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.5c">
+                Remember:
+            </p>
+            <ul>
+                <li>your baby only has a <a onclick="localSecJump('bf-111.html#1.1.1c');">small tummy</a> but it digests your breastmilk very easily, so your baby needs to be fed often. It is normal for a breastfed baby to be fed <a onclick="localSecJump('sfp/sfp-511.html');">8-12 times a day in the first months</a>. Feeding at least 8 times in a day helps maintain <a onclick="localSecJump('bf-113.html');">milk supply</a>.
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.5d">
+                <b>How long should you breastfeed?</b>
+            </p>
+            <p class="mbn-text">
+                Every baby is different and the length of time they feed for can also change from day-to-day and even feed-to-feed. Some babies linger, while others gobble and go!
+            </p>
+            <p class="mbn-text">
+                You don't need to restrict how long you feed, you just need to make sure your baby feeds well and empties your breast(s) so they get all the creamy milk at the end of a feed. This helps keep up your <a onclick="localSecJump('bf-113.html');">milk supply</a>
+            </p>
+            <p class="mbn-text">
+                Babies usually get faster at feeding as they get bigger and better at it - newborns can take up to an hour, while older babies may take just 5 minutes!
+            </p>
+            <p class="mbn-text" id="1.1.5e">
+                <b>Night feeds</b>
+            </p>
+            <p class="mbn-text">
+                Night feeds are important for setting up <a onclick="localSecJump('bf-113.html');">milk supply</a> and for your baby's <a onclick="localSecJump('sfp/sfp-515.html');">growth</a>. Up to <a onclick="localSecJump('sfp/sfp-511.html');">about 3 months old</a> almost all babies will feed during the night. By <a onclick="localSecJump('sfp/sfp-512.html');">3 to 6 months old</a>, more than half of all babies still feed through the night. <a onclick="localSecJump('sfp/sfp-513.html');">After 6 months</a> babies that are developing well no longer need to feed overnight. Read more about <a onclick="localSecJump('sfp/sfp-5114.html');">dropping night feeds</a>.
+            </p>
+            <p class="mbn-text">
+                Remember - babies' sleep patterns are different to ours as adults - even 'sleeping through' for a baby is defined as just 5 hours of continuous sleep.
+            </p>
+            <p class="mbn-text">
+                This video answers common questions about breastfeeding. A <a onclick="localSecJump('bf-119.html#1.1.9j');">lactation consultant</a> says that as long as your baby is getting enough milk, it doesn't matter how long or how often your baby feeds.
+            </p>
+
+            <p class="mbn-text">
+                <b>Video: Common breastfeeding questions - how often, how long, waking baby</b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/f5ci3cDPYNk" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/breastfeeding_questions_timing_video.html/context/1645" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+            <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

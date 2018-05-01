@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/snack.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="6.5.1">Snacks<span id="6.5.1a"></span></p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('6.5.1b');">Baby rusks</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.5.1c');">Cheese straws</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.5.1d');">Cool bananas</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.5.1e');">Finger foods</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.5.1f');">Hummus (chickpea dip)</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.5.1g');">Peach rice</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.5.1h');">Pear muffins</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.5.1i');">Raspberry and pear yoghurt</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.5.1j');">Steamed veggies</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.5.1k');">Tasty sweet potato wedges</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.5.1l');">Veggie citrus muffins</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.5.1b">Baby rusks</p>
+            <p class="mbn-text">
+                <img src="images/Baby rusks.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> finger food<br />
+                <b>Storage:</b> in the fridge for up to 7 days, covered<br />
+                <b>Note:</b> much cheaper and healthier than shop-bought rusks!<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 loaf unsliced wholemeal bread
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Preheat oven to 120&deg;C.
+                </li>
+                <li class="mbn-ol"> Cut about 4cm of crust from all sides of the bread.
+                </li>
+                <li class="mbn-ol"> Cut crusts into fingers about 2cm wide.
+                </li>
+                <li class="mbn-ol"> Spread crusts over a baking tray and bake for about 1 hour or until they are dry and crunchy.
+                </li>
+                <li class="mbn-ol"> Cool completely then store in airtight container.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.5.1c">Cheese straws</p>
+            <p class="mbn-text">
+                <img src="images/Cheese straws.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> finger food; the whole family<br />
+                <b>Storage:</b> freeze or keep in the fridge for up to 4 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac14; cup cheddar cheese (grated)
+                </li>
+                <li> &frac13; cup plain wholemeal flour
+                </li>
+                <li> 2 tablespoons canola or olive oil margarine
+                </li>
+                <li> 1 egg (beaten)
+                </li>
+                <li> 1 splash milk
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Line a baking tray with baking paper.
+                </li>
+                <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                </li>
+                <li class="mbn-ol"> In a bowl, rub margarine into flour (between your fingers) until it looks like breadcrumbs.
+                </li>
+                <li class="mbn-ol"> Mix in cheese.
+                </li>
+                <li class="mbn-ol"> Add nearly all beaten egg (save a little bit), mixing with knife to form a dough.
+                </li>
+                <li class="mbn-ol"> Roll into a ball with your hands (add a little milk if too dry).
+                </li>
+                <li class="mbn-ol"> Roll out dough on floured surface until &frac12;cm thick.
+                </li>
+                <li class="mbn-ol"> Cut into 5cm x 1cm pieces and place on baking tray.
+                </li>
+                <li class="mbn-ol"> Brush rest of egg (or a little milk) over top.
+                </li>
+                <li class="mbn-ol"> Bake in oven for 10 minutes or until golden.
+                </li>
+                <li class="mbn-ol"> Cool completely then store in airtight container.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> Follow the same method but for a family of 4 use:
+            </p>
+            <ul>
+                <li> 1 cup cheddar cheese (grated)
+                </li>
+                <li> &frac13; cup plain wholemeal flour
+                </li>
+                <li> &frac12; cup canola or olive oil margarine
+                </li>
+                <li> 4 eggs (beaten)
+                </li>
+                <li> milk
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.5.1d">Cool bananas</p>
+            <p class="mbn-text">
+                <img src="images/Cool bananas.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> finger food; soothing teething gums<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note:</b> easy snack for hot days, even before any teeth come through<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 ripe banana
+                </li>
+                <li> 1 cup unsweetened plain natural yoghurt
+                </li>
+                <li> 1 cup wheat germ
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Cut banana into pieces about the length of your baby's finger.
+                </li>
+                <li class="mbn-ol"> Cover a baking tray with baking paper.
+                </li>
+                <li class="mbn-ol"> Dip banana into yoghurt then turn in wheat germ until coated.
+                </li>
+                <li class="mbn-ol"> Place coated banana on baking tray.
+                </li>
+                <li class="mbn-ol"> Repeat until all pieces have been coated.
+                </li>
+                <li class="mbn-ol"> Place in freezer for about 2 hours or until banana pieces are firm.
+                </li>
+                <li class="mbn-ol"> Serve firm.
+                </li>
+                <li class="mbn-ol"> Place unused cool bananas in a snaplock bag and keep in the freezer for later.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.5.1e">Finger foods</p>
+            <p class="mbn-text">
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b> in the fridge, covered, for 1-3 days depending on items selected; not suitable for freezing<br />
+                <b>Note: </b> super easy; <a onclick="localSecJump('recipe-671.html#6.7.1d');"> see video of recipe</a><br/>
+                <br />
+                <b>Ingredients s (pick and choose) </b>
+            </p>
+            <ul>
+                <li> watermelon
+                </li>
+                <li> pineapple
+                </li>
+                <li> capsicum strips
+                </li>
+                <li> baby corn spears
+                </li>
+                <li> banana
+                </li>
+                <li> avocado
+                </li>
+                <li> steamed broccoli
+                </li>
+                <li> pita bread
+                </li>
+                <li> halved grapes
+                </li>
+                <li> steamed carrot sticks
+                </li>
+                <li> halved strawberries
+                </li>
+                <li> cooked lean chicken
+                </li>
+                <li> pasta spirals
+                </li>
+                <li> steamed snow peas
+                </li>
+                <li> steamed cauliflower
+                </li>
+                <li> meatballs
+                </li>
+                <li> cucumber slices
+                </li>
+                <li> cooked apple slices
+                </li>
+                <li> orange slices
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Cut into strips and shapes easy for little hands (and big hands) to manage.
+                </li>
+                <li class="mbn-ol"> Cook or leave raw depending food(s) chosen.
+                </li>
+                <li class="mbn-ol"> Choose a dip to go with the finger food if you like (e.g. <a onclick="localSecJump('recipe-651.html#6.5.1f');">hummus</a> with carrot sticks, pita bread or cucumber slices; <a onclick="localSecJump('recipe-631.html#6.3.1d');"> cheese sauce</a> with pasta, cauliflower or broccoli; pasta sauce with pasta, cooked chicken or <a onclick="localSecJump('recipe-641.html#6.4.1k');"> meatballs</a>; unsweetened plain yoghurt with grapes, banana or strawberries).
+                </li>
+                <li class="mbn-ol"> Serve at room temperature.
+                </li>
+            </ul>
+            <p class="mbn-video-caption">
+                <i>Adapted from the Infant Program website. For more help getting healthy eating   and active play with your baby right from the start, visit <a href="http://www.infantprogram.org">infantprogram.org</a></i>.
+            </p>
+
+            <p class="mbn-section" id="6.5.1f">Hummus (chickpea dip)</p>
+            <p class="mbn-text">
+                <img src="images/Hummus.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> the whole family<br />
+                <b>Storage:</b>in the fridge for up to 4 days, covered<br />
+                <b>Note: </b> super easy, healthy and full of protein<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1-2 cloves garlic (crushed)
+                </li>
+                <li> &frac12; cup tinned chickpeas (low salt ideally)
+                </li>
+                <li> &frac12; tablespoon tahini (ground sesame seeds, optional)
+                </li>
+                <li> 2 tablespoons lemon juice
+                </li>
+                <li> 2-3 tablespoons water (adjust according to consistency)
+                </li>
+                <li> 1 teaspoon ground cumin (optional)
+                </li>
+                <li> a pinch paprika (optional)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Drain and rinse chickpeas well.
+                </li>
+                <li class="mbn-ol"> In a food processor (or a bowl to use with a stick blender) add garlic, 2 tablespoons water, lemon juice, tahini (if using) and spices (if using).
+                </li>
+                <li class="mbn-ol"> Blend, adding a little more water if sticking, until desired consistency.
+                </li>
+                <li class="mbn-ol"> Serve with <a onclick="localSecJump('recipe-651.html#6.5.1b');"> <u>Baby rusks</u></a> or sticks of carrot (steamed for young babies) or other <a onclick="localSecJump('recipe-651.html#6.5.1e');"> <u>Finger foods</u></a> once cooled.
+                </li>
+                <li class="mbn-ol"> Refrigerate unused hummus in an airtight container for up to 4 days.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.5.1g">Peach rice</p>
+            <p class="mbn-text">
+                <img src="images/Peach rice.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> when you are 'out' of fresh fruit<br />
+                <b>Storage:</b> in fridge for up to 1 day, covered; not suitable for freezing<br />
+                <b>Note: </b> super easy!<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac14; cup tinned peaches in fruit juice (not syrup)
+                </li>
+                <li> 1 tablespoon cow's milk
+                </li>
+                <li> 4 teaspoons baby rice cereal
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Drain peaches and place in a jug with milk and rice.
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to desired consistency.
+                </li>
+                <li class="mbn-ol"> Serve at room temperature.
+                </li>
+                <li class="mbn-ol"> Cover and refrigerate any unused peach rice for up to a day.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.5.1h">Pear muffins</p>
+            <p class="mbn-text">
+                <img src="images/Pear muffins.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> healthy, no-added sugar snack for the whole family<br />
+                <b>Storage:</b> freeze or keep in the fridge for up to 4 days, covered<br />
+                <b>Note: </b> bananas can be used instead of pears; makes 4-6 muffins (depending on size of tray)<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac12; cup self-raising wholemeal flour (or plain wholemeal flour with &frac34; teaspoon baking powder added)
+                </li>
+                <li> 1 egg
+                </li>
+                <li> 2 overripe pears (or bananas)
+                </li>
+                <li> &frac14; cup canola oil
+                </li>
+                <li> 1 pinch cinnamon
+                </li>
+                <li> 1 tablespoon milk
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                </li>
+                <li class="mbn-ol"> Line muffin tray with muffin papers (or spray with oil).
+                </li>
+                <li class="mbn-ol"> Peel and core pears/bananas. oil).
+                </li>
+                <li class="mbn-ol"> Chop one pear/banana finely and mash the other, set aside.
+                </li>
+                <li class="mbn-ol"> In a bowl, whisk together oil and egg thoroughly, set aside.
+                </li>
+                <li class="mbn-ol"> In a large bowl, add cinnamon to flour and stir in chopped pear/banana.
+                </li>
+                <li class="mbn-ol"> Gently mix the mashed pear/banana and oil mixture with the flour.
+                </li>
+                <li class="mbn-ol"> Mix in milk until just combined.
+                </li>
+                <li class="mbn-ol"> Spoon mixture evenly into muffin tray.
+                </li>
+                <li class="mbn-ol"> Bake for about 20 minutes, until firm to touch and golden or until a wooden toothpick inserted in centre comes out clean.
+                </li>
+                <li class="mbn-ol"> Freeze or refrigerate in airtight container for up to 4 days.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.5.1i">Raspberry and pear yoghurt</p>
+            <p class="mbn-text">
+                <img src="images/Raspberry and Pear yoghurt.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> young babies who love the natural fruit sugars and colours in this dish!<br />
+                <b>Storage:</b> in the fridge for up to 2 days, covered; not suitable for freezing<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac12; cup raspberries (fresh or frozen)
+                </li>
+                <li> &frac12; cup overripe pear (mashed)
+                </li>
+                <li> 1 cup unsweetened plain natural yoghurt
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Place raspberries and pear in a small pot and cover with water.
+                </li>
+                <li class="mbn-ol"> Bring to the boil, then reduce heat and simmer for a few minutes.
+                </li>
+                <li class="mbn-ol"> Press raspberry/pear mix through a sieve to remove seeds (throw these away).
+                </li>
+                <li class="mbn-ol"> Swirl raspberry/pear pur&eacute;e through yoghurt and serve.
+                </li>
+                <li class="mbn-ol"> Any unused raspberry and pear yoghurt can be covered and refrigerated for up to 2 days.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.5.1j">Steamed veggies</p>
+            <p class="mbn-text">
+                <img src="images/Steamed veggies.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> finger food (if left whole)<br />
+                <b>Storage:</b> freeze or keep in the fridge for up to 1-2 days, covered<br />
+                <b>Note: </b>steamed vegetables make perfect snacks whether pur&eacute;ed (complete step 4) or as finger-sized healthy snack foods (for young and old alike!)<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> handful of green beans (trimmed)
+                </li>
+                <li> 2 carrots (washed and cut in 2cm x 3-4cm pieces)
+                </li>
+                <b>OR</b>
+                <br />
+                <br />
+                <li> 2 handfuls 2cm x 2cm broccoli florets (pieces)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Place vegetables in a steamer or metal colander over a pot of boiling water and cover.
+                </li>
+                <li class="mbn-ol"> Steam vegetables for 7-8 minutes (add broccoli after 2-3 minutes) or until tender.
+                </li>
+                <li class="mbn-ol"> Drain, cool and store for pieces.
+                    <br />
+                    <br />
+                    <b>OR</b>
+                    <br />
+                    <br /> Mash/pur&eacute;e to required consistency (use a little water ifrequired) before serving.
+                </li>
+                <li class="mbn-ol"> Freeze extra in ice/cupcake trays or cover and refrigerate for up to 1-2 days.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.5.1k">Tasty sweet potato wedges</p>
+            <p class="mbn-text">
+                <img src="images/Tasty sweet potato wedges.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> finger food; first food; the whole family<br />
+                <b>Storage:</b> in the fridge for up to 3 days, covered<br />
+                <b>Note: </b> perfect snack for your baby when eaten cold<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 4 medium sweet potatoes (washed, peeled, cut into wedges and soaked in water for 20 minutes)
+                </li>
+                <li> 2 tablespoons canola or olive oil
+                </li>
+                <li> 1 teaspoon dried mixed herbs
+                </li>
+                <li> 1 teaspoon mild ground paprika
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                </li>
+                <li class="mbn-ol"> Cover a baking tray with baking paper.
+                </li>
+                <li class="mbn-ol"> In a large bowl, mix oil, herbs and paprika.
+                </li>
+                <li class="mbn-ol"> Add sweet potatoes and toss to coat in the mixture.
+                </li>
+                <li class="mbn-ol"> Arrange wedges in 1 layer on baking tray then bake for 40-50 minutes or until tender and golden.
+                </li>
+                <li class="mbn-ol"> Cool then serve cold to your baby.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> This recipe is designed for a whole family (depending on the size of the potatoes!) - follow the same method but serve hot after step 5.
+                <br />
+            </p>
+
+            <p class="mbn-section" id="6.5.1l">Veggie citrus muffins</p>
+            <p class="mbn-text">
+                <img src="images/Veggie citrus muffins.jpg" class="mbn-text-image-right" />
+
+                <b>Good for:</b> highly nutritious snack for the whole family; great way to use up vegetables<br />
+                <b>Storage:</b> in the fridge for up to 4 days, covered<br />
+                <b>Note: </b> finely grated carrot can be used instead of zucchini; makes 8-10 muffins or 36 mini-muffins<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 cup self-raising wholemeal flour (or plain wholemeal flour with 2 teaspoons baking powder added)
+                </li>
+                <li> 1 cup oat bran
+                </li>
+                <li> 1 teaspoon baking powder
+                </li>
+                <li> 1 teaspoon ground cinnamon (optional)
+                </li>
+                <li> 2 eggs
+                </li>
+                <li> &frac13; cup canola oil
+                </li>
+                <li> &frac12; cup brown sugar
+                </li>
+                <li> zest of 1 orange or lemon
+                </li>
+                <li> &frac13; cup orange juice
+                </li>
+                <li> 2 cups zucchini - about 1 large (skin on, shredded)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                </li>
+                <li class="mbn-ol"> Line muffin tray with muffin papers (or spray with oil).
+                </li>
+                <li class="mbn-ol"> In a large bowl, combine all dry ingredients, set aside.
+                </li>
+                <li class="mbn-ol"> In another bowl, whisk together eggs and other ingredients thoroughly.
+                </li>
+                <li class="mbn-ol"> Add egg mixture to flour mixture and stir until just combined.
+                </li>
+                <li class="mbn-ol"> Spoon mixture evenly into muffin tray (fill about &frac23; full).
+                </li>
+                <li class="mbn-ol"> Bake for 10-12 minutes for mini size (15-17 minutes for large size) or until a wooden toothpick inserted in the centre comes out clean.
+                </li>
+                <li class="mbn-ol"> Cool in tin for 10 minutes on rack.
+                </li>
+                <li class="mbn-ol"> Remove from tins and cool completely on wire rack.
+                </li>
+                <li class="mbn-ol"> Freeze or refrigerate in airtight container for up to 4 days.
+                </li>
+            </ul>
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

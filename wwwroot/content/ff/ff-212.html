@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/types.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="2.1.2">Types of formula</p>
+            <p class="mbn-text" id="2.1.2a">
+                If you've ever looked at the formula section of a supermarket, you'll know that there are <i>so</i> many to choose from!
+            </p>
+            <p class="mbn-text">
+                The good news is that most babies only ever need to use <a onclick="localSecJump('2.1.2b');">starter, step 1, first or infant formulas</a>, so this that should make it easier to choose.
+            </p>
+            <p class="mbn-text">
+                Tap below to find out more about the various other types of formulas:
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('2.1.2b');">First, infant, step 1 or starter formula</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.2c');">Follow-on or step 2 formula</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.2d');">Toddler milk or step 3</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.2e');">Cow's milk formula</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.2f');">Soy milk formula</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.2g');">Goat's milk formula</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.2h');">Hydrolysed (HA) formula</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.2i');">Lactose free formula</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.2j');">Thickened formula (AR) </a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.2k');">Ready to feed liquid formula</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('2.1.2l');">Formulas with special ingredients added</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="2.1.2b">
+                First, infant, step 1 or starter formula
+            </p>
+            <p class="mbn-text">
+                This formula is suitable from birth to 12 months. This is the only type of formula most healthy full-term babies needs until they are 12 months of age.
+            </p>
+            <p class="mbn-text">
+                Read more about <a onclick="localSecJump('ff-211.html#2.1.1b');">which formula is right for your baby</a>.
+            </p>
+            <p class="mbn-section" id="2.1.2c">
+                Follow-on or step 2 formula
+            </p>
+            <p class="mbn-text">
+                Formulas labelled as 'follow-on' or 'step 2' are only suitable for babies <i>6 months and older</i>. These formulas should <b>never</b> be given to a baby under 6 months old as they are too advanced for your baby's developing body.
+            </p>
+            <p class="mbn-text">
+                Even when your baby reaches 6 months, there is still no need to switch to a follow-on or step 2 formula. The main reason these formulas were originally created was as a way to get around advertising regulations in some countries, not because of health!
+            </p>
+            <p class="mbn-text">
+                Follow-on or step 2 formulas tend to have <i>higher</i> amounts of protein than your baby needs. Formulas with <i>lower</i> levels of protein have been linked with optimal long-term growth. Formulas with lower levels of protein are typically <a onclick="localSecJump('2.1.2b');">starter, step 1, first or infant formulas</a>, so it's best to just stick with those instead.
+            </p>
+            <p class="mbn-text">
+                Find out how to <a onclick="localSecJump('ff-211.html#2.1.1b');">choose a formula with lower protein levels</a>.
+            </p>
+
+            <p class="mbn-section" id="2.1.2d">
+                Toddler milk or step 3
+            </p>
+            <p class="mbn-text">
+                Formulas labelled as 'toddler milk' or 'step 3' are advertised as suitable for babies 12 months and older. There is no evidence that these are better for your baby than <a onclick="localSecJump('solids/solids-416.html#4.1.6d');">regular full cream cow's milk</a>, which is suitable once your baby reaches 12 months.
+            </p>
+            <p class="mbn-text">
+                Toddler milk and step 3 formulas are just another way for companies to market their brand as they are extremely limited when it comes to advertising formulas for babies under 12 months of age. Because they <b>are</b> allowed to target advertising to parents with toddlers <i>over</i> 12 months, you will see toddler milks advertised, rather than those aimed at younger babies.
+            </p>
+
+            <p class="mbn-section" id="2.1.2e">
+                Cow's milk formula
+            </p>
+            <p class="mbn-text">
+                Most formulas are made from cow's milk that has been treated to make it is suitable for babies. This is the only formula that most babies will need, unless your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> advises you otherwise.
+            </p>
+            <p class="mbn-text">
+                <a onclick="localSecJump('solids/solids-416.html#4.1.6d');">Regular full cream cow's milk</a> is only suitable for babies aged 12 months or older. The composition of cow's milk and the amount of some ingredients (such as protein, calcium and potassium), are too high for babies under 12 month as their kidneys and gastrointestinal system are still developing.
+            </p>
+            <p class="mbn-text">
+                Unless advised otherwise by your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a>, the only drinks babies <i>under</i> 12 months need are formula or breastmilk - cow's milk is <i>not</i> suitable for your baby <a onclick="localSecJump('solids/solids-416.html#4.1.6a');">to drink</a>.
+            </p>
+
+            <p class="mbn-section" id="2.1.2f">
+                Soy milk formula
+            </p>
+            <p class="mbn-text">
+                Soy milk formula is made from soy beans rather than cow's milk. It should only be used in exceptional circumstances and under the guidance of a GP or <a onclick="localSecJump('hs/hs-815.html#8.1.5l');">dietitian</a>.
+            </p>
+            <p class="mbn-text">
+                Soy formula has <b>not</b> been shown to <a onclick="localSecJump('mf/mf-312.html#3.1.2i');">prevent allergies</a> and may worsen the risk of allergies if used for a long time. Soy milk formula should not be used for babies who are pre-term.
+            </p>
+
+            <p class="mbn-section" id="2.1.2g">
+                Goat's milk formula
+            </p>
+            <p class="mbn-text">
+                Goat's milk formula is based on goat's milk rather than cow's milk and is not recommended for babies under 12 months old. Goat's milk does not seem to have any role in preventing or treating allergies. In fact, it is often the case that babies who are allergic to cow's milk are also allergic to soy and goat's milk.
+            </p>
+
+            <p class="mbn-section" id="2.1.2h">
+                Hydrolysed (HA) formula
+            </p>
+            <p class="mbn-text">
+                Hydrolysed or partially hydrolysed (HA) formula is a cow's milk based formula that has been processed to break down most of the proteins into smaller parts. They are sometimes called 'low allergen' or 'hypoallergenic' however they are <b>not</b> recommended for the <a onclick="localSecJump('mf/mf-312.html#3.1.2i');">prevention of allergies</a>.
+            </p>
+            <p class="mbn-text">
+                Even if labelled as 'hypoallergenic', some formulas are still not suitable for babies who have a diagnosed cow's milk allergy. If you think your baby might have an allergy to cow's milk, you should speak to your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a>.
+            </p>
+
+            <p class="mbn-section" id="2.1.2i">
+                Lactose free formula
+            </p>
+            <p class="mbn-text">
+                Lactose (milk sugar) is naturally found in breastmilk and most formulas. Many formula companies make lactose free versions of their cow's milk based formulas.
+            </p>
+            <p class="mbn-text">
+                Speak to your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> if you think your baby might be lactose intolerant.
+            </p>
+
+            <p class="mbn-section" id="2.1.2j">
+                Thickened formula (AR)
+            </p>
+            <p class="mbn-text">
+                Thickened formulas are labelled with AR, which stands for 'anti-regurgitation'. These formulas are designed for babies with <a onclick="localSecJump('bf/bf-118.html#1.1.8q');">reflux</a> and so tend to be thicker to help keep the formula down after a feed, but they do not always work.
+            </p>
+            <p class="mbn-text">
+                If using an AR formula, you may need a teat with more holes so that your baby can drink the milk more easily. These formulas should only be used under medical supervision.
+            </p>
+
+            <p class="mbn-section" id="2.1.2k">
+                Ready to feed liquid formula
+            </p>
+            <p class="mbn-text">
+                Ready to feed formula is usually sold in cartons and is sterile. This means it contains no germs or bacteria, which could harm your baby. However, it is often more expensive than other types of formulas.
+            </p>
+            <p class="mbn-text">
+                Ready to feed liquid formula is suitable for high-risk babies, such as those that are pre-term, low-birth weight or particularly vulnerable to infections.
+            </p>
+            <p class="mbn-text">
+                Once opened, the formula should be poured into <a onclick="localSecJump('ff-213.html#2.1.3a');">sterile bottles</a> that can then be <a onclick="localSecJump('ff-214.html#2.1.4f');">warmed in the bottle</a> later if desired. Any unused liquid formula must be refrigerated below 5&#x2103; and used within 24 hours.
+            </p>
+
+            <p class="mbn-section" id="2.1.2l">
+                Special ingredients added to formula
+            </p>
+            <p class="mbn-text">
+                Some formulas, often labelled as 'Gold', have added ingredients to make them more like breastmilk. There is limited evidence around the benefit of these additional ingredients and they may not make the formula any healthier for your baby. Formulas with these added ingredients, however, are almost always more expensive.
+            </p>
+
+            <p class="mbn-text" id="2.1.2m">
+                Probiotics and prebiotics can help formula-fed babies grow healthy bacteria in their bowels. This may help babies have <a onclick="localSecJump('ff-219.html#2.1.9a');">softer poos</a>, experience less nappy rash and decrease their chances of gastroenteritis.
+            </p>
+            <p class="mbn-text" id="2.1.2n">
+                Although long chain polyunsaturated fatty acids (LCP for short!) Ps have been shown to be important for brain and nerve development, we don't know if babies can absorb them from <i>formulas</i>. That said, LCPs <i>might</i> be helpful for formula-fed premature infant development.
+            </p>
+            <p>
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

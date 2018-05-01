@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/why-bf.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.1" Breastfeeding>Why breastfeed</p>
+            <p class="mbn-text">
+                Ever found yourself wondering if you will breastfeed your baby and if so, for how long? Even if you haven't, or are just going to see what happens once your baby arrives, did you know that your intentions, or <i>breastfeeding goals</i>, can actually affect how long you breastfeed for or whether or not you breastfeed at all?
+            </p>
+            <p class="mbn-text">
+                Our <a onclick="localSecJump('Link to breastfeeding goals tool');">breastfeeding goals tool</a> can help you to start thinking about whether you will breastfeed your baby (and for how long) as well as why this might be the case. You can also learn about the benefits of breastfeeding for different lengths of time and some tips to help along the way.
+            </p>
+            <p class="mbn-section" id="1.1.1" Breastfeeding>Breastfeeding:an overview</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('1.1.1a');">Why breastfeed in the first few days</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.1b');">Promote mum's recovery</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.1c');">How much?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.1d');">Why continue to breastfeed</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.1e');">Breastfeeding can help:</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.1f');">Video: Breastfeeding - why it's good</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.1a">
+                <b>Why breastfeed in the first few days</b>
+                <br>
+                <br>
+                <b>Protect your baby</b>
+                <br> Your body makes 'first milk' called colostrum during the first few days. Colostrum is a concentrated mix of nutrition and a 'living fluid' which helps protect your baby against infections. It is a thick, sticky liquid with a clear to yellow colour and is only found in breastmilk.
+            </p>
+
+            <p class="mbn-text" id="1.1.1b">
+                <b>Promote mum's recovery </b>
+                <br> Having your baby suckle at your breasts stimulates the production of hormones called oxytocin and prolactin. Oxytocin helps the milk spurt into your baby's mouth and also helps to contract your uterus back down to its pre-pregnant size and shape. This reduces the chances of excessive bleeding after delivery. Prolactin makes sure the right amount of breastmilk is made for your baby's next feed.
+            </p>
+
+            <p class="mbn-text" id="1.1.1c">
+                <b>How much?</b>
+                <br> Your newborn's tummy is tiny! At first, it can only manage a few millilitres (mL) of colostrum - about the size of a marble - but with time will grow to accept more. Even though tiny, these small amounts of 'first milk' provide tremendous short and long-term health benefits for both you and your baby.
+            </p>
+            <p class="mbn-text">
+                In the first 24 hours, a baby's total consumption of colostrum is only around 5 millilitres (mL). Your <a onclick="localSecJump('bf-113.html');">milk supply</a> will build as long as you continue to feed your baby whenever they are <a onclick="localSecJump('sfp/sfp-514.html');">hungry</a> and for as long as they want to feed.
+            </p>
+            <p class="mbn-text">
+                The size of your baby's tummy:
+
+            </p>
+            <ul>
+                <li> <u>At birth</u> - marble
+                </li>
+                <li> <u>3-5 days</u> - golf ball
+                </li>
+                <li> <u>10 days</u> - chicken egg
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.1d">
+                <b>Why continue to breastfeed</b>
+            </p>
+            <p class="mbn-text">
+                Breastfeeding is the way nature intended for mums to feed their babies.
+            </p>
+            <p class="mbn-text">
+                Breastmilk is:
+            </p>
+            <ul>
+                <li>the perfect food for your baby and changes to meet their needs
+                </li>
+                <li>all the fluid, energy and nutrition that your baby needs until they're around 6 months old
+                </li>
+                <li>a special blend which will build your baby's immune system to help protect them from getting sick, both now and in the future
+                </li>
+                <li>clean, safe, free, convenient and always available
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.1e">
+                <b>Breastfeeding can help:</b>
+            </p>
+            <p class="mbn-text">
+                Breastfeeding is the way nature intended for mums to feed their babies.
+            </p>
+            <p class="mbn-text">
+                Breastmilk is:
+            </p>
+            <ul>
+                <li>protect you from diseases, like some cancers and osteoporosis
+                </li>
+                <li>you to lose excess weight
+                </li>
+                <li>delay your period returning
+                </li>
+                <li>your baby get to know you - a newborn's eyes can only focus at 20-30cm which is about the distance from your breast to your face
+                </li>
+                <li>promote bonding with your baby - the cuddling your baby experiences when breastfeeding helps them to feel safe and loved whilst also promoting the release of relaxing hormones into your system
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.1f">
+                This video is about breastfeeding and your baby's health and development. It shows mums breastfeeding and why breastfeeding is good for both you and your baby.
+            </p>
+            <p class="mbn-text">
+                <b>Video: Breastfeeding - why it's good</b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/HvkCMmRCts4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-text">
+                <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/about_breastmilk.html/context/204" target="_blank">raisingchildren.net.au.</a>.</i>
+            </p>
+            <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

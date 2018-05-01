@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/pregnancy-sub-menu.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-py');"><i class="fa fa-chevron-left"></i> Pregnancy</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-py');"><i class="fa fa-chevron-left"></i> Pregnancy</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="10.1.5">FAQs</p>
+            <ul id="10.1.5a">
+                <li>
+                    <a onclick="localSecJump('10.1.5b');">Are there any foods I should avoid while I'm pregnant?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5c');">Can I breastfeed in public?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5d');">Can I drink alcohol while I'm pregnant?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5e');">Do I have to give birth in a hospital?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5f');">Do I need pumps, dummies and teats?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5g');">Is breastfeeding enough in hot weather?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5h');">Returning to work - when is best? Can I express?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5i');">Should I be exercising while I'm pregnant and if so, how much?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5j');">What about going out - can I express?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5k');">When will we introduce solids?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5l');">What else will my baby need besides breastmilk?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5m');">If my mother couldn't breastfeed, does this mean I won't be able to?</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('10.1.5n');">What is the ideal amount of weight to gain during pregnancy?</a>
+                </li>
+            </ul>
+            <p class="mbn-text" id="10.1.5b">
+                <b>Are there any foods I should avoid while I'm pregnant?</b>
+                <br /> Most foods are fine when you're pregnant. However, some will need to be prepared in specific ways and there are a few that you should avoid all together.
+            </p>
+            <p class="mbn-text">
+                Find out which <a onclick="localSecJump('py-1012.html#10.1.2m');">foods you should limit or avoid during pregnancy</a>.
+            </p>
+            <p class="mbn-text" id="10.1.5c">
+                <b>Can I breastfeed in public?</b>
+                <br /> In Australia, you are protected by the law to breastfeed anywhere and at any time that you like - you never have to ask for permission. Even if someone <i>asks you to stop</i> breastfeeding, it is your legal right to keep going.
+            </p>
+            <p class="mbn-text">
+                Every mum has the right to meet her baby's needs, wherever they are. If your baby is hungry, they shouldn't be expected to wait and you shouldn't be forced to ignore or delay your baby from feeding.
+            </p>
+            <p class="mbn-text">
+                Find out more about <a onclick="localSecJump('bf/bf-116.html#1.1.6a');">breastfeeding in public</a>, including <a onclick="localSecJump('bf/bf-116.html#1.1.6d');">tips to make it feel easier</a>.
+            </p>
+            <p class="mbn-text" id="10.1.5d">
+                <b>Can I drink alcohol while I'm pregnant?</b>
+                <br /> It's safest not to drink any alcohol at all when you're pregnant and this includes when you're trying to get pregnant.
+            </p>
+            <p class="mbn-text">
+                Find out <a onclick="localSecJump('py-1012.html#10.1.2s');">why it's best not to combine alcohol with pregnancy</a> and a few <a onclick="localSecJump('py-1012.html#10.1.2t');">tips for replacing alcohol in your lifestyle</a> during this time.
+            </p>
+            <p class="mbn-text" id="10.1.5e">
+                <b>Do I have to give birth in a hospital?</b>
+                <br /> No. We are fortunate here in Australia to have a choice of where we give birth - in a hospital, at home or a birth centre for example.
+            </p>
+            <p class="mbn-text">
+                Learn more about your <a onclick="localSecJump('py-1014.html#10.1.4c');">birth choice options</a>
+            </p>
+            <p class="mbn-text" id="10.1.5f">
+                <b>Do I need pumps, dummies and teats?</b>
+                <br /> In short, no! All you need is <a onclick="localSecJump('py-1013.html#10.1.3');">breasts and your baby!</a>
+            </p>
+            <p class="mbn-text">
+                You will probably see many advertisements for equipment such as breast pumps, bottles, teats, dummies and sterilisers, but none of these items are usually necessary. In fact, it's not recommended <a onclick="localSecJump('bf/bf-1110.html#1.1.10');">to use a dummy</a> (or a bottle) until your <a onclick="localSecJump('py-1013.html#10.1.3k');">milk supply</a> is established (which can take up to 6-8 weeks).
+            </p>
+            <p class="mbn-text">
+                There is also no need to buy a pump or formula 'just in case'- if you need them in the future, there will be plenty of time to purchase them!
+            </p>
+            <p class="mbn-text">
+                Find out more about <a onclick="localSecJump('py-1013.html#10.1.3z');">what equipment, other than your breasts and your baby, you might find helpful</a>
+            </p>
+            <p class="mbn-text" id="10.1.5g">
+                <b>Is breastfeeding enough in hot weather?</b>
+                <br /> Although you probably feel thirsty when the weather is hot, there is no need to give your baby any extra fluids - until 6 months, they will get all the nutrition (and fluid) they need from <a onclick="localSecJump('py-1013.html#10.1.3c');">your breastmilk</a>.
+            </p>
+            <p class="mbn-text">
+                Instead, when it is hot, you might find that your baby will want to have smaller breastfeeds, more often. This is not so different to us drinking more often when it's hot, so make sure you drink plenty of water to keep your own fluids up.
+            </p>
+            <p class="mbn-text">
+                A good way to reassure yourself that your baby is getting enough breastmilk, even when it is hot, is to <a onclick="localSecJump('py-1013.html#10.1.3aj');">check their nappy</a>.
+            </p>
+            <p class="mbn-text">
+                Find out more about:
+            </p>
+            <ul>
+                <li> <a onclick="localSecJump('solids/solids-416.html#4.1.6');">milk and other drinks</a>
+                </li>
+                <li><a onclick="localSecJump('py-1013.html#10.1.3ac');">what to look for in your baby's nappy</a>
+                </li>
+            </ul>
+            <p class="mbn-text" id="10.1.5h">
+                <b>Returning to work - when is best? Can I express?</b>
+                <br /> If you want to return to (or start) work, as a new mum, there are many things you will need to think about, including when and how you will go about it
+            </p>
+            <p class="mbn-text">
+                Learn more about <a onclick="localSecJump('bf/bf-117.html#1.1.7');">working as a breastfeeding mum</a>.
+            </p>
+            <p class="mbn-text" id="10.1.5i">
+                <b>Should I be exercising while I'm pregnant and if so, how much?</b>
+                <br /> Even if you were not active before your pregnancy and provided you have not been told something different by your GP or midwife, it is recommended that you do 30 minutes of moderate exercise on most days of the week. This doesn't have to be in one go either - you can break it up and do three lots of 10 minutes instead!
+            </p>
+            <p class="mbn-text">
+                Read more about <a onclick="localSecJump('py-1012.html#10.1.2w');">getting active during pregnancy</a>.
+            </p>
+            <p class="mbn-text" id="10.1.5j">
+                <b>What about going out - can I express?</b>
+                <br /> Many mums find it helpful to have some breastmilk stored for times when they know they will be away from their baby.
+            </p>
+            <p class="mbn-text">
+                Once your <a onclick="localSecJump('py-1013.html#10.1.3k');">milk supply</a> is established (usually around 6-8 weeks) and your baby is breastfeeding well, there is no reason why they can't have the occasional <a onclick="localSecJump('bf/bf-1110.html#1.1.10a');">bottle of expressed milk</a>
+            </p>
+            <p class="mbn-text">
+                However, it is not recommended to give your baby bottles <i>earlier</i> than 6 weeks as this can make them reluctant to breastfeed because sucking milk from your breast takes more work than getting it from a teat!
+            </p>
+            <p class="mbn-text">
+                Find out more about:
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('py-1013.html#10.1.3k');">establishing your milk supply</a>
+                </li>
+                <li><a onclick="localSecJump('bf/bf1111.html#1.1.11a');">ways to express breastmilk</a>
+                </li>
+            </ul>
+            <p class="mbn-text" id="10.1.5k">
+                <b>When will we introduce solids?</b>
+                <br /> For the first 6 months of your baby's life, breastmilk provides all of the nutrients your baby needs. Even once they have started solids, breastmilk will still continue to be an important source of nutrients until your baby is at least 12 months.
+            </p>
+            <p class="mbn-text">
+                You will know when your baby is ready for solids as they <a onclick="localSecJump('solids/solids-411.html#4.1.1b');"> will show signs</a> and although these signs happen at <i>different times for different babies</i>, most babies will show signs <b>around 6 months of age</b>.
+            </p>
+            <p class="mbn-text">
+                Find out more about <a onclick="localSecJump('solids/solids-411.html#4.1.1');">introducing solids</a>.
+            </p>
+            <p class="mbn-text" id="10.1.5l">
+                <b>What else will my baby need besides breastmilk?</b>
+                <br /> Breastmilk is the perfect food for your baby and as your baby grows, <a onclick="localSecJump('py-1013.html#10.1.3h');">your breastmilk changes to meet their needs</a>. Because it is a complete food, supplying all the fluid, energy and nutrition that your baby needs until they are around 6 months old, there's no need to give your baby anything else (such as water, fruit juice or supplements), unless you have been specifically advised to do so by your GP or <a onclick="localSecJump('bf/bf-119.html#1.1.9i');">maternal and child health nurse</a>.
+            </p>
+            <p class="mbn-text">
+                At about 6 months, when ready, your baby can start to experiment with <a onclick="localSecJump('solids/solids-412.html#4.1.2a');">soft solid foods</a>. As solid foods start to play more of a role in your baby's diet, their need for breastmilk will slowly go down, but it will still be an important source of nutrients until your baby is at least 12 months.
+            </p>
+            <p class="mbn-text" id="10.1.5m">
+                <b>If my mother couldn't breastfeed, does this mean I won't be able to?</b>
+                <br /> No. Breastfeeding <a onclick="localSecJump('py-1013.html#10.1.3b');">is a <i>skill</i> that we must learn</a> and there is no evidence to suggest that breastfeeding difficulties or <a onclick="localSecJump('bf/bf-113.html#1.1.3c');">low milk supply</a> run in families.
+            </p>
+            <p class="mbn-text">
+                What <i>can</i> be more of a challenge, however, is if a woman <i>wants</i> to breastfeed, but her own mother either does not support her decision to breastfeed or lacks knowledge about how breastfeeding works.
+            </p>
+            <p class="mbn-text">
+                It is worth keeping in mind that we know a lot more about how to <a onclick="localSecJump('py-1013.html#10.1.3k');">build milk supply</a> and what babies need, than we did decades ago. For example, your mother may have been told to set a routine and feed you by the clock but we now know that babies need to be fed when they're hungry, rather than just at set times of the day.
+            </p>
+            <p class="mbn-text">
+                Successful breastfeeding depends on the <a onclick="localSecJump('bf/bf-119.html#1.1.9a');">right support</a> from family and friends, so make sure you talk to your family (including <a onclick="localSecJump('bf/bf-119.html#1.1.9e');">your partner</a>, if you have one) about how you wish to feed your baby early on, <i>before</i> your baby is born if possible. You might even wish to let them play with this app so they can then be on the same page as you when your baby arrives. And don't forget, there is <a onclick="localSecJump('sfp/sfp-815.html#8.1.5d');">plenty of professional support available</a> (much of it free) to help you breastfeed your baby if you need it.
+            </p>
+            <p class="mbn-text">
+                Even if you are not yet sure if you will breastfeed your baby, or if so, for how long, your <i>intentions</i> can actually affect how long you breastfeed for or whether or not you breastfeed at all. Use our <a href="tool:breastfeeding goals tool"> breastfeeding goals tool</a> to help you to start thinking about whether you will breastfeed your baby (and for how long) as well as why this might be the case.
+            </p>
+            <p class="mbn-text" id="10.1.5n">
+                <b>What is the <i>ideal</i> amount of weight to gain during pregnancy?</b>
+                <br /> There is no one <i>ideal</i> amount - every woman and every pregnancy is different!
+            </p>
+            <p class="mbn-text">
+                The amount of weight you should gain with <i>your</i> pregnancy will depend on what your weight was before you got pregnant and whether you are having a single or multiple pregnancies (e.g. twins).
+            </p>
+            <p class="mbn-text">
+                Find out more about <a onclick="localSecJump('py-1012.html#10.1.2ah');">weight gain during pregnancy</a> and use our guide to pregnancy weight gain.
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

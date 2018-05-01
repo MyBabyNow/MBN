@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/getting-support.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.9" Breastfeeding>Getting support</p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('1.1.9a');">Partners, friends and family support</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.9e');">Your partner's attitude matters!</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.9g');">Professional support</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.9h');">Your GP</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.9i');">Maternal and child health nurses</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.9j');">Lactation consultants</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.9k');">Eligible Privately Practicing Midwives (PPMs)</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.9l');">Community support</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.9m');">New parent groups</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.9n');">Playgroup Australia</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('1.1.9o');">Australian Breastfeeding Association</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="1.1.9a">
+                <b>Partners, friends and family support</b>
+                <br> The saying 'it takes a village to raise a child' is not far from the truth! New mums need all the help they can get, so don't be afraid to ask for help whenever you can.
+            </p>
+
+            <p class="mbn-text" id="1.1.9b">
+                <p class="mbn-text">
+                    In the early weeks and months almost all of your time will be spent on taking care of and feeding your baby, throughout both day and night, so try to be realistic about what you can get 'done' in a day. <a onclick="localSecJump('bf-111.html');">Breastfeeding is valuable to you and your baby</a>, and you obviously can't give this job to anyone else, so think about how you can <a onclick="localSecJump('parents/parents-716.html#7.1.6p');">manage your time and other tasks</a>.
+                </p>
+
+                <p class="mbn-text" id="1.1.9c">
+                    You may need to remind <a onclick="localSecJump('1.1.9e');">your partner</a>, family and friends how important breastfeeding is to you but don't forget that most friends and family are just looking for ways to help. Giving set jobs to partners, family and friends can also help them adjust to their new role now that your baby is here.
+                </p>
+
+                <p class="mbn-text" id="1.1.9d">
+                    Simple things they could help with include:
+                </p>
+                <ul>
+                    <li>helping with feeding by:
+                    </li>
+                    <ul>
+                        <li>bringing you water and <a onclick="localSecJump('parents/parents-714#7.1.4a');">healthy snacks</a> to have on hand when you are feeding your baby
+                        </li>
+                        <li><a onclick="localSecJump('sfp/sfp-519.html');">burping your baby</a> during or after their feed
+                        </li>
+                    </ul>
+                    <li>giving you a break by:
+                        <ul>
+                            <li>taking your baby for a walk or holding them
+                            </li>
+                            <li>doing housework
+                            </li>
+                            <li>organising dinner and other meals
+                            </li>
+                            <li>changing your baby's nappy
+                            </li>
+                            <li>bathing your baby
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p class="mbn-text">
+                    See some <a onclick="localSecJump('parents/parents-716.html#7.1.6q');">more ideas on getting others to help you</a> and <a onclick="localSecJump('1.1.9e');">how your partner can help</a>.
+                </p>
+
+                <p class="mbn-text" id="1.1.9e">
+                    <b>Your partner's attitude matters!</b>
+                    <br> What your partner thinks about breastfeeding might not seem that important but the reality is that mums who feel supported will find it easier to breastfeed for longer.
+                </p>
+                <p class="mbn-text">
+                    It's not uncommon for some partners to feel envious of all the time a new mum is now spending with her baby. Even if they don't realise it, partners can feel a bit left out, especially when mum is exclusively breastfeeding. But having a partner who is both positive and supportive of your choice to breastfeed can make a world of difference to you continuing, especially if have any <a onclick="localSecJump('bf-118.html');">issues</a> along the way.
+                </p>
+                <p class="mbn-text">
+                    It's important that your partner understands that breastfeeding:
+                </p>
+                <ul>
+                    <li>is <a onclick="localSecJump('bf-111.html#1.1.1d');">beneficial for both you and your baby</a>
+                    </li>
+                    <li>doesn't affect the <a onclick="localSecJump('bf-1119.html#1.1.19f');">shape or size of your breasts</a>
+                    </li>
+                    <li>won't last forever - it's only a temporary part of your lives
+                    </li>
+                </ul>
+                <p class="mbn-text">
+                    Breastfeeding is obviously something your partner <i>can't</i> actually do, but there <i>are</i> many ways for them to support you to do so.
+                </p>
+                <p class="mbn-text">
+                    Your partner can help by:
+                </p>
+                <ul>
+                    <li><u>being 'part of the team'</u> - learning about how breastfeeding works so they can support you as you get the hang of it
+                    </li>
+                    <li><u>being your extra pair of hands</u> - bringing you things you need them whilst you are breastfeeding (e.g. glass of water, an extra pillow etc)
+                    </li>
+                    <li><u>doing the housework and cooking</u> - to take the pressure off whenever possible
+                    </li>
+                    <li><u>being patient if you don't feel like being intimate</u> - you might feel 'touched out' if you've been feeding, carrying and settling your baby all day!
+                    </li>
+                    <li><u>helping with the night feeds</u> - bringing your baby to you when you're in bed, then burping, changing and settling your baby to allow you to get a bit more valuable sleep, even if for only some of the night feeds
+                    </li>
+                    <li><u>making sure you have plenty of water, <a onclick="localSecJump('parents/parents-714.html#7.1.4o">fresh fruit and vegetables</u></a> - breastfeeding will make you hungry and thirsty!
+                    </li>
+                    <li><u>generally being supportive</u> - always looking for the positives and encouraging you to get help if you have issues with breastfeeding
+                    </li>
+                </ul>
+                <p class="mbn-text">
+                    Things your partner should know:
+                </p>
+                <ul>
+                    <li><u>breastfeeding isn't always quick, especially for new mums</u> - each feeding session can last from 10 minutes to over an hour
+                    </li>
+                    <li><u>newborns need feeding around the clock</u> - most will feed <a onclick="localSecJump('sfp/sfp-511.html');">8-12 times a day</a>
+                    </li>
+                    <li><u>breastfeeding takes time to learn, often up to 6-8 weeks</u> - once a good breastfeeding system has been established, your partner might like to try <a onclick="localSecJump('bf-1111.html');">expressing</a> some breastmilk so she can have a break and others can give the <a onclick="localSecJump('bf-1112.html');">occasional bottle feed</a>
+                    </li>
+                    <li><u>breastfeeding can be uncomfortable when starting out but it should never be painful</u> - provided the baby is <a onclick="localSecJump('bf-114.html#1.1.4g');">attached properly</a>, after 30-60 seconds any discomfort should reduce; if it continues, the baby might not be <a onclick="localSecJump('bf-114.html#1.1.4g');">attached</a> or <a onclick="localSecJump('bf-114.html#1.1.4a');">positioned properly</a> and your partner should <a onclick="localSecJump('1.1.9g');">seek help</a>
+                    </li>
+                    <li><u>you might be able to settle your baby more easily than your breastfeeding partner</u> - when your baby is being fussy, smelling breastmilk on mum can make your baby seek out her breasts instead of calming down
+                    </li>
+                    <li><u>sagging breasts are not caused by breastfeeding</u> - pregnancy, age, smoking, genetics and weight loss will affect breast shape, but not breastfeeding
+                    </li>
+                </ul>
+                <p class="mbn-text">
+                    See more on <a onclick="localSecJump('parents/parents-716.html#7.1.6h');">parenting for partners</a> and don't forget to share content from this app with your partner so they can be in a better position to support you!
+                </p>
+
+                <p class="mbn-text" id="1.1.9f">
+                    <b>Baby bonding for partners</b>
+                    <br> Some partners can feel a bit left out when mum is doing all the feeding. But there are plenty of other ways for partners to bond with their baby, apart from feeding them. As a bonus, bonding outside of feeding also teaches your baby an important lesson - that love doesn't have to involve the giving of food!
+                </p>
+                <p class="mbn-text">
+                    Non-feeding ways to bond with your baby:
+                </p>
+                <ul>
+                    <li>cuddling, especially skin-to-skin contact
+                    </li>
+                    <li>making eye contact and smiling
+                    </li>
+                    <li>talking about everyday things like how your day has been or what you're doing - anything that lets your baby hear your voice
+                    </li>
+                    <li>reading out loud - anything and everything, even the footy scores!
+                    </li>
+                    <li>singing - even if it's out of tune!
+                    </li>
+                    <li>bathing, drying and dressing/swaddling
+                    </li>
+                    <li>carrying them in a sling
+                    </li>
+                </ul>
+                <p class="mbn-text">
+                    This video shows dads bonding with their newborn babies. It explains how eye contact, cuddling, talking and smiling strengthen the bond with your baby and help your baby to <a onclick="localSecJump('play/play-91.html')">grow and develop</a>.
+                </p>
+                <p class="mbn-text">
+                    <b>Video: Bonding for dads</b>
+                </p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/2o2Olgz-4Fw" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="mbn-text">
+                    <i>Sourced from the Infant Program website. For more help getting healthy eating and activeplay with your baby right from the start, visit <a href="http://raisingchildren.net.au/articles/dads_baby_care.html" target="_blank">raisingchildren.net.au.</a>.</i>
+                </p>
+                <p class="mbn-text" id="1.1.9g">
+                    <b>Professional support</b>
+                    <br> Many health professionals will be playing a part in your life now you are a breastfeeding mum. The main professionals are <a onclick="localSecJump('1.1.9h');">your GP</a>, <a onclick="localSecJump('1.1.9k');">midwife</a>, <a onclick="localSecJump('1.1.9i');">maternal and child health nurses</a> and possibly also <a onclick="localSecJump('1.1.9j');">lactation consultants</a>.
+                </p>
+                <p class="mbn-text" id="1.1.9h">
+                    <b>Your GP</b>
+                    <br> It's important to find a GP that supports your choice to breastfeed. Bear in mind that GPs don't receive much training on breastfeeding, so make sure you get a second opinion if you're not sure of their advice - your <a onclick="localSecJump('1.1.9i');">maternal and child health nurse</a>, a <a onclick="localSecJump('1.1.9j');">lactation consultant</a> or the <a href="tel:1800686268">ABA helpline</a> all provide specialist help in this area.
+                </p>
+
+                <p class="mbn-text" id="1.1.9i">
+                    <b>Maternal and child health nurses</b>
+                    <br> After the birth of your baby, you will be automatically connected to your local <a onclick="localSecJump('hs/hs-812.html');">maternal and child health service</a>. Each state is slightly different but in general, these nurses are available at your local community or maternal and child health centre and will visit you once you've returned home. They tend to have lots of experience with breastfeeding mums and can give you advice when you need it.
+                </p>
+
+                <p class="mbn-text" id="1.1.9j">
+                    <b>Lactation consultants</b>
+                    <br> Lactation consultants are breastfeeding specialists. They can help you work through any problems and give you tips on how to breastfeed well. Lactation consultants often work at hospitals but your <a onclick="localSecJump('1.1.9k');">midwife</a> or <a onclick="localSecJump('1.1.9i');">maternal and child health nurse</a> may also be able to direct you to one in the community. You can also pay to see them through private practice - <a onclick="localSecJump('hs/hs-815.html');">learn more</a>.
+                </p>
+
+                <p class="mbn-text" id="1.1.9k">
+                    <b>Eligible Privately Practicing Midwives (PPMs)</b>
+                    <br> Eligible Privately Practicing Midwives (PPMs) are available in every state in Australia and will make home visits to new mums for 6-8 weeks after birth. They can help with breastfeeding and some are also qualified <a onclick="localSecJump('1.1.9j');">lactation consultants</a> as well as midwives. Costs for PPMs can be claimed through Medicare - <a onclick="localSecJump('hs/hs-813.html');">learn more</a>.
+                </p>
+                <p class="mbn-text" id="1.1.9l">
+                    <b>Community support</b>
+                    <br> You never have to feel that you are alone - there are lots of services in the community for parents, especially new parents!
+                </p>
+                <p class="mbn-text">
+                    Scroll on for some good starting points but don't forget there may also be other options such as a mothers' group or an <a href="https://www.breastfeeding.asn.au/contacts/groups" target="_blank">Australian Breastfeeding Association</a> support group in your local area. <a onclick="localSecJump('1.1.9h');">Your GP</a> or <a onclick="localSecJump('1.1.9i');">maternal and child health nurse</a> should be able to point you in the right direction, or you could have a look online. Don't forget to join <a href="../../forum.html">our forum</a> to connect with other breastfeeding mums and check out the <a onclick="localSecJump('hs/hs-81.html');">help and support section</a> to see what else is out there. Remember, breastfeeding is a learning curve, we're in it together.
+                </p>
+                <p class="mbn-text" id="1.1.9m">
+                    <b>New parent groups</b>
+                    <br> Maternal and child health nurses in often organise and run groups for new parents as part of their service. These groups are great for meeting other new parents who have babies of a similar age to your own and also give you a chance to discuss any problems you may have had. If you haven't yet been connected to one of these groups, speak to your <a onclick="localSecJump('1.1.9i');">maternal and child health nurse</a>.
+                </p>
+                <p class="mbn-text" id="1.1.9n">
+                    <b>Playgroup Australia</b>
+                    <br>
+                    <a onclick="localSecJump('hs/hs-816.html');">Playgroup</a> is an informal session where mums, dads, grandparents, caregivers, children and babies meet up in a relaxed and friendly environment.
+                </p>
+                <p class="mbn-text" id="1.1.9o">
+                    <b>Australian Breastfeeding Association</b>
+                    <br> Australia's largest breastfeeding information and support service - <a onclick="localSecJump('hs/hs-815.html');">learn more</a>.
+                </p>
+                <br /><br /><br />
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

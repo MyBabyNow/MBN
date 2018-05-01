@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/lunch.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Recipes</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="6.3.1">Lunch</p>
+            <p class="mbn-text" id="6.3.1a">
+                These 'lunch' recipes work equally well for dinner and, your baby will also probably be just as happy with them for snacks or breakfasts if you like!
+            </p>
+            <p class="mbn-section">
+                Lunch
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('6.3.1b');">Broccoli and polenta mash</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.3.1c');">Cheesy leek and potato mash</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.3.1d');">Cheesy pasta sauce</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.3.1e');">Cheesy spinach spaghetti</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.3.1f');">Dahl</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.3.1g');">Eggy veg</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.3.1h');">Mushroom carbonara</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.3.1i');">Salmon and veggie couscous</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.3.1j');">Sweet potato and lentil soup</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('6.3.1k');">Tuna &amp; creamed corn mac</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.3.1b">Broccoli and polenta mash</p>
+            <p class="mbn-text">
+                <img src="images/Broccoli and Polenta Mash.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> other meal times as well as lunch<br />
+                <b>Storage: </b> not suitable for freezing<br />
+                <b>Note:</b> quick and easy<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac14; cup fine polenta/semolina
+                </li>
+                <li> 1 cup water
+                </li>
+                <li> 1 cup cow's milk (or made up formula for babies younger than 12 months)
+                </li>
+                <li> 2 large florets (pieces) broccoli
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> In a pot over medium-high heat, mix polenta with water and milk, stirring continuously until it begins to boil.
+                </li>
+                <li class="mbn-ol"> Reduce heat and simmer for 10 minutes while stirring, until cooked (should be smooth rather than 'grainy' when cooked).
+                </li>
+                <li class="mbn-ol"> Meanwhile, steam/boil/microwave broccoli until tender.
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e broccoli and polenta together to required consistency before serving.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.3.1c">Cheesy leek and potato mash</p>
+            <p class="mbn-text">
+                <img src="images/Cheesy leek and potato mash.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> the whole family<br />
+                <b>Storage: </b> freeze or keep in the fridge for up to 3 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac12; cup leek (finely chopped)
+                </li>
+                <li> 1 small potato (diced)
+                </li>
+                <li> &frac14; cup grated cheddar cheese
+                </li>
+                <li> 1 teaspoon canola or olive oil margarine
+                </li>
+                <li> boiling water
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Melt margarine in a frying pan.
+                </li>
+                <li class="mbn-ol"> Fry leek over a low heat for 3 minutes.
+                </li>
+                <li class="mbn-ol"> Add potato, cover with boiling water and cook for 6 minutes or until soft.
+                </li>
+                <li class="mbn-ol"> Drain excess water.
+                </li>
+                <li class="mbn-ol"> Add cheese and mash to the required consistency.
+                </li>
+                <li class="mbn-ol"> Use once cooled.
+                </li>
+                <li class="mbn-ol"> Freeze any extra in ice trays for later.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b>
+                <br /> For a family of 4 use:
+            </p>
+            <ul>
+                <li> 2 leeks (finely chopped)
+                </li>
+                <li> 5 potatoes (diced)
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Follow the same method up to step 4, <b>THEN</b>:
+            </p>
+            <ul>
+                <li class="mbn-ol"> Put into a baking dish (do not mash).
+                </li>
+                <li class="mbn-ol"> Sprinkle with cheese.
+                </li>
+                <li class="mbn-ol"> Bake for 20 minutes at 180&deg;C or until golden.
+                </li>
+                <li class="mbn-ol"> Pur&eacute;e or mash for your baby with some of your baby's usual milk (breast/formula milk).
+                </li>
+
+            </ul>
+
+            <p class="mbn-section" id="6.3.1d">Cheesy pasta sauce</p>
+            <p class="mbn-text">
+                <img src="images/Cheesy pasta sauce.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> basis for macaroni/cauliflower cheese or lasagne topping; the whole family<br />
+                <b>Storage: </b> freeze or keep in the fridge for up to 2 days, covered<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 tablespoon canola or olive oil margarine
+                </li>
+                <li> 1 tablespoon plain flour
+                </li>
+                <li> 2 cups cow's milk (or made up formula for babies less than 12 months old)
+                </li>
+                <li> &frac12; cup grated cheddar cheese
+                </li>
+                <li> 1 teaspoon dried mixed herbs (optional)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Melt margarine in a pot over a low heat.
+                </li>
+                <li class="mbn-ol"> Add flour and herbs (if using), stirring to make smooth paste.
+                </li>
+                <li class="mbn-ol"> Increase heat slightly and add milk, a little at a time, stirring until smooth.
+                </li>
+                <li class="mbn-ol"> Continue stirring and simmer for 5 minutes or until sauce thickens.
+                </li>
+                <li class="mbn-ol"> Remove from heat and stir in cheese until melted.
+                </li>
+                <li class="mbn-ol"> Use or freeze extra in ice/cupcake trays for later.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> For a family of 4, follow the same method but instead use:
+            </p>
+            <ul>
+                <li> 2 tablespoons canola or olive oil margarine
+                </li>
+                <li> 2 tablespoons plain flour
+                </li>
+                <li> 4 cups cow's milk (for babies old than 12 months)
+                </li>
+                <li> 1 &frac12; cups grated cheddar cheese
+                </li>
+                <li> 2 teaspoons dried mixed herbs (optional)
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.3.1e">Cheesy spinach spaghetti</p>
+            <p class="mbn-text">
+                <img src="images/Cheesy spinach spaghetti.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> other meal times as well as lunch; the whole family<br />
+                <b>Storage: </b> freeze or keep in the fridge for up to 2 days, covered<br />
+                <b>Note:</b> young people love spaghetti; adding spinach adds extra nutrition<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> about 20 strands thin spaghetti (or 1 cup pasta shapes)
+                </li>
+                <li> 1 tablespoon canola or olive oil
+                </li>
+                <li> 1 medium onion (finely chopped)
+                </li>
+                <li> 1 clove garlic (crushed)
+                </li>
+                <li>3 cups fresh spinach/silverbeet (or 50-60g defrosted frozen spinach)
+                </li>
+                <li> 1 &frac14; cups plain cottage cheese (blended/mashed)
+                </li>
+                <li> 1 squeeze lemon juice
+                </li>
+                <li> 4 tablespoons grated cheese (parmesan if you have it)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Cook spaghetti/pasta according to instructions on pack.
+                </li>
+                <li class="mbn-ol"> Meanwhile, fry onion and garlic in oil until soft.
+                </li>
+                <li class="mbn-ol"> Add spinach with lemon juice until it wilts and turn off the heat.
+                </li>
+                <li class="mbn-ol"> Drain water from spaghetti/pasta.
+                </li>
+                <li class="mbn-ol"> Add cottage cheese and cheese to spinach mixture and stir well.
+                </li>
+                <li class="mbn-ol"> Mix through spaghetti/pasta.
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving.
+                </li>
+                <li class="mbn-ol"> Freeze extra in ice/cupcake trays for later.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> For a family of 4 use:
+            </p>
+            <ul>
+                <li> 500g thin spaghetti (or 3 cups pasta shapes)
+                </li>
+                <li> 3 tablespoons canola or olive oil margarine
+                </li>
+                <li> 3 medium onions (finely chopped)
+                </li>
+                <li> 3 cloves garlic (crushed)
+                </li>
+                <li> 9 cups fresh spinach/silverbeet (or 160g defrosted frozen spinach)
+                </li>
+                <li> 3 &frac34; cups plain cottage cheese (blended/mashed)
+                </li>
+                <li> 3 squeezes lemon juice
+                </li>
+                <li> &frac34; cup grated cheese (parmesan if you have it)
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Follow the same <b>method</b> but serve after step 6.
+            </p>
+
+            <p class="mbn-section" id="6.3.1f">Dahl</p>
+            <p class="mbn-text">
+                <img src="images/Dahl.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> serve thick with rice for the whole family<br />
+                <b>Storage: </b> freeze or in the fridge for up to 3 days, covered<br />
+                <b>Note:</b> easy, cheap and a real winner with little people; makes enough for 1-2 feeds<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 tablespoon dried red lentils
+                </li>
+                <li> &frac14; cup mixed vegetables (e.g. carrot, peas, beans)
+                </li>
+                <li> 2 cups water
+                </li>
+                <li> pinch turmeric or cumin (optional)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Wash lentils then soak in water for 30 minutes (to reduce 'gassiness').
+                </li>
+                <li class="mbn-ol"> Drain water then wash again.
+                </li>
+                <li class="mbn-ol"> Clean and wash vegetables then dice into small pieces.
+                </li>
+                <li class="mbn-ol"> Put lentils, vegetables, water and turmeric/cumin (if using) in a pot on high heat.
+                </li>
+                <li class="mbn-ol"> Bring to the boil then reduce heat and simmer for 30-40 minutes, stirring often to stop lentils sticking to the bottom.
+                </li>
+                <li class="mbn-ol"> When lentils and vegetables are soft enough to mash with a spoon, remove from heat.
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to required consistency with extra water if needed before serving warm.
+                </li>
+                <li class="mbn-ol"> Any unused dahl can be frozen or covered and refrigerated for up to 3 days.
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> For a family of 4, use:
+            </p>
+            <ul>
+                <li> 1 &frac12; cups dried red lentils
+                </li>
+                <li> 2 cups mixed vegetables (e.g. carrot, peas, beans)
+                </li>
+                <li> 4 cups water
+                </li>
+                <li> 2 teaspoons canola or olive oil
+                </li>
+                <li> 1 teaspoon turmeric
+                </li>
+                <li> 1 teaspoon cumin
+                </li>
+                <li> 2 cups dry brown/basmati rice
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Follow the same method up to step 3, <b>THEN</b>:
+            </p>
+            <ul>
+                <li class="mbn-ol"> Fry turmeric and cumin in oil in a pot for a few seconds then add lentils and water.
+                </li>
+                <li class="mbn-ol"> Bring to the boil then reduce heat and simmer for 30 minutes, stirring often to stop lentils sticking to the bottom.
+                </li>
+                <li class="mbn-ol"> Add vegetables and simmer for another 5 minutes (add more water if needed).
+                </li>
+                <li class="mbn-ol"> Cook rice according to the instructions on pack.
+                </li>
+                <li class="mbn-ol"> Serve Dahl with rice.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.3.1g">Eggy veg</p>
+            <p class="mbn-text">
+                <b>Good for:</b> other meal times as well as lunch<br />
+                <b>Storage: </b> in the fridge for up to 1 day, covered; not suitable for freezing<br />
+                <b>Note:</b> great way to use leftover vegetables; always cook eggs well<br/>
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 egg
+                </li>
+                <li> 2 tablespoons plain cottage cheese
+                </li>
+                <li> 1 tablespoon finely chopped cooked vegetables (e.g. carrots, green beans, broccoli)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                </li>
+                <li class="mbn-ol"> In a bowl, beat egg with cottage cheese.
+                </li>
+                <li class="mbn-ol"> Stir in chopped vegetables.
+                </li>
+                <li class="mbn-ol"> Grease a small oven-proof dish (at least 200mL) and pour in egg mixture.
+                </li>
+                <li class="mbn-ol"> Place dish on baking tray and cook for about 20 minutes or until egg is set.
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.3.1h">Mushroom carbonara</p>
+            <p class="mbn-text">
+                <img src="images/Mushroom carbonara.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> any meal time; the whole family<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note:</b> tasty, healthier dish that has much less salt than the traditional ham/bacon version<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> about 20 strands uncooked thin spaghetti (or 1 cup pasta shapes)
+                </li>
+                <li>1 teaspoon corn flour
+                </li>
+                <li> &frac12; cup mushrooms (finely chopped)
+                </li>
+                <li> 1 teaspoon canola or olive oil
+                </li>
+                <li> &frac12; cup cow's milk
+                </li>
+                <li> &frac12; handful grated cheese
+                </li>
+                <li> &frac12; cup frozen peas
+                </li>
+                <li> pinch dried mixed herbs (optional)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Cook spaghetti/pasta according to the instructions on the pack.
+                </li>
+                <li class="mbn-ol"> Meanwhile, fry mushrooms in oil on medium heat until soft.
+                </li>
+                <li class="mbn-ol"> In a mug, mix corn flour with a few teaspoons of milk until combined and add to mushrooms.
+                </li>
+                <li class="mbn-ol"> Stir remaining milk, frozen peas and herbs (if using) into mushrooms.
+                </li>
+                <li class="mbn-ol"> Reduce heat and stir for 2 minutes or until the sauce bubbles and thickens.
+                </li>
+                <li class="mbn-ol"> Remove from heat and set aside.
+                </li>
+                <li class="mbn-ol"> Drain water from spaghetti/pasta.
+                </li>
+                <li class="mbn-ol"> Stir cooked spaghetti/pasta and cheese through mushroom sauce.
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving.
+                </li>
+                <li class="mbn-ol"> Any unused carbonara can be frozen in ice trays for later.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b>
+                <br /> For a family of 4 use:
+            </p>
+            <ul>
+                <li> 500g thin spaghetti (or 3 cups pasta shapes)
+                </li>
+                <li> 2 cups onion (finely chopped)
+                </li>
+                <li> 2 tablespoons canola or olive oil
+                </li>
+                <li> 4 teaspoons corn flour
+                </li>
+                <li> 1 &frac12; cups milk
+                </li>
+                <li> 1 cup grated cheese
+                </li>
+                <li> 2 cups frozen peas
+                </li>
+                <li> 1 teaspoon dried mixed herbs (optional)
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Follow the same method (serve after step 8).
+            </p>
+
+            <p class="mbn-section" id="6.3.1i">Salmon and veggie couscous</p>
+            <p class="mbn-text">
+                <img src="images/Salmon and veggie cous cous.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> quick and easy meal anytime; the whole family<br />
+                <b>Note:</b> if using tinned salmon/tuna, follow the same method but cook just the tomatoes and capsicum in foil at step 3<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 small skinless salmon fillet or a small tin of salmon/tuna in spring water (drained)
+                </li>
+                <li> &frac12; medium capsicum (finely chopped)
+                </li>
+                <li> 3 medium cherry tomatoes (finely chopped)
+                </li>
+                <li> &frac14; cup uncooked couscous (or white rice)
+                </li>
+                <li> 1 cup boiling water
+                </li>
+                <li> &frac12; teaspoon canola or olive oil margarine
+                </li>
+                <li> &frac12; teaspoon lemon juice (optional)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul class="decimals">
+                <li class="mbn-ol"> Preheat oven to 180&deg;C.
+                </li>
+                <li class="mbn-ol">Place salmon on a flat piece of foil (if using fresh fish).
+                </li>
+                <li class="mbn-ol"> Top salmon with tomatoes and capsicum then sprinkle with lemon juice if using.
+                </li>
+                <li class="mbn-ol"> Seal salmon parcel in foil and place on baking tray.
+                </li>
+                <li class="mbn-ol">Cook for 20-30 minutes or until salmon is cooked through.
+                </li>
+                <li class="mbn-ol">Flake and mash salmon, making sure there are no bones.
+                </li>
+                <li class="mbn-ol">Mix with tomatoes and capsicum and set aside.
+                </li>
+                <li class="mbn-ol">Place couscous in a bowl (if using rice, cook according to instructions on the pack).
+                </li>
+                <li class="mbn-ol"> Add boiling water until just covered and mix in the margarine.
+                </li>
+                <li class="mbn-ol"> Cover and leave for 5 minutes.
+                </li>
+                <li class="mbn-ol"> Use a fork to 'fluff up' the couscous.
+                </li>
+                <li class="mbn-ol"> Mix the salmon/tinned fish and vegetables with couscous/rice.
+                </li>
+                <li class="mbn-ol">Mash/ pur&eacute;e to required consistency before serving.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b><br /> Follow the same method but serve after step 12 and allow per adult:
+            </p>
+            <ul>
+                <li> 1 medium skinless salmon fillet
+                </li>
+                <li> &frac12; medium capsicum (finely chopped)
+                </li>
+                <li> 5 medium cherry tomatoes (finely chopped)
+                </li>
+                <li> &frac13; cup uncooked couscous (or white rice)
+                </li>
+                <li> &frac12; teaspoon canola or olive oil margarine
+                </li>
+                <li> &frac12; teaspoon lemon juice (optional)
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="6.3.1j">Sweet potato and lentil soup</p>
+            <p class="mbn-text">
+                <img src="images/Sweet potato and lentil soup.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> any meal time; the whole family as a soup<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note:</b> hearty, cheap and provides good protein and energy<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> 1 teaspoon canola or olive oil
+                </li>
+                <li> 1 large carrot (washed and chopped small)
+                </li>
+                <li> &frac13; cup dried red lentils
+                </li>
+                <li> 2 small sweet potatoes (peeled, chopped into chunks)
+                </li>
+                <li> 1 whole bay leaf (optional)
+                </li>
+                <li> 2 cups hot water
+                </li>
+                <li> pinch dried mixed herbs (optional)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Wash lentils well.
+                </li>
+                <li class="mbn-ol"> Put oil, carrots and lentils in a pot and cook on medium heat for 2 minutes.
+                </li>
+                <li class="mbn-ol"> Add sweet potato, water, bay leaf (if using) and herbs (if using).
+                </li>
+                <li class="mbn-ol"> Turn heat up until it boils, then lower heat and simmer for 30 minutes or until lentils and vegetables are soft.
+                </li>
+                <li class="mbn-ol"> Remove bay leaf (if used).
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving.
+                </li>
+                <li class="mbn-ol"> Freeze any unused soup in ice trays for later.
+                </li>
+            </ul>
+            <p class="mbn-text">
+                <b>To serve the family</b>
+                <br /> For a family of 4, use:
+            </p>
+            <ul>
+                <li> 2 teaspoons canola or olive oil
+                </li>
+                <li> 3 large carrots (chopped small)
+                </li>
+                <li> 1 &frac12; cup dried red lentils
+                </li>
+                <li> 4 small sweet potatoes (peeled, chopped into chunks)
+                </li>
+                <li> 2 whole bay leaves (optional)
+                </li>
+                <li> 5 cups hot water (add more if needed)
+                </li>
+                <li> &frac12; teaspoon dried mixed herbs (optional)
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Follow the same method to step 5 and serve chunky or blend for a smooth soup.
+            </p>
+
+            <p class="mbn-section" id="6.3.1k">Tuna and creamed corn macaroni</p>
+            <p class="mbn-text">
+                <img src="images/Tuna and creamed corn macaroni.jpg" class="mbn-text-image-right" />
+                <b>Good for:</b> any meal time<br />
+                <b>Storage:</b> freezer friendly<br />
+                <b>Note:</b> babies and young children love tuna; great source of iron and calcium<br />
+                <br />
+                <b>Ingredients</b>
+            </p>
+            <ul>
+                <li> &frac12; cup macaroni (or other pasta)
+                </li>
+                <li> 2 tablespoons tinned tuna in spring water (drained)
+                </li>
+                <li> 2 tablespoons creamed corn
+                </li>
+                <li> &frac14; cup grated cheese
+                </li>
+                <li> 2 tablespoons cow's milk (or breast/made up formula)
+                </li>
+            </ul>
+            <p>
+                <b>Method</b>
+            </p>
+            <ul class="decimals">
+                <li class="mbn-ol">Cook macaroni/pasta according to the instructions on pack.
+                </li>
+                <li class="mbn-ol"> Drain water from macaroni then return to pot.
+                </li>
+                <li class="mbn-ol"> Over medium heat, add milk and cheese, stirring until combined and cheese has melted.
+                </li>
+                <li class="mbn-ol"> Stir in creamed corn and tuna.
+                </li>
+                <li class="mbn-ol"> Mash/pur&eacute;e to required consistency before serving warm.
+                </li>
+                <li class="mbn-ol">Freeze any unused macaroni in ice trays for later.
+                </li>
+            </ul>
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

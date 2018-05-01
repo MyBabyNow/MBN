@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../font-baby/flaticon.css"> 
+    
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/mbn.js"></script>
+    <script>                
+        var lastScrollTop = 0; // Track the last event
+        var objToCheck;
+        var lastScrollAction = "";
+        
+        $(document).ready(function() {
+            /*
+            $(document).ontouchmove(function(event) {
+                event.preventDefault();
+            });
+            */
+            objToCheck = $("#section-title");
+            $("#section-card-min").hide();
+        });
+        
+        $(window).scroll(function() {
+            var st = objToCheck.offset().top - $(window).scrollTop();
+
+            if(st < lastScrollTop) {
+                if(parseInt(st) < 65 && lastScrollAction == "up") {
+                    // Change the type of card to display.
+                    $("#section-card").hide();
+                    $("#section-card-min").show();
+                    
+                    // Modify CSS to add the extra 50px room for content to be in the right place.
+                    $("#section-content").addClass("mbn-content-offset");
+                    
+                    // Set where to monitor for point of switch.
+                    objToCheck = $("#section-content");
+                }
+                
+                lastScrollAction = "up";
+            }
+            else {
+                if(parseInt(st) > 65 && lastScrollAction == "down") {
+                    // Reverse the card to display
+                    $("#section-card").show();
+                    $("#section-card-min").hide();
+                    
+                    // Modify CSS to remove the offset created as a result of swapping the display card.
+                    $("#section-content").removeClass("mbn-content-offset");
+                    
+                    // Set where to monitor for point of switch
+                    objToCheck = $("#section-title");
+                }
+                
+                lastScrollAction = "down";
+            }
+
+            lastScrollTop = st; // Remember this as the current position
+        });
+    </script>
+</head>
+<body>
+    <div class="mbn-logo">
+        <img src="../images/logo.png" class="mbn-logo-style" />
+    </div>
+    
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="../images/favorites.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Helpful products</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Helpful products</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- MONIKA You only deal with this part of the content on-wards. Leave the top of the code un-touched. -->
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            
+            <!-- MONIKA use id in the paragraph tag to mark the section. Follow the naming as given in the Word document -->
+            <!-- The 'class' with value 'mbn-text' is for the normal body of the content -->
+            <!-- The 'class' with value 'mbn-section' is the top level section, i.e., the text in purple. Usually, this type of sections will have an id as well because this is where content will be referenced else where. -->
+            
+            <p class="mbn-text" id="6.1.1a">
+                Preparing food for your baby doesn't need to cost the earth, be difficult or time consuming, or even that different from what you
+                eat as a family! Below you will find a few helpful tips before coming to a menu of the recipes included in this section. Although
+                each recipe is grouped by suggested meal time, keep in mind that many are suited to other meal times as well and that your baby
+                will probably just be happy to eat, regardless of the type of food they are presented and the various times of the day!
+            </p>
+            
+            <p class="mbn-section" id="6.1.1b">Important tips</p>
+            <p class="mbn-text">
+                <b>What texture is right for my baby?</b> 
+                <br />
+                Just as a variety of different foods is important, so is a variety of age-appropriate textures. Varying the food texture helps
+                your baby learn to chew (even if they don't yet have teeth!) as well as swallow.
+                
+                <!-- a br tag indicates a line break. Remember to have the '/' as per the example below. Otherwise, there will be problem on the phone. -->
+                
+                <br />
+                Generally, if your paper is
+                <ul>
+                    <li>
+                        <u>6 - 8 months</u> - use only pureed and mashed foods but move to minced (or mashed with a fork) and chopped foods soon
+                    </li>
+                    <li>
+                        
+                        <!-- To jump to a section, you add an anchor marked by the 'a' tag. The href value should begin with a '#' and then the section number as marked in the comments of the Word document. -->
+                        <u>8 months</u> - begin <a href="#4.4.1">finger foods</a>.
+                    </li>
+                    <li>
+                        <u>12 months</u> - your baby can eat the variety of foods eaten by the rest of the family
+                    </li>
+                </ul>
+            </p>
+            <p>
+                See the <a href="#6.7.1">video library</a> for some tips on preparing different textures, including how to make some
+                adult meals age appropriate for your baby.
+            </p>
+        
+            <p class="mbn-text" id="6.1.1c">
+                <b>Keep the cost down</b>
+                <br />
+                <ul>
+                    <li>
+                        fresh fruit and vegetables that are 'in season' are cheaper, tastier and more nutritious
+                    </li>
+                    <li>
+                        if you don't have one of the ingredients listed in a recipe, try substituting ingredients or experimenting, rather than specifically buying the item
+                    </li>
+                </ul>
+            </p>
+            <p class="mbn-section">
+                Embedding a video.
+            </p>
+            
+            <!-- This is the code you will use to embed a video. Start with a 'p' tag and then the div below. The only change should just be the URL in 'src' -->
+            <p>
+                <div class="video-container">
+                    <iframe src="http://www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </p>
+    
+            <p class="mbn-section">
+                Embedding an image.
+            </p>
+            <!-- This example shows you how to add an image. -->
+            <p>
+                <img src="images/avatar.png" class="mbn-text-image" />
+            </p>
+             
+            <!-- Leave this here. All content needs to end with the three 'br' tags below -->
+            <p>
+                <br /><br /><br />
+            </p>
+        </div>
+    </div>
+
+    <!-- Do not touch anything below -->
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

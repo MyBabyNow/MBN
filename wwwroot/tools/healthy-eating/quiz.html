@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/preloader/main.css">
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript">
+        var ans1, ans2, ans3, ans4, ans5, ans6, ans7;
+
+        var userId = $.session.get('secretKey');
+
+        $(document).ready(function() {
+            $('#pg1').show();
+
+            $('#pg2').hide();
+            $('#pg3').hide();
+            $('#pg4').hide();
+            $('#pg5').hide();
+            $('#pg6').hide();
+            $('#pg7').hide();
+            $('#pg8').hide();
+
+            $('#pg2-ans').hide();
+            $('#pg3-ans').hide();
+            $('#pg4-ans').hide();
+            $('#pg5-ans').hide();
+            $('#pg6-ans').hide();
+            $('#pg7-ans').hide();
+            $('#pg8-ans').hide();
+
+            $('#mark').hide();
+
+            $('#q1-modal').hide();
+
+            start()
+        });
+
+        function start() {
+
+            $(".preloader-wrapper").removeClass("hide");
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/healthy_eating_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    if (data.length !== 0) {
+                        $('input[name=q1-options][value=' + data[0].ans1 + ']').prop('checked', true);
+                        $('input[name=q2-options][value=' + data[0].ans2 + ']').prop('checked', true);
+                        $('input[name=q3-options][value=' + data[0].ans3 + ']').prop('checked', true);
+                        $('input[name=q4-options][value=' + data[0].ans4 + ']').prop('checked', true);
+                        $('input[name=q5-options][value=' + data[0].ans5 + ']').prop('checked', true);
+                        $('input[name=q6-options][value=' + data[0].ans6 + ']').prop('checked', true);
+                        $('input[name=q7-options][value=' + data[0].ans7 + ']').prop('checked', true);
+
+                        $('input[name=q1-options]').attr('disabled', true);
+                        $('input[name=q2-options]').attr('disabled', true);
+                        $('input[name=q3-options]').attr('disabled', true);
+                        $('input[name=q4-options]').attr('disabled', true);
+                        $('input[name=q5-options]').attr('disabled', true);
+                        $('input[name=q6-options]').attr('disabled', true);
+                        $('input[name=q7-options]').attr('disabled', true);
+
+                        mark();
+
+                        $("#mark").addClass("hide");
+
+                        $("#clear").removeClass("hide");
+
+                        $('#pg1').hide();
+
+                        $('#pg2').show();
+                        $('#pg3').show();
+                        $('#pg4').show();
+                        $('#pg5').show();
+                        $('#pg6').show();
+                        $('#pg7').show();
+                        $('#pg8').show();
+                    } else {
+                        $('input[name=q1-options]').prop('checked', false);
+                        $('input[name=q2-options]').prop('checked', false);
+                        $('input[name=q3-options]').prop('checked', false);
+                        $('input[name=q4-options]').prop('checked', false);
+                        $('input[name=q5-options]').prop('checked', false);
+                        $('input[name=q6-options]').prop('checked', false);
+                        $('input[name=q7-options]').prop('checked', false);
+
+                    }
+
+                    $(".preloader-wrapper").addClass("hide");
+                });
+
+        }
+
+        function startQuiz() {
+            $('#pg1').hide();
+
+            $('#pg2').show();
+            $('#pg3').show();
+            $('#pg4').show();
+            $('#pg5').show();
+            $('#pg6').show();
+            $('#pg7').show();
+            $('#pg8').show();
+
+            $('#mark').show();
+        }
+
+        function clearAnswers() {
+            $(".preloader-wrapper").removeClass("hide");
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/healthy_eating_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    if (data.length !== 0) {
+                        var entryId = data[0].id;
+                        $.ajax({
+                            type: "delete",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/healthy_eating_quiz/" + entryId,
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                                location.reload();
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+                    } else {
+                        $("#modal p").html("Answers has been cleared");
+                        $("#modal").modal();
+                        $("#modal").modal('open');
+                        $(".preloader-wrapper").addClass("hide");
+                    }
+                });
+        }
+
+
+        function mark() {
+            // Retrieve the values of each answer
+            ans1 = $('input[name=q1-options]:checked').val();
+            ans2 = $('input[name=q2-options]:checked').val();
+            ans3 = $('input[name=q3-options]:checked').val();
+            ans4 = $('input[name=q4-options]:checked').val();
+            ans5 = $('input[name=q5-options]:checked').val();
+            ans6 = $('input[name=q6-options]:checked').val();
+            ans7 = $('input[name=q7-options]:checked').val();
+
+            //Check that there is value for all.
+            if (ans1 == null || ans2 == null || ans3 == null || ans4 == null || ans5 == null || ans6 == null || ans7 == null) {
+                alert('You need to answer all questions.');
+                return;
+            }
+
+
+
+            // Now prepare the answer
+
+            if (ans1 == "a" || ans1 == "b" || ans1 == "c") {
+                $('#pg2-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Did you know that it is recommended that adults eat 5 serves of vegetables every day for good health?<br /> <br />Eating 5 serves a day might seem like a lot but it can help to think of 5 serves of vegetables every day as a target to work towards over time. Even by just eating one extra serve a day than you normally would, you're helping your health! And because your baby is always watching what <i>you</i> do, the more they see you eating and enjoying vegetables (and the more you offer your baby), the more likely they are to like vegetables too.<br /> <br />There are lots of easy (and tasty!) ways to include more vegetables in your day, some of which will even save you money (e.g. by replacing half of the minced meat in <a onclick='q1_modal();'>spaghetti Bolognese</a> with lentils).<br /> <br />Give your family's vegetable intake a boost with our:<br /><ul class='mbn-text'><li><a onclick='q1_modal();'>tips to eat more vegetables </a></li><li><a onclick='q1_modal();'>quick and tasty recipes </a></li><li><a onclick='q1_modal();'>time and money saving tips for healthy eating </a></li><li><a onclick='q1_modal();'>tips to help your baby love vegetables! </a></li></ul> </p>");
+            } else if (ans1 == "d") {
+                $('#pg2-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Good work! It is recommended that adults eat 5 serves of vegetables every day for good health, so you are well on your way!<br /> <br />See if you can increase the number of serves of vegetables you eat every day until you're getting 5 serves a day. Even by just eating one extra serve a day than you normally would, you're helping your health! And because your baby is always watching what <i>you</i> do, the more they see you eating and enjoying vegetables (and the more you offer your baby), the more likely they are to like vegetables too.<br /> <br />There are lots of easy (and tasty!) ways to include more vegetables in your day, some of which will even save you money (e.g. by replacing half of the minced meat in <a onclick='q1_modal();'>spaghetti Bolognese</a> with lentils).<br /> <br />Give your family's vegetable intake a boost with our:<br /><ul class='mbn-text'><li><a onclick='q1_modal();'>tips to eat more vegetables </a></li><li><a onclick='q1_modal();'>quick and tasty recipes </a></li><li><a onclick='q1_modal();'>time and money saving tips for healthy eating </a></li><li><a onclick='q1_modal();'>tips to help your baby love vegetables! </a></li></ul> </p>");
+            } else if (ans1 == "e") {
+                $('#pg2-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Fantastic! You're meeting the recommendations of eating 5 serves of vegetables every day!<br /> <br />And because your baby is always watching what <i>you</i> do and seeing that you enjoy eating vegetables regularly, you're also helping them to like vegetables too!<br /> <br />You might already do this but don't forget to 'colour every plate like a rainbow' by eating a variety of different coloured fruit and vegetables every day, e.g. reds, greens, yellows, purples, whites and oranges. Not only does the variety look and taste good, but it also boosts the different nutrients you get!<br /> <br />Check out more of our <a onclick='q1_modal();'>healthy eating tips</a>.</p>")
+            } else {
+                $('#pg2-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>That's OK! Check out what counts as a <a onclick='q1_modal();'>serve of vegetables</a> and take the quiz again. </p>");
+            }
+
+            if (ans2 == "a" || ans2 == "b") {
+                $('#pg3-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Did you know that it is recommended that adults eat 2 serves of fruit every day for good health?<br /> <br />The energy in fruit helps us feel fuller for longer because it is released slowly and fruit's natural sweetness can satisfy those cravings for a sugar hit in a healthy way that also boosts your nutrient intake!<br /> <br />Fruit also makes a great snack for busy parents on the go because it can generally be eaten as is without needing to be cooked or chopped (e.g. apples, pears, plums, grapes, apricots, mandarins, strawberries etc) and sometimes even comes in its own packaging - hello banana!<br /> <br />To increase the number of serves of fruit you have each day, try swapping a <a onclick='q1_modal();'>'sometimes' food </a>(e.g. biscuits, chips, chocolate, muffins, cakes etc) with a piece of fruit.<br /></br>To remind yourself to snack on fruit it can be helpful to keep it somewhere you'll easily spot it, for example:<br /><ul class='mbn-text'><li>keep a range of different types of fruit in a fruit bowl on the kitchen bench or the dining/coffee table</li><li>fill a clear container with bite-sized pieces of fruit (e.g. strawberries, cut up melon, grapes etc) and keep it at the front of the top shelf of your fridge</li></ul> </p><p class='mbn-text'>And because <a onclick='q1_modal();'>your baby is always watching what <i>you</i> do </a>and will see you eating fruit regularly, they will want to eat it too, which sets them up for a healthy start to life!<br /> <br />Check out our <a onclick='q1_modal();'>tips for boosting your fruit and vegetable intake</a>.</p>");
+            } else if (ans2 == "c") {
+                $('#pg3-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Good work - you're half way to meeting the recommended 2 serves of fruit every day for good health!<br /> <br />To increase the number of serves of fruit you have each day, try swapping a <a onclick='q1_modal();'>'sometimes' food </a>(e.g. biscuits, chips, chocolate, muffins, cakes etc) with a piece of fruit.<br /><br />To remind yourself to snack on fruit it can be helpful to keep it somewhere you'll easily spot it, for example:<br /><ul class='mbn-text'><li>keep a range of different types of fruit in a fruit bowl on the kitchen bench or the dining/coffee table</li><li>fill a clear container with bite-sized pieces of fruit (e.g. strawberries, cut up melon, grapes etc) and keep it at the front of the top shelf of your fridge</li></ul></p><p class='mbn-text'>And because <a onclick='q1_modal();'>your baby is always watching what <i>you</i> do </a>and will see you eating fruit regularly, they will want to eat it too, which sets them up for a healthy start to life!<br /> <br />Check out our <a onclick='q1_modal();'>tips for boosting your fruit and vegetable intake</a>.</p>");
+            } else if (ans2 == "d") {
+                $('#pg3-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great! You're meeting the recommendations of eating 2 serves of fruit every day!<br /></p><p class='mbn-text'>And because <a onclick='q1_modal();'>your baby is always watching what <i>you</i> do </a>and sees you eating fruit regularly, they will want to eat it too, so you're also setting them up for a healthy start to life! Keep up the great work!<br /><br />Check out some of our <a onclick='q1_modal();'>healthy eating tips</a>.</p>");
+            } else {
+                $('#pg3-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>That's OK! Check out what counts as a <a onclick='q1_modal();'>serve of fruit</a> and take the quiz again. </p>")
+            }
+
+            if (ans3 == "a" || ans3 == "b") {
+                $('#pg4-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Do you find yourself reaching for a sugary drink when you need an energy hit? Despite all the marketing claims, these drinks tend to only give us a <i>quick</i> boost, usually followed by a long slump of feeling even more tired!<br /> <br />Instead of sugary drinks, keeping hydrated with <i>water</i>, <a onclick='q1_modal();'>eating healthily</a> and making sure you <a onclick='q1_modal();'>get enough sleep</a> are much better ways of boosting your energy levels.<br /> <br />A good way to reduce the amount of sugary drinks you have is to try taking our water challenge - just swap sugary drinks for water for one week and see how you feel!<br /> <br />This simple swap from sugary drinks to water will:<br /><ul class='mbn-text'><li>help boost your energy levels</li><li>save you money (provided you're choosing tap over bottled water)</li><li>likely help you lose weight</li><li>set a great example for your baby because:<ul><li><a onclick='q1_modal();'>these drinks are <i>not</i> recommended for babies</a> or young children</li><li>they <a onclick='q1_modal();'>are always watching and wanting to copy what <i>you</i> do</a></li></ul></li></ul></p>");
+            } else if (ans3 == "c") {
+                $('#pg4-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Having the occasional sugary drink is OK but try not keep these drinks at home, otherwise <a onclick='q1_modal();'>your baby will want them too</a>!<br/><br/>Instead, try always keeping water handy in a glass/bottle - it <a onclick='q1_modal();'>sets a great example for your baby</a> whilst also prompting you to keep hydrated!</p>")
+            } else {
+                $('#pg4-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Fantastic!<br /> <br />By avoiding sugary drinks (and not keeping them at home) you are not only doing a great thing for your <i>own</i> health but you are also giving your baby the best start by <a onclick='q1_modal();'>role modelling healthy habits</a>!</p>")
+            }
+
+            if (ans4 == "a" || ans4 == "b") {
+                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>We often think of fruit juice as being <i>healthy</i>, after all, fruit juice comes from fruit, right? However, fruit juice (even if it's 100% fruit juice or freshly squeezed) is a <i>concentrated</i> source of sugar and energy (kilojoules/calories) that is very easy to over consume.<br /> <br />For example, consider a small glass of orange juice compared with <i>3 whole oranges</i>, both of which have the <b>same</b> amount of sugar and energy (kilojoules/calories).<br /> <br />If you were to eat <i>3 whole oranges</i> in one sitting, you'd probably be pretty full! That's because whole oranges include all the fibre in the flesh (as well as the refreshing juice!) and take time to work through (peeling, chewing and swallowing) which gives your body a chance to register how full you are.<br /> <br />But drinking a small glass of orange juice takes only seconds and because it doesn't really fill you up, it's easy to drink more of it than you need and/or keep eating other foods, which adds up to extra energy.<br /> <br />Regularly taking in lots of extra energy can lead to weight gain and/or prevent weight loss. Rather than fruit <i>juice</i>, try drinking a glass of <i>water</i> and <i>eat a piece</i> of fruit instead!<br /> <br />This simple swap also helps you to:<br /><ul class='mbn-text'><li>reach the recommended 2 serves of fruit every day for good health</li><li>avoid food battles over fruit juice which is <a onclick='q1_modal();'><i>not</i> recommended for babies</a> or young children</li><li><a onclick='q1_modal();'>encourage your baby to adopt healthy habits</a></li></ul></p>");
+            } else if (ans4 == "c") {
+                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>An occasional glass of fruit juice is fine but try not to get in the habit of drinking juice regularly, even if it <i>is</i> 100% fruit juice or freshly squeezed - <i>all</i> fruit juices are <i>concentrated</i> sources of sugar and energy (kilojoules/calories) that are <i>very</i> easy to over consume because they lack the fibre found in a whole piece of fruit. <br /> <br />Regularly taking in lots of extra energy can lead to weight gain and/or prevent weight loss. Rather than fruit <i>juice</i>, try drinking a glass of <i>water</i> and eat a <i>piece</i> of fruit instead!<br /> <br />This simple swap also helps you to:<br /><ul class='mbn-text'><li>reach the recommended 2 serves of fruit every day for good health</li><li>avoid food battles over fruit juice which is <a onclick='q1_modal();'><i>not</i> recommended for babies</a> or young children</li><li><a onclick='q1_modal();'>encourage your baby to adopt healthy habits</a></li></ul></p>")
+            } else {
+                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Fantastic!<br /> <br />As you probably know, fruit juice is a <i>concentrated</i> source of sugar and energy (kilojoules/calories) that is very easy to over consume. This is true even for those that are 100% fruit juice or freshly squeezed!<br /> <br />By drinking water and eating whole fruit instead, you are more likely to:<br /><ul class='mbn-text'><li>reach the recommended 2 serves of fruit every day for good health</li><li>avoid food battles over fruit juice which is <a onclick='q1_modal();'><i>not</i> recommended for babies</a> or young children</li><li>be giving your baby a great start by <a onclick='q1_modal();'>role modelling healthy habits</a>!</li></ul></p><p class='mbn-text'>Keep up the great work! </p>")
+            }
+
+            if (ans5 == "a" || ans5 == "b") {
+                $('#pg6-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Takeaway foods can be tempting when you're busy and tired, but eating them regularly puts a strain on both your health <i>and</i> your wallet!<br /> <br />Eating healthily doesn't need to take lots of time or involve being a master chef - check out our <a onclick='q1_modal();'>tips for saving time and money</a>.<br /> <br />Don't forget to get some inspiration for quick and easy meals for the whole family in our <a onclick='q1_modal();'>recipes section</a>! <br /> <br /></p>");
+            } else {
+                $('#pg6-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great!<br /> <br />There's nothing wrong with having the occasional takeaway meal but by limiting these you are doing a great thing for both your health <i>and</i> your wallet!<br /> <br />Need some inspiration for quick and easy meals that don't cost a fortune? Check out our <a onclick='q1_modal();'>recipe ideas</a> and <a onclick='q1_modal();'>tips for saving time and money</a>!<br /> <br /></p>");
+            }
+
+            if (ans6 == "a" || ans6 == "b" || ans6 == "c" || ans6 == "d") {
+                $('#pg7-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Do you find yourself reaching for these foods as a quick snack?<br /> <br />These <a onclick='q1_modal();'>'sometimes' foods </a> might be convenient, but they often leave us feeling flat and lacking in energy because they tend to replace more nutritious foods (like fruits and vegetables).<br /> <br />There's nothing wrong with having these foods now and again but for everyday eating, try to focus on foods from <a onclick='q1_modal();'>the 5 major food groups </a> when you're hungry. This is not only great for your <i>own</i> health but it also gives your baby a great start by <a onclick='q1_modal();'>role modelling healthy habits</a>!<br /> <br />This can be as easy as:<br /><ul class='mbn-text'><li>keeping a clear container full of cut up vegetables (e.g. carrots, celery, cucumbers, capsicums etc) and bite-sized pieces of fruit (e.g. strawberries, cut up melon, grapes etc) at the front of the top shelf of your fridge</li><li>keeping 'sometimes' foods out of your pantry (i.e. not buying them in the first place!)</li><li>following our <a onclick='q1_modal();'>tips for healthy eating </a> </li></ul></p><p class='mbn-text'>Remember, if 'sometimes' foods are not in your house, you won't eat them …and neither will your children!</p>");
+            } else {
+                $('#pg7-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Fantastic!<br /> <br />There's nothing wrong with the occasional biscuit or piece of cake but keep these as <a onclick='q1_modal();'>'sometimes' foods</a>; for everyday eating, try to focus on foods from <a onclick='q1_modal();'>the 5 major food groups</a>. This is not only great for your <i>own</i> health but it also gives your baby a great start by <a onclick='q1_modal();'>role modelling healthy habits</a>!<br /> <br />Remember, if 'sometimes' foods are not in your house, you won't eat them …and neither will your children!<br /> <br /></p>");
+            }
+
+            if (ans7 == "a" || ans7 == "b" || ans7 == "c" || ans7 == "d") {
+                $('#pg8-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>These <a onclick='q1_modal();'>'sometimes' foods  </a> are very high in salt and fat, which can damage your health and lead to weight gain and/or prevent weight loss. Just like biscuits and other sweet snacks, if eaten regularly, these foods tend to leave us feeling flat and lacking in energy because they usually replace more nutritious foods (like fruits and vegetables).<br /> <br />There's nothing wrong with having these foods now and again but for everyday eating, try to focus on foods from <a onclick='q1_modal();'>the 5 major food groups </a> when you're hungry. This is not only great for your <i>own</i> health but it also gives your baby a great start by <a onclick='q1_modal();'>role modelling healthy habits</a>!<br /> <br />Start to change your habit by:<br /><ul class='mbn-text'><li>keeping 'sometimes' foods out of your pantry (i.e. not buying them in the first place!)</li><li>storing some cut up vegetables (e.g. carrots, celery, cucumbers, capsicums etc) and bite-sized pieces of fruit (e.g. strawberries, cut up melon, grapes etc) in your fridge for easy snacking</li><li>following our <a onclick='q1_modal();'>tips for healthy eating </a> </li><li>checking out our quick and easy <a onclick='q1_modal();'>snack recipes</a> for some inspiration</a> </li></ul></p><p class='mbn-text'>Remember, if 'sometimes' foods are <i>not</i> in your house, you won't eat them …and neither will your children!</p>");
+            } else {
+                $('#pg8-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Great! <br /> <br />As you probably know, these foods tend to be high in salt and fat, which can damage your health and lead to weight gain or prevent weight loss, so they and are best avoided or only eaten occasionally. <br /> <br />This then lets you focus on foods from <a onclick='q1_modal();'>the 5 major food groups </a> for everyday eating, which is not only great for your <i>own</i> health but it also gives your baby a great start by <a onclick='q1_modal();'>role modelling healthy habits</a>!<br /> <br />Remember, if <a onclick='q1_modal();'>'sometimes' foods</a> are <i>not</i> in your house, you won't eat them …and neither will your children! <br /> <br />Need some inspiration for quick and easy snacks? Check out our <a onclick='q1_modal();'>snack recipes</a>! </p>");
+            }
+
+
+
+
+            // DONE - display the answers
+            $('#pg2-ans').show();
+            $('#pg3-ans').show();
+            $('#pg4-ans').show();
+            $('#pg5-ans').show();
+            $('#pg6-ans').show();
+            $('#pg7-ans').show();
+            $('#pg8-ans').show();
+
+            $('input[name=q1-options]').attr('disabled', true);
+            $('input[name=q2-options]').attr('disabled', true);
+            $('input[name=q3-options]').attr('disabled', true);
+            $('input[name=q4-options]').attr('disabled', true);
+            $('input[name=q5-options]').attr('disabled', true);
+            $('input[name=q6-options]').attr('disabled', true);
+            $('input[name=q7-options]').attr('disabled', true);
+
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/healthy_eating_quiz?$filter=user_id eq '" +
+                userId + "'",
+                function(data) {
+                    $(".preloader-wrapper").removeClass("hide");
+                    var postData = {
+                        user_id: userId,
+                        ans1: ans1,
+                        ans2: ans2,
+                        ans3: ans3,
+                        ans4: ans4,
+                        ans5: ans5,
+                        ans6: ans6,
+                        ans7: ans7,
+                    };
+                    if (data.length === 0) {
+                        $.ajax({
+                            type: "post",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/healthy_eating_quiz",
+                            data: JSON.stringify(postData),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+                    } else {
+                        var entryId = data[0].id;
+                        var postData = {
+                            ans1: ans1,
+                            ans2: ans2,
+                            ans3: ans3,
+                            ans4: ans4,
+                            ans5: ans5,
+                            ans6: ans6,
+                            ans7: ans7,
+                        };
+                        $.ajax({
+                            type: "patch",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/healthy_eating_quiz/" + entryId,
+                            data: JSON.stringify(postData),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function(responseData, textStatus, jqXHR) {
+                                $(".preloader-wrapper").addClass("hide");
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                var errorMessage = "Something went wrong";
+                                if (jqXHR.status === 0) {
+                                    errorMessage =
+                                        "Network not connected.\nPlease verify your network connection.";
+                                } else if (jqXHR.status == 404) {
+                                    errorMessage = "404. The requested page not found.";
+                                } else if (jqXHR.status == 500) {
+                                    errorMessage = "Internal Server Error [500].";
+                                }
+                                $("#modal p").html(errorMessage);
+                                $('#modal').modal();
+                                $("#modal").modal('open');
+                                $(".preloader-wrapper").addClass("hide");
+                            }
+                        });
+
+                    }
+
+                    $("#mark").addClass("hide");
+
+                    $("#clear").removeClass("hide");
+
+                });
+
+
+
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, 'fast');
+        }
+
+        function q1_modal() {
+            $('#q1-modal').show();
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="loader-wrapper" class="preloader-wrapper hide">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!--General Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p></p>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+    </div>
+
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/landing.png" />
+            <span class="card-title mbn-card-title" id="section-title" onclick="Load('tools');">
+            <i class="fa fa-chevron-left"></i> Tools
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title" onclick="Load('tools');">
+            <i class="fa fa-chevron-left"></i> Tools
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll">
+            <div id="clear" class="login-btn hide" onclick="clearAnswers()" style="margin-right:0">Redo quiz</div>
+            <div id="pg1">
+                <p class="mbn-section">How healthy is your diet? quiz</p>
+                <p class="mbn-text">
+                    Eat well and feel great! Take this quick quiz for some feedback on how you normally eat as well as some helpful hints and tips to help the whole family eat more healthily!
+                    <br /><br />
+                </p>
+                <div class="login-btn" onclick="startQuiz()">Begin quiz</div>
+
+            </div>
+
+            <div id="pg2">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">1.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How many serves of vegetables to you usually eat each day? <span style="font-weight:normal">(One serve is 1/2 cup cooked vegetables (e.g. broccoli or carrots) or 1 cup of green leafy or salad vegetables)</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q1-a" value="a" name="q1-options" type="radio">
+                                    <label for="q1-a">0 serves a day</label>
+                                </p>
+                                <p>
+                                    <input id="q1-b" value="b" name="q1-options" type="radio">
+                                    <label for="q1-b">Less than 1 serve a day (i.e. I don't eat vegetables/salad every day)</label>
+                                </p>
+                                <p>
+                                    <input id="q1-c" value="c" name="q1-options" type="radio">
+                                    <label for="q1-c">1-2 serves a day</label>
+                                </p>
+                                <p>
+                                    <input id="q1-d" value="d" name="q1-options" type="radio">
+                                    <label for="q1-d">3-4 serves a day </label>
+                                </p>
+                                <p>
+                                    <input id="q1-e" value="e" name="q1-options" type="radio">
+                                    <label for="q1-e">5 or more serves a day </label>
+                                </p>
+                                <p>
+                                    <input id="q1-f" value="f" name="q1-options" type="radio">
+                                    <label for="q1-f">Not sure </label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg2-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg3">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">2.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How many serves of fruit to you usually eat each day? <span style="font-weight:normal">(One serve is 1 medium piece of fruit (e.g. apple or banana), 2 small pieces of fruit (e.g. apricots or kiwi fruits) or 1 cup of diced pieces)</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q2-a" value="a" name="q2-options" type="radio">
+                                    <label for="q2-a">0 serves a day</label>
+                                </p>
+                                <p>
+                                    <input id="q2-b" value="b" name="q2-options" type="radio">
+                                    <label for="q2-b">Less than 1 serve a day (i.e. I don't eat fruit every day)</label>
+                                </p>
+                                <p>
+                                    <input id="q2-c" value="c" name="q2-options" type="radio">
+                                    <label for="q2-c">1 serve a day</label>
+                                </p>
+                                <p>
+                                    <input id="q2-d" value="d" name="q2-options" type="radio">
+                                    <label for="q2-d">2 or more serves a day</label>
+                                </p>
+                                <p>
+                                    <input id="q2-e" value="e" name="q2-options" type="radio">
+                                    <label for="q2-e">Not sure</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg3-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg4">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">3.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you usually drink soft drinks (not diet), cordial, sports drinks, energy drinks or other sweetened drinks?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q3-a" value="a" name="q3-options" type="radio">
+                                    <label for="q3-a">Every day</label>
+                                </p>
+                                <p>
+                                    <input id="q3-b" value="b" name="q3-options" type="radio">
+                                    <label for="q3-b">2-3 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q3-c" value="c" name="q3-options" type="radio">
+                                    <label for="q3-c">Once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q3-d" value="d" name="q3-options" type="radio">
+                                    <label for="q3-d">Once a month or less</label>
+                                </p>
+                                <p>
+                                    <input id="q3-e" value="e" name="q3-options" type="radio">
+                                    <label for="q3-e">Never or rarely</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg4-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg5">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">4.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you usually drink fruit juices (including 100% juice and freshly squeezed juice)?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q4-a" value="a" name="q4-options" type="radio">
+                                    <label for="q4-a">Every day</label>
+                                </p>
+                                <p>
+                                    <input id="q4-b" value="b" name="q4-options" type="radio">
+                                    <label for="q4-b">2-3 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q4-c" value="c" name="q4-options" type="radio">
+                                    <label for="q4-c">Once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q4-d" value="d" name="q4-options" type="radio">
+                                    <label for="q4-d">Once a month or less</label>
+                                </p>
+                                <p>
+                                    <input id="q4-e" value="e" name="q4-options" type="radio">
+                                    <label for="q4-e">Never or rarely</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg5-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg6">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">5.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you have takeaway meals or snacks (e.g. burgers, pizza, chicken or chips) from places like McDonalds, Hungry Jacks, Pizza Hut, KFC, Red Rooster or local take-away places?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q5-a" value="a" name="q5-options" type="radio">
+                                    <label for="q5-a">Twice a week or more</label>
+                                </p>
+                                <p>
+                                    <input id="q5-b" value="b" name="q5-options" type="radio">
+                                    <label for="q5-b">Once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q5-c" value="c" name="q5-options" type="radio">
+                                    <label for="q5-c">Less than once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q5-d" value="d" name="q5-options" type="radio">
+                                    <label for="q5-d">Rarely or never</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg6-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg7">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">6.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you usually eat sweet and savoury biscuits, cakes, doughnuts, or muesli bars?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q6-a" value="a" name="q6-options" type="radio">
+                                    <label for="q6-a">Every day</label>
+                                </p>
+                                <p>
+                                    <input id="q6-b" value="b" name="q6-options" type="radio">
+                                    <label for="q6-b">5-6 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q6-c" value="c" name="q6-options" type="radio">
+                                    <label for="q6-c">3-4 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q6-d" value="d" name="q6-options" type="radio">
+                                    <label for="q6-d">1-2 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q6-e" value="e" name="q6-options" type="radio">
+                                    <label for="q6-e">Less than once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q6-f" value="f" name="q6-options" type="radio">
+                                    <label for="q6-f">Rarely or never</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg7-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <div id="pg8">
+                <table>
+                    <tr>
+                        <td style="vertical-align: top; width: 10%;">
+                            <p class="mbn-section">7.</p>
+                        </td>
+                        <td>
+                            <p class="mbn-section">
+                                How often do you usually eat chips (crisps) or other salty snacks such as Twisties or corn chips?
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="input-field">
+                                <p>
+                                    <input id="q7-a" value="a" name="q7-options" type="radio">
+                                    <label for="q7-a">Every day</label>
+                                </p>
+                                <p>
+                                    <input id="q7-b" value="b" name="q7-options" type="radio">
+                                    <label for="q7-b">5-6 times a week</label>
+                                </p>
+                                <p>
+                                    <input id="q7-c" value="c" name="q7-options" type="radio">
+                                    <label for="q7-c">3-4 times a week </label>
+                                </p>
+                                <p>
+                                    <input id="q7-d" value="d" name="q7-options" type="radio">
+                                    <label for="q7-d">1-2 times a week  </label>
+                                </p>
+                                <p>
+                                    <input id="q7-e" value="e" name="q7-options" type="radio">
+                                    <label for="q7-e">Less than once a week</label>
+                                </p>
+                                <p>
+                                    <input id="q7-f" value="f" name="q7-options" type="radio">
+                                    <label for="q7-f">Rarely or never</label>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="pg8-ans">
+                <p class="mbn-text">
+                    Answer here.
+                </p>
+            </div>
+
+            <br />
+            <br />
+
+            <div id="mark" class="login-btn" onclick="mark()">Submit answers</div>
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p>
+                                <img src="../../images/topics.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/tools-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="q1-modal" class="tools-content">
+        <span class="tools-close"><i class="fa fa-times-circle fa-2x" onclick="$('#q1-modal').hide();"></i></span>
+        <p>
+            <br /><br /><br /> Content is loaded here.
+        </p>
+    </div>
+</body>
+
+</html>

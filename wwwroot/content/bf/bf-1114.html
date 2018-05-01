@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/food-tips.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('menu-bf');"><i class="fa fa-chevron-left"></i> Breastfeeding</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="1.1.14" Breastfeeding>Food tips for mums</p>
+            <p class="mbn-text" id="1.1.14a">
+                <b>Food needs: what you need to eat</b>
+                <br> It may surprise you that your body needs more food while you're breastfeeding than when you were pregnant - that's because your body burns through energy (kilojoules/calories) and nutrients making milk for your baby. When you're breastfeeding, your body absorbs and uses nutrients from food better than usual, and uses some of the fat stores from when you were pregnant (which is why breastfeeding can help you lose weight).
+            </p>
+
+            <p class="mbn-text" id="1.1.14b">
+                Eating enough to look after yourself and your baby will help you stay at your best health while adjusting to being a mum. This doesn't mean eating more chocolate, chips or other 'junk' food, it means you need to eat more from the <a onclick="localSecJump('parents/parents-714.html#7.1.4c');">five major food groups</a> we need for everyday health.
+            </p>
+            <p class="mbn-text">
+                Read more on <a onclick="localSecJump('parents/parents-714.html#7.1.4e');">healthy eating and serving sizes for mums</a>.
+            </p>
+
+            <p class="mbn-text" id="1.1.14c">
+                <b>Feeling thirsty?</b>
+                <br> You might find that you get extra thirsty when you are breastfeeding your baby. Keep hydrated by drinking lots of water - keep a reusable water bottle by your side to remind you to drink it (instead of less healthy drinks with added sugar).
+            </p>
+            <p class="mbn-text">
+                Try to limit drinks containing <a onclick="localSecJump('1.1.14i');">caffeine</a> and <a onclick="localSecJump('bf-1115.html#1.1.15a');">alcohol</a>, as these pass through your breastmilk into your baby's system and can affect their behaviour and development.
+            </p>
+
+            <p class="mbn-text" id="1.1.14d">
+                <b>Supplements</b>
+                <br> You should be able to get most of what you need when breastfeeding from a well-balanced healthy diet. The only nutrients you may need help with are iodine and vitamin D. It is recommended that breastfeeding mums take an iodine supplement and that <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> checks your vitamin D level to see if you, or your baby, needs a supplement.
+            </p>
+            <p class="mbn-text">
+                Just remember that any medication (herbal or other) will have side effects that you need to know about - you should speak with <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> for guidance.
+            </p>
+            <p class="mbn-text">
+                See the <a onclick="localSecJump('hs/hs-815.html');">Australian Dietary Guidelines</a> for more information on what and how much to eat.
+            </p>
+
+            <p class="mbn-text" id="1.1.14e">
+                <b>Quick food ideas</b>
+                <br> Eating enough food and drinking enough water throughout the day can be surprisingly tough for mums! Being busy looking after their babies, mums often forget to eat, or end up eating on the run.
+            </p>
+            <p class="mbn-text">
+                Here are some ideas on foods you can quickly eat throughout the day that are healthy for you:
+            </p>
+            <ul>
+                <li><b>plain raw vegetables</b> - carrot, celery, cucumber, capsicum and broccoli are all yummy raw. Dip into unsweetened plain natural yoghurt or <a onclick="localSecJump('recipe/recipe-651.html#6.5.1f');">hummus</a> for some extra flavour
+                </li>
+                <li><b>plain fruit</b> - keep a bowl of fruit out so you remember to eat two pieces a day!
+                </li>
+                <li><b>nuts</b> - unless you are allergic, nuts are the perfect high energy snack packed with nutrition - choose unsalted ones and add a little bit of dried fruit like sultanas for extra flavour and energy
+                </li>
+                <li><b>wholegrain toast</b> - stick to grainy types of bread and add some unsalted peanut butter or other nut spread, avocado, margarine, or a slice of cheese on top for a very quick meal or snack
+                </li>
+                <li>throw a slice of <b>cheese on top of a cracker</b> for a gourmet snack - look for crackers that are lower in salt (aim for &lt; 400mg/100g) and include wholegrains </li>
+                <li>open up a can of <b>tuna in springwater</b>, mix through some low-fat mayonnaise and spread on bread - yum!
+                </li>
+                <li><b>boiled eggs</b> - quick and easy to prepare and you can eat them as they are, or spread on bread
+                </li>
+                <li><b>untoasted muesli</b> - who says muesli has to be for breakfast? Eat a bowl of untoasted muesli with low-fat milk at any time of the day as a quick and filling meal
+                </li>
+            </ul>
+            <p class="mbn-text">
+                More on <a onclick="localSecJump('parents/parents-714.html');">healthy eating</a>.
+            </p>
+
+            <p class="mbn-text" id="1.1.14f">
+                <b>Food and breastmilk</b>
+                <br> Breastfeeding doesn't mean you have to have a 'perfect' diet - eating well is more important for your own health and energy levels.
+            </p>
+            <p class="mbn-text">
+                What you eat <b>doesn't</b> really affect the:
+            </p>
+            <ul>
+                <li>amount of milk you make
+                </li>
+                <li>protein or lactose content of your milk
+                </li>
+                <li>the risk of your baby getting asthma, eczema, intolerances or other allergies
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.14g">
+                Many mums get worried about whether certain foods in their diet affect their baby and although some foods might slightly alter the taste and/or smell of your breastmilk, this is not really anything to worry about.
+            </p>
+            <p class="mbn-text">
+                While some babies can react to traces of food in breastmilk, it's best to seek advice from a paediatrician specialising in allergies before you make any changes to your diet. Babies can be unsettled <a onclick="localSecJump('sfp/sfp-518.html');">for many reasons</a> and your breastmilk may not necessarily be the problem.
+            </p>
+            <p class="mbn-text">
+                Read more about <a onclick="localSecJump('bf-118.html#1.1.8u');">intolerance and allergies</a> in babies.
+            </p>
+
+            <p class="mbn-text" id="1.1.14h">
+                What you eat <b>does</b> affect the:
+            </p>
+            <ul>
+                <li>levels of vitamins and minerals in your milk
+                </li>
+                <li>types of fat in your milk
+                </li>
+            </ul>
+            <p class="mbn-text">
+                If you are on a special or restricted diet (such as paleo or vegan) you should speak to <a onclick="localSecJump('bf-119.html#1.1.9h');">your GP</a> or a <a onclick="localSecJump('hs/hs-815.html');">dietitian</a> to make sure both you and your baby stay healthy while you breastfeed.
+            </p>
+
+            <p class="mbn-text" id="1.1.14i">
+                <b>Caffeine</b>
+                <br> Caffeine passes through your breastmilk into your baby - the amount transferred depends on how your body handles caffeine. It takes about 1 hour after consuming caffeine for the amount of caffeine in your breastmilk to peak.
+            </p>
+            <p class="mbn-text">
+                So if you had a coffee at 10:30am, it would take until about 11:30am before the majority of the caffeine from that coffee appears in your breastmilk.
+            </p>
+            <p class="mbn-text">
+                How fast your baby can process caffeine depends on how old they are:
+            </p>
+            <ul>
+                <li>newborns can take between 2-4 days to get rid of <i>half</i> the caffeine they take in
+                </li>
+                <li>by about 3-4 months it only takes a few hours for babies to process caffeine
+                </li>
+            </ul>
+            <p class="mbn-text" id="1.1.14j">
+                Caffeine can upset some babies, so limiting your caffeine intake is a good idea. There are mixed ideas on how much caffeine a breastfeeding mum should have, but in Australia having no more than 300mg a day (less if you also <a onclick="localSecJump('bf-1119.html#1.1.19r');">smoke</a>) is recommended.
+            </p>
+
+            <p class="mbn-text" id="1.1.14k">
+                <b>Caffeine guide</b>
+                <br> When it comes to coffee, tea and soft drinks, there can be big variations in caffeine content. Below is just an average guide.
+            </p>
+
+            <TABLE BORDER="3" CELLSPACING="1" CELLPADDING="1">
+                <col width="150">
+                <col width="190">
+                <tr>
+                    <TH ALIGN="LEFT">Food/drink</TH>
+                    <TH ALIGN="LEFT">Approximate caffeine content</TH>
+                </tr>
+                <TR ALIGN="Left">
+                    <TD><b><i>Coffee</i></b></TD>
+                    <TD></TD>
+                </TR>
+                <TR>
+                    <TD>Instant coffee</TD>
+                    <TD>60-80mg/teaspoon dry powder</TD>
+                </TR>
+                <TR>
+                    <TD>Caf&eacute; coffee (e.g. latte or cappuccino)</TD>
+                    <TD>113-282mg/250mL cup</TD>
+                </TR>
+                <TR>
+                    <TD>Drip coffee</TD>
+                    <TD>110-150mg/250mL cup</TD>
+                </TR>
+                <TR>
+                    <TD>Espresso/short black</TD>
+                    <TD>107mg/30mL shot</TD>
+                </TR>
+                <TR>
+                    <TD>Decaf coffee</TD>
+                    <TD>25mg/250mL cup</TD>
+                </TR>
+                <TR>
+                    <TD>Iced coffee</TD>
+                    <TD>50-100mg/300mL (small glass)</TD>
+                </TR>
+                <br>
+                <br>
+                <TR>
+                    <TD><b><i>Tea</i></b></TD>
+                    <TD></TD>
+
+                </TR>
+                <TR>
+                    <TD>Black tea</TD>
+                    <TD>25-110mg/250mL cup</TD>
+                </TR>
+                <TR>
+                    <TD>Green tea</TD>
+                    <TD>30-50mg/250mL cup</TD>
+                </TR>
+                <TR>
+                    <TD><b><i>Chocolate</i></b></TD>
+                    <TD></TD>
+                </TR>
+                <TR>
+                    <TD>Drinking chocolate</TD>
+                    <TD>1mg/teaspoon dry powder</TD>
+                </TR>
+                <TR>
+                    <TD>Milk chocolate</TD>
+                    <TD>20mg/100g block</TD>
+                </TR>
+                <TR>
+                    <TD>Dark chocolate</TD>
+                    <TD>60mg/100g block</TD>
+                </TR>
+                <TR>
+                    <TD><b><i>Soft drink/energy drink</i></b></TD>
+                    <TD></TD>
+                </TR>
+                <TR>
+                    <TD>Cola soft drink</TD>
+                    <TD>30-50mg/375mL can</TD>
+                </TR>
+                <TR>
+                    <TD>Diet cola soft drink</TD>
+                    <TD>40-60mg/375mL can</TD>
+                </TR>
+                <TR>
+                    <TD>Non-cola soft drink</TD>
+                    <TD>Almost none</TD>
+                </TR>
+                <TR>
+                    <TD>Energy drink</TD>
+                    <TD>80mg/250mL can</TD>
+                </TR>
+            </TABLE>
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>
