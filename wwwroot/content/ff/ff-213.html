@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -41,7 +41,7 @@
         <div class="card-image">
             <img src="images/sterilising-bottles.png" />
             <span class="card-title mbn-card-title" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Formula feeding</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -50,7 +50,7 @@
 
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Formula feeding</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -83,100 +83,103 @@
             </p>
             <p class="mbn-text">
                 Before you begin to sterilise the feeding equipment, you should:
-                <ul>
-                    <li class="mbn-ol"> Wash your hands well with soap and water (antiseptic rubs don't always kill all the germs).
-                    </li>
-                    <li class="mbn-ol"> Clean the bench or work surface where you will put together the bottle and teat with hot, soapy water.
-                    </li>
-                    <li class="mbn-ol"> Clean all equipment well using a <a onclick="localSecJump('ff-211.html#2.1.1d');">bottle/teat</a> brush and rinse with clean, hot soapy water.
-                    </li>
-                </ul>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Wash your hands well with soap and water (antiseptic rubs don't always kill all the germs).
+                </li>
+                <li class="mbn-ol"> Clean the bench or work surface where you will put together the bottle and teat with hot, soapy water.
+                </li>
+                <li class="mbn-ol"> Clean all equipment well using a <a onclick="localSecJump('ff-211.html#2.1.1d');">bottle/teat</a> brush and rinse with clean, hot soapy water.
+                </li>
+            </ul>
 
-                <p class="mbn-text">
-                    Once these three steps are done, you're ready to start sterilising!
-                </p>
-                <p class="mbn-text">
-                    Dishwashers can be used to <i>clean</i> feeding equipment but they <b>will not sterilise it</b>, as the temperatures reached are not high enough. Always follow the manufacturer's instructions.
-                </p>
+            <p class="mbn-text">
+                Once these three steps are done, you're ready to start sterilising!
+            </p>
+            <p class="mbn-text">
+                Dishwashers can be used to <i>clean</i> feeding equipment but they <b>will not sterilise it</b>, as the temperatures reached are not high enough. Always follow the manufacturer's instructions.
+            </p>
 
-                <p class="mbn-section" id="2.1.3c">
-                    Boil sterilisation
-                </p>
-                <p class="mbn-text">
-                    Boil sterilisation uses boiling water on a stovetop and is the best option for consistent and reliable results.
-                </p>
+            <p class="mbn-section" id="2.1.3c">
+                Boil sterilisation
+            </p>
+            <p class="mbn-text">
+                Boil sterilisation uses boiling water on a stovetop and is the best option for consistent and reliable results.
+            </p>
 
-                <p class="mbn-text">
-                    <b>How to do it:</b>
-                </p>
-                <ul>
-                    <li class="mbn-ol"> Fill a pot with water and submerge the feeding equipment completely, making sure there is no air trapped inside.
-                    </li>
-                    <li class="mbn-ol"> Cover with a lid, place on the back burner of the stove and bring to the boil.
-                    </li>
-                    <li class="mbn-ol"> Boil for <i>at least</i> 5 minutes, making sure that all items stay under the surface of the water.
-                    </li>
-                    <li class="mbn-ol"> Turn off the burner and let the equipment cool in the pot until you can comfortably handle it.
-                    </li>
-                    <li class="mbn-ol"> Store any equipment not being used immediately in a container in the fridge.
-                    </li>
-                </ul>
+            <p class="mbn-text">
+                <b>How to do it:</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Fill a pot with water and submerge the feeding equipment completely, making sure there is no air trapped inside.
+                </li>
+                <li class="mbn-ol"> Cover with a lid, place on the back burner of the stove and bring to the boil.
+                </li>
+                <li class="mbn-ol"> Boil for <i>at least</i> 5 minutes, making sure that all items stay under the surface of the water.
+                </li>
+                <li class="mbn-ol"> Turn off the burner and let the equipment cool in the pot until you can comfortably handle it.
+                </li>
+                <li class="mbn-ol"> Store any equipment not being used immediately in a container in the fridge.
+                </li>
+            </ul>
 
-                <p class="mbn-text">
-                    Some feeding equipment is not safe to boil (be sure to check first) and teats also tend to get damaged faster with this method, which means you'll need to replace them more often to avoid making your baby sick.
-                </p>
+            <p class="mbn-text">
+                Some feeding equipment is not safe to boil (be sure to check first) and teats also tend to get damaged faster with this method, which means you'll need to replace them more often to avoid making your baby sick.
+            </p>
 
-                <p class="mbn-text">
-                    Always take care to ensure safety and prevent scalds/burns and <i>never</i> leave hot pans and liquids unattended, especially if children are around.
-                </p>
+            <p class="mbn-text">
+                Always take care to ensure safety and prevent scalds/burns and <i>never</i> leave hot pans and liquids unattended, especially if children are around.
+            </p>
 
-                <p class="mbn-section" id="2.1.3d">
-                    Chemical sterilisation
-                </p>
-                <p class="mbn-text">
-                    Chemical sterilisation is done using a sterilising solution that comes in liquid or tablet form. It is not as effective as the <a onclick="localSecJump('2.1.3c');">boiling method</a> unless bottles and other utensils are cleaned properly before sterilisation.
-                </p>
+            <p class="mbn-section" id="2.1.3d">
+                Chemical sterilisation
+            </p>
+            <p class="mbn-text">
+                Chemical sterilisation is done using a sterilising solution that comes in liquid or tablet form. It is not as effective as the <a onclick="localSecJump('2.1.3c');">boiling method</a> unless bottles and other utensils are cleaned properly before sterilisation.
+            </p>
 
-                <p class="mbn-text">
-                    <b>How to do it:</b>
-                </p>
-                <ul>
-                    <li class="mbn-ol"> Prepare the sterilisation solution according to the manufacturer's instructions.
-                    </li>
-                    <li class="mbn-ol"> Submerge the feeding equipment in the sterilising solution, making sure there is no air trapped inside.
-                    </li>
-                    <li class="mbn-ol"> Use a floating cover to keep everything submerged for at least 30 minutes.
-                    </li>
-                    <li class="mbn-ol"> Change the sterilising solution every 24 hours.
-                    </li>
-                </ul>
+            <p class="mbn-text">
+                <b>How to do it:</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Prepare the sterilisation solution according to the manufacturer's instructions.
+                </li>
+                <li class="mbn-ol"> Submerge the feeding equipment in the sterilising solution, making sure there is no air trapped inside.
+                </li>
+                <li class="mbn-ol"> Use a floating cover to keep everything submerged for at least 30 minutes.
+                </li>
+                <li class="mbn-ol"> Change the sterilising solution every 24 hours.
+                </li>
+            </ul>
 
-                <p class="mbn-section" id="2.1.3e">
-                    Steam sterilisation
-                </p>
-                <p class="mbn-text">
-                    Steam sterilisation can be done either in the microwave or by using a steam steriliser.
-                </p>
+            <p class="mbn-section" id="2.1.3e">
+                Steam sterilisation
+            </p>
+            <p class="mbn-text">
+                Steam sterilisation can be done either in the microwave or by using a steam steriliser.
+            </p>
 
-                <p class="mbn-text">
-                    <b>How to do it:</b>
-                </p>
-                <ul>
-                    <li class="mbn-ol"> Place all feeding equipment into the steriliser and add water according to the manufacturer's instructions.
-                    </li>
-                    <li class="mbn-ol"> Follow the manufacturer's instructions with regard to how long the feeding equipment needs to be steamed.
-                    </li>
-                </ul>
+            <p class="mbn-text">
+                <b>How to do it:</b>
+            </p>
+            <ul>
+                <li class="mbn-ol"> Place all feeding equipment into the steriliser and add water according to the manufacturer's instructions.
+                </li>
+                <li class="mbn-ol"> Follow the manufacturer's instructions with regard to how long the feeding equipment needs to be steamed.
+                </li>
+            </ul>
 
-                <p class="mbn-text">
-                    Always follow the manufacturer's instructions and be careful not to burn yourself when handling steamers or when removing microwave steam steriliser lids.
-                </p>
+            <p class="mbn-text">
+                Always follow the manufacturer's instructions and be careful not to burn yourself when handling steamers or when removing microwave steam steriliser lids.
+            </p>
 
-                <p class="mbn-text" id="2.1.3f">
-                    <b>After sterilising</b>
-                    <br />
-                    Wherever possible, only remove the feeding equipment from the steriliser/sterilising solution <b>just before</b> you need to use it. If you need sterilise now for later use, put the bottle together fully with the teat and lid in place - this will help prevent the inside of the bottle and the inside and outside of the teat from being contaminated.
-                </p>
+            <p class="mbn-section" id="2.1.3f">
+                After sterilising
+            </p>
+            <p class="mbn-text">
+                Wherever possible, only remove the feeding equipment from the steriliser/sterilising solution <b>just before</b> you need to use it. If you need sterilise now for later use, put the bottle together fully with the teat and lid in place - this will help prevent the inside of the bottle and the inside and outside of the teat from being contaminated.
+            </p>
+            <p>
 
                 <br />
                 <br />

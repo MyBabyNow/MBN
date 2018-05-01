@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/519.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns </span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns </span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="5.1.9">Wind and colic </p>
+            <p class="mbn-section" id="5.1.9a">
+                Wind
+            </p>
+            <p class="mbn-text">
+                Wind refers to the air (burping) that happens during or after a feed. Some babies take in more air than others when they feed which means they have more air to get rid of!
+            </p>
+            <p class="mbn-text">
+                'Burping' can help your baby get rid of this wind, making them feel more comfortable and freeing up room in their tummy to allow for longer feeding.
+            </p>
+            <p class="mbn-text" id="5.1.9b">
+                <b>Some ways to burp your baby:</b>
+            </p>
+            <ul>
+                <li>hold your baby upright with their tummy against your shoulder and gently rub their back
+                </li>
+                <li>sit your baby on your lap with one hand supporting them under their chin and the other rubbing/patting their back gently
+                </li>
+                <li>lay your baby on their back for about a minute and then raise them gently to a sitting position
+                </li>
+                <li>lie your baby on their tummy:
+                    <ul>
+                        <li><u>across your lap</u> with one hand supporting their head and the other rubbing their back
+                        </li>
+                        <li><u>along your forearm</u> with their head near your elbow and your hand holding the nappy area
+                        </li>
+                    </ul>
+            </ul>
+
+            <p class="mbn-section" id="5.1.9c">
+                Colic
+            </p>
+            <p class="mbn-text">
+                Colic is the term used to describe a baby who cries a lot (for 3+ hours a day, for 3+ days a week, over 3+ weeks) and is common in both breast and formula-fed babies. The good news is that most babies cry much less by the time they are 3-4 months of age.
+            </p>
+            <p class="mbn-text" id="5.1.9d">
+                We don't know what causes colic, but some common theories on why babies get colic are:
+            </p>
+            <ul>
+                <li><b>feeding technique</b>- <a onclick="localSecJump('bf/bf-113.html#1.1.3k');">too much</a> or <a onclick="localSecJump('bf/bf-113.html#1.1.3d');">too little</a> milk, or milk <a onclick="localSecJump('bf/bf-114.html#1.1.4a');">given in the wrong way</a>
+                </li>
+                <li><b>too much wind</b> - this may be the result of the crying as crying causes your baby to swallow wind - <a onclick="localSecJump('5.1.9b');">burping your baby</a> can help
+                </li>
+                <li><b>overstimulation</b> - too much going on around your baby
+                </li>
+                <li><b>medical causes</b> - although it's not common, some babies may have a medical cause such as hernia, <a onclick="localSecJump('bf/bf-118.html#1.1.8u');">allergic response to mum's diet</a> (in <a onclick="localSecJump('bf/bf-111.html#1.1.1');">breastfed</a> babies), <a onclick="localSecJump('bf/bf-118.html#1.1.8q');">reflux</a>, infections, nappy rash or other sources of irritation
+                </li>
+            </ul>
+
+
+            <p class="mbn-section" id="5.1.9e">
+                Managing colic
+            </p>
+            <p class="mbn-text">
+                If your baby cries a lot, it's important to first get your baby checked by your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> to make sure there is nothing physically wrong - this will also help reassure you.
+            </p>
+            <p class="mbn-text">
+                If there is nothing physically wrong, you might like to try:
+            </p>
+            <ul>
+                <li>different <a onclick="localSecJump('sfp-518.html#5.1.8l');">settling strategies</a> - trial and error will tell you what works!
+                </li>
+                <li>different ways of feeding - see more on <a onclick="localSecJump('bf/bf-114.html#1.1.4a');">breastfeeding</a> and <a onclick="localSecJump('ff/ff-215.html#2.1.5a');">formula feeding</a>
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                If you are worried your baby may have colic and can't seem to work out why, please talk to your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a>.
+            </p>
+
+            <p class="text" id="5.1.9f">
+                Remember:
+            </p>
+            <ul>
+                <li>sometimes babies will cry for no reason and this is also part of normal development
+                </li>
+                <li>lots of crying is usually just a <i>phase</i> that will pass - usually by about 3-4 months of age
+                </li>
+                <li>to look after yourself - try to:
+                </li>
+                <ul>
+                    <li><a onclick="localSecJump('parents/parents-713.html#7.1.3a');">get enough sleep</a>
+                    </li>
+                    <li>take <a onclick="localSecJump('parents/parents-716.html#7.1.6n');">time out for yourself</a> and
+                    </li>
+                    <li>don't forget that you're <i>never</i> alone - it's OK to ask for help (or even just to talk!), so <a onclick="localSecJump('parents/parents-716.html#7.1.6q');">speak with family and friends</a> or see our <a onclick="localSecJump('hs/hs-811.html#8.1.1a');">help and support</a> section for plenty of other useful contacts
+                    </li>
+                </ul>
+            </ul>
+
+
+            <br />
+            <br />
+            <br />
+            <br />
+    </div>
+    </div>
+
+
+            <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+                <nav class="mbn-nav">
+                    <div class="nav-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col mbn-icon" onclick="Load('feed');">
+                                    <p>
+                                        <img src="../../images/feed.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">My baby</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('topics');">
+                                    <p class="mbn-icon-selected">
+                                        <img src="../../images/topics-s.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text-selected">Topics</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('tools');">
+                                    <p>
+                                        <img src="../../images/tools.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Tools</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('forum');">
+                                    <p>
+                                        <img src="../../images/forum.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Forum</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('more');">
+                                    <p>
+                                        <img src="../../images/more.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">More</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+       
+</body>
+
+</html>

@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -41,7 +41,7 @@
         <div class="card-image">
             <img src="images/how-to-make-feed.png" />
             <span class="card-title mbn-card-title" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Formula feeding</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -50,7 +50,7 @@
 
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Formula feeding</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -78,13 +78,13 @@
                     <a onclick="localSecJump('2.1.4d');">step-by-step guide for making up a feed</a>
                 </li>
                 <li>
-                    <a onclick="localSecJump('2.1.4e');">Warming a feed</a>
+                    <a onclick="localSecJump('2.1.4e');">warming a feed</a>
                 </li>
                 <li>
                     <a onclick="localSecJump('2.1.4g');">storing made up formula</a>
                 </li>
                 <li>
-                    <a onclick="localSecJump('2.1.4h');">Important tips</a>
+                    <a onclick="localSecJump('2.1.4h');">important tips</a>
                 </li>
             </ul>
 
@@ -194,7 +194,7 @@
                 How to store made up formula (that you haven't yet offered to your baby):
             </p>
             <ul>
-                <li><i><u>Refrigerator:</u></i>place on the top shelf at the back of the fridge (where it is coldest) no longer than 1 hour after making but throw away after 24 hours.
+                <li><i><u>Refrigerator:</u></i> place on the top shelf at the back of the fridge (where it is coldest) no longer than 1 hour after making but throw away after 24 hours.
                 </li>
                 <li><i><u>Cool bag with ice pack:</u></i> throw away after 2 hours (as cool bags don't always keep foods chilled properly).
                 </li>
@@ -233,26 +233,20 @@
 
             <p class="mbn-text" id="2.1.4k">
                 <b>3. Use the correct amount of formula powder</b>
-                <br>
+                <br />
                 <u>More formula powder</u> than the instructions advise can be dangerous and will not help with:
-                <ul>
-                    <li><a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">growth</a>
-                    </li>
-                    <li><a onclick="localSecJump('sfp/sfp-511.html#5.1.1');">sleep</a>
-                    </li>
-                    <li><a onclick="localSecJump('sfp/sfp-518.html#5.1.8');">settling</a>
-                    </li>
-                </ul>
             </p>
-            <p class="mbn-text">
-                <u>Less formula powder</u> than the instructions advise will not give your baby enough nourishment to <a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">grow properly</a>.
-            </p>
+            <ul>
+                <li><a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">growth</a>
+                </li>
+                <li><a onclick="localSecJump('sfp/sfp-511.html#5.1.1');">sleep</a>
+                </li>
+                <li><a onclick="localSecJump('sfp/sfp-518.html#5.1.8');">settling</a>
+                </li>
+            </ul>
 
             <p class="mbn-text">
-                If your baby's formula continues to be made up too concentrated (by continuing to add too much formula powder into the scoop), it can cause severe dehydration in your baby, which could lead to a rare but serious condition called 'hypernatraemic dehydration'. Sadly, it's quite common not to notice symptoms of this condition until your baby has neurological problems, which can be permanent.
-            </p>
-            <p class="mbn-text">
-                This is why it is so important to always loosely fill and then level off the formula powder in the scoop when making up a feed for your baby.
+                <u>Less formula powder</u> than the instructions advise will not give your baby enough nourishment to <a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">grow properly</a>.
             </p>
 
             <p class="mbn-text" id="2.1.4l">
@@ -290,18 +284,19 @@
             <p class="mbn-text" id="2.1.4p">
                 <b>8. Make sure other carers know how to make up your baby's formula properly</b>
                 <br> Some ways you could do this include:
-                <ul>
-                    <li>showing them this app
-                    </li>
-                    <li>leaving written instructions
-                    </li>
-                    <li>prepare bottles in advance when your baby will be looked after by other carers
-                    </li>
-                </ul>
             </p>
-            <br />
-            <br />
-            <br />
+            <ul>
+                <li>showing them this app
+                </li>
+                <li>leaving written instructions
+                </li>
+                <li>prepare bottles in advance when your baby will be looked after by other carers
+                </li>
+            </ul>
+            <p>
+                <br />
+                <br />
+                <br />
             </p>
         </div>
     </div>

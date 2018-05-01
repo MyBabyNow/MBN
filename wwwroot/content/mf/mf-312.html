@@ -10,7 +10,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="../../js/materialize.min.js"></script>
@@ -35,7 +35,7 @@
         <div class="card-image">
             <img src="images/reasons-to-mf.png" />
             <span class="card-title mbn-card-title" id="section-title">
-				<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
+				<span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -43,7 +43,7 @@
     </div>
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-			<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
+			<span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -137,7 +137,7 @@
                 </li>
                 <li>using formula increases spending for your family - a single tin of formula costs around $25 and once open, must be used within a month (make sure you check the instructions on whichever brand of formula you have though)
                 </li>
-                <li>someone else can make up a feed and/or feed your baby when you use formula …but you can also have someone else feed your baby breastmilk if you <a onclick="localSecJump('bf/bf-1111.html#1.1.11');">express!</a> Check out how <a onclick="localSecJump('bf/bf-119.html#1.1.9e');">your partner can help with breastfeeding</a> (and don't be shy to share this with them!)
+                <li>someone else can make up a feed and/or feed your baby when you use formula...but you can also have someone else feed your baby breastmilk if you <a onclick="localSecJump('bf/bf-1111.html#1.1.11');">express!</a> Check out how <a onclick="localSecJump('bf/bf-119.html#1.1.9e');">your partner can help with breastfeeding</a> (and don't be shy to share this with them!)
                 </li>
                 <li>you will be able to share the feeding role with someone else more and more as your baby gets older and <a onclick="localSecJump('solids/solids-411.html#4.1.1');">starts having solids</a>
                 </li>
@@ -273,7 +273,9 @@
             <p class="mbn-text">
                 If your GP hasn't already referred you, make sure you ask for a referral to a paediatrician or <a onclick="localSecJump('hs/hs-815.html#8.1.5');">dietitian who 
                     specialises in allergies</a>.
-                <br /> Remember:
+            </p>
+            <p class="mbn-text">
+                Remember:
             </p>
             <ul>
                 <li>babies change

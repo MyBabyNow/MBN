@@ -25,6 +25,14 @@
                 $scope.babyDob = new Date(respondData[0].baby_dob);
 
                 $scope.feedingMethod = respondData[0].feeding_method;
+
+
+
+
+                // $scope.avatar = respondData.profile_photo;
+                // $scope.babyName = respondData.baby_first_name == '' ? 'My Baby' : respondData.baby_first_name;
+                // $scope.userName = respondData.user_name;
+
             });
 
 

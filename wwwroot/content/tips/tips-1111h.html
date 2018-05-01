@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo"> <img src="../../images/logo.png" class="mbn-logo-style" /> </div>
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper"> <a class="mbn-name">Flynn Now</a> <i class="fa fa-search fa-2x mbn-search-style"></i> </div>
+        </nav>
+    </div>
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image"> <img src="images/tips-13.png" /> <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i>  Top tips </span> <i class="fa fa-star fa-lg"
+              style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i> <i class="fa fa-share-alt fa-lg"
+              style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i> </span>
+        </div>
+    </div>
+    <div class="card mbn-card-fixed-content" id="section-card-min"> <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i>  Top tips</span> <i class="fa fa-star fa-lg"
+          style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i> <i class="fa fa-share-alt fa-lg"
+          style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i> </span>
+    </div>
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="11.1.1h"> Parents provide, babies decide </p>
+            <p class="mbn-text"> When it comes to feeding your baby, your role is to: </p>
+            <ul>
+                <li>recognise and respond to your baby's <a onclick="localSecJump('sfp/sfp-514.html#5.1.14a');">hungry and fullness signs </a>                    </li>
+                <li>provide a range of healthy foods (or offer a breastfeed or a bottle) </li>
+                <li>choose where the family will eat </li>
+            </ul>
+            <p class="mbn-text"> Your baby's role is to: </p>
+            <ul>
+                <li>decide <b><i>if</i></b> they will eat the food </li>
+                <li>explore their food by playing with it (and maybe try feeding themselves) </li>
+                <li>decide <b><i>how much</i></b> of the food they will eat </li>
+            </ul>
+            <p class="mbn-text"> It's important that you don't force your baby to finish all the food you offer if they don't want to. Letting
+                your baby learn to trust their appetite from an early age will help them not to overeat when they are older.
+                </p>
+            <p class="mbn-text"> Remember, no baby will ever starve themselves...and <a onclick="localSecJump('solids/solids-4115.html#4.1.15a');">the more you fuss about food, the more they will fuss</a>!
+                </p>
+            <p class="mbn-text"> <i>Parents provide, babies decide</i> can also be applied to active play - parents provide a range of <a onclick="localSecJump('play/play-912.html#9.1.2d');">active play</a>                opportunities and babies decide which activities to engage in! </p>
+            <p class="mbn-text"> Check out: </p>
+            <ul>
+                <li><i><a onclick="localSecJump('solids/solids-4110.html#4.1.10a');">parents provide, babies decide</a></i> </li>
+                <li><a onclick="localSecJump('solids/solids-4112.html#4.1.12a');">the best way to handle fussy eaters</a> </li>
+                <li><a onclick="localSecJump('play/play-911.html#9.1.1');">play activities for babies of different ages</a> </li>
+            </ul>
+            <p> <br /> <br /> <br /> </p>
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p> <img src="../../images/feed.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">My baby</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected"> <img src="../../images/topics-s.png" style="width:30%;" /> <br /> <span class="mbn-icon-text-selected">Topics</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p> <img src="../../images/tools.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">Tools</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p> <img src="../../images/forum.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">Forum</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p> <img src="../../images/more.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">More</span>                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

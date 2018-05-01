@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -41,7 +41,7 @@
         <div class="card-image">
             <img src="images/parents-provide.png" />
             <span class="card-title mbn-card-title" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -50,7 +50,7 @@
 
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -59,79 +59,75 @@
     <!-- Content -->
     <div class="mbn-content" id="section-content">
         <div class="mbn-content-scroll" id="content">
-            <p class="mbn-section" id="4.1.10" > Parents provide, babies decide</p>
-            <p class="mbn-text" id="4.1.10a">
-                  <b>What is parents provide, babies decide? </b> 
-                  <br>
-                    As a parent, your baby relies on you to provide <i><b>what</b></i> to eat, as well as <i><b>when</b></i> and <i><b>where</b></i> but it is up to your baby to decide <i><b>how</b></i> much to eat. 
-            </p> 
-
+            <p class="mbn-video" id="4.1.10"> Parents provide, babies decide</p>
+            <p class="mbn-section" id="4.1.10a">
+                What is <i>parents provide, babies decide</i>?
+            </p>
+            <p class="mbn-text">
+                As a parent, your baby relies on you to provide <i><b>what</b></i> to eat, as well as <i><b>when</b></i> and <i><b>where</b></i> but it is up to your baby to decide <i><b>how</b></i> much to eat.
+            </p>
             <p class="mbn-text" id="4.1.10b">
                 <b>Parents: </b>
-            </p> 
-            <p class="mbn-text">
-                   Provide <b>what</b> to eat by: 
-                <ul>
-                    <li>serving a <a href="#4.1.2">variety of healthy foods</a>
-                    </li>
-                    <li>offering new foods alongside their baby's favourites 
-                    </li>
-                    <li>preparing the <a href="#4.1.8">same foods</a> for everyone in the house 
-                    </li>
-                    <li>allowing their baby to <a href="#4.1.4">explore foods</a> 
-                    </li>
-                </ul>
-            </p> 
-
-            <p class="mbn-text">
-                   Provide <b>when</b> to eat by: 
-                <ul>
-                    <li>offering feeds/foods in response to their baby's <a href="#5.1.4">hungry signs</a> (this generally develops into more of a meal time routine as babies gets older)
-                    </li>
-                    <li>limiting the amount of snacks between meals so their baby is hungry enough to try new foods, not just their favourites 
-                    </li>
-                </ul>
-            </p>
-
-             <p class="mbn-text">
-                   Provide <b>where</b> to eat by: 
-                <ul>
-                    <li>making <a href="#4.1.8">meal time = family time</a> 
-                    </li>
-                </ul>
             </p>
             <p class="mbn-text">
-                   sitting down together without distractions such as the <a href="#5.1.11">TV or other screens</a>  
+                Provide <b>what</b> to eat by:
             </p>
+            <ul>
+                <li>serving a <a onclick="localSecJump('solids-412.html#4.1.2d');">variety of healthy foods</a>
+                </li>
+                <li>offering new foods alongside their baby's favourites
+                </li>
+                <li>preparing the <a onclick="localSecJump('solids-418.html#4.1.8a');">same foods</a> for everyone in the house
+                </li>
+                <li>allowing their baby to <a onclick="localSecJump('solids-414.html#4.1.4a');">explore foods</a>
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Provide <b>when</b> to eat by:
+            </p>
+            <ul>
+                <li>offering feeds/foods in response to their baby's <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">hungry signs</a> (this generally develops into more of a meal time routine as babies gets older)
+                </li>
+                <li>limiting the amount of snacks between meals so their baby is hungry enough to try new foods, not just their favourites
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Provide <b>where</b> to eat by:
+            </p>
+            <ul>
+                <li>making <a onclick="localSecJump('solids-418.html#4.1.8a');">meal time = family time</a>
+                </li>
+         
+                 <li>sitting down together without distractions such as the <a onclick="localSecJump('play/play-912.html#9.1.2');">TV or other screens</a>
+                </li>
+            </ul>
 
             <p class="mbn-text" id="4.1.10c">
                 <b>Babies: </b>
-            </p> 
-            <p class="mbn-text">
-                   Decide <b>how much</b> to eat by:
-                <ul>
-                    <li>showing their <a href="#5.1.4">hungry/fullness signs</a> which can also include <a href="#4.1.2">signs specific to solids</a> 
-                    </li>
-                    <li>taking breaks from eating when they feel like it (which may also be a sign of <a href="#4.1.2">being full</a>)
-                    </li>
-                    <li>exploring their food by feeding themselves 
-                    </li>
-                    <li>sometimes only eating some of the foods offered, rather than all (find how to <a href="#4.1.12">handle fussy eating</a>) 
-                    </li>
-                </ul>
-            </p> 
-            <p class="mbn-text">
-                   Remember, your baby's food intake will change from day-to-day, so it's better to only offer small serves and give more if needed rather than <a href="#4.1.15">forcing your baby to finish all the food offered</a>.  
             </p>
-
-            
+            <p class="mbn-text">
+                Decide <b>how much</b> to eat by:
+            </p>
+            <ul>
+                <li>showing their <a onclick="localSecJump('sfp/sfp-514.html#5.1.4');">hungry/fullness signs</a> which can also include <a onclick="localSecJump('solids-412.html#4.1.2k');">signs specific to solids</a>
+                </li>
+                <li>taking breaks from eating when they feel like it (which may also be a sign of <a onclick="localSecJump('solids-412.html#4.1.2l');">being full</a>)
+                </li>
+                <li>exploring their food by feeding themselves
+                </li>
+                <li>sometimes only eating some of the foods offered, rather than all (find how to <a onclick="localSecJump('solids-4112.html#4.1.12a');">handle fussy eating</a>)
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Remember, your baby's food intake will change from day-to-day, so it's better to only offer small serves and give more if needed rather than <a onclick="localSecJump('solids-4115.html#4.1.15h');">forcing your baby to finish all the food offered</a>.
+            </p>
+            <p>
                 <br />
                 <br />
                 <br />
             </p>
         </div>
     </div>
-
     <div class="navbar-fixed mbn-footer hide-on-med-and-up">
         <nav class="mbn-nav">
             <div class="nav-wrapper">

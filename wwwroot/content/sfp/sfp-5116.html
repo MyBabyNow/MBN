@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/5116-video-lib.jpg" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="5.1.16">Video library</p>
+            <p class="mbn-text" id="5.1.16a"> </p>
+
+            <ul>
+                <li>
+                    <a onclick="localSecJump('5.1.16b');">How to settle a crying baby</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('5.1.16c');">Hungry signs</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('5.1.16d');">Independent sleep - mums' stories</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('5.1.16e');">Minimising the risk of SUDI</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('5.1.16f');">Settling strategies</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('5.1.16g');">Tired signs</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('5.1.16h');">Wrapping a newborn</a>
+                </li>
+            </ul>
+
+
+            <p class="mbn-section" id="5.1.16b">
+                How to settle a crying baby
+            </p>
+            <p class="mbn-text">
+                This video goes through a checklist of common things that can <a onclick="localSecJump('sfp-518.html#5.1.8c');">upset babies and cause them to cry</a>, as well as some tips on settling.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/lDaDMkc_gmA" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/crying_baby_pip.html  " target="_blank"> raisingchildren.net.au.</a>
+            </p>
+
+            <p class="mbn-section" id="5.1.16c">
+                Hungry signs
+            </p>
+            <p class="mbn-text">
+                Rather than feeding on a schedule or by the clock, it is recommended that you feed in response to your baby's <a onclick="localSecJump('sfp-514.html#5.1.4a');">hungry signs</a> - also called 'demand feeding' or 'feeding on demand'. Babies can show they are hungry in a number of ways - this video shows what <a onclick="localSecJump('sfp-514.html#5.1.4a');">hungry signs</a> look like in real babies.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/J9DUD-L0DHI" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/baby_cues/baby_cues_alternative.html#hungry/" target="_blank">raisingchildren.net.au</a>.
+            </p>
+
+            <p class="mbn-section" id="5.1.16d">
+                Independent sleep - mums' stories
+            </p>
+            <p class="mbn-text">
+                Every baby is different and sleep is no different! In this video, other mums share their experiences of how their baby achieved <a onclick="localSecJump('sfp-5111.html#5.1.11c');">independent sleep</a>.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/-qgsksjszVY" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/baby_sleep_video.html/context/824 " target="_blank">raisingchildren.net.au</a>
+            </p>
+
+            <p class="mbn-section" id="5.1.16e">
+                Minimising the risk of SUDI
+            </p>
+            <p class="mbn-text">
+                This video shows how to reduce the risk of SUDI (including SIDS and fatal sleeping accidents) and includes <a onclick="localSecJump('sfp-5114.html#5.1.14a');">tips on safe sleeping</a>.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/wSWR_tKNqio" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/sids_video.html/context/824 /context/824 " target="_blank">raisingchildren.net.au</a>
+            </p>
+
+            <p class="mbn-section" id="5.1.16f">
+                Settling strategies
+            </p>
+            <p class="mbn-text">
+                This video provides some helpful ideas for <a onclick="localSecJump('sfp-518.html#5.1.8m');">settling your baby</a>.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/OvxwsodsLsk" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/patting_settling_technique.html" target="_blank">raisingchildren.net.au.</a>.
+            </p>
+
+            <p class="mbn-section" id="5.1.16g">
+                Tired signs
+            </p>
+            <p class="mbn-text">
+                There are many ways your baby might show you they are tired. This video shows what <a onclick="localSecJump('sfp-516.html#5.1.6b');">tired signs</a> look like in real babies.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/U9Zf1KU7DNA" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/is_my_child_tired.html" target="_blank">raisingchildren.net.au</a>.
+            </p>
+
+            <p class="mbn-section" id="5.1.16h">
+                Wrapping a newborn
+            </p>
+            <p class="mbn-text">
+                This video shows some <a onclick="localSecJump('sfp-517.html#5.1.7c');">ways to wrap or swaddle a newborn baby</a>.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/qjm-SFX9-u8" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit raisingchildren.net.au <a href="http://raisingchildren.net.au/articles/wrapping_newborn.html" target="_blank">raisingchildren.net.au.</a>.
+            </p>
+
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+        </div>
+    </div>
+            <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+                <nav class="mbn-nav">
+                    <div class="nav-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col mbn-icon" onclick="Load('feed');">
+                                    <p>
+                                        <img src="../../images/feed.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">My baby</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('topics');">
+                                    <p class="mbn-icon-selected">
+                                        <img src="../../images/topics-s.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text-selected">Topics</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('tools');">
+                                    <p>
+                                        <img src="../../images/tools.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Tools</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('forum');">
+                                    <p>
+                                        <img src="../../images/forum.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Forum</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('more');">
+                                    <p>
+                                        <img src="../../images/more.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">More</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+</body>
+
+</html>

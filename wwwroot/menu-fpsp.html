@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!-- Need to localise this later on. -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <!-- Already localised -->
     <link rel="stylesheet" href="font-icons/css/font-awesome.min.css">
     <link rel="stylesheet" href="font-baby/flaticon.css">
-    
+
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/mbn.css" media="screen,projection" />
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -20,11 +21,12 @@
     <script type="text/javascript" src="js/mbn.js"></script>
     <script type="text/javascript" src="js/header.js"></script>
 </head>
+
 <body>
     <div class="mbn-logo">
         <img src="images/logo.png" class="mbn-logo-style" />
     </div>
-    
+
     <div class="navbar-fixed">
         <nav class="mbn-nav">
             <div class="nav-wrapper">
@@ -33,11 +35,11 @@
             </div>
         </nav>
     </div>
-    
+
     <!-- Two different display cards -->
     <div class="card mbn-card" id="section-card">
         <div class="card-image">
-            <img src="content/fpsp/images/sfp-menu.jpeg" />
+            <img src="content/sfp/images/sfp-submenu.jpg" />
             <span class="card-title mbn-card-title" id="section-title" onclick="Load('topics')">
                 <i class="fa fa-chevron-left"></i> Topics
             </span>
@@ -75,7 +77,7 @@
             </tr>
             <tr onclick="Load('r5.1.4');">
                 <td class="mbn-td"></td>
-                <td class="mbn-menu-desc">Hungry and fullness: signs</td>
+                <td class="mbn-menu-desc">Hungry and fullness signs</td>
                 <td class="mbn-td"><i class="fa fa-angle-right fa-lg"></i></td>
             </tr>
             <tr onclick="Load('r5.1.5');">

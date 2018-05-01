@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/819.jpg" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support </span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support </span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="8.1.9">Online forums</p>
+            <p class="mbn-text" id="8.1.9a">
+                Connecting with other people who are going through (or have been through) the same thing as you can be a great support. Even if you can't get out to meet with people in person, you can still connect online.
+            </p>
+            <p class="mbn-text">
+                Some online forums that might be of interest:
+            </p>
+            <ul>
+
+                <li> <a onclick="localSecJump('8.1.9b');">My Baby Now</a>
+                </li>
+                <li> <a onclick="localSecJump('8.1.9c');">Parenting</a>
+                </li>
+                <li> <a onclick="localSecJump('8.1.9d');">Reflux</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="8.1.9b">
+                My Baby Now
+            </p>
+            <p class="mbn-text">
+                <b>My Baby Now forum </b>
+                <br> Closed forum only available to parents involved with My Baby Now - a great place to help and support each other as your baby grows and develops.
+            </p>
+            <p class="mbn-text">
+                <a href="tool: link to MBN online forum">MBN online forum </a>
+            </p>
+
+            <p class="mbn-section" id="8.1.9c">
+                Parenting
+            </p>
+            <p class="mbn-text">
+                <b>MensLine Australia</b>
+                <br> Open moderated forums on all aspects of child rearing and specific forums for groups including carers, single parents and dads.
+            </p>
+            <p class="mbn-text">
+                <a href="http://forum.mensline.org.au/Default.aspx" target="_blank">Website</a>
+            </p>
+            <p class="mbn-text">
+                <b>Raising Children Network forums</b>
+                <br> Open moderated forums aimed at men as well as peer support and advice for wives and partners of men.
+            </p>
+            <p class="mbn-text">
+                <a href="http://www.raisingchildren.net.au/forum/" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-section" id="8.1.9d">
+                Reflux
+            </p>
+            <p class="mbn-text">
+                <b>Reflux Infants Support Association </b>
+                <br> This closed forum is only open to members of the Reflux Infants Support Association.
+            </p>
+            <p class="mbn-text">
+                <a href="http://www.refluxforums.org.au/" target="_blank"></a>
+            </p>
+
+            <p> <br>
+                <br>
+                <br>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

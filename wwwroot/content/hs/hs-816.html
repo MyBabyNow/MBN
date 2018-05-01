@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/816.jpg" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="8.1.6"> Sleep advice and services</p>
+            <p class="mbn-text" id="8.1.6a">
+            </p>
+            In addition to the services listed here, you can also refer to the <a onclick="localSecJump('hs-813.html#18.1.3');">parenting section</a> for plenty of other services (including state-specific services) which can also provide advice during pregnancy.
+
+            <p class="mbn-text" id="8.1.6b">
+                <b>Red Nose</b>
+                <br> Service dedicated to preventing the sudden and unexpected deaths of babies and children during pregnancy, infancy and their pre-school years. Resources include interactive website with information categorised by stage of pregnancy/baby age - e.g. standards for cots/prams, safe sleeping and tummy time.
+            </p>
+            <p class="mbn-text">
+                <a href="https://rednose.com.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text" id="8.1.6c">
+                <b><u>New South Wales</u></b>
+            </p>
+            <p class="mbn-text">
+                <b>Karitane &reg;</b>
+                <br> A charity service for children and their parents from birth to 5 years that provides parenting support and advice, antenatal support and education, services to help with parental depression and anxiety, managing toddler behaviour and other related issues. Resources include a website with information on parenting and settling techniques and sleep promotion, helpline and residential, day and outreach services.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1300227464">1300 227 464</a> (12:30pm-9pm; 11pm-6:30am Mon-Thu; Fri-Sat 9am-3:30pm)
+                <br>
+                <a href="https://karitane.com.au/karitane" target="_blank">Website</a>
+            </p>
+            <p class="mbn-text">
+                <b> Tresillian Family Care Centres</b>
+                <br> An early parenting service offering families guidance in the early years of their child's life. Resources include information on parenting and settling techniques as well as sleep promotion, telephone and online helpline, community outreach and face-to-face advice.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1300272736">1300 272 736</a>) (7am-11pm/7 days)
+                <br>
+                <a href="https://www.johnsonsbaby.com.au/tresilian_registration">Live Advice</a>
+                <a href="https://www.tresillian.org.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text" id="8.1.6d">
+                <b><u>Victoria</u></b>
+            </p>
+            <p class="mbn-text">
+                <b>Mercy Health O'Connell Family Centre</b>
+                <br> Services directed towards families experiencing complex issues and who require increased support in addition to the support provided by the professionals in the local community. Resources include a website with details of parenting sessions including sleeping and settling.
+            </p>
+            <p class="mbn-text">
+
+                <a href="tel:0384167600">03 8416 7600</a> (24 hours/7 days)
+                <br>
+                <a href="https://www.mercyhealth.com.au/meps/ofc/Pages/O'Connell%20Family%20Centre%20-%20About%20Us" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b>Tweddle Child and Family Health Service</b>
+                <br> An early intervention and prevention health service which provides assistance to families in north and west Victoria during pregnancy and with children up to school age that are facing multiple challenges. Note - referral from a health care professional required. Resources include a website with 'Tweddle Tip Sheets' (parenting information including settling techniques and sleep promotion), residential parenting courses and psychology services.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:0396891577">03 9689 1577 </a>
+                <br>
+                <a href="https://www.tweddle.org.au" target="_blank">Website</a>
+            </p>
+            <p> <br>
+                <br>
+                <br>
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

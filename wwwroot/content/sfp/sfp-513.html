@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/513.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+
+            <p class="mbn-section" id="5.1.3"> 6+ months: Feed, play and sleep patterns</p>
+            <p class="mbn-section" id="5.1.3a">
+                Feed, play and sleep patterns
+            </p>
+            <p class="mbn-text">
+                The feed, play, sleep and repeat pattern is the basic order of a baby's day at any age.
+            </p>
+            <img src="images/SFP 1.png" class="mbn-text-image" />
+
+            <p class="mbn-text">
+                Every baby is different, so sleep, play and feeding needs vary. As much as having a routine might be helpful, it can also be quite stressful trying to make your baby 'fit' into a specific routine!
+            </p>
+            <p class="mbn-text">
+                Instead, it is best to learn your baby's <a onclick="localSecJump('sfp-514.html#5.1.4a');">hungry</a> and <a onclick="localSecJump('sfp-516.html#5.1.6a');">tired</a> signs and then develop a pattern that is specific to <i>your</i> baby and can be repeated in a similar order throughout the day.
+            </p>
+            <p class="mbn-text">
+                In this section:
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('5.1.3b');">General feed, play and sleep patterns for babies aged 6-12 months</a>
+                </li>
+                <li><a onclick="localSecJump('5.1.3c');">A typical day in the life of a 6-8 month old</a>
+                </li>
+                <li><a onclick="localSecJump('5.1.3d');">A typical day in the life of a 8-14 month old</a>
+                </li>
+                <li><a onclick="localSecJump('5.1.3e');">Feed patterns</a>
+                </li>
+                <li><a onclick="localSecJump('5.1.3h');">Play ideas</a>
+                </li>
+                <li><a onclick="localSecJump('5.1.3k');">Sleep patterns</a>
+                </li>
+            </ul>
+
+
+            <p class="mbn-section" id="5.1.3b">
+                General feed, play and sleep patterns for babies aged 6-12 months
+            </p>
+            <table style="width:100%">
+                <tr>
+                    <td style="vertical-align: top">Feed </td>
+                    <td>Breastfeeding: every 3-4 hours during the day and may also need 1 night feed <br>Formula: every 4 hours during the day and may also need 1 night feed
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><a onclick="localSecJump('play/play-911.html#9.1.1ce');">Play</a> </td>
+                    <td>Floor play, story time and nursery rhymes, finger and toe games, push and pull toys, stacking games, visiting friends and local park, <a onclick="localSecJump('hs/hs-817.html#8.1.7c');">playgroup</a> </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">Awake time </td>
+                    <td>Generally tired within 2-3 hours of waking </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><a onclick="localSecJump('sfp-516.html#5.1.6a');">Tired signs</a></td>
+                    <td>Fussy with food, clingy, demanding, grizzly cry </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">Sleep </td>
+                    <td>Most have 2-3 sleeps of 1-2 hours at a time with a longer stretch of sleep at night (13-14 hours total over 24 hours) </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><a onclick="localSecJump('sfp-517.html#5.1.7a');">Settling strategies</a></td>
+                    <td>Encourage self-settling </td>
+                </tr>
+            </table>
+
+            <p class="mbn-text">
+                This is a guide only - feed and sleep patterns are different for every baby and are often changing. Watch for your baby's <a onclick="localSecJump('sfp-514.html#5.1.4a');">hungry</a> and <a onclick="localSecJump('sfp-516.html#5.1.6a');">tired</a> signs.
+            </p>
+            <p class="mbn-text">
+                See below for what a typical day might look like for a 6-8 and an 8-14 month old baby.
+            </p>
+
+            <p class="mbn-section" id="5.1.3c">
+                A typical day in the life of a 6-8 month old
+            </p>
+            <p class="mbn-text">
+                <i>Early morning (sunrise)</i>
+                <br> Breast/formula feed, may return to sleep or get up to start the day
+            </p>
+            <p class="mbn-text">
+                <b><i>Breakfast</i></b>
+                <br> Breast/formula feed
+                <br> Solid food
+                <br>
+                <a onclick="localSecJump('play/play-915.html#9.1.5ce');">Play</a>
+                <br> Awake time 2-3 hours
+            </p>
+            <p colspan="2" style="background-color:gainsboro;">
+                Respond to your baby's <a onclick="localSecJump('sfp-516.html#5.1.6a');">tired signs</a> > SLEEP
+            </p>
+            <p class="mbn-text">
+                <i><a onclick="localSecJump('recipe/recipe-651.html#6.5.1a');">Snack</a></i> if appropriate e.g. fruit
+                <br>
+                <a onclick="localSecJump('solids/solids-416.html#4.1.6c');">Drink of water</a>
+                <br>
+                <a onclick="localSecJump('play/play-915.html#9.1.5ce');">Play</a>
+            </p>
+            <p class="mbn-text">
+                <i>Lunchtime</i> Breast/formula feed
+                <br> Solid food
+                <br>
+                <a onclick="localSecJump('play/play-915.html#9.1.5ce');">Play</a>
+                <br> Awake time 2-3 hours
+            </p>
+            <p colspan="2" style="background-color:gainsboro;">
+                Respond to your baby's <a onclick="localSecJump('sfp-516.html#5.1.6a');">tired signs</a> > SLEEP
+            </p>
+            <p class="mbn-text">
+                <i><a onclick="localSecJump('recipe/recipe-651.html#6.5.1a');">Snack</a></i> if appropriate e.g. fruit
+                <br>
+                <a onclick="localSecJump('solids/solids-416.html#4.1.6c');">Drink of water</a>
+                <br>
+                <a onclick="localSecJump('play/play-915.html#9.1.5ce');">Play</a>
+                <br> Awake time 2-3 hours
+            </p>
+            <p colspan="2" style="background-color:gainsboro;">
+                Respond to your baby's <a onclick="localSecJump('sfp-516.html#5.1.6a');">tired signs</a> > SLEEP <br>May only require a short nap
+            </p>
+            <p class="mbn-text">
+                <i>Dinner </i>
+                <br> Breast/formula feed
+                <br> Solid food
+                <br> Bath
+                <br> Quiet time
+                <br> Cuddle
+            </p>
+            <p colspan="2" style="background-color:gainsboro;">
+                Settle for night> SLEEP <br>May still wake for a night feed overnight</p>
+
+            <p class="mbn-video-caption">
+                Adapted with permission from the <a href="https://www.tresillian.org.au/advice-tips/daily-activities/3-6-months/" target="_blank"> Tresillian website</a>, helping parents gain confidence in their new roles as mums and dads.
+            </p>
+
+            <p class="mbn-section" id="5.1.3d">
+                A typical day in the life of an 8-14 month old
+            </p>
+            <p class="mbn-text">
+                <b><i>Breakfast</i></b>
+                <br> Solid food
+                <br> Breast/formula feed
+                <br>
+                <a onclick="localSecJump('play/play-915.html#9.1.5dh');">Play</a>
+            </p>
+            <p class="mbn-text">
+                <i><a onclick="localSecJump('recipe/recipe-651.html#6.5.1a');">Snack</a></i>if appropriate e.g. fruit
+                <br>
+                <a onclick="localSecJump('solids/solids-416.html#4.1.6c');">Drink of water</a>
+            </p>
+            <p colspan="2" style="background-color:gainsboro;">
+                Respond to your baby's <a onclick="localSecJump('sfp-516.html#5.1.6a');">tired signs</a> > SLEEP
+            </p>
+            <p class="mbn-text">
+                <i>Lunchtime</i>
+                <br> Solid food
+                <br> Breast/formula feed
+                <br>
+                <a onclick="localSecJump('play/play-915.html#9.1.5dh');">play</a>
+            </p>
+            <p colspan="2" style="background-color:gainsboro;">
+                Respond to your baby's <a onclick="localSecJump('sfp-516.html#5.1.6a');">tired signs</a> > SLEEP
+            </p>
+            <p class="mbn-text">
+                <i><a onclick="localSecJump('recipe/recipe-651.html#6.5.1a');">Snack</a></i>if appropriate e.g. fruit
+                <br>
+                <a onclick="localSecJump('solids/solids-416.html#4.1.6c');">Drink of water</a>
+                <br>
+                <a onclick="localSecJump('play/play-915.html#9.1.5dh');">Play</a>
+            </p>
+            <p colspan="2" style="background-color:gainsboro;">
+                Respond to your baby's <a onclick="localSecJump('sfp-516.html#5.1.6a');">tired signs</a> > SLEEP <br> Some babies may require a short third sleep during the day
+            </p>
+            <p class="mbn-text">
+                <i>Dinner </i>
+                <br> Solid food
+                <br> Breast/formula feed
+                <br> Bath
+                <br> Quiet time
+                <br> Cuddle
+            </p>
+            <p colspan="2" style="background-color:gainsboro;">
+                Settle for night > SLEEP <br>May still wake for a night feed overnight</p>
+
+            <p class="mbn-video-caption">
+                Adapted with permission from the <a href="https://www.tresillian.org.au/advice-tips/daily-activities/3-6-months/" target="_blank"> Tresillian website</a>, helping parents gain confidence in their new roles as mums and dads.
+            </p>
+
+            <p class="mbn-section" id="5.1.3e">
+                Feed patterns
+            </p>
+            <p class="mbn-text">
+                By the time your baby has reached 6 months of age they are generally ready to <a onclick="localSecJump('solids/solids-411.html#4.1.1a');">start solid foods</a>! They will still want to feed every 3-4 hours during the daytime and may still also need 1 night feed, but if your baby is developing well, this night feed can now be <a onclick="localSecJump('sfp-516.html#5.1.6a');">phased out</a>.
+            </p>
+            <p class="mbn-video" id="5.1.3f">
+                <b>Breastmilk/formula </b>
+            </p>
+            <p class="mbn-text">
+                Breastmilk or formula is still the most important source of nutrients for your baby, especially before they reach 8 months. If you're breastfeeding, continue to do so every 3-4 hours during the day but if you're using formula, offer a bottle every 4 hours or so during the day. Of course, this can vary between babies, so always remember to follow your baby's <a onclick="localSecJump('sfp-514.html#5.1.4a');">hungry signs</a> and don't forget that your baby may still also need 1 night feed until <a onclick="localSecJump('sfp-5113.html#5.1.13a');">phased out</a>.
+            </p>
+            <p class="mbn-text" id="5.1.3g">
+                <b>Introducing solids</b>
+            </p>
+            <p class="mbn-text">
+                Breastmilk or formula should always be given before solid foods until your baby is at least 8 months old. This makes sure they don't miss out on important nutrients in the formula or your breastmilk. Once your baby has reached 8 months, you could try offering solid food <i>first</i>, followed by a breast/formula feed.
+            </p>
+            <p class="mbn-text">
+                Learn more about <a onclick="localSecJump('solids/solids-412.html#4.1.2a');">how to introduce solids</a>.
+            </p>
+            <p class="mbn-section" id="5.1.3h">
+                <b>Play ideas </b>
+            </p>
+            <p class="mbn-text">
+                The average 6 month old baby is definitely becoming more active! Playing with your baby at this age is not only fun, it also continues to form an important part of their development.
+            </p>
+            <p class="mbn-text">
+                Check out development and ideas for playing with your baby at:
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('play/play-915.html#9.1.5ce');">6-7 months </a>
+                </li>
+                <li><a onclick="localSecJump('play/play-915.html#9.1.5ct');">7-8 months </a>
+                </li>
+                <li><a onclick="localSecJump('play/play-915.html#9.1.5dh');">8-9 months </a>
+                </li>
+                <li><a onclick="localSecJump('play/play-915.html#9.1.5dv');">9-10 months  </a>
+                </li>
+                <li><a onclick="localSecJump('play/play-915.html#9.1.5ek');">10-11 months </a>
+                </li>
+                <li><a onclick="localSecJump('play/play-915.html#9.1.5ey');">11-12 months  </a>
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="5.1.3i">
+                AVOID screen time (TV, tablets, phones, computers etc) Screens are <i>not</i> recommended at any time for children under the age of 2 and can delay your baby's development.
+            </p>
+
+            <p class="mbn-text">
+                Learn more about <a onclick="localSecJump('play/play-912.html#9.1.2');">why screen time is not recommended</a>.
+            </p>
+            <p class="mbn-text" id="5.1.3j">
+                <b>Free play</b>
+            </p>
+            <p class="mbn-text">
+                It's important to let your baby play freely without always being held or restrained in a bouncer, pram or high chair. If your baby is on the move though, you will need to think about <a onclick="localSecJump('play/play-914.html#9.1.4');">home safety</a> to make sure they have got a safe space to play!
+            </p>
+            <p class="mbn-text">
+                Find out why <a onclick="localSecJump('play/play-913.html#9.1.3');">allowing free play and limiting restraint</a> are so important.
+            </p>
+            <p class="mbn-section" id="5.1.3k">
+                Sleep patterns
+            </p>
+
+            <p class="mbn-video" id="5.1.3l">
+                <b>Day sleep</b>
+            </p>
+            <p class="mbn-text">
+                By 6-8 months your baby's routine is starting to change. You might find that your baby is more active during the day and now only have 2 day time sleeps of 1-2 hours each (mid morning and mid afternoon). Base your routine on your baby's <a onclick="localSecJump('sfp-516.html#5.1.6a');">tired signs</a>.
+            </p>
+            <p class="mbn-text">
+                As long as your baby is happy and content, they are probably getting enough sleep.
+            </p>
+            <p class="mbn-video" id="5.1.3m">
+                <b>Night sleep </b>
+            </p>
+            <p class="mbn-text">
+                One of the biggest challenges of being a new parent is getting up to a crying baby at night and you may find yourself wondering, 'will my baby ever sleep through?'
+            </p>
+            <p class="mbn-text">
+                The good news is that by 6 months, most babies will sleep longer at night, although most will still continue to wake several times a night. As they get older though, they learn to re-settle themselves.
+            </p>
+            <p class="mbn-text">
+                If your baby wakes frequently at night, you might like to explore the <a onclick="localSecJump('sfp-5112.html#5.1.12a');">4 steps to better sleep</a> section.
+            </p>
+            <p class="mbn-video" id="5.1.3n">
+                <b>Managing naps while you're out and about</b>
+            </p>
+
+            <p class="mbn-text">
+                Not all of your baby's day naps have to be in the cot at home! It is just as important that <a onclick="localSecJump('parents/parents-716.html#7.1.6e');">you get out and don't feel trapped at home</a> just so your baby can sleep!
+            </p>
+            <p class="mbn-text">
+                When you're out, try to be consistent when settling your baby. For example, making sure they're always in the pram for nap time. Many (but not all!) babies sleep well in the car, so you might like to plan your day so that you are driving when it comes to nap time.
+            </p>
+            <p class="mbn-text">
+                If possible, try to have a quiet day at home the next day after a busy day out - this helps your baby also learn to settle in the cot.
+            </p>
+
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+
+
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

@@ -10,7 +10,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="../../js/materialize.min.js"></script>
@@ -35,7 +35,7 @@
         <div class="card-image">
             <img src="images/mf-faq.png" />
             <span class="card-title mbn-card-title" id="section-title">
-				<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
+				<span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -43,7 +43,7 @@
     </div>
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-			<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
+			<span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -76,10 +76,10 @@
             <p class="mbn-section" id="3.1.6b">
                 Will formula help my baby sleep?
             </p>
-            <p>
+            <p class="mbn-text">
                 Not necessarily - <a onclick="localSecJump('sfp/sfp-511.html#5.1.1');">most babies</a> normally wake through the night for the first few months.
             </p>
-            <p class="mbn-text');">
+            <p class="mbn-text">
                 In fact, some research even shows that breastfeeding mums get more sleep, on average, than formula feeding mums because breastfeeding in the middle of the night is much quicker and easier than getting up to prepare a bottle!
             </p>
             <p class="mbn-text">
@@ -143,7 +143,7 @@
                 </li>
                 <li>is generally content - even if sometimes fussy and <a onclick="localSecJump('sfp/sfp-518.html#5.1.8');">unsettled</a>
                 </li>
-                <li><a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">is gaining weight and growing</a> in length and head circumference.
+                <li><a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">is gaining weight and growing</a> in length and head circumference
                 </li>
             </ul>
 
@@ -174,7 +174,7 @@
             <p class="mbn-section" id="3.1.6f">
                 Can I mix breastmilk and formula in the same bottle?
             </p>
-            <p>
+            <p class="mbn-text">
                 Yes you can.
             </p>
             <p class="mbn-text">
@@ -190,7 +190,7 @@
             <p class="mbn-section" id="3.1.6g">
                 How much formula should I give my baby?
             </p>
-            <p>
+            <p class="mbn-text">
                 The amount of formula you give your baby will depend on your <a onclick="localSecJump('mf-315.html#3.1.5e');">reasons for giving it</a>. Remember, any regular replacement of a breastmilk will lead to a reduction in your <a onclick="localSecJump('mf-313.html#3.1.3');">milk supply</a> (your body gets used to making less breastmilk because your baby is removing less).
             </p>
             <p class="mbn-text">

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/518.jpg" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns </span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns </span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="5.1.8"> Crying and settling </p>
+            <p class="mbn-text" id="5.1.8a">
+                It is normal for babies to cry - this is how they communicate!
+            </p>
+            <p class="mbn-text">
+                Young babies tend to cry for around 2-3 hours a day (this usually peaks by about 6 weeks) and by the time they are 3-4 months old, most babies generally cry much less.
+            </p>
+            <p class="mbn-text">
+                In this section:
+            </p>
+            <ul>
+                <li> <a onclick="localSecJump('5.1.8b');">Crying baby checklist</a>
+                </li>
+                <li> <a onclick="localSecJump('5.1.8l');">Ways to manage crying and settle your baby</a>
+                </li>
+                <li> <a onclick="localSecJump('5.1.8n');">What to do if the crying is getting too much</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="5.1.8b');">
+                Crying baby checklist
+            </p>
+            <p class="mbn-text">
+                There are many reasons why your baby may cry - hunger is only one of them! And although it's tempting to always soothe your baby's crying by feeding, it's worth going through a checklist to try to work out if your baby actually <i>is</i> <a onclick="localSecJump('sfp-514.html#5.1.4b');">hungry</a>, or if something else might be causing the crying.
+            </p>
+
+            <p class="mbn-text">
+                This video goes through a checklist of common things that can upset babies and cause them to cry, as well as some tips on settling.
+            </p>
+
+            <p class="mbn-video">
+                <b>Video: How to settle a crying baby</b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/lDaDMkc_gmA" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/crying_baby_pip.html  " target="_blank"> raisingchildren.net.au.</a>
+            </p>
+
+            <p class="mbn-text" id="5.1.8c">
+                You might find it helpful to go through the below questions to work out <i>the cause</i> of your baby's crying, which will then allow you to quickly help your baby to settle (and reduce your stress levels!).
+            </p>
+
+            <p class="mbn-section" id="5.1.8d');">
+                Could your baby be hungry, upset or tired?
+            </p>
+
+            <p class="mbn-text" id="5.1.8e">
+                <b>Is your baby hungry?</b>
+                <img src="images/sfp21.png" class="mbn-text-image mbn-text-image-right" />
+            </p>
+            <p class="mbn-text">
+                Try offering your breast or a bottle if your baby is showing <a onclick="localSecJump('sfp-514.html#5.1.4b');">hungry signs</a>
+            </p>
+            <br>
+            <br>
+            <p class="mbn-text" id="5.1.8f">
+                <b>Does your baby need to be held? </b>
+            </p>
+            <p class="mbn-text">
+                <img src="images/sfp22.png" class="mbn-text-image mbn-text-image-left" /> Try cradling your baby or putting them in a sling. Try gentle rocking, walking, whispering or singing and keep noise and light to a minimum.
+            </p>
+            <br>
+            <br>
+            <p class="mbn-text" id="5.1.8g">
+                <b>Is your baby <a onclick="localSecJump('sfp-516.html#5.1.6a');">tired</a></b>
+            </p>
+            <p class="mbn-text">
+                <img src="images/sfp23.png" class="mbn-text-image mbn-text-image-left" /> Try <a onclick="localSecJump('sfp-517.html#5.1.7c');">wrapping your baby</a> gently but firmly, and putting them down to sleep in a safe place. Make the room darker and quieter to reduce stimulation. A relaxing bath or <a onclick="localSecJump('play/play-915.html#9.1.5al');">massage</a> might also help.
+            </p>
+            <br>
+
+            <p class="mbn-section" id="5.1.8h');">
+                Is your baby uncomfortable?
+            </p>
+
+            <p class="mbn-text" id="5.1.8i">
+                <b>Could your baby have a wet or dirty nappy that needs changing? 
+                </b>
+            </p>
+            <p class="mbn-text">
+                <img src="images/sfp24.png" class="mbn-text-image mbn-text-image-left" /> If your baby has a rash, rinse with clean water, gently pat dry and use a barrier cream to help soothe the area.
+            </p>
+            <br>
+            <br>
+            <br>
+            <p class="mbn-text" id="5.1.8j">
+                <b>Does your baby <a onclick="localSecJump('sfp-519.html#5.1.9a');">need burping</a> or are they uncomfortable? </b>
+            </p>
+            <p class="mbn-text">
+                <img src="images/sfp25.png" class="mbn-text-image mbn-text-image-right" /> Try holding your baby upright and patting their back. You should also check if they are too hot or cold and if their clothing seems comfortable.
+            </p>
+            <br>
+            <br>
+
+            <p class="mbn-text" id="5.1.8k">
+                <b>Is your baby sick or could they have a fever? </b>
+            </p>
+            <p class="mbn-text">
+                <img src="images/sfp16.png" class="mbn-text-image mbn-text-image-right" /> Check your baby's temperature - an average temperature is 37&#x2103;. If you are worried, talk to your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a>.
+            </p>
+            <br>
+            <br>
+            <p class="mbn-video-caption">
+                Adapted with permission from the <a href="http://raisingchildren.net.au/articles/crying_baby_pip.html/" target="_blank">Raising Children website</a>, Australia's trusted parenting website.
+            </p>
+
+            <p class="mbn-section" id="5.1.8l">
+                Ways to manage crying - settling strategies
+            </p>
+
+            <p class="mbn-text">
+
+                This video provides some helpful ideas for settling your baby.
+            </p>
+            <p class="mbn-video">
+                <b>Video: Settling strategies </b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/OvxwsodsLsk" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/patting_settling_technique.html" target="_blank">raisingchildren.net.au</a>.
+            </p>
+
+            <p class="mbn-text" id="5.1.8m">
+                <b>Some strategies for managing your baby's crying</b>
+            </p>
+            <p class="mbn-text">
+                There are many ways to help manage your baby's crying. You might like to try:
+            </p>
+            <ul>
+                <li><b>laying your baby face down across your lap or along your forearm</b> - this helps place pressure on your baby's tummy which might help with <a onclick="localSecJump('sfp-519.html#5.1.9a');">wind</a>
+                </li>
+                <li><b>bathing</b> your baby - this helps them to relax
+                </li>
+                <li><b>putting on some calming music</b> - this may help to relax both you and your baby
+                </li>
+                <li><b>using white noise</b> such as sound of a fan, dishwasher, washing machine or dryer - this can actually be soothing
+                </li>
+                <li><b>changing your routine to fit around your baby</b> - many babies cry in the late afternoon or evening (just when you need to cook dinner!) - it might be easier to cook dinner and do other chores in the morning or at times when your baby is more settled
+                </li>
+                <li><b>using a baby pouch</b> - the movement can be soothing
+                </li>
+                <li><b>taking your baby for a walk in the pram</b> - the change of scenery and fresh air will likely be relaxing for you too!
+                </li>
+                <li><b>going for a drive</b> - many babies will sleep in the car, but don't get behind the wheel if you are tired or upset
+                </li>
+                <li><b>using a dummy</b> - but keep in mind that there are <a onclick="localSecJump('sfp-5110.html#5.1.10a');">pros and cons to using a dummy</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="5.1.8n">
+                Is the crying getting too much?
+            </p>
+            <p class="mbn-text">
+                <i>Never</i> be scared to <a onclick="localSecJump('parents/parents-716.html#7.1.6q');">ask a friend or relative to come and help you</a> at the times of the day your baby cries the most.
+            </p>
+            <p class="mbn-text" id="5.1.8o">
+                <b>Are you feeling frustrated or upset?</b>
+            </p>
+            <p class="mbn-text">
+                <img src="images/sfp15.png" class="mbn-text-image mbn-text-image-right" /> If it is getting too much, or you start feeling angry or upset, it's best to put your baby somewhere safe and take a 5 minute break. It won't hurt your baby to cry for a short time. Walk away and take a moment to calm yourself - take some deep breaths, you can do this!
+            </p>
+
+            <p class="mbn-text" id="5.1.8p">
+                <b>Never ever shake your baby</b>
+                <img src="images/sfp18.png" class="mbn-text-image mbn-text-image-left" />
+            </p>
+            <p class="mbn-text">
+                This can cause bleeding inside their brain and often permanent brain damage.
+            </p>
+            <br>
+            <br>
+            <br>
+            <p class="mbn-text" id="5.1.8q">
+                <b>It's perfectly OK to ask for help! </b>
+            </p>
+            <p class="mbn-text">
+                <img src="images/sfp26.png" class="mbn-text-image mbn-text-image-right" /> It's <i>always</i> OK to ask for help if you are worried about your baby's crying or it is getting too much for you! Your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> are good places to start but there are plenty of other useful contacts in our <a onclick="localSecJump('hs/hs-811.html#8.1.1a');">help and support</a> section.
+            </p>
+
+            <p class="mbn-video-caption">
+                Adapted with permission from the <a href="http://raisingchildren.net.au/articles/crying_baby_pip.html" target="_blank">Raising Children website</a>, Australia's trusted parenting website.
+            </p>
+
+            <p class="mbn-text" id="5.1.8r">
+                Remember:
+            </p>
+
+            <ul>
+                <li>being around a lot of noise or activity can make your baby unsettled
+                </li>
+                <li>sometimes babies will cry for no reason and this is also part of normal development!
+                </li>
+            </ul>
+
+
+            <br />
+            <br/>
+            <br/>
+            <br/>
+    </div>
+    </div>
+
+
+            <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+                <nav class="mbn-nav">
+                    <div class="nav-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col mbn-icon" onclick="Load('feed');">
+                                    <p>
+                                        <img src="../../images/feed.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">My baby</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('topics');">
+                                    <p class="mbn-icon-selected">
+                                        <img src="../../images/topics-s.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text-selected">Topics</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('tools');">
+                                    <p>
+                                        <img src="../../images/tools.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Tools</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('forum');">
+                                    <p>
+                                        <img src="../../images/forum.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Forum</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('more');">
+                                    <p>
+                                        <img src="../../images/more.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">More</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+     
+</body>
+
+</html>

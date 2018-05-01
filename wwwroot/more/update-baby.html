@@ -15,7 +15,7 @@
 
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
@@ -24,7 +24,6 @@
     <script type="text/javascript" src="../js/mbn.js"></script>
     <script type="text/javascript" src="../js/header.js"></script>
     <script type="text/javascript" src="../js/angular.min.js"></script>
-    <script type="text/javascript" src="../js/moment.js"></script>
     <script type="text/javascript" src="../js/more/update-baby/app.js"></script>
 </head>
 
@@ -57,14 +56,14 @@
             <div class="card-image">
                 <img src="../images/favorites.png" />
                 <span class="card-title mbn-card-title" id="section-title">
-                <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> More</span>
+                <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> More</span>
                 </span>
             </div>
         </div>
 
         <div class="card mbn-card-fixed-content" id="section-card-min">
             <span class="card-title mbn-card-title-content" style="min-width: 100vw !important;" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> More</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> More</span>
             </span>
         </div>
 

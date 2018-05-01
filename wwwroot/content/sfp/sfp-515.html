@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/515.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="5.1.5">Healthy growth</p>
+            <p class="mbn-section" id="5.1.5a">
+            </p>
+            <p class="mbn-text">
+                Your baby's growth is an important marker of their overall health and development, and also provides insight into whether they are meeting all their nutritional needs.
+            </p>
+            <p class="mbn-text">
+                But because babies and children grow at different rates, it is important (and hard!) <b>not to compare</b> how your baby is growing with other babies of the same age - what is healthy growth for another baby the same age might be too much, or not enough, for <i>your</i> baby.
+            </p>
+            <p class="mbn-text">
+                Instead, health professionals take regular measurements and compare these with <a onclick="localSecJump('5.1.5b');">growth charts</a> to monitor your baby's <b>growth trend</b> <i>over time</i>.
+
+
+            </p>
+
+            <p class="mbn-section" id="5.1.5b">
+                Growth charts
+            </p>
+            <p class="mbn-text">
+                Growth charts provide a way of tracking how your baby's growth has changed over time whilst also comparing this rate of growth to other children of similar age or size. As well as making sure your baby is growing well, they can also provide early warning signs of potential medical problems.
+            </p>
+            <p class="mbn-text">
+                The three measurements used are:
+            </p>
+            <ul>
+                <li><u>weight</u> in grams (g) and kilograms (kg)
+                </li>
+                <li><u>length/height</u> in centimetres (cm) - measured lying down in children under 2 years of age
+                </li>
+                <li><u>head circumference</u> in centimetres (cm) - measured by wrapping a tape measure around the back of the head, above the eyebrows
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Each time these measurements are taken, they will be plotted onto the different growth charts. This allows your health professional to monitor the <b>rate</b> at which your baby's weight, height and head circumference change <i>over time</i>, which is why your baby will be measured regularly.
+            </p>
+            <p class="mbn-text">
+                Having several measurements taken over time provides far more information about your baby's growth than the snapshot of your baby's size at just one timepoint provided by just one set of measurements.
+            </p>
+
+            <p class="mbn-section" id="5.1.5c">
+                Interpreting growth charts
+            </p>
+            <p class="mbn-text">
+                The lines/curves of a growth chart tell us what percentage of other babies in a population are at, or below, your baby's growth at a specific age.
+            </p>
+            <p class="mbn-text">
+                For example, a baby:
+            </p>
+            <ul>
+                <li>whose weight falls on the 50<sup>th</sup> percentile line means that 50&#37; (or half) of all other babies tend to weigh <i>more</i> than that weight at that age and 50&#37; of babies weigh <i>less</i>
+                </li>
+                <li>who is on the 15<sup>th</sup> percentile line for length/height will be longer/taller than 15&#37; of most other babies but tend to be shorter than 85&#37;of all other babies
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Thus, higher percentiles mean a larger or taller child while lower percentiles indicate a smaller or shorter child.
+            </p>
+            <p class="mbn-text" id="5.1.5d">
+                It's also important to realise that a child <b>does not</b> have to be on the <i>same</i> percentile for each of the different growth charts - they might be on the 50<sup>th</sup>percentile for weight-for-age but only the 15<sup>th</sup> percentile for length-for-age. In this case, this baby would be of average weight for their age but shorter than most other babies of this age.
+            </p>
+            <p class="mbn-text">
+                What <i>is</i> important is that, in general, as a healthy baby grows, they should follow along the same percentile on the growth chart for height, weight and head circumference, without crossing to a lower or higher percentile. The exception for crossing percentiles is if there is a good reason, such as a baby now being able to walk and subsequently becoming very active.
+            </p>
+            <p class="mbn-text" id="5.1.5e">
+                <b>Example growth patterns for three different babies</b>
+            </p>
+            <p class="mbn-text">
+                This weight-for-age growth chart shows the growth patterns for three different 12 month old boys, plotted as blue dots, red dots and black dots.
+            </p>
+            <img src="images/sfp 5.1.5.png" class="mbn-text-image" />
+
+            <p class="mbn-text" id="5.1.5f">
+                <b>Blue dots</b>
+            </p>
+            <p class="mbn-text">
+                This baby tracks along the 25<sup>th</sup> percentile for weight and age. This means he is heavier than about 25&#37; of other boys aged 12 months but weighs less than 75&#37; of other 12 month old boys. Staying around any one of the percentile lines is usually healthy and not of any concern.
+            </p>
+            <p class="mbn-text" id="5.1.5g">
+                <b>Red dots</b>
+            </p>
+            <p class="mbn-text">
+                This baby's weight started on the 98<sup>th</sup> percentile but instead of staying on this line, his weight gain has slowed down over time. This is shown by his measurements <i>going down</i> in percentiles as he has aged, with his weight falling on the 25<sup>th</sup> percentile by 12 months. This could point to a potential problem and would require further assessment by this boy's GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a>.
+            </p>
+            <p class="mbn-text" id="5.1.5h">
+                <b>Black dots </b>
+            </p>
+            <p class="mbn-text">
+                This baby's weight starts at the 50<sup>th</sup> percentile but by 12 months, his weight is sitting on the 90<sup>th</sup> percentile. So even though he was originally about average in weight (heavier than 50&#37; of other boys his age but lighter than the other 50&#37; ), by 12 months, he is heavier than 90&#37; of other boys his age. Because his growth is going up in percentiles, indicating a rapid weight gain, this could point to a potential problem and would require further assessment by this boy's GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a>.
+            </p>
+
+            <p class="mbn-section" id="5.1.5i">
+                When should you be concerned?
+            </p>
+            <p class="mbn-text">
+                Before getting too worried about your baby's growth, especially if your baby's height, weight, or head size is smaller than that of other babies the same age, it is important to remember that:
+            </p>
+            <ul>
+                <li>it's easy to make mistakes when measuring babies!
+                </li>
+                <li>an accurate big picture might not be given by just one measurement - e.g. a baby might lose weight while sick but is likely to regain the weight once better again
+                </li>
+                <li>healthy measurements can sit between a wide range of numbers - e.g. a baby in the 10<sup>th</sup> percentile for weight may still be of a healthy weight, even though 90&#37; of other babies that age weigh more
+                </li>
+                <li>your GP or <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> will be able to advise what percentage ranges would be ideal for <i>your</i> baby
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                It is also important to keep in mind that all newborn babies <a onclick="localSecJump('py/py-1013.html#10.1.3ad');">lose up to 10&#37;  of their birth weight</a> within the first week, but will tend to slowly regain this weight back by week 2-3.
+            </p>
+
+            <p class="mbn-text" id="5.1.5j">
+                <b>Potential concerns </b>
+            </p>
+            <p class="mbn-text">
+                Issues that <i>may</i> flag a concern with your GP or maternal and child health nurse include if your baby's:
+            </p>
+
+            <ul>
+                <li>measurements stay <b>below the 10<sup>th</sup> percentile</b> or <b>above the 90<sup>th</sup> percentile</b> for their age
+                </li>
+                <li>head is growing <b>too slowly</b> or <b>too quickly</b> over time
+                </li>
+                <li>measurement <b>does not stay close to one line</b> on the graph - e.g. it would probably be investigated further if a baby was in the 75<sup>th</sup> percentile for height at 10 months but had dropped to the 25<sup>th</sup> percentile by 12 months, and then dropped even lower at 15 months
+                </li>
+            </ul>
+
+            <br>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+    </div>
+    </div>
+
+
+
+
+
+            <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+                <nav class="mbn-nav">
+                    <div class="nav-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col mbn-icon" onclick="Load('feed');">
+                                    <p>
+                                        <img src="../../images/feed.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">My baby</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('topics');">
+                                    <p class="mbn-icon-selected">
+                                        <img src="../../images/topics-s.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text-selected">Topics</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('tools');">
+                                    <p>
+                                        <img src="../../images/tools.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Tools</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('forum');">
+                                    <p>
+                                        <img src="../../images/forum.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Forum</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('more');">
+                                    <p>
+                                        <img src="../../images/more.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">More</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+       
+</body>
+
+</html>

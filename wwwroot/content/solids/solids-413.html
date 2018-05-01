@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -41,7 +41,7 @@
         <div class="card-image">
             <img src="images/storing-home-made.png" />
             <span class="card-title mbn-card-title" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -50,7 +50,7 @@
 
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -60,221 +60,213 @@
     <div class="mbn-content" id="section-content">
         <div class="mbn-content-scroll" id="content">
 
-        <p class="mbn-section" id="4.1.3" >Preparing and storing homemade baby food</p>
-            <p class="mbn-text" id="4.1.3a">
-                <b>Practise good hygiene</b>
-            </p> 
+            <p class="mbn-video" id="4.1.3">Preparing and storing homemade baby food</p>
+            <p class="mbn-section" id="4.1.3a">
+                Practise good hygiene
+            </p>
             <p class="mbn-text">
                 Your baby's immune system is still developing so tummy upsets can easily happen.
             </p>
             <p class="mbn-text">
-                    Reduce this risk by:  
-                <ul>
-                    <li>always washing your hands well with <u>soap and water</u> (antiseptic rubs don't always kill all the germs) before touching anything for food preparation      
-                    </li>
-                    <li>making sure any equipment to be used (e.g. knife, chopping board, bowl) has been washed well
-                    </li>
-                    <li>not letting raw foods come into contact with cooked foods   
-                    <li>
-                    </li>always throwing out any leftover food your baby has not eaten from their plate as this can grow harmful bacteria   
-                    <li>
-                    </li>following the manufacturer's instructions for sterilising milk bottles
-                    <li>
-                    </li>never reheating foods more than once
-                </ul>    
+                Reduce this risk by:
             </p>
-           
-            <p class="mbn-text" id="4.1.3b">
-                    <b>Baby food is easy to make!</b>
+            <ul>
+                <li>always washing your hands well with <u>soap and water</u> (antiseptic rubs don't always kill all the germs) before touching anything for food preparation
+                </li>
+                <li>making sure any equipment to be used (e.g. knife, chopping board, bowl) has been washed well
+                </li>
+                <li>not letting raw foods come into contact with cooked foods
+                </li>
+                <li>always throwing out any leftover food your baby has not eaten from their plate as this can grow harmful bacteria
+                </li>
+                <li>following the manufacturer's instructions for sterilising milk bottles
+                </li>
+                <li>never reheating foods more than once
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="4.1.3b">
+                Baby food is easy to make!
             </p>
             <p class="mbn-text">
-                   There's no need to buy  <a href="#4.1.5">packaged food</a>,  <a href="#4.1.3">fancy ingredients</a>,  <a href="#4.1.3">special equipment</a>, or  <a href="#4.1.3">take lessons on how to make food</a> for your baby - just follow these simple steps!
+                There's no need to buy <a onclick="localSecJump('solids-415.html#4.1.5a');">packaged food</a>, <a onclick="localSecJump('4.1.3e');">fancy ingredients</a>, <a onclick="localSecJump('4.1.3c');">special equipment</a>, or <a onclick="localSecJump('4.1.3d');">take lessons on how to make food</a> for your baby - just follow these simple steps!
             </p>
 
             <p class="mbn-text" id="4.1.3c">
-                    <b>No fancy equipment needed!</b>
-            </p>
-            <p class="mbn-text">
-                   A food processor or blender is great for <a href="#4.1.3">pureeing or mashing</a> your baby's food when first introducing them to solids but if you only have a masher or fork, they are fine too, depending on the  <a href="#4.1.2">texture</a> your baby can tolerate. Add a little liquid (e.g. breastmilk, formula or boiled cooled water) to make the food smoother.
+                <b>No fancy equipment needed!</b>
+                <br/> A food processor or blender is great for <a onclick="localSecJump('4.1.3h');">pur&eacute;eing or mashing</a> your baby's food when first introducing them to solids but if you only have a masher or fork, they are fine too, depending on the <a onclick="localSecJump('solids-412.html#4.1.2h');">texture</a> your baby can tolerate. Add a little liquid (e.g. breastmilk, formula or boiled cooled water) to make the food smoother.
             </p>
 
             <p class="mbn-text" id="4.1.3d">
-                    <b>No need to take cooking lessons!</b>
-            </p>
-            <p class="mbn-text">
-                   Simply bake, steam, roast or microwave until foods are soft and tender. Just be careful when microwaving and stir wherever possible to avoid 'hot spots' that could burn your baby's mouth or tongue.
+                <b>No need to take cooking lessons!</b>
+                <br/> Simply bake, steam, roast or microwave until foods are soft and tender. Just be careful when microwaving and stir wherever possible to avoid 'hot spots' that could burn your baby's mouth or tongue.
             </p>
 
             <p class="mbn-text" id="4.1.3e">
-                    <b>No special ingredients needed!</b>
-                    <br>
-                    For the most part, you can save yourself time and money by making your baby's meal from the same ingredients as your own <a href="#4.1.8">family meal</a>.
+                <b>No special ingredients needed!</b>
+                <br /> For the most part, you can save yourself time and money by making your baby's meal from the same ingredients as your own <a onclick="localSecJump('solids-418.html#4.1.8a');">family meal</a>.
             </p>
             <p class="mbn-text">
-                    Just remember:
-                <ul>
-                    <li>that your <a href="#4.1.2">baby's first solid foods</a> should be <a href="#4.1.9">high in iron</a>
-                    </li>
-                    <li>to remove your baby's serving before you add any sugar, salt (including stocks), extra fats and oils
-                    </li>
-                    <li>you may need to <a href="#4.1.3">mash or puree</a> their food to begin with but as their chewing improves you can <a href="#4.1.2">change the consistency</a> to chopping up instead
-                    </li>  
-                    <li>to make sure any <a href="#4.1.15">fruits and vegetables</a> have been washed well
-                    </li>      
-                </ul>
+                Just remember:
             </p>
-            
-            </p> 
+            <ul>
+                <li>that your <a onclick="localSecJump('solids-412.html#4.1.2c');">baby's first solid foods</a> should be <a onclick="localSecJump('solids-419.html#4.1.9b');">high in iron</a>
+                </li>
+                <li>to remove your baby's serving before you add any sugar, salt (including stocks), extra fats and oils
+                </li>
+                <li>you may need to <a onclick="localSecJump('4.1.3h');">mash or pur&eacute;e</a> their food to begin with but as their chewing improves you can <a onclick="localSecJump('solids-412.html#4.1.2h');">change the consistency</a> to chopping up instead
+                </li>
+                <li>to make sure any <a onclick="localSecJump('solids-4115.html#4.1.15c');">fruits and vegetables</a> have been washed well
+                </li>
+            </ul>
 
             <p class="mbn-text" id="4.1.3f">
-                     <br />
-                    This video shows how an adult meal (in this case, beef casserole) can be prepared to <a href="#4.1.2">different textures</a> to suit your baby's age.
+                This video shows how an adult meal (in this case, beef casserole) can be prepared to <a onclick="localSecJump('solids-412.html#4.1.2h');">different textures</a> to suit your baby's age.
             </p>
-             <p class="mbn-text">
-                <b>Video: How to turn an adult meal into a baby meal - beef casserole</b>  
-                  <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/2rAwuL4t-9I?ecver=1" frameborder="0" allowfullscreen></iframe>
-                </div>          
-            </p> 
-            <p class="mbn-text">
-                <i>Sourced from <a href="http://www.beefandlamb.com.au/Home">BeefandLamb.com.au</a> the home of beef and lamb for Australians</i>.
+            <p class="mbn-video">
+                Video: How to turn an adult meal into a baby meal - beef casserole
             </p>
-            <p class="mbn-text">
-                   There are many other ideas suitable for the whole family in our <a href="#6.1.1">recipes section</a>!
-            </p>  
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/2rAwuL4t-9I?ecver=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                Sourced from <a href=" http://www.beefandlamb.com.au " target="_blank">BeefandLamb.com.au</a> the home of beef and lamb for Australians.
+            </p>
 
-            <p class="mbn-text" id="4.1.3g">
-                    <b>Preparing the right texture</b>
+            <p class="mbn-text">
+                There are many other ideas suitable for the whole family in our <a onclick="localSecJump('recipe/recipe-611.html#6.1.1a');">recipes section</a>!
+            </p>
+
+            <p class="mbn-section" id="4.1.3g">
+                Preparing the right texture
             </p>
             <p class="mbn-text">
-                   As well as different <a href="#4.1.2">types of foods</a>, a variety of textures helps teach your baby different skills such as chewing and swallowing, which also eventually helps them with speaking.
-            </p> 
-            <p class="mbn-text">
-                   It takes time to learn how to manage different textures, so it's important that the solids you offer are always prepared to a suitable consistency for your baby.
+                As well as different <a onclick="localSecJump('solids-412.html#4.1.2d');">types of foods</a>, a variety of textures helps teach your baby different skills such as chewing and swallowing, which also eventually helps them with speaking.
             </p>
             <p class="mbn-text">
-                   Start with <a href="#4.1.3">pureed/finely mashed</a> food before moving onto <a href="#4.1.2">lumpier food</a>, and <a href="#4.1.4">finger foods</a> (from 8 months). You should ideally do this before 10 months to avoid feeding difficulties down the track such as only accepting smooth or soft foods.
+                It takes time to learn how to manage different textures, so it's important that the solids you offer are always prepared to a suitable consistency for your baby.
+            </p>
+            <p class="mbn-text">
+                Start with <a onclick="localSecJump('4.1.3h');">pur&eacute;ed/finely mashed</a> food before moving onto <a onclick="localSecJump('4.1.3k');">lumpier food</a>, and <a onclick="localSecJump('solids-414.html#4.1.4a');">finger foods</a> (from 8 months). You should ideally do this before 10 months to avoid feeding difficulties down the track such as only accepting smooth or soft foods.
             </p>
 
             <p class="mbn-text" id="4.1.3h">
-                    <b>Purees/finely mashed food</b>
+                <b>Pur&eacute;es/finely mashed food</b>
+                <br> Your baby's first solids should include <a onclick="localSecJump('solids-412.html#4.1.2c');">foods high in iron</a> and be prepared to a smooth texture.
             </p>
             <p class="mbn-text">
-                   Your baby's first solids should include <a href="#4.1.2">foods high in iron</a> and be prepared to a smooth texture.
-            </p> 
-            <p class="mbn-text">
-                   Use a blender and add breastmilk, made up formula or boiled cooled water to make the texture thinner.
+                Use a blender and add breastmilk, made up formula or boiled cooled water to make the texture thinner.
             </p>
 
             <p class="mbn-text" id="4.1.3i">
-                     <br />
-                    This video shows how to turn an <a href="#4.1.2">iron rich food</a> like red meat into a mushy consistency suitable for your baby when just starting on solids.
-            </p>
-             <p class="mbn-text">
-                <b>Video: Pureed meat</b>  
-                  <div class="video-container">
-                    <iframe  src="https://www.youtube.com/embed/56M-uO7MJfQ?ecver=1" frameborder="0" allowfullscreen></iframe>
-                </div>          
-            </p> 
-            <p class="mbn-text">
-               <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+                This video shows how to turn an <a onclick="localSecJump('solids-412.html#4.1.2d');">iron rich food</a> like red meat into a mushy consistency suitable for your baby when just starting on solids.
             </p>
 
-             <p class="mbn-text" id="4.1.3j">
-                     <br />
-                    This next video shows how to prepare and <a href="#4.1.3">store</a> different <a href="#4.1.15">fruits and vegetables</a> as <a href="#4.1.2">first foods</a> for your baby. It also talks about <a href="#4.1.2">how much</a> of these foods to feed your baby as they get used to eating solids.
+            <p class="mbn-video">
+                Video: Pur&eacute;ed meat
             </p>
-             <p class="mbn-text">
-                <b>Video: Fruit and vegetable ice cubes</b>  
-                  <div class="video-container">
-                    <iframe  src="https://www.youtube.com/embed/bUMwvQP8ics?ecver=1" frameborder="0" allowfullscreen></iframe>
-                </div>          
-            </p> 
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/56M-uO7MJfQ?ecver=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+            <p class="mbn-text" id="4.1.3j">
+                This next video shows how to prepare and <a onclick="localSecJump('solids-413.html#4.1.3m');">store</a> different <a onclick="localSecJump('solids-4115.html#4.1.15c');">fruits and vegetables</a> as <a onclick="localSecJump('solids-412.html#4.1.2d');">first foods</a> for your baby. It also talks about <a onclick="localSecJump('solids-412.html#4.1.2i');">how much</a> of these foods to feed your baby as they get used to eating solids.
+            </p>
+            <p class="mbn-video">
+                Video: Fruit and vegetable ice cubes
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/bUMwvQP8ics?ecver=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
             <p class="mbn-text">
-               <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+                Most foods can be prepared this way but some other good ones to try when first starting with solids are <a onclick="localSecJump('recipe/recipe-621.html#6.2.1c');">banana rice porridge</a>, <a onclick="localSecJump('recipe/recipe-631.html#6.3.1k');">tuna and creamed corn macaroni</a> and <a onclick="localSecJump('recipe/recipe-621.html#6.2.1f');">fruit mush</a>.
             </p>
             <p class="mbn-text">
-                   Most foods can be prepared this way but some other good ones to try when first starting with solids are <a href="#6.2.1">banana rice porridge</a>, <a href="#6.3.1">tuna and creamed corn macaroni</a> and <a href="#6.2.1">fruit mush</a>.
-            </p>
-             <p class="mbn-text">
-                   Check out our <a href="#6.2.1">recipes section</a> for more ideas!
+                Check out our <a onclick="localSecJump('recipe/recipe-611.html#6.1.1a');">recipes section</a> for more ideas!
             </p>
 
             <p class="mbn-text" id="4.1.3k">
-                    <b>Lumpier food</b>
+                <b>Lumpier food</b>
+                <br /> Once your baby has mastered <a onclick="localSecJump('4.1.3h');">pur&eacute;ed foods</a> (and is swallowing more than they are <a onclick="localSecJump('solids-412.html#4.1.2m');">spitting out</a>!) it's time to introduce lumpy food.
             </p>
             <p class="mbn-text">
-                  Once your baby has mastered <a href="#4.1.3">pureed foods</a> (and is swallowing more than they are <a href="#4.1.3">spitting out</a>!) it's time to introduce lumpy food.
-            </p> 
-            <p class="mbn-text">
-                   Instead of using a blender to puree the food, this time use a masher so the food is lumpier rather than completely smooth. This will help teach your baby how to chew their food and move their tongue. If you need to make the texture thinner, add some breastmilk, made up formula or boiled cooled water.
+                Instead of using a blender to pur&eacute;e the food, this time use a masher so the food is lumpier rather than completely smooth. This will help teach your baby how to chew their food and move their tongue. If you need to make the texture thinner, add some breastmilk, made up formula or boiled cooled water.
             </p>
             <p class="mbn-text">
-                   A good way to start is by mashing banana or avocado with a fork but don't forget that your baby still needs <a href="#4.1.2">foods high in iron</a>.
+                A good way to start is by mashing banana or avocado with a fork but don't forget that your baby still needs <a onclick="localSecJump('solids-412.html#4.1.2c');">foods high in iron</a>.
             </p>
 
             <p class="mbn-text" id="4.1.3l">
-                     <br />
-                    This video shows how red meat (which is high in <a href="#4.1.9">iron</a>) can be prepared in a lumpy way.
+                This video shows how red meat (which is high in <a onclick="localSecJump('solids-419.html#4.1.9b');">iron</a>) can be prepared in a lumpy way.
             </p>
-             <p class="mbn-text">
-                <b>Video: Lumpy meat</b>  
-                  <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/m3jqssr7HgI?ecver=1" frameborder="0" allowfullscreen></iframe>
-                </div>          
-            </p> 
-            <p class="mbn-text">
-               <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            <p class="mbn-video">
+                Video: Lumpy meat
             </p>
-            <p class="mbn-text">
-                 There are lots of recipes to try in our <a href="#6.2.1">recipes section</a> and make sure you see how you're going by taking our <a href="#Link to Baby food quiz">baby food quiz</a> and our <a href="#Link to feeding practices quiz ">feeding practices quiz</a>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/m3jqssr7HgI?ecver=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
             </p>
 
-            <p class="mbn-text" id="4.1.3m">
-                    <b>Extra baby food can be stored</b>
+            <p class="mbn-text">
+                There are lots of recipes to try in our <a onclick="localSecJump('recipe/recipe-611.html#6.1.1a');">recipes section</a> and make sure you see how you're going by taking our <a href="tool:'Link to Baby food quiz">baby food quiz</a> and our <a href="tool:Link to feeding practices quiz">feeding practices quiz</a>
+            </p>
+
+            <p class="mbn-section" id="4.1.3m">
+                Extra baby food can be stored
             </p>
             <p class="mbn-text">
-                  Babies only tend to eat <a href="#4.1.3">small amounts</a> in a meal, so making extra food ahead of time is a great way of saving you valuable time and energy!
-            </p> 
+                Babies only tend to eat <a onclick="localSecJump('4.1.3i');">small amounts</a> in a meal, so making extra food ahead of time is a great way of saving you valuable time and energy!
+            </p>
             <p class="mbn-text">
-                    You can do this by:
-                <ul>
-                    <li>making extra at a meal or preparing a large batch of food
-                    </li>
-                    <li>freezing any extra food made (or leftovers not served) by putting 1-2 tablespoons of pureed/mashed food in separate blobs on a baking sheet and covering with cling film, or separating into: 
-                    </li>       
+                You can do this by:
+            </p>
+            <ul>
+                <li>making extra at a meal or preparing a large batch of food
+                </li>
+                <li>freezing any extra food made (or leftovers not served) by putting 1-2 tablespoons of <a onclick="localSecJump('4.1.3h');">pur&eacute;ed/mashed food</a> in separate blobs on a baking sheet and covering with cling film, or separating into:
+                </li>
                 <ul>
                     <li>airtight containers
                     </li>
                     <li>ice cube trays sealed inside a plastic bag (e.g. snaplock bag)
-                    </li> 
-                </ul>  
-                     <li>transferring the cubes/blobs to a plastic freezer bag once the food is frozen solid
-                    </li> 
-                    <li>labelling the freezer bag with the contents and date it was prepared - this is important because frozen baby food should be used within one month of freezing
-                    </li>   
-                </ul>
-            </p>
-            <p class="mbn-text">
-                 When you're ready to use frozen baby food, simply thaw the food in a closed container (not in an uncovered bowl) in the fridge.
-            </p>
-            <p class="mbn-text">
-                 If you need food ready more quickly, you can:
-                <ul>
-                    <li>fill a large bowl with hot water and put the cube/blob in a small bowl sitting in the hot water - it should be ready in 10-20 minutes
                     </li>
-                    <li>use a microwave (as a last resort), making sure you stir the food well to avoid 'hot spots' that could burn your baby's mouth or tongue
-                    </li>                      
                 </ul>
+                <li>transferring the cubes/blobs to a plastic freezer bag once the food is frozen solid
+                </li>
+                <li>labelling the freezer bag with the contents and date it was prepared - this is important because frozen baby food should be used within one month of freezing
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                When you're ready to use frozen baby food, simply thaw the food in a closed container (not in an uncovered bowl) in the fridge.
             </p>
-           
+            <p class="mbn-text">
+                If you need food ready more quickly, you can:
+            </p>
+            <ul>
+                <li>fill a large bowl with hot water and put the cube/blob in a small bowl sitting in the hot water - it should be ready in 10-20 minutes
+                </li>
+                <li>use a microwave (as a last resort), making sure you stir the food well to avoid 'hot spots' that could burn your baby's mouth or tongue
+                </li>
+            </ul>
+            <p>
                 <br />
                 <br />
                 <br />
             </p>
         </div>
     </div>
-
     <div class="navbar-fixed mbn-footer hide-on-med-and-up">
         <nav class="mbn-nav">
             <div class="nav-wrapper">

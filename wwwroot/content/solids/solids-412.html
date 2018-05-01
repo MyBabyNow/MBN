@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -41,7 +41,7 @@
         <div class="card-image">
             <img src="images/starting-solids.png" />
             <span class="card-title mbn-card-title" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -50,7 +50,7 @@
 
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -60,392 +60,378 @@
     <div class="mbn-content" id="section-content">
         <div class="mbn-content-scroll" id="content">
 
-            <p class="mbn-section" id="4.1.2">Starting solids<span id="4.1.2a"></span></p>
-            <p class="mbn-text">
-                <b>How do I get started?</b>
-            </p> 
-            <p class="mbn-text">
-                Some things to think about when starting your baby on solid foods::
-                <ul>
-                    <li>
-                        <a href="#4.1.2b">when to start</a>
-                    </li>
-                    <li>
-                        <a href="#4.1.2d">what foods to try (and avoid)</a>
-                    </li>
-                    <li>
-                        <a href="#4.1.2f">the practicalities of offering solids - how, when & what textures</a>
-                    <li>
-                        <a href="#4.1.2i">how much to offer</a>
-                    </li>   
-                    <li>
-                        <a href="#4.1.2k">knowing when your baby is hungry for solids (and full)</a>
-                    </li>
-                    <li>
-                        <a href="#4.1.2m">how to deal with food being spat out</a>
-                    </li>
-                </ul>    
+            <p class="mbn-video" id="4.1.2">Starting solids<span id="4.1.2a"></span></p>
+            <p class="mbn-section">
+                How do I get started?
             </p>
             <p class="mbn-text">
-                    You might also find these <a href="#4.1.15">tips for getting started</a> helpful!
-            </p>  
+                Some things to think about when starting your baby on solid foods:
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('4.1.2b');">when to start</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('4.1.2d');">what foods to try (and avoid)</a>
+                </li>
+                <li>
+                    <a onclick="localSecJump('4.1.2f');">the practicalities of offering solids - how, when &amp; what textures</a>
+                    <li>
+                        <a onclick="localSecJump('4.1.2i');">how much to offer</a>
+                    </li>
+                    <li>
+                        <a onclick="localSecJump('4.1.2k');">knowing when your baby is hungry for solids (and full)</a>
+                    </li>
+                    <li>
+                        <a onclick="localSecJump('4.1.2m');">how to deal with food being spat out</a>
+                    </li>
+            </ul>
 
-            <p class="mbn-text" id="4.1.2b">
-                <b>When to start</b>
-            </p>    
             <p class="mbn-text">
-                   It is recommended that you <a href="#4.1.1">wait until 6 months</a> before introducing solid foods to your baby's diet. This gives your baby's body time to develop to a stage where it is ready to manage solids and ensures that they are still getting all the nutrition they need from breastmilk/formula.
-            </p> 
-            <p class="mbn-text">
-                   Your baby's first solid foods should be <a href="#4.1.9">high in iron</a>. This is because, from 6 months, your baby's iron needs are greater than what your breastmilk or formula can provide. 
-            </p> 
-            <p class="mbn-text" id="4.1.2c">
-                    <b>What foods to try (and avoid)</b>
+                You might also find these <a onclick="localSecJump('solids-4115-html#4.1.15');">tips for getting started</a> helpful!
+            </p>
+
+            <p class="mbn-section" id="4.1.2b">
+                When to start
             </p>
             <p class="mbn-text">
-                   The order or number of foods introduced at a time doesn't really matter, just as long as your baby is getting iron rich foods that are mashed/pureed down to a <a href="#4.1.2">suitable texture for their age</a>. 
+                It is recommended that you <a onclick="localSecJump('solids-411.html#4.1.1b');">wait until 6 months</a> before introducing solid foods to your baby's diet. This gives your baby's body time to develop to a stage where it is ready to manage solids and ensures that they are still getting all the nutrition they need from breastmilk/formula.
             </p>
             <p class="mbn-text">
-                   It won't be long before your baby will be eating much the  <a href="#4.1.8">same foods as the rest of the family</a>, just at a texture that suits them!  
+                Your baby should start showing <a onclick="localSecJump('solids-411.html#4.1.1b');">signs of being ready for solids</a> around 6 months but you can also <a href="tool:use our quiz"></a> to check if your baby is ready.
             </p>
-              
+            <p class="mbn-text">
+                Your baby's first solid foods should be <a onclick="localSecJump('solids-419.html#4.1.9b');">high in iron</a>. This is because, from 6 months, your baby's iron needs are greater than what your breastmilk or formula can provide.
+            </p>
+            <p class="mbn-section" id="4.1.2c">
+                What foods to try (and avoid)
+            </p>
+            <p class="mbn-text">
+                The order or number of foods introduced at a time doesn't really matter, just as long as your baby is getting iron rich foods that are mashed/pur&eacute;ed down to a <a onclick="localSecJump('4.1.2h');">suitable texture for their age</a>.
+            </p>
+            <p class="mbn-text">
+                It won't be long before your baby will be eating much the <a onclick="localSecJump('solids-418.html#4.1.8a');">same foods as the rest of the family</a>, just at a texture that suits them!
+            </p>
+
 
             <p class="mbn-text" id="4.1.2d">
-                 <b>Foods to try</b>
+                <b>Foods to try</b>
+                <br />
+                <a onclick="localSecJump('solids-419.html#4.1.9b');">Iron</a> rich foods that make great first foods include:
+            </p>
+
+            <ul>
+                <li> <a onclick="localSecJump('solids-4116.html#4.1.16h');">iron fortified</a> baby cereals
+                </li>
+                <li> <a onclick="localSecJump('solids-413.html#4.1.3i');">meat</a>
+                </li>
+                <li>fish
+                </li>
+                <li>chicken
+                </li>
+                <li>legumes (such as baked beans or lentils)
+                </li>
+                <li>leafy green vegetables
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Foods to add later:
+            </p>
+            <ul>
+                <li> <a onclick="localSecJump('solids-4111.html#4.1.11a');">vegetables</a>
+                </li>
+                <li> fruits
+                </li>
+                <li> cheese
+                </li>
+                <li> full fat unsweetened plain natural yoghurt
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                To train your baby's immune system, it is important to give them a variety of different foods within their first year, except those on the <a onclick="localSecJump('4.1.2e');">avoid list</a>.
+            </p>
+
+            <p class="mbn-text">
+                You should even give your baby foods that often considered as <i>allergenic</i>, such as:
+            </p>
+            <ul>
+                <li> peanut butter
+                </li>
+                <li> cooked egg
+                </li>
+                <li> dairy
+                </li>
+                <li> wheat products
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                This is true, even if your baby is at high risk of allergy. Just keep an eye out for any <a onclick="localSecJump('solids-4113.html#4.1.13b');">reactions</a> (such as a rash or upset tummy) and if you do notice one, or are not sure, stop that food and contact your GP. Learn more about <a onclick="localSecJump('solids-4113.html#4.1.13a');">allergies and how to avoid them</a>.
             </p>
             <p class="mbn-text">
-                     <a href="#4.1.9">Iron</a> rich foods that make great first foods include:
-           
-                <ul>
-                    <li> <a href="#4.1.16">iron fortified</a> baby cereals
-                    </li>
-                    <li> <a href="#4.1.3i">meat</a>
-                    </li>   
-                    <li>fish
-                    </li> 
-                    <li>chicken
-                    </li> 
-                    <li>legumes (such as baked beans or lentils)
-                    </li> 
-                    <li>leafy green vegetables
-                    </li> 
-                </ul>
-            </p> 
-            <p class="mbn-text">
-                     Foods to add later:
-                <ul>
-                    <li> <a href="#4.1.11">vegetables</a>
-                    </li>
-                    <li> fruits
-                    </li>   
-                    <li> cheese
-                    </li> 
-                    <li> full fat unsweetened plain natural yoghurt 
-                    </li> 
-                </ul>
-            </p> 
-            <p class="mbn-text">
-                    You should even give your baby foods that often considered as <i>allergenic</i>, such as:
-                <ul>
-                    <li> peanut butter
-                    </li>
-                    <li> cooked egg
-                    </li>   
-                    <li> dairy
-                    </li> 
-                    <li> wheat products
-                    </li> 
-                </ul>
-            </p> 
-            <p class="mbn-text">
-                    This is true, even if your baby is at high risk of allergy. Just keep an eye out for any <a href="#4.1.13">reactions</a> (such as a rash or upset tummy) and if you do notice one, or are not sure, stop that food and contact your GP. Learn more about <a href="#4.1.13">allergies and how to avoid them</a>. 
-            </p>  
-            <p class="mbn-text">
-                    Check out our <a href="#6.1.1">recipes section</a> for lots of ideas on how to include these foods in your baby's diet and once started, take our <a href="#Link to Baby food quiz">baby food quiz</a>  and our <a href="#Link to feeding practices quiz">feeding practices quiz</a> to get personalised feedback on how you're going! 
-            </p>  
+                Check out our <a onclick="localSecJump('recipe/recipe-611.html#6.1.1a');">recipes section</a> for lots of ideas on how to include these foods in your baby's diet and once started, take our <a href="tool: Link to Baby food quiz">baby food quiz</a> and our <a href="tool:Link to feeding practices quiz">feeding practices quiz</a> to get personalised feedback on how you're going!
+            </p>
 
             <p class="mbn-text" id="4.1.2e">
-                    <b>What to avoid in the first 12 months</b>
+                <b>What to avoid in the first 12 months</b>
+                <br />
+                <a onclick="localSecJump('solids-417.html#4.1.7a');">Choking</a> hazards:
             </p>
+            <ul>
+                <li> whole nuts
+                </li>
+                <li> raw foods
+                </li>
+                <li> hard foods
+                </li>
+            </ul>
+
             <p class="mbn-text">
-                    <a href="#4.1.7">Choking</a> hazards:
-                <ul>
-                    <li> whole nuts
-                    </li>
-                    <li> raw foods
-                    </li>   
-                    <li> hard foods
-                    </li> 
-                </ul>
-            </p> 
+                Foods your baby's body is not ready for:
+            </p>
+            <ul>
+                <li> honey - this can cause botulism (a serious bacterial infection) in babies under 12 months
+                </li>
+                <li> cow's and goat's milks (except in small quantities in cooking)
+                </li>
+                <li> additions such as sugar, salt (including stocks), extra fats and oils
+                </li>
+            </ul>
+
             <p class="mbn-text">
-                   Foods your baby's body is not ready for:
-                <ul>
-                    <li> honey - this can cause botulism (a serious bacterial infection) in babies under 12 months
-                    </li>
-                    <li> cow's and goat's milks (except in small quantities in cooking)
-                    </li>   
-                    <li> additions such as sugar, salt (including stocks), extra fats and oils
-                    </li> 
-                </ul>
-            </p> 
+                Treat or <a onclick="localSecJump('solids-4115.html#4.1.15');">sometimes foods</a> which can fill your baby up without providing much (or any) nutritional value, leaving little room for the <a onclick="localSecJump('4.1.2d');">nutritious foods</a> your baby needs for optimal <a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">growth</a> and development. Avoid giving your baby a taste for these foods (and making it harder to <a onclick="localSecJump('solids-4115.html#4.1.15c');">encourage healthy eating habits</a> later on) by not offering:
+            </p>
+            <ul>
+                <li> chocolate
+                </li>
+                <li> chips
+                </li>
+                <li> biscuits
+                </li>
+                <li> cakes
+                </li>
+                <li> ice cream
+                </li>
+                <li> lollies
+                </li>
+            </ul>
+
             <p class="mbn-text">
-                  Treat or <a href="#4.1.15">sometimes foods</a> which can fill your baby up without providing much (or any) nutritional value, leaving little room for the <a href="#4.1.2">nutritious foods</a> your baby needs for optimal <a href="#5.1.5">growth</a> and development. Avoid giving your baby a taste for these foods (and making it harder to <a href="#4.1.15">encourage healthy eating habits</a> later on) by not offering:
-                <ul>
-                    <li> chocolate
-                    </li>
-                    <li> chips
-                    </li>   
-                    <li> biscuits
-                    </li> 
-                    <li> cakes
-                    </li> 
-                    <li> ice cream
-                    </li> 
-                    <li> lollies
-                    </li> 
-                </ul>
-            </p> 
+                Until 12 months, the only drinks your baby should be having are breastmilk or formula and small amounts of cooled boiled water; avoid giving your baby other drinks such as:
+            </p>
+            <ul>
+                <li> juices (including 100% fruit juice)
+                </li>
+                <li> soft drinks
+                </li>
+                <li> cordials
+                </li>
+                <li> sports drinks
+                </li>
+                <li> tea (including herbal)
+                </li>
+                <li> coffee
+                </li>
+            </ul>
+
             <p class="mbn-text">
-                  Until 12 months, the only drinks your baby should be having are breastmilk or formula and small amounts of cooled boiled water; avoid giving your baby other drinks such as:
-                <ul>
-                    <li> juices (including 100% fruit juice)
-                    </li>
-                    <li> soft drinks
-                    </li>   
-                    <li> cordials
-                    </li> 
-                    <li> sports drinks
-                    </li> 
-                    <li> tea (including herbal)
-                    </li> 
-                    <li> coffee
-                    </li> 
-                </ul>
-            </p> 
-            <p class="mbn-text">
-                  Read more about <a href="#4.1.6">milk and other drinks</a>, how to <a href="#4.1.15">promote healthy eating habits from the start</a> and don't forget to take our <a href="#Link to Baby food quiz">baby food quiz</a> and our <a href="#Link to feeding practices quiz">feeding practices quiz</a> to see if you're on the right track!
+                Read more about <a onclick="localSecJump('solids-4116.html#4.1.6');">milk and other drinks</a>, how to <a onclick="localSecJump('solids-4115.html#4.1.15c');">promote healthy eating habits from the start</a> and don't forget to take our <a href="tool:Link to Baby food quiz">baby food quiz</a> and our <a href="tool:Link to feeding practices quiz">feeding practices quiz</a> to see if you're on the right track!
             </p>
 
-             <p class="mbn-text" id="4.1.2f">
-                    <b>How, when and what textures?</b>
-            </p>
-             <p class="mbn-text">
-                    <b>How and when</b>
-             </p>
-             <p class="mbn-text">
-                   The first thing to keep in mind is that <i>you provide</i> the food to your baby and <i>your baby decides</i> if they will eat it and if so, <i> <a href="#4.1.2">how much</a></i>. A good motto to remember is: <i> <a href="#4.1.10">parents provide, babies decide</a></i>.
+            <p class="mbn-video" id="4.1.2f">
+                How, when and what textures
             </p>
             <p class="mbn-text">
-                   Just like the rest of us, all babies are different, so some will enjoy solids faster than others will. At first, your baby will probably end up  <a href="#4.1.2">spitting most foods out</a>!
+                <b>How and when</b>
+                <br /> The first thing to keep in mind is that <i>you provide</i> the food to your baby and <i>your baby decides</i> if they will eat it and if so, <i> <a onclick="localSecJump('4.1.2i');">how much</a></i>. A good motto to remember is: <i> <a onclick="localSecJump('solids-4110.html#4.1.10a');">parents provide, babies decide</a></i>.
             </p>
             <p class="mbn-text">
-                   Although messy, letting your baby explore their food with their fingers (including  <a href="#4.1.3">purees</a>) allows them to smell, feel and hopefully even taste new foods - it's all part of the learning experience!
+                Just like the rest of us, all babies are different, so some will enjoy solids faster than others will. At first, your baby will probably end up <a onclick="localSecJump('4.1.2m');">spitting most foods out</a>!
+            </p>
+            <p class="mbn-text">
+                Although messy, letting your baby explore their food with their fingers (including <a onclick="localSecJump('solids-4113.html#4.1.3h');">pur&eacute;es</a>) allows them to smell, feel and hopefully even taste new foods - it's all part of the learning experience!
             </p>
 
             <p class="mbn-text" id="4.1.2g">
-                <br>
-                    To help you get started:
+                To help you get started:
             </p>
-             <ul>
-                    <li> Until at least 8 months, start with offering solids twice a day <i>after</i> their normal breastmilk/formula feed so they still get the nutrients they need from the milk before filling up on solids.
-                    </li>
-                    <li> Sit at the same level as your baby and  <a href="#4.1.15">try not to fuss</a> - if they  <a href="#4.1.2">spit out</a> or  <a href="#4.1.12">refuse to accept the food</a>, just try again another time.
-                    </li>   
-                    <li> Offer solids when both you and your baby are happy and relaxed.
-                    </li> 
-                    <li> Allow your baby to sit with you when you are eating or at  <a href="#4.1.8">family meal times</a>, such as breakfast.
-                    </li> 
-                    <li> Over the first few weeks, gradually increase how often you offer solids.
-                    </li> 
-                </ul>
-            </p> 
+            <ul>
+                <li> Until at least 8 months, start with offering solids twice a day <i>after</i> their normal breastmilk/formula feed so they still get the nutrients they need from the milk before filling up on solids.
+                </li>
+                <li> Sit at the same level as your baby and <a onclick="localSecJump('solids-4115.html#4.1.15j');">try not to fuss</a> - if they <a onclick="localSecJump('4.1.2m');">spit out</a> or <a onclick="localSecJump('4.1.12a');">refuse to accept the food</a>, just try again another time.
+                </li>
+                <li> Offer solids when both you and your baby are happy and relaxed.
+                </li>
+                <li> Allow your baby to sit with you when you are eating or at <a onclick="localSecJump('solids-418e .html#4.1.8e');">family meal times</a>, such as breakfast.
+                </li>
+                <li> Over the first few weeks, gradually increase how often you offer solids.
+                </li>
+            </ul>
 
             <p class="mbn-text" id="4.1.2h">
-                    <b>Textures</b>
-                    To help you get started:
+                <b>Textures</b>
+                <br /> Just as a <a onclick="localSecJump('4.1.2d');">variety of different foods</a> is important, so is a variety of age-appropriate textures. In the past, most babies had to stick to pur&eacute;ed foods for a longer time because they started solids before they were ready but when babies start solids at around 6 months, they can begin learning about other textures fairly quickly. Varying the food texture helps your baby learn to chew (even without teeth!) as well as to swallow.
             </p>
             <p class="mbn-text">
-                   Just as a <a href="#4.1.2">variety of different foods</a> is important, so is a variety of age-appropriate textures. In the past, most babies had to stick to pureed foods for a longer time because they started solids before they were ready but when babies start solids at around 6 months, they can begin learning about other textures fairly quickly. Varying the food texture helps your baby learn to chew (even without teeth!) as well as to swallow.
-            </p>
-             <p class="mbn-text">
-                   Start with <a href="#4.1.3">pureed or smooth food</a> and gradually progress to <a href="#4.1.3">lumpier foods</a> as soon as your baby tolerates it. These lumpier foods will help teach your baby how to chew their food (no teeth required) which then helps them to speak.
+                Start with <a onclick="localSecJump('solids-413.html#4.1.3h');">pur&eacute;ed or smooth food</a> and gradually progress to <a onclick="localSecJump('solids-413.html#4.1.3k');">lumpier foods</a> as soon as your baby tolerates it. These lumpier foods will help teach your baby how to chew their food (no teeth required) which then helps them to speak.
             </p>
             <p class="mbn-text">
-                  Generally, if your baby is:
-                <ul>
-                    <li> 6-8 months - use only <a href="#4.1.3">pureed and mashed foods</a> but move to <a href="#4.1.3">minced (or mashed with a fork) and chopped foods</a> soon
-                    </li>
-                    <li> 8 months - begin <a href="#4.1.4">finger foods</a>
-                    </li>
-                    <li> 12 months - your baby might even be ready to start eating foods with the same textures enjoyed by the <a href="#4.1.8">rest of the family</a>
-                    </li> 
-                </ul>
-            </p> 
+                Generally, if your baby is:
+            </p>
+            <ul>
+                <li> 6-8 months - use only <a onclick="localSecJump('solids-413.html#4.1.3h');">pur&eacute;ed and mashed foods</a> but move to <a onclick="localSecJump('solids-413.html#4.1.3k');">minced (or mashed with a fork) and chopped foods</a> soon
+                </li>
+                <li> 8 months - begin <a onclick="localSecJump('solids-414.html#4.1.4a');">finger foods</a>
+                </li>
+                <li> 12 months - your baby might even be ready to start eating foods with the same textures enjoyed by the <a onclick="localSecJump('solids-418.html#4.1.8a');">rest of the family</a>
+                </li>
+            </ul>
 
             <p class="mbn-text">
-                   Just make sure you introduce <a href="#4.1.3">lumpy food</a> before your baby is 10 months of age to avoid feeding difficulties down the track, such as only accepting smooth or soft foods.
+                Just make sure you introduce <a onclick="localSecJump('solids-413.html#4.1.3k');">lumpy food</a> before your baby is 10 months of age to avoid feeding difficulties down the track, such as only accepting smooth or soft foods.
             </p>
             <p class="mbn-text">
-                   Learn  <a href="#4.1.3">how to prepare different textures</a> for your baby.
+                Learn <a onclick="localSecJump('solids-413.html#4.1.3g');">how to prepare different textures</a> for your baby.
             </p>
 
-            <p class="mbn-text" id="4.1.2h">
-                    <b>How much solid food should you offer?</b>
-                    <br>
-                    At first, your baby will probably only eat very small amounts. Learning how to swallow new textures is just like any other new skill - it takes time to master!
+            <p class="mbn-section" id="4.1.2i">
+                How much solid food should you offer?
+            </p>
+
+            <p class="mbn-text">
+
+                At first, your baby will probably only eat very small amounts. Learning how to swallow new textures is just like any other new skill - it takes time to master!
+            </p>
+
+            <p class="mbn-text">
+                Try:
+            </p>
+            <ul>
+                <li>starting with a &frac12; teaspoon twice a day, until your baby is used to the <a onclick="localSecJump('4.1.2h');">different texture</a>
+                </li>
+                <li>then gradually increasing to a few tablespoons per feed over the next few weeks
+                </li>
+                <li>giving your baby some <a onclick="localSecJump('solids-414.html#4.1.4a');">finger foods</a> - soft pieces of food that your baby can hold and try feeding to themselves
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                As long as you provide your baby with <a onclick="localSecJump('4.1.2d');">healthy solid food options</a>, they will decide if, and how much of it, they will eat.
             </p>
             <p class="mbn-text">
-                    Try:
-                <ul>
-                    <li>starting with a ½ teaspoon twice a day, until your baby is used to the <a href="#4.1.2">different texture</a>
-                    </li>
-                    <li>then gradually increasing to a few tablespoons per feed over the next few weeks
-                    </li>   
-                    <li>giving your baby some <a href="#4.1.4">finger foods</a> - soft pieces of food that your baby can hold and try feeding to themselves
-                    </li> 
-                </ul>
-            </p> 
-            <p class="mbn-text">
-                   As long as you provide your baby with healthy solid food options, they will decide if, and how much of it, they will eat.
-            </p> 
-             <p class="mbn-text" id="4.1.2h">
-                    <b>How much solid food should you offer?</b>
-                    <br>
-                    At first, your baby will probably only eat very small amounts. Learning how to swallow new textures is just like any other new skill - it takes time to master!
+                <b>Milk or solids first?</b>
             </p>
+            <ul>
+                <li><u>Until your baby is at least 8 months old</u> it's important that they still have their normal breastmilk/formula feed <i><b>before</b></i> any solids, to ensure they're still getting all the nutrients they need.
+                </li>
+                <li><u>After 8 months</u> offer your baby breastmilk/formula <i>after</i> solid meals to make sure they are hungry enough to eat the new <a onclick="localSecJump('4.1.2d');">iron rich foods</a> they now need.
+                </li>
+            </ul>
+
             <p class="mbn-text">
-                    Try:
-                <ul>
-                    <li>starting with a ½ teaspoon twice a day, until your baby is used to the <a href="#4.1.2">different texture</a>
-                    </li>
-                    <li>then gradually increasing to a few tablespoons per feed over the next few weeks
-                    </li>   
-                    <li>giving your baby some <a href="#4.1.4">finger foods</a> - soft pieces of food that your baby can hold and try feeding to themselves
-                    </li> 
-                </ul>
-            </p> 
-            <p class="mbn-text">
-                   As long as you provide your baby with healthy solid food options, they will decide if, and how much of it, they will eat.
-            </p> 
-            <p class="mbn-text">
-                     <b>Milk or solids first?</b>
-                <ul>
-                    <li><u>Until your baby is at least 8 months old</u> it's important that they still have their normal breastmilk/formula feed <i><b>before</b></i> any solids, to ensure they're still getting all the nutrients they need.
-                    </li>
-                    <li><u>After 8 months</u> offer your baby breastmilk/formula <i>after</i> solid meals to make sure they are hungry enough to eat the new  <a href="#4.1.2">iron rich foods</a> they now need.
-                    </li>   
-                </ul>
-            </p> 
-            <p class="mbn-text">
-                   If you are worried that  <a href="#5.1.5">your baby's growth is not tracking well</a> speak to your GP or your  <a href="#8.1.2">maternal and child health nurse</a>.
+                If you are worried that <a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">your baby's growth is not tracking well</a> speak to your GP or your <a onclick="localSecJump('hs/hs-812.html#8.1.2');">maternal and child health nurse</a>.
             </p>
- 
+
             <p class="mbn-text" id="4.1.2j">
-                     <br />
-                    This video is answers some common questions about feeding your baby solids, such as <a href="#4.1.2">when</a> and <a href="#4.1.2">how</a> to start, why your baby needs solids from around 6 months and <a href="#4.1.2">what sorts of foods</a> should be introduced.
+                This video answers some common questions about feeding your baby solids, such as <a onclick="localSecJump('4.1.2b');">when</a> and <a onclick="localSecJump('4.1.2f');">how</a> to start, why your baby needs solids from around 6 months and <a onclick="localSecJump('4.1.2d');">what sorts of foods</a> should be introduced.
             </p>
-             <p class="mbn-text">
-                <b>Video: Starting solids - when and what</b>  
-                  <div class="video-container">
-                    <iframe  src="https://www.youtube.com/embed/KRSUTaXo2dY?ecver=1" frameborder="0" allowfullscreen></iframe>
-                </div>          
-            </p> 
+            <p class="mbn-video">
+                Video: Starting solids - when and what
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/KRSUTaXo2dY?ecver=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href=" http://www.infantprogram.org/ " target="_blank">infantprogram.org</a>.  
+            </p>
+            <p class="mbn-section" id="4.1.2k">
+                Signs of being hungry for solids (and full)
+            </p>
             <p class="mbn-text">
-                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+                Signs that your baby is hungry for solids include:
             </p>
+            <ul>
+                <li>getting excited when they see you getting their food ready
+                </li>
+                <li>leaning towards you while they are sitting in the highchair
+                </li>
+                <li>opening their mouth as you're about to feed them
+                </li>
+            </ul>
 
-            <p class="mbn-text" id="4.1.2k">
-                    <b>Signs of being hungry for solids (and full)</b>
+            <p class="mbn-text">
+                From 7-8 months, your baby may reach for the spoon or for food when they are hungry, or point to food.
             </p>
             <p class="mbn-text">
-                  Signs that your baby is hungry for solids include:
-                <ul>
-                    <li>getting excited when they see you getting their food ready
-                    </li>
-                    <li>leaning towards you while they are sitting in the highchair
-                    </li>   
-                    <li>opening their mouth as you're about to feed them
-                    </li> 
-                </ul>
-            </p> 
-            <p class="mbn-text">
-                  From 7-8 months, your baby may reach for the spoon or for food when they are hungry, or point to food.
-            </p>
-            <p class="mbn-text">
-                  From 8-12 months, your baby may also show excitement when you give them food.
+                From 8-12 months, your baby may also show excitement when you give them food.
             </p>
 
             <p class="mbn-text" id="4.1.2l">
-                 <br>
-                   Signs that your baby is no longer hungry include:</b>
+                Signs that your baby is no longer hungry include:
             </p>
+            <ul>
+                <li>refusing to eat or closing their mouth tightly
+                </li>
+                <li>pushing away the spoon, or your hand
+                </li>
+                <li>turning their head away from you
+                </li>
+                <li>looking upset or starting to cry
+                </li>
+            </ul>
+
             <p class="mbn-text">
-                  Signs that your baby is hungry for solids include:
-                <ul>
-                    <li>refusing to eat or closing their mouth tightly
-                    </li>
-                    <li>pushing away the spoon, or your hand
-                    </li>   
-                    <li>turning their head away from you
-                    </li> 
-                    <li>looking upset or starting to crying
-                    </li> 
-                </ul>
-            </p> 
-            <p class="mbn-text">
-                  If your baby shows these signs, it's important to follow their cues and not pressure them to eat or complete the meal. This encourages them to <a href="#4.1.15">trust their own appetite</a> and not to overeat when they are older.
+                If your baby shows these signs, it's important to follow their cues and not pressure them to eat or complete the meal. This encourages them to <a onclick="localSecJump('solids-4115.html#4.1.15h');">trust their own appetite</a> and not to overeat when they are older.
             </p>
 
-            <p class="mbn-text" id="4.1.2m">
-                    <b>How to deal with food being spat out</b>
+            <p class="mbn-section" id="4.1.2m">
+                How to deal with food being spat out
             </p>
             <p class="mbn-text">
-                   Just because your baby spits out new foods, it doesn't always mean they don't like them - they just need time to get used to them! In fact, it can take up to 10-15 tries of a new food before your baby may accept it - so try not to give up!
+                Just because your baby spits out new foods, it doesn't always mean they don't like them - they just need time to get used to them! In fact, it can take up to 10-15 tries of a new food before your baby may accept it - so try not to give up!
             </p>
             <p class="mbn-text">
-                   It is normal for babies to spit out new and unknown foods, <a href="#4.1.11">especially vegetables</a>, which tend to be less sweet and more bitter than other foods. It's thought that because bitter tastes can be associated with poisons/toxins, this initial rejection of bitter foods is an instinctive reaction to protect against harm.
+                It is normal for babies to spit out new and unknown foods, <a onclick="localSecJump('solids-4111.html#4.1.11a');">especially vegetables</a>, which tend to be less sweet and more bitter than other foods. It's thought that because bitter tastes can be associated with poisons/toxins, this initial rejection of bitter foods is an instinctive reaction to protect against harm.
             </p>
             <p class="mbn-text">
-                   If your baby spits out a food, the best thing to do is to try to <a href="#4.1.15">react calmly</a> and take the food away, before moving onto the next activity.
+                If your baby spits out a food, the best thing to do is to try to <a onclick="localSecJump('solids-4115.html#4.1.15j');">react calmly</a> and take the food away, before moving onto the next activity.
             </p>
             <p class="mbn-text">
-                   Resist the temptation to offer a <a href="#4.1.12">different food</a> as this can lead to food battles and <a href="#4.1.12">fussy eating</a> down the track!
+                Resist the temptation to offer a <a onclick="localSecJump('solids-4112.html#4.1.12g');">different food</a> as this can lead to food battles and <a onclick="localSecJump('solids-4112.html#4.1.12a');">fussy eating</a> down the track!
             </p>
             <p class="mbn-text">
-                   As frustrating as spat out food can be, try to keep in mind that your baby needs time to explore the new <a href="#4.1.2">texture</a>/taste and they will take more in at each feed as they <a href="#5.1.5">grow</a> and get more used to solid food.
+                As frustrating as spat out food can be, try to keep in mind that your baby needs time to explore the new <a onclick="localSecJump('4.1.2h');">texture</a>/taste and they will take more in at each feed as they <a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">grow</a> and get more used to solid food.
             </p>
             <p class="mbn-text">
-                    Some resources you might find useful:
-                <ul>
-                    <li><a href="#Link to feeding practices quiz">Feeding practices</a> quiz to get feedback on how you feed your baby
-                    </li>
-                    <li><a href="#4.1.12">how to handle fussy eaters</a>
-                    </li>   
-                    <li>top tips to <a href="#4.1.11">help your baby like vegetables</a>
-                    </li> 
-                     <li>keep track of which vegetables you have offered to your baby (and their reaction!) with our <a href="#Link to vegetable tracker">vegetable tracker</a>
-                    </li> 
-                </ul>
+                Some resources you might find useful:
             </p>
+            <ul>
+                <li><a onclick="localSecJump('Link to feeding practices quiz');">Feeding practices</a> quiz to get feedback on how you feed your baby
+                </li>
+                <li><a onclick="localSecJump('solids-4112.html#4.1.12a');">how to handle fussy eaters</a>
+                </li>
+                <li>top tips to <a onclick="localSecJump('solids-4111.html#4.1.11a');">help your baby like vegetables</a>
+                </li>
+                <li>keep track of which vegetables you have offered to your baby (and their reaction!) with our <a href=" tool: Link to vegetable tracker">vegetable tracker</a>
+                </li>
+            </ul>
 
-             <p class="mbn-text" id="4.1.2n">
-                     <br />
-                    This video talks about how solids eventually transition from being an 'experience' for your baby to their most important food, <a href="#4.1.6">drinking from a sippy cup</a> and <a href="#4.1.12">how to manage foods being rejected</a>.
+            <p class="mbn-text" id="4.1.2n">
+                This video talks about how solids eventually transition from being an 'experience' for your baby to their most important food, <a onclick="localSecJump('solids-416.html#4.1.6g');">drinking from a sippy cup</a> and <a onclick="localSecJump('solids-4112.html#4.1.12b');">how to manage foods being rejected</a>.
             </p>
-             <p class="mbn-text">
-                <b>Video: Solids - how much, drinks and managing food rejection</b>  
-                  <div class="video-container">
-                    <iframe  src="https://www.youtube.com/embed/oe_NXLPYO2A?ecver=1" frameborder="0" allowfullscreen></iframe>
-                </div>          
-            </p> 
-            <p class="mbn-text">
-                <i>Sourced from the Infant Program website. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/html/">infantprogram.org</a>.</i>
+            <p class="mbn-video">
+                Video: Solids - how much, drinks and managing food rejection
             </p>
-
-                <br />
-                <br />
-                <br />
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/oe_NXLPYO2A?ecver=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href=" http://www.infantprogram.org/ " target="_blank">infantprogram.org</a>.  
+            </p>
+            <p>
+                <br /><br /><br />
             </p>
         </div>
     </div>

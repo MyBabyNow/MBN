@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/914-home-safety.jpg" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Play</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Play</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+
+            <p class="mbn-section" id="9.1.4"> Home safety</p>
+            <p class="mbn-text" id="9.1.4a">
+                Having a young baby roaming about the house can be worrying, especially when there is potential danger wherever you look!
+            </p>
+            <p class="mbn-text">
+                Although you <i>could</i> keep your baby <a onclick="localSecJump('play-913.html#9.1.3b');">restrained</a> (e.g. in a bouncer) so you know they won't get into any trouble, it's recommended that you <a onclick="localSecJump('play-913.html#9.1.3a');">encourage free movement rather than restrict it</a> to help your baby's development
+            </p>
+            <p class="mbn-text">
+                Instead, it's much better to make areas of your home safe for your baby!
+            </p>
+
+            <p class="mbn-text" id="9.1.4b">
+                This video talks about ways to make your home safe for your baby to play freely now that they are starting to move around more.
+            </p>
+            <p class="mbn-video">
+                <b>Video: Home safety</b>
+            </p>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/W-AvKCgd7K4" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+            <p class="mbn-text" id="9.1.4c">
+                Some of the ways you can start baby proofing your home include:
+            </p>
+            <ul>
+                <img src="images/Play 1.png" class="mbn-text-image mbn-text-image-right" />
+                <li>keeping sharp items out of your baby's reach
+                </li>
+                <li>storing any small objects that your baby could <a onclick="localSecJump('solids/solids-417.html#4.1.7a');">choke</a> on in a secure cupboard or drawer that they can't get into
+                </li>
+                <li>putting anything else that you don't want your baby to touch (e.g. precious or breakable items) high enough so your baby can't reach them
+                </li>
+                <img src="images/Play 2.png" class="mbn-text-image mbn-text-image-right" />
+                <li>putting child-proof locks on cupboards and drawers
+                </li>
+                <li>making sure any medicines, cleaning products, matches, lighters and any other household poisons (e.g. oils) are stored securely
+                </li>
+                <li>placing a playpen around things you do not want your baby to go near (e.g. Christmas tree or mobile heater)
+                </li>
+                <li><img src="images/Play 3.png" class="mbn-text-image mbn-text-image-right" />using safety gates at the top and bottom of stairs and at balcony entrances
+                </li>
+                <li>putting corner protectors over sharp corners of furniture that might be at your baby's height (e.g. coffee tables)
+                </li>
+                <img src="images/Play 4.png" class="mbn-text-image mbn-text-image-right" />
+                <li>keeping hot water from the tap set at 50&#x2103; maximum
+                </li>
+                <li>installing smoke detectors and safety switches
+                </li>
+                <li>putting safety plugs into all power points
+                </li>
+                <br>
+                <img src="images/Play 5.png" class="mbn-text-image mbn-text-image-right" />
+                <li>removing any unsteady objects on tables that might fall over if furniture is moved and mounting TVs on walls or somewhere where they can't fall on your baby
+                </li>
+                <li> keeping chairs and other things away from windows, as well as keeping windows locked
+                </li>
+                <img src="images/Play 6.png" class="mbn-text-image mbn-text-image-right" />
+                <li>removing all cords from electrical appliances and window curtains/blinds to reduce the risk of strangulation
+                </li>
+                <li>pinning up <a onclick="localSecJump('hs/hs-811.html#8.1.1a');">emergency numbers and other useful contacts</a> somewhere handy - near the landline (if you have one) or on the fridge
+                </li>
+                <img src="images/Play 7.png" class="mbn-text-image mbn-text-image-right" />
+            </ul>
+
+            <p class="mbn-text">
+                Remember:
+            </p>
+            <ul>
+                <li>to get down to your baby's level to look around for potential trouble spots
+                </li>
+                <li>your <a onclick="localSecJump('hs/hs-814.html#8.1.4e');">maternal and child health nurse</a> should be able to give you a complete checklist on making your home baby safe
+                </li>
+            </ul>
+
+            <p class="mbn-video-caption">
+                Adapted with permission from the <a href=" http://www.infantprogram.org/6-months-active-play/" target="_blank">Infant Program</a>, getting healthy getting healthy eating and active play with your baby right from the start, and the <a href="http://raisingchildren.net.au/articles/pip_safety_indoors.html" target="_blank">Raising Children website</a>, Australia's trusted parenting website.
+            </p>
+            <p> <br>
+                <br>
+                <br>
+            </p>
+
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

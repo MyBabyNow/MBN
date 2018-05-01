@@ -1,3 +1,4 @@
+
 (function () {
     'use strict';
     var app = angular.module('ghFeed', []);
@@ -23,10 +24,18 @@
         var init = function () {
             $http.get("http://assc-klong-gh.azurewebsites.net/tables/gh_survey?$filter=user_id eq '" +
                 $scope.userId + "'").success(function (respondData) {
+                console.log(respondData[0].profile_photo);
 
                 $scope.carerRole = respondData[0].carer_role;
 
-                $scope.avatar = atob(respondData[0].profile_photo);
+                if(respondData[0].profile_photo.indexOf("data:image/jpeg;base64") != -1) {
+                  $scope.avatar = respondData[0].profile_photo;
+                }
+                else {
+                  $scope.avatar = atob(respondData[0].profile_photo);
+                }
+
+                //
                 $scope.babyName = respondData[0].baby_first_name == '' ? "Your baby's" : respondData[0].baby_first_name;
                 $scope.userName = respondData[0].carer_name;
                 //$scope.babyAge = respondData[0].baby_dob ? respondData[0].baby_dob : 0;
@@ -40,7 +49,7 @@
                 } else {
                     $scope.babyDueDate = moment(respondData[0].baby_due_date, "YYYY-MM-DD'T'HH:mm:ss:SSSZ").format('DD/MM/YYYY');
                     $scope.userName = respondData[0].pregnant_mum_name;
-                    $scope.babyAge = -1;
+
                 }
 
                 switch (respondData[0].feeding_method) {
@@ -59,14 +68,23 @@
                 }
                 $.session.set("babyName", respondData[0].baby_first_name == '' ? 'My Baby' : respondData[0].baby_first_name);
                 $.session.set("feedingMethod", respondData[0].feeding_method ? respondData[0].feeding_method : 'py');
-                $.session.set("babyAge", $scope.babyAge);
+
+                //
+                // Need to call back C# with the information recieved. href statement actives the call.
+                //
+                var cbProfile = { carer_name: $scope.userName, baby_name: $scope.babyName, feed_method: respondData[0].feeding_method, photo: respondData[0].profile_photo, action: "SAVE PROFILE" };
+                var cbProfileStr = "http://mybabynow.org.au/?action=" + JSON.stringify(cbProfile);
+                var ua = navigator.userAgent.toLowerCase();
+
+                if(ua == "mbn_app") {
+                  window.location.href=cbProfileStr;
+                }
             });
 
             $http.get("http://assc-klong-gh.azurewebsites.net/tables/post?$filter=createdAt gt datetime'" + '2017-05-28T05:03:35.400Z' + "'").success(function (respondData) {
                 console.log(respondData.length);
                 $scope.newPostsNumber = respondData.length;
             });
-
         };
 
         init();

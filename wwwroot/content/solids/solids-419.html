@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -41,7 +41,7 @@
         <div class="card-image">
             <img src="images/nutritional.png" />
             <span class="card-title mbn-card-title" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -50,7 +50,7 @@
 
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -59,78 +59,77 @@
     <!-- Content -->
     <div class="mbn-content" id="section-content">
         <div class="mbn-content-scroll" id="content">
-            <p class="mbn-section" id="4.1.9" > Nutritional needs</p>
+            <p class="mbn-section" id="4.1.9"> Nutritional needs</p>
             <p class="mbn-text" id="4.1.9a">
-                  Babies and children need a range of nutrients to <a href="#5.1.5">grow</a> and develop to their full potential, most of which come from their foods and drinks.  
-            </p>        
-            <p class="mbn-text">
-                   To make sure they get all these vital nutrients, it's important to keep in mind that babies (and children) only have little tummies, which means they need to:
-                <ul>
-                    <li>eat foods that are rich in nutrients - <a href="#4.1.15">'nutrient dense' or everyday foods</a>
-                    </li>
-                    <li>avoid foods and drinks that fill them up quickly yet contain little nutrition - 'energy dense, nutrient poor' or sometimes foods 
-                    </li>
-                </ul>
+                Babies and children need a range of nutrients to <a onclick="localSecJump('sfp/sfp-515.html#5.1.5');">grow</a> and develop to their full potential, most of which come from their foods and drinks.
             </p>
             <p class="mbn-text">
-                   Find out more about how you can <a href="#4.1.15">promote healthy eating habits right from the start</a>. 
+                To make sure they get all these vital nutrients, it's important to keep in mind that babies (and children) only have little tummies, which means they need to:
+            </p>
+            <ul>
+                <li>eat foods that are rich in nutrients - <a onclick="localSecJump('solids-4115.html#4.1.15e');"><i>'nutrient dense' or everyday</i> foods</a>
+                </li>
+                <li>avoid foods and drinks that fill them up quickly yet contain little nutrition - <a onclick="localSecJump('solids-4115.html#4.1.15f');"><i>'energy dense, nutrient poor' or sometimes</i> foods 
+                        </a> </li>
+            </ul>
+
+            <p class="mbn-text">
+                Find out more about how you can <a onclick="localSecJump('solids-4115.html#4.1.15c');">promote healthy eating habits right from the start</a>.
             </p>
 
-            <p class="mbn-text" id="4.1.9b">
-                <b>Iron</b>
-            </p> 
-            <p class="mbn-text">
-                   Iron is important for making sure your baby builds a healthy body and brain. Until around 6 months of age, your baby will get enough iron from breastmilk or formula but from 6 months, your baby needs more iron than your breastmilk or formula alone can provide. 
+            <p class="mbn-section" id="4.1.9b">
+                Iron
             </p>
             <p class="mbn-text">
-                   At 6 months your baby's main food should still be breastmilk/formula but this is why it's important to start introducing solids which are <a href="#4.1.2">high in iron</a> such as <a href="#4.1.16">iron fortified</a> baby cereals, finely mashed meat, fish, chicken, legumes (such as baked beans or lentils) and leafy green vegetables.
-            </p>
-
-            <p class="mbn-text" id="4.1.9c">
-                <b>Other nutritional needs </b>
-            </p> 
-            <p class="mbn-text">
-                   As long as your baby is being offered (and eating) a variety of different <a href="#4.1.2">healthy foods</a> and coloured fruit and <a href="#4.1.11">vegetable</a> <a href="#4.1.3">purees</a> as they start on solids, they should be getting all the nutrients they need. 
+                Iron is important for making sure your baby builds a healthy body and brain. Until around 6 months of age, your baby will get enough iron from breastmilk or formula but from 6 months, your baby needs more iron than your breastmilk or formula alone can provide.
             </p>
             <p class="mbn-text">
-                   Vitamin D, which is important for growing strong, healthy bones, is slightly different to the other nutrients. Although vitamin D can be found in oily fish and some fortified foods, the best source of vitamin D is the sun!  
-            </p>
-            <p class="mbn-text">
-                   Your baby's skin actually <i>makes</i> vitamin D when in sunshine, which is a bonus because babies not only love being outdoors, but it also helps them to build healthy bones! 
-            </p>
-            <p class="mbn-text">
-                   Just make sure your baby's skin is <b>not exposed to sunshine for more than a few minutes at a time</b>, and never when UV levels are really high (such as in summer). This will help prevent burning, skin damage and later development of skin cancers. 
-            </p>
-            <p class="mbn-text">
-                   <b>Note:</b> because babies' skin is very sensitive and can burn easily, <a href="http://www.cancer.org.au/preventing-cancer/sun-protection/preventing-skin-cancer/">Cancer Council Australia recommends</a> a combination of sun protection measures be used whenever UV Index levels reach three and above: 
-                <ul>
-                    <li class="mbn-ol"><b>Slip</b> on sun-protective clothing to cover as much skin as possible  
-                    </li>
-                    <li class="mbn-ol"><b>Slop</b> on SPF30+ sunscreen at least 20 minutes before going outside 
-                    </li>
-                    <li class="mbn-ol"><b>Slap</b> on a broad brim or legionnaire style hat  
-                    </li>
-                     <li class="mbn-ol"><b>Seek</b> shade
-                    </li>
-                    <li class="mbn-ol"><b>Slide</b> on some sunglasses  
-                    </li> 
-                </ul>
+                At 6 months your baby's main food should still be breastmilk/formula but this is why it's important to start introducing solids which are <a onclick="localSecJump('solids-412.html#4.1.2d');">high in iron</a> such as <a onclick="localSecJump('solids-4116.html#4.1.16h');">iron fortified</a> baby cereals, finely mashed meat, fish, chicken, legumes (such as baked beans or lentils) and leafy green vegetables.
             </p>
 
-            <p class="mbn-text" id="4.1.9d">
-                <b>Vitamin supplements</b>
-            </p> 
-            <p class="mbn-text">
-                   The breastmilk/formula and solids your baby eats should provide enough nutrients for your baby, so there is no need for any vitamins or supplements unless your GP or <a href="#8.1.2">maternal and child health nurse</a> recommends otherwise. 
+            <p class="mbn-section" id="4.1.9c">
+                Other nutritional needs
             </p>
+            <p class="mbn-text">
+                As long as your baby is being offered (and eating) a variety of different <a onclick="localSecJump('solids-412.html#4.1.2d');">healthy foods</a> and coloured fruit and <a onclick="localSecJump('solids-4111.html#4.1.11a');">vegetable</a> <a onclick="localSecJump('solids-413.html#4.1.3h');">pur&eacute;es</a> as they start on solids, they should be getting all the nutrients they need.
+            </p>
+            <p class="mbn-text">
+                Vitamin D, which is important for growing strong, healthy bones, is slightly different to the other nutrients. Although vitamin D can be found in oily fish and some fortified foods, the best source of vitamin D is the sun!
+            </p>
+            <p class="mbn-text">
+                Your baby's skin actually <i>makes</i> vitamin D when in sunshine, which is a bonus because babies not only love being outdoors, but it also helps them to build healthy bones!
+            </p>
+            <p class="mbn-text">
+                Just make sure your baby's skin is <b>not exposed to sunshine for more than a few minutes at a time</b>, and never when UV levels are really high (such as in summer). This will help prevent burning, skin damage and later development of skin cancers.
+            </p>
+            <p class="mbn-text">
+                <b>Note:</b> because babies' skin is very sensitive and can burn easily, <a href="http://www.cancer.org.au/preventing-cancer/sun-protection/preventing-skin-cancer/" target="_blank">Cancer Council Australia recommends</a> a combination of sun protection measures be used whenever UV Index levels reach three and above:
+            </p>
+            <ul>
+                <li class="mbn-ol"><b>Slip</b> on sun-protective clothing to cover as much skin as possible
+                </li>
+                <li class="mbn-ol"><b>Slop</b> on SPF30+ sunscreen at least 20 minutes before going outside
+                </li>
+                <li class="mbn-ol"><b>Slap</b> on a broad brim or legionnaire style hat
+                </li>
+                <li class="mbn-ol"><b>Seek</b> shade
+                </li>
+                <li class="mbn-ol"><b>Slide</b> on some sunglasses
+                </li>
+            </ul>
 
-                <br />
-                <br />
-                <br />
+
+            <p class="mbn-section" id="4.1.9d">
+                Vitamin supplements
+            </p>
+            <p class="mbn-text">
+                The breastmilk/formula and solids your baby eats should provide enough nutrients for your baby, so there is no need for any vitamins or supplements unless your GP or <a onclick="localSecJump('hs/hs-812.html#8.1.2');">maternal and child health nurse</a> recommends otherwise.
+            </p>
+            <p>
+                <br /><br /><br />
             </p>
         </div>
     </div>
-
     <div class="navbar-fixed mbn-footer hide-on-med-and-up">
         <nav class="mbn-nav">
             <div class="nav-wrapper">

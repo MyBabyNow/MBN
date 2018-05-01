@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/preloader/main.css">
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="application/javascript">
+        function calc_bmi() {
+            var h = document.getElementById("height").value;
+            var w = document.getElementById("weight").value;
+            var r = document.getElementById("result");
+
+            $("#bmi_result").css("display", "none");
+            r.value = w / (h * h) * 100 * 100;
+
+            if (h == "" || w == "") {
+                alert("Please enter both weight and height.");
+            } else {
+                $("#bmi_result").css("display", "block");
+                $("#result").html(parseInt(r.value));
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/landing.png" />
+            <span class="card-title mbn-card-title" id="section-title" onclick="Load('tools');">
+            <i class="fa fa-chevron-left"></i> Tools
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title" onclick="Load('tools');">
+            <i class="fa fa-chevron-left"></i> Tools
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll">
+            <p class="mbn-section">BMI calculator</p>
+            <p class="mbn-text">
+                BMI (Body Mass Index) is a measurement of body fat based on height and weight that applies to both men and women between the ages of 18 and 65 years. BMI can be used to indicate if you are overweight, obese, underweight or normal.
+            </p>
+            <p class="mbn-text">
+                A healthy BMI score is between 20 and 25. A score below 20 indicates that you may be underweight; a value above 25 indicates that you may be overweight.
+            </p>
+            <p class="mbn-text">Use the calculator below to determine your BMI.<br /><br /></p>
+
+            <div style="padding-left: 10%; padding-right: 10%;">
+                <p class="mbn-text">
+                    <span>Your height in <b>centimetres</b></span>
+                    <input id="height" placeholder="170" />
+                </p>
+                <p class="mbn-text">
+                    <span>Your weight in <b>kilograms</b></span>
+                    <input id="weight" placeholder="50" />
+                </p>
+
+                <div id="bmi_result" style="display: none;">
+                    <h4 style="text-align: center;">
+                        Your BMI is <span id="result"></span>
+                    </h4>
+                </div>
+
+                <p>
+                    <br />
+                </p>
+
+                <div class="login-btn" onclick="calc_bmi()">Calculate</div>
+            </div>
+
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p>
+                                <img src="../../images/topics.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/tools-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

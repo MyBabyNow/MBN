@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/811.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="8.1.1"> Emergency contacts </p>
+            <p class="mbn-text" id="8.1.1a">
+                You will hopefully never need to use any of these services but it is always a good idea to know what's available and how to use it, just in case.
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('8.1.1b');">Ambulance, fire or police</a>
+                </li>
+                <li><a onclick="localSecJump('8.1.1c');">Child protection</a>
+                </li>
+                <li><a onclick="localSecJump('8.1.1d');">Family violence</a>
+                </li>
+                <li><a onclick="localSecJump('8.1.1e');">Poisons</a>
+                </li>
+                <li><a onclick="localSecJump('8.1.1f');">Sexual assault</a>
+                </li>
+                <li><a onclick="localSecJump('8.1.1g');">Suicide risk</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="8.1.1b">
+                Ambulance, fire or police
+            </p>
+            <p class="mbn-text">
+                To contact Police, Fire or Ambulance in life threatening or emergency situations.
+            </p>
+            <p class="mbn-text">
+                <b>Triple Zero</b> <img src="images/8.1.png" image width="30" height="30">
+            </p>    
+            <ul>
+                <li>Is someone seriously injured or in need of urgent medical help?
+                </li>
+                <li>Is your life or property being threatened?
+                </li>
+                <li>Have you just witnessed a serious accident or crime?
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                If you answered YES call Triple Zero <a href="tel:000">(000)</a>.
+            </p>
+
+            <p class="mbn-text">
+                <a href="tel:000">(000)</a> (24 hours/7 days)
+                <br> (TTY
+                <a href="tel:106">106</a>)
+                <br>
+                <a href="https://www.triplezero.gov.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-section" id="8.1.1c">
+                <b>Child protection </b>
+            </p>
+            <p class="mbn-text">
+                To report concerns about the immediate safety of a child within their family unit.
+            </p>
+
+            <p class="mbn-text">
+                <b><u>Australian Capital Territory </u></b>
+                <br>
+                <b>Child and Youth Protection Services </b>
+                <br>
+                <a href="tel:1300556729">1300 556 729</a>
+                <br>
+                <a href="https://www.form.act.gov.au/smartforms/csd/child-concern-report/" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b><u>New South Wales</u></b>
+                <br>
+                <b>Child Protection Helpline</b> <img src="images/8.1.png" image width="30" height="30" >
+                <br>
+                <a href="tel:132111">13 21 11</a> (24 hours/7 days)
+                <br> (TTY
+                <a href="tel:1800212936">1800 212 936</a>)
+                <br>
+                <a href="https://www.community.nsw.gov.au/preventing-child-abuse-and-neglect/protecting-children" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b><u>Northern Territory</u></b>
+                <br>
+                <b>Territory Families</b>
+                <br>
+
+                <a href="tel:1800700250">1800 700 250</a>
+                <br> (TTY
+                <a href="tel:1800212936">1800 212 936</a>)
+                <br>
+                <a href="https://nt.gov.au/law/crime/report-child-abuse" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b><u>Queensland</u></b>
+                <br>
+                <b>Department of Communities, Child Safety and Disability Services </b>
+                <br>
+                <a href="tel:0732359999">(07) 3235 9999</a> or <a href="tel:1800177135">1800 177 135</a> (after hours and weekends)
+                <br>
+                <a href="https://www.communities.qld.gov.au/childsafety/protecting-children/reporting-child-abuse" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b><u>South Australia</u></b>
+                <br>
+                <b>Department for Child Protection</b>
+                <br>
+                <a href="tel:131478">131 478</a>
+                <br>
+                <a href="https://www.childprotection.sa.gov.au/reporting-child-abuse" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b><u>Tasmania</u></b>
+                <br>
+                <b>Department of Health and Human Services </b><img src="images/8.1.png" image width="30" height="30" >
+                <br>
+                <a href="tel:1300737639">1300 737 639</a> (24 hours/7 days)
+                <br>
+                <a href="https://www.dhhs.tas.gov.au/children/child_protection_services" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b><u>Western Australia</u></b>
+                <br>
+                <b>Department for Child Protection and Family Support </b>
+                <br>
+                <a href="tel:1800622258">1800 622 258</a> (Business hours)
+                <br>
+                <a href="tel:1800199008">1800 199 008</a> (after hours)
+                <br>
+                <a href="https://www.dcp.wa.gov.au/Organisation/contactUs/Pages/ContactUs.aspx" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b><u>Victoria</u></b>
+                <br>
+                <b>Child Protection Crisis Line</b> <img src="images/8.1.png" image width="30" height="30" >
+                <br>
+                <a href="tel:131278">13 12 78</a> (24 hours/7 days)
+                <br>
+                <a href="tel:1800199008">1800 199 008</a> (after hours)
+                <br>
+                <a href="https://www.dhs.vic.gov.au/for-individuals/children,-families-and-young-people/child-protection/about-child-abuse" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-section" id="8.1.1d">
+                Family violence <br/><br/>
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1800RESPECT">1800RESPECT</a>
+                <img src="images/8.1.png" image width="30" height="30" >
+                <br />
+                A telephone and online counselling, information and support service for people experiencing
+                sexual assault, domestic and family violence.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1800737732">1800 737 732</a> (24 hours/7 days)
+                <br />
+                <a href="https://www.1800respect.org.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b><u>New South Wales</u></b>
+            </p>
+            <p class="mbn-text">
+                <b>Domestic Violence Line</b> <img src="images/8.1.png" image width="30" height="30">
+                <br/> A state-wide, counselling, information and referrals for women and same-sex partners who are experiencing
+                or have experienced domestic violence.
+            </p>
+            
+            <p class="mbn-text">
+                <a href="tel:1800656463">1800 656 463</a> (24 hours/7 days)
+                <br> (TTY
+                <a href="tel:1800671442">1800 671 442</a>)
+                <br>
+                <a href="https://www.domesticviolence.nsw.gov.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-section" id="8.1.1e">
+                Poisons
+            </p>
+            
+            <b>Poisons Information Centre</b> <img src="images/8.1.png" image width="30" height="30" >
+            <br />
+            Advice about what to do if you or someone in your care has been poisoned, overdosed, made a mistake with
+            medicines or has been bitten/stung by a snake, spider, bee, wasp etc.
+
+            <p class="mbn-text">
+                <a href="tel:131126">13 11 26</a> (24 hours/7 days)
+            </p>
+
+
+            <p class="mbn-section" id="8.1.1f">
+                Sexual assault
+            </p>
+
+            <p class="mbn-text">
+                <a href="tel:1800RESPECT">1800RESPECT</a>
+                <img src="images/8.1.png" image width="30" height="30" >
+                <br/>A telephone and online counselling, information and support service for people experiencing sexual assault, domestic and family violence.
+            </p>
+
+            <p class="mbn-text">
+                <a href="tel:1800737732 ">1800 737 732</a> (24 hours/7 days)
+                <br>
+                <a href="https://www.1800respect.org.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b><u>New South Wales</u></b>
+            </p>
+            <p class="mbn-text">
+                <b>Rape Crisis Centre</b> <img src="images/8.1.png" image width="30" height="30" >
+                <br> A telephone and online crisis counselling service for anyone in New South Wales who has experienced or is at risk of sexual assault and their non-offending supporters.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1800424017">1800 424 017</a> (24 hours/7 days)
+                <br>
+                <a href="https://www.nswrapecrisis.com.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b><u>Victoria</u></b>
+            </p>
+            <p class="mbn-text">
+                <b>Sexual Assault Crisis Line</b>
+                <br> A state-wide, after-hours telephone crisis counselling service for victim/survivors of both past and recent sexual assault.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1800806292">1800 806 292</a> (5pm-9am Mon-Fri; 24 hours Sat-Sun/public holidays)
+                <br> (TTY
+                <a href="tel:1800555677 ">1800 555 677 </a> then ask for 1800 806 292)
+                <br>
+                <a href="https://www.sacl.com.au" target="_blank">Website</a>
+            </p>
+
+
+            <p class="mbn-section" id="8.1.1g">
+                Suicide risk
+            </p>
+
+            <p class="mbn-text">
+                <b>Lifeline</b>
+                <img src="images/8.1.png" image width="30" height="30" >
+                <br> A confidential telephone or one-on-one online crisis support service for anyone experiencing a personal crisis or thinking about suicide.
+            </p>
+
+            <p class="mbn-text">
+                <a href="tel:131114">131114</a> (24 hours/7 days)
+                <br>
+                <a href="https://https://www.lifeline.org.au/get-help/online-services/crisis-chat" target="_blank">Crisis Support Chat</a> (7pm-4am/7 days)
+                <br>
+                <a href="https://https://www.lifeline.org.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b>Suicideprevention.com.au </b>
+                <br> An information service for anyone thinking about suicide provided by the Australian Suicide Prevention Foundation.
+            </p>
+            <p class="mbn-text">
+                <a href="https://https://suicideprevention.com.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b><u>Victoria</u></b>
+            </p>
+            <p class="mbn-text">
+                <b>SuicideLine</b>
+                <img src="images/8.1.png" image width="30" height="30" >
+                <br> An anonymous counselling service offering professional support to people at risk of suicide, people concerned about someone else's risk of suicide, and people bereaved by suicide.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1300651251">1300 651 251</a> (24 hours/7 days)
+                <br>
+                <a href="https://www.suicideline.org.au" target="_blank">Website</a>
+            </p>
+            <p> 
+                <br>
+                <br>
+                <br>
+            </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

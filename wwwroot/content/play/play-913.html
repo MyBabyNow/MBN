@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/913-encourage-movement.jpg" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Play</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Play</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+
+            <p class="mbn-section" id="9.1.3"> Encouraging free movement</p>
+            <p class="mbn-text" id="9.1.3a">
+                You may have heard that sedentary behaviour - that is, being inactive (e.g. at a desk or watching TV) - is bad for your health, and that we all should try to <a onclick="localSecJump('parents/parents-715.html#7.1.5a');">include plenty of movement in our day</a>?
+            </p>
+            <p class="mbn-text">
+                Well, it's a similar story with babies and children!
+            </p>
+            <p class="mbn-text">
+                In fact, it is recommended that babies (and older children) do not go for more than an hour without any free movement, except for when they're sleeping.
+            </p>
+            <p class="mbn-text">
+                And while this might not seem to be a problem, keep in mind that babies generally can't control whether they can move about freely - it is usually the parents or carer that decides this for them, often to <i>keep them safe</i> while parents/carers do something else.
+            </p>
+
+
+            <p class="mbn-text" id="9.1.3b">
+                Some ways babies can be restrained include:
+            </p>
+            <ul>
+                <li>highchairs
+                </li>
+                <li>pushers
+                </li>
+                <li>play centres/ play chairs
+                </li>
+                <li>car seats
+                </li>
+                <li>bouncers
+                </li>
+                <li>baby slings or carriers
+                </li>
+                <li>being held in someone's arms!
+                </li>
+            </ul>
+
+
+            <p class="mbn-text" id="9.1.3c">
+               Keeping the amount of time your baby is restrained to a minimum is an important way of making sure your baby's free movement is not restricted for long periods of time.
+            </p>
+
+            <p class="mbn-text">
+                This might mean letting your baby <a onclick="localSecJump('play-912.html#9.1.2g');">play independently</a> in a safe environment instead of restraining them while you get things done. Learn more about creating <a onclick="localSecJump('play-914.html#9.1.4a');">safe areas in your home</a>.
+            </p>
+
+
+            <p class="mbn-video-caption">
+                Adapted with permission from the <a href=" http://www.infantprogram.org/6-months-active-play/" target="_blank">Infant Program</a>, getting healthy eating and active play with your baby right from the start.
+            </p>
+
+            <p class="mbn-text" id="9.1.2d">
+                This video talks about the need for babies to be able to move around freely, without being <a onclick="localSecJump('9.1.3b');">restrained</a>.
+            </p>
+            <p class="mbn-video">
+                <b>Video: Limiting restraint </b>
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VE0Ly4kEGs4" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+
+            <p> <br>
+                <br>
+                <br>
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

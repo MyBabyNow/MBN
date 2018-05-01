@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/5114.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="5.1.14">Safe sleep tips<span id="5.1.14a"></span></p>
+
+            <p class="mbn-text">
+                You can reduce the risk of sudden unexpected death in infancy (SUDI) including sudden infant death syndrome (SIDS) and fatal sleeping accidents by following these tips.
+            </p>
+            <ul>
+                <li class="mbn-ol"><b>Always put your baby to sleep on their back, never on their side or stomach</b>
+                    <br> This is the safest position. Once your baby learns to roll (4-6 months), continue to put them to sleep on their back but let them find their own sleeping position.
+                </li>
+                <li class="mbn-ol"><b>Make sure your baby's head can't get covered while sleeping</b>
+                    <br> Put your baby to sleep with their feet close to the end of the cot and tuck in blankets securely or use a sleeping bag. Sleeping bags with fitted head and arm holes are the safest option.
+                </li>
+                <li class="mbn-ol"><b>Avoid smoking </b>
+                    <br> Exposing your baby to second-hand smoke still harms them and the link between smoking and SUDI exists even when you smoke away from your baby. If you would like to quit but need some help check out <a onclick="localSecJump('hs/hs-818.html#8.1.8m');">Quitnow</a>.
+                </li>
+                <li class="mbn-ol"><b>Don't use cot bumpers, soft toys, pillows, doonas and soft sleeping surfaces when your baby goes to sleep </b>
+                    <br> These items can suffocate babies.
+                </li>
+                <li class="mbn-ol"><b>Use cot that meets the current Australian standards  </b>
+                    <br> Cots that <a onclick="localSecJump('py/py-1014.html#10.1.4j');">meet the standards</a> will be labelled (AS/NZS 2172:2003, or AS/NZS 2195:1999 for portable cots).
+                </li>
+                <li class="mbn-ol"><b>Use a firm, well-fitted mattress and sheets </b>
+                    <br> Make sure there is no gap between the mattress and the edge of the cot where your baby's head might get stuck.
+                </li>
+                <li class="mbn-ol"><b>Avoid letting your baby sleep on couches and makeshift bedding </b>
+                    <br> This is dangerous because your baby may get caught between pillows or cushions, a wall and a mattress or slip under blankets which may lead to suffocation.
+                </li>
+                <li class="mbn-ol"><b>Dress your baby in sleep clothes that are warm but not hot </b>
+                    <br> Overheating is a risk factor for SUDI including SIDS and fatal sleeping accidents.
+                </li>
+                <li class="mbn-ol"><b>Share a room </b>
+                    <br> Have your baby in a cot <a onclick="localSecJump('py/py-1013.html#10.1.3ae');">in your room</a> for the first 6-12 months.
+                </li>
+                <li class="mbn-ol"><b>Make sure your baby's carer knows the safe sleep practices above </b>
+                    <br> Never assume grandparents or even professional child carers will know the above safe sleep practices.
+                </li>
+            </ul>
+
+            <p class="mbn-video-caption">
+                Adapted with permission from the <a href="http://raisingchildren.net.au/articles/safe_sleeping.html   " target="_blank">Raising Children website</a>, Australia's trusted parenting website.
+            </p>
+
+
+            <p class="mbn-text" id="5.1.14b">
+                This video shows how to reduce the risk of SUDI (including SIDS and fatal sleeping accidents) and includes <a onclick="localSecJump('5.1.14a');">tips on safe sleeping</a>.
+            </p>
+            <p class="mbn-video">
+                <b>Video: Minimising the risk of SUDI</b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/wSWR_tKNqio" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/sids_video.html/context/824 /context/824 " target="_blank">raisingchildren.net.au</a>
+            </p>
+
+
+            <br />
+            <br />
+            <br />
+            <br />
+       </div>
+    </div>
+
+
+            <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+                <nav class="mbn-nav">
+                    <div class="nav-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col mbn-icon" onclick="Load('feed');">
+                                    <p>
+                                        <img src="../../images/feed.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">My baby</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('topics');">
+                                    <p class="mbn-icon-selected">
+                                        <img src="../../images/topics-s.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text-selected">Topics</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('tools');">
+                                    <p>
+                                        <img src="../../images/tools.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Tools</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('forum');">
+                                    <p>
+                                        <img src="../../images/forum.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Forum</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('more');">
+                                    <p>
+                                        <img src="../../images/more.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">More</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+    
+</body>
+
+</html>

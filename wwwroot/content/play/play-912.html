@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/912-screen-time.jpg" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Play</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Play</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="9.1.2">Screen time</p>
+
+            <p class="mbn-text" id="9.1.2a">
+                Letting your baby be entertained by screens and other electronic devices (such as the TV, tablets, phones, computers etc) can be tempting when you need some time to get things done, but did you realise that doing so can affect your baby's development and that there are <a onclick="localSecJump('9.1.2g');">other ways to keep your baby occupied</a>?
+            </p>
+
+            <p class="mbn-text" id="9.1.2b">
+                Research shows that babies who watch TV or have other <i>screen time</i>, have:
+            </p>
+            <ul>
+                <li>shorter attention spans
+                </li>
+                <li>altered development of their eye strength and movement
+                </li>
+                <li>less time for active play and social interaction
+                </li>
+                <li>reduced opportunities for language development
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                In addition, the blue light and stimulation from screens can make it hard to <a onclick="localSecJump('sfp/sfp-517.html#5.1.7a');">settle a baby to sleep</a>.
+            </p>
+            <p class="mbn-text">
+                This is why it is recommended that children under the age of 2 years have no screen time at all. This means no watching of TV, DVDs, computers, tablets (such as iPads), mobile phones, electronic games or any other electronic devices.
+            </p>
+
+            <p class="mbn-text" id="9.1.2c">
+                <b>What about shows and games <i>made</i> for young children?</b>
+                <br> Not even <i>these</i> are recommended - These might be <i>made</i> for young children but that doesn't mean that young children <i>need</i> or even <i>should</i> use them - just like many other products out there (e.g. <a onclick="localSecJump('solids/solids-4115.html#4.1.15f');">sometimes foods</a> and <a onclick="localSecJump('ff/ff-212.html#2.1.2d');">toddler milks</a>).
+            </p>
+            <p class="mbn-text">
+                Young children are not able to transfer learning from a screen into real-world situations because their attention and memory skills are still developing. So, despite what these types of shows/games might claim, they will <i>not</i> help your baby's development
+            </p>
+            <p class="mbn-text">
+                It's easy to fall into the <a onclick="localSecJump('9.1.2f');">screen time trap</a> and given that screen time also often reduces the amount of time your baby has for <a onclick="localSecJump('9.1.2d');">active play</a> and <a onclick="localSecJump('play-911.html#9.1.1a');">tummy time</a>, both of which boost your baby's learning and development, it makes sense to avoid screens altogether.
+            </p>
+            <p class="mbn-text">
+                But don't worry, there are many positive ways to help your baby develop (and keep them entertained!) through <a onclick="localSecJump('9.1.2d');">active play</a> and <a onclick="localSecJump('9.1.2g');">independent play</a>.
+            </p>
+
+            <p class="mbn-text" id="9.1.2d">
+                <b>Active play</b>
+                <br> Regardless of age, we should <i>all</i> spend time in active play, but this is especially true for babies and toddlers!
+            </p>
+
+            <p class="mbn-text">
+                For a baby, active play simply means any play when they are not <a onclick="localSecJump('play-913.html#9.1.3b');">restrained</a> (e.g. in a highchair, bouncer or play chair). For older children and adults, active play is any play that involves movement (not sitting or standing still).
+            </p>
+            <p class="mbn-text">
+                The human interaction involved in active play helps babies and toddlers:
+            </p>
+            <ul>
+                <li>learn how to interact and share with others
+                </li>
+                <li>improve verbal and non-verbal (such as body language) communication skills
+                </li>
+                <li>develop self-confidence and skills to cope with stressful situations
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Physically, it helps them:
+            </p>
+            <ul>
+                <li>develop skills for moving and controlling their bodies
+                </li>
+                <li>improve the health of their heart, bones and muscles
+                </li>
+                <li>learn to enjoy being physically active from an early age
+                </li>
+                <li>use up some of their seemingly endless energy
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Most of all, it's fun!
+            </p>
+            <p class="mbn-text">
+                Need some inspiration? Check out these <a onclick="localSecJump('play-915.html#9.1.5b');">play ideas - month-by-month until your baby is a toddler</a>!
+            </p>
+
+            <p class="mbn-section" id="9.1.2e">
+                <b>Video: Screen time</b>
+            </p>
+            <p class="mbn-text">
+                This video talks about how screen time impacts on a child's development and why it is recommended that children under the age of 2 do not spend any time looking at screens.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/pDbuv_sHKgM" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+
+            <p class="mbn-text" id="9.1.2f">
+                <b>The screen time trap </b>
+                <br> Using screens to keep a baby busy can also end up creating the very problem we are trying to solve by using the screens in the first place - a child who can't entertain themselves!
+            </p>
+            <p class="mbn-text">
+                <a onclick="localSecJump('9.1.2g');">Playing independently</a> is something that babies are born ready and eager to do. But when babies spend time watching TV and other screens, they are often far less likely to learn to play independently. This can then lead to parents becoming more and more reliant on screens to occupy their baby - the screen time trap!
+            </p>
+            <p class="mbn-text">
+                Then comes the added pressure of trying to restrict and control screen time in the toddler years when power struggles are real and often.
+            </p>
+            <p class="mbn-text">
+                Letting your baby watch TV and other screens might seem like something that will make your life easier but the reality is that they are likely to make it a lot more difficult!
+            </p>
+            <p class="mbn-text">
+                To avoid the screen time trap, we recommend avoiding screens altogether until your child is at least 2 years of age and then to only use them sparingly. Health authorities recommend 2-5 year olds have no more than 1 hour of screen time per day for. Less is better!
+            </p>
+            <p class="mbn-text">
+                So how can I keep my baby entertained without screens?
+            </p>
+
+            <p class="mbn-text" id="9.1.2g">
+                <b>Independent play</b>
+                <br> As a parent, it can be hard to get things done, or even have a few moments peace to ourselves! Screens might seem like an easy way to pinch a few minutes here and there but <a onclick="localSecJump('9.1.2b');">they're not recommended</a>.
+            </p>
+            <p class="mbn-text">
+                Instead of screens, try keeping your baby entertained by encouraging independent play in a <a onclick="localSecJump('play-914.html#9.1.4a');">safe environment</a>.
+            </p>
+            <p class="mbn-text">
+                Babies learn about the world by playing and while playing with your baby is important, it is also important to give them a chance to play and explore <i>on their own</i>. This helps them to understand that they are <i>separate</i> from you. It also gives you a chance to see what they're most interested in!
+            </p>
+            <p class="mbn-text">
+                When first starting out, feel free to sit on the floor and just watch your baby explore. Eventually, you will be able to work or relax nearby while they play independently.
+            </p>
+            <p class="mbn-text">
+                Of course, your baby should only ever be left to play on their own in a safe environment. Find out <a onclick="localSecJump('play-914.html#9.1.4a');">how to make your home safe</a> for your baby.
+            </p>
+
+
+            <p> <br>
+                <br>
+                <br>
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

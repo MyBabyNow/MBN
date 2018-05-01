@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/5112.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+    <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="5.1.12" >4 steps to better sleep </p>
+            <p class="mbn-text" id="5.1.12a">
+                What's the secret to a good night's sleep for the whole family? Your baby learning how to go to sleep without your help!  
+            </p>
+            <p class="mbn-text">
+                Use this 4 step method to deal with ongoing sleep problems in your 6+ month old:  
+            </p>
+             <ul>
+                 <li class="mbn-ol"> <a onclick="localSecJump('5.1.12b');">find out what's causing the sleep problem</a> 
+                </li>
+                 <li class="mbn-ol"> <a onclick="localSecJump('5.1.12b');">work on phasing this problem out over time</a> 
+                </li>
+                 <li class="mbn-ol"> <a onclick="localSecJump('5.1.12c');">create a positive bedtime routine</a>  
+                </li>
+                 <li class="mbn-ol"> <a onclick="localSecJump('5.1.12d');">teach your baby to settle to sleep on their own</a>  
+                </li>
+            </ul>
+            
+            <p class="mbn-text" id="5.1.12b">
+                  <b>STEPS 1 & 2: cause of the sleep problem and how to phase it out</b>
+            </p>  
+             <table style="width:100%">
+                <tr>
+                    <td style="vertical-align: top"><b>Sleep habit</b></td>
+                    <td><b>How to phase out</b></td>  
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>Night feeding</b></td>
+                    <td>If your baby routinely falls asleep on breast or bottle, try feeding them before their bath or at least 20 minutes before bedtime. Feed outside their bedroom. 
+                        <br>
+                        After 6 months, babies no longer need a night feed, so you might consider gradually <a onclick="localSecJump('sfp-513.html#5.1.3a');">phasing out the night feed</a>. </td> 
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>Dummy</b></td>
+                    <td>If your baby's dummy falls out during the night and they won't go back to sleep until it's replaced, try phasing it out. You could help your baby <a onclick="localSecJump('sfp-5110.html#5.1.10e');">give up the dummy</a> or hope that as your baby gets older, they might get better at finding their dummy during the night </td> 
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>Music and mobiles</b></td>
+                    <td>Instead of using music and baby mobiles at bedtime, try phasing these out by turning them off before you leave the room while your baby is still awake.</td> 
+                </tr>
+                 <tr>
+                    <td style="vertical-align: top"><b>Baby monitors</b></td>
+                    <td>A baby monitor may not be needed unless your baby is a long way from your room. Try not to go into your baby if they are only grizzling - give them a chance to re-settle on their own.</td> 
+                </tr>
+            </table> 
+            
+            <p class="mbn-text" id="5.1.12c">
+                  <b>STEP 3: creating a positive bedtime routine </b>
+            </p>  
+            <p class="mbn-text">
+                   This means creating a regular series of events carried out around the same time and in the same order at each bedtime. Over time, this set of events will help your baby realise that it's time for sleep. 
+            </p>
+            <p class="mbn-text">
+                  During the day, for example, this could start with a story, then a cuddle, then into the sleeping bag and bed. In the evening it might include a milk feed, bath time, story, cuddle and then bed. 
+            </p>
+
+            <p class="mbn-text" id="5.1.12d">
+                  <b>STEP 4: teaching your baby to settle to sleep on their own </b>
+            </p>  
+            <p class="mbn-text">
+                There are quite a few ways to help your baby settle to sleep on their own. A couple of popular ways include <a onclick="localSecJump('5.1.12e');">controlled comforting</a> and <a onclick="localSecJump('5.1.12f');">camping out</a>. 
+            </p>
+
+            <p class="mbn-text" id="5.1.12e">
+                  <b>Controlled comforting </b> 
+            </p>  
+            <p class="mbn-text">
+                   Rather than completely ignoring your baby’s crying until they fall asleep (which is not recommended), controlled comforting involves quickly checking and reassuring your baby while they are still learning to settle themselves to sleep. 
+            </p>
+            <p class="mbn-text">
+                   How to do it: 
+            </p> 
+                 <ul>
+                    <li>put your baby to bed awake  
+                    </li>
+                    <li>stay with them until they are quiet for 1 minute, then leave to allow them time to settle on their own 
+                    </li>
+                    <li><i>ignore any grizzling</i> but if the crying escalates: 
+                    </li>
+                <ul>
+                    <li>only return to provide <i>brief</i> reassurance or comfort 
+                    </li>
+                    <li>stay until your baby is calm (but not asleep) then leave and allow them to settle again 
+                    </li>
+                </ul>
+                    <li>repeat these steps until your baby falls asleep on their own  
+                    </li>
+                </ul>
+                    
+           <p class="mbn-text" id="5.1.12f">
+                  <b>Camping out</b> 
+            </p>  
+            <p class="mbn-text">
+                   This option is good if you want to stay near to your baby but may not be the best if you easily get upset or frustrated when your baby cries. The idea is to gradually reduce the amount of help your baby needs to settle. 
+            </p>
+            <p class="mbn-text">
+                  Over time, you might: 
+            </p> 
+                <ul>
+                    <li>start by  <a onclick="localSecJump('sfp-517.html#5.1.7b');">patting</a> 
+                    </li>
+                    <li>then sit next to the cot 
+                    </li>
+                    <li>gradually move further away from the cot until you are outside your baby's room 
+                    </li>
+                </ul>
+           
+            <p class="mbn-text" id="5.1.12g">
+                   Remember: 
+            </p> 
+                 <ul>
+                    <li>these are only 2 methods of teaching your baby to sleep on their own - there are other ways  
+                    </li>
+                     <li>be <b>consistent and persistent</b> with your approach - it sometimes takes 3-14 days to change your baby's sleep patterns. Of course, this is easier said than done when <a onclick="localSecJump('parents/parents-713.html#7.1.3a');">you're exhausted</a>! Try to have a <a onclick="localSecJump('parents/parents-716.html#7.1.6c');">support person</a> around and choose a good time. Alternatively, many parents find <a onclick="localSecJump('hs/hs-816.html#8.1.6a');">seeking professional help</a> such as going to 'sleep school' with their babies very helpful. 
+                    </li>
+                    <li>babies are <i>always</i> changing and may go through times when they change their sleep habits (e.g. when they are sick, you're away on holidays etc) - you may need to repeat these methods to re-establish good sleeping habits 
+                    </li>
+                </ul>
+                   
+            <p class="mbn-video-caption">
+                Adapted with permission from the <a href="http://raisingchildren.net.au/solving_sleep_problems/solving_babies_sleep_problems.html" target="_blank">Raising Children website</a>, Australia's trusted parenting website.     
+            </p>  
+            
+            <p class="mbn-section" id="5.1.12h">
+                   Feel exhausted? 
+            </p> 
+            <p class="mbn-text">
+                Not getting enough sleep and feeling exhausted is one of the hardest things about being a new parent! Find out some ways to <a onclick="localSecJump('parents/parents-713.html#7.1.3a');">manage a lack of sleep</a>.   
+            </p>
+           
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+           </div>
+    </div>
+      
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

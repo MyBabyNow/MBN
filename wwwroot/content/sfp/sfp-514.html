@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/514.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+
+            <p class="mbn-section" id="5.1.4" > Hungry and fullness signs</p>
+            <p class="mbn-section" id="5.1.4a">
+            </p> 
+            <p class="mbn-text">
+                Learning your baby's <a onclick="localSecJump('5.1.4b');">hungry</a> and <a onclick="localSecJump('5.1.4f');">fullness</a> signs is an important first step for understanding and looking after your baby. By learning and feeding in response to these signs, you're allowing your baby to feed according to their own appetite (rather than your schedule). As a bonus, you should also gain confidence in recognising your baby's communication, which can reduce the stress that can come with dealing with a <a onclick="localSecJump('sfp-518.html#5.1.8a');">crying baby</a>! 
+            </p>
+
+            <p class="mbn-section" id="5.1.4b">
+                   Hungry signs 
+            </p>
+            <p class="mbn-text">
+                   Babies can show they are hungry in a number of ways. Rather than feeding on a schedule or by the clock, it is recommended that you feed in response to your baby's hungry signs - also called 'demand feeding' or 'feeding on demand'.  
+            </p>
+            <p class="mbn-text">
+                  This video shows what hungry signs look like in real babies. 
+            </p>
+            <p class="mbn-video">
+                   <b>Video: Hungry signs</b> 
+            </p>        
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/J9DUD-L0DHI" frameborder="0" allowfullscreen></iframe>
+                </div>
+            
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit  <a href="http://raisingchildren.net.au/baby_cues/baby_cues_alternative.html#hungry/" target="_blank">raisingchildren.net.au</a>. 
+            </p>
+             
+            <p class="mbn-text">
+                  These images show what early, active and late signs of hunger look like in a baby. 
+            </p> 
+            <p class="mbn-text" id="5.1.4c">
+                <b>Early signs of hunger</b>   
+            </p>
+            <p class="mbn-text">
+                Stirring, stretching, sucking on
+                lips/tongue/hands/fingers/toes/toys/clothing, increased alertness, squeaking, light fussing.  
+            </p>
+                <img src="images/SFP2.png" class="mbn-text-image" />
+            
+                <img src="images/SFP3.png" class="mbn-text-image" />
+                
+                <img src="images/SFP4.png" class="mbn-text-image" />
+            
+            
+            <p class="mbn-text" id="5.1.4d">
+                <b>Active signs of hunger </b>   
+            </p>
+            <p class="mbn-text">
+               Turning towards your breast or bottle, trying to position for nursing, pulling on your clothes, fidgeting, squirming, breathing fast, fussing. 
+            </p>
+            
+                <img src="images/SFP5.png" class="mbn-text-image" />
+            
+                <img src="images/SFP6.png" class="mbn-text-image" />
+                
+                <img src="images/SFP7.png" class="mbn-text-image" />
+            
+            <p class="mbn-text" id="5.1.4e">
+                <b>Late signs of hunger</b>   
+            </p>
+            <p class="mbn-text">
+               Moving head frantically from side-to-side, fussing, crying. 
+            </p>
+            
+                <img src="images/SFP8a.png" class="mbn-text-image" />
+            
+                <img src="images/SFP 8b.png" class="mbn-text-image" />
+                
+                <img src="images/SFP9.png" class="mbn-text-image" />
+            
+            <p class="mbn-video-caption">
+                Adapted with permission from the <a href="https://www.health.qld.gov.au/__data/assets/pdf_file/0031/155389/feeding-cues-term.pdf/" target="_blank">Royal Brisbane and Women's Hospital Baby feeding cues (signs)</a>, Queensland Health.   
+            </p>
+            <p class="mbn-text">
+                    Remember: 
+            </p> 
+                <ul>
+                    <li>it is best to feed your baby when you see <a onclick="localSecJump('5.1.4c');">early signs of hunger</a> 
+                    </li>
+                    <li>your baby knows how much and when they need to feed - it is best to let your baby feed <i>as needed</i> rather than pressuring your baby into a specific schedule 
+                    </li> 
+                </ul>
+        
+
+            <p class="mbn-section" id="5.1.4f">
+                     Fullness signs
+            </p>
+            <p class="mbn-text">
+                    Some signs your baby may be full or taking a break include when your baby:  
+            </p> 
+                <ul>
+                    <li>stops sucking 
+                    </li>
+                    <li>closes their mouth 
+                    </li> 
+                    <li>turns away from the nipple or bottle 
+                    </li> 
+                </ul>
+            
+            <p class="mbn-text">
+                This is a good time to <a onclick="localSecJump('sfp-519.html#5.1.9a');">burp your baby</a> and wait a minute before offering your breast or the bottle again. If your baby resists again, they are full. 
+            </p>
+
+            
+              <br>
+             <br />
+             <br />
+             <br />
+             <br />
+    </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+      
+</body>
+
+</html>

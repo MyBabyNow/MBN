@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/5111.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns </span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns </span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="5.1.11"> Night waking</p>
+            <p class="mbn-section" id="5.1.11a">
+                Has your baby started waking more at night?
+            </p>
+            <p class="mbn-text">
+                It is not uncommon for babies at 3-4 months old to start waking more at night, even if they have been good sleepers until now. This doesn't always mean they are <a onclick="localSecJump('sfp-514.html#5.1.4a');">hungry</a>.
+            </p>
+            <p class="mbn-text">
+                Some parents wonder if <a onclick="localSecJump('solids/solids-411.html#4.1.1a');">introducing solid foods</a> will help their baby sleep more at night. But starting solid foods before 6 months is unlikely to stop the night waking as there are <i>other</i> reasons why babies this age start waking up more at night.
+            </p>
+
+            <p class="mbn-text" id="5.1.11b">
+                Common reasons for night waking include:
+            </p>
+            <ul>
+                <li><b>Sleep cycle</b>
+                    <br> As babies move from one sleep cycle to another, they may wake and call out for their parents. The trick is to have your baby <a onclick="localSecJump('5.1.11d');">learn to put themselves back to sleep</a> without your help.
+                </li>
+                <li><b>Sleep habits</b>
+                    <br> At 3-4 months of age babies start to learn sleep associations; e.g. always being fed or rocked to sleep, or <a onclick="localSecJump('sfp-5110.html#5.1.10a');">having a dummy</a>. If they wake between sleep cycles they then need the same things to get back to sleep.
+                </li>
+                <li><b>Developmental milestones</b>
+                    <br> Developmental milestones can change sleep and cause your baby to wake up more. For example, when your baby learns to roll, they may get stuck in new positions or they might just want to practice their new skill at night!
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Don't worry, there are many ways to encourage your baby to achieve independent sleep!
+            </p>
+
+            <p class="mbn-section" id="5.1.11c">
+                Independent sleep
+            </p>
+            <p class="mbn-text">
+                A baby has achieved independent sleep when they:
+            </p>
+            <ul>
+                <li>sleep for 6-8 hours during the night
+                </li>
+                <li>can settle back to sleep without calling out to a parent after waking in the night
+                </li>
+            </ul>
+            <p class="mbn-text">
+                Around 60&#37; of babies can do this by 6 months of age.
+            </p>
+
+            <p class="mbn-text" id="5.1.11d">
+                Help your baby achieve independent sleep by:
+            </p>
+            <ul>
+                <li><b>putting your baby to bed drowsy, but awake</b>
+                    <br> This gives your baby the chance to soothe themselves and learn to associate the cot (rather than you) with going to sleep. If your baby won't settle, try the <a onclick="localSecJump('sfp-517.html#5.1.7b');">patting technique</a>, but try to stop before your baby goes to sleep.
+                </li>
+                <li><b>stressing the difference between night and day</b>
+                    <br> Use dim lighting and keep interaction to a minimum.
+                </li>
+                <li><b>starting a feed, play and sleep routine</b>
+                    <br> This could include a predictable <a onclick="localSecJump('sfp-5112.html#5.1.12c');">sleep routine</a> such as quiet time, followed by a story and then a cuddle before each sleep. At night time this routine could also include a bath.
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="5.1.11e">
+                Every baby is different and sleep is no different! In this video, other mums share their experiences of how their baby achieved independent sleep.
+            </p>
+            <p class="mbn-video">
+                <b>Video: Independent sleep - mums' stories </b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/-qgsksjszVY" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/baby_sleep_video.html/context/824 " target="_blank">raisingchildren.net.au</a>
+            </p>
+
+            <p class="mbn-text" id="5.1.11f">
+                If your baby has reached 6 months and hasn't yet achieved independent sleep, have a look at our <a onclick="localSecJump('sfp-5112.html#5.1.12a');">4 steps to better sleep</a> section.
+            </p>
+
+            <br />
+            <br />
+            <br />
+            <br />
+    </div>
+    </div>
+
+
+            <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+                <nav class="mbn-nav">
+                    <div class="nav-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col mbn-icon" onclick="Load('feed');">
+                                    <p>
+                                        <img src="../../images/feed.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">My baby</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('topics');">
+                                    <p class="mbn-icon-selected">
+                                        <img src="../../images/topics-s.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text-selected">Topics</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('tools');">
+                                    <p>
+                                        <img src="../../images/tools.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Tools</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('forum');">
+                                    <p>
+                                        <img src="../../images/forum.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Forum</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('more');">
+                                    <p>
+                                        <img src="../../images/more.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">More</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        
+</body>
+
+</html>

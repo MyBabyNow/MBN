@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -41,7 +41,7 @@
         <div class="card-image">
             <img src="images/ff-overview.png" />
             <span class="card-title mbn-card-title" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Formula feeding</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -50,7 +50,7 @@
 
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Formula feeding</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Formula feeding</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -64,11 +64,11 @@
             <p class="mbn-section" id="2.1.1a">
                 What is formula?
             </p>
-            <p>
+            <p class="mbn-text">
                 For babies under 12 months, formula is the only suitable and safe alternative to breastmilk. Take our <a href="tool://bottle feeding quiz">bottle feeding quiz</a> and <a href="tool://formula preparation quiz">formula preparation quiz</a> to check you have got the basics of bottle feeding covered!
             </p>
             <p class="mbn-text">
-                Most formulas are based on cow's milk that has been modified to meet a baby's main nutritional needs. If a baby cannot take cow's milk based products for specific medical, cultural or religious reasons,special formulas might be used under medical supervision.
+                Most formulas are based on cow's milk that has been modified to meet a baby's main nutritional needs. If a baby cannot take cow's milk based products for specific medical, cultural or religious reasons, special formulas might be used under medical supervision.
             </p>
             <p class="mbn-text">
                 Babies under 12 months of age <b>should not</b> have normal cow's milk or dairy alternatives such as soy, rice, almond or coconut milk. The make-up of these products can harm a baby's developing body.
@@ -102,7 +102,7 @@
             </ul>
 
             <p class="mbn-text">
-                Try to choose a formula <b>with the <i>lowest</i> amount of protein (closer to 1.3g per 100mL</b> prepared/made up formula).
+                Try to choose a formula <b>with the <i>lowest</i> amount of protein</b> (closer to <b>1.3g per 100mL</b> prepared/made up formula).
             </p>
 
             <table>
@@ -151,10 +151,10 @@
             </p>
             <ul>
                 <li>your baby's needs
-                </li>
-                <p class="mbn-text">
+                    <br>
                     <b>and</b>
-                </p>
+                </li>
+
                 <li>the protein content (see above)
                 </li>
             </ul>
@@ -166,7 +166,7 @@
                 So unless your GP or maternal and child health nurse advises you otherwise, the only type of formula your baby will need until they are 12 months old is <a onclick="localSecJump('ff-212.html#2.1.2b');">starter or first formula</a> (sometimes labelled step 1 or stage 1 or from birth). Research has shown no advantages to using <a onclick="localSecJump('ff-212.html#2.1.2c');">follow-on formula (or stage/step 2)</a> for babies aged 6-12 months and it is not necessary. Follow-on or step 2 formulas tend to have higher amounts of protein than your baby needs. So for optimal growth stick with starter or first formula and choose one with a lower amount of protein.
             </p>
             <p class="mbn-text">
-                Once your baby has reached 12 months, they can then have regular full cream cow's milk. Most healthy toddlers do not need <a onclick="localSecJump('ff-212.html#2.1.2d');">formula, stage 3 formulas or toddler milk</a>.
+                Once your baby has reached 12 months, they can then have regular full cream cow's milk. Most healthy toddlers do not need formula at all, including <a onclick="localSecJump('ff-212.html#2.1.2d');">stage 3 formulas or toddler milk</a>.
             </p>
             <p class="mbn-text">
                 Find out more about <a onclick="localSecJump('ff-212.html#2.1.2a');">different types of formula</a>.
@@ -201,29 +201,25 @@
 
             <p class="mbn-text">
                 Bottles with teats and teat covers
-            </p>
-            <p>
+
                 <img src="images/Bottles with teats and teat covers.png" class="mbn-text-image" />
             </p>
 
             <p class="mbn-text">
                 Bottle brush and teat brush
-            </p>
-            <p>
+
                 <img src="images/Bottle brush.png" class="mbn-text-image" />
             </p>
 
             <p class="mbn-text">
                 Formula powder and scoop
-            </p>
-            <p>
+
                 <img src="images/Formula powder.png" class="mbn-text-image" />
             </p>
 
             <p class="mbn-text">
                 Sterilising equipment (chemical steriliser, microwave / steam steriliser, or stovetop and pan)
-            </p>
-            <p>
+
                 <img src="images/Sterilising equipment.png" class="mbn-text-image" />
             </p>
             <p>

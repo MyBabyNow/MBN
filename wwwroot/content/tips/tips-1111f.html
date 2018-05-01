@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo"> <img src="../../images/logo.png" class="mbn-logo-style" /> </div>
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper"> <a class="mbn-name">Flynn Now</a> <i class="fa fa-search fa-2x mbn-search-style"></i> </div>
+        </nav>
+    </div>
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image"> <img src="images/tips-20.png" /> <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i>  Top tips </span> <i class="fa fa-star fa-lg"
+              style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i> <i class="fa fa-share-alt fa-lg"
+              style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i> </span>
+        </div>
+    </div>
+    <div class="card mbn-card-fixed-content" id="section-card-min"> <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i>  Top tips</span> <i class="fa fa-star fa-lg"
+          style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i> <i class="fa fa-share-alt fa-lg"
+          style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i> </span>
+    </div>
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="11.1.1f"> No bottle in my cot! </p>
+            <p class="mbn-text"> Keeping your baby's bottle out of their cot helps to: </p>
+            <ul>
+                <li>keep them safe </li>
+                <li>develop good sleeping habits </li>
+                <li>reduce their risk of ear infections and tooth decay </li>
+            </ul>
+            <p class="mbn-text"> Learn more about: </p>
+            <ul>
+                <li><a onclick="localSecJump('ff/ff-215.html#2.1.5j');">bedtime feeding </a> </li>
+                <li><a onclick="localSecJump('sfp/sfp-514.html#5.1.14a');">safe sleep practices </a> </li>
+            </ul>
+            <p> <br /> <br /> <br /> </p>
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p> <img src="../../images/feed.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">My baby</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected"> <img src="../../images/topics-s.png" style="width:30%;" /> <br /> <span class="mbn-icon-text-selected">Topics</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p> <img src="../../images/tools.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">Tools</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p> <img src="../../images/forum.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">Forum</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p> <img src="../../images/more.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">More</span>                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

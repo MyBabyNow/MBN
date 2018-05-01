@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/choking.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i>Sleep/feed patterns</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i>Sleep/feed patterns</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="5.1.7"> Wrapping and settling your baby to sleep </p>
+            <p class="mbn-text" id="5.1.7a">
+                Knowing some ways to settle your baby down for sleep, especially when they're very young, can help both you and your baby to remain composed. Different things work for different babies, and at different times...and sometimes your baby just won't want to settle at all! But the good news is, that as your baby gets older, they should get better at re-settling themselves.
+            </p>
+            <p class="mbn-text">
+                Generally, when your baby shows <a onclick="localSecJump('sfp-516.html#5.1.6a');">tired signs</a>, you should:
+            </p>
+
+            <ul>
+                <li class="mbn-ol">change their nappy
+                </li>
+                <li class="mbn-ol">wrap or swaddle them, and then
+                </li>
+                <li class="mbn-ol">put them in their cot to sleep
+                </li>
+            </ul>
+
+            <p class="mbn-text" id="5.1.7b">
+                If your baby still has trouble settling to sleep after changing their nappy, <a onclick="localSecJump('5.1.7c');">being wrapped</a> and put into their cot, some rhythmic, <b>gentle patting</b> might help:
+            </p>
+
+            <ul>
+                <li class="mbn-ol">Lie your baby on their side facing away from you (but move them <a onclick="localSecJump('sfp-5114.html#5.1.14a');">onto their back if they fall asleep</a>).
+                </li>
+                <li class="mbn-ol">Place your hand gently on your baby's shoulder.
+                </li>
+                <li class="mbn-ol">Cup your other hand and pat your baby gently and slowly on the bottom or thigh, trying to be as rhythmic as possible.
+                </li>
+                <li class="mbn-ol">Try saying 'shhh' on each pat or softly singing a song.
+                </li>
+                <li class="mbn-ol">Slow your hand movements as your baby settles.
+                </li>
+                <li class="mbn-ol">Once your baby is quiet, stop patting but leave your hands on your baby for a few more seconds before putting your baby down to sleep.
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                You could also try patting the mattress beside your baby, or perhaps gently jiggling the cot. Experiment and see what works for your baby.
+                <p class="mbn-text">
+                    If your baby is <i>very</i> upset, it's important to stop and give them a cuddle and reassurance.
+                </p>
+                <p class="mbn-text">
+                    If nothing seems to be working, or <a onclick="localSecJump('sfp-518.html#5.1.8a');">you start feeling angry or upset</a>, it's best to leave your baby in the cot. It won't hurt your baby to cry for a short time. Walk away and take a moment to calm yourself before trying again.
+                </p>
+
+                <p class="mbn-section" id="5.1.7c">
+                    Wrapping your baby for sleep
+                </p>
+                <p class="mbn-text" id="5.1.7d">
+                    <b>The benefits of wrapping</b>
+                    <br>
+                </p>
+                <p class="mbn-text">
+                    <img src="images/sfp11.png" class="mbn-text-image mbn-text-image-right" /> Wrapping is soothing for some babies. It can also reduce the risk of SUDI including SIDS and fatal sleeping accidents by keeping them <a onclick="localSecJump('sfp-5114.html#5.1.14a');">on their     backs during sleep</a>. Babies can be wrapped from birth up <b>until they can roll onto their tummies</b> (about 4-6 months)
+                </p>
+                <br>
+                <p class="mbn-text">
+                    <img src="images/sfp12.png" class="mbn-text-image mbn-text-image-left" /> Keep in mind that not <i>all</i> babies like to be wrapped! Follow your baby's cues, and don't continue wrapping if your baby resists. An infant sleeping bag is a good alternative. Like wrapping, they also help <a onclick="localSecJump('sfp-5114.html#5.1.14a');">keep your baby on their back during sleep</a>, reducing the risk of SUDI including SIDS and fatal sleeping accidents.
+                </p>
+
+                <p class="mbn-text" id="5.1.7e">
+                    <img src="images/sfp13.png" class="mbn-text-image mbn-text-image-right" /> Wrapping is <b>not recommended for babies who share a bed</b> with their parents. This can cause overheating, a known <a onclick="localSecJump('sfp-5114.html#5.1.14a');">cause of SUDI including SIDS and fatal sleeping accidents</a>. If your baby is sharing your bed, they should be dressed in the same way as you would dress yourself in this situation. Keep in mind that sharing a bed with your baby <i>can be dangerous</i> and is not recommended in some circumstances.
+                </p>
+
+                <p class="mbn-section" id="5.1.7f">
+                    How to wrap your baby
+                </p>
+                <p class="mbn-text">
+                    Follow these instructions for a popular way of wrapping your baby.
+                </p>
+
+                <img src="images/sfp14.png" class="mbn-text-image">
+
+                <ul>
+                    <li class="mbn-ol">Fold the top edge of a lightweight <b>cotton or muslin wrap</b> down by about 20cm. Lay your baby on the wrap with their shoulders in line with the fold.
+                    </li>
+                    <li class="mbn-ol">Place one of your baby's hands under the fold. shoulder.
+                    </li>
+                    <li class="mbn-ol">Bring the edge of the wrap across their body and tuck it under their legs. <img src="images/sfp17.png" class="mbn-text-image">
+                    </li>
+                    <li class="mbn-ol">Place your baby's other hand under the fold.
+                    </li>
+                    <li class="mbn-ol">Bring the other edge of the wrap across your baby's body and tuck it in under your baby's back.
+                    </li>
+                    <li class="mbn-ol">Fold any extra length up and under your baby's legs. Babies like to be wrapped <i>firmly</i> but make sure that the wrap isn't too tight as wrapping your baby's legs and chest too tightly can lead to hip and breathing problems.
+                    </li>
+                </ul>
+
+                <p class="mbn-text">
+                    <img src="images/sfp19.png" class="mbn-text-image mbn-text-image-left" /> Make sure the wrap doesn't cover your baby's head, ears or chin - wraps that are too high can make it hard for your baby to breathe and can cause your baby to overheat, which <a onclick="localSecJump('sfp-5114.html#5.1.14a');">has been linked to SUDI including SIDS and fatal sleeping accidents</a>.
+                </p>
+
+                <p class="mbn-section" id="5.1.7g">
+                    What should your baby wear underneath the wrap?
+                </p>
+                <p class="mbn-text" id="5.1.7h">
+                    <img src="images/sfp20.png" class="mbn-text-image mbn-text-image-left" /> In <b>warm weather</b>, your baby just needs a singlet and nappy underneath the wrap. Overheating has been <a onclick="localSecJump('sfp-5114.html#5.1.14a');">linked with SUDI including SIDS and fatal sleeping accidents</a>, so try to keep your baby's sleep environment at a cool, comfortable temperature.
+                </p>
+                <br>
+                <p class="mbn-text" id="5.1.7i">
+                    <img src="images/sfp 5.1.7i.png" class="mbn-text-image mbn-text-image-left" /> In <b>cool weather</b>, dress your baby in a lightweight jumpsuit underneath the wrap but <b>don't use a bunny rug or blanket</b> - this can cause overheating which has been <a onclick="localSecJump('sfp-5114.html#5.1.14a');">linked with SUDI including SIDS and fatal sleeping accidents</a>. It's also important to not overheat the house if possible, especially if your baby has an infection.
+                </p>
+                <p class="mbn-video-caption">
+                    Adapted with permission from the <a href="http://raisingchildren.net.au/articles/wrapping_newborn.html " target="_blank">Raising Children website</a>, Australia's trusted parenting website.
+                </p>
+
+                <p class="mbn-text" id="5.1.7j">
+                    This video shows some ways to wrap or swaddle a newborn baby.
+                </p>
+                <p class="mbn-video">
+                    <b>Video: Wrapping a newborn</b>
+                </p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/qjm-SFX9-u8" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <p class="mbn-video-caption">
+                    Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/wrapping_newborn.html " target="_blank">raisingchildren.net.au</a>.
+                </p>
+
+
+
+                <br>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+    </div>
+    </div>
+
+
+
+                <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+                    <nav class="mbn-nav">
+                        <div class="nav-wrapper">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col mbn-icon" onclick="Load('feed');">
+                                        <p>
+                                            <img src="../../images/feed.png" style="width:30%;" />
+                                            <br />
+                                            <span class="mbn-icon-text">My baby</span>
+                                        </p>
+                                    </div>
+                                    <div class="col mbn-icon" onclick="Load('topics');">
+                                        <p class="mbn-icon-selected">
+                                            <img src="../../images/topics-s.png" style="width:30%;" />
+                                            <br />
+                                            <span class="mbn-icon-text-selected">Topics</span>
+                                        </p>
+                                    </div>
+                                    <div class="col mbn-icon" onclick="Load('tools');">
+                                        <p>
+                                            <img src="../../images/tools.png" style="width:30%;" />
+                                            <br />
+                                            <span class="mbn-icon-text">Tools</span>
+                                        </p>
+                                    </div>
+                                    <div class="col mbn-icon" onclick="Load('forum');">
+                                        <p>
+                                            <img src="../../images/forum.png" style="width:30%;" />
+                                            <br />
+                                            <span class="mbn-icon-text">Forum</span>
+                                        </p>
+                                    </div>
+                                    <div class="col mbn-icon" onclick="Load('more');">
+                                        <p>
+                                            <img src="../../images/more.png" style="width:30%;" />
+                                            <br />
+                                            <span class="mbn-icon-text">More</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+      
+</body>
+
+</html>

@@ -1,656 +1,601 @@
 * {
-	-webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+table.py-table td {
+  padding: 5px 5px !important;
+}
+
+table.py-1012-gridlines td {
+  border-bottom: 1px solid black;
+}
+
+.mbn-section-invert {
+  color: #ffffff;
+	background-color: #6699cc;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 14pt;
+	padding: 5px 5px 5px 5px;
 }
 
 .mbn-post-notice {
-    max-width: 40vw;
-
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 12vh;
-
-    font-size: 8pt;
-    padding: 6px;
-    border-radius: 5px;
-    
-    color: white;
-    background-color: grey;
-
-    position: fixed;
-    text-align: center;
+  max-width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 12vh;
+  font-size: 8pt;
+  padding: 6px;
+  border-radius: 5px;
+  color: white;
+  background-color: grey;
+  position: fixed;
+  text-align: center;
 }
 
 .tools-close {
-    position: fixed; right: 10px; top: 10px; z-index: 10002;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 10002;
 }
 
 .tools-content {
-    position: fixed; 
-    min-width: 100%; 
-    min-height: 100%; 
-    top: 0; 
-    left: 0; 
-    background-color: white; 
-    z-index: 10001; 
-    opacity: 1.0;
-    padding: 10px 10px 10px 10px;
-    
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 10001;
+  opacity: 1.0;
+  padding: 10px 10px 10px 10px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .content-td {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    
-    font-size: 120%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 120%;
 }
 
 a {
-    color: #339966;
-    font-weight: bold;
+  color: #339966;
+  font-weight: bold;
 }
 
 ul {
-    
-    margin-left: 5vw;
-    font-size: 11pt;
-    font-family: sans-serif;
-    font-weight: 100;
+  margin-left: 5vw;
+  font-size: 11pt;
+  font-family: sans-serif;
+  font-weight: 100;
 }
 
 li {
-    list-style-type: circle !important;
-    padding-bottom: 10px;
+  list-style-type: circle !important;
+  padding-bottom: 10px;
 }
 
 .content-td {
-    border-collapse: collapse;
-    border: 1px solid #000000;   
+  border-collapse: collapse;
+  border: 1px solid #000000;
 }
 
 .mbn-ol {
-    list-style-type: decimal !important;    
+  list-style-type: decimal !important;
 }
 
 select {
-    all: revert;
-    
-    width: 100%;
-    border: 1px;
-    padding: 5px 5px 5px 5px;
-    height: 40px;
-    
-    font-size: 12pt;
-    font-family: sans-serif;
-    font-weight: 100;
+  all: revert;
+  width: 100%;
+  border: 1px;
+  padding: 5px 5px 5px 5px;
+  height: 40px;
+  font-size: 12pt;
+  font-family: sans-serif;
+  font-weight: 100;
 }
 
 .login-bg {
-    background-image: url("../images/login-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../images/login-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .login-card {
-    padding: 15px;
-    height: 40vh;
+  padding: 15px;
+  height: 40vh;
 }
 
 .login-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-    width: 50%;
-    height: auto;
-    
-    margin-top: 15vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: auto;
+  margin-top: 15vh;
 }
 
 .survey-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-    width: 25%;
-    height: auto;
-    
-    margin-top: -25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: auto;
+  margin-top: -25%;
 }
 
 .survey-appname {
-    display: block;
-    
-    min-width: 100%;
-    text-align: center;
-    
-    font-family: sans-serif;
-    font-size: 100%;
-    font-weight: 500;
-    color: #6699cc;
-    
-    margin-top: 0%;
+  display: block;
+  min-width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 100%;
+  font-weight: 500;
+  color: #6699cc;
+  margin-top: 0%;
 }
 
 .login-appname {
-    display: block;
-    
-    min-width: 100%;
-    text-align: center;
-    
-    font-family: sans-serif;
-    font-size: 150%;
-    font-weight: 300;
-    color: #6699cc;
-    
-    margin-top: 0%;
+  display: block;
+  min-width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 150%;
+  font-weight: 300;
+  color: #6699cc;
+  margin-top: 0%;
 }
 
 .login-text {
-    display: block;
-    
-    min-width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    
-    text-align: center;
-    
-    font-family: sans-serif;
-    font-size: 120%;
-    font-weight: 300;
-    color: #5f5f5f;
-    
-    margin-top: 0%;
+  display: block;
+  min-width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 120%;
+  font-weight: 300;
+  color: #5f5f5f;
+  margin-top: 0%;
 }
 
 .survey-text {
-    display: block;
-    
-    min-width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    
-    text-align: left;
-    
-    font-family: sans-serif;
-    font-size: 130%;
-    font-weight: 300;
-    color: #5f5f5f;
-    
-    margin-top: 0%;
+  display: block;
+  min-width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 130%;
+  font-weight: 300;
+  color: #5f5f5f;
+  margin-top: 0%;
 }
 
 .login-back {
-    padding-left: 5%;
-    padding-top: 10%;
-    
-    font-family: sans-serif;
-    font-weight: 100;
-    color: #339966;
+  padding-left: 5%;
+  padding-top: 10%;
+  font-family: sans-serif;
+  font-weight: 100;
+  color: #339966;
 }
 
 .login-next {
-    padding-right: 5%;
-    float: right;
-    
-    font-family: sans-serif;
-    font-weight: 100;
-    color: #339966;
+  padding-right: 5%;
+  float: right;
+  font-family: sans-serif;
+  font-weight: 100;
+  color: #339966;
 }
 
 .login-options {
-    display: block;
-    
-    text-align: center;
-    padding-bottom: 10px;
-    
-    font-weight: 100 !important;
-    font-family: sans-serif;
-    
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+  font-weight: 100 !important;
+  font-family: sans-serif;
 }
 
 .login-input {
-    padding-left: 10%;
-    padding-right: 10%;
-    
-    color: #000000 !important;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #000000 !important;
 }
 
 .survey-input {
-    padding-left: 10%;
-    padding-right: 10%;
-    
-    color: #000000 !important;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #000000 !important;
 }
 
 .survey-action {
-    font-family: sans-serif;
-    font-size: 80%;
-    font-weight: 100;
+  font-family: sans-serif;
+  font-size: 80%;
+  font-weight: 100;
 }
 
 .login-btn {
-    color: #339966;
-    background-color: transparent;
-    
-    border-color: #339966;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
-    
-    padding: 10px 10px 10px 10px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 50vw;
-    text-align: center;
+  color: #339966;
+  background-color: transparent;
+  border-color: #339966;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50vw;
+  text-align: center;
 }
 
 .mbn-field {
-    color: #6699cc;
-    
-    border-bottom: 1px solid #6699cc !important;
-    box-shadow: 0 0px 0 0 #6699cc !important;
+  color: #6699cc;
+  border-bottom: 1px solid #6699cc !important;
+  box-shadow: 0 0px 0 0 #6699cc !important;
 }
 
 .mbn-table {
-    color: #000000;
-    font-family: sans-serif;
-    font-weight: 100;
-    font-size: 9pt;
-    
-    border-collapse: collapse;
-    border: 1px solid #000000;
+  color: #000000;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 9pt;
+  border-collapse: collapse;
+  border: 1px solid #000000;
 }
 
 .mbn-textarea {
-    border: 0px solid #fff !important;
-    border-bottom: 0px solid #fff !important;
-    box-shadow: 0 1px 0 0 #fff !important;
-    
-    outline: none !important;
-    outline-color: #339966 !important;
+  border: 0px solid #fff !important;
+  border-bottom: 0px solid #fff !important;
+  box-shadow: 0 1px 0 0 #fff !important;
+  outline: none !important;
+  outline-color: #339966 !important;
 }
 
 .mbn-button {
-    float: right; 
-    margin-right: 3vw; 
-    color: #339966; 
-    line-height: 3; 
-    border: none; 
-    background-color: #fff;
+  float: right;
+  margin-right: 3vw;
+  color: #339966;
+  line-height: 3;
+  border: none;
+  background-color: #fff;
 }
 
 .mbn-forum-action {
-    font-size: 90%; 
-    text-align: center;
-    color: #339966;
+  font-size: 90%;
+  text-align: center;
+  color: #339966;
 }
 
 .mbn-action-menu {
-    font-weight: normal !important; 
-    color: #339966 !important;
+  font-weight: normal !important;
+  color: #339966 !important;
 }
 
 .mbn-menu-desc {
-    min-width: 86vw !important;
+  min-width: 86vw !important;
 }
 
 .mbn-td {
-    width: 7vw !important;
+  width: 7vw !important;
 }
 
 .mbn-menu-arrow {
-    max-width: 5%;
-    width: 5%;
+  max-width: 5%;
+  width: 5%;
 }
 
 .mbn-sticky {
-    position: fixed;
-    top: 150px;
+  position: fixed;
+  top: 150px;
 }
 
 .mbn-nav {
-	background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .mbn-icon {
-	width: 20%; 
-	text-align: center;
-    color: #339966;
-    position: relative;
-    line-height: normal;
-    bottom: 4px;
+  width: 20%;
+  text-align: center;
+  color: #339966;
+  position: relative;
+  line-height: normal;
+  bottom: 4px;
 }
 
 .mbn-icon-selected {
-    color: #6699cc;
+  color: #6699cc;
 }
 
 .mbn-section {
-    color: #6699cc;
-    font-family: roboto;
-    font-weight: 500;
-    font-size: 14pt;
-    margin-bottom: -10pt;
+  color: #6699cc;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 14pt;
+  margin-bottom: -10pt;
 }
 
 .mbn-video {
-    color: #6699cc;
-    font-family: roboto;
-    font-weight: 500;
-    font-size: 14pt;
-    margin-bottom: 0pt;
+  color: #6699cc;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 14pt;
+  margin-bottom: 0pt;
 }
 
 .mbn-text {
-    color: #000000;
-    font-family: sans-serif;
-    font-weight: 100;
-    font-size: 11pt;
+  color: #000000;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 11pt;
 }
 
 .mbn-text-image {
-    width: 100%;
+  width: 100%;
 }
 
 .mbn-text-image-left {
-    width: 50%;
-    float: left;
-    padding-right: 5px;
+  width: 50%;
+  float: left;
+  padding-right: 5px;
 }
 
 .mbn-text-image-right {
-    width: 50%;
-    float: right;
-    padding-left: 5px;
+  width: 50%;
+  float: right;
+  padding-left: 5px;
 }
 
 .mbn-content {
-    position: relative;
-    top: 2px;
-    width: 100%;
-    padding: 5px 0px 5px 0px;
+  position: relative;
+  top: 2px;
+  width: 100%;
+  padding: 5px 0px 5px 0px;
 }
 
 .mbn-card {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-    margin-top: 0px !important;
-    margin-bottom: 5px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 5px !important;
 }
 
 .mbn-footer {
-	position: fixed; 
-	bottom: 0px; 
-	width: 100%;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
 }
 
 .mbn-update-text {
-    font-family: roboto; 
-    font-size: 12pt;
+  font-family: roboto;
+  font-size: 12pt;
 }
 
 /*********************
 	Forum
 **********************/
+
 @font-face {
-    font-family: roboto;
-	src: url('fonts/roboto/roboto-regular.ttf');	
+  font-family: roboto;
+  src: url('fonts/roboto/roboto-regular.ttf');
 }
 
 .title-font {
-	font-family: littlebird;
-	font-weight: bold;
-	font-size: 280% !important;
+  font-family: littlebird;
+  font-weight: bold;
+  font-size: 280% !important;
 }
-
-
 
 /*********************
   Media Query Classes
 **********************/
 
 /* Phone and potrait displays - generic */
+
 @media only screen and (max-width: 500px) {
-    .mbn-nav {
-        min-height: 65px;
-    }
-
-    .mbn-logo {
-        position: fixed; 
-        top: 23px;
-        left: 5px; 
-        z-index: 9999;
-    }
-    
-    .mbn-logo-style {
-        width: 15%;
-        height: 15%; 
-        -webkit-filter: drop-shadow(1px 1px 4px #808285);
-    }
-    
-    .mbn-name {
-        font-family: roboto;
-        color: #6699cc;
-        font-size: 19pt;
-        font-weight: 500;
-        
-        position: fixed;
-        left: 85px;
-        top: 18px;
-    }
-    
-    .mbn-search-icon {
-        position: absolute;
-        top: 24px;
-        right: 0px;
-    }
-    
-    .mbn-search-style {
-        position: absolute; 
-        top: 29px;
-        right: 10px;
-        color: #339966;
-        /* width:6%; */
-    }
-    
-    .mbn-content-scroll {
-        position: absolute;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    .mbn-content-offset {
-        top: 170px;
-    }
-    
-    .mbn-feed-scroll {
-        position: absolute;
-        top: 150px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    .mbn-card-title {
-        background-color: #ffffff;
-        color: #339966 !important;
-
-        font-family: roboto;
-        font-weight: bold !important;
-        font-size: 14pt !important;
-
-        display: block;
-        margin-bottom: 0px !important;
-
-        width: 100%;
-        height: 40px !important;
-        padding: 7px !important;
-        
-        opacity: 0.9;
-    }
-    
-    .mbn-card-title-content {
-        background-color: #ffffff;
-        color: #339966 !important;
-
-        font-family: roboto;
-        font-weight: bold !important;
-        font-size: 14pt !important;
-
-        display: block;
-        margin-bottom: 0px !important;
-
-        width: 100vw;
-        height: 45px !important;
-        margin-top: 10px;
-        padding: 7px !important;
-
-        opacity: 1.0;
-    }
-
-    .mbn-menu-title {
-        background-color: #ffffff;
-        color: #6699cc !important;
-
-        font-family: roboto;
-        font-weight: bold !important;
-        font-size: 14pt !important;
-
-        display: block;
-        margin-bottom: 0px !important;
-
-        width: 100%;
-        height: 40px !important;
-        padding: 7px !important;
-
-        opacity: 0.7;
-    }
-    
-    .mbn-menu-font {
-        color: #6699cc !important;
-
-        font-family: roboto;
-        font-weight: bold !important;
-        font-size: 14pt !important;
-    }
-
-
-    .mbn-card-fixed {
-        position: fixed;
-        z-index: 9998;
-        top: 65px;
-    }
-    
-    .mbn-card-fixed-content {
-        position: fixed;
-        z-index: 9998;
-        top: 58px;
-    }
+  .mbn-nav {
+    min-height: 65px;
+  }
+  .mbn-logo {
+    position: fixed;
+    top: 23px;
+    left: 5px;
+    z-index: 9999;
+  }
+  .mbn-logo-style {
+    width: 15%;
+    height: 15%;
+    -webkit-filter: drop-shadow(1px 1px 4px #808285);
+  }
+  .mbn-name {
+    font-family: roboto;
+    color: #6699cc;
+    font-size: 19pt;
+    font-weight: 500;
+    position: fixed;
+    left: 85px;
+    top: 18px;
+  }
+  .mbn-search-icon {
+    position: absolute;
+    top: 24px;
+    right: 0px;
+  }
+  .mbn-search-style {
+    position: absolute;
+    top: 29px;
+    right: 10px;
+    color: #339966;
+    /* width:6%; */
+  }
+  .mbn-content-scroll {
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .mbn-content-offset {
+    top: 170px;
+  }
+  .mbn-feed-scroll {
+    position: absolute;
+    top: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .mbn-card-title {
+    background-color: #ffffff;
+    color: #339966 !important;
+    font-family: roboto;
+    font-weight: bold !important;
+    font-size: 14pt !important;
+    display: block;
+    margin-bottom: 0px !important;
+    width: 100%;
+    height: 40px !important;
+    padding: 7px !important;
+    opacity: 0.9;
+  }
+  .mbn-card-title-content {
+    background-color: #ffffff;
+    color: #339966 !important;
+    font-family: roboto;
+    font-weight: bold !important;
+    font-size: 14pt !important;
+    display: block;
+    margin-bottom: 0px !important;
+    width: 100vw;
+    height: 45px !important;
+    margin-top: 10px;
+    padding: 7px !important;
+    opacity: 1.0;
+  }
+  .mbn-menu-title {
+    background-color: #ffffff;
+    color: #6699cc !important;
+    font-family: roboto;
+    font-weight: bold !important;
+    font-size: 14pt !important;
+    display: block;
+    margin-bottom: 0px !important;
+    width: 100%;
+    height: 40px !important;
+    padding: 7px !important;
+    opacity: 0.7;
+  }
+  .mbn-menu-font {
+    color: #6699cc !important;
+    font-family: roboto;
+    font-weight: bold !important;
+    font-size: 14pt !important;
+  }
+  .mbn-card-fixed {
+    position: fixed;
+    z-index: 9998;
+    top: 65px;
+  }
+  .mbn-card-fixed-content {
+    position: fixed;
+    z-index: 9998;
+    top: 58px;
+  }
 }
 
 /* iPhone 6 and other smaller phones */
+
 @media only screen and (max-width: 375px) {
-    .mbn-icon-text {
-        font-size: 90%;
-        color: #339966 !important;
-    }
-    
-    .mbn-icon-text-selected {
-        font-size: 90% !important;
-        color: #6699cc !important;
-    }
-        
-    .mbn-avatar-text {
-        font-family: roboto; 
-        font-size: 10pt;
-    }
-    
-    .mbn-avatar-card {
-        background-color: #f9f9f9;
-        max-height: 130px;
-    }
+  .mbn-icon-text {
+    font-size: 90%;
+    color: #339966 !important;
+  }
+  .mbn-icon-text-selected {
+    font-size: 90% !important;
+    color: #6699cc !important;
+  }
+  .mbn-avatar-text {
+    font-family: roboto;
+    font-size: 10pt;
+  }
+  .mbn-avatar-card {
+    background-color: #f9f9f9;
+    max-height: 130px;
+  }
 }
 
 /* iPhone 5 and below, or super small screens */
+
 @media only screen and (width: 320px) {
-    .mbn-icon-text {
-        font-size: 78%;
-        color: #339966 !important;
-    }
-    
-    .mbn-icon-text-selected {
-        font-size: 78% !important;
-        color: #6699cc !important;
-    }
-    
-    .mbn-avatar-text {
-        font-family: roboto; 
-        font-size: 9pt;
-    }
-    
-    .mbn-avatar-card {
-        background-color: #f9f9f9;
-        max-height: 110px;
-    }
+  .mbn-icon-text {
+    font-size: 78%;
+    color: #339966 !important;
+  }
+  .mbn-icon-text-selected {
+    font-size: 78% !important;
+    color: #6699cc !important;
+  }
+  .mbn-avatar-text {
+    font-family: roboto;
+    font-size: 9pt;
+  }
+  .mbn-avatar-card {
+    background-color: #f9f9f9;
+    max-height: 110px;
+  }
 }
 
 /* iPhone 6+ and bigger phones */
-@media only screen and (min-width: 400px) {
-    .mbn-icon-text {
-        font-size: 100%;
-        color: #339966 !important;
-    }
-    
-    .mbn-icon-text-selected {
-        font-size: 100% !important;
-        color: #6699cc !important;
-    }
-    
-    .mbn-avatar-text {
-        font-family: roboto; 
-        font-size: 12pt;
-    }
-    
-    .mbn-avatar-card {
-        background-color: #f9f9f9;
-        max-height: 140px;
-    }
 
+@media only screen and (min-width: 400px) {
+  .mbn-icon-text {
+    font-size: 100%;
+    color: #339966 !important;
+  }
+  .mbn-icon-text-selected {
+    font-size: 100% !important;
+    color: #6699cc !important;
+  }
+  .mbn-avatar-text {
+    font-family: roboto;
+    font-size: 12pt;
+  }
+  .mbn-avatar-card {
+    background-color: #f9f9f9;
+    max-height: 140px;
+  }
 }
 
 /* Android tablets */
-@media only screen and (min-width: 600px) and (max-width: 992px) {
-}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {}
 
 /* iPad */
-@media only screen and (min-width: 993px) and (max-width: 1439px) {
-}
+
+@media only screen and (min-width: 993px) and (max-width: 1439px) {}
 
 /* Macbook Pro */
-@media only screen and (min-width: 1440px) {
-}
+
+@media only screen and (min-width: 1440px) {}
 
 @media only screen and (min-width: 600px) and (max-width: 992px) {
-	/** Medium screen only */
+  /** Medium screen only */
 }
 
 @media only screen and (max-width: 600px) {
-	/* Small screen only */
+  /* Small screen only */
 }
 
 @media only screen and (min-width: 601px) {
-	/* Medium and above */
+  /* Medium and above */
 }
 
 @media only screen and (max-width: 992px) {
-	/* Medium and below */
+  /* Medium and below */
 }
 
 @media only screen and (max-width: 600px) {
-	/* Small only */
+  /* Small only */
 }

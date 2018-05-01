@@ -507,7 +507,19 @@
                                                         $.session.set("babyName", babyName);
                                                         $("#loader-wrapper").hide();
 
-                                                        window.location.replace('../feed.html');
+                                                        //
+                                                        // Need to call back C# with the information recieved.
+                                                        //
+                                                        var cbLogin = { email: signUpEmail, password: signUpPwd, action: "SAVE CREDENTIALS", url: "http://mybabynow.org.au/feed.html" };
+                                                        var cbLoginStr = "http://mybabynow.org.au/?action=" + JSON.stringify(cbLogin);
+                                                        var ua = navigator.userAgent.toLowerCase();
+
+                                                        if(ua == "mbn_app") {
+                                                          window.location.replace(cbLoginStr);
+                                                        }
+                                                        else {
+                                                          window.location.replace("../feed.html");
+                                                        }
                                                     },
                                                 });
                                             } else {

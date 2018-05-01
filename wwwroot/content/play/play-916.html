@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/916.jpg" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Play</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Play</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-video" id="9.1.6">Video library</p>
+            <p class="mbn-text" id="9.1.6a">
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('9.1.6b');">Baby developmental issues</a>
+                </li>
+                <li><a onclick="localSecJump('9.1.6c');">Baby massage </a>
+                </li>
+                <li><a onclick="localSecJump('9.1.6d');">Getting active at:</a>
+                </li>
+                <ul>
+                    <li><a onclick="localSecJump('9.1.6d');">3 months </a>
+                    </li>
+                    <li><a onclick="localSecJump('9.1.6e');">6 months </a>
+                    </li>
+                    <li><a onclick="localSecJump('9.1.6f');">9 months </a>
+                    </li>
+                    <li><a onclick="localSecJump('9.1.6g');">12 months </a>
+                    </li>
+                    <li><a onclick="localSecJump('9.1.6h');">12-15 months </a>
+                    </li>
+                </ul>
+                <li><a onclick="localSecJump('9.1.6i');">Home safety </a>
+                </li>
+                <li><a onclick="localSecJump('9.1.6j');">Limiting restraint </a>
+                </li>
+                <li><a onclick="localSecJump('9.1.6k');">Screen time </a>
+                </li>
+                <li><a onclick="localSecJump('9.1.6l');">Tummy time </a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="9.1.6b">
+                Baby developmental issues
+            </p>
+            <p class="mbn-text">
+                This short video discusses some potential issues to look out for, particularly with hearing, vision and movement.
+            </p>
+
+            <p class="mbn-video">
+                <b>Video: Tired signs </b>
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/L5x2Nzdzhkg" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href=" http://raisingchildren.net.au/articles/development_issues_video.html/context/808 " target="_blank">raisingchildren.net.au</a>
+            </p>
+
+            <p class="mbn-section" id="9.1.6c">
+                Baby massage
+            </p>
+            <p class="mbn-text">
+                This short video outlines the benefits of <a onclick="localSecJump('play-915.html#9.1.5al');">massage</a> for soothing newborns and gives tips on the best ways for relaxing and <a onclick="localSecJump('parents/parents-716.html#7.1.6f');">connecting with your baby</a>.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Qa2cVLnjDlM" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/connecting_communicating/newborns_connecting.html" target="_blank">raisingchildren.net.au</a>
+            </p>
+            <p class="mbn-section" id="9.1.6d">
+                Getting active at 3 months
+            </p>
+            <p class="mbn-text">
+                This video talks about some ways to interact and play with your baby and why this is important for their development, how <a onclick="localSecJump('play-912.html#9.1.2a');">screen time</a> in young children can impact on their health outcomes and why <a onclick="localSecJump('play-911.html#9.1.1a');">tummy time</a> is so important at this age.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/_T561z83lpc" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+            <p class="mbn-section" id="9.1.6e">
+                Getting active at 6 months
+            </p>
+            <p class="mbn-text">
+                This video discusses why it's important to give your baby the opportunity to play and explore freely in a variety of <a onclick="localSecJump('play-914.html#9.1.4c');">safe environments</a>, both indoors and outside. It suggests some ways for <a onclick="localSecJump('play-913.html#9.1.3a');">letting your baby play freely</a> and talks about how this contributes to their overall development and independence.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/C_h6orMj4ts" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+            <p class="mbn-section" id="9.1.6f">
+                Getting active at 9 months
+            </p>
+            <p class="mbn-text">
+                This video talks about the importance of making time every day to play with your baby but also that your baby still needs lots of <a onclick="localSecJump('play-912.html#9.1.2g');">independent play</a>. It suggests some ways to encourage your baby to crawl, stand and walk, and stresses why <a onclick="localSecJump('play-914.html#9.1.4a');">home safety</a> is even more important when your baby is on the move.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/_uyxhT_I6o4" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+            <p class="mbn-section" id="9.1.6g">
+                Getting active at 12 months
+            </p>
+            <p class="mbn-text">
+                This video talks about how learning to enjoy being active at a young age will set your baby up for an active life later on. It discusses the importance of <a onclick="localSecJump('play-912.html#9.1.2d');">active play</a> for the <i>whole</i> family (adults included!) and gives lots of <a onclick="localSecJump('play-915.html#9.1.5fd');">ideas for being active with your 12 month old</a>, as well as how to build up the distance they can walk.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/TejuxDEAC-g" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+            <p class="mbn-section" id="9.1.6h">
+                Getting active from 12-15 months
+            </p>
+            <p class="mbn-text">
+                This video discusses ways you can help your toddler to practise the fundamental movement skills - such as running, climbing and catching - that they are now developing. It talks about the importance of giving your toddler <a onclick="localSecJump('play-915.html#9.1.5fw');">plenty of opportunities to practise their new skills</a> and the need for your support and supervision during this stage
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/2QEkfkonvto" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+            <p class="mbn-section" id="9.1.6i">
+                Home safety
+            </p>
+            <p class="mbn-text">
+                This video talks about <a onclick="localSecJump('play-914.html#9.1.4c');">ways to make your home safe</a> for your baby to <a onclick="localSecJump('play-913.html#9.1.3a');">play freely</a>.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/W-AvKCgd7K4" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+            <p class="mbn-section" id="9.1.6j">
+                Limiting restraint
+            </p>
+            <p class="mbn-text">
+                This video talks about the need for babies to <a onclick="localSecJump('play-913.html#9.1.3a');">be able to move around freely</a>, without being <a onclick="localSecJump('play-913.html#9.1.3b');">restrained</a>.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VE0Ly4kEGs4" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+            <p class="mbn-section" id="9.1.6k">
+                Screen time
+            </p>
+            <p class="mbn-text">
+                This video talks about how screen time impacts on a child's development and why it is recommended that children under the age of 2 <a onclick="localSecJump('play-912.html#9.1.2a');">do not spend any time looking at screens</a>.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/pDbuv_sHKgM" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+            <p class="mbn-section" id="9.1.6l">
+                Tummy time
+            </p>
+            <p class="mbn-text">
+                This video talks about why <a onclick="localSecJump('play-911.html#9.1.1a');">tummy time is important</a> for strengthening your baby's neck and upper body, and discusses how to start doing this with your baby, even if <a onclick="localSecJump('play-911.html#9.1.1d');">they don't like it</a> at first.
+            </p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/_NsKnkkNGco" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <p class="mbn-video-caption">
+                Sourced from the Infant Program. For more help getting healthy eating and active play with your baby right from the start, visit <a href="http://www.infantprogram.org/" target="_blank">infantprogram.org</a>.
+            </p>
+
+
+
+            <p> <br>
+                <br>
+                <br>
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

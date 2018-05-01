@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -41,7 +41,7 @@
         <div class="card-image">
             <img src="images/milk-other-drinks.png" />
             <span class="card-title mbn-card-title" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -50,7 +50,7 @@
 
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -59,197 +59,177 @@
     <!-- Content -->
     <div class="mbn-content" id="section-content">
         <div class="mbn-content-scroll" id="content">
-            <p class="mbn-section" id="4.1.6" >Milk and other drinks</p>
+            <p class="mbn-section" id="4.1.6">Milk and other drinks</p>
             <p class="mbn-text" id="4.1.6a">
-                    This section covers:
+                This section covers:
             </p>
+            <ul>
+                <li><a onclick="localSecJump('4.1.6b');">the types of drinks are suitable for your baby:</a>
+                </li>
                 <ul>
-                    <li><a href="#4.1.6">the types of drinks are suitable for your baby:</a>
+                    <li><a onclick="localSecJump('4.1.6b');">under 6 months</a>
                     </li>
-                     <ul>
-                    <li><a href="#4.1.6">under 6 months</a>
+                    <li><a onclick="localSecJump('4.1.6c');">from 6-12 months of age</a>
                     </li>
-                    <li><a href="#4.1.6">from 6-12 months of age</a>
-                    </li>
-                    <li><a href="#4.1.6">after 12 months</a>
+                    <li><a onclick="localSecJump('4.1.6d');">after 12 months</a>
                     </li>
                 </ul>
-                     <li><a href="#4.1.6">which drinks are not suitable and should be avoided</a> 
-                    </li>
-                     <li><a href="#4.1.6">how your own drink choices influence your baby's preferences</a>
-                    </li>
-                     <li><a href="#4.1.6">the importance of introducing a sippy cup from 6 months</a>
-                    </li> 
-                </ul>
+                <li><a onclick="localSecJump('4.1.6e');">which drinks are not suitable and should be avoided</a>
+                </li>
+                <li><a onclick="localSecJump('4.1.6f');">how your own drink choices influence your baby's preferences</a>
+                </li>
+                <li><a onclick="localSecJump('4.1.6g');">the importance of introducing a sippy cup from 6 months</a>
+                </li>
+            </ul>
+
+            <p class="mbn-section" id="4.1.6b">
+                Under 6 months of age
+            </p>
+            <p class="mbn-text">
+                The only drinks babies under 6 months need are formula or breastmilk, unless you have been advised otherwise by your GP or <a onclick="localSecJump('hs/hs-812.html#8.1.2');">maternal and child health nurse</a>. These provide them with all their nutrition needs as well as fluids to prevent dehydration.
             </p>
 
-            <p class="mbn-text" id="4.1.6b">
-                    <b>Under 6 months of age</b>
+            <p class="mbn-section" id="4.1.6c">
+                From 6-12 months
             </p>
             <p class="mbn-text">
-                   The only drinks babies under 6 months need are formula or breastmilk, unless you have been advised otherwise by your GP or <a href="#8.1.2">maternal and child health nurse</a>. These provide them with all their nutrition needs as well as fluids to prevent dehydration. 
-            </p>
-
-            <p class="mbn-text" id="4.1.6c">
-                    <b>From 6-12 months</b>
-            </p>        
-            <p class="mbn-text">
-                   Breastmilk or formula should still be your baby's main drink in the first 12 months. A little cow's milk used <a href="#6.1.1">in cooking</a> is OK but it should not be their main drink. 
+                Breastmilk or formula should still be your baby's main drink in the first 12 months. A little cow's milk used <a onclick="localSecJump('recipe/recipe-611.html#6.1.1a');">in cooking</a> is OK but it should not be their main drink.
             </p>
             <p class="mbn-text">
-                   Small amounts of cooled boiled water can be given from around 6 months if your baby needs extra fluids (e.g. in hot weather). Try not to give water too often because it can fill your baby's little tummy, making them feel too full to drink enough milk and they will risk not getting all the nutrition than need from milk/solids. 
+                Small amounts of cooled boiled water can be given from around 6 months if your baby needs extra fluids (e.g. in hot weather). Try not to give water too often because it can fill your baby's little tummy, making them feel too full to drink enough milk and they will risk not getting all the nutrition than need from milk/solids.
             </p>
             <p class="mbn-text">
-                   Once your baby has reached 6 months, it is also time to encourage your baby to drink (breastmilk, formula or cooled boiled water) <a href="#4.1.6">from a cup!</a>        
-            </p> 
-
-            <p class="mbn-text" id="4.1.6d">
-                    <b>After 12 months</b>
-            </p>        
-            <p class="mbn-text">
-                   From 12 months, until your baby is 2 years or older, regular full cream cow's milk is fine. By now, their main nutrition should be coming from <a href="#4.1.8">family meals</a> instead of milk. Avoid giving low and reduced fat cow's milk though - these do not contain enough energy (kilojoules/calories) for your baby's rapidly <a href="#5.1.5">growing body.</a> 
-            </p>
-            <p class="mbn-text">
-                   It's also best to serve any drinks <a href="#4.1.6">in a cup</a> (other than when breastfeeding) to help your baby learn to sip. 
+                Once your baby has reached 6 months, it is also time to encourage your baby to drink (breastmilk, formula or cooled boiled water) <a onclick="localSecJump('4.1.6g');">from a cup</a>!
             </p>
 
-            <p class="mbn-text" id="4.1.6e">
-                    <b>What about drinks other than milk or water? </b>
-            </p>        
-            <p class="mbn-text">
-                   As adults, we enjoy many different drinks, so it can be tempting to offer your baby drinks other than just milk or water. However, the reality is that most other drinks can cause your baby harm, even if they appear to enjoy them.
+            <p class="mbn-section" id="4.1.6d">
+                After 12 months
             </p>
             <p class="mbn-text">
-                    For example, juices (including 100% fruit juice), soft drinks, cordials or sports and energy drinks can: 
-                <ul>
-                    <li>damage growing teeth - even before they have come through 
-                    </li>
-                    <li>cause your baby to <a href="#5.1.5">gain too much weight</a>, get tummy upsets and diarrhoea 
-                    </li>
-                    <li>fill up your baby's tummy, leaving less room for more nutritious milks/foods needed for your baby's <a href="#5.1.5">growth</a> and development 
-                    </li>
-                    <li>encourage your baby to develop a 'sweet tooth', making it <a href="#4.1.12">harder to introduce other foods</a> that aren't as sweet, such as some <a href="#4.1.11">vegetables</a> 
-                    </li>
-                    <li>be harmful to your baby's developing body if they contain high levels of caffeine, which is common with energy drinks 
-                    </li>
-                </ul>
+                From 12 months, until your baby is 2 years or older, regular full cream cow's milk is fine. By now, their main nutrition should be coming from <a onclick="localSecJump('solids-418.html#4.1.8a');">family meals</a> instead of milk. Avoid giving low and reduced fat cow's milk though - these do not contain enough energy (kilojoules/calories) for your baby's rapidly <a onclick="localSecJump('sfp/sfp-515.htm#5.1.5');">growing body.</a>
             </p>
             <p class="mbn-text">
-                    Coffee and teas (including herbal), like other drinks, can also fill up your baby's small tummy (making them less hungry for milks/foods they need for growth and development) but they also should be avoided because they: 
-                <ul>
-                    <li>can prevent important nutrients (such as <a href="#4.1.9">iron</a>) being absorbed into your baby's body properly
-                    </li>
-                    <li>often contain high levels of caffeine which can be harmful for your baby's development
-                    </li>
-                </ul>
+                It's also best to serve any drinks <a onclick="localSecJump('4.1.6g');">in a cup</a> (other than when breastfeeding) to help your baby learn to sip.
             </p>
+
+            <p class="mbn-section" id="4.1.6e">
+                What about drinks other than milk or water?
+            </p>
+            <p class="mbn-text">
+                As adults, we enjoy many different drinks, so it can be tempting to offer your baby drinks other than just milk or water. However, the reality is that most other drinks can cause your baby harm, even if they appear to enjoy them.
+            </p>
+            <p class="mbn-text">
+                For example, juices (including 100% fruit juice), soft drinks, cordials or sports and energy drinks can:
+            </p>
+            <ul>
+                <li>damage growing teeth - even before they have come through
+                </li>
+                <li>cause your baby to <a onclick="localSecJump('sfp/sfp-515.html#5.1.5a');">gain too much weight</a>, get tummy upsets and diarrhoea
+                </li>
+                <li>fill up your baby's tummy, leaving less room for more nutritious milks/foods needed for your baby's <a onclick="localSecJump('sfp/sfp-515.html#5.1.5a');">growth</a> and development
+                </li>
+                <li>encourage your baby to develop a 'sweet tooth', making it <a onclick="localSecJump('solids-4112.html#4.1.12a');">harder to introduce other foods</a> that aren't as sweet, such as some <a onclick="localSecJump('solids-4111.html#4.1.11a');">vegetables</a>
+                </li>
+                <li>be harmful to your baby's developing body if they contain high levels of caffeine, which is common with energy drinks
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Coffee and teas (including herbal), like other drinks, can also fill up your baby's small tummy (making them less hungry for milks/foods they need for growth and development) but they also should be avoided because they:
+            </p>
+            <ul>
+                <li>can prevent important nutrients (such as <a onclick="localSecJump('solids-419.html#4.1.9b');">iron</a>) being absorbed into your baby's body properly
+                </li>
+                <li>often contain high levels of caffeine which can be harmful for your baby's development
+                </li>
+            </ul>
 
             <p class="mbn-text" id="4.1.6f">
-                    <b>Be a good role model</b>
+                <b>Be a good role model</b>
+                <br/> Because your baby is always watching you (and trying to copy what you do) they will see the drinks that you, your partner and other carers enjoy, and want to drink those too!
+            </p>
+            <p class="mbn-text">
+                If you regularly drink juice, soft drinks, cordials, sports drinks or energy drinks, now may be time to think about changing your own habits. An added bonus is that by <a onclick="localSecJump('parents/parents-714.html#7.1.4p');">cutting back on these drinks</a>, you'll save yourself money, <a onclick="localSecJump('parents/parents-714.html#7.1.4n');">boost your own health</a> and probably lose weight at the same time!
+            </p>
+            <p class="mbn-text">
+                Remember, you are your baby's most important role model - your own drinking habits, as well as the drinks you keep at home, all play a big role in what your baby will want to drink themselves, especially as they get older. It's important that you set a good example by not offering your baby these drinks, or making them available at home, to avoid a potential battle down the track.
+            </p>
+            <p class="mbn-text">
+                Check out <a href="tool:Link to healthy eating quiz">our quiz</a> for some personalised tips.
             </p>
 
-            <p class="mbn-text">
-                   Because your baby is always watching you (and trying to copy what you do) they will see the drinks that you, your partner and other carers enjoy, and want to drink those too!  
+            <p class="mbn-section" id="4.1.6g">
+                Introduce a sippy cup at 6 months of age
             </p>
             <p class="mbn-text">
-                   If you regularly drink juice, soft drinks, cordials, sports drinks or energy drinks, now may be time to think about changing your own habits. An added bonus is that by <a href="#7.1.4">cutting back on these drinks</a>, you'll save yourself money, <a href="#7.1.4">boost your own health</a> and probably lose weight at the same time! 
+                Once your baby reaches 6 months of age, it's a good idea to start offering your baby's drinks in a 'sippy' cup - a training cup that helps your baby learn how to sip. They're usually made from plastic and have a lid with a spout that lets your baby drink without spilling.
             </p>
             <p class="mbn-text">
-                   Remember, you are your baby's most important role model - your own drinking habits, as well as the drinks you keep at home, all play a big role in what your baby will want to drink themselves, especially as they get older. It's important that you set a good example by not offering your baby these drinks, or making them available at home, to avoid a potential battle down the track.   
-            </p> 
-            <p class="mbn-text">
-                  Check out <a href="#Link to healthy eating quiz">our quiz</a> for some personalised tips. 
-            </p>
-
-            <p class="mbn-text" id="4.1.6g">
-                    <b>Introduce a sippy cup at 6 months of age</b>
-            </p>
-            <p class="mbn-text">
-                   Once your baby reaches 6 months of age, it's a good idea to start offering your baby's drinks in a 'sippy' cup - a training cup that helps your baby learn how to sip. They're usually made from plastic and have a lid with a spout that lets your baby drink without spilling.    
-            </p>
-            <p class="mbn-text">
-                   The aim is to introduce a cup at 6 months and if you're bottle feeding, to phase out bottles altogether by 12 months.  
+                The aim is to introduce a cup at 6 months and if you're bottle feeding, to phase out bottles altogether by 12 months.
             </p>
 
             <p class="mbn-text" id="4.1.6h">
-                    <b>Why a cup?</b>
+                <b>Why a cup?</b>
+                <br />
+                Using a cup increases the movement of your baby's jaw and chin, which improves the coordination, control and flexibility of their tongue and lips - all of which are important in learning to talk!
             </p>
             <p class="mbn-text">
-                   Using a cup increases the movement of your baby's jaw and chin, which improves the coordination, control and flexibility of their tongue and lips - all of which are important in learning to talk!    
-            </p>
-            <p class="mbn-text">
-                   It also boosts your baby's independence and improves their hand coordination
+                It also boosts your baby's independence and improves their hand coordination
             </p>
 
             <p class="mbn-text" id="4.1.6i">
-                    <b>Which sippy cup is best?</b>
-            </p>        
-            <p class="mbn-text">
-                   There are many different types of sippy cups available! You may need to experiment to find one that suits your baby.  
+                <b>Which sippy cup is best?</b>
+                <br />
+                There are many different types of sippy cups available! You may need to experiment to find one that suits your baby.
             </p>
             <p class="mbn-text">
-                    Things to look for when choosing a sippy cup: 
-                <ul>
-                    <li><u>clear/transparent material</u> so your baby can see the liquid inside 
-                    </li>
-                    <li><u>two handles</u> to make it easier for your baby to grip and pick up 
-                    </li>
-                    <li><u>free-flowing</u> that doesn't have a non-spill valve - these valves make it harder for your baby to get the liquid out and encourages them to suck instead of sip 
-                    </li>
-                    <li><a>a soft bendable spout</ - this might be more familiar and acceptable than a hard plastic spout to start with 
-                    </li>
-                    <li>be harmful to your baby's developing body if they contain high levels of caffeine, which is common with energy drinks 
-                    </li>
-                </ul>
+                Things to look for when choosing a sippy cup:
             </p>
+            <ul>
+                <li><u>clear/transparent material</u> so your baby can see the liquid inside
+                </li>
+                <li><u>two handles</u> to make it easier for your baby to grip and pick up
+                </li>
+                <li><u>free-flowing</u> that doesn't have a non-spill valve - these valves make it harder for your baby to get the liquid out and encourages them to suck instead of sip
+                </li>
+                <li><u>a soft bendable spout</u> - this might be more familiar and acceptable than a hard plastic spout to start with
+                </li>
+
+            </ul>
+
             <p class="mbn-text">
-                   As soon as your baby is ready, you can move onto an open cup - most children can drink from an open cup by 2 years of age.
+                As soon as your baby is ready, you can move onto an open cup - most children can drink from an open cup by 2 years of age.
             </p>
 
             <p class="mbn-text" id="4.1.6j">
-                    <b>What drinks should I put in their sippy cup? </b>
-            </p>        
-            <p class="mbn-text">
-                   Your baby's sippy cup should only ever contain cooled boiled water, breastmilk or formula. It should never contain <a href="#4.1.6">any other type of drink.</a>  
+                <b>What drinks should I put in their sippy cup?</b>
+                <br />
+                Your baby's sippy cup should only ever contain cooled boiled water, breastmilk or formula. It should never contain <a onclick="localSecJump('4.1.6e');">any other type of drink</a>.
             </p>
 
             <p class="mbn-text" id="4.1.6k">
-                    <b>How can I get my baby to drink from a cup?</b>
-            </p>        
-            <p class="mbn-text">
-                   Practice, practice and more practice! Don't worry, some babies take a while to get the hang of it, but they do get there. 
-            </p>
-            <p class="mbn-text">
-                    Some tips to try:
-                <ul>
-                    <li><u>showing your baby how</u> to lift the cup to their mouth and tipping it up to drink
-                    </li>
-                    <li><u>letting your baby see you (or another child) drink from a clean sippy cup</u> - just make sure you always give your baby a clean cup - sharing cups without washing also shares bacteria from your mouth! 
-                    </li>
-                    <li><u>touching the tip of the spout to the roof of your baby's mouth</u> - this should stimulate their sucking reflex and show them that the spout is just like a nipple/teat  
-                    </li>
-                    <li><a>allowing them to play and experiment with the cup</a> - it might make a mess but by tipping the cup upside down and seeing the water flow out, they'll soon learn how it works! 
-                    </li>
-                    <li><u>making it a familiar part of meal time</u> by always offering water in their sippy cup with each meal 
-                    </li>
-                </ul>
-            </p>
-
-
-            <p class="mbn-text">
-                   As soon as your baby is ready, you can move onto an open cup - most children can drink from an open cup by 2 years of age.
-            </p>
-
-            <p class="mbn-text" id="4.1.6j">
-                    <b>What drinks should I put in their sippy cup? </b>
-            </p>        
-            <p class="mbn-text">
-                   Your baby's sippy cup should only ever contain cooled boiled water, breastmilk or formula. It should never contain <a href="#4.1.6">any other type of drink.</a>  
-            </p>
-           
+                <b>How can I get my baby to drink from a cup?</b>
                 <br />
-                <br />
-                <br />
+                Practice, practice and more practice! Don't worry, some babies take a while to get the hang of it, but they do get there.
+            </p>
+            <p class="mbn-text">
+                Some tips to try:
+            </p>
+            <ul>
+                <li><u>showing your baby how</u> to lift the cup to their mouth and tipping it up to drink
+                </li>
+                <li><u>letting your baby see you (or another child) drink from a clean sippy cup</u> - just make sure you always give your baby a clean cup - sharing cups without washing also shares bacteria from your mouth!
+                </li>
+                <li><u>touching the tip of the spout to the roof of your baby's mouth</u> - this should stimulate their sucking reflex and show them that the spout is just like a nipple/teat
+                </li>
+                <li><u>allowing them to play and experiment</u> with the cup - it might make a mess but by tipping the cup upside down and seeing the water flow out, they'll soon learn how it works!
+                </li>
+                <li><u>making it a familiar part of meal time</u> by always offering water in their sippy cup with each meal
+                </li>
+            </ul>
+
+            <p>
+                <br /><br /><br />
             </p>
         </div>
     </div>

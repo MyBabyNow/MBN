@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/5110.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="5.1.10"> Using (and giving up) a dummy </p>
+            <p class="mbn-text" id="5.1.10a">
+                There are times when letting your baby suck on a dummy might be helpful and whilst there is no right or wrong when it comes to whether you should let your baby use a dummy, there are some pros and cons that can help you decide if you want to.
+            </p>
+
+            <p class="mbn-text" id="5.1.10b">
+                <b>Pros:</b>
+            </p>
+
+            <ul>
+                <li>sucking can have a soothing and calming effect for some babies and help them to <a onclick="localSecJump('sfp-518.html#5.1.8l');">settle</a>
+                </li>
+                <li>there is no evidence that dummies can cause serious health or developmental problems
+                </li>
+            </ul>
+
+
+            <p class="mbn-text" id="5.1.10b">
+                <b>Possible cons: </b>
+            </p>
+            <ul>
+                <li>babies can sometimes become dependent on dummies to fall asleep and when they fall out during the night, they may cry out for your help - you can teach your baby how to find their own dummy when they are 8 months or older
+                </li>
+                <li>babies and toddlers can become very attached to their dummy which means that eventually <a onclick="localSecJump('5.1.10e');">giving up the dummy</a> may not be so easy
+                </li>
+            </ul>
+
+
+            <p class="mbn-text" id="5.1.10c">
+                <b>Top tips for using a dummy with your baby</b> (if you decide to):
+            </p>
+            <ul>
+                <li>if you are breastfeeding, try to wait until your <a onclick="localSecJump('bf/bf-113.html#1.1.3a');">milk supply</a> is established (usually about 6-8 weeks) before giving your baby a dummy
+                </li>
+                <li>only use a dummy when you know your baby is not hungry, such as after feeds and at sleep time
+                </li>
+                <ul>
+                    <li>this is especially important if you're breastfeeding because too much time sucking on the dummy can be tiring for your baby and reduce the amount of time they suck at the breast, which can then reduce your <a onclick="localSecJump('bf/bf-113.html#1.1.3a');">milk supply</a>
+                    </li>
+                </ul>
+                <li><i>never</i> tie a dummy to your baby's hand, around their neck or to their cot - this can cause choking
+                </li>
+                <li>dummies come in different shapes - experiment to find one your baby likes and always make sure it <a href="https://www.productsafety.gov.au/standards/baby-dummies-and-dummy-chains " target="_blank">meets Australian standards</a>
+                </li>
+                <ul>
+                    <li>try to get dummies that can go in the dishwasher or be boiled to make sure they're clean
+                    </li>
+                    <li>choose the right size dummy for your baby's age (e.g. under 6 months)
+                    </li>
+                    <li><i>always</i> throw out the dummy if it is damaged
+                    </li>
+                </ul>
+
+            </ul>
+
+            <p class="mbn-section" id="5.1.10e">
+                Giving up the dummy
+            </p>
+            <p class="mbn-text">
+                As a parent, you're best placed to decide when it is time for your baby to give up the dummy.
+            </p>
+            <p class="mbn-text">
+                These tips might help:
+            </p>
+            <ul>
+                <li><b>choose a good time</b> - a period of change or stress for you, or your baby, might not be a good time
+                </li>
+                <li><b>begin by restricting the dummy for use in certain times or places</b> such as in the car or cot - this gives your child a chance to get used to not having the dummy all the time
+                </li>
+                <li><b>use other comforters</b> such as a blanket or teddy, but remember <a onclick="localSecJump('sfp-5114.html#5.1.14a');">not to use teddies or other toys in the cot</a> as they are a suffocation risk
+                </li>
+                <li><b>set a time and date to take the dummy away</b> but only once your baby is used to not having the dummy for longer periods of time
+                </li>
+                <li><b>try not turn back</b> - it's a good idea to throw away all dummies so you're not tempted to go back to using a dummy!
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Many children also tend to give up the dummy on their own (so you may not need to go through these steps) and don't worry, sucking a dummy will never become a lifelong habit!
+            </p>
+
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+    </div>
+    </div>
+
+
+
+            <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+                <nav class="mbn-nav">
+                    <div class="nav-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col mbn-icon" onclick="Load('feed');">
+                                    <p>
+                                        <img src="../../images/feed.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">My baby</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('topics');">
+                                    <p class="mbn-icon-selected">
+                                        <img src="../../images/topics-s.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text-selected">Topics</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('tools');">
+                                    <p>
+                                        <img src="../../images/tools.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Tools</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('forum');">
+                                    <p>
+                                        <img src="../../images/forum.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">Forum</span>
+                                    </p>
+                                </div>
+                                <div class="col mbn-icon" onclick="Load('more');">
+                                    <p>
+                                        <img src="../../images/more.png" style="width:30%;" />
+                                        <br />
+                                        <span class="mbn-icon-text">More</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        
+
+</body>
+
+</html>

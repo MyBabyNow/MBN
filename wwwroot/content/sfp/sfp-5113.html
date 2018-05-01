@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/5113.png" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Sleep/feed patterns</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+    <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="5.1.13"> Dropping the night feed </p>
+            <p class="mbn-text" id="5.1.13a">
+                From 6 months of age, babies who are developing well no longer need to feed overnight. It is up to you whether you choose to keep going with the night feed or drop it - either is OK. If you are unsure, discuss with your <a onclick="localSecJump('hs/hs-814.html#8.1.4a');">maternal and child health nurse</a>.
+            </p>
+            <p class="mbn-text">
+                <i>How</i> to drop the night feed depends on whether your baby is being breast or formula-fed, as well as how long their night feed currently is.
+            </p>
+            <p class="mbn-text" id="5.1.13b">
+                <b>Breastfed babies</b>
+            </p>
+            <p class="mbn-text">
+                If your baby's night feed is:
+                <ul>
+                    <li><u>less than 5 minutes</u> - it can be stopped outright and your baby re-settled to sleep
+                    </li>
+                    <li><u>usually longer than 5 minutes</u> - gradually cut back the time you spend feeding over 5-7 nights to help your baby get used to the change
+                    </li>
+                </ul>
+
+                <p class="mbn-text" id="5.1.13c">
+                    <b>Formula-fed babies</b>
+                </p>
+                <p class="mbn-text">
+                    If your baby's night feed is:
+                </p>
+                <ul>
+                    <li><u>60mL of formula or less</u> - it can be stopped outright and your baby re-settled to sleep
+                    </li>
+                    <li><u>more than 60mL</u> - gradually cut down on the amount your baby drinks over 5-7 nights to help your baby get used to the change
+                    </li>
+                </ul>
+                <p class="mbn-video-caption">
+                    Adapted with permission from the <a href="http://raisingchildren.net.au/articles/phasing_out_night_feeds.html " target="_blank">Raising Children website</a>, Australia's trusted parenting website.
+                </p>
+
+
+                <br />
+                <br />
+                <br />
+                <br />
+           </div>
+    </div>
+
+
+                <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+                    <nav class="mbn-nav">
+                        <div class="nav-wrapper">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col mbn-icon" onclick="Load('feed');">
+                                        <p>
+                                            <img src="../../images/feed.png" style="width:30%;" />
+                                            <br />
+                                            <span class="mbn-icon-text">My baby</span>
+                                        </p>
+                                    </div>
+                                    <div class="col mbn-icon" onclick="Load('topics');">
+                                        <p class="mbn-icon-selected">
+                                            <img src="../../images/topics-s.png" style="width:30%;" />
+                                            <br />
+                                            <span class="mbn-icon-text-selected">Topics</span>
+                                        </p>
+                                    </div>
+                                    <div class="col mbn-icon" onclick="Load('tools');">
+                                        <p>
+                                            <img src="../../images/tools.png" style="width:30%;" />
+                                            <br />
+                                            <span class="mbn-icon-text">Tools</span>
+                                        </p>
+                                    </div>
+                                    <div class="col mbn-icon" onclick="Load('forum');">
+                                        <p>
+                                            <img src="../../images/forum.png" style="width:30%;" />
+                                            <br />
+                                            <span class="mbn-icon-text">Forum</span>
+                                        </p>
+                                    </div>
+                                    <div class="col mbn-icon" onclick="Load('more');">
+                                        <p>
+                                            <img src="../../images/more.png" style="width:30%;" />
+                                            <br />
+                                            <span class="mbn-icon-text">More</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+      
+</body>
+
+</html>

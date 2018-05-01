@@ -10,7 +10,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="../../js/materialize.min.js"></script>
@@ -35,7 +35,7 @@
         <div class="card-image">
             <img src="images/what-to-expect.png" />
             <span class="card-title mbn-card-title" id="section-title">
-				<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
+				<span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -43,7 +43,7 @@
     </div>
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-			<span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
+			<span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Mixed feeding</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -54,17 +54,19 @@
             <p class="mbn-section" id="3.1.4"><span id="3.1.4a"></span>What to expect</p>
             <p class="mbn-text">
                 When you start feeding both breastmilk and formula to your baby, you might notice a few changes.
-                <br /> Your:
+            </p>
+            <p class="mbn-text">
+                Your:
             </p>
             <ul>
                 <li>
-                    <u>household costs will go up </u> - you will be regularly purchasing tins of formula, and potentially <a onclick="localSecJump('ff/ff-211.html#2.1.1d');">other products</a> you may not already have
+                    <u>household costs will go up</u> - you will be regularly purchasing tins of formula, and potentially <a onclick="localSecJump('ff/ff-211.html#2.1.1d');">other products</a> you may not already have
                 </li>
                 <li>
-                    <u>routine will change </u> - your baby may feed differently once they are also receiving formula
+                    <u>routine will change</u> - your baby may feed differently once they are also receiving formula
                 </li>
                 <li>
-                    <u>life might feel busier </u> - it takes more time to <a onclick="localSecJump('ff/ff-213.html#2.1.3a');"> sterilise and clean feeding equipment</a> because formula is not a sterile product, so it's important to practise good hygiene
+                    <u>life might feel busier</u> - it takes more time to <a onclick="localSecJump('ff/ff-213.html#2.1.3a');"> sterilise and clean feeding equipment</a> because formula is not a sterile product, so it's important to practise good hygiene
                 </li>
             </ul>
 
@@ -76,7 +78,7 @@
                     <u>will produce less milk</u> - regular feeding with formula can interfere with your <a onclick="localSecJump('mf-313.html#3.1.3');">milk supply</a>
                 </li>
                 <li>
-                    <u>might start feeling too full and uncomfortable </u> - make sure you check for <a onclick="localSecJump('bf/bf-118.html#1.1.8c');">blocked ducts</a> and <a onclick="localSecJump('bf/bf-1111.html#1.1.11f');">express to feel comfortable</a>; your breasts will soon adjust to their new schedule
+                    <u>might start feeling too full and uncomfortable</u> - make sure you check for <a onclick="localSecJump('bf/bf-118.html#1.1.8c');">blocked ducts</a> and <a onclick="localSecJump('bf/bf-1111.html#1.1.11f');">express to feel comfortable</a>; your breasts will soon adjust to their new schedule
                 </li>
             </ul>
 
@@ -116,7 +118,9 @@
             <p class="mbn-text" id="3.1.4e2">
                 <b>2. Take steps to keep your breastmilk supply up</b>
                 <br /> Any regular replacement of a breastfeed (even just once a day) will affect your milk supply because <a onclick="localSecJump('mf/mf-313.html#3.1.3');">milk supply</a> responds to the demand from your baby. One way to keep up your milk supply is to fit in some extra <a onclick="localSecJump('bf/bf-1111.html#1.1.11');">expression sessions</a>.
-                <br /> If you are going to 'top up' your baby with formula, be sure to:
+            </p>
+            <p class="mbn-text">
+                If you are going to 'top up' your baby with formula, be sure to:
             </p>
             <ul>
                 <li>always breastfeed <i>first</i> before offering the bottle

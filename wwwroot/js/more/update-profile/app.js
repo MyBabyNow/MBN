@@ -21,11 +21,17 @@
                 console.log(respondData[0].signup_email);
                 console.log(respondData[0].mobile);
                 console.log(respondData[0].profile_photo);
-                $scope.id = respondData[0].id;
 
+                $scope.id = respondData[0].id;
                 $scope.email = respondData[0].signup_email;
-                $scope.avatar = atob(respondData[0].profile_photo);
                 $scope.mobile = respondData[0].mobile;
+
+                if(respondData[0].profile_photo.indexOf("data:image/jpeg;base64") != -1) {
+                  $scope.avatar = respondData[0].profile_photo;
+                }
+                else {
+                  $scope.avatar = atob(respondData[0].profile_photo);
+                }
 
                 $("#loader-wrapper").addClass("hide");
 
@@ -39,24 +45,31 @@
         $scope.updateProfile = function() {
             $("#loader-wrapper").removeClass("hide");
 
-            var encodedAvatar = btoa($scope.avatar);
+            // $http
+            //     .post(
+            //         "http://assc-klong-gh.azurewebsites.net/api/update_profile", {
+            //             signup_email: $scope.email,
+            //             mobile: $scope.mobile,
+            //             profile_photo: $scope.avatar,
+            //             user_id: $scope.userId
+            //         }
+            //     )
+            //     .
 
             var data = {
                 signup_email: $scope.email,
                 mobile: $scope.mobile,
-                profile_photo: encodedAvatar,
-                user_id: $scope.userId
+                profile_photo: $scope.avatar,
             };
+            var url = "http://assc-klong-gh.azurewebsites.net/tables/gh_survey/" + $scope.id;
 
-  
-
-            $http.post(
-                "http://assc-klong-gh.azurewebsites.net/api/update_profile",
-                data
-            ).success(function(respondData) {
-                 $("#loader-wrapper").addClass("hide");
-             });
-
+            $http({
+                method: "PATCH",
+                url: url,
+                data: angular.toJson(data)
+            }).success(function(respondData) {
+                $("#loader-wrapper").addClass("hide");
+            });
         }
 
 
@@ -77,15 +90,16 @@
             var f = fileSelect.files[0],
                 r = new FileReader();
 
-            r.onloadend = function(e) { //callback after files finish loading  
+            r.onloadend = function(e) { //callback after files finish loading
+                $scope.avatar = e.target.result;
+                $scope.$apply();
                 //console.log($scope.data.b64.replace(/^data:image\/(png|jpg);base64,/, "")); //replace regex if you want to rip off the base 64 "header"
 
                 //here you can send data over your server as desired
                 var tempImg = new Image();
-                tempImg.src = e.target.result;
                 tempImg.onload = function() {
-                    var MAX_WIDTH = 150;
-                    var MAX_HEIGHT = 150;
+                    var MAX_WIDTH = 647.5;
+                    var MAX_HEIGHT = 647.5;
                     var tempW = tempImg.width;
                     var tempH = tempImg.height;
                     if (tempW > tempH) {
@@ -107,7 +121,6 @@
                     ctx.drawImage(this, 0, 0, tempW, tempH);
                     var dataURL = canvas.toDataURL("image/jpeg");
                     $scope.avatar = dataURL;
-                    $scope.$apply();
                 }
 
             }

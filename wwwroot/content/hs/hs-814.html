@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/814.jpg" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+
+            <p class="mbn-section" id="8.1.4"> General health</p>
+            <p class="mbn-text" id="8.1.4a">
+                Your GP or maternal and child health nurse is always the most useful contact for information about all aspects of the health and wellbeing of your baby.
+            </p>
+            <p class="mbn-text">
+                In this section, you can find out more about the following services:
+            </p>
+            <ul>
+                <li><a onclick="localSecJump('8.1.4b');">Children's hospitals</a>
+                </li>
+                <li><a onclick="localSecJump('8.1.4c');">Medical advice and support</a>
+                </li>
+                <li><a onclick="localSecJump('8.1.4e');">Maternal and child health services</a> (including state-specific services)
+                </li>
+            </ul>
+            <p class="mbn-section" id="8.1.4b">
+                Children's hospitals
+            </p>
+            <p class="mbn-text">
+                <b>Kids health, The Children's Hospital at Westmead</b>
+                <br> Health promotion unit of The Children's Hospital at Westmead that aims to keep children fit, happy, healthy, safe and out of hospital. A website with useful information and fact sheets about health conditions, allergies and safety.
+            </p>
+            <p class="mbn-text">
+                <a href="https://kidshealth.schn.health.nsw.gov.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b>Royal Children's Hospital </b>
+                <br> A website containing useful information about children's health in the form of easy to read 'Kids Health Info Fact Sheets' and acute health services for children in Victoria.
+            </p>
+            <p class="mbn-text">
+                <a href="https://www.rch.org.au/kidsinfo" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-section" id="8.1.4c">
+                Medical advice and support
+            </p>
+            <p class="mbn-text">
+                <b>Healthdirect </b>
+                <img src="images/8.1.png" image width="30" height="30">
+                <br> Australian Government funded service providing safe, practical health information and advice. The helpline provides medical advice, first by a registered nurse and if required, the after-hours GP (if during the after-hours period: 6pm-7:30am Mon-Fri; Sat 12pm-Mon 7:30am; 24 hours Sun/public holidays). The after-hours GP helpline is not a substitute for face-to-face after-hours care for those people who need it.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1800022222">1800 022 222</a> (24 hours/7 days)
+                <br>
+                <a href="https://www.healthdirect.gov.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text" id="8.1.4d">
+                <b>Victoria</b>
+            </p>
+            <p class="mbn-text">
+                <b>Nurse on call</b>
+                <img src="images/8.1.png" image width="30" height="30">
+                <br> A telephone service that puts you directly in touch with a registered nurse for caring, professional health advice around the clock.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1300606024">1300 606 024</a> (24 hours/7 days)
+                <br>
+                <a href="https://www2.health.vic.gov.au/primary-and-community-health/primary-care/nurse-on-call" target="_blank">Website</a>
+            </p>
+
+
+            <p class="mbn-section" id="8.1.4e">
+                <b>Maternal and child health services</b>
+            </p>
+            <p class="mbn-text">
+                After the birth of your baby, you will be linked with your local Maternal and child health nurse / Community child health nurse / Child and Adolescent Health Service depending on which state you live in (each state gives this service a different name).
+            </p>
+
+            <p class="mbn-text">
+                In addition to the services listed here, you can also refer to the <a onclick="localSecJump('8.1.3');">parenting section</a> for plenty of other services that will be able to help, including state-specific services.
+            </p>
+
+            <p class="mbn-text">
+                <b>Pregnancy, Birth and Baby</b>
+                <br> An Australian Government funded telephone and online helpline providing support and information to both expecting parents and parents of children aged up to 5 years, from a maternal child health nurse. A range of questions you might have about your child's development or behaviour can be answered, such as: sleeping, settling, feeding, toilet training and tantrums.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1800882436">1800 882 436</a> (7am-12am/7 days)
+                <br>
+                <a href="https://https://www.pregnancybirthbaby.org.au/video-call">Video call</a> (7am-12am/7 days)
+                <br>
+                <a href="https://www.pregnancybirthbaby.org.au" target="_blank">Website</a>
+            </p>
+
+
+            <p class="mbn-text" id="8.1.4f">
+                <b><u>Australian Capital Territory </u></b>
+            </p>
+            <p class="mbn-text">
+                <b>Maternal and Child Health (MACH) Nursing Service </b>
+                <br> Call to arrange a first home visit or receive a call from a Maternal and Child Health Nurse.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:0262079977">02 6207 9977</a>) (9am-5pm Mon-Fri)
+                <br>
+                <a href="https://www.health.act.gov.au/our-services/women-youth-and-children/maternal-and-child-health-mach-nursing-service" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text" id="8.1.4g">
+                <b><u>New South Wales</u></b>
+            </p>
+            <p class="mbn-text">
+                <b>Karitane &reg;</b>
+                <br> A charity service for children and their parents from birth to 5 years that provides parenting support and advice, antenatal support and education, services to help with parental depression and anxiety, managing toddler behaviour and other related issues. Resources include a website with information on parenting and settling techniques and sleep promotion, helpline and residential, day and outreach services.
+            </p>
+            <p class="mbn-text">
+
+                <a href="tel:1300227464">1300 227 464 </a> (12:30pm-9pm; 11pm-6:30am Mon-Thu; Fri-Sat 9am-3:30pm)
+                <br>
+                <a href="https://karitane.com.au/karitane" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b> Tresillian Family Care Centres</b>
+                <br> An early parenting service offering families guidance in the early years of their child's life. Resources include information on parenting and settling techniques as well as sleep promotion, telephone and online helpline, community outreach and face-to-face advice.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1300272736">1300 272 736</a> (7am-11pm/7 days)
+                <br>
+                <a href="https://www.johnsonsbaby.com.au/tresilian_registration">Live Advice</a>
+                <a href="https://www.tresillian.org.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text" id="8.1.4h">
+                <b><u>Victoria</u></b>
+            </p>
+            <p class="mbn-text">
+                <b>Maternal Health and Child Health Line</b>
+                <br> A free service from birth until school age that supports your family in the areas of parenting, health and development and give you referrals to other professionals and link you with other families in your local community.
+            </p>
+            <p class="mbn-text">
+                To make an appointment with your local Maternal and child health service contact your <a href="https://knowyourcouncil.vic.gov.au/councils" target="_blank">Website</a>.
+            </p>
+            <p class="mbn-text">
+                <a href="https://www.education.vic.gov.au/childhood/parents/mch/Pages/default" target="_blank">Website</a>
+            </p>
+            <p class="mbn-text">
+                <b>Maternal Health and Child Health Line</b>
+                <img src="images/8.1.png" image width="30" height="30">
+                <br> State-wide telephone service available to Victorian families with children from birth to school age. Information, support and guidance can be provided regarding a range of issues including child health, nutrition, breastfeeding, maternal and family health and parenting.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:132229">13 22 29 </a> (24 hours/7 days)
+                <br>
+                <a href="https://www.education.vic.gov.au/childhood/parents/support/Pages/mchline" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text" id="8.1.4i">
+                <b><u>Tasmania</u></b>
+            </p>
+            <p class="mbn-text">
+                <b>Child Health and Parenting Service</b>
+                <br> Child and Family Health Nurses offer parent information on many topics including: child health and development, practical parenting tips, nutrition, breastfeeding, sleep and settling, communication, play and safety, nutrition, oral health, postnatal depression, fathering, balancing work and family life, play, injury prevention, SIDS and immunisation.
+            </p>
+            <p class="mbn-text">
+
+                <a href="tel:1300064544">1300 064 544</a>(varies depending on location)
+                <br>
+                <a href="https://www.dhhs.tas.gov.au/service_information/services_files/child_health_centres" target="_blank">Website</a>
+            </p>
+            <p> <br>
+                <br>
+                <br>
+            </p>
+
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

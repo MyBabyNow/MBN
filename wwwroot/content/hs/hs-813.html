@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style" />
+    </div>
+
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">Flynn Now</a>
+                <i class="fa fa-search fa-2x mbn-search-style"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/813.jpg" />
+            <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support</span>
+            <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+            <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support</span>
+        <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
+        <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="8.1.3">Parenting</p>
+
+            <p class="mbn-text" id="8.1.3a">
+                These services provide a wide range of support and advice (e.g. general health, sleep etc) and many can help you during pregnancy.
+            </p>
+            <ul>
+                <li>
+                    <a onclick="localSecJump('8.1.3a');">General advice</a> - including state-specific services:
+                </li>
+                <ul>
+                    <li><a onclick="localSecJump('8.1.3g');">Australian Capital Territory</a>
+                    </li>
+                    <li><a onclick="localSecJump('8.1.3h');">New South Wales </a>
+                    </li>
+                    <li><a onclick="localSecJump('8.1.3i');">Northern Territory</a>
+                    </li>
+                    <li><a onclick="localSecJump('8.1.3j');">Queensland</a>
+                    </li>
+                    <li><a onclick="localSecJump('8.1.3k');">South Australia</a>
+                    </li>
+                    <li><a onclick="localSecJump('8.1.3l');">Tasmania</a>
+                    </li>
+                    <li><a onclick="localSecJump('8.1.3m');">Victoria</a>
+                    </li>
+                    <li><a onclick="localSecJump('8.1.3n');">Western Australia</a>
+                    </li>
+                </ul>
+                <li>
+                    <a onclick="localSecJump('8.1.3o');">Safety</a>
+                </li>
+            </ul>
+            <p class="mbn-section" id="8.1.3b">
+                General advice
+            </p>
+            <p class="mbn-text">
+                <b>Pregnancy, Birth and Baby</b>
+                <br> An Australian Government funded telephone and online helpline providing support and information to both expecting parents and parents of children aged up to 5 years, from a maternal child health nurse. A range of questions you might have about your child's development or behaviour can be answered, such as: sleeping, settling, feeding, toilet training and tantrums.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1800882436">1800 882 436</a> (7am-12am/7 days)
+                <br>
+                <a href="https://www.pregnancybirthbaby.org.au/video-call">Video call</a> (7am-12am/7 days)
+                <br>
+                <a href="https://www.pregnancybirthbaby.org.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b>Baby Center</b>
+                <br> A website containing practical advice on pregnancy and parenting from the first year of life up to the toddler years. Resources include comprehensive website with community forums (and special groups for parents with babies of all ages) and information such as parenting, child care, feeding and routines. <i>Note: This website is sponsored by Johnson and Johnson and Fisher-Price Mum Squad</i>.
+            </p>
+            <p class="mbn-text">
+                <a href="https://www.babycenter.com.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text" id="8.1.3c">
+                <b>Infant Program</b>
+                <br> Reliable baby healthy eating and active play related information and resources developed by Deakin University in Melbourne. Resources include comprehensive website with videos of cooking demonstrations and links to other credible information.
+            </p>
+            <p class="mbn-text">
+                <a href="https://www.infantprogram.org" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text" id="8.1.3d">
+                <b>Kidspot</b>
+                <br> A website with information relating to babies and children, including parenting, activities and recipes, products and advertisements.
+            </p>
+            <p class="mbn-text">
+                <a href="https://www.kidspot.com.au" target="_blank"></a>
+            </p>
+
+
+            <p class="mbn-text" id="8.1.3e">
+                <b>Parentline</b>
+                <br> Call for advice and counselling about any issues that affect you as a parent.
+            </p>
+
+            <p class="mbn-text">
+                <a href="tel:1300301300">1300 301 300</a> (8am-10pm/7 days)
+                <br>
+                <a href="https://www.parentline.com.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text" id="8.1.3f">
+                <b>Raising Children</b>
+                <br> The 'complete resource for Australian parents, taking you from pregnancy to newborns to teenagers'. Resources include comprehensive evidence-based website with podcasts, parent forums, videos, information on parenting toddlers etc.
+            </p>
+            <p class="mbn-text">
+                <a href="https://raisingchildren.net.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-section" id="8.1.3g">
+                Australian Capital Territory
+            </p>
+            <p class="mbn-text">
+                <b>Parentline ACT</b>
+                <br> Parentline offers a free telephone counselling service to parents and carers.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:02 6287 3833 ">02 6287 3833</a> (9am-5pm, Mon-Fri)
+                <br>
+                <a href="https://www.parentlineact.org.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b>Maternal and Child Health (MACH) Nursing Service</b>
+                <br> Call to arrange a first home visit or receive a call from a Maternal and Child Health Nurse.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:0262079977">02 6207 9977</a> (8am-5pm, Mon-Fri)
+                <br>
+                <a href="https://www.health.act.gov.au/our-services/women-youth-and-children/maternal-and-child-health-mach-nursing-service" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-section" id="8.1.3h">
+                New South Wales
+            </p>
+            <p class="mbn-text">
+                <b>Karitane &reg;</b>
+                <br> A charity service for children and their parents from birth to 5 years that provides parenting support and advice, antenatal support and education, services to help with parental depression and anxiety, managing toddler behaviour and other related issues. Resources include a website with information on parenting and settling techniques and sleep promotion, helpline and residential, day and outreach services.
+            </p>
+            <p class="mbn-text">
+
+                <a href="tel:1300227464 ">1300 227 464</a> (12:30pm-9pm; 11pm-6:30am Mon-Thu; Fri-Sat 9am-3:30pm)
+                <br>
+                <a href="https://karitane.com.au/karitane" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b>Parent Line</b>
+                <br> Free telephone counselling, information and referral for parents and carers of children from birth to 18 years.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1300130052">1300 130 052</a> (9am-9pm Mon-Fri; 4pm-9pm Sat-Sun)
+                <br>
+                <a href="https://www.parentline.org.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-text">
+                <b> Tresillian Family Care Centres</b>
+                <br> An early parenting service offering families guidance in the early years of their child's life. Resources include information on parenting and settling techniques as well as sleep promotion, telephone and online helpline, community outreach and face-to-face advice.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1300272736">1300 272 736</a> (7am-11pm/7 days)
+                <br>
+                <a href="https://www.johnsonsbaby.com.au/tresilian_registration">Live Advice</a>
+                <a href="https://www.tresillian.org.au" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-section" id="8.1.3i">
+                Northern Territory
+            </p>
+            <p class="mbn-text">
+                <b>Territory Families</b>
+                <br> Free education, guidance and support for parents and others who care for children.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1300301300">1300 301 300</a> (8am-10pm/7 days)
+                <br>
+                <a href="https://www.yourtown.com.au/what-we-do/parentline" target="_blank">Website</a>
+            </p>
+
+            <p class="mbn-section" id="8.1.3j">
+                Queensland
+            </p>
+            <p class="mbn-text">
+                <b>Parentline Queensland and Northern Territory</b>
+                <br> Free education, guidance and support for parents and others who care for children.
+            </p>
+            <p class="mbn-text">
+                <a href="tel:1300301300">1300 301 300</a> (8am-10pm/7 days)
+                <br>
+                <a href="https://www.yourtown.com.au/what-we-do/parentline" target="_blank">Website</a>
+            </p>
+            <p class="mbn-text">
+
+                <p class="mbn-text">
+                    <b>13 HEALTH </b>
+                    <img src="images/8.1.png" width="30" height="30" >
+                    <br> A confidential phone service that lets Queenslanders speak with a registered nurse for advice about your or your child's health.
+                </p>
+                <p class="mbn-text">
+                    <a href="tel:13432584">134 325 84</a> (8am-12am/7 days)
+                    <br>
+                    <a href="https://www.qld.gov.au" target="_blank">Website</a>
+                </p>
+
+                <p class="mbn-section" id="8.1.3k">
+                    South Australia
+                </p>
+                <p class="mbn-text">
+                    <b>Parent helpline</b>
+                    <img src="images/8.1.png" width="30" height="30" >
+                    <br> Advice for dads, mums and carers on baby and child health and parenting, including feeding and settling.
+                </p>
+
+                <p class="mbn-text">
+
+                    <a href="tel:1300364100">1300 364 100</a> (24 hours/7 days)
+                    <br>
+                    <a href="https://www.decd.sa.gov.au/parenting-and-child-care/parenting/parenting-sa" target="_blank">Website</a>
+                </p>
+
+                <p class="mbn-section" id="8.1.3l">
+                    Tasmania
+                </p>
+                <p class="mbn-text">
+                    <b>Parent helpline</b>
+                    <img src="images/8.1.png" width="30" height="30" >
+                    <br> To assist parents with stressful parenting issues or concerns.
+                </p>
+                <p class="mbn-text">
+
+                    <a href="tel:1300808178">1300 808 178</a> (24 hours/7 days)
+                </p>
+                <p class="mbn-text">
+                    <b>Child Health and Parenting Service </b>
+                    <br> Child and Family Health Nurses offer parent information on many topics including: child health and development, practical parenting tips, nutrition, breastfeeding, sleep and settling, communication, play and safety, nutrition, oral health, postnatal depression, fathering, balancing work and family life, play, injury prevention, SIDS and immunisation.
+                </p>
+                <p class="mbn-text">
+                    <a href="tel:1300064544">1300 064 544</a> (varies depending on location)
+                    <br>
+                    <a href="https://www.dhhs.tas.gov.au/service_information/services_files/child_health_centres" target="_blank">Website</a>
+                </p>
+
+                <p class="mbn-section" id="8.1.3m">
+                    Victoria
+                </p>
+                <p class="mbn-text">
+                    <b>Parentline</b>
+                    <br> Free telephone counselling, information and referral for parents and carers of children from birth to 18 years.
+                </p>
+                <p class="mbn-text">
+                    <a href="tel:132289">13 22 89</a> (24 hours/7 days)
+                    <br>
+                    <a href="tel:1800199008">1800 199 008</a> (after hours)
+                    <br>
+                    <a href="https://www.dhs.vic.gov.au/for-individuals/childwww.education.vic.gov.au/about/contact/Pages/parentline" target="_blank">Website</a>
+                </p>
+                <p class="mbn-text">
+                    <b>Maternal Health and Child Health Line</b>
+                    <img src="images/8.1.png" width="30" height="30" >
+                    <br> State-wide telephone service available to Victorian families with children from birth to school age. Information, support and guidance can be provided regarding a range of issues including child health, nutrition, breastfeeding, maternal and family health and parenting.
+                </p>
+                <p class="mbn-text">
+                    <a href="tel:132229">13 22 89</a> (24 hours/7 days)
+                    <br>
+                    <a href="tel:1800199008">1800 199 008</a> (after hours)
+                    <br>
+                    <a href="https://www.education.vic.gov.au/childhood/parents/support/Pages/mchline" target="_blank">Website</a>
+                </p>
+                <p class="mbn-text">
+                    <b>Queen Elizabeth Centre</b>
+                    <br> QEC helps young children living in vulnerable situations get the best start in life, by providing families with specialised services, guidance and education. Resources include website with written, audio and video advice, telephone consultation, day stay, outreach and skills development programs.
+                </p>
+                <p class="mbn-text">
+                    <a href="tel:0395492777">03 9549 2777</a>
+                    <br>
+                    <a href="mailto:theqec@qec.org.au">theqec@qec.org.au</a>
+                    <br>
+                    <a href="https://www.qec.org.au/families" target="_blank">Website</a>
+                </p>
+
+                <p class="mbn-section" id="8.1.3n">
+                    Western Australia
+                </p>
+                <p class="mbn-text">
+                    <b>Parenting Line WA</b>
+                    <img src="images/8.1.png" width="30" height="30" >
+                    <br> A confidential telephone counselling and information service for parents and others concerned with parenting. The service provides guidance, support and information about parenting issues. Referral and information about local services and resources also available.
+                </p>
+                <p class="mbn-text">
+                    <a href="tel:1800654432">1800 654 432</a> (24 hours/7 days)
+                </p>
+
+                <p class="mbn-text">
+                    <b>Ngala Helpline</b>
+                    <br> Provides support and advice for parents with babies and children up to 18 years old.
+                </p>
+                <p class="mbn-text">
+                    <a href="tel:1800111546">1800 111 546</a> (8am-8pm/7 days)
+                    <br>
+                    <a href="https://www.ngala.com.au/helpline" target="_blank">Website</a>
+                </p>
+
+                <p class="mbn-section" id="8.1.3o">
+                    Safety
+                </p>
+
+                <p class="mbn-text">
+                    <b>Product Safety Australia  </b>
+                    <br>Australian Government website for the ACCC, which provides safety information about a variety of products, including equipment, toys and furniture, as well as applicable standards and recalls.
+                </p>
+                <p class="mbn-text">
+                    <a href="https://www.productsafety.gov.au/products/babies-kids" target="_blank">Website</a>
+                </p>
+
+                <p class="mbn-text" id="8.1.3p">
+                    <b><u>Victoria</u></b>
+                    <br>
+                </p>
+                <p class="mbn-text">
+                    <b>Toys and Nursery Safety Line</b>
+                    <br> A dedicated telephone line provided by Consumer Affairs Victoria for parents and carers to make enquiries, discuss concerns about the safety of toys and nursery products and report unsafe products.
+                </p>
+                <p class="mbn-text">
+                    <a href="tel:1300364894">1300 364 894</a> (8am-8pm/7 days)
+                </p>
+
+                <p> 
+                    <br>
+                    <br>
+                    <br>
+                </p>
+        </div>
+    </div>
+
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/topics-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -39,7 +39,7 @@
     <!-- Two different display cards -->
     <div class="card mbn-card" id="section-card">
         <div class="card-image">
-            <img src="images/pregnancy-sub-menu.png" />
+            <img src="images/1014.jpg" />
             <span class="card-title mbn-card-title" id="section-title">
             <span onclick="Load('menu-py');"><i class="fa fa-chevron-left"></i> Pregnancy</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
@@ -76,21 +76,24 @@
             <p class="mbn-text" id="10.1.4b">
                 In this video, different parents share what they thought being a parent would be like and their experiences once their baby was actually born.
             </p>
-            <p class="mbn-text">
-                <b>Video: Thoughts about becoming a parent</b>
+            <p class="mbn-video">
+                Video: Thoughts about becoming a parent
             </p>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/mlJrrMp7vjs" frameborder="0" allowfullscreen></iframe>
             </div>
-            <p class="mbn-text">
-                <i>Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/becoming_parent_video.html" target="_blank">raisingchildren.net.au</a>.</i>
+            <p class="mbn-video-caption">
+                Sourced from the Raising Children website, Australia's trusted parenting website. For more parenting information, visit <a href="http://raisingchildren.net.au/articles/becoming_parent_video.html" target="_blank">raisingchildren.net.au</a>.
             </p>
             <p class="mbn-text">
                 Before your baby arrives, there are a few things you might like to sort out, such as deciding <a onclick="localSecJump('10.1.4c');">where you would like to give birth</a>, <a onclick="localSecJump('10.1.4d');">preparing your home</a> for your new baby and <a onclick="localSecJump('10.1.4j');">what equipment you might need</a>. Keep scrolling for our checklist to help you get ready for this exciting time!
             </p>
-            <p class="mbn-text" id="10.1.4c">
-                <b>Birth choices</b>
-                <br /> Being in Australia means that you are fortunate to have a say in where you give birth, for example, in a public or private hospital, a birth centre or at home. With each setting, the types of carers (e.g. midwife, GP and obstetrician) who will look after you during your pregnancy, birth and once your baby is born, will also change.
+            <p class="mbn-section" id="10.1.4c">
+                Birth choices
+            </p>
+            <p class="mbn-text">
+                <img src="images/1014c-sqr.jpg" class="mbn-text-image-right" />
+                Being in Australia means that you are fortunate to have a say in where you give birth, for example, in a public or private hospital, a birth centre or at home. With each setting, the types of carers (e.g. midwife, GP and obstetrician) who will look after you during your pregnancy, birth and once your baby is born, will also change.
             </p>
             <p class="mbn-text">
                 So what should you choose? Having all of that choice can present problems, especially if this is your first baby or you don't really know all the pros and cons of the different settings.
@@ -98,9 +101,15 @@
             <p class="mbn-text">
                 That's where the Raising Children's Network Birth Choices site can help. Explore your <a href="http://birthchoices.raisingchildren.net.au/" target="_blank">birth choices</a> further.
             </p>
-            <p class="mbn-text" id="10.1.4d">
-                <b>Preparing your home</b>
-                <br /> Often referred to as 'nesting', getting your home ready to welcome a new baby can be a great way to help you and your partner, as well as any other children you have, to prepare for your new baby's arrival.
+            <p class="mbn-video-caption">
+                Adapted with permission from the <a target="_blank" href="http://raisingchildren.net.au/articles/birth_choices.html/context/1549">Raising Children Website</a>, Australia's trusted parenting website.
+            </p>
+            <p class="mbn-section" id="10.1.4d">
+                Preparing your home
+            </p>
+            <p class="mbn-text">
+                <img src="images/1014d-sqr.jpg" class="mbn-text-image-right" />
+                Often referred to as 'nesting', getting your home ready to welcome a new baby can be a great way to help you and your partner, as well as any other children you have, to prepare for your new baby's arrival.
             </p>
             <p class="mbn-text">
                 As an added bonus, most of the things you need to do in order for your home <a onclick="localSecJump('play/play-914.html#9.1.4');">to be safe for your baby</a> are not about making major changes, but really just about knowing what to expect.
@@ -123,9 +132,12 @@
                 <b>Where will you bath your baby?</b>
                 <br /> Your baby doesn't need any special bathing area prepared! In fact, provided it's safe and clean, you can even bath your newborn in the laundry tub or kitchen sink!
             </p>
-            <p class="mbn-text" id="10.1.4h">
-                <b>Baby equipment</b>
-                <br /> Having all the 'stuff'you might need can sometimes feel as daunting as it is exciting - where do you start?!
+            <p class="mbn-section" id="10.1.4h">
+                Baby equipment
+            </p>
+            <p class="mbn-text">
+                <img src="images/1014h-sqr.jpg" class="mbn-text-image-right" />
+                Having all the 'stuff' you might need can sometimes feel as daunting as it is exciting - where do you start?!
             </p>
             <p class="mbn-text" id="10.1.4i">
                 <b>The essentials</b>
@@ -206,7 +218,7 @@
                 There are many ways you can save money on baby equipment, starting with buying <b>only what you need</b>. A good way to avoid marketing gimmicks is to talk with other parents to see what they've found useful.
             </p>
             <p class="mbn-text">
-                Some good places to look for second-hand or 'pre-loved'baby equipment are:
+                Some good places to look for second-hand or 'pre-loved' baby equipment are:
             </p>
             <ul>
                 <li>op shops
@@ -227,7 +239,7 @@
             </p>
             <ul>
                 <li>
-                    stock up on items like nappies and wipe when they're on sale to take advantage of cheaper prices (but make sure you check use-by dates)
+                    stock up on items like nappies and wipes when they're on sale to take advantage of cheaper prices (but make sure you check use-by dates)
                 </li>
                 <li>
                     check your public library to borrow toys (as well as books) which should comply with Australian Standards (but it's always best to double check if in doubt)
@@ -247,7 +259,7 @@
                 For your baby's safety and your peace of mind, always choose equipment that comes with a good safety history.
             </p>
             <p class="mbn-video-caption">
-                Adapted with permission from the <a href="http://raisingchildren.net.au/articles/baby_equipment_checklist.html/context/1555" target="_blank"> Raising Children website</a>, Australia's trusted parenting website.
+                Adapted with permission from the <a href="http://raisingchildren.net.au/articles/baby_equipment_checklist.html/context/1555" target="_blank"> Raising Children website</a>, Australia's trusted parenting website.
             </p>
             <p>
                 <br /><br /><br />

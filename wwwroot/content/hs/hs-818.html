@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Already localised -->
+    <link rel="stylesheet" href="../../font-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-baby/flaticon.css">
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Load the scripts but import jQuery before materialise.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+</head>
+
+<body>
+    <div class="mbn-logo"> <img src="../../images/logo.png" class="mbn-logo-style" /> </div>
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper"> <a class="mbn-name">Flynn Now</a> <i class="fa fa-search fa-2x mbn-search-style"></i> </div>
+        </nav>
+    </div>
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image"> <img src="images/818.jpg" /> <span class="card-title mbn-card-title" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support </span> <i class="fa fa-star fa-lg"
+              style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i> <i class="fa fa-share-alt fa-lg"
+              style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i> </span>
+        </div>
+    </div>
+    <div class="card mbn-card-fixed-content" id="section-card-min"> <span class="card-title mbn-card-title-content" id="section-title">
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Help and support </span> <i class="fa fa-star fa-lg"
+          style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i> <i class="fa fa-share-alt fa-lg"
+          style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i> </span>
+    </div>
+    <!-- Content -->
+    <div class="mbn-content" id="section-content">
+        <div class="mbn-content-scroll" id="content">
+            <p class="mbn-section" id="8.1.8"> Crying and settling </p>
+            <p class="mbn-text" id="8.1.8a"> This section contains support and services dedicated to helping you (and your children). There is always someone
+                there when you need it, so make sure you reach out when you need to, no matter how small the problem might
+                seem. </p>
+            <ul>
+                <li> <a onclick="localSecJump('8.1.8b');">Bereavement</a> </li>
+                <li> <a onclick="localSecJump('8.1.8c');">Carers</a> </li>
+                <li> <a onclick="localSecJump('8.1.8f');">Children and young people</a> </li>
+                <li> <a onclick="localSecJump('8.1.8g');">Depression</a> </li>
+                <li> <a onclick="localSecJump('8.1.8h');">Physical and sexual assault</a> </li>
+                <li> <a onclick="localSecJump('8.1.8k');">Pregnancy counselling</a> </li>
+                <li> <a onclick="localSecJump('8.1.8m');">Quit smoking</a> </li>
+                <li> <a onclick="localSecJump('8.1.8n');">Relationship counselling</a> </li>
+                <li> <a onclick="localSecJump('8.1.8o');">Suicide risk</a> </li>
+            </ul>
+            <p class="mbn-section" id="8.1.8b"> <b><u>Bereavement </u></b> </p>
+            <p class="mbn-text"> <b>Red Nose Grief and Loss</b> <img src="images/8.1.png" width="30" height="30"> <br> Service dedicated to supporting
+                bereaved families and their support networks for the sudden and unexpected death of a baby or child (including
+                stillbirth, during infancy and childhood). Resources include counselling, parent and family support, peer
+                support, sibling support, grandparent support groups, group activities, annual memorial services, telephone
+                counselling and a national 24 hour free bereavement support line. </p>
+            <p class="mbn-text"> <a href="tel:1300308307">1300 308 307</a>) (24 hours/7 days) <br> <a href="https://rednosegriefandloss.com.au"
+                  target="_blank">Website</a> </p>
+            <p class="mbn-text"> <b>Sands Australia </b> <img src="images/8.1.png" image width="30" height="30"> <br> National charity service
+                dedicated to providing support, information and education about miscarriage, stillbirth and neonatal death.
+                Resources include comprehensive website with real life stories from other parents and the wider community,
+                24 hour support line, email support, local support groups run by bereaved parents and online live chats.
+                </p>
+            <p class="mbn-text"> <a href="tel:1300072637">1300 072 637</a>) (24 hours/7 days) <br> <a href="mailto:support@sands.org.au">support@sands.org.au</a>                <br> <a href="http://www.sands.org.au/online-live-support" target="_blank">Online chat</a> (time varies with
+                location Mon-Thu) <br> <a href="http://www.sands.org.au/" target="_blank">Website</a> </p>
+            <p class="mbn-section"
+              id="8.1.8c"> Carers </p>
+            <p class="mbn-text"> <b>Carers Australia</b> <br> The national peak body representing Australia's carers. Works with the state and
+                territory Carers Associations who are the state-wide voices for family carers by representing and providing
+                support to carers. Resources vary by state but generally include a comprehensive website with information
+                and advice for carers, counselling (referral from a health care professional required), advocacy and carer
+                advice line. </p>
+            <p class="mbn-text" id="8.1.8d"> <b><u>New South Wales</u></b> </p>
+            <p class="mbn-text"> <b>Carers NSW</b> <br> <a href="tel:1800171882">1800 171 882</a> (9am-5pm Mon-Fri) <br> <a href="https://www.carersnsw.org.au"
+                  target="_blank">Website</a> </p>
+            <p class="mbn-text" id="8.1.8e"> <b><u>Victoria</u></b> </p>
+            <p class="mbn-text"> <b>Carers Victoria</b> <br> <a href="tel:1800 171 882">1800 171 882</a> (9am-5pm Mon-Fri) <br> <a href="https://www.carersvictoria.org.au"
+                  target="_blank">Website</a> </p>
+            <p class="mbn-section" id="8.1.8f"> Children and young people </p>
+            <p class="mbn-text"> <b>Headspace</b> <br>Provides people aged 12-25 years (and their friends and families) with information, support
+                and advice on general health, mental health and wellbeing. Resources include a website with information about
+                mental health for those aged 12-25 years, details of headspace centre locations and support via telephone
+                or online - eheadspace chat or email. </p>
+            <p class="mbn-text"> <a href="tel:1800650890">1800 650 890</a> (9am-1am/7 days) <br> <a href="https://eheadspace.org.au" target="_blank">eheadspace Website</a>                (9am-1am/7 days) <br> <a href="https://headspace.org.au" target="_blank">headspace Website</a> </p>
+            <p class="mbn-text">
+            <b>Kids Helpline</b> <img src="images/8.1.png" width="30" height="30"> <br> Free, private and confidential, telephone
+                and online counselling service specifically for young people aged 5-25 years (and their parents and carers).
+                Resources include website with information such as peer pressure, different types of families and taking
+                risks, as well as telephone, online and email counselling. </p>
+            <p class="mbn-text"> <a href="tel:1800551800">1800 551 800</a>) (24 hours/7 days) <br> <a href="https://kidshelpline.com.au" target="_blank">Website</a>                </p>
+            <p class="mbn-section" id="8.1.8g"> Depression </p>
+            <p class="mbn-text"> <b>Beyondblue</b> <img src="images/8.1.png" width="30" height="30"> <br> Works toward achieving an Australian
+                community that understands depression and anxiety as well as empowering all Australians, at any life-stage,
+                to seek help. Resources include professional support via telephone, online chat (or email), as well as a
+                comprehensive website with information, resources and online forums. </p>
+            <p class="mbn-text"> <a href="tel:1300224636">1300 224 636</a> (24 hours/7 days) <br> <a href="https://online.beyondblue.org.au/WebModules/Chat/InitialInformation.aspx"
+                  target="_blank">Online chat</a> (3pm-12am/7 days) <br> <a href="https://www.beyondblue.org.au" target="_blank">Website</a>                </p>
+            <p class="mbn-text"> <b>Blackdog Institute</b> <br> Credible and comprehensive website about the diagnosis, treatment and prevention
+                of mood disorders such as depression and bipolar disorder. </p>
+            <p class="mbn-text"> <a href="https://www.blackdoginstitute.org.au" target="_blank">Website</a> </p>
+            <p class="mbn-text"> <b>PANDA Perinatal Anxiety &amp; Depression Australia </b> <br> Telephone information, support and referral service
+                for new parents struggling during pregnancy or after the birth of their baby, as well as for family and friends.
+                </p>
+            <p class="mbn-text"> <a href="tel:1300 726 306">1300 726 306</a>) (10am-5pm Mon-Fri) <br> <a href="https://www.panda.org.au" target="_blank">Website</a>                </p>
+            <p class="mbn-section" id="8.1.8h"> Physical and sexual assault </p>
+            <p class="mbn-text"> <b>1800RESPECT</b> <img src="images/8.1.png" width="30" height="30"> <br> A telephone and online counselling,
+                information and support service for people experiencing sexual assault, domestic and family violence. </p>
+            <p class="mbn-text"> <a href="tel:1800737732">1800 737 732</a> (24 hours/7 days) <br> <a href="https://www.1800respect.org.au" target="_blank">Website</a>                </p>
+            <p class="mbn-text" id="8.1.8i"> <b><u>New South Wales</u></b> </p>
+            <p class="mbn-text"> <b>Rape Crisis Centre</b> <img src="images/8.1.png" width="30" height="30"> <br> A telephone and online crisis
+                counselling service for anyone in New South Wales who has experienced or is at risk of sexual assault and
+                their non-offending supporters. </p>
+            <p class="mbn-text"> <a href="tel:1800424017">1800 424 017</a> (24 hours/7 days) <br> <a href="https://www.nswrapecrisis.com.au" target="_blank">Website</a>                </p>
+            <p class="mbn-text" id="8.1.8j"> <b><u>Victoria</u></b> </p>
+            <p class="mbn-text"> <b>Domestic Violence Resource Centre Victoria</b> <br> State-wide service providing training, publications, research
+                and other resources to those experiencing (or who have experienced) family violence, as well as those working
+                with family violence survivors. Resources include comprehensive website with advice and resources aimed at
+                various sectors of the community and links to support and services. </p>
+            <p class="mbn-text"> <a href="https://www.dvrcv.org.au" target="_blank">Website</a> </p>
+            <p class="mbn-text"> <b>Sexual Assault Crisis Line</b> <br> A state-wide, after-hours telephone crisis counselling service for victim/survivors
+                of both past and recent sexual assault. </p>
+            <p class="mbn-text"> <a href="tel:1800806292">1800 806 292</a> (5pm-9am Mon-Fri; 24 hours Sat-Sun/public holidays) <br> (TTY <a href="tel:1800555677">1800 555 677</a>)
+                then ask for 1800 806 292) <br> <a href="https://www.sacl.com.au" target="_blank">Website</a> </p>
+            <p class="mbn-section"
+              id="8.1.8k"> Pregnancy counselling </p>
+            <p class="mbn-text"> <b>Pregnancy, Birth and Baby</b> <br> An Australian Government funded telephone and online helpline which supports
+                parents on the journey from pregnancy to preschool. Resources include comprehensive website with reliable,
+                up-to-date information on pregnancy, parenting and health services as well as advice and support by maternal
+                child health nurses. </p>
+            <p class="mbn-text"> <a href="tel:1800882436">1800 882 436</a> (7am-12am/7 days) <br> <a href="https://www.pregnancybirthbaby.org.au/video-call"
+                  target="_blank">Video call </a> (7am-12am/7 days) <br> <a href="https://www.pregnancybirthbaby.org.au" target="_blank">Website</a>                </p>
+            <p class="mbn-text"> <b> Pregnancy Counselling Australia </b> <img src="images/8.1.png" width="30" height="30"> <br> A telephone service
+                whose female counsellors are trained specifically for pregnancy and abortion counselling. </p>
+            <p class="mbn-text">
+            <a href="tel:1300737732">1300 737 732</a> (24 hours/7 days) <br> <a href="https://www.pregnancycounselling.com.au"
+                  target="_blank">Website</a> </p>
+            <p class="mbn-text" id="8.1.8i"> <b><u>New South Wales</u></b> </p>
+            <p class="mbn-text"> <b>get healthy</b> <br> Free personal telephone health information and coaching service provided by NSW Health
+                to help and motivate you to reach your healthy eating, activity and weight goals. Includes a specific get
+                <i>healthy in pregnancy</i> program, as well as a comprehensive website with online calculators, fact sheets
+                (plus pregnancy specific sheets) and links to further resources. </p>
+            <p class="mbn-text"> <a href="tel:1300806258">1300 806 258</a> (8am-8pm Mon-Fri) <br> <a href="https://www.gethealthynsw.com.au" target="_blank">Website</a>                </p>
+            <p class="mbn-section" id="8.1.8m"> Quit smoking </p>
+            <p class="mbn-text"> <b>Quitnow</b> <br> Australian Government initiative to support you to quit smoking. Resources include a comprehensive
+                website with information on why and how to quit, the effects of tobacco smoke (even if second-hand) on your
+                baby during pregnancy and as an infant, interactive tools, phone apps (including <a href="http://www.quitnow.gov.au/internet/quitnow/publishing.nsf/Content/quit-now-apps"
+                  target="_blank">Quit for you - Quit for Two</a>, aimed at those who are currently, or are trying to fall,
+                pregnant), telephone Quitline, online <a href="http://www.quitcoach.org.au/" target="_blank">QuitCoach</a>                and mobile <a href="http://www.quitcoach.org.au/QuitTextInformation.aspx" target="_blank">QuitTxt</a>. </p>
+            <p class="mbn-text"> <a href="tel:137848">13 78 48</a> (8am-8pm Mon-Fri) <br> <a href="https://www.quitnow.gov.au" target="_blank">Website</a>                </p>
+            <p class="mbn-section" id="8.1.8n"> Relationship counselling </p>
+            <p class="mbn-text"> <b>MensLine Australia</b> <img src="images/8.1.png" width="30" height="30"> <br> Professional telephone and online
+                support, information and referral service, helping men to deal with relationship problems. Resources include
+                a comprehensive website with practical information and forums, as well as online, video and telephone counselling.
+                </p>
+            <p class="mbn-text"> <a href="tel:1300789978">1300 789 978</a> (24 hours/7 days) <br> <a href="http://mensline.org.au/user/register"
+                  target="_blank">Online &amp; video counselling</a> (24 hours/7 days) <br> <a href="http://www.mensline.org.au">Website</a>                </p>
+            <p class="mbn-text"> <b>Relationships Australia </b> <br> Service for individuals, families and communities aiming to support all
+                people in Australia to achieve positive and respectful relationships. Resources include website with relationship
+                advice as well as details of counselling services and programs. </p>
+            <p class="mbn-text"> <a href="tel:1300364277">1300 364 277</a> <br> <a href="http://www.relationships.org.au" target="_blank">Website</a>                </p>
+            <p class="mbn-section" id="8.1.8o"> Suicide risk </p>
+            <p class="mbn-text"> <b>Lifeline</b> <img src="images/8.1.png" width="30" height="30"> <br> A confidential telephone or one-on-one
+                online crisis support service for anyone experiencing a personal crisis or thinking about suicide. </p>
+            <p
+              class="mbn-text"> <a href="tel:131114">13 11 14 </a> (24 hours/7 days) <br> <a href="https://https://www.lifeline.org.au/get-help/online-services/crisis-chat"
+                  target="_blank">Crisis Support Chat</a> (7pm-4am/7 days) <br> <a href="https://https://www.lifeline.org.au"
+                  target="_blank">Website</a> </p>
+                <p class="mbn-text"> <b>Suicideprevention.com.au </b> <br> An information service for anyone thinking about suicide provided by
+                    the Australian Suicide Prevention Foundation. </p>
+                <p class="mbn-text"> <a href="https://https://suicideprevention.com.au" target="_blank">Website</a> </p>
+                <p class="mbn-text">
+                <b><u>Victoria</u></b> </p>
+                <p class="mbn-text"> <b>SuicideLine</b> <img src="images/8.1.png" width="30" height="30"> <br> An anonymous counselling service
+                    offering professional support to people at risk of suicide, people concerned about someone else's risk
+                    of suicide, and people bereaved by suicide. </p>
+                <p class="mbn-text"> <a href="tel:1300651251">1300 651 251</a> (24 hours/7 days) <br> <a href="https://www.suicideline.org.au"
+                      target="_blank">Website</a> </p>
+                <p class="mbn-text"> <b>Pregnancy, Birth and Baby</b> <br> An Australian Government funded telephone and online helpline providing
+                    support and information to both expecting parents and parents of children aged up to 5 years, from a
+                    maternal child health nurse. A range of questions you might have about your child's development or behaviour
+                    can be answered, such as: sleeping, settling, feeding, toilet training and tantrums. </p>
+                <p class="mbn-text">
+                <a href="tel:1800882436">1800 882 436</a> (7am-12am/7 days) <br> <a href="https://www.pregnancybirthbaby.org.au/video-call"
+                      target="_blank">Video call </a> (7am-12am/7 days) <br> <a href="https://www.pregnancybirthbaby.org.au"
+                      target="_blank">Website</a> </p>
+                <p> <br> <br> <br> </p>
+        </div>
+    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p> <img src="../../images/feed.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">My baby</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p class="mbn-icon-selected"> <img src="../../images/topics-s.png" style="width:30%;" /> <br /> <span class="mbn-icon-text-selected">Topics</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p> <img src="../../images/tools.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">Tools</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p> <img src="../../images/forum.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">Forum</span>                                </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p> <img src="../../images/more.png" style="width:30%;" /> <br /> <span class="mbn-icon-text">More</span>                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

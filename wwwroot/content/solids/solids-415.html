@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
 
     <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, scrollable=no, user-scalable=no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Load the scripts but import jQuery before materialise.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -41,7 +41,7 @@
         <div class="card-image">
             <img src="images/packaged-baby-food.png" />
             <span class="card-title mbn-card-title" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
             <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
             <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
             </span>
@@ -50,7 +50,7 @@
 
     <div class="card mbn-card-fixed-content" id="section-card-min">
         <span class="card-title mbn-card-title-content" id="section-title">
-            <span onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Solids</span>
+            <span onclick="Load('topics')"><i class="fa fa-chevron-left"></i> Solids</span>
         <i class="fa fa-star fa-lg" style="float: right; margin-right: 10px; margin-top: 6px;" onclick="alert('star');"></i>
         <i class="fa fa-share-alt fa-lg" style="float: right; margin-right: 30px; margin-top: 6px;" onclick="alert('share');"></i>
         </span>
@@ -59,70 +59,65 @@
     <!-- Content -->
     <div class="mbn-content" id="section-content">
         <div class="mbn-content-scroll" id="content">
-            <p class="mbn-section" id="4.1.5" >Packaged baby food</p>
+            <p class="mbn-section" id="4.1.5">Packaged baby food</p>
             <p class="mbn-text" id="4.1.5a">
-                <b>Packaged baby food</b>
-            </p> 
-            <p class="mbn-text">
-                    Ready-made packaged baby foods <i>can</i> be nutritious, and are certainly very handy when you are short on time, but they also tend to be expensive and often contain extra, unwanted ingredients.
-            <p class="mbn-text">
-                   Giving your baby finger foods is a great way to encourage them to try, and eventually learn <i>how</i>, to feed themselves. Because it often creates a mess, it can be tempting to wait until they are older, but as soon as your baby has progressed to sucking and biting (usually by about 8 months) they will learn to manage finger foods.
-            </p>
-            <p class="mbn-text">  
-                    Some of the problems with this are that:
-                <ul>
-                    <li><u>sweetness</u> encourages your baby to get a 'sweet tooth', which makes it harder to introduce other foods that aren't as sweet, such as some <a href="#4.1.2">vegetables</a>
-                    </li>
-                    <li><u>smoothness</u> can make it harder to introduce other <a href="#4.1.16">textures</a>, such as those that are more <a href="#4.1.3">lumpy</a> and <a href="#4.1.4">chunky</a>
-                    </li>
-                    <li><u>mixture of different foods</u> doesn't expose your baby to individual food tastes, which can promote <a href="#4.1.12">fussy eating</a> later on 
-                    </li>
-                </ul>
+                Ready-made packaged baby foods <i>can</i> be nutritious, and are certainly very handy when you are short on time, but they also tend to be expensive and often contain extra, unwanted ingredients.
             </p>
             <p class="mbn-text">
-                   Think of bought baby foods like 'takeaway foods' - convenient to use now and again, such as when you're out or short on time, but best not to use them too often.
+                Bought packaged baby foods typically contain lots of fruit and/or sweet vegetables, which makes them quite soft and sweet to encourage babies to eat them! 
             </p>
             <p class="mbn-text">
-                  The great news is that <a href="#4.1.3">making packaged baby foods at </a> is easy! Making your own packaged baby foods also saves you money and lets you decide exactly what you put in (or leave out), including <a href="#4.1.15">salt and sugar</a>.
+                Some of the problems with this are that:
+            </p>
+            <ul>
+                <li><u>sweetness</u> encourages your baby to get a 'sweet tooth', which makes it harder to introduce other foods that aren't as sweet, such as some <a onclick="localSecJump('solids-4111.html#4.1.11a');">vegetables</a>
+                </li>
+                <li><u>smoothness</u> can make it harder to introduce other <a onclick="localSecJump('solids-412.html#4.1.2h');">textures</a>, such as those that are more <a onclick="localSecJump('solids-413.html#4.1.3k');">lumpy</a> and <a onclick="localSecJump('solids-413.html#4.1.4a');">chunky</a>
+                </li>
+                <li><u>mixture of different foods</u> doesn't expose your baby to individual food tastes, which can promote <a onclick="localSecJump('solids-4112.html#4.1.12a');">fussy eating</a> later on
+                </li>
+            </ul>
+
+            <p class="mbn-text">
+                Think of bought baby foods like 'takeaway foods' - convenient to use now and again, such as when you're out or short on time, but best not to use them too often.
+            </p>
+            <p class="mbn-text">
+                The great news is that <a onclick="localSecJump('solids-413.html#4.1.3');">making packaged baby foods at home</a> is easy! Making your own packaged baby foods also saves you money and lets you decide exactly what you put in (or leave out), including <a onclick="localSecJump('solids-4115.html#4.1.15l');">salt and sugar</a>.
             </p>
 
             <p class="mbn-text" id="4.1.5b">
-                   If you find yourself needing to buy some packaged baby food, use these tips to help you choose the best option for your baby. 
+                If you find yourself needing to buy some packaged baby food, use these tips to help you choose the best option for your baby.
             </p>
             <p class="mbn-text">
-                    Top tips for choosing baby foods at the shop:
-                <ul>
-                    <li>choose products that have the <i>lowest amount of sugar, sodium (salt) and saturated fat</i>
-                    </li>
-                     <ul>
-                    <li>compare products using the <b>per 100g</b> or <b>per 100/mL</b> column on the <i>nutrition information panel</i> and choose those with the <i>lowest</i> values 
-                    </li>
-                    <li>you can also look in the <i>ingredients list</i> for added sugar and salt - the closer the ingredient is to the start of the list, the more of that ingredient there is in the product 
-                    </li>
-                </ul>
-                     <li>go for items that are <a href="#4.1.2">high in iron</a> such as meat, fish, chicken, legumes or <a href="#4.1.16">iron fortified</a> baby cereal, especially if you use packaged foods every day 
-                    </li>
-                     <li>make sure the suggested age on the packet is suitable for your baby …but keep in mind that many baby foods will say <a href="#4.1.16">'suitable from 4 months'</a> even though it's recommended to <a href="#4.1.1">wait until around 6 months</a> to start solids, when most babies <a href="#4.1.1">are ready</a> 
-                    </li>
-                     <li>opt for whole foods that can be transported easily wherever possible, such as bananas, avocado or cheese sticks 
-                    </li>
-                     <li>yoghurt is a great option but always choose full fat <i><a href="#4.1.16">unsweetened</a></i> plain natural yoghurts to avoid lots of unnecessary added sugar - you can always add your own fruit later for extra sweetness if you want to! 
-                    </li>
-                     <li>double check that the food is <i>still in date</i> - if you plan on keeping the food for a little while before using it, check that the best before date won't pass before you get to use it 
-                    </li>
-                     <li>not all packaged baby foods are on the shelf - you can find fresh baby meals in the freezer section too 
-                    </li>
-                </ul>
+                Top tips for choosing baby foods at the shop:
             </p>
-
-            
-                <br />
-                <br />
-                <br />
+            <ul>
+                <li>choose products that have the <i>lowest amount of sugar, sodium (salt) and saturated fat</i>
+                </li>
+                <ul>
+                    <li>compare products using the <b>per 100g</b> or <b>per 100/mL</b> column on the <i>nutrition information panel</i> and choose those with the <i>lowest</i> values
+                    </li>
+                    <li>you can also look in the <i>ingredients list</i> for added sugar and salt - the closer the ingredient is to the start of the list, the more of that ingredient there is in the product
+                    </li>
+                </ul>
+                <li>go for items that are <a onclick="localSecJump('solids-412.html#4.1.2c');">high in iron</a> such as meat, fish, chicken, legumes or <a onclick="localSecJump('solids-4116.html#4.1.16h');">iron fortified</a> baby cereal, especially if you use packaged foods every day
+                </li>
+                <li>make sure the suggested age on the packet is suitable for your baby...but keep in mind that many baby foods will say '<a onclick="localSecJump('solids-4116.html#4.1.16l');">suitable from 4 months</a>' even though it's recommended to <a onclick="localSecJump('solids-411.html#4.1.1a');">wait until around 6 months</a> to start solids, when most babies <a onclick="localSecJump('solids-411.html#4.1.1b');">are ready</a>
+                </li>
+                <li>opt for whole foods that can be transported easily wherever possible, such as bananas, avocado or cheese sticks
+                </li>
+                <li>yoghurt is a great option but always choose full fat <i><a onclick="localSecJump('solids-4116.html#4.1.16n');">unsweetened</a></i> plain natural yoghurts to avoid lots of unnecessary added sugar - you can always add your own fruit later for extra sweetness if you want to!
+                </li>
+                <li>double check that the food is <i>still in date</i> - if you plan on keeping the food for a little while before using it, check that the best before date won't pass before you get to use it
+                </li>
+                <li>not all packaged baby foods are on the shelf - you can find fresh baby meals in the freezer section too
+                </li>
+            </ul>
+            <p>
+                <br /><br /><br />
             </p>
         </div>
     </div>
-
     <div class="navbar-fixed mbn-footer hide-on-med-and-up">
         <nav class="mbn-nav">
             <div class="nav-wrapper">
