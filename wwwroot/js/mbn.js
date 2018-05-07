@@ -98,8 +98,7 @@ function Load(opt) {
     }
 
     if(opt == "bf-goals") {
-        alert("Tool not implemented yet.");
-        // window.location = window.location.origin + "/tools//quiz.html";
+        window.location = window.location.origin + "/tools/my-breastfeeding-goals/quiz.html";
     }
 
     if(opt == "mixed-feed") {
