@@ -27,17 +27,8 @@
 
         var userId = $.session.get('secretKey');
 
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#pg1').show();
-
-            $('#pg2').hide();
-            $('#pg3').hide();
-            $('#pg4').hide();
-            $('#pg5').hide();
-            $('#pg6').hide();
-            $('#pg7').hide();
-            $('#pg8').hide();
-            $('#pg9').hide();
 
             $('#pg2-ans').hide();
             $('#pg3-ans').hide();
@@ -61,7 +52,7 @@
 
             $.get("http://assc-klong-gh.azurewebsites.net/tables/bottle_feeding_quiz?$filter=user_id eq '" +
                 userId + "'",
-                function(data) {
+                function (data) {
                     if (data.length !== 0) {
                         $('input[name=q1-options][value=' + data[0].ans1 + ']').prop('checked', true);
                         $('input[name=q2-options][value=' + data[0].ans2 + ']').prop('checked', true);
@@ -109,8 +100,6 @@
                         $('input[name=q8-options]').prop('checked', false);
                     }
 
-
-
                     $(".preloader-wrapper").addClass("hide");
                 });
 
@@ -136,20 +125,20 @@
 
             $.get("http://assc-klong-gh.azurewebsites.net/tables/bottle_feeding_quiz?$filter=user_id eq '" +
                 userId + "'",
-                function(data) {
+                function (data) {
                     if (data.length !== 0) {
                         var entryId = data[0].id;
                         $.ajax({
                             type: "delete",
                             url: "http://assc-klong-gh.azurewebsites.net/tables/bottle_feeding_quiz/" + entryId,
-                            success: function(responseData, textStatus, jqXHR) {
+                            success: function (responseData, textStatus, jqXHR) {
                                 // $("#modal p").html("Answers has been cleared");
                                 // $("#modal").modal();
                                 // $("#modal").modal('open');
                                 $(".preloader-wrapper").addClass("hide");
                                 location.reload();
                             },
-                            error: function(jqXHR, textStatus, errorThrown) {
+                            error: function (jqXHR, textStatus, errorThrown) {
                                 var errorMessage = "Something went wrong";
                                 if (jqXHR.status === 0) {
                                     errorMessage =
@@ -264,7 +253,7 @@
 
             $.get("http://assc-klong-gh.azurewebsites.net/tables/bottle_feeding_quiz?$filter=user_id eq '" +
                 userId + "'",
-                function(data) {
+                function (data) {
                     $(".preloader-wrapper").removeClass("hide");
                     var postData = {
                         user_id: userId,
@@ -284,10 +273,10 @@
                             data: JSON.stringify(postData),
                             contentType: "application/json",
                             dataType: "json",
-                            success: function(responseData, textStatus, jqXHR) {
+                            success: function (responseData, textStatus, jqXHR) {
                                 $(".preloader-wrapper").addClass("hide");
                             },
-                            error: function(jqXHR, textStatus, errorThrown) {
+                            error: function (jqXHR, textStatus, errorThrown) {
                                 var errorMessage = "Something went wrong";
                                 if (jqXHR.status === 0) {
                                     errorMessage =
@@ -321,10 +310,10 @@
                             data: JSON.stringify(postData),
                             contentType: "application/json",
                             dataType: "json",
-                            success: function(responseData, textStatus, jqXHR) {
+                            success: function (responseData, textStatus, jqXHR) {
                                 $(".preloader-wrapper").addClass("hide");
                             },
-                            error: function(jqXHR, textStatus, errorThrown) {
+                            error: function (jqXHR, textStatus, errorThrown) {
                                 var errorMessage = "Something went wrong";
                                 if (jqXHR.status === 0) {
                                     errorMessage =
@@ -410,514 +399,378 @@
             <div id="pg1">
                 <p class="mbn-section">Introduction</p>
                 <p class="mbn-text">
-                    Have you been thinking about giving your baby some formula in addition to your breastmilk? Or perhaps you have already started supplementing your breastfeeding with formula? <br />
-                    <br /> This is what's called mixed feeding – that is, your baby has both breastmilk and formula.
-                    <br /> There are all sorts of reasons why people choose to mix feed – take our quick quiz for some suggestions specific to your situation!
+                    Have you been thinking about giving your baby some formula in addition to your breastmilk? Or perhaps you have already started
+                    supplementing your breastfeeding with formula?
                     <br />
-                    <b>Remember:</b> before introducing formula or a bottle, try to wait until your milk supply is established (usually about 6–8 weeks after birth). This gives you and your baby a chance to figure out exactly what works best for the both of you – you making milk and your baby feeding from your breast.
+                    <br /> This is what's called mixed feeding – that is, your baby has both breastmilk and formula.
+                    <br /> There are all sorts of reasons why people choose to mix feed – take our quick quiz for some suggestions
+                    specific to your situation!
+                    <br />
+                    <b>Remember:</b> before introducing formula or a bottle, try to wait until your milk supply is established
+                    (usually about 6–8 weeks after birth). This gives you and your baby a chance to figure out exactly what
+                    works best for the both of you – you making milk and your baby feeding from your breast.
                 </p>
                 <div class="login-btn" onclick="startQuiz()">Begin quiz</div>
             </div>
 
             <div id="pg2">
-                <table>
-                    <tr>
-                        <td style="vertical-align: top; width: 10%;">
-                            <p class="mbn-section">1.</p>
-                        </td>
-                        <td>
-                            <p class="mbn-section">
-
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-
-                        </td>
-                    </tr>
-                </table>
-
                 <p class="mbn-section">
                     <b>Question 1</b>
-                    <br/>The main reason(s) I am thinking about giving my baby some formula (alongside breastfeeding) is/are: (select all that apply):
+                    <br/>The main reason(s) I am thinking about giving my baby some formula (alongside breastfeeding) is/are:
+                    (select all that apply):
                 </p>
                 <p class="mbn-text">
                     <div class="input-field">
                         <p>
-                            <input id="q1-never" value="never" name="q1-options" type="radio">
-                            <label for="q1-never">I am concerned about my baby’s growth or weight gain</label>
+                            <input id="q1-a" value="a" name="q1-options" type="radio">
+                            <label for="q1-a">I am concerned about my baby's growth or weight gain</label>
                         </p>
                         <p>
-                            <input id="q1-rarely" value="rarely" name="q1-options" type="radio">
-                            <label for="q1-rarely">Rarely</label>
+                            <input id="q1-b" value="b" name="q1-options" type="radio">
+                            <label for="q1-b">I can't make enough breastmilk</label>
                         </p>
                         <p>
-                            <input id="q1-sometimes" value="sometimes" name="q1-options" type="radio">
-                            <label for="q1-sometimes">Sometimes</label>
+                            <input id="q1-c" value="c" name="q1-options" type="radio">
+                            <label for="q1-c">Breastfeeding is painful!</label>
                         </p>
                         <p>
-                            <input id="q1-often" value="often" name="q1-options" type="radio">
-                            <label for="q1-often">Often</label>
+                            <input id="q1-d" value="d" name="q1-options" type="radio">
+                            <label for="q1-d">For convenience</label>
                         </p>
                         <p>
-                            <input id="q1-always" value="always" name="q1-options" type="radio">
-                            <label for="q1-always">Always</label>
+                            <input id="q1-e" value="e" name="q1-options" type="radio">
+                            <label for="q1-e">To get more sleep</label>
+                        </p>
+                        <p>
+                            <input id="q1-f" value="f" name="q1-options" type="radio">
+                            <label for="q1-f">I need to go to work</label>
+                        </p>
+                        <p>
+                            <input id="q1-g" value="g" name="q1-options" type="radio">
+                            <label for="q1-g">To share the feeding roles with other people</label>
+                        </p>
+                        <p>
+                            <input id="q1-h" value="h" name="q1-options" type="radio">
+                            <label for="q1-h">My baby is allergic or has intolerances to something</label>
+                        </p>
+                        <p>
+                            <input id="q1-i" value="i" name="q1-options" type="radio">
+                            <label for="q1-i">My baby is still hungry after breastfeeding</label>
+                        </p>
+                        <p>
+                            <input id="q1-j" value="j" name="q1-options" type="radio">
+                            <label for="q1-j">To get used to the bottle</label>
                         </p>
                     </div>
                     <br />
                 </p>
             </div>
-            <div id="pg2-ans">
-                <p class="mbn-text">
-                    Answer here.
-                </p>
-            </div>
-
-            <div id="pg3">
-                <table>
-                    <tr>
-                        <td style="vertical-align: top; width: 10%;">
-                            <p class="mbn-section">1.</p>
-                        </td>
-                        <td>
-                            <p class="mbn-section">
-
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-
-                        </td>
-                    </tr>
-                </table>
-
-                <p class="mbn-section">
-                    <b>Question 2</b>
-                    <br/> Do you leave your baby in your cot with a bottle?
-                </p>
-                <p class="mbn-text">
-                    <div class="input-field">
-                        <p>
-                            <input id="q2-never" value="never" name="q2-options" type="radio">
-                            <label for="q2-never">Never</label>
-                        </p>
-                        <p>
-                            <input id="q2-rarely" value="rarely" name="q2-options" type="radio">
-                            <label for="q2-rarely">Rarely</label>
-                        </p>
-                        <p>
-                            <input id="q2-sometimes" value="sometimes" name="q2-options" type="radio">
-                            <label for="q2-sometimes">Sometimes</label>
-                        </p>
-                        <p>
-                            <input id="q2-often" value="often" name="q2-options" type="radio">
-                            <label for="q2-often">Often</label>
-                        </p>
-                        <p>
-                            <input id="q2-always" value="always" name="q2-options" type="radio">
-                            <label for="q2-always">Always</label>
-                        </p>
-                    </div>
-                    <br />
-                </p>
-            </div>
-            <div id="pg3-ans">
-                <p class="mbn-text">
-                    Answer here.
-                </p>
-            </div>
-
-            <div id="pg4">
-                <table>
-                    <tr>
-                        <td style="vertical-align: top; width: 10%;">
-                            <p class="mbn-section">1.</p>
-                        </td>
-                        <td>
-                            <p class="mbn-section">
-
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-
-                        </td>
-                    </tr>
-                </table>
-
-                <p class="mbn-section">
-                    <b>Question 3</b>
-                    <br/> I try to make sure my baby finishes all the formula in their bottle.
-                </p>
-                <p class="mbn-text">
-                    <div class="input-field">
-                        <p>
-                            <input id="q3-never" value="never" name="q3-options" type="radio">
-                            <label for="q3-never">Never</label>
-                        </p>
-                        <p>
-                            <input id="q3-rarely" value="rarely" name="q3-options" type="radio">
-                            <label for="q3-rarely">Rarely</label>
-                        </p>
-                        <p>
-                            <input id="q3-sometimes" value="sometimes" name="q3-options" type="radio">
-                            <label for="q3-sometimes">Sometimes</label>
-                        </p>
-                        <p>
-                            <input id="q3-often" value="often" name="q3-options" type="radio">
-                            <label for="q3-often">Often</label>
-                        </p>
-                        <p>
-                            <input id="q3-always" value="always" name="q3-options" type="radio">
-                            <label for="q3-always">Always</label>
-                        </p>
-                    </div>
-                    <br />
-                </p>
-            </div>
-            <div id="pg4-ans">
-                <p class="mbn-text">
-                    Answer here.
-                </p>
-            </div>
-
-            <div id="pg5">
-                <table>
-                    <tr>
-                        <td style="vertical-align: top; width: 10%;">
-                            <p class="mbn-section">1.</p>
-                        </td>
-                        <td>
-                            <p class="mbn-section">
-
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-
-                        </td>
-                    </tr>
-                </table>
-
-                <p class="mbn-section">
-                    <b>Question 4</b>
-                    <br/> I feed my baby a bottle at set times.
-                </p>
-                <p class="mbn-text">
-                    <div class="input-field">
-                        <p>
-                            <input id="q4-never" value="never" name="q4-options" type="radio">
-                            <label for="q4-never">Never</label>
-                        </p>
-                        <p>
-                            <input id="q4-rarely" value="rarely" name="q4-options" type="radio">
-                            <label for="q4-rarely">Rarely</label>
-                        </p>
-                        <p>
-                            <input id="q4-sometimes" value="sometimes" name="q4-options" type="radio">
-                            <label for="q4-sometimes">Sometimes</label>
-                        </p>
-                        <p>
-                            <input id="q4-often" value="often" name="q4-options" type="radio">
-                            <label for="q4-often">Often</label>
-                        </p>
-                        <p>
-                            <input id="q4-always" value="always" name="q4-options" type="radio">
-                            <label for="q4-always">Always</label>
-                        </p>
-                    </div>
-                    <br />
-                </p>
-            </div>
-            <div id="pg5-ans">
-                <p class="mbn-text">
-                    Answer here.
-                </p>
-            </div>
-
-            <div id="pg6">
-                <table>
-                    <tr>
-                        <td style="vertical-align: top; width: 10%;">
-                            <p class="mbn-section">1.</p>
-                        </td>
-                        <td>
-                            <p class="mbn-section">
-
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-
-                        </td>
-                    </tr>
-                </table>
-
-                <p class="mbn-section">
-                    <b>Question 5</b>
-                    <br/> I use a bottle to feed my baby fruit juice, tea, sports drinks, cordial or soft-drink.
-                </p>
-                <p class="mbn-text">
-                    <div class="input-field">
-                        <p>
-                            <input id="q5-never" value="never" name="q5-options" type="radio">
-                            <label for="q5-never">Never</label>
-                        </p>
-                        <p>
-                            <input id="q5-rarely" value="rarely" name="q5-options" type="radio">
-                            <label for="q5-rarely">Rarely</label>
-                        </p>
-                        <p>
-                            <input id="q5-sometimes" value="sometimes" name="q5-options" type="radio">
-                            <label for="q5-sometimes">Sometimes</label>
-                        </p>
-                        <p>
-                            <input id="q5-often" value="often" name="q5-options" type="radio">
-                            <label for="q5-often">Often</label>
-                        </p>
-                        <p>
-                            <input id="q5-always" value="always" name="q5-options" type="radio">
-                            <label for="q5-always">Always</label>
-                        </p>
-                    </div>
-                    <br />
-                </p>
-            </div>
-            <div id="pg6-ans">
-                <p class="mbn-text">
-                    Answer here.
-                </p>
-            </div>
-
-            <div id="pg7">
-                <table>
-                    <tr>
-                        <td style="vertical-align: top; width: 10%;">
-                            <p class="mbn-section">1.</p>
-                        </td>
-                        <td>
-                            <p class="mbn-section">
-
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-
-                        </td>
-                    </tr>
-                </table>
-
-                <p class="mbn-section">
-                    <b>Question 6</b>
-                    <br/> I add cereal, honey or flavourings to my baby's bottle.
-                </p>
-                <p class="mbn-text">
-                    <div class="input-field">
-                        <p>
-                            <input id="q6-never" value="never" name="q6-options" type="radio">
-                            <label for="q6-never">Never</label>
-                        </p>
-                        <p>
-                            <input id="q6-rarely" value="rarely" name="q6-options" type="radio">
-                            <label for="q6-rarely">Rarely</label>
-                        </p>
-                        <p>
-                            <input id="q6-sometimes" value="sometimes" name="q6-options" type="radio">
-                            <label for="q6-sometimes">Sometimes</label>
-                        </p>
-                        <p>
-                            <input id="q6-often" value="often" name="q6-options" type="radio">
-                            <label for="q6-often">Often</label>
-                        </p>
-                        <p>
-                            <input id="q6-always" value="always" name="q6-options" type="radio">
-                            <label for="q6-always">Always</label>
-                        </p>
-                    </div>
-                    <br />
-                </p>
-            </div>
-            <div id="pg7-ans">
-                <p class="mbn-text">
-                    Answer here.
-                </p>
-            </div>
-
-            <div id="pg8">
-                <table>
-                    <tr>
-                        <td style="vertical-align: top; width: 10%;">
-                            <p class="mbn-section">1.</p>
-                        </td>
-                        <td>
-                            <p class="mbn-section">
-
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-
-                        </td>
-                    </tr>
-                </table>
-
-                <p class="mbn-section">
-                    <b>Question 7</b>
-                    <br/> Which type of formula do you give your baby?
-                </p>
-                <p class="mbn-text">
-                    <div class="input-field">
-                        <p>
-                            <input id="q7-stage1" value="stage1" name="q7-options" type="radio">
-                            <label for="q7-stage1">Starter or first formula (sometimes called Stage 1/step 1 formula - suitable from birth)</label>
-                        </p>
-                        <p>
-                            <input id="q7-stage2" value="stage2" name="q7-options" type="radio">
-                            <label for="q7-stage2">Stage 2 formula/step 2 formula (suitable from 6 months)</label>
-                        </p>
-                        <p>
-                            <input id="q7-not-sure" value="not-sure" name="q7-options" type="radio">
-                            <label for="q7-not-sure">Not sure</label>
-                        </p>
-                    </div>
-                    <br />
-                </p>
-            </div>
-            <div id="pg8-ans">
-                <p class="mbn-text">
-                    Answer here.
-                </p>
-            </div>
-
-            <div id="pg9">
-                <table>
-                    <tr>
-                        <td style="vertical-align: top; width: 10%;">
-                            <p class="mbn-section">1.</p>
-                        </td>
-                        <td>
-                            <p class="mbn-section">
-
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-
-                        </td>
-                    </tr>
-                </table>
-
-                <p class="mbn-section">
-                    <b>Question 8</b>
-                    <br/> Have you introduced your baby to a cup?
-                </p>
-                <p class="mbn-text">
-                    <div class="input-field">
-                        <p>
-                            <input id="q8-yes" value="yes" name="q8-options" type="radio">
-                            <label for="q8-yes">Yes</label>
-                        </p>
-                        <p>
-                            <input id="q8-no" value="no" name="q8-options" type="radio">
-                            <label for="q8-no">No</label>
-                        </p>
-                    </div>
-                    <br />
-                </p>
-            </div>
-            <div id="pg9-ans">
-                <p class="mbn-text">
-                    Answer here.
-                </p>
-            </div>
-
-            <br />
-            <br />
-
-            <div id="mark" class="login-btn" onclick="mark()">Submit answers</div>
-
-            <div id="clear" class="login-btn hide" onclick="clearAnswers()">Redo quiz</div>
-
-            <p>
-                <br />
-                <br />
-                <br />
-            </p>
-        </div>
-    </div>
-
-    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
-        <nav class="mbn-nav">
-            <div class="nav-wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col mbn-icon" onclick="Load('feed');">
-                            <p>
-                                <img src="../../images/feed.png" style="width:30%;" />
-                                <br />
-                                <span class="mbn-icon-text">My baby</span>
-                            </p>
-                        </div>
-                        <div class="col mbn-icon" onclick="Load('topics');">
-                            <p>
-                                <img src="../../images/topics.png" style="width:30%;" />
-                                <br />
-                                <span class="mbn-icon-text">Topics</span>
-                            </p>
-                        </div>
-                        <div class="col mbn-icon" onclick="Load('tools');">
-                            <p class="mbn-icon-selected">
-                                <img src="../../images/tools-s.png" style="width:30%;" />
-                                <br />
-                                <span class="mbn-icon-text-selected">Tools</span>
-                            </p>
-                        </div>
-                        <div class="col mbn-icon" onclick="Load('forum');">
-                            <p>
-                                <img src="../../images/forum.png" style="width:30%;" />
-                                <br />
-                                <span class="mbn-icon-text">Forum</span>
-                            </p>
-                        </div>
-                        <div class="col mbn-icon" onclick="Load('more');">
-                            <p>
-                                <img src="../../images/more.png" style="width:30%;" />
-                                <br />
-                                <span class="mbn-icon-text">More</span>
-                            </p>
-                        </div>
+            <div id="ans-a">
+                <div class='card-panel light-green lighten-5 white-text'>
+                    <div class='mbn-text'>
+                        If your baby doesn't seem to be
+                        <a onclick='q1_modal();'>growing as well</a> as you think they should be, the first step is to talk with your
+                        <a onclick='q1_modal();'>maternal and child health nurse</a> or GP. Keep in mind that babies all grow at different rates and
+                        you could be worrying for no reason!
+                        <br />
+                        <br /> Some possible reasons for poorer than expected growth include:
+                        <br />
+                        <ul class='mbn-text'>
+                            <li>
+                                <a onclick='q1_modal();'>low milk supply</a> which means your baby won't be getting all the energy and nutrition they
+                                need for adequate growth</li>
+                            <li>a
+                                <a onclick='q1_modal();'>bad attachment</a> which makes it harder for your baby to remove enough milk when feeding</li>
+                        </ul>
+                        Before jumping to conclusions though, it's important to realise that even if there is an issue, there are ways to deal with
+                        them – your baby's
+                        <a onclick='q1_modal();'>attachment</a> can be checked and
+                        <a onclick='q1_modal();'>your milk supply can be increased</a>. Call the
+                        <a onclick='q1_modal();'>ABA helpline</a>, or ask your GP,
+                        <a onclick='q1_modal();'>lactation consultant</a> or
+                        <a onclick='q1_modal();'>maternal and child health nurse</a> for advice.
+                        <br />
+                        <br /> Remember, topping up with formula can reduce your milk supply, which means you'll need to top up
+                        with more formula, which reduces your milk supply even further (known as the top up trap). Rather
+                        than risking a reduction in your milk supply by giving your baby some formula, you could instead
+                        top up with some of your expressed breastmilk – ask your maternal and child health nurse or GP if
+                        they would support this.
                     </div>
                 </div>
-            </div>
-        </nav>
-    </div>
 
-    <div id="q1-modal" class="tools-content">
-        <span class="tools-close">
-            <i class="fa fa-times-circle fa-2x" onclick="$('#q1-modal').hide();"></i>
-        </span>
-        <p>
-            <br />
-            <br />
-            <br /> Content is loaded here.
-        </p>
-    </div>
+                <div id="ans-b">
+                    <div class='card-panel light-green lighten-5 white-text'>
+                        <div class='mbn-text'>
+                            'Not having enough milk' is the most common reason why mums give up breastfeeding, yet in reality, only about 5% of mums
+                            really can't make enough milk!
+                            <br />
+                            <br /> Take our
+                            <a onclick='q1_modal();'>milk supply quiz</a> to find out if you could really have
+                            <a onclick='q1_modal();'>low milk supply</a> – you might be worrying for no reason!
+                            <br />
+                            <br /> Keep in mind that if you do decide to supplement your baby's feeds with formula, you will likely
+                            reduce your milk supply at the same time and could potentially get caught up in the top up trap
+                            – the more you top up with formula, the more your milk supply reduces so the more formula you
+                            need to use. Instead, you might like to read about how you can
+                            <a onclick='q1_modal();'>make more milk</a>.
+                        </div>
+                    </div>
+
+                    <div id="ans-c">
+                        <div class='card-panel light-green lighten-5 white-text'>
+                            <div class='mbn-text'>
+                                Breastfeeding might feel a bit uncomfortable during the first week or so while you get used to it but it should never be
+                                painful!
+                                <br />
+                                <br /> If you're finding breastfeeding painful, your baby might not be
+                                <a onclick='q1_modal();'>attaching properly</a>. Have a look at our video on
+                                <a onclick='q1_modal();'>getting a good attachment</a> and make sure you ask your
+                                <a onclick='q1_modal();'>midwife</a>,
+                                <a onclick='q1_modal();'>maternal and child health nurse</a> or a
+                                <a onclick='q1_modal();'>lactation consultant</a> to check how your baby is attaching.
+                                <br />
+                                <br /> You might also like to read about managing
+                                <a onclick='q1_modal();'>sore nipples</a>,
+                                <a onclick='q1_modal();'>cracked nipples</a> and
+                                <a onclick='q1_modal();'>mastitis</a>.
+                            </div>
+                        </div>
+
+                        <div id="ans-d">
+                            <div class='card-panel light-green lighten-5 white-text'>
+                                <div class='mbn-text'>
+                                    Formula feeding might appear to be more convenient than breastfeeding but don't forget that there's
+                                    <a
+                                        onclick='q1_modal();'>lots of extra work involved</a> in preparing and sterilising bottles, as well as more
+                                    expensive – usually around $25 per tin!
+                                    <br />
+                                    <br /> Breastfeeding your baby, on the other hand, can be done anywhere and at any time – if
+                                    breastfeeding in public worries you, check out our
+                                    <a onclick='q1_modal();'>tips to make breastfeeding in public easier</a>.
+                                </div>
+                            </div>
+
+                            <div id="ans-e">
+                                <div class='card-panel light-green lighten-5 white-text'>
+                                    <div class='mbn-text'>
+                                        Have you been told that giving your baby formula will help them sleep longer at night?
+                                        <br />
+                                        <br /> Unfortunately, this often does not help. Most babies, regardless of whether they
+                                        are formula-fed or breastfed, wake throughout the night for the first few months
+                                        to feed. Find out more about
+                                        <a onclick='q1_modal();'>feed and sleep patterns in newborns</a>.
+                                        <br />
+                                        <br /> Parenting can be exhausting, so if you feel like you're always tired, it might be
+                                        worth
+                                        <a onclick='q1_modal();'>trying these tips</a>.
+                                        <br />
+                                        <br /> You could also try:
+                                        <br />
+                                        <ul class='mbn-text'>
+                                            <li>sleeping in the same room as your baby so that you are close by</li>
+                                            <li>learning to
+                                                <a onclick='q1_modal();'>breastfeed lying down</a> so that you can keep on resting, even when feeding</li>
+                                        </ul>
+                                        If your baby is older than 6 months and they're still waking through the night, find out how you can help them (and you!)
+                                        <a onclick='q1_modal();'>sleep through the night</a>.
+                                    </div>
+                                </div>
+
+
+                                <div id="ans-f">
+                                    <div class='card-panel light-green lighten-5 white-text'>
+                                        <div class='mbn-text'>
+                                            Don't be put off breastfeeding just because your returning to work!
+                                            <br />
+                                            <br /> There are many ways you can continue to breastfeed once you're working and lots
+                                            of mums actually find that doing so helps them to feel connected with their baby,
+                                            despite being apart more often.
+                                            <br />
+                                            <br /> Read more about options for breastfeeding when you're a
+                                            <a onclick='q1_modal();'>working mum</a>.
+                                        </div>
+                                    </div>
+
+
+                                    <div id="ans-g">
+                                        <div class='card-panel light-green lighten-5 white-text'>
+                                            <div class='mbn-text'>
+                                                Being a new mum can be exhausting, especially when you're feeding around the clock. But, given all the benefits that breastfeeding
+                                                provides, it's worth sticking with it for as long as you can!
+                                                <br />
+                                                <br /> There are plenty of things that your partner and others can do to
+                                                <a onclick='q1_modal();'>support you</a> that don't involve feeding, and even though your old sleep
+                                                patterns may no longer be possible, there are
+                                                <a onclick='q1_modal();'>lots of ways to make sure you still get enough sleep</a>.
+                                                <br />
+                                                <br /> Once your breastfeeding is established (usually around 6–8 weeks), you could
+                                                also try
+                                                <a onclick='q1_modal();'>expressing</a> so someone else can give the occasional feed. And if you are
+                                                worried about your partner missing out on bonding with your baby, don't be,
+                                                there are plenty of other ways for your
+                                                <a onclick='q1_modal();'>partner to bond</a> with your baby that don't involve feeding.
+                                            </div>
+                                        </div>
+
+                                        <div id="ans-h">
+                                            <div class='card-panel light-green lighten-5 white-text'>
+                                                <div class='mbn-text'>
+                                                    Some babies can have
+                                                    <a onclick='q1_modal();'>allergies</a> or intolerances and react to traces of food in their mum's
+                                                    breastmilk, although this is uncommon and needs to be checked by a GP.
+                                                    If you think your baby is reacting to something in your breastmilk, speak
+                                                    to
+                                                    <a onclick='q1_modal();'>your GP</a>,
+                                                    <a onclick='q1_modal();'>lactation consultant</a> or
+                                                    <a onclick='q1_modal();'>maternal and child health nurse</a> before making changes to your diet
+                                                    or switching your baby to formula.
+                                                    <br />
+                                                    <br /> If you can change your diet and continue to breastfeed them, instead
+                                                    of giving them formula, your baby will have less risk of ongoing allergies
+                                                    because breastfeeding is actually protective of allergies. A specialist
+                                                    can advise you whether this is an option for you.
+                                                </div>
+                                            </div>
+
+                                            <div id="ans-i">
+                                                <div class='card-panel light-green lighten-5 white-text'>
+                                                    <div class='mbn-text'>
+                                                        If your baby doesn't seem satisfied or is fussy after breastfeeding it doesn't necessarily mean they are still hungry and
+                                                        needing more breastmilk!
+                                                        <br />
+                                                        <br /> Your milk is probably not causing your baby's dissatisfaction if
+                                                        you have been breastfeeding them:
+                                                        <br />
+                                                        <ul class='mbn-text'>
+                                                            <li>whenever they
+                                                                <a onclick='q1_modal();'>seem hungry</a>
+                                                            </li>
+                                                            <li>for as long as they want to feed</li>
+                                                            <li>they are
+                                                                <a onclick='q1_modal();'>attaching on well</a>
+                                                            </li>
+                                                        </ul>
+                                                        Remember:
+                                                        <br />
+                                                        <ul class='mbn-text'>
+                                                            <li>babies
+                                                                <a onclick='q1_modal();'>cry for all sorts of reasons</a> (even after feeding), and
+                                                                it's not always because they are still hungry – try working
+                                                                through our
+                                                                <a onclick='q1_modal();'>crying baby checklist</a>
+                                                            </li>
+                                                            <li>for as long as they want to feed</li>
+                                                            <li>if you are worried, make sure you speak with
+                                                                <a onclick='q1_modal();'>your GP</a>,
+                                                                <a onclick='q1_modal();'>maternal and child health nurse</a>, the
+                                                                <a onclick='q1_modal();'>ABA helpline</a> or a
+                                                                <a onclick='q1_modal();'>lactation consultant</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+
+                                                <div id="ans-j">
+                                                    <div class='card-panel light-green lighten-5 white-text'>
+                                                        <div class='mbn-text'>
+                                                            If you're keen to get your baby used to taking milk from a bottle, instead of formula, why not try
+                                                            <a
+                                                                onclick='q1_modal();'>expressing</a> and
+                                                            <a onclick='q1_modal();'>feeding expressed breastmilk</a> via a bottle?
+                                                            <br />
+                                                            <br /> This way, your breasts will still be stimulated to make milk
+                                                            and you'll keep up your
+                                                            <a onclick='q1_modal();'>milk supply</a> (rather than reducing it by missing breastfeeds
+                                                            so you can give your baby formula in a bottle instead).
+                                                            <br />
+                                                            <br /> A couple of things to keep in mind:
+                                                            <br />
+                                                            <ul class='mbn-text'>
+                                                                <li>avoid introducing a bottle in the first 6–8 weeks while you
+                                                                    are still establishing breastfeeding – this gives both
+                                                                    you and your baby a chance to figure out exactly what
+                                                                    works best – you making milk and your baby feeding from
+                                                                    your breast</li>
+                                                                <li>once your baby is used to a bottle, it is more likely that
+                                                                    your baby will
+                                                                    <a onclick='q1_modal();'>refuse your breast</a> (rather than the bottle) because
+                                                                    they have to work harder to get milk from your breast!</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <br />
+                                                    <br />
+
+                                                    <div id="mark" class="login-btn" onclick="mark()">Submit answers</div>
+
+                                                    <div id="clear" class="login-btn hide" onclick="clearAnswers()">Redo quiz</div>
+
+                                                    <p>
+                                                        <br />
+                                                        <br />
+                                                        <br />
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+                                                <nav class="mbn-nav">
+                                                    <div class="nav-wrapper">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col mbn-icon" onclick="Load('feed');">
+                                                                    <p>
+                                                                        <img src="../../images/feed.png" style="width:30%;" />
+                                                                        <br />
+                                                                        <span class="mbn-icon-text">My baby</span>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col mbn-icon" onclick="Load('topics');">
+                                                                    <p>
+                                                                        <img src="../../images/topics.png" style="width:30%;" />
+                                                                        <br />
+                                                                        <span class="mbn-icon-text">Topics</span>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col mbn-icon" onclick="Load('tools');">
+                                                                    <p class="mbn-icon-selected">
+                                                                        <img src="../../images/tools-s.png" style="width:30%;" />
+                                                                        <br />
+                                                                        <span class="mbn-icon-text-selected">Tools</span>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col mbn-icon" onclick="Load('forum');">
+                                                                    <p>
+                                                                        <img src="../../images/forum.png" style="width:30%;" />
+                                                                        <br />
+                                                                        <span class="mbn-icon-text">Forum</span>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col mbn-icon" onclick="Load('more');">
+                                                                    <p>
+                                                                        <img src="../../images/more.png" style="width:30%;" />
+                                                                        <br />
+                                                                        <span class="mbn-icon-text">More</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </nav>
+                                            </div>
+
+                                            <div id="q1-modal" class="tools-content">
+                                                <span class="tools-close">
+                                                    <i class="fa fa-times-circle fa-2x" onclick="$('#q1-modal').hide();"></i>
+                                                </span>
+                                                <p>
+                                                    <br />
+                                                    <br />
+                                                    <br /> Content is loaded here.
+                                                </p>
+                                            </div>
 </body>
 
 </html>
