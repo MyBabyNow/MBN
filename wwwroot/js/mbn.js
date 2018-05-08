@@ -102,8 +102,7 @@ function Load(opt) {
     }
 
     if(opt == "mixed-feed") {
-        alert("Tool not implemented yet.");
-        // window.location = window.location.origin + "/tools//quiz.html";
+        window.location = window.location.origin + "/tools/mixed-feeding/quiz.html";
     }
 
     if(opt == "ready-for-solids") {

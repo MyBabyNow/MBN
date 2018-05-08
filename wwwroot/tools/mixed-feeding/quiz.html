@@ -23,25 +23,47 @@
     <script type="text/javascript" src="../../js/mbn.js"></script>
     <script type="text/javascript" src="../../js/header.js"></script>
     <script type="text/javascript">
-        var ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8;
+        var ans_a, ans_b, ans_c, ans_d, ans_e, ans_f, ans_g, ans_h, ans_i, ans_j;
 
         var userId = $.session.get('secretKey');
 
         $(document).ready(function () {
             $('#pg1').show();
 
-            $('#pg2-ans').hide();
-            $('#pg3-ans').hide();
-            $('#pg4-ans').hide();
-            $('#pg5-ans').hide();
-            $('#pg6-ans').hide();
-            $('#pg7-ans').hide();
-            $('#pg8-ans').hide();
-            $('#pg9-ans').hide();
+            $('#pg2').hide();
+            $('#ans-a').hide();
+            $('#ans-b').hide();
+            $('#ans-c').hide();
+            $('#ans-d').hide();
+            $('#ans-e').hide();
+            $('#ans-f').hide();
+            $('#ans-g').hide();
+            $('#ans-h').hide();
+            $('#ans-i').hide();
+            $('#ans-j').hide();
 
             $('#mark').hide();
 
             $('#q1-modal').hide();
+
+            $("input[type=radio]").click(function () {
+                // Get the storedValue
+                var previousValue = $(this).data('storedValue');
+                // if previousValue = true then
+                //     Step 1: toggle radio button check mark.
+                //     Step 2: save data-StoredValue as false to indicate radio button is unchecked.
+                if (previousValue) {
+                    $(this).prop('checked', !previousValue);
+                    $(this).data('storedValue', !previousValue);
+                }
+                // If previousValue is other than true
+                //    Step 1: save data-StoredValue as true to for currently checked radio button.
+                //    Step 2: save data-StoredValue as false for all non-checked radio buttons. 
+                else {
+                    $(this).data('storedValue', true);
+                    $("input[type=radio]:not(:checked)").data("storedValue", false);
+                }
+            });
 
             start();
         });
@@ -50,18 +72,20 @@
 
             $(".preloader-wrapper").removeClass("hide");
 
-            $.get("http://assc-klong-gh.azurewebsites.net/tables/bottle_feeding_quiz?$filter=user_id eq '" +
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/mixed_feeding_quiz?$filter=user_id eq '" +
                 userId + "'",
                 function (data) {
                     if (data.length !== 0) {
-                        $('input[name=q1-options][value=' + data[0].ans1 + ']').prop('checked', true);
-                        $('input[name=q2-options][value=' + data[0].ans2 + ']').prop('checked', true);
-                        $('input[name=q3-options][value=' + data[0].ans3 + ']').prop('checked', true);
-                        $('input[name=q4-options][value=' + data[0].ans4 + ']').prop('checked', true);
-                        $('input[name=q5-options][value=' + data[0].ans5 + ']').prop('checked', true);
-                        $('input[name=q6-options][value=' + data[0].ans6 + ']').prop('checked', true);
-                        $('input[name=q7-options][value=' + data[0].ans7 + ']').prop('checked', true);
-                        $('input[name=q8-options][value=' + data[0].ans8 + ']').prop('checked', true);
+                        $('input[name=q1-options]').prop('checked', data[0].ans_a);
+                        $('input[name=q2-options]').prop('checked', data[0].ans_b);
+                        $('input[name=q3-options]').prop('checked', data[0].ans_c);
+                        $('input[name=q4-options]').prop('checked', data[0].ans_d);
+                        $('input[name=q5-options]').prop('checked', data[0].ans_e);
+                        $('input[name=q6-options]').prop('checked', data[0].ans_f);
+                        $('input[name=q7-options]').prop('checked', data[0].ans_g);
+                        $('input[name=q8-options]').prop('checked', data[0].ans_h);
+                        $('input[name=q9-options]').prop('checked', data[0].ans_i);
+                        $('input[name=q10-options]').prop('checked', data[0].ans_j);
 
                         $('input[name=q1-options]').attr('disabled', true);
                         $('input[name=q2-options]').attr('disabled', true);
@@ -71,6 +95,8 @@
                         $('input[name=q6-options]').attr('disabled', true);
                         $('input[name=q7-options]').attr('disabled', true);
                         $('input[name=q8-options]').attr('disabled', true);
+                        $('input[name=q9-options]').attr('disabled', true);
+                        $('input[name=q10-options]').attr('disabled', true);
 
                         mark();
 
@@ -81,13 +107,6 @@
                         $('#pg1').hide();
 
                         $('#pg2').show();
-                        $('#pg3').show();
-                        $('#pg4').show();
-                        $('#pg5').show();
-                        $('#pg6').show();
-                        $('#pg7').show();
-                        $('#pg8').show();
-                        $('#pg9').show();
 
                     } else {
                         $('input[name=q1-options]').prop('checked', false);
@@ -98,6 +117,8 @@
                         $('input[name=q6-options]').prop('checked', false);
                         $('input[name=q7-options]').prop('checked', false);
                         $('input[name=q8-options]').prop('checked', false);
+                        $('input[name=q9-options]').prop('checked', false);
+                        $('input[name=q10-options]').prop('checked', false);
                     }
 
                     $(".preloader-wrapper").addClass("hide");
@@ -109,13 +130,6 @@
             $('#pg1').hide();
 
             $('#pg2').show();
-            $('#pg3').show();
-            $('#pg4').show();
-            $('#pg5').show();
-            $('#pg6').show();
-            $('#pg7').show();
-            $('#pg8').show();
-            $('#pg9').show();
 
             $('#mark').show();
         }
@@ -123,14 +137,14 @@
         function clearAnswers() {
             $(".preloader-wrapper").removeClass("hide");
 
-            $.get("http://assc-klong-gh.azurewebsites.net/tables/bottle_feeding_quiz?$filter=user_id eq '" +
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/mixed_feeding_quiz?$filter=user_id eq '" +
                 userId + "'",
                 function (data) {
                     if (data.length !== 0) {
                         var entryId = data[0].id;
                         $.ajax({
                             type: "delete",
-                            url: "http://assc-klong-gh.azurewebsites.net/tables/bottle_feeding_quiz/" + entryId,
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/mixed_feeding_quiz/" + entryId,
                             success: function (responseData, textStatus, jqXHR) {
                                 // $("#modal p").html("Answers has been cleared");
                                 // $("#modal").modal();
@@ -165,116 +179,74 @@
 
         function mark() {
             // Retrieve the values of each answer
-            ans1 = $('input[name=q1-options]:checked').val();
-            ans2 = $('input[name=q2-options]:checked').val();
-            ans3 = $('input[name=q3-options]:checked').val();
-            ans4 = $('input[name=q4-options]:checked').val();
-            ans5 = $('input[name=q5-options]:checked').val();
-            ans6 = $('input[name=q6-options]:checked').val();
-            ans7 = $('input[name=q7-options]:checked').val();
-            ans8 = $('input[name=q8-options]:checked').val();
+            ans_a = $('input[name=q1-options]').is(':checked');
+            ans_b = $('input[name=q2-options]').is(':checked');
+            ans_c = $('input[name=q3-options]').is(':checked');
+            ans_d = $('input[name=q4-options]').is(':checked');
+            ans_e = $('input[name=q5-options]').is(':checked');
+            ans_f = $('input[name=q6-options]').is(':checked');
+            ans_g = $('input[name=q7-options]').is(':checked');
+            ans_h = $('input[name=q8-options]').is(':checked');
+            ans_i = $('input[name=q9-options]').is(':checked');
+            ans_j = $('input[name=q10-options]').is(':checked');
 
             // Check that there is value for all.
-            if (ans1 == null) {
-                alert('You need to answer all questions.');
+            if (!ans_a && !ans_b && !ans_c && !ans_d && !ans_e && !ans_f && !ans_g && !ans_h && !ans_i && !ans_j) {
+                alert('You need to answer the question');
                 return;
             }
 
-            // Now prepare the answer
-            if (ans1 == "always") {
-                $('#pg2-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Great! Did you know that holding your baby to feed helps with bonding and physical development? <br /><br />Read more about <a onclick="q1_modal();">feeding your baby with a bottle</a>.</p>');
-            } else {
-                $('#pg2-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Feeding your baby not only provides them with nourishment but holding them while you give a bottle also helps with bonding and physical development. It is unsafe to prop your baby up with a bottle. Read more tips on feeding your baby with a bottle.</p>');
-            }
 
-            if (ans2 == "never") {
-                $('#pg3-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Good! Keeping your baby\'s bottle out of their cot helps to keep them safe, develop good sleeping habits and reduces their risk of ear infections and tooth decay.<br /><br />Read more about <a onclick="q1_modal();"> bedtime feeding</a>.</p>');
-            } else {
-                $('#pg3-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">It may be tempting to put your baby into their cot with a bottle but this can be dangerous – see why.</p>');
-
-            }
-
-            if (ans3 == "never") {
-                $('#pg4-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Great! Just like with us, your baby is likely to drink different amounts from feed-to-feed and from day-to-day. It\'s important that you let your baby decide when they are full as this teaches them to trust their own body signals.<br /><br />Read more about: <ul><li><a onclick="q1_modal();">hungry and fullness signs</a></li><li><a onclick="q1_modal();">how much you should feed your baby</a></li><li><a onclick="q1_modal();">how to know your baby is getting enough formula</a></li></ul></p>');
-            } else {
-                $('#pg4-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Encouraging your baby to finish all formula offered won\'t help them to sleep or go longer between feeds. It can also make your baby sick or put on too much weight. Your baby will decide when they are full - this also teaches them to trust their own body signals.<br /><br />Read more about: <ul><li><a onclick="q1_modal();">hungry and fullness signs</a></li><li><a onclick="q1_modal();">how much you should feed your baby</a></li><li><a onclick="q1_modal();">how to know your baby is getting enough formula</a></li></ul></p>');
-            }
-
-            if (ans4 == "never") {
-                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>Fantastic! Feeding ‘on demand\' is exactly what\'s recommended! As much as having a routine can be helpful, it is recommended that all babies (including breastfed) are fed only when they show <a onclick='q1_modal();'>signs of being hungry</a> (or 'on-demand') rather than at set times.<br /><br />Read more about <a onclick='q1_modal();'>how often you should feed your baby</a>.</p>");
-            } else {
-                $('#pg5-ans').html("<div class='card-panel light-green lighten-5 white-text'><p class='mbn-text'>As much as having a routine can be helpful, it is recommended that all babies (including breastfed) are fed only when they show <a onclick='q1_modal();'>signs of being hungry</a> (or 'on-demand') rather than at set times.<br /><br />Read more about <a onclick='q1_modal();'>how often you should feed your baby</a>.</p>");
-
-            }
-
-            if (ans5 == "never") {
-                $('#pg6-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Unless your GP or maternal and child health nurse has advised otherwise, your baby should only be fed breastmilk, formula or water from a bottle.<br /><br />Other drinks can be low in nutrition and have too much sugar which can damage growing teeth and cause your baby to gain too much weight. Learn more about<a onclick="q1_modal();"> drinks</a>.</p>');
-            } else {
-                $('#pg6-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Unless your GP or maternal and child health nurse has advised otherwise, your baby should only be fed breastmilk, formula or water from a bottle.<br /><br />Other drinks can be low in nutrition and have too much sugar which can damage growing teeth and cause your baby to gain too much weight. Learn more about<a onclick="q1_modal();"> drinks</a>.</p>');
-            }
-
-            if (ans6 == "never") {
-                $('#pg7-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Great! Adding anything other than formula, breastmilk or water to your baby\'s bottle, even if you think they\'ll like it, is unsafe and can cause several problems.<br /><br />Read more about <a onclick="q1_modal();">feeding your baby with a bottle</a>.</p>');
-            } else {
-                $('#pg7-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">It\'s best not to add cereal, cordial, tea, honey or flavourings to your baby\'s bottle, even if you think they\'ll like it. Adding anything other than formula, breastmilk or water is unsafe and can cause several problems.<br /><br />Read more about <a onclick="q1_modal();">feeding your baby with a bottle</a>.</p>');
-            }
-
-            if (ans7 == "stage1") {
-                $('#pg8-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Perfect! Although there many formulas on the market, the only type of formula your baby will need until they are 12 months old is starter or first formula suitable form birth.<br /><br />Find out more about <a onclick="q1_modal();">which formula is best for your baby.</a>.</p>');
-            } else {
-                $('#pg8-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Although there many formulas on the market, the only type of formula your baby will need until they are 12 months old is starter or first formula suitable form birth.<br /><br />Even when your baby reaches 6 months of age, Starter or first formula are still recommended over stage 2/step 2 formulas.<br /><br />Confused? Learn more about <a onclick="q1_modal();">which formula is best for your baby.</a></p>');
-            }
-
-            if (ans8 == "yes") {
-                $('#pg9-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Fantastic! Giving your baby their drinks in a cup once they reach 6 months helps them to learn to sip so that by 12 months, you should be able to stop giving them bottles all together.<br /><br />Read out our <a onclick="q1_modal();"> guide to weaning your baby off bottles</a> and <a onclick="q1_modal();">introducing a cup</a></p>');
-            } else {
-                $('#pg9-ans').html('<div class="card-panel light-green lighten-5 white-text"><p class="mbn-text">Giving your baby their drinks in a cup once they reach 6 months helps them to learn to sip so that by 12 months, you should be able to stop giving them bottles all together.<br /><br />Read out our <a onclick="q1_modal();"> guide to weaning your baby off bottles</a> and <a onclick="q1_modal();">introducing a cup</a><br /><br /></p>');
-            }
-
-
-            // DONE - display the answers
-            $('#pg2-ans').show();
-            $('#pg3-ans').show();
-            $('#pg4-ans').show();
-            $('#pg5-ans').show();
-            $('#pg6-ans').show();
-            $('#pg7-ans').show();
-            $('#pg8-ans').show();
-            $('#pg9-ans').show();
-
-            $('input[name=q1-options]').attr('disabled', true);
-            $('input[name=q2-options]').attr('disabled', true);
-            $('input[name=q3-options]').attr('disabled', true);
-            $('input[name=q4-options]').attr('disabled', true);
-            $('input[name=q5-options]').attr('disabled', true);
-            $('input[name=q6-options]').attr('disabled', true);
-            $('input[name=q7-options]').attr('disabled', true);
-            $('input[name=q8-options]').attr('disabled', true);
-
-            $.get("http://assc-klong-gh.azurewebsites.net/tables/bottle_feeding_quiz?$filter=user_id eq '" +
+            $.get("http://assc-klong-gh.azurewebsites.net/tables/mixed_feeding_quiz?$filter=user_id eq '" +
                 userId + "'",
                 function (data) {
                     $(".preloader-wrapper").removeClass("hide");
                     var postData = {
                         user_id: userId,
-                        ans1: ans1,
-                        ans2: ans2,
-                        ans3: ans3,
-                        ans4: ans4,
-                        ans5: ans5,
-                        ans6: ans6,
-                        ans7: ans7,
-                        ans8: ans8,
+                        ans_a: ans_a,
+                        ans_b: ans_b,
+                        ans_c: ans_c,
+                        ans_d: ans_d,
+                        ans_e: ans_e,
+                        ans_f: ans_f,
+                        ans_g: ans_g,
+                        ans_h: ans_h,
+                        ans_i: ans_i,
+                        ans_j: ans_j,
                     };
                     if (data.length === 0) {
                         $.ajax({
                             type: "post",
-                            url: "http://assc-klong-gh.azurewebsites.net/tables/bottle_feeding_quiz",
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/mixed_feeding_quiz",
                             data: JSON.stringify(postData),
                             contentType: "application/json",
                             dataType: "json",
                             success: function (responseData, textStatus, jqXHR) {
                                 $(".preloader-wrapper").addClass("hide");
+
+                                // DONE - display the answers
+                                if (ans_a) { $('#ans-a').show(); } else { $('#ans-a').hide(); }
+                                if (ans_b) { $('#ans-b').show(); } else { $('#ans-b').hide(); }
+                                if (ans_c) { $('#ans-c').show(); } else { $('#ans-c').hide(); }
+                                if (ans_d) { $('#ans-d').show(); } else { $('#ans-d').hide(); }
+                                if (ans_e) { $('#ans-e').show(); } else { $('#ans-e').hide(); }
+                                if (ans_f) { $('#ans-f').show(); } else { $('#ans-f').hide(); }
+                                if (ans_g) { $('#ans-g').show(); } else { $('#ans-g').hide(); }
+                                if (ans_h) { $('#ans-h').show(); } else { $('#ans-h').hide(); }
+                                if (ans_i) { $('#ans-i').show(); } else { $('#ans-i').hide(); }
+                                if (ans_j) { $('#ans-j').show(); } else { $('#ans-j').hide(); }
+
+
+                                $('input[name=q1-options]').attr('disabled', true);
+                                $('input[name=q2-options]').attr('disabled', true);
+                                $('input[name=q3-options]').attr('disabled', true);
+                                $('input[name=q4-options]').attr('disabled', true);
+                                $('input[name=q5-options]').attr('disabled', true);
+                                $('input[name=q6-options]').attr('disabled', true);
+                                $('input[name=q7-options]').attr('disabled', true);
+                                $('input[name=q8-options]').attr('disabled', true);
+                                $('input[name=q9-options]').attr('disabled', true);
+                                $('input[name=q10-options]').attr('disabled', true);
                             },
                             error: function (jqXHR, textStatus, errorThrown) {
                                 var errorMessage = "Something went wrong";
@@ -290,28 +262,55 @@
                                 $('#modal').modal();
                                 $("#modal").modal('open');
                                 $(".preloader-wrapper").addClass("hide");
+
                             }
                         });
                     } else {
                         var entryId = data[0].id;
                         var postData = {
-                            ans1: ans1,
-                            ans2: ans2,
-                            ans3: ans3,
-                            ans4: ans4,
-                            ans5: ans5,
-                            ans6: ans6,
-                            ans7: ans7,
-                            ans8: ans8,
+                            ans_a: ans_a,
+                            ans_b: ans_b,
+                            ans_c: ans_c,
+                            ans_d: ans_d,
+                            ans_e: ans_e,
+                            ans_f: ans_f,
+                            ans_g: ans_g,
+                            ans_h: ans_h,
+                            ans_i: ans_i,
+                            ans_j: ans_j,
                         };
                         $.ajax({
                             type: "patch",
-                            url: "http://assc-klong-gh.azurewebsites.net/tables/bottle_feeding_quiz/" + entryId,
+                            url: "http://assc-klong-gh.azurewebsites.net/tables/mixed_feeding_quiz/" + entryId,
                             data: JSON.stringify(postData),
                             contentType: "application/json",
                             dataType: "json",
                             success: function (responseData, textStatus, jqXHR) {
                                 $(".preloader-wrapper").addClass("hide");
+                                // DONE - display the answers
+                                if (ans_a) { $('#ans-a').show(); } else { $('#ans-a').hide(); }
+                                if (ans_b) { $('#ans-b').show(); } else { $('#ans-b').hide(); }
+                                if (ans_c) { $('#ans-c').show(); } else { $('#ans-c').hide(); }
+                                if (ans_d) { $('#ans-d').show(); } else { $('#ans-d').hide(); }
+                                if (ans_e) { $('#ans-e').show(); } else { $('#ans-e').hide(); }
+                                if (ans_f) { $('#ans-f').show(); } else { $('#ans-f').hide(); }
+                                if (ans_g) { $('#ans-g').show(); } else { $('#ans-g').hide(); }
+                                if (ans_h) { $('#ans-h').show(); } else { $('#ans-h').hide(); }
+                                if (ans_i) { $('#ans-i').show(); } else { $('#ans-i').hide(); }
+                                if (ans_j) { $('#ans-j').show(); } else { $('#ans-j').hide(); }
+
+
+                                $('input[name=q1-options]').attr('disabled', true);
+                                $('input[name=q2-options]').attr('disabled', true);
+                                $('input[name=q3-options]').attr('disabled', true);
+                                $('input[name=q4-options]').attr('disabled', true);
+                                $('input[name=q5-options]').attr('disabled', true);
+                                $('input[name=q6-options]').attr('disabled', true);
+                                $('input[name=q7-options]').attr('disabled', true);
+                                $('input[name=q8-options]').attr('disabled', true);
+                                $('input[name=q9-options]').attr('disabled', true);
+                                $('input[name=q10-options]').attr('disabled', true);
+
                             },
                             error: function (jqXHR, textStatus, errorThrown) {
                                 var errorMessage = "Something went wrong";
@@ -335,6 +334,7 @@
 
                     $("#clear").removeClass("hide");
                 });
+
 
             $('html, body').animate({
                 scrollTop: 0
@@ -402,18 +402,20 @@
                     Have you been thinking about giving your baby some formula in addition to your breastmilk? Or perhaps you have already started
                     supplementing your breastfeeding with formula?
                     <br />
-                    <br /> This is what's called mixed feeding – that is, your baby has both breastmilk and formula.
-                    <br /> There are all sorts of reasons why people choose to mix feed – take our quick quiz for some suggestions
+                    <br /> This is what's called mixed feeding - that is, your baby has both breastmilk and formula.
+                    <br /> There are all sorts of reasons why people choose to mix feed - take our quick quiz for some suggestions
                     specific to your situation!
                     <br />
                     <b>Remember:</b> before introducing formula or a bottle, try to wait until your milk supply is established
-                    (usually about 6–8 weeks after birth). This gives you and your baby a chance to figure out exactly what
-                    works best for the both of you – you making milk and your baby feeding from your breast.
+                    (usually about 6-8 weeks after birth). This gives you and your baby a chance to figure out exactly what
+                    works best for the both of you - you making milk and your baby feeding from your breast.
                 </p>
                 <div class="login-btn" onclick="startQuiz()">Begin quiz</div>
             </div>
 
             <div id="pg2">
+                <div id="clear" class="login-btn hide" onclick="clearAnswers()" style="margin-right:0">Redo quiz</div>
+
                 <p class="mbn-section">
                     <b>Question 1</b>
                     <br/>The main reason(s) I am thinking about giving my baby some formula (alongside breastfeeding) is/are:
@@ -464,37 +466,37 @@
                     </div>
                     <br />
                 </p>
-            </div>
-            <div id="ans-a">
-                <div class='card-panel light-green lighten-5 white-text'>
-                    <div class='mbn-text'>
-                        If your baby doesn't seem to be
-                        <a onclick='q1_modal();'>growing as well</a> as you think they should be, the first step is to talk with your
-                        <a onclick='q1_modal();'>maternal and child health nurse</a> or GP. Keep in mind that babies all grow at different rates and
-                        you could be worrying for no reason!
-                        <br />
-                        <br /> Some possible reasons for poorer than expected growth include:
-                        <br />
-                        <ul class='mbn-text'>
-                            <li>
-                                <a onclick='q1_modal();'>low milk supply</a> which means your baby won't be getting all the energy and nutrition they
-                                need for adequate growth</li>
-                            <li>a
-                                <a onclick='q1_modal();'>bad attachment</a> which makes it harder for your baby to remove enough milk when feeding</li>
-                        </ul>
-                        Before jumping to conclusions though, it's important to realise that even if there is an issue, there are ways to deal with
-                        them – your baby's
-                        <a onclick='q1_modal();'>attachment</a> can be checked and
-                        <a onclick='q1_modal();'>your milk supply can be increased</a>. Call the
-                        <a onclick='q1_modal();'>ABA helpline</a>, or ask your GP,
-                        <a onclick='q1_modal();'>lactation consultant</a> or
-                        <a onclick='q1_modal();'>maternal and child health nurse</a> for advice.
-                        <br />
-                        <br /> Remember, topping up with formula can reduce your milk supply, which means you'll need to top up
-                        with more formula, which reduces your milk supply even further (known as the top up trap). Rather
-                        than risking a reduction in your milk supply by giving your baby some formula, you could instead
-                        top up with some of your expressed breastmilk – ask your maternal and child health nurse or GP if
-                        they would support this.
+                <div id="ans-a">
+                    <div class='card-panel light-green lighten-5 white-text'>
+                        <div class='mbn-text'>
+                            If your baby doesn't seem to be
+                            <a onclick='q1_modal();'>growing as well</a> as you think they should be, the first step is to talk with your
+                            <a onclick='q1_modal();'>maternal and child health nurse</a> or GP. Keep in mind that babies all grow at different rates
+                            and you could be worrying for no reason!
+                            <br />
+                            <br /> Some possible reasons for poorer than expected growth include:
+                            <br />
+                            <ul class='mbn-text'>
+                                <li>
+                                    <a onclick='q1_modal();'>low milk supply</a> which means your baby won't be getting all the energy and nutrition
+                                    they need for adequate growth</li>
+                                <li>a
+                                    <a onclick='q1_modal();'>bad attachment</a> which makes it harder for your baby to remove enough milk when feeding</li>
+                            </ul>
+                            Before jumping to conclusions though, it's important to realise that even if there is an issue, there are ways to deal with
+                            them - your baby's
+                            <a onclick='q1_modal();'>attachment</a> can be checked and
+                            <a onclick='q1_modal();'>your milk supply can be increased</a>. Call the
+                            <a onclick='q1_modal();'>ABA helpline</a>, or ask your GP,
+                            <a onclick='q1_modal();'>lactation consultant</a> or
+                            <a onclick='q1_modal();'>maternal and child health nurse</a> for advice.
+                            <br />
+                            <br /> Remember, topping up with formula can reduce your milk supply, which means you'll need to top
+                            up with more formula, which reduces your milk supply even further (known as the top up trap).
+                            Rather than risking a reduction in your milk supply by giving your baby some formula, you could
+                            instead top up with some of your expressed breastmilk - ask your maternal and child health nurse
+                            or GP if they would support this.
+                        </div>
                     </div>
                 </div>
 
@@ -506,271 +508,278 @@
                             <br />
                             <br /> Take our
                             <a onclick='q1_modal();'>milk supply quiz</a> to find out if you could really have
-                            <a onclick='q1_modal();'>low milk supply</a> – you might be worrying for no reason!
+                            <a onclick='q1_modal();'>low milk supply</a> - you might be worrying for no reason!
                             <br />
                             <br /> Keep in mind that if you do decide to supplement your baby's feeds with formula, you will likely
                             reduce your milk supply at the same time and could potentially get caught up in the top up trap
-                            – the more you top up with formula, the more your milk supply reduces so the more formula you
+                            - the more you top up with formula, the more your milk supply reduces so the more formula you
                             need to use. Instead, you might like to read about how you can
                             <a onclick='q1_modal();'>make more milk</a>.
                         </div>
                     </div>
+                </div>
 
-                    <div id="ans-c">
-                        <div class='card-panel light-green lighten-5 white-text'>
-                            <div class='mbn-text'>
-                                Breastfeeding might feel a bit uncomfortable during the first week or so while you get used to it but it should never be
-                                painful!
-                                <br />
-                                <br /> If you're finding breastfeeding painful, your baby might not be
-                                <a onclick='q1_modal();'>attaching properly</a>. Have a look at our video on
-                                <a onclick='q1_modal();'>getting a good attachment</a> and make sure you ask your
-                                <a onclick='q1_modal();'>midwife</a>,
-                                <a onclick='q1_modal();'>maternal and child health nurse</a> or a
-                                <a onclick='q1_modal();'>lactation consultant</a> to check how your baby is attaching.
-                                <br />
-                                <br /> You might also like to read about managing
-                                <a onclick='q1_modal();'>sore nipples</a>,
-                                <a onclick='q1_modal();'>cracked nipples</a> and
-                                <a onclick='q1_modal();'>mastitis</a>.
-                            </div>
+
+
+
+                <div id="ans-c">
+                    <div class='card-panel light-green lighten-5 white-text'>
+                        <div class='mbn-text'>
+                            Breastfeeding might feel a bit uncomfortable during the first week or so while you get used to it but it should never be
+                            painful!
+                            <br />
+                            <br /> If you're finding breastfeeding painful, your baby might not be
+                            <a onclick='q1_modal();'>attaching properly</a>. Have a look at our video on
+                            <a onclick='q1_modal();'>getting a good attachment</a> and make sure you ask your
+                            <a onclick='q1_modal();'>midwife</a>,
+                            <a onclick='q1_modal();'>maternal and child health nurse</a> or a
+                            <a onclick='q1_modal();'>lactation consultant</a> to check how your baby is attaching.
+                            <br />
+                            <br /> You might also like to read about managing
+                            <a onclick='q1_modal();'>sore nipples</a>,
+                            <a onclick='q1_modal();'>cracked nipples</a> and
+                            <a onclick='q1_modal();'>mastitis</a>.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ans-d">
+                    <div class='card-panel light-green lighten-5 white-text'>
+                        <div class='mbn-text'>
+                            Formula feeding might appear to be more convenient than breastfeeding but don't forget that there's
+                            <a onclick='q1_modal();'>lots of extra work involved</a> in preparing and sterilising bottles, as well as more expensive
+                            - usually around $25 per tin!
+                            <br />
+                            <br /> Breastfeeding your baby, on the other hand, can be done anywhere and at any time - if breastfeeding
+                            in public worries you, check out our
+                            <a onclick='q1_modal();'>tips to make breastfeeding in public easier</a>.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ans-e">
+                    <div class='card-panel light-green lighten-5 white-text'>
+                        <div class='mbn-text'>
+                            Have you been told that giving your baby formula will help them sleep longer at night?
+                            <br />
+                            <br /> Unfortunately, this often does not help. Most babies, regardless of whether they are formula-fed
+                            or breastfed, wake throughout the night for the first few months to feed. Find out more about
+                            <a onclick='q1_modal();'>feed and sleep patterns in newborns</a>.
+                            <br />
+                            <br /> Parenting can be exhausting, so if you feel like you're always tired, it might be worth
+                            <a onclick='q1_modal();'>trying these tips</a>.
+                            <br />
+                            <br /> You could also try:
+                            <br />
+                            <ul class='mbn-text'>
+                                <li>sleeping in the same room as your baby so that you are close by</li>
+                                <li>learning to
+                                    <a onclick='q1_modal();'>breastfeed lying down</a> so that you can keep on resting, even when feeding</li>
+                            </ul>
+                            If your baby is older than 6 months and they're still waking through the night, find out how you can help them (and you!)
+                            <a onclick='q1_modal();'>sleep through the night</a>.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="ans-f">
+                    <div class='card-panel light-green lighten-5 white-text'>
+                        <div class='mbn-text'>
+                            Don't be put off breastfeeding just because your returning to work!
+                            <br />
+                            <br /> There are many ways you can continue to breastfeed once you're working and lots of mums actually
+                            find that doing so helps them to feel connected with their baby, despite being apart more often.
+                            <br />
+                            <br /> Read more about options for breastfeeding when you're a
+                            <a onclick='q1_modal();'>working mum</a>.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="ans-g">
+                    <div class='card-panel light-green lighten-5 white-text'>
+                        <div class='mbn-text'>
+                            Being a new mum can be exhausting, especially when you're feeding around the clock. But, given all the benefits that breastfeeding
+                            provides, it's worth sticking with it for as long as you can!
+                            <br />
+                            <br /> There are plenty of things that your partner and others can do to
+                            <a onclick='q1_modal();'>support you</a> that don't involve feeding, and even though your old sleep patterns may no longer
+                            be possible, there are
+                            <a onclick='q1_modal();'>lots of ways to make sure you still get enough sleep</a>.
+                            <br />
+                            <br /> Once your breastfeeding is established (usually around 6-8 weeks), you could also try
+                            <a onclick='q1_modal();'>expressing</a> so someone else can give the occasional feed. And if you are worried about your
+                            partner missing out on bonding with your baby, don't be, there are plenty of other ways for your
+                            <a onclick='q1_modal();'>partner to bond</a> with your baby that don't involve feeding.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ans-h">
+                    <div class='card-panel light-green lighten-5 white-text'>
+                        <div class='mbn-text'>
+                            Some babies can have
+                            <a onclick='q1_modal();'>allergies</a> or intolerances and react to traces of food in their mum's breastmilk, although
+                            this is uncommon and needs to be checked by a GP. If you think your baby is reacting to something
+                            in your breastmilk, speak to
+                            <a onclick='q1_modal();'>your GP</a>,
+                            <a onclick='q1_modal();'>lactation consultant</a> or
+                            <a onclick='q1_modal();'>maternal and child health nurse</a> before making changes to your diet or switching your baby
+                            to formula.
+                            <br />
+                            <br /> If you can change your diet and continue to breastfeed them, instead of giving them formula,
+                            your baby will have less risk of ongoing allergies because breastfeeding is actually protective
+                            of allergies. A specialist can advise you whether this is an option for you.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ans-i">
+                    <div class='card-panel light-green lighten-5 white-text'>
+                        <div class='mbn-text'>
+                            If your baby doesn't seem satisfied or is fussy after breastfeeding it doesn't necessarily mean they are still hungry and
+                            needing more breastmilk!
+                            <br />
+                            <br /> Your milk is probably not causing your baby's dissatisfaction if you have been breastfeeding
+                            them:
+                            <br />
+                            <ul class='mbn-text'>
+                                <li>whenever they
+                                    <a onclick='q1_modal();'>seem hungry</a>
+                                </li>
+                                <li>for as long as they want to feed</li>
+                                <li>they are
+                                    <a onclick='q1_modal();'>attaching on well</a>
+                                </li>
+                            </ul>
+                            Remember:
+                            <br />
+                            <ul class='mbn-text'>
+                                <li>babies
+                                    <a onclick='q1_modal();'>cry for all sorts of reasons</a> (even after feeding), and it's not always because they
+                                    are still hungry - try working through our
+                                    <a onclick='q1_modal();'>crying baby checklist</a>
+                                </li>
+                                <li>for as long as they want to feed</li>
+                                <li>if you are worried, make sure you speak with
+                                    <a onclick='q1_modal();'>your GP</a>,
+                                    <a onclick='q1_modal();'>maternal and child health nurse</a>, the
+                                    <a onclick='q1_modal();'>ABA helpline</a> or a
+                                    <a onclick='q1_modal();'>lactation consultant</a>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div id="ans-d">
-                            <div class='card-panel light-green lighten-5 white-text'>
-                                <div class='mbn-text'>
-                                    Formula feeding might appear to be more convenient than breastfeeding but don't forget that there's
-                                    <a
-                                        onclick='q1_modal();'>lots of extra work involved</a> in preparing and sterilising bottles, as well as more
-                                    expensive – usually around $25 per tin!
-                                    <br />
-                                    <br /> Breastfeeding your baby, on the other hand, can be done anywhere and at any time – if
-                                    breastfeeding in public worries you, check out our
-                                    <a onclick='q1_modal();'>tips to make breastfeeding in public easier</a>.
-                                </div>
-                            </div>
-
-                            <div id="ans-e">
-                                <div class='card-panel light-green lighten-5 white-text'>
-                                    <div class='mbn-text'>
-                                        Have you been told that giving your baby formula will help them sleep longer at night?
-                                        <br />
-                                        <br /> Unfortunately, this often does not help. Most babies, regardless of whether they
-                                        are formula-fed or breastfed, wake throughout the night for the first few months
-                                        to feed. Find out more about
-                                        <a onclick='q1_modal();'>feed and sleep patterns in newborns</a>.
-                                        <br />
-                                        <br /> Parenting can be exhausting, so if you feel like you're always tired, it might be
-                                        worth
-                                        <a onclick='q1_modal();'>trying these tips</a>.
-                                        <br />
-                                        <br /> You could also try:
-                                        <br />
-                                        <ul class='mbn-text'>
-                                            <li>sleeping in the same room as your baby so that you are close by</li>
-                                            <li>learning to
-                                                <a onclick='q1_modal();'>breastfeed lying down</a> so that you can keep on resting, even when feeding</li>
-                                        </ul>
-                                        If your baby is older than 6 months and they're still waking through the night, find out how you can help them (and you!)
-                                        <a onclick='q1_modal();'>sleep through the night</a>.
-                                    </div>
-                                </div>
+                    </div>
+                </div>
 
 
-                                <div id="ans-f">
-                                    <div class='card-panel light-green lighten-5 white-text'>
-                                        <div class='mbn-text'>
-                                            Don't be put off breastfeeding just because your returning to work!
-                                            <br />
-                                            <br /> There are many ways you can continue to breastfeed once you're working and lots
-                                            of mums actually find that doing so helps them to feel connected with their baby,
-                                            despite being apart more often.
-                                            <br />
-                                            <br /> Read more about options for breastfeeding when you're a
-                                            <a onclick='q1_modal();'>working mum</a>.
-                                        </div>
-                                    </div>
+                <div id="ans-j">
+                    <div class='card-panel light-green lighten-5 white-text'>
+                        <div class='mbn-text'>
+                            If you're keen to get your baby used to taking milk from a bottle, instead of formula, why not try
+                            <a onclick='q1_modal();'>expressing</a> and
+                            <a onclick='q1_modal();'>feeding expressed breastmilk</a> via a bottle?
+                            <br />
+                            <br /> This way, your breasts will still be stimulated to make milk and you'll keep up your
+                            <a onclick='q1_modal();'>milk supply</a> (rather than reducing it by missing breastfeeds so you can give your baby formula
+                            in a bottle instead).
+                            <br />
+                            <br /> A couple of things to keep in mind:
+                            <br />
+                            <ul class='mbn-text'>
+                                <li>avoid introducing a bottle in the first 6-8 weeks while you are still establishing breastfeeding
+                                    - this gives both you and your baby a chance to figure out exactly what works best -
+                                    you making milk and your baby feeding from your breast</li>
+                                <li>once your baby is used to a bottle, it is more likely that your baby will
+                                    <a onclick='q1_modal();'>refuse your breast</a> (rather than the bottle) because they have to work harder to get
+                                    milk from your breast!</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <br />
+                    <br />
+                    <p>
+                        <br />
+                        <br />
+                        <br />
+                    </p>
+
+                </div>
 
 
-                                    <div id="ans-g">
-                                        <div class='card-panel light-green lighten-5 white-text'>
-                                            <div class='mbn-text'>
-                                                Being a new mum can be exhausting, especially when you're feeding around the clock. But, given all the benefits that breastfeeding
-                                                provides, it's worth sticking with it for as long as you can!
-                                                <br />
-                                                <br /> There are plenty of things that your partner and others can do to
-                                                <a onclick='q1_modal();'>support you</a> that don't involve feeding, and even though your old sleep
-                                                patterns may no longer be possible, there are
-                                                <a onclick='q1_modal();'>lots of ways to make sure you still get enough sleep</a>.
-                                                <br />
-                                                <br /> Once your breastfeeding is established (usually around 6–8 weeks), you could
-                                                also try
-                                                <a onclick='q1_modal();'>expressing</a> so someone else can give the occasional feed. And if you are
-                                                worried about your partner missing out on bonding with your baby, don't be,
-                                                there are plenty of other ways for your
-                                                <a onclick='q1_modal();'>partner to bond</a> with your baby that don't involve feeding.
-                                            </div>
-                                        </div>
+            </div>
+            <div id="mark" class="login-btn" onclick="mark()">Submit answers</div>
+            <p>
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+    </div>
 
-                                        <div id="ans-h">
-                                            <div class='card-panel light-green lighten-5 white-text'>
-                                                <div class='mbn-text'>
-                                                    Some babies can have
-                                                    <a onclick='q1_modal();'>allergies</a> or intolerances and react to traces of food in their mum's
-                                                    breastmilk, although this is uncommon and needs to be checked by a GP.
-                                                    If you think your baby is reacting to something in your breastmilk, speak
-                                                    to
-                                                    <a onclick='q1_modal();'>your GP</a>,
-                                                    <a onclick='q1_modal();'>lactation consultant</a> or
-                                                    <a onclick='q1_modal();'>maternal and child health nurse</a> before making changes to your diet
-                                                    or switching your baby to formula.
-                                                    <br />
-                                                    <br /> If you can change your diet and continue to breastfeed them, instead
-                                                    of giving them formula, your baby will have less risk of ongoing allergies
-                                                    because breastfeeding is actually protective of allergies. A specialist
-                                                    can advise you whether this is an option for you.
-                                                </div>
-                                            </div>
 
-                                            <div id="ans-i">
-                                                <div class='card-panel light-green lighten-5 white-text'>
-                                                    <div class='mbn-text'>
-                                                        If your baby doesn't seem satisfied or is fussy after breastfeeding it doesn't necessarily mean they are still hungry and
-                                                        needing more breastmilk!
-                                                        <br />
-                                                        <br /> Your milk is probably not causing your baby's dissatisfaction if
-                                                        you have been breastfeeding them:
-                                                        <br />
-                                                        <ul class='mbn-text'>
-                                                            <li>whenever they
-                                                                <a onclick='q1_modal();'>seem hungry</a>
-                                                            </li>
-                                                            <li>for as long as they want to feed</li>
-                                                            <li>they are
-                                                                <a onclick='q1_modal();'>attaching on well</a>
-                                                            </li>
-                                                        </ul>
-                                                        Remember:
-                                                        <br />
-                                                        <ul class='mbn-text'>
-                                                            <li>babies
-                                                                <a onclick='q1_modal();'>cry for all sorts of reasons</a> (even after feeding), and
-                                                                it's not always because they are still hungry – try working
-                                                                through our
-                                                                <a onclick='q1_modal();'>crying baby checklist</a>
-                                                            </li>
-                                                            <li>for as long as they want to feed</li>
-                                                            <li>if you are worried, make sure you speak with
-                                                                <a onclick='q1_modal();'>your GP</a>,
-                                                                <a onclick='q1_modal();'>maternal and child health nurse</a>, the
-                                                                <a onclick='q1_modal();'>ABA helpline</a> or a
-                                                                <a onclick='q1_modal();'>lactation consultant</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
 
-                                                </div>
 
-                                                <div id="ans-j">
-                                                    <div class='card-panel light-green lighten-5 white-text'>
-                                                        <div class='mbn-text'>
-                                                            If you're keen to get your baby used to taking milk from a bottle, instead of formula, why not try
-                                                            <a
-                                                                onclick='q1_modal();'>expressing</a> and
-                                                            <a onclick='q1_modal();'>feeding expressed breastmilk</a> via a bottle?
-                                                            <br />
-                                                            <br /> This way, your breasts will still be stimulated to make milk
-                                                            and you'll keep up your
-                                                            <a onclick='q1_modal();'>milk supply</a> (rather than reducing it by missing breastfeeds
-                                                            so you can give your baby formula in a bottle instead).
-                                                            <br />
-                                                            <br /> A couple of things to keep in mind:
-                                                            <br />
-                                                            <ul class='mbn-text'>
-                                                                <li>avoid introducing a bottle in the first 6–8 weeks while you
-                                                                    are still establishing breastfeeding – this gives both
-                                                                    you and your baby a chance to figure out exactly what
-                                                                    works best – you making milk and your baby feeding from
-                                                                    your breast</li>
-                                                                <li>once your baby is used to a bottle, it is more likely that
-                                                                    your baby will
-                                                                    <a onclick='q1_modal();'>refuse your breast</a> (rather than the bottle) because
-                                                                    they have to work harder to get milk from your breast!</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p>
+                                <img src="../../images/topics.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/tools-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text-selected">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p>
+                                <img src="../../images/forum.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-                                                    <br />
-                                                    <br />
-
-                                                    <div id="mark" class="login-btn" onclick="mark()">Submit answers</div>
-
-                                                    <div id="clear" class="login-btn hide" onclick="clearAnswers()">Redo quiz</div>
-
-                                                    <p>
-                                                        <br />
-                                                        <br />
-                                                        <br />
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class="navbar-fixed mbn-footer hide-on-med-and-up">
-                                                <nav class="mbn-nav">
-                                                    <div class="nav-wrapper">
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col mbn-icon" onclick="Load('feed');">
-                                                                    <p>
-                                                                        <img src="../../images/feed.png" style="width:30%;" />
-                                                                        <br />
-                                                                        <span class="mbn-icon-text">My baby</span>
-                                                                    </p>
-                                                                </div>
-                                                                <div class="col mbn-icon" onclick="Load('topics');">
-                                                                    <p>
-                                                                        <img src="../../images/topics.png" style="width:30%;" />
-                                                                        <br />
-                                                                        <span class="mbn-icon-text">Topics</span>
-                                                                    </p>
-                                                                </div>
-                                                                <div class="col mbn-icon" onclick="Load('tools');">
-                                                                    <p class="mbn-icon-selected">
-                                                                        <img src="../../images/tools-s.png" style="width:30%;" />
-                                                                        <br />
-                                                                        <span class="mbn-icon-text-selected">Tools</span>
-                                                                    </p>
-                                                                </div>
-                                                                <div class="col mbn-icon" onclick="Load('forum');">
-                                                                    <p>
-                                                                        <img src="../../images/forum.png" style="width:30%;" />
-                                                                        <br />
-                                                                        <span class="mbn-icon-text">Forum</span>
-                                                                    </p>
-                                                                </div>
-                                                                <div class="col mbn-icon" onclick="Load('more');">
-                                                                    <p>
-                                                                        <img src="../../images/more.png" style="width:30%;" />
-                                                                        <br />
-                                                                        <span class="mbn-icon-text">More</span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </nav>
-                                            </div>
-
-                                            <div id="q1-modal" class="tools-content">
-                                                <span class="tools-close">
-                                                    <i class="fa fa-times-circle fa-2x" onclick="$('#q1-modal').hide();"></i>
-                                                </span>
-                                                <p>
-                                                    <br />
-                                                    <br />
-                                                    <br /> Content is loaded here.
-                                                </p>
-                                            </div>
+    <div id="q1-modal" class="tools-content">
+        <span class="tools-close">
+            <i class="fa fa-times-circle fa-2x" onclick="$('#q1-modal').hide();"></i>
+        </span>
+        <p>
+            <br />
+            <br />
+            <br /> Content is loaded here.
+        </p>
+    </div>
 </body>
 
 </html>
