@@ -1,0 +1,15 @@
+<div>
+    <span class="mbn-section">{{veg.name}}</span>
+    <!-- <select>
+        <option value="">Select a status</option>
+        <option value="Tried">Tried</option>
+        <option value="Offered">Offered</option>
+    </select> -->
+
+    <select class="browser-default" ng-model="veg.status" ng-change=changeVegStatus(veg,'{{veg.status}}')>
+        <option value="">Select a status</option>
+        <option value="Tried"  ng-selected="veg.status==='Tried'">Tried</option>
+        <option value="Offered"  ng-selected="veg.status==='Offered'">Offered</option>
+    </select>
+</div>
+

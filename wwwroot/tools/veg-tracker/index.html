@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="ghVeg">
+
+<head>
+    <!-- Need to localise this later on. -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" href="../../font-icons/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../font-baby/flaticon.css">
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/mbn.css" media="screen,projection" />
+    <link rel="stylesheet" href="../../css/preloader/main.css">
+    <!-- iOS set up to go into mobile mode. Need to set for Android accordingly. -->
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Baby Now</title>
+</head>
+
+
+
+<body ng-controller="VegController as Veg">
+
+    <div class="mbn-logo">
+        <img src="../../images/logo.png" class="mbn-logo-style">
+    </div>
+    <!-- Loading Overlay -->
+    <div id="loader-wrapper" ng-show='showSpinner'>
+        <div id="loader"></div>
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+
+    <!-- Nav Bar -->
+    <div class="navbar-fixed">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <a class="mbn-name">{{babyName}} Now</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <veg-form></veg-form>
+
+    <veg-list></veg-list>
+
+    <button ng-click="saveChanges()">Save Status</button>
+
+    <br />
+    <br />
+    
+    <br />
+    <br />
+    
+    <br />
+    <br />
+
+    <!-- Nav Bar Mobile -->
+    <div class="navbar-fixed mbn-footer hide-on-med-and-up">
+        <nav class="mbn-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mbn-icon" onclick="Load('feed');">
+                            <p>
+                                <img src="../../images/feed.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">My baby</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('topics');">
+                            <p>
+                                <img src="../../images/topics.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Topics</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('tools');">
+                            <p>
+                                <img src="../../images/tools.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">Tools</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('forum');">
+                            <p class="mbn-icon-selected">
+                                <img src="../../images/forum-s.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-button-selected">Forum</span>
+                            </p>
+                        </div>
+                        <div class="col mbn-icon" onclick="Load('more');">
+                            <p>
+                                <img src="../../images/more.png" style="width:30%;" />
+                                <br />
+                                <span class="mbn-icon-text">More</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Load the scripts -->
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.session.js"></script>
+    <script type="text/javascript" src="../../js/mbn.js"></script>
+
+
+    <script type="text/javascript" src="../../js/angular.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+</body>
+
+</html>
