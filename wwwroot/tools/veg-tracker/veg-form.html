@@ -1,4 +1,28 @@
-<form onSubmit>
-    <input type="text" placeholder="new vegetable" ng-model="newVeg.name"  required />
-    <button type="submit" ng-click="addNewVeg()">Add vegetable</button>
+<form>
+        <select class="browser-default" ng-model="nameFromSelect" required>
+                <option value="">Select a veg</option>
+                <option value="apple">Apple</option>
+                <option value="pear">Pear</option>
+                <option value="other">Other</option>
+        </select>
+
+        <label for="newVeg" class="mbn-section" ng-class="{'ng-hide':nameFromSelect!=='other' }">New vegetable</label>
+        <input type="text" id="newVeg" placeholder="new vegetable" ng-model="nameFromInput" ng-class="{'ng-hide':nameFromSelect!=='other' }"
+                required />
+
+        <table>
+                <tbody>
+                        <tr>
+                                <td>
+                                        Access Date
+                                </td>
+                                <td>
+                                        {{todayDate| date : "MMM d, y"}}
+                                </td>
+                        </tr>
+                </tbody>
+        </table>
+
+                
+        <button type="submit" ng-click="addNewVeg()" class="mbn-button">Add vegetable</button>
 </form>

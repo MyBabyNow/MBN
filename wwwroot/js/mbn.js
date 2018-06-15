@@ -93,8 +93,7 @@ function Load(opt) {
     }
 
     if(opt == "veg-tracker") {
-        alert("Tool not implemented yet.");
-        // window.location = window.location.origin + "/tools//quiz.html";
+        window.location = window.location.origin + "/tools/veg-tracker/index.html";
     }
 
     if(opt == "bf-goals") {

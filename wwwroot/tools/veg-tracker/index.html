@@ -21,6 +21,15 @@
     <div class="mbn-logo">
         <img src="../../images/logo.png" class="mbn-logo-style">
     </div>
+    <!--General Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p></p>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+    </div>
     <!-- Loading Overlay -->
     <div id="loader-wrapper" ng-show='showSpinner'>
         <div id="loader"></div>
@@ -41,21 +50,64 @@
         </nav>
     </div>
 
+    <!-- Two different display cards -->
+    <div class="card mbn-card" id="section-card">
+        <div class="card-image">
+            <img src="images/landing.png" />
+            <span class="card-title mbn-card-title" id="section-title" onclick="Load('tools');">
+                <i class="fa fa-chevron-left"></i> Tools
+            </span>
+        </div>
+    </div>
 
-    <veg-form></veg-form>
+    <div class="card mbn-card-fixed-content" id="section-card-min">
+        <span class="card-title mbn-card-title-content" id="section-title" onclick="Load('tools');">
+            <i class="fa fa-chevron-left"></i> Tools
+        </span>
+    </div>
+    <div class="mbn-content" id="section-content">
+        <div id="pg1">
+            <p class="mbn-section">Vegetable tracker</p>
+            <p class="mbn-text">
+                Welcome to the vegetable tracker
+                <br />
+                <br />
+            </p>
+        </div>
 
-    <veg-list></veg-list>
+        <table  ng-class="{'ng-hide':vegs.length===0 }">
+            <tbody>
+                <tr>
+                    <td class="mbn-section">Vegetables</td>
+                    <td class="mbn-section">Status</td>
+                    <td class="mbn-section">Access Date</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <button ng-click="saveChanges()">Save Status</button>
+        <table  ng-class="{'ng-hide':vegs.length===0 }">
+            <tbody>
+                <veg-list></veg-list>
+            </tbody>
+        </table>
+        
 
-    <br />
-    <br />
-    
-    <br />
-    <br />
-    
-    <br />
-    <br />
+
+        <veg-form ng-class="{'ng-hide':showAddVegBtn }"></veg-form>
+
+        <button ng-class="{'ng-hide':!showAddVegBtn }" ng-click="showAddVegForm()" class="mbn-button">Add Vegetable</button>
+        <button ng-disabled="!showSaveStatusBtn" ng-class="{'ng-hide':vegs.length===0, 'mbn-icon-selected':!showSaveStatusBtn}" ng-click="saveChanges()" class="mbn-button">Save Status</button>
+
+
+        <br />
+        <br />
+
+        <br />
+        <br />
+
+        <br />
+        <br />
+    </div>
 
     <!-- Nav Bar Mobile -->
     <div class="navbar-fixed mbn-footer hide-on-med-and-up">
@@ -108,8 +160,9 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="../../js/jquery.session.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
     <script type="text/javascript" src="../../js/mbn.js"></script>
-
+    <script type="text/javascript" src="../../js/header.js"></script>
 
     <script type="text/javascript" src="../../js/angular.min.js"></script>
     <script type="text/javascript" src="./js/app.js"></script>
