@@ -20,13 +20,13 @@ angular.module('ghVeg', []).controller('VegController', ['$http', '$scope', func
         $scope.newVeg.name = $scope.nameFromSelect === 'other' ? $scope.nameFromInput : $scope.nameFromSelect;
 
         if($scope.vegs.some(v=>v.name===$scope.newVeg.name)){
-            alert("duplicated fruit");
+            Materialize.toast('Duplicated veg', 2000);
             $scope.showSpinner = false;
             return;
         }
 
         if(!$scope.newVeg.name){
-            alert("Please enter a fruit");
+            Materialize.toast('Please select a veg', 2000);
             $scope.showSpinner = false;
             return;
         }
