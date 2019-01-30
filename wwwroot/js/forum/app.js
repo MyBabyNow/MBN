@@ -26,31 +26,6 @@
         });
 
 
-
-
-
-
-        // $scope.lineInView = function(index, inview, inviewpart, event) {
-        //     var inViewReport = inview ? '<strong>enters</strong>' : '<strong>exit</strong>';
-
-        //     if (typeof(inviewpart) != 'undefined') {
-        //         inViewReport = '<strong>' + inviewpart + '</strong> part ' + inViewReport;
-        //     }
-
-        //     console.log(event);
-        //     //console.log(inviewpart);
-
-
-        //         // var url = "https://assc-klong-gh.azurewebsites.net/tables/post/" + $scope.postPagination.posts[index].id;
-        //         // $http.get(url).success(function(data) {
-        //         //     $scope.postPagination.posts[index] = data;
-        //         //     console.log(data);
-        //         //     return false;
-        //         // });
-
-
-        // }
-
         $scope.hideHasNewPost = function() {
             $(".mbn-post-notice").addClass("hide");
             $scope.postPagination = new postPagination();
